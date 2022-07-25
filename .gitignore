@@ -1,0 +1,4 @@
+target/
+bin/
+resources-bin/
+xtend-gen/

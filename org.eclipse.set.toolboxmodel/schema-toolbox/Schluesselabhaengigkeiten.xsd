@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+            xmlns:func="localhost/function"
+            xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
+            xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
+            xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
+            xmlns:nsBalisentechnik_ETCS="http://www.plan-pro.org/modell/Balisentechnik_ETCS/toolbox"
+            xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/toolbox"
+            xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/toolbox"
+            xmlns:nsBedienung="http://www.plan-pro.org/modell/Bedienung/toolbox"
+            xmlns:nsBlock="http://www.plan-pro.org/modell/Block/toolbox"
+            xmlns:nsFahrstrasse="http://www.plan-pro.org/modell/Fahrstrasse/toolbox"
+            xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
+            xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
+            xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
+            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
+            xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
+            xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
+            xmlns:nsRegelzeichnung="http://www.plan-pro.org/modell/Regelzeichnung/toolbox"
+            xmlns:nsSchluesselabhaengigkeiten="http://www.plan-pro.org/modell/Schluesselabhaengigkeiten/toolbox"
+            xmlns:nsSignalbegriffe_Ril_301="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/toolbox"
+            xmlns:nsSignalbegriffe_Struktur="http://www.plan-pro.org/modell/Signalbegriffe_Struktur/toolbox"
+            xmlns:nsSignale="http://www.plan-pro.org/modell/Signale/toolbox"
+            xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/toolbox"
+            xmlns:nsWeichen_und_Gleissperren="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/toolbox"
+            xmlns:nsZuglenkung="http://www.plan-pro.org/modell/Zuglenkung/toolbox"
+            xmlns:nsZugnummernmeldeanlage="http://www.plan-pro.org/modell/Zugnummernmeldeanlage/toolbox"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            ecore:nsPrefix="nsSchluesselabhaengigkeiten"
+            ecore:package="org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten"
+            targetNamespace="http://www.plan-pro.org/modell/Schluesselabhaengigkeiten/toolbox">
+   <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
+               schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
+               schemaLocation="Bahnsteig.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
+               schemaLocation="Bahnuebergang.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Balisentechnik_ETCS/toolbox"
+               schemaLocation="Balisentechnik_ETCS.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/toolbox"
+               schemaLocation="Basisobjekte.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/toolbox"
+               schemaLocation="BasisTypen.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Bedienung/toolbox"
+               schemaLocation="Bedienung.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Block/toolbox"
+               schemaLocation="Block.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Fahrstrasse/toolbox"
+               schemaLocation="Fahrstrasse.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
+               schemaLocation="Flankenschutz.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Geodaten/toolbox"
+               schemaLocation="Geodaten.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
+               schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
+               schemaLocation="Medien_und_Trassen.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
+               schemaLocation="Ortung.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
+               schemaLocation="PlanPro.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/PZB/toolbox"
+               schemaLocation="PZB.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Regelzeichnung/toolbox"
+               schemaLocation="Regelzeichnung.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/toolbox"
+               schemaLocation="Signalbegriffe_Ril_301.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Signalbegriffe_Struktur/toolbox"
+               schemaLocation="Signalbegriffe_Struktur.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Signale/toolbox"
+               schemaLocation="Signale.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Verweise/toolbox"
+               schemaLocation="Verweise.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/toolbox"
+               schemaLocation="Weichen_und_Gleissperren.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Zuglenkung/toolbox"
+               schemaLocation="Zuglenkung.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Zugnummernmeldeanlage/toolbox"
+               schemaLocation="Zugnummernmeldeanlage.xsd"/>
+   <xs:annotation>
+      <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+
+Weitere Informationen zur Lizenz finden Sie auf
+http://www.dbnetze.com/planpro
+
+Inhalt der Datei:
+XML Schema für PlanPro Schnittstelle.
+
+Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+
+Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+
+--------------------------------------------------------------------------------
+
+This Document is licensed under the open source license RailPL V1.0.
+
+More information about the license can be found on
+http://www.dbnetze.com/planpro
+
+Contents of the file:
+XML Schema for PlanPro interface.</xs:documentation>
+   </xs:annotation>
+   <xs:simpleType name="ENUMSchluessel_Gruppe">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMSchluessel_Gruppe_0" value="0"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Gruppe_1" value="1"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Gruppe_2" value="2"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Gruppe_3" value="3"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Gruppe_4" value="4"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Gruppe_5" value="5"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Bezeichnung_Schloss_TypeClass" name="TCBezeichnung_Schloss">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:TBezeichnung_Schloss"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="Beschreibung_Sonderanlage_Type"
+                   name="TBeschreibung_Sonderanlage">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,50}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Schluessel_Bezeichnung_AttributeGroup"
+                    name="CSchluessel_Bezeichnung">
+      <xs:sequence>
+         <xs:element name="Bezeichnung_Schluessel"
+                      type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schluessel"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Auf dem Schluessel angebrachte Bezeichnung.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung>[1..20]</Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType ecore:name="Bezeichnung_Schluessel_Type" name="TBezeichnung_Schluessel">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,20}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType ecore:name="W_Lage_Type" name="TW_Lage">
+      <xs:restriction base="nsBasisTypen:TLinksRechts"/>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Schluessel_Gruppe_TypeClass" name="TCSchluessel_Gruppe">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMSchluessel_Gruppe"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schloss_Sonderanlage_AttributeGroup"
+                    name="CSchloss_Sonderanlage">
+      <xs:sequence>
+         <xs:choice minOccurs="1" maxOccurs="1">
+            <xs:element name="Beschreibung_Sonderanlage"
+                         type="nsSchluesselabhaengigkeiten:TCBeschreibung_Sonderanlage"
+                         minOccurs="1"
+                         maxOccurs="1">
+               <xs:annotation>
+                  <xs:documentation>Beschreibung der Sonderanlage, sofern es sich nicht um ein besonderes Fahrwegelement handelt, das über ID_Sonderanlage angegeben werden kann.</xs:documentation>
+                  <xs:appinfo>
+                     <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                        <Patternbeschreibung>[1..50]</Patternbeschreibung>
+                     </WorkflowInformation>
+                  </xs:appinfo>
+               </xs:annotation>
+            </xs:element>
+            <xs:element name="ID_Sonderanlage"
+                         type="xs:anyURI"
+                         ecore:reference="nsWeichen_und_Gleissperren:CW_Kr_Gsp_Element"
+                         nillable="true"
+                         minOccurs="1"
+                         maxOccurs="1">
+               <xs:annotation>
+                  <xs:documentation>Verweis auf die Sonderanlage im Sinne eines besonderen Fahrwegelements (z. B. bewegliche Brücke).</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         </xs:choice>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schloss_Gsp_AttributeGroup" name="CSchloss_Gsp">
+      <xs:sequence>
+         <xs:element name="Gsp_Lage"
+                      type="nsSchluesselabhaengigkeiten:TCGsp_Lage"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Lage, in der die Gleissperre verschlossen wird. DB-Regelwerk Die Abhängigkeiten werden heute durch eine Zeichnung im Lageplan nach 819.9002 3 dargestellt. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ID_Gsp_Element"
+                      type="xs:anyURI"
+                      ecore:reference="nsWeichen_und_Gleissperren:CW_Kr_Gsp_Element"
+                      nillable="true"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Verweis auf die Gleissperre, die mit dem Schloss verschlossen wird. DB-Regelwerk Lageplan, Logische Darstellung der Schlüsselabhängigkeit </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType ecore:name="Bezeichnung_Sk_TypeClass" name="TCBezeichnung_Sk">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:TBezeichnung_Sk"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schluesselsperre" name="CSchluesselsperre">
+      <xs:annotation>
+         <xs:documentation>Elektromechanisches Bauelement, das die Anwesenheit eines Schlüssels prüft, ihn festhält und eine Abhängigkeit zur Stellwerkslogik besitzt. Schlüsselsperren dienen der Festhaltung bzw. Freigabe von Schlüsseln, mit denen in der Regel weitere Elemente bedienbar gemacht werden. In Einzelfällen dienen Schlüsselsperren nur als Schlüsselschalter. Die Darstellung im Lageplan erfolgt am Ort der Bedienung (z. B. Stellwerk, sonstiges Gebäude), der durch die Unterbringung beschrieben wird. Eine Darstellung am oder auf dem Gleis erfolgt nicht! DB-Regelwerk Darstellung durch Zeichnung im Lageplan nach 819.9002 2.</xs:documentation>
+         <xs:appinfo>
+            <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+               <ObjectType>LST_OBJECT</ObjectType>
+            </WorkflowInformation>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
+            <xs:sequence>
+               <xs:element name="Bedienung_Art"
+                            type="nsSchluesselabhaengigkeiten:TCBedienung_Art"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Unterscheidung nach Innen- und Außenschlüsselsperre. Alt: Traditionell wird unterschieden zwischen einer Schlüsselsperre als Teil der Bedieneinrichtung im Stellwerk (Innenschlüsselsperre) und einer solchen in der Nähe des zu bedienenden Elements in den Außenanlagen (Außenschlüsselsperre). Mit zunehmender Zentralisierung und Entfall örtlich besetzter Stellwerke verliert diese Unterscheidung ihre Bedeutung. Neu (ESTW-Technik): Als Innenschlüsselsperre werden die nur für das LST-Personal zugänglichen Schlüsselsperren in der Außenelementansteuerung bezeichnet, die z. B. zum Sperren von Fahrstraßen genutzt werden. Alle für das Betriebspersonal (insbesondere Rangierpersonal) zugänglichen Schlüsselsperren sind Außenschlüsselsperren, unabhängig von der Art der Unterbringung. DB-Regelwerk Darstellung durch Zeichnung im Lageplan nach 819.9002 2.</xs:documentation>
+                     <xs:appinfo>
+                        <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                           <PlanningStage>PT1</PlanningStage>
+                        </WorkflowInformation>
+                     </xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Bezeichnung"
+                            type="nsBasisTypen:CBezeichnung_Element"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Attributgruppe zur Bezeichnung von Stell- und sonstigen Elementen. Sofern ausreichend, wird an dieser Stelle über Vererbung die Basisattributgruppe Bezeichnung Element eingebunden. Ist die Abbildung mit den Attributen der Basisattributgruppe nicht möglich (z. B. wegen spezieller Patternvorgabe) oder nicht sinnvoll (z. B. weil eine Unterscheidung nach Bezeichnung_Lageplan_..., Bezeichnung_Tabelle und Bezeichnung_Aussenanlage (Pflichtattribute!) nicht notwendig ist), werden in der Attributgruppe Bezeichnung entsprechende objektspezifische Bezeichnungsattribute modelliert. Diese sind nach dem Schema Bezeichnung_[Objektname] zu benennen. Zudem ist es möglich, gleichzeitig die Basisattributgruppe Bezeichnung Element und objektspezifische Attribute einzubinden. Siehe auch Bildung der Bezeichnungen. DB-Regelwerk Sicherungstechnischer Lage- und Übersichtsplan, BÜ-Lageplan Planungstabellen </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ID_Stellelement"
+                            type="xs:anyURI"
+                            ecore:reference="nsAnsteuerung_Element:CStellelement"
+                            nillable="true"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Verweis auf das Objekt Stellelement zur Zusammenfassung von Eigenschaften der Objekte BUE Schnittstelle, PZB Element, Schluesselsperre, Signal, W Kr Gsp Element. Das Stellelement enthält Informationen über den energetischen und logischen Anschluss der Objekte. Für das PZB Element ist der Verweis nur zu füllen, wenn das PZB_Element eine GÜ ist. DB-Regelwerk Bisher ohne eindeutige Darstellung </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ID_Unterbringung"
+                            type="xs:anyURI"
+                            ecore:reference="nsAnsteuerung_Element:CUnterbringung"
+                            nillable="true"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Verweis auf den physischen Ort der Unterbringung von Aussenelementansteuerung, Bedien Einrichtung Oertlich, Bedien Platz, ESTW Zentraleinheit, PZB Element, Schlosskombination, Schluesselsperre und ZN. Für das PZB Element wird der Verweis nur für eine GÜ gefüllt - mit der Bedeutung: GÜ-Schaltkasten. Für die ZN ist der Verweis optional, da im Planungswerkzeug ZN/ZL keine Befüllung aller der für die Unterbringung notwendigen Attribute möglich ist. DB-Regelwerk Darstellung des Gebäudes, der Bediensäule bzw. des Schaltkastens im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erläuterungsbericht.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="Bezeichnung_Schloss_Type" name="TBezeichnung_Schloss">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,20}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Gsp_Lage_TypeClass" name="TCGsp_Lage">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMGsp_Lage"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schloss_W_AttributeGroup" name="CSchloss_W">
+      <xs:sequence>
+         <xs:element name="ID_W_Kr_Element"
+                      type="xs:anyURI"
+                      ecore:reference="nsWeichen_und_Gleissperren:CW_Kr_Gsp_Element"
+                      nillable="true"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Verweis auf das Weichen- oder Kreuzungselement, das mit dem Schloss verschlossen wird. DB-Regelwerk Lageplan, Logische Darstellung der Schlüsselabhängigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Schloss_Art"
+                      type="nsSchluesselabhaengigkeiten:TCSchloss_Art"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Bauart des an der Weiche vorgesehenen Schlosses. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <ProposedValue>Riegelhandschloss</ProposedValue>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Verschluss_Herzstueck"
+                      type="nsSchluesselabhaengigkeiten:TCVerschluss_Herzstueck"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die Herzstückspitze des unter ID_W_Kr_Element angegebenen Weichen- bzw. Kreuzungselements zu verschließen (true) oder nicht zu verschließen ist (false). Die Angabe ist nur bei Weichen mit beweglichem Herzstück sinnvoll.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <ProposedValue>true</ProposedValue>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="W_Anbaulage"
+                      type="nsSchluesselabhaengigkeiten:TCW_Anbaulage"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob das Schloss an der linken oder rechten Seite der Weiche angebaut ist.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="W_Lage"
+                      type="nsSchluesselabhaengigkeiten:TCW_Lage"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Lage, in der die Weiche durch das Schloss gesichert wird. DB-Regelwerk Die Abhängigkeiten werden heute durch eine Zeichnung im Lageplan nach 819.9002 3 dargestellt. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="ENUMSchluessel_Bartform">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_a" value="a"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_b" value="b"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_c" value="c"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_d" value="d"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_e" value="e"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_f" value="f"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_g" value="g"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_h" value="h"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_i" value="i"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_k" value="k"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_l" value="l"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_m" value="m"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_n" value="n"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_o" value="o"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_p" value="p"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_q" value="q"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_r" value="r"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_s" value="s"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_t" value="t"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_u" value="u"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_v" value="v"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_w" value="w"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_x" value="x"/>
+         <xs:enumeration ecore:name="ENUMSchluessel_Bartform_z" value="z"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Bedienung_Art_TypeClass" name="TCBedienung_Art">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMBedienung_Art"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Technisch_Berechtigter_TypeClass"
+                    name="TCTechnisch_Berechtigter">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="xs:boolean"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schloss_Ssp_AttributeGroup" name="CSchloss_Ssp">
+      <xs:sequence>
+         <xs:element name="ID_Schluesselsperre"
+                      type="xs:anyURI"
+                      ecore:reference="nsSchluesselabhaengigkeiten:CSchluesselsperre"
+                      nillable="true"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Verweis auf die Schlüsselsperre, in der sich das Schloss befindet.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schloss_BUE_AttributeGroup" name="CSchloss_BUE">
+      <xs:sequence>
+         <xs:element name="BUE_Lage"
+                      type="nsSchluesselabhaengigkeiten:TCBUE_Lage"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Lage, in der die BUE Anlage verschlossen wird. DB-Regelwerk Die Abhängigkeiten werden heute durch eine Zeichnung im Lageplan nach 819.9002 3 dargestellt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ID_BUE_Anlage"
+                      type="xs:anyURI"
+                      ecore:reference="nsBahnuebergang:CBUE_Anlage"
+                      nillable="true"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Verweis auf die BUE Anlage, die mit dem Schloss verschlossen wird. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="ENUMGsp_Lage">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMGsp_Lage_abgelegt" value="abgelegt"/>
+         <xs:enumeration ecore:name="ENUMGsp_Lage_aufgelegt" value="aufgelegt"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Schloss" name="CSchloss">
+      <xs:annotation>
+         <xs:documentation>Mechanisches Bauelement, das durch das Ein- oder Ausschließen eines Schlüssels einen Riegel aus- oder einfahren lässt bzw. einen elektrischen Kontakt schließt oder öffnet. Je nach verschlossenem Element wird die entsprechende Attributgruppe ausgewählt: Bahnübergang, Gleissperre, Schlosskombination, Sonderanlage (z. B. bewegliche Brücke), Schlüsselsperre, Weiche. DB-Regelwerk Auf dem Lageplan werden nach 819.9002 3 dargestellt: Schlösser durch ein Symbol (z. B. Schlüsselsperre) oder zusätzliche Angaben zu anderen Symbolen (z. B. Weiche); Abhängigkeiten durch eine Zeichnung mit wiederholter Darstellung der Schlossstellungen als gefülltes oder leeres Schlüsselloch. </xs:documentation>
+         <xs:appinfo>
+            <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+               <ObjectType>LST_OBJECT</ObjectType>
+            </WorkflowInformation>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
+            <xs:sequence>
+               <xs:element name="Bezeichnung"
+                            type="nsSchluesselabhaengigkeiten:CSchloss_Bezeichnung"
+                            minOccurs="1"
+                            maxOccurs="1"/>
+               <xs:element name="ID_Schluessel"
+                            type="xs:anyURI"
+                            ecore:reference="nsSchluesselabhaengigkeiten:CSchluessel"
+                            nillable="true"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Verweis auf den zum Schloss gehörigen Schlüssel. DB-Regelwerk Lageplan, Logische Darstellung der Schlüsselabhängigkeit</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Schluessel_In_Grdst_Eingeschl"
+                            type="nsSchluesselabhaengigkeiten:TCSchluessel_In_Grdst_Eingeschl"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Schlüssel ist in Grundstellung eingeschlossen.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element name="Schloss_BUE"
+                               type="nsSchluesselabhaengigkeiten:CSchloss_BUE"
+                               minOccurs="1"
+                               maxOccurs="1"/>
+                  <xs:element name="Schloss_Gsp"
+                               type="nsSchluesselabhaengigkeiten:CSchloss_Gsp"
+                               minOccurs="1"
+                               maxOccurs="1"/>
+                  <xs:element name="Schloss_Sk"
+                               type="nsSchluesselabhaengigkeiten:CSchloss_Sk"
+                               minOccurs="1"
+                               maxOccurs="1"/>
+                  <xs:element name="Schloss_Sonderanlage"
+                               type="nsSchluesselabhaengigkeiten:CSchloss_Sonderanlage"
+                               minOccurs="1"
+                               maxOccurs="1"/>
+                  <xs:element name="Schloss_Ssp"
+                               type="nsSchluesselabhaengigkeiten:CSchloss_Ssp"
+                               minOccurs="1"
+                               maxOccurs="1"/>
+                  <xs:element name="Schloss_W"
+                               type="nsSchluesselabhaengigkeiten:CSchloss_W"
+                               minOccurs="1"
+                               maxOccurs="1"/>
+                  <xs:element name="Technisch_Berechtigter"
+                               type="nsSchluesselabhaengigkeiten:TCTechnisch_Berechtigter"
+                               minOccurs="1"
+                               maxOccurs="1">
+                     <xs:annotation>
+                        <xs:documentation>Aufbewahrung des Schlüssels beim Technisch Berechtigten (true). Der Wert "false" wird nicht verwendet.</xs:documentation>
+                        <xs:appinfo>
+                           <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                              <ProposedValue>true</ProposedValue>
+                           </WorkflowInformation>
+                        </xs:appinfo>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:choice>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Bezeichnung_Schluessel_TypeClass"
+                    name="TCBezeichnung_Schluessel">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:TBezeichnung_Schluessel"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schluessel" name="CSchluessel">
+      <xs:annotation>
+         <xs:documentation>Sicherungstechnisches Element zur Herstellung von Schlüsselabhängigkeiten über Schlösser an Elementen. Der Schlüssel im sicherungstechnischen Sinn ist ein repräsentativer und innerhalb einer Örtlichkeit einmaliger Gegenstand. Durch den Besitz des Schlüssels kann sicher und eindeutig auf einen bestimmten Anlagenzustand geschlossen werden. Somit können durch Verknüpfung mit weiteren Fahrwegelementen oder einer informationsverarbeitenden Einheit sichere Abhängigkeiten geschaffen werden. In der Regel gibt es örtlich immer zwei gleich schließende Schlösser, selten mehr. Wird eine Schlüsselsperre nur als Schalter benutzt (z. B. um Fahrstraßen zu sperren), gibt es zu einem Schlüssel nur ein Schloss. Um die örtliche Einmaligkeit herzustellen, darf eine Schlüsselform nur einmal innerhalb einer Betriebsstelle oder besser noch eines Streckenabschnitts verwendet werden. Dazu sind 24 verschiedene Schlüsselbartformen vorhanden, die mit sechs Schlüsselgruppen kombiniert werden können. Nicht jede Bartform wird mit jeder Gruppe kombiniert. So stehen insgesamt 92 verschiedene Schlüsselformen zur Verfügung. DB-Regelwerk Die Planung der Schlüsselformen ist bisher nicht Bestandteil des PT1. Für die Formen existieren Regelzeichnungen.</xs:documentation>
+         <xs:appinfo>
+            <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+               <ObjectType>LST_OBJECT</ObjectType>
+            </WorkflowInformation>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
+            <xs:sequence>
+               <xs:element name="Bezeichnung"
+                            type="nsSchluesselabhaengigkeiten:CSchluessel_Bezeichnung"
+                            minOccurs="0"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Attributgruppe zur Bezeichnung von Stell- und sonstigen Elementen. Sofern ausreichend, wird an dieser Stelle über Vererbung die Basisattributgruppe Bezeichnung Element eingebunden. Ist die Abbildung mit den Attributen der Basisattributgruppe nicht möglich (z. B. wegen spezieller Patternvorgabe) oder nicht sinnvoll (z. B. weil eine Unterscheidung nach Bezeichnung_Lageplan_..., Bezeichnung_Tabelle und Bezeichnung_Aussenanlage (Pflichtattribute!) nicht notwendig ist), werden in der Attributgruppe Bezeichnung entsprechende objektspezifische Bezeichnungsattribute modelliert. Diese sind nach dem Schema Bezeichnung_[Objektname] zu benennen. Zudem ist es möglich, gleichzeitig die Basisattributgruppe Bezeichnung Element und objektspezifische Attribute einzubinden. Siehe auch Bildung der Bezeichnungen. DB-Regelwerk Sicherungstechnischer Lage- und Übersichtsplan, BÜ-Lageplan Planungstabellen </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Schluessel_Allg"
+                            type="nsSchluesselabhaengigkeiten:CSchluessel_Allg"
+                            minOccurs="0"
+                            maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schloss_Bezeichnung_AttributeGroup"
+                    name="CSchloss_Bezeichnung">
+      <xs:sequence>
+         <xs:element name="Bezeichnung_Schloss"
+                      type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schloss"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Bezeichnung des Schlosses, die sich im Regelfall aus dem zu verschließenden Element ergibt, ggf. zuzüglich dessen Lage. Bei einer Schlüsselsperre/Schlosskombination entspricht die Bezeichnung der Bezeichnung der Schlüsselsperre/ Schlosskombination.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung>[1..20]</Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType ecore:name="Bezeichnung_Sk_Type" name="TBezeichnung_Sk">
+      <xs:restriction base="nsBasisTypen:TZeichenkette"/>
+   </xs:simpleType>
+   <xs:complexType ecore:name="W_Anbaulage_TypeClass" name="TCW_Anbaulage">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:TW_Anbaulage"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schlosskombination_Bezeichnung_AttributeGroup"
+                    name="CSchlosskombination_Bezeichnung">
+      <xs:sequence>
+         <xs:element name="Bezeichnung_Sk"
+                      type="nsSchluesselabhaengigkeiten:TCBezeichnung_Sk"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Bezeichnung der Schlosskombination. Zukünftige Regel zur Bezeichnung einer Schlosskombination: "Sk" + Kurz- oder Langbezeichnung des zum Hauptschlüssel gehörenden, korrespondierenden Schlosses. Bei mehreren Hauptschlüsseln ist das Schloss mit der niedrigeren Bezeichnung maßgebend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="ENUMBedienung_Art">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMBedienung_Art_aussen" value="aussen"/>
+         <xs:enumeration ecore:name="ENUMBedienung_Art_aussen_Awanst" value="aussen_Awanst"/>
+         <xs:enumeration ecore:name="ENUMBedienung_Art_innen" value="innen"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="ENUMSchloss_Art">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMSchloss_Art_HV_73" value="HV_73"/>
+         <xs:enumeration ecore:name="ENUMSchloss_Art_Prueferschieber_abschliessbar"
+                          value="Prueferschieber_abschliessbar"/>
+         <xs:enumeration ecore:name="ENUMSchloss_Art_Riegelhandschloss"
+                          value="Riegelhandschloss"/>
+         <xs:enumeration ecore:name="ENUMSchloss_Art_sonstige" value="sonstige"/>
+         <xs:enumeration ecore:name="ENUMSchloss_Art_Weichenschloss" value="Weichenschloss"/>
+         <xs:enumeration ecore:name="ENUMSchloss_Art_Zungensperre" value="Zungensperre"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Schluessel_In_Grdst_Eingeschl_TypeClass"
+                    name="TCSchluessel_In_Grdst_Eingeschl">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="xs:boolean"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="BUE_Lage_TypeClass" name="TCBUE_Lage">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMBUE_Lage"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Verschluss_Herzstueck_TypeClass"
+                    name="TCVerschluss_Herzstueck">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="xs:boolean"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Beschreibung_Sonderanlage_TypeClass"
+                    name="TCBeschreibung_Sonderanlage">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:TBeschreibung_Sonderanlage"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="W_Anbaulage_Type" name="TW_Anbaulage">
+      <xs:restriction base="nsBasisTypen:TLinksRechts"/>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Schlosskombination" name="CSchlosskombination">
+      <xs:annotation>
+         <xs:documentation>Mechanische Einrichtung zur Freigabe mehrerer (abhängiger) Schlüssel durch einen (Haupt-) Schlüssel. Der Hauptschlüssel wird so lange festgehalten, wie mindestens ein Riegel der abhängigen Schlösser ausgefahren ist. In der Regel besteht die Grundstellung darin, dass der Hauptschlüssel entfernt und die abhängigen Schlüssel eingeschlossen sind. DB-Regelwerk Darstellung durch Zeichnung im Lageplan. Eine aktuelle Ril dazu existiert nicht, es werden alte Zeichnungsstandards verwendet.</xs:documentation>
+         <xs:appinfo>
+            <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+               <ObjectType>LST_OBJECT</ObjectType>
+            </WorkflowInformation>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
+            <xs:sequence>
+               <xs:element name="Bezeichnung"
+                            type="nsSchluesselabhaengigkeiten:CSchlosskombination_Bezeichnung"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Attributgruppe zur Bezeichnung von Stell- und sonstigen Elementen. Sofern ausreichend, wird an dieser Stelle über Vererbung die Basisattributgruppe Bezeichnung Element eingebunden. Ist die Abbildung mit den Attributen der Basisattributgruppe nicht möglich (z. B. wegen spezieller Patternvorgabe) oder nicht sinnvoll (z. B. weil eine Unterscheidung nach Bezeichnung_Lageplan_..., Bezeichnung_Tabelle und Bezeichnung_Aussenanlage (Pflichtattribute!) nicht notwendig ist), werden in der Attributgruppe Bezeichnung entsprechende objektspezifische Bezeichnungsattribute modelliert. Diese sind nach dem Schema Bezeichnung_[Objektname] zu benennen. Zudem ist es möglich, gleichzeitig die Basisattributgruppe Bezeichnung Element und objektspezifische Attribute einzubinden. Siehe auch Bildung der Bezeichnungen. DB-Regelwerk Sicherungstechnischer Lage- und Übersichtsplan, BÜ-Lageplan Planungstabellen </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ID_Unterbringung"
+                            type="xs:anyURI"
+                            ecore:reference="nsAnsteuerung_Element:CUnterbringung"
+                            nillable="true"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Verweis auf den physischen Ort der Unterbringung von Aussenelementansteuerung, Bedien Einrichtung Oertlich, Bedien Platz, ESTW Zentraleinheit, PZB Element, Schlosskombination, Schluesselsperre und ZN. Für das PZB Element wird der Verweis nur für eine GÜ gefüllt - mit der Bedeutung: GÜ-Schaltkasten. Für die ZN ist der Verweis optional, da im Planungswerkzeug ZN/ZL keine Befüllung aller der für die Unterbringung notwendigen Attribute möglich ist. DB-Regelwerk Darstellung des Gebäudes, der Bediensäule bzw. des Schaltkastens im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erläuterungsbericht.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schloss_Art_TypeClass" name="TCSchloss_Art">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMSchloss_Art"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="W_Lage_TypeClass" name="TCW_Lage">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:TW_Lage"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schluessel_Bartform_TypeClass" name="TCSchluessel_Bartform">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMSchluessel_Bartform"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Hauptschloss_TypeClass" name="TCHauptschloss">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="xs:boolean"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="ENUMBUE_Lage">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMBUE_Lage_geoeffnet" value="geoeffnet"/>
+         <xs:enumeration ecore:name="ENUMBUE_Lage_geschlossen" value="geschlossen"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Schloss_Sk_AttributeGroup" name="CSchloss_Sk">
+      <xs:sequence>
+         <xs:element name="Hauptschloss"
+                      type="nsSchluesselabhaengigkeiten:TCHauptschloss"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Schloss ist das Hauptschloss der Schlosskombination.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ID_Schlosskombination"
+                      type="xs:anyURI"
+                      ecore:reference="nsSchluesselabhaengigkeiten:CSchlosskombination"
+                      nillable="true"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Verweis auf die Schlosskombination, zu der das Schloss gehört.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType ecore:name="Schluessel_Allg_AttributeGroup" name="CSchluessel_Allg">
+      <xs:sequence>
+         <xs:element name="Schluessel_Bartform"
+                      type="nsSchluesselabhaengigkeiten:TCSchluessel_Bartform"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Bartform des Schlüssels. DB-Regelwerk Bisher keine Darstellung</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Schluessel_Gruppe"
+                      type="nsSchluesselabhaengigkeiten:TCSchluessel_Gruppe"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Gruppe des Schlüssels. DB-Regelwerk Bisher keine Darstellung</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

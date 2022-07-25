@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Transform
+Bundle-SymbolicName: org.eclipse.set.toolboxmodel.transform
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.eclipse.set.toolboxmodel.transform
+Bundle-Vendor: Eclipse SET Project
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.emf.ecore,
+ org.eclipse.set.toolboxmodel
+Export-Package: org.eclipse.set.toolboxmodel.transform
+Import-Package: org.eclipse.set.model.model1902.BasisTypen,
+ org.eclipse.set.model.model1902.PlanPro,
+ org.eclipse.set.model.modelservice

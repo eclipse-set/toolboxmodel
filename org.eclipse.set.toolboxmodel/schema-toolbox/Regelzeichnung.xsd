@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+            xmlns:func="localhost/function"
+            xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
+            xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
+            xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
+            xmlns:nsBalisentechnik_ETCS="http://www.plan-pro.org/modell/Balisentechnik_ETCS/toolbox"
+            xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/toolbox"
+            xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/toolbox"
+            xmlns:nsBedienung="http://www.plan-pro.org/modell/Bedienung/toolbox"
+            xmlns:nsBlock="http://www.plan-pro.org/modell/Block/toolbox"
+            xmlns:nsFahrstrasse="http://www.plan-pro.org/modell/Fahrstrasse/toolbox"
+            xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
+            xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
+            xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
+            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
+            xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
+            xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
+            xmlns:nsRegelzeichnung="http://www.plan-pro.org/modell/Regelzeichnung/toolbox"
+            xmlns:nsSchluesselabhaengigkeiten="http://www.plan-pro.org/modell/Schluesselabhaengigkeiten/toolbox"
+            xmlns:nsSignalbegriffe_Ril_301="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/toolbox"
+            xmlns:nsSignalbegriffe_Struktur="http://www.plan-pro.org/modell/Signalbegriffe_Struktur/toolbox"
+            xmlns:nsSignale="http://www.plan-pro.org/modell/Signale/toolbox"
+            xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/toolbox"
+            xmlns:nsWeichen_und_Gleissperren="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/toolbox"
+            xmlns:nsZuglenkung="http://www.plan-pro.org/modell/Zuglenkung/toolbox"
+            xmlns:nsZugnummernmeldeanlage="http://www.plan-pro.org/modell/Zugnummernmeldeanlage/toolbox"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            ecore:nsPrefix="nsRegelzeichnung"
+            ecore:package="org.eclipse.set.toolboxmodel.Regelzeichnung"
+            targetNamespace="http://www.plan-pro.org/modell/Regelzeichnung/toolbox">
+   <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
+               schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
+               schemaLocation="Bahnsteig.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
+               schemaLocation="Bahnuebergang.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Balisentechnik_ETCS/toolbox"
+               schemaLocation="Balisentechnik_ETCS.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/toolbox"
+               schemaLocation="Basisobjekte.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/toolbox"
+               schemaLocation="BasisTypen.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Bedienung/toolbox"
+               schemaLocation="Bedienung.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Block/toolbox"
+               schemaLocation="Block.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Fahrstrasse/toolbox"
+               schemaLocation="Fahrstrasse.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
+               schemaLocation="Flankenschutz.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Geodaten/toolbox"
+               schemaLocation="Geodaten.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
+               schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
+               schemaLocation="Medien_und_Trassen.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
+               schemaLocation="Ortung.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
+               schemaLocation="PlanPro.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/PZB/toolbox"
+               schemaLocation="PZB.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Schluesselabhaengigkeiten/toolbox"
+               schemaLocation="Schluesselabhaengigkeiten.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/toolbox"
+               schemaLocation="Signalbegriffe_Ril_301.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Signalbegriffe_Struktur/toolbox"
+               schemaLocation="Signalbegriffe_Struktur.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Signale/toolbox"
+               schemaLocation="Signale.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Verweise/toolbox"
+               schemaLocation="Verweise.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/toolbox"
+               schemaLocation="Weichen_und_Gleissperren.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Zuglenkung/toolbox"
+               schemaLocation="Zuglenkung.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Zugnummernmeldeanlage/toolbox"
+               schemaLocation="Zugnummernmeldeanlage.xsd"/>
+   <xs:annotation>
+      <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+
+Weitere Informationen zur Lizenz finden Sie auf
+http://www.dbnetze.com/planpro
+
+Inhalt der Datei:
+XML Schema für PlanPro Schnittstelle.
+
+Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+
+Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+
+--------------------------------------------------------------------------------
+
+This Document is licensed under the open source license RailPL V1.0.
+
+More information about the license can be found on
+http://www.dbnetze.com/planpro
+
+Contents of the file:
+XML Schema for PlanPro interface.</xs:documentation>
+   </xs:annotation>
+   <xs:complexType ecore:name="Regelzeichnung" name="CRegelzeichnung">
+      <xs:annotation>
+         <xs:documentation>Regelzeichnungen werden verwendet, um einheitliche Bauausführungen für bestimmte Objekte sicherzustellen. Die für die LST-Anwendungen im Datenmodell benötigten Regelzeichnungen werden in einer Regelzeichnungstabelle aufgelistet. Regelzeichnungen können neben dem Bild eine beliebige Anzahl von Parametern haben, die die Bausausführung für einen konkreten Anwendungsfall genauer spezifizieren. Die Gültigkeit der Parameter für eine konkrete Anwendung in einer Regelzeichnung kann nur mit Hilfe der Plausibilitäts- und Zulässigkeitsprüfung (PlaZ) bestimmt werden. DB-Regelwerk Für die Anwendung der Regelzeichnugen für Weichen, Kreuzungen und Gleissperren ist das Regelwerk 819.0401Z01 bis 819.0401Z03 zu beachten.</xs:documentation>
+         <xs:appinfo>
+            <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+               <ObjectType>LST_OBJECT</ObjectType>
+            </WorkflowInformation>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
+            <xs:sequence>
+               <xs:element name="Regelzeichnung_Allg"
+                            type="nsRegelzeichnung:CRegelzeichnung_Allg"
+                            minOccurs="1"
+                            maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="RZ_Nummer_TypeClass" name="TCRZ_Nummer">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsRegelzeichnung:TRZ_Nummer"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="RZ_Nummer_Type" name="TRZ_Nummer">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,20}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Regelzeichnung_Allg_AttributeGroup"
+                    name="CRegelzeichnung_Allg">
+      <xs:sequence>
+         <xs:element name="Bild"
+                      type="nsRegelzeichnung:TCBild"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Parameter zur Angabe eines bestimmten Anwendungsfalls einer Regelzeichnung. Auf einer Regelzeichnung sind im Allgemeinen mehrere Anwendungen in unterschiedlichen Bildern dargestellt. Der Parameter Bild verweist auf eine derartige konkrete Anwendung. Die Bezeichnung der Bilder ist nicht vorgegeben und wird von den Erstellern der Regelzeichnung unterschiedlich angegeben. Es sind neben den alphanumerischen Zeichen auch Sonderzeichen möglich.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung> [1..20] </Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="RZ_Nummer"
+                      type="nsRegelzeichnung:TCRZ_Nummer"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Ordnungsmerkmal, was die Regelzeichnung identifiziert. Die Regelzeichnungen sind im System von IZ-Plan unter diesem Ordnungsmerkmal abgelegt. Die Regelzeichnungen der Sicherungstechnik beginnen in der Regel mit dem Kennbuchstaben S und werden von mehrteilig durch Dezimalpunkt getrennte Zahlen ergänzt. Die letzte Zahl stellt dabei den Ausgabestand dar.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung> [1..20] </Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Titel"
+                      type="nsRegelzeichnung:TCTitel"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Titel der Regelzeichnung. Der Titel ist im Schriftfeld dargestellt und erläutert grob den Inhalt und die Anwendung der Regelzeichnung.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung> [1..200] </Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Untertitel"
+                      type="nsRegelzeichnung:TCUntertitel"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Zusätzliche Erläuterungen und Abgrenzungen der Regelzeichnung, die nicht aus dem Titel hervorgehen. Der Untertitel wird vom Bearbeiter der Regelzeichnung vergeben.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung> [1..200] </Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType ecore:name="Untertitel_TypeClass" name="TCUntertitel">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsRegelzeichnung:TUntertitel"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Regelzeichnung_Parameter" name="CRegelzeichnung_Parameter">
+      <xs:annotation>
+         <xs:documentation>Einer Regelzeichnung werden durch dieses Objekt weitere Parameter zugeordnet. Für eine Regelzeichnung können beliebig viele Parameter entsprechend der konkreten Anwendung angegeben werden. </xs:documentation>
+         <xs:appinfo>
+            <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+               <ObjectType>LST_OBJECT</ObjectType>
+            </WorkflowInformation>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
+            <xs:sequence>
+               <xs:element name="ID_Regelzeichnung"
+                            type="xs:anyURI"
+                            ecore:reference="nsRegelzeichnung:CRegelzeichnung"
+                            nillable="true"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Zuweisung des Parameters zur Regelzeichnung. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Regelzeichnung_Parameter_Allg"
+                            type="nsRegelzeichnung:CRegelzeichnung_Parameter_Allg"
+                            minOccurs="1"
+                            maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="RZ_Parameter_Name_Type" name="TRZ_Parameter_Name">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,20}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType ecore:name="Bild_Type" name="TBild">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,20}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="RZ_Parameter_Name_TypeClass" name="TCRZ_Parameter_Name">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsRegelzeichnung:TRZ_Parameter_Name"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="RZ_Parameter_Wert_Type" name="TRZ_Parameter_Wert">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,20}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="RZ_Parameter_Wert_TypeClass" name="TCRZ_Parameter_Wert">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsRegelzeichnung:TRZ_Parameter_Wert"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="Titel_Type" name="TTitel">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,200}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Regelzeichnung_Parameter_Allg_AttributeGroup"
+                    name="CRegelzeichnung_Parameter_Allg">
+      <xs:sequence>
+         <xs:element name="RZ_Parameter_Name"
+                      type="nsRegelzeichnung:TCRZ_Parameter_Name"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Name eines Parameters, der in einer Regelzeichnung hinterlegt ist und die konkrete Anwendung der Regelzeichnung präzisiert. Dem benannten Parameter wird ein Wert zugewiesen. Die zulässigen Namen sind für die Regelzeichnungen unterschiedlich. Es muss deshalb eine Datenbank entstehen, in der die für eine Regelzeichnung gültigen Parameter abgelegt sind, da ansonsten eine rechnergestützte Auswertung nicht möglich ist.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung> [1..20] </Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="RZ_Parameter_Wert"
+                      type="nsRegelzeichnung:TCRZ_Parameter_Wert"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Wert, der einen Parameter in einer Regelzeichnung spezifiziert. Der Wert kann dabei ein fester Wert sein oder aus einer in der Regelzeichnung vorhandenen Tabelle entnommen werden. </xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung> [1..20] </Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType ecore:name="Titel_TypeClass" name="TCTitel">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsRegelzeichnung:TTitel"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Bild_TypeClass" name="TCBild">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsRegelzeichnung:TBild"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType ecore:name="Untertitel_Type" name="TUntertitel">
+      <xs:restriction base="nsBasisTypen:TText">
+         <xs:pattern value=".{1,200}"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

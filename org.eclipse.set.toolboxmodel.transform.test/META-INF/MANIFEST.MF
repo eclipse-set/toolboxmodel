@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: org.eclipse.set.toolboxmodel.transform.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Eclipse SET Project
+Automatic-Module-Name: org.eclipse.set.toolboxmodel.transform.test
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Require-Bundle: org.eclipse.emf.ecore.xmi,
+ org.junit,
+ org.junit.jupiter.api,
+ org.junit.platform.commons,
+ org.eclipse.set.toolboxmodel,
+ org.eclipse.set.toolboxmodel.transform
+Import-Package: org.eclipse.set.model.model1902.PlanPro,
+ org.eclipse.set.model.model1902.PlanPro.util,
+ org.eclipse.set.model.model1902.Signalbegriffe_Ril_301

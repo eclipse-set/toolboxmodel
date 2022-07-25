@@ -1,0 +1,74 @@
+/**
+ */
+package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
+
+import org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Weichensignal Type Class</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichensignal_TypeClass#getWert <em>Wert</em>}</li>
+ * </ul>
+ *
+ * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage#getWeichensignal_TypeClass()
+ * @model extendedMetaData="name='TCWeichensignal' kind='elementOnly'"
+ * @generated
+ */
+public interface Weichensignal_TypeClass extends BasisAttribut_AttributeGroup {
+	/**
+	 * Returns the value of the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wert</em>' attribute.
+	 * @see #isSetWert()
+	 * @see #unsetWert()
+	 * @see #setWert(ENUMWeichensignal)
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage#getWeichensignal_TypeClass_Wert()
+	 * @model unsettable="true" dataType="org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMWeichensignalObject" required="true"
+	 *        extendedMetaData="kind='element' name='Wert'"
+	 * @generated
+	 */
+	ENUMWeichensignal getWert();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichensignal_TypeClass#getWert <em>Wert</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Wert</em>' attribute.
+	 * @see #isSetWert()
+	 * @see #unsetWert()
+	 * @see #getWert()
+	 * @generated
+	 */
+	void setWert(ENUMWeichensignal value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichensignal_TypeClass#getWert <em>Wert</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetWert()
+	 * @see #getWert()
+	 * @see #setWert(ENUMWeichensignal)
+	 * @generated
+	 */
+	void unsetWert();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichensignal_TypeClass#getWert <em>Wert</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Wert</em>' attribute is set.
+	 * @see #unsetWert()
+	 * @see #getWert()
+	 * @see #setWert(ENUMWeichensignal)
+	 * @generated
+	 */
+	boolean isSetWert();
+
+} // Weichensignal_TypeClass

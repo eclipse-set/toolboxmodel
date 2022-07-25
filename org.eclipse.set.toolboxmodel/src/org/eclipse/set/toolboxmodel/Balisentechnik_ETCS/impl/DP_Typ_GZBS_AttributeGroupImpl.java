@@ -1,0 +1,185 @@
+/**
+ */
+package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GZBS_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_ZBS_TypeClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>DP Typ GZBS Attribute Group</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GZBS_AttributeGroupImpl#getDPTypZBS <em>DP Typ ZBS</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class DP_Typ_GZBS_AttributeGroupImpl extends MinimalEObjectImpl.Container implements DP_Typ_GZBS_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getDPTypZBS() <em>DP Typ ZBS</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDPTypZBS()
+	 * @generated
+	 * @ordered
+	 */
+	protected DP_Typ_ZBS_TypeClass dPTypZBS;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DP_Typ_GZBS_AttributeGroupImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GZBS_AttributeGroup();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DP_Typ_ZBS_TypeClass getDPTypZBS() {
+		return dPTypZBS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDPTypZBS(DP_Typ_ZBS_TypeClass newDPTypZBS, NotificationChain msgs) {
+		DP_Typ_ZBS_TypeClass oldDPTypZBS = dPTypZBS;
+		dPTypZBS = newDPTypZBS;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS, oldDPTypZBS, newDPTypZBS);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDPTypZBS(DP_Typ_ZBS_TypeClass newDPTypZBS) {
+		if (newDPTypZBS != dPTypZBS) {
+			NotificationChain msgs = null;
+			if (dPTypZBS != null)
+				msgs = ((InternalEObject)dPTypZBS).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS, null, msgs);
+			if (newDPTypZBS != null)
+				msgs = ((InternalEObject)newDPTypZBS).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS, null, msgs);
+			msgs = basicSetDPTypZBS(newDPTypZBS, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS, newDPTypZBS, newDPTypZBS));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS:
+				return basicSetDPTypZBS(null, msgs);
+			default:
+				return super.eInverseRemove(otherEnd, featureID, msgs);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS:
+				return getDPTypZBS();
+			default:
+				return super.eGet(featureID, resolve, coreType);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS:
+				setDPTypZBS((DP_Typ_ZBS_TypeClass)newValue);
+				return;
+			default:
+				super.eSet(featureID, newValue);
+				return;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS:
+				setDPTypZBS((DP_Typ_ZBS_TypeClass)null);
+				return;
+			default:
+				super.eUnset(featureID);
+				return;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TYP_GZBS_ATTRIBUTE_GROUP__DP_TYP_ZBS:
+				return dPTypZBS != null;
+			default:
+				return super.eIsSet(featureID);
+		}
+	}
+
+} //DP_Typ_GZBS_AttributeGroupImpl
