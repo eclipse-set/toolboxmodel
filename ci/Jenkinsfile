@@ -65,9 +65,9 @@ spec:
 
     stage('Deploy Snapshot')
     {
-      //when {
-      //  branch 'main'
-      //}
+      when {
+        branch 'main'
+      }
       steps {
         container('jnlp') {
           sshagent (['projects-storage.eclipse.org-bot-ssh']) {
