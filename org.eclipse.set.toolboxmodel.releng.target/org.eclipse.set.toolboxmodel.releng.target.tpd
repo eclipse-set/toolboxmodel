@@ -24,7 +24,7 @@ location "https://download.eclipse.org/releases/2022-06/" {
  * 
  * Provides libraries for the PlanPro model.
  */
-location "http://nexus/nexus/service/local/repositories/planpro-repo.unzip/content/org/eclipse/set/org.eclipse.set.model.repository/1.0.2/org.eclipse.set.model.repository-1.0.2.zip-unzip/" {
+location "https://download.eclipse.org/set/snapshots/model/" {
 	org.eclipse.set.model.model1902.feature.feature.group
 	org.eclipse.set.model.model1902.feature.source.feature.group
 }
