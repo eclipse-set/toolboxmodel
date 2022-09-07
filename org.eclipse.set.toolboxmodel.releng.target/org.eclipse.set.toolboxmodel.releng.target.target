@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
-<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
 <target name="org.eclipse.set.toolboxmodel.releng.target" sequenceNumber="1662097700">
   <locations>
-    <location includeMode="slicer" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+    <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="org.eclipse.jdt.feature.group" version="3.18.1200.v20220607-0700"/>
       <unit id="org.eclipse.emf.ecore.feature.group" version="2.28.0.v20220426-0617"/>
       <unit id="org.eclipse.emf.sdk.feature.group" version="2.30.0.v20220516-1117"/>
@@ -15,12 +14,12 @@
       <unit id="com.google.guava" version="30.1.0.v20210127-2300"/>
       <repository location="https://download.eclipse.org/releases/2022-06/"/>
     </location>
-    <location includeMode="slicer" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.set.model.model1902.feature.feature.group" version="1.1.0.202209011339"/>
-      <unit id="org.eclipse.set.model.model1902.feature.source.feature.group" version="1.1.0.202209011339"/>
+    <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+      <unit id="org.eclipse.set.model.model1902.feature.feature.group" version="1.1.0.202209021103"/>
+      <unit id="org.eclipse.set.model.model1902.feature.source.feature.group" version="1.1.0.202209021103"/>
       <repository location="https://download.eclipse.org/set/snapshots/model/"/>
     </location>
-    <location includeMode="slicer" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+    <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="org.eclipse.xtend.lib" version="2.27.0.v20220530-0353"/>
       <unit id="org.eclipse.xtend.lib.macro" version="2.27.0.v20220530-0353"/>
       <unit id="org.eclipse.xtend.lib.macro.source" version="2.27.0.v20220530-0353"/>
