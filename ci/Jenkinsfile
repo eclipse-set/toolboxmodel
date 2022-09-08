@@ -2,7 +2,7 @@ pipeline {
   agent {
     kubernetes {
       label 'set-toolboxmodel-agent-pod'
-      yamlFile 'kubernetes.yaml'
+      yamlFile 'ci/kubernetes.yaml'
     }
   }
 
