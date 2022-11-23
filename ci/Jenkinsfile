@@ -27,16 +27,26 @@ pipeline {
       }
     }
 
+    stage('Remove Old Snapshot') {
+      when {
+        branch 'main'
+      }
+      steps {
+        removeOldSnapshot repo: 'toolboxmodel'
+      }
+    }
+
     stage('Deploy Snapshot')
     {
       when {
         anyOf {
           buildingTag()
           branch 'main'
+          branch pattern: "feature/\\w+", comparator: "REGEXP"
         }
       }
       steps {
-        deployP2Site name: 'toolboxmodel', path: 'java/bundles/org.eclipse.set.toolboxmodel.repository/target/repository' 
+        deployP2Site name: 'toolboxmodel/${BRANCH_NAME}', path: 'java/bundles/org.eclipse.set.toolboxmodel.repository/target/repository' 
       }
     }
   }
