@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Test
+Bundle-Name: Toolbox Model Test
 Bundle-SymbolicName: org.eclipse.set.toolboxmodel.transform.test
 Bundle-Version: 1.1.0.qualifier
-Bundle-Vendor: Eclipse SET Project
+Bundle-Vendor: Eclipse Signalling Engineering Toolbox
 Automatic-Module-Name: org.eclipse.set.toolboxmodel.transform.test
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.eclipse.emf.ecore.xmi,

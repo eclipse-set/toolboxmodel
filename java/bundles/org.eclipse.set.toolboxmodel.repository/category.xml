@@ -12,5 +12,5 @@
    <feature id="org.eclipse.set.model.model1902.feature.source">
       <category name="org.eclipse.set.toolboxmodel.category"/>
    </feature>
-   <category-def name="org.eclipse.set.toolboxmodel.category" label="SET Model"/>
+   <category-def name="org.eclipse.set.toolboxmodel.category" label="Toolbox Model"/>
 </site>

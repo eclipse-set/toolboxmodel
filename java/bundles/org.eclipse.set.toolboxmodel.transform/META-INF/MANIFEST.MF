@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Transform
+Bundle-Name: Toolbox Model Transform Transform
 Bundle-SymbolicName: org.eclipse.set.toolboxmodel.transform
 Bundle-Version: 1.1.0.qualifier
 Automatic-Module-Name: org.eclipse.set.toolboxmodel.transform
-Bundle-Vendor: Eclipse SET Project
+Bundle-Vendor: Eclipse Signalling Engineering Toolbox
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: com.google.guava,
  org.eclipse.xtext.xbase.lib,
