@@ -1,6 +1,7 @@
 # Build instructions
 
-As the requirements for local development and production deployments are different, this document contains two sets of instructions. First, instructions on how to work on the component locally using the Eclipse IDE (e.g. for development) and secondly how to do a full production build locally via Maven.
+As the requirements for local development and production deployments are different, this document contains two sets of instructions.
+First, instructions on how to work on the component locally using the Eclipse IDE (e.g. for development) and secondly instructions on how to do a full production build locally via Maven are provided. 
 
 ## Prerequisites
 
@@ -24,4 +25,4 @@ This is the recommended way if you want a production-style build. This is also w
 1. If you want to do a build relying on a build of the model component, update the target platform in `java/bundles/org.eclipse.set.toolboxmodel.releng.target` to point to your local p2 site. 
 2. Build via maven: `mvn clean verify`
 
-The p2 site for the model is now located in `java\bundles\org.eclipse.set.model.releng.repository\target\repository`. 
+The p2 site for the model is now located in `java\bundles\org.eclipse.set.toolboxmodel.repository\target\repository`. 
