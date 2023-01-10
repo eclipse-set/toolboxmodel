@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.1 http://maven.apache.org/xsd/maven-4.0.1.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.1 http://maven.apache.org/xsd/maven-4.0.1.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.toolboxmodel.releng.parent</artifactId>
@@ -9,6 +9,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
+		<cbi-version>1.3.2</cbi-version>
 		<tycho-version>2.7.0</tycho-version>
 		<tycho-extras-version>2.7.0</tycho-extras-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,7 +27,7 @@
 					<showDeprecation>true</showDeprecation>
 					<useProjectSettings>true</useProjectSettings>
 					<compilerVersion>17</compilerVersion>
-					<release>17</release>					
+					<release>17</release>
 				</configuration>
 			</plugin>
 
@@ -36,7 +37,7 @@
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-packaging-plugin</artifactId>
@@ -46,7 +47,7 @@
 					<skipPomGeneration>true</skipPomGeneration>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-publisher-plugin</artifactId>
@@ -55,7 +56,7 @@
 					<profiles>JavaSE-17</profiles>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
@@ -152,16 +153,40 @@
 		</plugins>
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>planpro-model</id>
-			<url>http://nexus:8081/nexus/content/repositories/planpro-repo</url>
-		</repository>
-	</distributionManagement>
-
 	<scm>
-		<connection>scm:git:http://ki-vl-git.ki.lan/PlanPro/toolboxmodel.git</connection>
-		<developerConnection>scm:git:http://ki-vl-git.ki.lan/PlanPro/toolboxmodel.git</developerConnection>
+		<connection>scm:git:https://gitlab.eclipse.org/eclipse/set/toolbox-model</connection>
+		<developerConnection>scm:git:https://gitlab.eclipse.org/eclipse/set/toolbox-model</developerConnection>
 	</scm>
+
+	<profiles>
+		<profile>
+			<id>sign</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.cbi.maven.plugins</groupId>
+						<artifactId>eclipse-jarsigner-plugin</artifactId>
+						<version>${cbi-version}</version>
+						<executions>
+							<execution>
+								<id>sign</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>cbi</id>
+			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 </project>
