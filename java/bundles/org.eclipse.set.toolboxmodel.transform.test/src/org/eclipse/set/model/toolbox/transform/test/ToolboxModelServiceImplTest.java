@@ -42,7 +42,7 @@ class ToolboxModelServiceImplTest {
 	@Test
 	void testTransform() throws Exception {
 		givenToolboxModelInitialization();
-		givenPlanProFile("res/content.ppxml");
+		givenPlanProFile("res/PPHN_Sample.ppxml");
 		givenToolboxModelService();
 
 		whenTransformingModel();
