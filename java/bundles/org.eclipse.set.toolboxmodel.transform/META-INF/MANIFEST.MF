@@ -13,6 +13,6 @@ Require-Bundle: com.google.guava,
  org.eclipse.emf.ecore,
  org.eclipse.set.toolboxmodel
 Export-Package: org.eclipse.set.toolboxmodel.transform
-Import-Package: org.eclipse.set.model.model1902.BasisTypen,
- org.eclipse.set.model.model1902.PlanPro,
+Import-Package: org.eclipse.set.model.model11001.BasisTypen,
+ org.eclipse.set.model.model11001.PlanPro,
  org.eclipse.set.model.modelservice

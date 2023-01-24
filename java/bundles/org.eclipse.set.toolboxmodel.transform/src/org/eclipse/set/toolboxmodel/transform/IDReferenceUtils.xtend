@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2022 DB Netz AG and others.
- *
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -12,15 +12,34 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EReference
-import org.eclipse.set.toolboxmodel.PlanPro.util.IDReference
 import java.util.List
+import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference
+import org.eclipse.set.toolboxmodel.PlanPro.PlanProFactory
+import org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle
 
 /**
  * Utilities for working with IDReferences
- *
+ * 
  * @author Stuecker 
  */
 class IDReferenceUtils {
+	/**
+	 * Retargets ID References onto a new object
+	 * 
+	 * When copying an EObject (for example during importing), the ID References 
+	 * from the source need to be updated to point to the newly created model
+	 * 
+	 * IMPROVE: Create an EObject copier which does this automatically to improve performance 
+	 * 
+	 * @param source
+	 * @param target
+	 */
+	static def void retargetIDReferences(PlanPro_Schnittstelle source, PlanPro_Schnittstelle target)
+	{
+		val outIDRefs = newArrayList
+		retargetIDReferences(source, target, source.wzkInvalidIDReferences, outIDRefs)
+		target.wzkInvalidIDReferences.addAll(outIDRefs)
+	}
 	/**
 	 * Retargets ID References onto a new object
 	 * 
@@ -35,14 +54,21 @@ class IDReferenceUtils {
 	 * @param outReferences The list to insert the retargeted ID references
 	 */
 	static def void retargetIDReferences(EObject source, EObject target,
-		Iterable<IDReference> references, List<IDReference> outReferences) {
+		Iterable<WzkInvalidIDReference> references,
+		List<WzkInvalidIDReference> outReferences) {
 		if (source === null || target === null) {
 			return;
 		}
 
+		
 		references.filter[it.target === source].map [ ref |
-			new IDReference(ref.guid(), ref.source(), ref.sourceRef(), target,
-				ref.targetRef())
+			val wzkref = PlanProFactory.eINSTANCE.createWzkInvalidIDReference()
+			wzkref.guid = ref.guid
+			wzkref.source = ref.source
+			wzkref.sourceRef = ref.sourceRef
+			wzkref.target = target
+			wzkref.targetRef = ref.targetRef
+			return wzkref
 		].forEach[outReferences.add(it)]
 
 		// Recurse into contained subobjects

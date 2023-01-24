@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle;
-import org.eclipse.set.toolboxmodel.PlanPro.util.IDReference;
+import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 
 /**
  * Resolver to set ID references within a toolbox model to their respective
@@ -30,26 +30,26 @@ public class ToolboxIDResolver {
 	}
 
 	/**
-	 * Resolves a list of ID references in a toolbox model
+	 * Resolves a list of ID references in a toolbox model and updates the model
+	 * accordingly
 	 * 
 	 * @param model
 	 *            the toolbox model
-	 * @param references
-	 *            a list of ID references to resolve
-	 * @return a list of ID references which could not be resolved
 	 */
-	public static List<IDReference> resolveIDReferences(
-			final PlanPro_Schnittstelle model,
-			final List<IDReference> references) {
+	public static void resolveIDReferences(final PlanPro_Schnittstelle model) {
 		final ToolboxIDResolver resolver = new ToolboxIDResolver(model);
-		return references.stream()
-				.filter(reference -> !resolver.resolveIDReference(reference))
+		final EList<WzkInvalidIDReference> refs = model
+				.getWzkInvalidIDReferences();
+
+		final List<WzkInvalidIDReference> resolved = refs.stream()
+				.filter(reference -> resolver.resolveIDReference(reference))
 				.toList();
+		refs.removeAll(resolved);
 	}
 
-	private boolean resolveIDReference(final IDReference reference) {
-		if (reference.guid() == null) {
-			if (reference.targetRef().isUnsettable()) {
+	private boolean resolveIDReference(final WzkInvalidIDReference reference) {
+		if (reference.getGuid() == null) {
+			if (reference.getTargetRef().isUnsettable()) {
 				// Reference with xsi:nil GUID
 				return setIDReference(reference, null);
 			}
@@ -57,8 +57,8 @@ public class ToolboxIDResolver {
 			return false;
 		}
 
-		final EObject value = guidCache.get(reference.guid(),
-				reference.target());
+		final EObject value = guidCache.get(reference.getGuid(),
+				reference.getTarget());
 		if (value != null) {
 			return setIDReference(reference, value);
 
@@ -68,9 +68,10 @@ public class ToolboxIDResolver {
 		return false;
 	}
 
-	private static boolean setIDReference(final IDReference reference,
+	private static boolean setIDReference(final WzkInvalidIDReference reference,
 			final EObject value) {
-		final EClass referenceType = reference.targetRef().getEReferenceType();
+		final EClass referenceType = reference.getTargetRef()
+				.getEReferenceType();
 
 		// If we have a value, check whether it is applicable
 		if (value != null) {
@@ -81,13 +82,13 @@ public class ToolboxIDResolver {
 			}
 		}
 
-		if (reference.targetRef().isMany()) {
+		if (reference.getTargetRef().isMany()) {
 			@SuppressWarnings("unchecked")
-			final EList<EObject> list = (EList<EObject>) reference.target()
-					.eGet(reference.targetRef());
+			final EList<EObject> list = (EList<EObject>) reference.getTarget()
+					.eGet(reference.getTargetRef());
 			list.add(value);
 		} else {
-			reference.target().eSet(reference.targetRef(), value);
+			reference.getTarget().eSet(reference.getTargetRef(), value);
 		}
 		return true;
 	}

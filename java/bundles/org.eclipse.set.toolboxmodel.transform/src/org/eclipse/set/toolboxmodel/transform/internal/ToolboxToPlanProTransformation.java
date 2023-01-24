@@ -13,15 +13,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.set.model.model11001.BasisTypen.BasisTypenPackage;
+import org.eclipse.set.model.model11001.BasisTypen.Zeiger_TypeClass;
+import org.eclipse.set.model.model11001.PlanPro.DocumentRoot;
+import org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
-import org.eclipse.set.toolboxmodel.PlanPro.util.IDReference;
+import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
-
-import org.eclipse.set.model.model1902.BasisTypen.BasisTypenPackage;
-import org.eclipse.set.model.model1902.BasisTypen.Zeiger_TypeClass;
-import org.eclipse.set.model.model1902.PlanPro.DocumentRoot;
-import org.eclipse.set.model.model1902.PlanPro.PlanProPackage;
-import org.eclipse.set.model.model1902.PlanPro.PlanPro_Schnittstelle;
 
 /**
  * Transformation from a Toolbox Model to the PlanPro Model
@@ -31,7 +29,7 @@ import org.eclipse.set.model.model1902.PlanPro.PlanPro_Schnittstelle;
  */
 public class ToolboxToPlanProTransformation
 		extends AbstractEObjectTransformation {
-	PlanPro_Schnittstelle planProRoot;
+	private PlanPro_Schnittstelle planProRoot;
 
 	@Override
 	protected String getTargetNamespace(final String sourceNamespace) {
@@ -57,15 +55,10 @@ public class ToolboxToPlanProTransformation
 		// Check if this is an ID Reference, if so handle it explicitly
 		if (isIDReference(targetRef)) {
 			transformIDReference(source, target, sourceRef, targetRef);
-		} else if (!isPlanungErsteGruppe(targetRef)) {
+		} else {
 			// Do not transform lstPlanungErsteGruppe
 			super.transformReference(source, target, sourceRef, targetRef);
 		}
-	}
-
-	private static boolean isPlanungErsteGruppe(final EReference sourceRef) {
-		return sourceRef == PlanProPackage.eINSTANCE
-				.getPlanung_Projekt_LstPlanungErsteGruppe();
 	}
 
 	private static boolean isIDReference(final EReference ref) {
@@ -119,17 +112,15 @@ public class ToolboxToPlanProTransformation
 	 * 
 	 * @param toolboxRoot
 	 *            the DocumentRoot for the Toolbox model
-	 * @param invalidIDReferences
-	 *            a list of unresolved/invalid ID references to restore into the
-	 *            PlanPro model
 	 * @return the PlanPro model
 	 */
 	public DocumentRoot transform(
-			final org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot toolboxRoot,
-			final Iterable<IDReference> invalidIDReferences) {
-		final DocumentRoot docRoot = (DocumentRoot) transform(toolboxRoot);
+			final org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot toolboxRoot) {
+		final DocumentRoot docRoot = (DocumentRoot) super.transform(
+				toolboxRoot);
 		planProRoot = docRoot.getPlanProSchnittstelle();
-		invalidIDReferences.forEach(this::restoreIDReference);
+		toolboxRoot.getPlanProSchnittstelle().getWzkInvalidIDReferences()
+				.forEach(this::restoreIDReference);
 		return docRoot;
 	}
 
@@ -138,16 +129,13 @@ public class ToolboxToPlanProTransformation
 	 * 
 	 * @param toolboxRoot
 	 *            the Schnittstelle for the Toolbox model
-	 * @param invalidIDReferences
-	 *            a list of unresolved/invalid ID references to restore into the
-	 *            PlanPro model
 	 * @return the PlanPro model
 	 */
 	public PlanPro_Schnittstelle transform(
-			final org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle toolboxRoot,
-			final Iterable<IDReference> invalidIDReferences) {
-		planProRoot = (PlanPro_Schnittstelle) transform(toolboxRoot);
-		invalidIDReferences.forEach(this::restoreIDReference);
+			final org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle toolboxRoot) {
+		planProRoot = transform(toolboxRoot);
+		toolboxRoot.getWzkInvalidIDReferences()
+				.forEach(this::restoreIDReference);
 		return planProRoot;
 	}
 
@@ -161,14 +149,14 @@ public class ToolboxToPlanProTransformation
 		return getRootContainer(source.eContainer());
 	}
 
-	private void restoreIDReference(final IDReference reference) {
+	private void restoreIDReference(final WzkInvalidIDReference reference) {
 		// Find the root container of the source PlanPro model that was
 		// initially used to create the toolbox model
-		final EObject oldRoot = getRootContainer(reference.source());
+		final EObject oldRoot = getRootContainer(reference.getSource());
 		// Find the new object at the same relative URI in the new PlanPro model
 		final EObject newRoot = getRootContainer(planProRoot);
 		final String relativeURI = EcoreUtil.getRelativeURIFragmentPath(oldRoot,
-				reference.source());
+				reference.getSource());
 		final EObject newObject = EcoreUtil.getEObject(newRoot, relativeURI);
 
 		// If the new object does not exist, it has been removed
@@ -177,19 +165,19 @@ public class ToolboxToPlanProTransformation
 		}
 
 		// Create the pointer
-		final EClass pointerType = reference.sourceRef().getEReferenceType();
+		final EClass pointerType = reference.getSourceRef().getEReferenceType();
 		final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
 				.create(pointerType);
-		pointer.setWert(reference.guid());
+		pointer.setWert(reference.getGuid());
 
 		// Add the pointer to the list or set it as value
-		if (reference.sourceRef().isMany()) {
+		if (reference.getSourceRef().isMany()) {
 			@SuppressWarnings("unchecked")
 			final EList<Zeiger_TypeClass> list = (EList<Zeiger_TypeClass>) newObject
-					.eGet(reference.sourceRef());
+					.eGet(reference.getSourceRef());
 			list.add(pointer);
 		} else {
-			newObject.eSet(reference.sourceRef(), pointer);
+			newObject.eSet(reference.getSourceRef(), pointer);
 		}
 	}
 

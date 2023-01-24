@@ -14,13 +14,12 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.set.toolboxmodel.PlanPro.util.IDReference;
-
-import org.eclipse.set.model.model1902.BasisTypen.BasisTypenPackage;
-import org.eclipse.set.model.model1902.BasisTypen.Zeiger_TypeClass;
-import org.eclipse.set.model.model1902.PlanPro.DocumentRoot;
-import org.eclipse.set.model.model1902.PlanPro.PlanProPackage;
-import org.eclipse.set.model.model1902.PlanPro.PlanPro_Schnittstelle;
+import org.eclipse.set.model.model11001.BasisTypen.BasisTypenPackage;
+import org.eclipse.set.model.model11001.BasisTypen.Zeiger_TypeClass;
+import org.eclipse.set.model.model11001.PlanPro.DocumentRoot;
+import org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle;
+import org.eclipse.set.toolboxmodel.PlanPro.PlanProFactory;
+import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 
 /**
  * Transformation from a PlanPro model to the Toolbox Model
@@ -30,7 +29,7 @@ import org.eclipse.set.model.model1902.PlanPro.PlanPro_Schnittstelle;
  */
 public class PlanProToToolboxTransformation
 		extends AbstractEObjectTransformation {
-	private List<IDReference> unresolvedIDReferences;
+	private List<WzkInvalidIDReference> pendingIDReferences = new ArrayList<>();
 
 	/**
 	 * Transforms a PlanPro model to a Toolbox model. This will not resolve ID
@@ -42,9 +41,14 @@ public class PlanProToToolboxTransformation
 	 */
 	public org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot transform(
 			final DocumentRoot inputModel) {
-		unresolvedIDReferences = new ArrayList<>();
-		return (org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot) super.transform(
+		pendingIDReferences = new ArrayList<>();
+		final org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot toolboxRoot = (org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot) super.transform(
 				inputModel);
+		toolboxRoot.getPlanProSchnittstelle().getWzkInvalidIDReferences()
+				.addAll(pendingIDReferences);
+		ToolboxIDResolver
+				.resolveIDReferences(toolboxRoot.getPlanProSchnittstelle());
+		return toolboxRoot;
 	}
 
 	/**
@@ -57,16 +61,13 @@ public class PlanProToToolboxTransformation
 	 */
 	public org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle transform(
 			final PlanPro_Schnittstelle inputModel) {
-		unresolvedIDReferences = new ArrayList<>();
-		return (org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle) super.transform(
+		pendingIDReferences = new ArrayList<>();
+		final org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle planproSchnittstelle = (org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle) super.transform(
 				inputModel);
-	}
-
-	/**
-	 * @return a list of unresolved ID references
-	 */
-	public List<IDReference> getUnresolvedIDReferences() {
-		return unresolvedIDReferences;
+		planproSchnittstelle.getWzkInvalidIDReferences()
+				.addAll(pendingIDReferences);
+		ToolboxIDResolver.resolveIDReferences(planproSchnittstelle);
+		return planproSchnittstelle;
 	}
 
 	@Override
@@ -89,16 +90,24 @@ public class PlanProToToolboxTransformation
 		// Check if this is an ID Reference, if so handle it explicitly
 		if (isIDReference(sourceRef)) {
 			transformIDReference(source, target, sourceRef, targetRef);
-		} else if (!isPlanungErsteGruppe(sourceRef)) {
+		} else {
 			// Do not transform lstPlanungErsteGruppe
 			super.transformReference(source, target, sourceRef, targetRef);
 		}
-
 	}
 
-	private static boolean isPlanungErsteGruppe(final EReference sourceRef) {
-		return sourceRef == PlanProPackage.eINSTANCE
-				.getPlanung_Projekt_LstPlanungErsteGruppe();
+	private void addUnresolvedReference(final String guid, final EObject source,
+			final EReference sourceRef, final EObject target,
+			final EReference targetRef) {
+
+		final WzkInvalidIDReference wzkref = PlanProFactory.eINSTANCE
+				.createWzkInvalidIDReference();
+		wzkref.setGuid(guid);
+		wzkref.setSource(source);
+		wzkref.setSourceRef(sourceRef);
+		wzkref.setTarget(target);
+		wzkref.setTargetRef(targetRef);
+		pendingIDReferences.add(wzkref);
 	}
 
 	private void transformIDReference(final EObject source,
@@ -112,14 +121,13 @@ public class PlanProToToolboxTransformation
 		// Store the ID reference(s). We cannot resolve the ID reference yet, as
 		// the object may not yet have been transformed
 		if (sourceValue instanceof final Zeiger_TypeClass sourcePointer) {
-			unresolvedIDReferences.add(new IDReference(sourcePointer.getWert(),
-					source, sourceRef, target, targetRef));
+			addUnresolvedReference(sourcePointer.getWert(), source, sourceRef,
+					target, targetRef);
 		} else if (sourceValue instanceof final EList<?> sourceList) {
 			sourceList.forEach(value -> {
 				final Zeiger_TypeClass sourcePointer = (Zeiger_TypeClass) value;
-				unresolvedIDReferences
-						.add(new IDReference(sourcePointer.getWert(), source,
-								sourceRef, target, targetRef));
+				addUnresolvedReference(sourcePointer.getWert(), source,
+						sourceRef, target, targetRef);
 			});
 		} else {
 			throw new UnsupportedOperationException(

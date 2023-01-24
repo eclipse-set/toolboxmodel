@@ -7,7 +7,10 @@ Bundle-Version: 2.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.set.toolboxmodel.Ansteuerung_Element,
+Export-Package: org.eclipse.set.toolboxmodel.ATO,
+ org.eclipse.set.toolboxmodel.ATO.impl,
+ org.eclipse.set.toolboxmodel.ATO.util,
+ org.eclipse.set.toolboxmodel.Ansteuerung_Element,
  org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl,
  org.eclipse.set.toolboxmodel.Ansteuerung_Element.util,
  org.eclipse.set.toolboxmodel.Bahnsteig,
@@ -43,9 +46,15 @@ Export-Package: org.eclipse.set.toolboxmodel.Ansteuerung_Element,
  org.eclipse.set.toolboxmodel.Gleis,
  org.eclipse.set.toolboxmodel.Gleis.impl,
  org.eclipse.set.toolboxmodel.Gleis.util,
+ org.eclipse.set.toolboxmodel.Layoutinformationen,
+ org.eclipse.set.toolboxmodel.Layoutinformationen.impl,
+ org.eclipse.set.toolboxmodel.Layoutinformationen.util,
  org.eclipse.set.toolboxmodel.Medien_und_Trassen,
  org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl,
  org.eclipse.set.toolboxmodel.Medien_und_Trassen.util,
+ org.eclipse.set.toolboxmodel.Nahbedienung,
+ org.eclipse.set.toolboxmodel.Nahbedienung.impl,
+ org.eclipse.set.toolboxmodel.Nahbedienung.util,
  org.eclipse.set.toolboxmodel.Nahbedienbereich,
  org.eclipse.set.toolboxmodel.Nahbedienbereich.impl,
  org.eclipse.set.toolboxmodel.Nahbedienbereich.util,
@@ -87,9 +96,10 @@ Export-Package: org.eclipse.set.toolboxmodel.Ansteuerung_Element,
  org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.util,
  org.eclipse.set.toolboxmodel.modelservice,
  org.eclipse.set.toolboxmodel.transform
-Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Import-Package: org.eclipse.set.model.model1902.PlanPro,
+Import-Package: org.eclipse.set.model.model11001.PlanPro,
  org.osgi.framework

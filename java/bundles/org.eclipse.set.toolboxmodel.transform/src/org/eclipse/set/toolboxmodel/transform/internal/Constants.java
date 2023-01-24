@@ -22,11 +22,11 @@ public class Constants {
 	/**
 	 * The used PlanPro model version
 	 */
-	public static final String PLANPRO_MODEL_VERSION = "1.9.0.2";
+	public static final String PLANPRO_MODEL_VERSION = "1.10.0.1";
 	/**
 	 * The used Signalbegriffe model version
 	 */
-	public static final String SIGNALBEGRIFFE_MODEL_VERSION = "1.9.0";
+	public static final String SIGNALBEGRIFFE_MODEL_VERSION = "1.10.0.1";
 	/**
 	 * The version string used for the Toolbox model
 	 */

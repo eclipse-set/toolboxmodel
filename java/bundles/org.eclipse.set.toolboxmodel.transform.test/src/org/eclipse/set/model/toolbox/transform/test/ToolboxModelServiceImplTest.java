@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.set.model.model1902.PlanPro.DocumentRoot;
-import org.eclipse.set.model.model1902.PlanPro.PlanProPackage;
-import org.eclipse.set.model.model1902.PlanPro.util.PlanProResourceFactoryImpl;
-import org.eclipse.set.model.model1902.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
+import org.eclipse.set.model.model11001.PlanPro.DocumentRoot;
+import org.eclipse.set.model.model11001.PlanPro.PlanProPackage;
+import org.eclipse.set.model.model11001.PlanPro.util.PlanProResourceFactoryImpl;
+import org.eclipse.set.model.model11001.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 import org.eclipse.set.toolboxmodel.PlanPro.util.ToolboxModelService;
 import org.eclipse.set.toolboxmodel.transform.ToolboxModelServiceImpl;
 import org.junit.Assert;
@@ -42,8 +42,7 @@ class ToolboxModelServiceImplTest {
 	@Test
 	void testTransform() throws Exception {
 		givenToolboxModelInitialization();
-		givenPlanProFile(
-				"res/2015-12-10_P-Hausen_1.9.0.2_4.0_Status_Genehmigt_V02.ppxml");
+		givenPlanProFile("res/content.ppxml");
 		givenToolboxModelService();
 
 		whenTransformingModel();

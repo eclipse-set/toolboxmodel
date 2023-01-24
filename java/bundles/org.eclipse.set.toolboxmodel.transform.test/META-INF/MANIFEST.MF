@@ -12,6 +12,6 @@ Require-Bundle: org.eclipse.emf.ecore.xmi,
  org.junit.platform.commons,
  org.eclipse.set.toolboxmodel,
  org.eclipse.set.toolboxmodel.transform
-Import-Package: org.eclipse.set.model.model1902.PlanPro,
- org.eclipse.set.model.model1902.PlanPro.util,
- org.eclipse.set.model.model1902.Signalbegriffe_Ril_301
+Import-Package: org.eclipse.set.model.model11001.PlanPro,
+ org.eclipse.set.model.model11001.PlanPro.util,
+ org.eclipse.set.model.model11001.Signalbegriffe_Ril_301
