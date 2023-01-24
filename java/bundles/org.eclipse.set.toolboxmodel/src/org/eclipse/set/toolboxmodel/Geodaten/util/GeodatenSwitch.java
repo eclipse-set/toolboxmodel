@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.util;
 
@@ -15,6 +22,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
 
 import org.eclipse.set.toolboxmodel.Geodaten.*;
+
+import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,6 +82,13 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case GeodatenPackage.ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS: {
+				Anzeigegefuehrt_ES_Kategorie_TypeClass anzeigegefuehrt_ES_Kategorie_TypeClass = (Anzeigegefuehrt_ES_Kategorie_TypeClass)theEObject;
+				T result = caseAnzeigegefuehrt_ES_Kategorie_TypeClass(anzeigegefuehrt_ES_Kategorie_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(anzeigegefuehrt_ES_Kategorie_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeodatenPackage.BEZEICHNUNG_STRECKE_TYPE_CLASS: {
 				Bezeichnung_Strecke_TypeClass bezeichnung_Strecke_TypeClass = (Bezeichnung_Strecke_TypeClass)theEObject;
 				T result = caseBezeichnung_Strecke_TypeClass(bezeichnung_Strecke_TypeClass);
@@ -80,10 +96,24 @@ public class GeodatenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeodatenPackage.BREMSWEG_TYPE_CLASS: {
+				Bremsweg_TypeClass bremsweg_TypeClass = (Bremsweg_TypeClass)theEObject;
+				T result = caseBremsweg_TypeClass(bremsweg_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(bremsweg_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeodatenPackage.GEO_FORM_TYPE_CLASS: {
 				GEO_Form_TypeClass geO_Form_TypeClass = (GEO_Form_TypeClass)theEObject;
 				T result = caseGEO_Form_TypeClass(geO_Form_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(geO_Form_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeodatenPackage.GEO_KAD_TYPE_CLASS: {
+				GEO_KAD_TypeClass geO_KAD_TypeClass = (GEO_KAD_TypeClass)theEObject;
+				T result = caseGEO_KAD_TypeClass(geO_KAD_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(geO_KAD_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -109,17 +139,10 @@ public class GeodatenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS: {
-				GEO_KoordinatenSystem_LSys_TypeClass geO_KoordinatenSystem_LSys_TypeClass = (GEO_KoordinatenSystem_LSys_TypeClass)theEObject;
-				T result = caseGEO_KoordinatenSystem_LSys_TypeClass(geO_KoordinatenSystem_LSys_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(geO_KoordinatenSystem_LSys_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS: {
-				GEO_KoordinatenSystem_Sonstige_TypeClass geO_KoordinatenSystem_Sonstige_TypeClass = (GEO_KoordinatenSystem_Sonstige_TypeClass)theEObject;
-				T result = caseGEO_KoordinatenSystem_Sonstige_TypeClass(geO_KoordinatenSystem_Sonstige_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(geO_KoordinatenSystem_Sonstige_TypeClass);
+			case GeodatenPackage.GEO_KOORDINATENSYSTEM_TYPE_CLASS: {
+				GEO_Koordinatensystem_TypeClass geO_Koordinatensystem_TypeClass = (GEO_Koordinatensystem_TypeClass)theEObject;
+				T result = caseGEO_Koordinatensystem_TypeClass(geO_Koordinatensystem_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(geO_Koordinatensystem_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -279,6 +302,13 @@ public class GeodatenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeodatenPackage.KANTENNAME_TYPE_CLASS: {
+				Kantenname_TypeClass kantenname_TypeClass = (Kantenname_TypeClass)theEObject;
+				T result = caseKantenname_TypeClass(kantenname_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(kantenname_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeodatenPackage.KNOTENNAME_TYPE_CLASS: {
 				Knotenname_TypeClass knotenname_TypeClass = (Knotenname_TypeClass)theEObject;
 				T result = caseKnotenname_TypeClass(knotenname_TypeClass);
@@ -377,6 +407,15 @@ public class GeodatenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeodatenPackage.STRECKE_BREMSWEG: {
+				Strecke_Bremsweg strecke_Bremsweg = (Strecke_Bremsweg)theEObject;
+				T result = caseStrecke_Bremsweg(strecke_Bremsweg);
+				if (result == null) result = caseBereich_Objekt(strecke_Bremsweg);
+				if (result == null) result = caseBasis_Objekt(strecke_Bremsweg);
+				if (result == null) result = caseUr_Objekt(strecke_Bremsweg);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeodatenPackage.STRECKE_METER_TYPE_CLASS: {
 				Strecke_Meter_TypeClass strecke_Meter_TypeClass = (Strecke_Meter_TypeClass)theEObject;
 				T result = caseStrecke_Meter_TypeClass(strecke_Meter_TypeClass);
@@ -389,6 +428,13 @@ public class GeodatenSwitch<T> extends Switch<T> {
 				T result = caseStrecke_Punkt(strecke_Punkt);
 				if (result == null) result = caseBasis_Objekt(strecke_Punkt);
 				if (result == null) result = caseUr_Objekt(strecke_Punkt);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeodatenPackage.STRECKE_RICHTUNG_TYPE_CLASS: {
+				Strecke_Richtung_TypeClass strecke_Richtung_TypeClass = (Strecke_Richtung_TypeClass)theEObject;
+				T result = caseStrecke_Richtung_TypeClass(strecke_Richtung_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(strecke_Richtung_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -481,6 +527,15 @@ public class GeodatenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeodatenPackage.TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP: {
+				Trasse_Kante_child_AttributeGroup trasse_Kante_child_AttributeGroup = (Trasse_Kante_child_AttributeGroup)theEObject;
+				T result = caseTrasse_Kante_child_AttributeGroup(trasse_Kante_child_AttributeGroup);
+				if (result == null) result = caseTrasse_Kante(trasse_Kante_child_AttributeGroup);
+				if (result == null) result = caseBasis_Objekt(trasse_Kante_child_AttributeGroup);
+				if (result == null) result = caseUr_Objekt(trasse_Kante_child_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeodatenPackage.UEBERHOEHUNG: {
 				Ueberhoehung ueberhoehung = (Ueberhoehung)theEObject;
 				T result = caseUeberhoehung(ueberhoehung);
@@ -545,15 +600,23 @@ public class GeodatenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GeodatenPackage.WIRKRICHTUNG_TYPE_CLASS: {
-				Wirkrichtung_TypeClass wirkrichtung_TypeClass = (Wirkrichtung_TypeClass)theEObject;
-				T result = caseWirkrichtung_TypeClass(wirkrichtung_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(wirkrichtung_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anzeigegefuehrt ES Kategorie Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anzeigegefuehrt ES Kategorie Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnzeigegefuehrt_ES_Kategorie_TypeClass(Anzeigegefuehrt_ES_Kategorie_TypeClass object) {
+		return null;
 	}
 
 	/**
@@ -572,6 +635,21 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bremsweg Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bremsweg Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBremsweg_TypeClass(Bremsweg_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GEO Form Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -583,6 +661,21 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGEO_Form_TypeClass(GEO_Form_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GEO KAD Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GEO KAD Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGEO_KAD_TypeClass(GEO_KAD_TypeClass object) {
 		return null;
 	}
 
@@ -632,32 +725,17 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GEO Koordinaten System LSys Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GEO Koordinatensystem Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GEO Koordinaten System LSys Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GEO Koordinatensystem Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGEO_KoordinatenSystem_LSys_TypeClass(GEO_KoordinatenSystem_LSys_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GEO Koordinaten System Sonstige Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GEO Koordinaten System Sonstige Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGEO_KoordinatenSystem_Sonstige_TypeClass(GEO_KoordinatenSystem_Sonstige_TypeClass object) {
+	public T caseGEO_Koordinatensystem_TypeClass(GEO_Koordinatensystem_TypeClass object) {
 		return null;
 	}
 
@@ -992,6 +1070,21 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kantenname Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kantenname Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKantenname_TypeClass(Kantenname_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Knotenname Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1202,6 +1295,21 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Strecke Bremsweg</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Strecke Bremsweg</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStrecke_Bremsweg(Strecke_Bremsweg object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Strecke Meter Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1228,6 +1336,21 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStrecke_Punkt(Strecke_Punkt object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Strecke Richtung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Strecke Richtung Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStrecke_Richtung_TypeClass(Strecke_Richtung_TypeClass object) {
 		return null;
 	}
 
@@ -1412,6 +1535,21 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trasse Kante child Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trasse Kante child Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrasse_Kante_child_AttributeGroup(Trasse_Kante_child_AttributeGroup object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ueberhoehung</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1547,21 +1685,6 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wirkrichtung Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wirkrichtung Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWirkrichtung_TypeClass(Wirkrichtung_TypeClass object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Basis Attribut Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1633,6 +1756,21 @@ public class GeodatenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePunkt_Objekt(Punkt_Objekt object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trasse Kante</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trasse Kante</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrasse_Kante(Trasse_Kante object) {
 		return null;
 	}
 

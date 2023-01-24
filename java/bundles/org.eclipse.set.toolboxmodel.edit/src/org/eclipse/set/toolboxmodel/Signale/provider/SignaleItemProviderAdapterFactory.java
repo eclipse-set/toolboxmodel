@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -285,6 +286,52 @@ public class SignaleItemProviderAdapterFactory extends SignaleAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Fundament_Art_TypeClassItemProvider fundament_Art_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFundament_Art_TypeClassAdapter() {
+		if (fundament_Art_TypeClassItemProvider == null) {
+			fundament_Art_TypeClassItemProvider = new Fundament_Art_TypeClassItemProvider(this);
+		}
+
+		return fundament_Art_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Funktion_Ohne_Signal_TypeClassItemProvider funktion_Ohne_Signal_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunktion_Ohne_Signal_TypeClassAdapter() {
+		if (funktion_Ohne_Signal_TypeClassItemProvider == null) {
+			funktion_Ohne_Signal_TypeClassItemProvider = new Funktion_Ohne_Signal_TypeClassItemProvider(this);
+		}
+
+		return funktion_Ohne_Signal_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signale.Gegengleis_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -443,6 +490,29 @@ public class SignaleItemProviderAdapterFactory extends SignaleAdapterFactory imp
 		}
 
 		return rahmen_Art_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Rahmen_Hoehe_TypeClassItemProvider rahmen_Hoehe_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRahmen_Hoehe_TypeClassAdapter() {
+		if (rahmen_Hoehe_TypeClassItemProvider == null) {
+			rahmen_Hoehe_TypeClassItemProvider = new Rahmen_Hoehe_TypeClassItemProvider(this);
+		}
+
+		return rahmen_Hoehe_TypeClassItemProvider;
 	}
 
 	/**
@@ -1226,6 +1296,8 @@ public class SignaleItemProviderAdapterFactory extends SignaleAdapterFactory imp
 		if (dunkelschaltung_TypeClassItemProvider != null) dunkelschaltung_TypeClassItemProvider.dispose();
 		if (durchfahrt_TypeClassItemProvider != null) durchfahrt_TypeClassItemProvider.dispose();
 		if (fiktives_Signal_Funktion_TypeClassItemProvider != null) fiktives_Signal_Funktion_TypeClassItemProvider.dispose();
+		if (fundament_Art_TypeClassItemProvider != null) fundament_Art_TypeClassItemProvider.dispose();
+		if (funktion_Ohne_Signal_TypeClassItemProvider != null) funktion_Ohne_Signal_TypeClassItemProvider.dispose();
 		if (gegengleis_TypeClassItemProvider != null) gegengleis_TypeClassItemProvider.dispose();
 		if (geltungsbereich_TypeClassItemProvider != null) geltungsbereich_TypeClassItemProvider.dispose();
 		if (geschaltet_TypeClassItemProvider != null) geschaltet_TypeClassItemProvider.dispose();
@@ -1233,6 +1305,7 @@ public class SignaleItemProviderAdapterFactory extends SignaleAdapterFactory imp
 		if (obere_Lichtpunkthoehe_TypeClassItemProvider != null) obere_Lichtpunkthoehe_TypeClassItemProvider.dispose();
 		if (pzB_Schutzstrecke_Soll_TypeClassItemProvider != null) pzB_Schutzstrecke_Soll_TypeClassItemProvider.dispose();
 		if (rahmen_Art_TypeClassItemProvider != null) rahmen_Art_TypeClassItemProvider.dispose();
+		if (rahmen_Hoehe_TypeClassItemProvider != null) rahmen_Hoehe_TypeClassItemProvider.dispose();
 		if (rangierstrasse_Restaufloesung_TypeClassItemProvider != null) rangierstrasse_Restaufloesung_TypeClassItemProvider.dispose();
 		if (richtpunkt_TypeClassItemProvider != null) richtpunkt_TypeClassItemProvider.dispose();
 		if (richtpunktentfernung_TypeClassItemProvider != null) richtpunktentfernung_TypeClassItemProvider.dispose();

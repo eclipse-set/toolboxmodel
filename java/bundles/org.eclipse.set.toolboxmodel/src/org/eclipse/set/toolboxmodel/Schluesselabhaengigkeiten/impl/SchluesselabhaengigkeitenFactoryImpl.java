@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl;
 
@@ -87,8 +94,9 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 			case SchluesselabhaengigkeitenPackage.SCHLUESSEL_GRUPPE_TYPE_CLASS: return createSchluessel_Gruppe_TypeClass();
 			case SchluesselabhaengigkeitenPackage.SCHLUESSEL_IN_GRDST_EINGESCHL_TYPE_CLASS: return createSchluessel_In_Grdst_Eingeschl_TypeClass();
 			case SchluesselabhaengigkeitenPackage.SCHLUESSELSPERRE: return createSchluesselsperre();
+			case SchluesselabhaengigkeitenPackage.SONDERANLAGE_LAGE_TYPE_CLASS: return createSonderanlage_Lage_TypeClass();
 			case SchluesselabhaengigkeitenPackage.TECHNISCH_BERECHTIGTER_TYPE_CLASS: return createTechnisch_Berechtigter_TypeClass();
-			case SchluesselabhaengigkeitenPackage.VERSCHLUSS_HERZSTUECK_TYPE_CLASS: return createVerschluss_Herzstueck_TypeClass();
+			case SchluesselabhaengigkeitenPackage.VERSCHLUSS_ORT_TYPE_CLASS: return createVerschluss_Ort_TypeClass();
 			case SchluesselabhaengigkeitenPackage.WANBAULAGE_TYPE_CLASS: return createW_Anbaulage_TypeClass();
 			case SchluesselabhaengigkeitenPackage.WLAGE_TYPE_CLASS: return createW_Lage_TypeClass();
 			default:
@@ -116,6 +124,10 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 				return createENUMSchluesselBartformFromString(eDataType, initialValue);
 			case SchluesselabhaengigkeitenPackage.ENUM_SCHLUESSEL_GRUPPE:
 				return createENUMSchluesselGruppeFromString(eDataType, initialValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_SONDERANLAGE_LAGE:
+				return createENUMSonderanlageLageFromString(eDataType, initialValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_VERSCHLUSS_ORT:
+				return createENUMVerschlussOrtFromString(eDataType, initialValue);
 			case SchluesselabhaengigkeitenPackage.BESCHREIBUNG_SONDERANLAGE_TYPE:
 				return createBeschreibung_Sonderanlage_TypeFromString(eDataType, initialValue);
 			case SchluesselabhaengigkeitenPackage.BEZEICHNUNG_SCHLOSS_TYPE:
@@ -136,6 +148,10 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 				return createENUMSchluesselBartformObjectFromString(eDataType, initialValue);
 			case SchluesselabhaengigkeitenPackage.ENUM_SCHLUESSEL_GRUPPE_OBJECT:
 				return createENUMSchluesselGruppeObjectFromString(eDataType, initialValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_SONDERANLAGE_LAGE_OBJECT:
+				return createENUMSonderanlageLageObjectFromString(eDataType, initialValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_VERSCHLUSS_ORT_OBJECT:
+				return createENUMVerschlussOrtObjectFromString(eDataType, initialValue);
 			case SchluesselabhaengigkeitenPackage.WANBAULAGE_TYPE:
 				return createW_Anbaulage_TypeFromString(eDataType, initialValue);
 			case SchluesselabhaengigkeitenPackage.WLAGE_TYPE:
@@ -165,6 +181,10 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 				return convertENUMSchluesselBartformToString(eDataType, instanceValue);
 			case SchluesselabhaengigkeitenPackage.ENUM_SCHLUESSEL_GRUPPE:
 				return convertENUMSchluesselGruppeToString(eDataType, instanceValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_SONDERANLAGE_LAGE:
+				return convertENUMSonderanlageLageToString(eDataType, instanceValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_VERSCHLUSS_ORT:
+				return convertENUMVerschlussOrtToString(eDataType, instanceValue);
 			case SchluesselabhaengigkeitenPackage.BESCHREIBUNG_SONDERANLAGE_TYPE:
 				return convertBeschreibung_Sonderanlage_TypeToString(eDataType, instanceValue);
 			case SchluesselabhaengigkeitenPackage.BEZEICHNUNG_SCHLOSS_TYPE:
@@ -185,6 +205,10 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 				return convertENUMSchluesselBartformObjectToString(eDataType, instanceValue);
 			case SchluesselabhaengigkeitenPackage.ENUM_SCHLUESSEL_GRUPPE_OBJECT:
 				return convertENUMSchluesselGruppeObjectToString(eDataType, instanceValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_SONDERANLAGE_LAGE_OBJECT:
+				return convertENUMSonderanlageLageObjectToString(eDataType, instanceValue);
+			case SchluesselabhaengigkeitenPackage.ENUM_VERSCHLUSS_ORT_OBJECT:
+				return convertENUMVerschlussOrtObjectToString(eDataType, instanceValue);
 			case SchluesselabhaengigkeitenPackage.WANBAULAGE_TYPE:
 				return convertW_Anbaulage_TypeToString(eDataType, instanceValue);
 			case SchluesselabhaengigkeitenPackage.WLAGE_TYPE:
@@ -486,6 +510,17 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
 	@Override
+	public Sonderanlage_Lage_TypeClass createSonderanlage_Lage_TypeClass() {
+		Sonderanlage_Lage_TypeClassImpl sonderanlage_Lage_TypeClass = new Sonderanlage_Lage_TypeClassImpl();
+		return sonderanlage_Lage_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Technisch_Berechtigter_TypeClass createTechnisch_Berechtigter_TypeClass() {
 		Technisch_Berechtigter_TypeClassImpl technisch_Berechtigter_TypeClass = new Technisch_Berechtigter_TypeClassImpl();
 		return technisch_Berechtigter_TypeClass;
@@ -497,9 +532,9 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
 	@Override
-	public Verschluss_Herzstueck_TypeClass createVerschluss_Herzstueck_TypeClass() {
-		Verschluss_Herzstueck_TypeClassImpl verschluss_Herzstueck_TypeClass = new Verschluss_Herzstueck_TypeClassImpl();
-		return verschluss_Herzstueck_TypeClass;
+	public Verschluss_Ort_TypeClass createVerschluss_Ort_TypeClass() {
+		Verschluss_Ort_TypeClassImpl verschluss_Ort_TypeClass = new Verschluss_Ort_TypeClassImpl();
+		return verschluss_Ort_TypeClass;
 	}
 
 	/**
@@ -641,6 +676,46 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 	 * @generated
 	 */
 	public String convertENUMSchluesselGruppeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMSonderanlageLage createENUMSonderanlageLageFromString(EDataType eDataType, String initialValue) {
+		ENUMSonderanlageLage result = ENUMSonderanlageLage.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSonderanlageLageToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMVerschlussOrt createENUMVerschlussOrtFromString(EDataType eDataType, String initialValue) {
+		ENUMVerschlussOrt result = ENUMVerschlussOrt.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMVerschlussOrtToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -822,6 +897,42 @@ public class SchluesselabhaengigkeitenFactoryImpl extends EFactoryImpl implement
 	 */
 	public String convertENUMSchluesselGruppeObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMSchluesselGruppeToString(SchluesselabhaengigkeitenPackage.Literals.ENUM_SCHLUESSEL_GRUPPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMSonderanlageLage createENUMSonderanlageLageObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMSonderanlageLageFromString(SchluesselabhaengigkeitenPackage.Literals.ENUM_SONDERANLAGE_LAGE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSonderanlageLageObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMSonderanlageLageToString(SchluesselabhaengigkeitenPackage.Literals.ENUM_SONDERANLAGE_LAGE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMVerschlussOrt createENUMVerschlussOrtObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMVerschlussOrtFromString(SchluesselabhaengigkeitenPackage.Literals.ENUM_VERSCHLUSS_ORT, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMVerschlussOrtObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMVerschlussOrtToString(SchluesselabhaengigkeitenPackage.Literals.ENUM_VERSCHLUSS_ORT, instanceValue);
 	}
 
 	/**

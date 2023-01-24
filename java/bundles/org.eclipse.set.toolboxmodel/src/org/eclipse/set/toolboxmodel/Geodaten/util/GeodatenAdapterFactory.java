@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.util;
 
@@ -17,6 +24,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
 
 import org.eclipse.set.toolboxmodel.Geodaten.*;
+
+import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,12 +84,24 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	protected GeodatenSwitch<Adapter> modelSwitch =
 		new GeodatenSwitch<Adapter>() {
 			@Override
+			public Adapter caseAnzeigegefuehrt_ES_Kategorie_TypeClass(Anzeigegefuehrt_ES_Kategorie_TypeClass object) {
+				return createAnzeigegefuehrt_ES_Kategorie_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseBezeichnung_Strecke_TypeClass(Bezeichnung_Strecke_TypeClass object) {
 				return createBezeichnung_Strecke_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseBremsweg_TypeClass(Bremsweg_TypeClass object) {
+				return createBremsweg_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseGEO_Form_TypeClass(GEO_Form_TypeClass object) {
 				return createGEO_Form_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseGEO_KAD_TypeClass(GEO_KAD_TypeClass object) {
+				return createGEO_KAD_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseGEO_Kante(GEO_Kante object) {
@@ -95,12 +116,8 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 				return createGEO_KnotenAdapter();
 			}
 			@Override
-			public Adapter caseGEO_KoordinatenSystem_LSys_TypeClass(GEO_KoordinatenSystem_LSys_TypeClass object) {
-				return createGEO_KoordinatenSystem_LSys_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseGEO_KoordinatenSystem_Sonstige_TypeClass(GEO_KoordinatenSystem_Sonstige_TypeClass object) {
-				return createGEO_KoordinatenSystem_Sonstige_TypeClassAdapter();
+			public Adapter caseGEO_Koordinatensystem_TypeClass(GEO_Koordinatensystem_TypeClass object) {
+				return createGEO_Koordinatensystem_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseGEO_Laenge_TypeClass(GEO_Laenge_TypeClass object) {
@@ -191,6 +208,10 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 				return createHSystem_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseKantenname_TypeClass(Kantenname_TypeClass object) {
+				return createKantenname_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseKnotenname_TypeClass(Knotenname_TypeClass object) {
 				return createKnotenname_TypeClassAdapter();
 			}
@@ -247,12 +268,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 				return createStrecke_Bezeichnung_AttributeGroupAdapter();
 			}
 			@Override
+			public Adapter caseStrecke_Bremsweg(Strecke_Bremsweg object) {
+				return createStrecke_BremswegAdapter();
+			}
+			@Override
 			public Adapter caseStrecke_Meter_TypeClass(Strecke_Meter_TypeClass object) {
 				return createStrecke_Meter_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseStrecke_Punkt(Strecke_Punkt object) {
 				return createStrecke_PunktAdapter();
+			}
+			@Override
+			public Adapter caseStrecke_Richtung_TypeClass(Strecke_Richtung_TypeClass object) {
+				return createStrecke_Richtung_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseTB_Art_TypeClass(TB_Art_TypeClass object) {
@@ -303,6 +332,10 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 				return createTP_Beschreibung_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseTrasse_Kante_child_AttributeGroup(Trasse_Kante_child_AttributeGroup object) {
+				return createTrasse_Kante_child_AttributeGroupAdapter();
+			}
+			@Override
 			public Adapter caseUeberhoehung(Ueberhoehung object) {
 				return createUeberhoehungAdapter();
 			}
@@ -339,10 +372,6 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 				return createV_Profil_Art_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseWirkrichtung_TypeClass(Wirkrichtung_TypeClass object) {
-				return createWirkrichtung_TypeClassAdapter();
-			}
-			@Override
 			public Adapter caseBasisAttribut_AttributeGroup(BasisAttribut_AttributeGroup object) {
 				return createBasisAttribut_AttributeGroupAdapter();
 			}
@@ -361,6 +390,10 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePunkt_Objekt(Punkt_Objekt object) {
 				return createPunkt_ObjektAdapter();
+			}
+			@Override
+			public Adapter caseTrasse_Kante(Trasse_Kante object) {
+				return createTrasse_KanteAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -383,6 +416,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass <em>Anzeigegefuehrt ES Kategorie Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass
+	 * @generated
+	 */
+	public Adapter createAnzeigegefuehrt_ES_Kategorie_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Bezeichnung_Strecke_TypeClass <em>Bezeichnung Strecke Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -397,6 +444,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass <em>Bremsweg Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass
+	 * @generated
+	 */
+	public Adapter createBremsweg_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Form_TypeClass <em>GEO Form Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -407,6 +468,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGEO_Form_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass <em>GEO KAD Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass
+	 * @generated
+	 */
+	public Adapter createGEO_KAD_TypeClassAdapter() {
 		return null;
 	}
 
@@ -453,30 +528,16 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass <em>GEO Koordinaten System LSys Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass <em>GEO Koordinatensystem Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass
 	 * @generated
 	 */
-	public Adapter createGEO_KoordinatenSystem_LSys_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass <em>GEO Koordinaten System Sonstige Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass
-	 * @generated
-	 */
-	public Adapter createGEO_KoordinatenSystem_Sonstige_TypeClassAdapter() {
+	public Adapter createGEO_Koordinatensystem_TypeClassAdapter() {
 		return null;
 	}
 
@@ -789,6 +850,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass <em>Kantenname Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass
+	 * @generated
+	 */
+	public Adapter createKantenname_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Knotenname_TypeClass <em>Knotenname Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -985,6 +1060,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg <em>Strecke Bremsweg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg
+	 * @generated
+	 */
+	public Adapter createStrecke_BremswegAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Meter_TypeClass <em>Strecke Meter Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1009,6 +1098,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStrecke_PunktAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass <em>Strecke Richtung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass
+	 * @generated
+	 */
+	public Adapter createStrecke_Richtung_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1181,6 +1284,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Trasse_Kante_child_AttributeGroup <em>Trasse Kante child Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Trasse_Kante_child_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createTrasse_Kante_child_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehung <em>Ueberhoehung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1307,20 +1424,6 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass <em>Wirkrichtung Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass
-	 * @generated
-	 */
-	public Adapter createWirkrichtung_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup <em>Basis Attribut Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1387,6 +1490,20 @@ public class GeodatenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPunkt_ObjektAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante <em>Trasse Kante</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante
+	 * @generated
+	 */
+	public Adapter createTrasse_KanteAdapter() {
 		return null;
 	}
 

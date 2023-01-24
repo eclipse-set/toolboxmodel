@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.impl;
 
@@ -12,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Signale.Befestigung_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Hoehe_Fundamentoberkante_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Obere_Lichtpunkthoehe_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup;
@@ -26,6 +34,7 @@ import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Befestigung_Allg_AttributeGroupImpl#getBefestigungArt <em>Befestigung Art</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Befestigung_Allg_AttributeGroupImpl#getFundamentArt <em>Fundament Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Befestigung_Allg_AttributeGroupImpl#getHoeheFundamentoberkante <em>Hoehe Fundamentoberkante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Befestigung_Allg_AttributeGroupImpl#getObereLichtpunkthoehe <em>Obere Lichtpunkthoehe</em>}</li>
  * </ul>
@@ -42,6 +51,16 @@ public class Signal_Befestigung_Allg_AttributeGroupImpl extends MinimalEObjectIm
 	 * @ordered
 	 */
 	protected Befestigung_Art_TypeClass befestigungArt;
+
+	/**
+	 * The cached value of the '{@link #getFundamentArt() <em>Fundament Art</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFundamentArt()
+	 * @generated
+	 * @ordered
+	 */
+	protected Fundament_Art_TypeClass fundamentArt;
 
 	/**
 	 * The cached value of the '{@link #getHoeheFundamentoberkante() <em>Hoehe Fundamentoberkante</em>}' containment reference.
@@ -125,6 +144,51 @@ public class Signal_Befestigung_Allg_AttributeGroupImpl extends MinimalEObjectIm
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART, newBefestigungArt, newBefestigungArt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Fundament_Art_TypeClass getFundamentArt() {
+		return fundamentArt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFundamentArt(Fundament_Art_TypeClass newFundamentArt, NotificationChain msgs) {
+		Fundament_Art_TypeClass oldFundamentArt = fundamentArt;
+		fundamentArt = newFundamentArt;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART, oldFundamentArt, newFundamentArt);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFundamentArt(Fundament_Art_TypeClass newFundamentArt) {
+		if (newFundamentArt != fundamentArt) {
+			NotificationChain msgs = null;
+			if (fundamentArt != null)
+				msgs = ((InternalEObject)fundamentArt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART, null, msgs);
+			if (newFundamentArt != null)
+				msgs = ((InternalEObject)newFundamentArt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART, null, msgs);
+			msgs = basicSetFundamentArt(newFundamentArt, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART, newFundamentArt, newFundamentArt));
 	}
 
 	/**
@@ -227,6 +291,8 @@ public class Signal_Befestigung_Allg_AttributeGroupImpl extends MinimalEObjectIm
 		switch (featureID) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART:
 				return basicSetBefestigungArt(null, msgs);
+			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART:
+				return basicSetFundamentArt(null, msgs);
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE:
 				return basicSetHoeheFundamentoberkante(null, msgs);
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE:
@@ -246,6 +312,8 @@ public class Signal_Befestigung_Allg_AttributeGroupImpl extends MinimalEObjectIm
 		switch (featureID) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART:
 				return getBefestigungArt();
+			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART:
+				return getFundamentArt();
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE:
 				return getHoeheFundamentoberkante();
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE:
@@ -265,6 +333,9 @@ public class Signal_Befestigung_Allg_AttributeGroupImpl extends MinimalEObjectIm
 		switch (featureID) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART:
 				setBefestigungArt((Befestigung_Art_TypeClass)newValue);
+				return;
+			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART:
+				setFundamentArt((Fundament_Art_TypeClass)newValue);
 				return;
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE:
 				setHoeheFundamentoberkante((Hoehe_Fundamentoberkante_TypeClass)newValue);
@@ -289,6 +360,9 @@ public class Signal_Befestigung_Allg_AttributeGroupImpl extends MinimalEObjectIm
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART:
 				setBefestigungArt((Befestigung_Art_TypeClass)null);
 				return;
+			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART:
+				setFundamentArt((Fundament_Art_TypeClass)null);
+				return;
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE:
 				setHoeheFundamentoberkante((Hoehe_Fundamentoberkante_TypeClass)null);
 				return;
@@ -311,6 +385,8 @@ public class Signal_Befestigung_Allg_AttributeGroupImpl extends MinimalEObjectIm
 		switch (featureID) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART:
 				return befestigungArt != null;
+			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART:
+				return fundamentArt != null;
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE:
 				return hoeheFundamentoberkante != null;
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE:

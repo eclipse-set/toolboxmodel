@@ -28,7 +28,6 @@ public interface LST_Planung_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Einbindung der LST-Fachdaten.
-	 * 
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->
@@ -57,7 +56,6 @@ public interface LST_Planung_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Einbindung der Objektmanagementdaten.
-	 * 
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->

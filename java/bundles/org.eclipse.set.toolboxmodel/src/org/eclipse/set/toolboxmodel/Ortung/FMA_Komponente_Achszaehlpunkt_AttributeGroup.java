@@ -1,8 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
 
 /**
@@ -31,7 +41,7 @@ public interface FMA_Komponente_Achszaehlpunkt_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Hinsichtlich der Befestigung zu berücksichtigendes Schienenprofil. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. Das Attribut soll künftig entfallen und daher nicht mehr verwendet werden.
+	 * Hinsichtlich der Befestigung zu berücksichtigendes Schienenprofil. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>FMA Komponente Schienenprofil</em>' containment reference.
 	 * @see #setFMAKomponenteSchienenprofil(FMA_Komponente_Schienenprofil_TypeClass)
@@ -158,56 +168,19 @@ public interface FMA_Komponente_Achszaehlpunkt_AttributeGroup extends EObject {
 	boolean isSetIDEnergie();
 
 	/**
-	 * Returns the value of the '<em><b>ID Information</b></em>' reference.
+	 * Returns the value of the '<em><b>ID Information</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Verweis auf die Aussenelementansteuerung, von der die Informationsversorgung des Stellelements bzw. die Informationsverarbeitung der FMA Komponente erfolgt. Objekte, die Stellelemente" href="//Stellelement"\u003eStellelemente sind, enthalten keine eigenen Attribute ID Energie und ID_Information, sondern verweisen auf das Objekt Stellelement, das diese Attribute enthält. Nicht-Stellelemente (z.B. der Achszählpunkt als FMA Komponente) hingegen müssen diese Attribute selbst enthalten. DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung. 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Information</em>' reference.
-	 * @see #isSetIDInformation()
-	 * @see #unsetIDInformation()
-	 * @see #setIDInformation(Aussenelementansteuerung)
+	 * @return the value of the '<em>ID Information</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.Ortung.OrtungPackage#getFMA_Komponente_Achszaehlpunkt_AttributeGroup_IDInformation()
-	 * @model unsettable="true" required="true"
+	 * @model required="true" upper="2"
 	 *        extendedMetaData="kind='element' name='ID_Information'"
 	 * @generated
 	 */
-	Aussenelementansteuerung getIDInformation();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente_Achszaehlpunkt_AttributeGroup#getIDInformation <em>ID Information</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Information</em>' reference.
-	 * @see #isSetIDInformation()
-	 * @see #unsetIDInformation()
-	 * @see #getIDInformation()
-	 * @generated
-	 */
-	void setIDInformation(Aussenelementansteuerung value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente_Achszaehlpunkt_AttributeGroup#getIDInformation <em>ID Information</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDInformation()
-	 * @see #getIDInformation()
-	 * @see #setIDInformation(Aussenelementansteuerung)
-	 * @generated
-	 */
-	void unsetIDInformation();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente_Achszaehlpunkt_AttributeGroup#getIDInformation <em>ID Information</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Information</em>' reference is set.
-	 * @see #unsetIDInformation()
-	 * @see #getIDInformation()
-	 * @see #setIDInformation(Aussenelementansteuerung)
-	 * @generated
-	 */
-	boolean isSetIDInformation();
+	EList<Aussenelementansteuerung> getIDInformation();
 
 } // FMA_Komponente_Achszaehlpunkt_AttributeGroup

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
             xmlns:func="localhost/function"
+            xmlns:nsATO="http://www.plan-pro.org/modell/ATO/toolbox"
             xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
             xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
             xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -13,8 +14,9 @@
             xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
             xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
             xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsLayoutinformationen="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
             xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
-            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsNahbedienung="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
             xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
             xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
             xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -33,6 +35,8 @@
             targetNamespace="http://www.plan-pro.org/modell/Ortung/toolbox">
    <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
                schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/ATO/toolbox"
+               schemaLocation="ATO.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
                schemaLocation="Bahnsteig.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -55,10 +59,12 @@
                schemaLocation="Geodaten.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
                schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+               schemaLocation="Layoutinformationen.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
                schemaLocation="Medien_und_Trassen.xsd"/>
-   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+               schemaLocation="Nahbedienung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
                schemaLocation="PlanPro.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PZB/toolbox"
@@ -90,9 +96,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -187,18 +191,19 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:simpleType name="ENUMBezeichnung_Kennbuchstabe">
       <xs:restriction base="xs:string">
-         <xs:enumeration ecore:name="ENUMBezeichnung_Kennbuchstabe_G" value="G"/>
          <xs:enumeration ecore:name="ENUMBezeichnung_Kennbuchstabe_B" value="B"/>
-         <xs:enumeration ecore:name="ENUMBezeichnung_Kennbuchstabe_W" value="W"/>
+         <xs:enumeration ecore:name="ENUMBezeichnung_Kennbuchstabe_G" value="G"/>
          <xs:enumeration ecore:name="ENUMBezeichnung_Kennbuchstabe_K" value="K"/>
+         <xs:enumeration ecore:name="ENUMBezeichnung_Kennbuchstabe_W" value="W"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="FMA_Komponente" name="CFMA_Komponente">
       <xs:annotation>
-         <xs:documentation>Freimeldeabschnittsgrenze (Isolierstoß, elektrischer Stoß, Achszählpunkt). Die FMA_Komponente wird dem Punkt im Gleis zugeordnet, bis zu dem die Erkennung einer Belegung gemäß Anwendungsrichtlinien als gesichert gilt. Die zu den zugehörigen Gleisabschnitten gehörenden Bereichsobjekte Gleis Abschnitt müssen deshalb exakt an diesem Punktobjekt enden. Zur Ermittlung der seitlichen Lage einer FMA_Komponente siehe Modellierung Gleisfreimeldung. Eine FMA_Komponente kann nur an einer Seite mindestens einen Freimeldeabschnitt oder beidseitig jeweils mindestens einen Freimeldeabschnitt begrenzen. Bei überlappenden Freimeldeabschnittsgrenzen (z.B. am Übergang von FTGS- zu Achszähl- Gleisfreimeldeanlagen) ist jede Freimeldeabschnittsgrenze für sich als FMA_Komponente zu erfassen. Direkt auf Höhe, rechts und/oder links der Freimeldeabschnittsgrenze können sich technische Anlagen für die Gleisfreimeldung befinden, siehe dazu FMA Element. Das Befahren einer FMA_Komponente kann auch weitere Schaltvorgänge auslösen, siehe dazu Schaltmittel Zuordnung. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Achszählübersichtsplan; Freimeldetabelle; Achszähltabelle. </xs:documentation>
+         <xs:documentation>Freimeldeabschnittsgrenze (Isolierstoß, elektrischer Stoß, Achszählpunkt). Die FMA_Komponente wird dem Punkt im Gleis zugeordnet, bis zu dem die Erkennung einer Belegung gemäß Anwendungsrichtlinien als gesichert gilt. Die zu den zugehörigen Gleisabschnitten gehörenden Bereichsobjekte Gleis Abschnitt müssen deshalb exakt an diesem Punktobjekt enden. Zur Ermittlung der seitlichen Lage einer FMA_Komponente siehe Modellierung Gleisfreimeldung. Eine FMA_Komponente kann nur an einer Seite mindestens einen Freimeldeabschnitt oder beidseitig jeweils mindestens einen Freimeldeabschnitt begrenzen. Bei überlappenden Freimeldeabschnittsgrenzen (z.B. am Übergang von FTGS- zu Achszähl- Gleisfreimeldeanlagen) ist jede Freimeldeabschnittsgrenze für sich als FMA_Komponente zu erfassen. Direkt auf Höhe, rechts und/oder links der Freimeldeabschnittsgrenze können sich technische Anlagen für die Gleisfreimeldung befinden, siehe dazu FMA Element. Das Befahren einer FMA_Komponente kann auch weitere Schaltvorgänge auslösen, siehe dazu Schaltmittel Zuordnung. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Achszählübersichtsplan; Freimeldetabelle; Achszähltabelle.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -313,10 +318,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="FMA_Anlage" name="CFMA_Anlage">
       <xs:annotation>
-         <xs:documentation>Technische Anlage, die einen Gleisabschnitt auf Freisein von Schienenfahrzeugen überwacht; entspricht im gewöhnlichen Sprachgebrauch dem Freimeldeabschnitt. Eine FMA_Anlage wird alleinstehend zur Fahrwegfreiprüfung bzw. zur Freiprüfung des Flankenschutzraumes genutzt sowie in Auswertung der Reihenfolge von Belegung und Wieder-Frei-Werden zur Erfassung einer Fahrt und damit zur Auflösung von Teilfahrstraßen. Auch andere Schaltvorgänge können durch eine FMA_Anlage ausgelöst werden. Die FMA_Anlage hat mindestens eine Außenanlage (z. B. Drosselspule, Achszählpunkt) und beansprucht Anteile an einer Gleisfreimelde-Innenanlage (z. B. Motorrelaisgruppe, Achszählrechner). DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Gleisfreimeldepläne (Achszählübersichtsplan, Gleisisolierplan); Freimeldetabelle. </xs:documentation>
+         <xs:documentation>Technische Anlage, die einen Gleisabschnitt auf Freisein von Schienenfahrzeugen überwacht; entspricht im gewöhnlichen Sprachgebrauch dem Freimeldeabschnitt. Eine FMA_Anlage wird alleinstehend zur Fahrwegfreiprüfung bzw. zur Freiprüfung des Flankenschutzraumes genutzt sowie in Auswertung der Reihenfolge von Belegung und Wieder-Frei-Werden zur Erfassung einer Fahrt und damit zur Auflösung von Teilfahrstraßen. Auch andere Schaltvorgänge können durch eine FMA_Anlage ausgelöst werden. Die FMA_Anlage hat mindestens eine Außenanlage (z. B. Drosselspule, Achszählpunkt) und beansprucht Anteile an einer Gleisfreimelde-Innenanlage (z. B. Motorrelaisgruppe, Achszählrechner). DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Gleisfreimeldepläne (Achszählübersichtsplan, Gleisisolierplan); Freimeldetabelle.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -325,7 +331,7 @@ XML Schema for PlanPro interface.</xs:documentation>
             <xs:sequence>
                <xs:element name="Bezeichnung"
                             type="nsOrtung:CFMA_Anlage_Bezeichnung"
-                            minOccurs="1"
+                            minOccurs="0"
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Attributgruppe zur Bezeichnung von Stell- und sonstigen Elementen. Sofern ausreichend, wird an dieser Stelle über Vererbung die Basisattributgruppe Bezeichnung Element eingebunden. Ist die Abbildung mit den Attributen der Basisattributgruppe nicht möglich (z. B. wegen spezieller Patternvorgabe) oder nicht sinnvoll (z. B. weil eine Unterscheidung nach Bezeichnung_Lageplan_..., Bezeichnung_Tabelle und Bezeichnung_Aussenanlage (Pflichtattribute!) nicht notwendig ist), werden in der Attributgruppe Bezeichnung entsprechende objektspezifische Bezeichnungsattribute modelliert. Diese sind nach dem Schema Bezeichnung_[Objektname] zu benennen. Zudem ist es möglich, gleichzeitig die Basisattributgruppe Bezeichnung Element und objektspezifische Attribute einzubinden. Siehe auch Bildung der Bezeichnungen. DB-Regelwerk Sicherungstechnischer Lage- und Übersichtsplan, BÜ-Lageplan Planungstabellen </xs:documentation>
@@ -373,10 +379,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="FMA_Element" name="CFMA_Element">
       <xs:annotation>
-         <xs:documentation>Ergänzung einer FMA Komponente bei Gleisstromkreisen um die Bauelemente zur Ein- und Ausspeisung. FMA_Elemente werden rechts und/oder links der FMA_Komponente direkt den angrenzenden FMA_Anlagen zugewiesen. Das Objekt ist bei Achszählpunkten nicht erforderlich. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisisolierplan, Freimeldetabelle. </xs:documentation>
+         <xs:documentation>Ergänzung einer FMA Komponente bei Gleisstromkreisen um die Bauelemente zur Ein- und Ausspeisung. FMA_Elemente werden rechts und/oder links der FMA_Komponente direkt den angrenzenden FMA_Anlagen zugewiesen. Das Objekt ist bei Achszählpunkten nicht erforderlich. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisisolierplan, Freimeldetabelle.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -413,7 +420,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                       minOccurs="0"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Hinsichtlich der Befestigung zu berücksichtigendes Schienenprofil. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. Das Attribut soll künftig entfallen und daher nicht mehr verwendet werden.</xs:documentation>
+               <xs:documentation>Hinsichtlich der Befestigung zu berücksichtigendes Schienenprofil. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen.</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="FMA_Komponente_Stromversorgung"
@@ -457,7 +464,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                       ecore:reference="nsAnsteuerung_Element:CAussenelementansteuerung"
                       nillable="true"
                       minOccurs="1"
-                      maxOccurs="1">
+                      maxOccurs="2">
             <xs:annotation>
                <xs:documentation>Verweis auf die Aussenelementansteuerung, von der die Informationsversorgung des Stellelements bzw. die Informationsverarbeitung der FMA Komponente erfolgt. Objekte, die Stellelemente" href="//Stellelement"\u003eStellelemente sind, enthalten keine eigenen Attribute ID Energie und ID_Information, sondern verweisen auf das Objekt Stellelement, das diese Attribute enthält. Nicht-Stellelemente (z.B. der Achszählpunkt als FMA Komponente) hingegen müssen diese Attribute selbst enthalten. DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung. </xs:documentation>
             </xs:annotation>
@@ -466,12 +473,12 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:simpleType name="ENUMFMA_Komponente_Art">
       <xs:restriction base="xs:string">
-         <xs:enumeration ecore:name="ENUMFMA_Komponente_Art_Isolierstoss_zweischienig"
-                          value="Isolierstoss_zweischienig"/>
-         <xs:enumeration ecore:name="ENUMFMA_Komponente_Art_Isolierstoss_einschienig"
-                          value="Isolierstoss_einschienig"/>
          <xs:enumeration ecore:name="ENUMFMA_Komponente_Art_elektrischer_Trennstoss"
                           value="elektrischer_Trennstoss"/>
+         <xs:enumeration ecore:name="ENUMFMA_Komponente_Art_Isolierstoss_einschienig"
+                          value="Isolierstoss_einschienig"/>
+         <xs:enumeration ecore:name="ENUMFMA_Komponente_Art_Isolierstoss_zweischienig"
+                          value="Isolierstoss_zweischienig"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="FMA_Isolierung_TypeClass" name="TCFMA_Isolierung">
@@ -529,10 +536,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:simpleType>
    <xs:complexType ecore:name="Schaltmittel_Zuordnung" name="CSchaltmittel_Zuordnung">
       <xs:annotation>
-         <xs:documentation>Zuordnungsobjekt für die punktuelle Auslösung von Schaltvorgängen. Beispiel: BÜSA, Rangier- und Ablaufanlagen. Schaltmittel sind oftmals separate Zugeinwirkungen (z. B. Radsensoren), es können aber auch Freimeldeabschnitte (FMA_Anlagen) oder Achszählpunkte (FMA_Komponenten) für den Zweck eines Schaltmittels mitverwendet werden (Doppelausnutzung). Ein Schaltmittel wiederum kann für unterschiedliche Funktionen vorgesehen sein. Das Zuordnungsobjekt Schaltmittel erfasst jeweils eine konkrete Anforderung (Verweis, der auf das anfordernde Objekt gerichtet ist, z.B. Bahnübergang EIN, Bahnübergang AUS, Fahrstraße verschließen und ordnet diese Funktion dann einer konkreten Anlage (Zugeinwirkung, Freimeldeabschnitt oder Achszählpunkt) sowie eine Beschriftung dieser Anlage im sicherungstechnischen Lageplan zu. Die Funktion "Fahrstraße verschließen (ID_Anforderung = Fstr_Fahrweg)" ist vorgesehen für den Anrückverschluss von Zugstraßen. Weitere Anwendungen sind aktuell nicht im Modell verankert. Der Verweis auf die Anforderung ist nicht erforderlich, wenn sich die Zuordnung eindeutig aus der Topologie ergibt (Beispiel: separates Schaltmittel für die Funktion "Zweites Haltfallkriterium"). In diesem Fall wird nur der Verweis auf die Anlage sowie die Beschriftung im Lageplan angegeben. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan. </xs:documentation>
+         <xs:documentation>Zuordnungsobjekt für die punktuelle Auslösung von Schaltvorgängen. Beispiel: BÜSA, Rangier- und Ablaufanlagen. Schaltmittel sind oftmals separate Zugeinwirkungen (z. B. Radsensoren), es können aber auch Freimeldeabschnitte (FMA_Anlagen) oder Achszählpunkte (FMA_Komponenten) für den Zweck eines Schaltmittels mitverwendet werden (Doppelausnutzung). Ein Schaltmittel wiederum kann für unterschiedliche Funktionen vorgesehen sein. Das Zuordnungsobjekt Schaltmittel erfasst jeweils eine konkrete Anforderung (Verweis, der auf das anfordernde Objekt gerichtet ist, z.B. Bahnübergang EIN, Bahnübergang AUS, Fahrstraße verschließen und ordnet diese Funktion dann einer konkreten Anlage (Zugeinwirkung, Freimeldeabschnitt oder Achszählpunkt) sowie eine Beschriftung dieser Anlage im sicherungstechnischen Lageplan zu. Die Funktion "Fahrstraße verschließen (ID_Anforderung = Fstr_Fahrweg)" ist vorgesehen für den Anrückverschluss von Zugstraßen. Weitere Anwendungen sind aktuell nicht im Modell verankert. Der Verweis auf die Anforderung ist nicht erforderlich, wenn sich die Zuordnung eindeutig aus der Topologie ergibt (Beispiel: separates Schaltmittel für die Funktion "Zweites Haltfallkriterium"). In diesem Fall wird nur der Verweis auf die Anlage sowie die Beschriftung im Lageplan angegeben. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>BÜ|ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -565,11 +573,6 @@ XML Schema for PlanPro interface.</xs:documentation>
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Funktion des Schaltmittels. Beispiele (und Erläuterung dazu): ARM (Anrückmeldung für BÜSA), Ein_BUE (Einschaltung von BÜSA), ZL_Anstoß (Zuglenk-Anstoß), Haltfall (zweites Haltfall-Kriterium bei Signalen). Zur Auswertung muss die Funktion noch mit dem unter ID Anforderung angegebenen Objekt vervollständigt werden. DB-Regelwerk Sicherungstechnischer Lageplan, BÜ-Lageplan</xs:documentation>
-                     <xs:appinfo>
-                        <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
-                           <Patternbeschreibung> [1..16] </Patternbeschreibung>
-                        </WorkflowInformation>
-                     </xs:appinfo>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
@@ -667,17 +670,17 @@ XML Schema for PlanPro interface.</xs:documentation>
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMFMA_Element_Art_Anschlussseile" value="Anschlussseile"/>
          <xs:enumeration ecore:name="ENUMFMA_Element_Art_Drosselspule" value="Drosselspule"/>
-         <xs:enumeration ecore:name="ENUMFMA_Element_Art_S_Verbinder" value="S_Verbinder"/>
-         <xs:enumeration ecore:name="ENUMFMA_Element_Art_sonstige" value="sonstige"/>
          <xs:enumeration ecore:name="ENUMFMA_Element_Art_Endverbinder" value="Endverbinder"/>
          <xs:enumeration ecore:name="ENUMFMA_Element_Art_Endverbinder_modifiziert"
                           value="Endverbinder_modifiziert"/>
          <xs:enumeration ecore:name="ENUMFMA_Element_Art_Kurzschlussverbinder"
                           value="Kurzschlussverbinder"/>
-         <xs:enumeration ecore:name="ENUMFMA_Element_Art_Ueberlagerungsverbinder"
-                          value="Ueberlagerungsverbinder"/>
          <xs:enumeration ecore:name="ENUMFMA_Element_Art_Potentialausgleichsverbinder"
                           value="Potentialausgleichsverbinder"/>
+         <xs:enumeration ecore:name="ENUMFMA_Element_Art_sonstige" value="sonstige"/>
+         <xs:enumeration ecore:name="ENUMFMA_Element_Art_S_Verbinder" value="S_Verbinder"/>
+         <xs:enumeration ecore:name="ENUMFMA_Element_Art_Ueberlagerungsverbinder"
+                          value="Ueberlagerungsverbinder"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="Bezeichnung_Kennbuchstabe_TypeClass"
@@ -714,10 +717,10 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:simpleType>
    <xs:simpleType name="ENUMFMA_Anschluss_Speiserichtung">
       <xs:restriction base="xs:string">
-         <xs:enumeration ecore:name="ENUMFMA_Anschluss_Speiserichtung_Einspeisung"
-                          value="Einspeisung"/>
          <xs:enumeration ecore:name="ENUMFMA_Anschluss_Speiserichtung_Ausspeisung"
                           value="Ausspeisung"/>
+         <xs:enumeration ecore:name="ENUMFMA_Anschluss_Speiserichtung_Einspeisung"
+                          value="Einspeisung"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="FMA_Laenge_E1_TypeClass" name="TCFMA_Laenge_E1">
@@ -969,9 +972,12 @@ XML Schema for PlanPro interface.</xs:documentation>
    <xs:simpleType name="ENUMSchaltmittel_Funktion">
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_ARM" value="ARM"/>
+         <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_Aus_BUE" value="Aus_BUE"/>
          <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_Awanst" value="Awanst"/>
          <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_Ein_BUE" value="Ein_BUE"/>
          <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_Haltfall" value="Haltfall"/>
+         <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_Raeumungspruefung"
+                          value="Raeumungspruefung"/>
          <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_sonstige" value="sonstige"/>
          <xs:enumeration ecore:name="ENUMSchaltmittel_Funktion_ZL_Anstoss" value="ZL_Anstoss"/>
       </xs:restriction>
@@ -1055,11 +1061,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:simpleType>
    <xs:simpleType name="ENUMFMA_Art">
       <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMFMA_Art_Achszaehlanlage" value="Achszaehlanlage"/>
+         <xs:enumeration ecore:name="ENUMFMA_Art_FTGS" value="FTGS"/>
          <xs:enumeration ecore:name="ENUMFMA_Art_NF_Gleisstromkreis" value="NF_Gleisstromkreis"/>
          <xs:enumeration ecore:name="ENUMFMA_Art_sonstige" value="sonstige"/>
          <xs:enumeration ecore:name="ENUMFMA_Art_TF_Gleisstromkreis" value="TF_Gleisstromkreis"/>
-         <xs:enumeration ecore:name="ENUMFMA_Art_FTGS" value="FTGS"/>
-         <xs:enumeration ecore:name="ENUMFMA_Art_Achszaehlanlage" value="Achszaehlanlage"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="Zugeinwirkung_Typ_TypeClass" name="TCZugeinwirkung_Typ">
@@ -1122,10 +1128,14 @@ XML Schema for PlanPro interface.</xs:documentation>
                           value="Einfach_Schleife"/>
          <xs:enumeration ecore:name="ENUMZugeinwirkung_Art_Einfach_Sensor"
                           value="Einfach_Sensor"/>
+         <xs:enumeration ecore:name="ENUMZugeinwirkung_Art_Einfach_Sensor_richtungsabhaengig"
+                          value="Einfach_Sensor_richtungsabhaengig"/>
          <xs:enumeration ecore:name="ENUMZugeinwirkung_Art_Isolierte_Schiene_alleinstehend"
                           value="Isolierte_Schiene_alleinstehend"/>
          <xs:enumeration ecore:name="ENUMZugeinwirkung_Art_Isolierte_Schiene_FMA_Anlage_mitbenutzt"
                           value="Isolierte_Schiene_FMA_Anlage_mitbenutzt"/>
+         <xs:enumeration ecore:name="ENUMZugeinwirkung_Art_Schienenkontakt"
+                          value="Schienenkontakt"/>
          <xs:enumeration ecore:name="ENUMZugeinwirkung_Art_sonstige" value="sonstige"/>
       </xs:restriction>
    </xs:simpleType>
@@ -1195,10 +1205,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Zugeinwirkung" name="CZugeinwirkung">
       <xs:annotation>
-         <xs:documentation>Technische Anlage, die durch die punktuelle Einwirkung eines Zuges einen Schaltvorgang auslösen kann. Bei BÜSA werden Ein- und Ausschaltpunkte sowie Kontakte für die Wirksamkeitsschaltung in Abhängigkeit vom Hersteller auf verschiedene Art ausgebildet: Die Hersteller Scheidt\u0026amp;Bachmann sowie PintschBamag verwenden als Zugeinwirkung Fahrzeugsensoren in Form von 8-förmig verlegten Schleifen im Gleis. Einschaltpunkte und Kontakte für die Wirksamkeitsschaltung werden im Regelfall aus zwei Schleifen, Ausschaltpunkte aus einer Schleife gebildet. Nur im Ausnahmefall werden beim Hersteller PintschBamag Einschaltpunkte mit drei Schleifen errichtet. Der Hersteller Siemens AG verwendet dagegen Achszählern vergleichbare sogenannte Doppelsensoren. Für das Modell werden, unabhängig von der herstellerspezifischen Ausbildung, Ein-und Ausschaltpunkte sowie Kontakte der Wirksamkeitsschaltung grundsätzlich als EINE Zugeinwirkung betrachtet. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan. </xs:documentation>
+         <xs:documentation>Technische Anlage, die durch die punktuelle Einwirkung eines Zuges einen Schaltvorgang auslösen kann. Bei BÜSA werden Ein- und Ausschaltpunkte sowie Kontakte für die Wirksamkeitsschaltung in Abhängigkeit vom Hersteller auf verschiedene Art ausgebildet: Die Hersteller Scheidt\u0026amp;Bachmann sowie PintschBamag verwenden als Zugeinwirkung Fahrzeugsensoren in Form von 8-förmig verlegten Schleifen im Gleis. Einschaltpunkte und Kontakte für die Wirksamkeitsschaltung werden im Regelfall aus zwei Schleifen, Ausschaltpunkte aus einer Schleife gebildet. Nur im Ausnahmefall werden beim Hersteller PintschBamag Einschaltpunkte mit drei Schleifen errichtet. Der Hersteller Siemens AG verwendet dagegen Achszählern vergleichbare sogenannte Doppelsensoren. Für das Modell werden, unabhängig von der herstellerspezifischen Ausbildung, Ein-und Ausschaltpunkte sowie Kontakte der Wirksamkeitsschaltung grundsätzlich als EINE Zugeinwirkung betrachtet. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>BÜ|ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>

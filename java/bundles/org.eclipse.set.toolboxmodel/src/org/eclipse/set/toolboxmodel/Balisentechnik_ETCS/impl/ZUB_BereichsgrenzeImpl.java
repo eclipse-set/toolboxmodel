@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,7 +17,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -23,15 +29,17 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Bezeichnung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_ESG_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_LZB_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_Ohne_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_PZB_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bgrenze_RBC_Wechsel_AttributeGroup;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
 /**
@@ -52,6 +60,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_BereichsgrenzeImpl#getZUBBereichsgrenzeNachOhne <em>ZUB Bereichsgrenze Nach Ohne</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_BereichsgrenzeImpl#getZUBBereichsgrenzeNachPZB <em>ZUB Bereichsgrenze Nach PZB</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_BereichsgrenzeImpl#getZUBBereichsgrenzeNachSonstige <em>ZUB Bereichsgrenze Nach Sonstige</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_BereichsgrenzeImpl#getZUBBereichsgrenzeNachZBS <em>ZUB Bereichsgrenze Nach ZBS</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_BereichsgrenzeImpl#getZUBBgrenzeRBCWechsel <em>ZUB Bgrenze RBC Wechsel</em>}</li>
  * </ul>
  *
@@ -115,7 +124,7 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup> zUBBereichsgrenzeNachGNT;
+	protected EList<ZUB_Bereichsgrenze_Nach_GNT_TypeClass> zUBBereichsgrenzeNachGNT;
 
 	/**
 	 * The cached value of the '{@link #getZUBBereichsgrenzeNachL2() <em>ZUB Bereichsgrenze Nach L2</em>}' containment reference list.
@@ -166,6 +175,16 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 	 * @ordered
 	 */
 	protected EList<ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup> zUBBereichsgrenzeNachSonstige;
+
+	/**
+	 * The cached value of the '{@link #getZUBBereichsgrenzeNachZBS() <em>ZUB Bereichsgrenze Nach ZBS</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZUBBereichsgrenzeNachZBS()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup> zUBBereichsgrenzeNachZBS;
 
 	/**
 	 * The cached value of the '{@link #getZUBBgrenzeRBCWechsel() <em>ZUB Bgrenze RBC Wechsel</em>}' containment reference list.
@@ -372,9 +391,9 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 	 * @generated
 	 */
 	@Override
-	public EList<ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup> getZUBBereichsgrenzeNachGNT() {
+	public EList<ZUB_Bereichsgrenze_Nach_GNT_TypeClass> getZUBBereichsgrenzeNachGNT() {
 		if (zUBBereichsgrenzeNachGNT == null) {
-			zUBBereichsgrenzeNachGNT = new EObjectContainmentEList<ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup>(ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup.class, this, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_GNT);
+			zUBBereichsgrenzeNachGNT = new EObjectContainmentEList<ZUB_Bereichsgrenze_Nach_GNT_TypeClass>(ZUB_Bereichsgrenze_Nach_GNT_TypeClass.class, this, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_GNT);
 		}
 		return zUBBereichsgrenzeNachGNT;
 	}
@@ -450,6 +469,19 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 	 * @generated
 	 */
 	@Override
+	public EList<ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup> getZUBBereichsgrenzeNachZBS() {
+		if (zUBBereichsgrenzeNachZBS == null) {
+			zUBBereichsgrenzeNachZBS = new EObjectContainmentEList<ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup>(ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup.class, this, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_ZBS);
+		}
+		return zUBBereichsgrenzeNachZBS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<ZUB_Bgrenze_RBC_Wechsel_AttributeGroup> getZUBBgrenzeRBCWechsel() {
 		if (zUBBgrenzeRBCWechsel == null) {
 			zUBBgrenzeRBCWechsel = new EObjectContainmentEList<ZUB_Bgrenze_RBC_Wechsel_AttributeGroup>(ZUB_Bgrenze_RBC_Wechsel_AttributeGroup.class, this, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BGRENZE_RBC_WECHSEL);
@@ -483,6 +515,8 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 				return ((InternalEList<?>)getZUBBereichsgrenzeNachPZB()).basicRemove(otherEnd, msgs);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_SONSTIGE:
 				return ((InternalEList<?>)getZUBBereichsgrenzeNachSonstige()).basicRemove(otherEnd, msgs);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_ZBS:
+				return ((InternalEList<?>)getZUBBereichsgrenzeNachZBS()).basicRemove(otherEnd, msgs);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BGRENZE_RBC_WECHSEL:
 				return ((InternalEList<?>)getZUBBgrenzeRBCWechsel()).basicRemove(otherEnd, msgs);
 			default:
@@ -519,6 +553,8 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 				return getZUBBereichsgrenzeNachPZB();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_SONSTIGE:
 				return getZUBBereichsgrenzeNachSonstige();
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_ZBS:
+				return getZUBBereichsgrenzeNachZBS();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BGRENZE_RBC_WECHSEL:
 				return getZUBBgrenzeRBCWechsel();
 			default:
@@ -550,7 +586,7 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_GNT:
 				getZUBBereichsgrenzeNachGNT().clear();
-				getZUBBereichsgrenzeNachGNT().addAll((Collection<? extends ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup>)newValue);
+				getZUBBereichsgrenzeNachGNT().addAll((Collection<? extends ZUB_Bereichsgrenze_Nach_GNT_TypeClass>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_L2:
 				getZUBBereichsgrenzeNachL2().clear();
@@ -571,6 +607,10 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_SONSTIGE:
 				getZUBBereichsgrenzeNachSonstige().clear();
 				getZUBBereichsgrenzeNachSonstige().addAll((Collection<? extends ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup>)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_ZBS:
+				getZUBBereichsgrenzeNachZBS().clear();
+				getZUBBereichsgrenzeNachZBS().addAll((Collection<? extends ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BGRENZE_RBC_WECHSEL:
 				getZUBBgrenzeRBCWechsel().clear();
@@ -620,6 +660,9 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_SONSTIGE:
 				getZUBBereichsgrenzeNachSonstige().clear();
 				return;
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_ZBS:
+				getZUBBereichsgrenzeNachZBS().clear();
+				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BGRENZE_RBC_WECHSEL:
 				getZUBBgrenzeRBCWechsel().clear();
 				return;
@@ -657,6 +700,8 @@ public class ZUB_BereichsgrenzeImpl extends Punkt_ObjektImpl implements ZUB_Bere
 				return zUBBereichsgrenzeNachPZB != null && !zUBBereichsgrenzeNachPZB.isEmpty();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_SONSTIGE:
 				return zUBBereichsgrenzeNachSonstige != null && !zUBBereichsgrenzeNachSonstige.isEmpty();
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_ZBS:
+				return zUBBereichsgrenzeNachZBS != null && !zUBBereichsgrenzeNachZBS.isEmpty();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BGRENZE_RBC_WECHSEL:
 				return zUBBgrenzeRBCWechsel != null && !zUBBgrenzeRBCWechsel.isEmpty();
 			default:

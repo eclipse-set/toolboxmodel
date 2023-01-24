@@ -34,7 +34,6 @@ import org.eclipse.set.toolboxmodel.PlanPro.Planung_Projekt;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Planung_ProjektImpl#getLSTPlanungGruppe <em>LST Planung Gruppe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Planung_ProjektImpl#getPlanungPAllg <em>Planung PAllg</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Planung_ProjektImpl#getLstPlanungErsteGruppe <em>Lst Planung Erste Gruppe</em>}</li>
  * </ul>
  *
  * @generated
@@ -143,46 +142,6 @@ public class Planung_ProjektImpl extends Ur_ObjektImpl implements Planung_Projek
 	 * @generated
 	 */
 	@Override
-	public Planung_Gruppe getLstPlanungErsteGruppe() {
-		Planung_Gruppe lstPlanungErsteGruppe = basicGetLstPlanungErsteGruppe();
-		return lstPlanungErsteGruppe != null && lstPlanungErsteGruppe.eIsProxy() ? (Planung_Gruppe)eResolveProxy((InternalEObject)lstPlanungErsteGruppe) : lstPlanungErsteGruppe;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Planung_Gruppe basicGetLstPlanungErsteGruppe() {
-		final java.util.Optional<org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService> optionalProviderService = org.eclipse.set.toolboxmodel.modelservice.PlanProModelServices
-			.get(org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService.class);
-		if (optionalProviderService.isPresent()) {
-			final org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService providerService = optionalProviderService
-					.get();
-			return (Planung_Gruppe) providerService.getGroup(this);
-		}
-		return getLSTPlanungGruppe().get(0);
-		
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLstPlanungErsteGruppe(Planung_Gruppe newLstPlanungErsteGruppe) {
-		// TODO: implement this method to set the 'Lst Planung Erste Gruppe' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PlanProPackage.PLANUNG_PROJEKT__LST_PLANUNG_GRUPPE:
@@ -206,9 +165,6 @@ public class Planung_ProjektImpl extends Ur_ObjektImpl implements Planung_Projek
 				return getLSTPlanungGruppe();
 			case PlanProPackage.PLANUNG_PROJEKT__PLANUNG_PALLG:
 				return getPlanungPAllg();
-			case PlanProPackage.PLANUNG_PROJEKT__LST_PLANUNG_ERSTE_GRUPPE:
-				if (resolve) return getLstPlanungErsteGruppe();
-				return basicGetLstPlanungErsteGruppe();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -230,9 +186,6 @@ public class Planung_ProjektImpl extends Ur_ObjektImpl implements Planung_Projek
 			case PlanProPackage.PLANUNG_PROJEKT__PLANUNG_PALLG:
 				setPlanungPAllg((Planung_P_Allg_AttributeGroup)newValue);
 				return;
-			case PlanProPackage.PLANUNG_PROJEKT__LST_PLANUNG_ERSTE_GRUPPE:
-				setLstPlanungErsteGruppe((Planung_Gruppe)newValue);
-				return;
 			default:
 				super.eSet(featureID, newValue);
 				return;
@@ -253,9 +206,6 @@ public class Planung_ProjektImpl extends Ur_ObjektImpl implements Planung_Projek
 			case PlanProPackage.PLANUNG_PROJEKT__PLANUNG_PALLG:
 				setPlanungPAllg((Planung_P_Allg_AttributeGroup)null);
 				return;
-			case PlanProPackage.PLANUNG_PROJEKT__LST_PLANUNG_ERSTE_GRUPPE:
-				setLstPlanungErsteGruppe((Planung_Gruppe)null);
-				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -274,11 +224,52 @@ public class Planung_ProjektImpl extends Ur_ObjektImpl implements Planung_Projek
 				return lSTPlanungGruppe != null && !lSTPlanungGruppe.isEmpty();
 			case PlanProPackage.PLANUNG_PROJEKT__PLANUNG_PALLG:
 				return planungPAllg != null;
-			case PlanProPackage.PLANUNG_PROJEKT__LST_PLANUNG_ERSTE_GRUPPE:
-				return basicGetLstPlanungErsteGruppe() != null;
 			default:
 				return super.eIsSet(featureID);
 		}
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Planung_Gruppe getLstPlanungErsteGruppe() {
+		Planung_Gruppe lstPlanungErsteGruppe = basicGetLstPlanungErsteGruppe();
+		return lstPlanungErsteGruppe != null && lstPlanungErsteGruppe.eIsProxy() ? (Planung_Gruppe)eResolveProxy((InternalEObject)lstPlanungErsteGruppe) : lstPlanungErsteGruppe;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Planung_Gruppe basicGetLstPlanungErsteGruppe() {
+		final java.util.Optional<org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService> optionalProviderService = org.eclipse.set.toolboxmodel.modelservice.PlanProModelServices
+			.get(org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService.class);
+		if (optionalProviderService.isPresent()) {
+			final org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService providerService = optionalProviderService
+					.get();
+			return (Planung_Gruppe) providerService.getGroup(this);
+		}
+		return getLSTPlanungGruppe().get(0);
+		
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLstPlanungErsteGruppe(Planung_Gruppe newLstPlanungErsteGruppe) {
+		// TODO: implement this method to set the 'Lst Planung Erste Gruppe' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+
 
 } //Planung_ProjektImpl

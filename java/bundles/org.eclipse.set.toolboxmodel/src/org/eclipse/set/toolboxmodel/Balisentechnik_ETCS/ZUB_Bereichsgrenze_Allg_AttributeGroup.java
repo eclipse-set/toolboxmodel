@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -29,7 +36,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  */
 public interface ZUB_Bereichsgrenze_Allg_AttributeGroup extends EObject {
 	/**
-	 * Returns the value of the '<em><b>ID Element Grenze</b></em>' reference.
+	 * Returns the value of the '<em><b>ID Element Grenze</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -41,51 +49,13 @@ public interface ZUB_Bereichsgrenze_Allg_AttributeGroup extends EObject {
 	 * Bereichsgrenze nach GNT: Verweis auf den ersten GNT-Datenpunkt (B1 oder B3)
 	 * Bereichsgrenze nach OHNE: Verweis auf das Grenzsignal (bei Übergang aus PZB) bzw. den Grenzdatenpunkt (bei Übergang aus ESG oder L2)
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Element Grenze</em>' reference.
-	 * @see #isSetIDElementGrenze()
-	 * @see #unsetIDElementGrenze()
-	 * @see #setIDElementGrenze(Basis_Objekt)
+	 * @return the value of the '<em>ID Element Grenze</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_Allg_AttributeGroup_IDElementGrenze()
-	 * @model unsettable="true" required="true"
+	 * @model required="true"
 	 *        extendedMetaData="kind='element' name='ID_Element_Grenze'"
 	 * @generated
 	 */
-	Basis_Objekt getIDElementGrenze();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Allg_AttributeGroup#getIDElementGrenze <em>ID Element Grenze</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Element Grenze</em>' reference.
-	 * @see #isSetIDElementGrenze()
-	 * @see #unsetIDElementGrenze()
-	 * @see #getIDElementGrenze()
-	 * @generated
-	 */
-	void setIDElementGrenze(Basis_Objekt value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Allg_AttributeGroup#getIDElementGrenze <em>ID Element Grenze</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDElementGrenze()
-	 * @see #getIDElementGrenze()
-	 * @see #setIDElementGrenze(Basis_Objekt)
-	 * @generated
-	 */
-	void unsetIDElementGrenze();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Allg_AttributeGroup#getIDElementGrenze <em>ID Element Grenze</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Element Grenze</em>' reference is set.
-	 * @see #unsetIDElementGrenze()
-	 * @see #getIDElementGrenze()
-	 * @see #setIDElementGrenze(Basis_Objekt)
-	 * @generated
-	 */
-	boolean isSetIDElementGrenze();
+	EList<Basis_Objekt> getIDElementGrenze();
 
 	/**
 	 * Returns the value of the '<em><b>IDRBC Vor Grenze</b></em>' reference.

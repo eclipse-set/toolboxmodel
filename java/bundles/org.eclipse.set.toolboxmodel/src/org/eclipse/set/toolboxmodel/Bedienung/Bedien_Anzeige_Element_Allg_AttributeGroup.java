@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bedienung;
 
@@ -28,7 +35,7 @@ public interface Bedien_Anzeige_Element_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Art des Melders für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Melder an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahbedienbereichen und Bahnübergängen werden die Melder im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. 
+	 * Art des Melders für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Melder an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahstellbereichen und Bahnübergängen werden die Melder im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Melder</em>' containment reference.
 	 * @see #setMelder(Melder_TypeClass)
@@ -54,7 +61,7 @@ public interface Bedien_Anzeige_Element_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Art des Schalters für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Schalter an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahbedienbereichen und Bahnübergängen werden die Schalter im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. 
+	 * Art des Schalters für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Schalter an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahstellbereichen und Bahnübergängen werden die Schalter im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Schalter</em>' containment reference.
 	 * @see #setSchalter(Schalter_TypeClass)
@@ -80,7 +87,7 @@ public interface Bedien_Anzeige_Element_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Art der Taste für eine örtliche Bedieneinrichtung, außer solchen mit BÜ- und NB-Funktionen. Für Bedieneinrichtungen von Bahnübergängen und Nahbedienbereichen werden die Tasten im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Anwendungsbeispiele: Tasten an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. 
+	 * Art der Taste für eine örtliche Bedieneinrichtung, außer solchen mit BÜ- und NB-Funktionen. Für Bedieneinrichtungen von Bahnübergängen und Nahstellbereichen werden die Tasten im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Anwendungsbeispiele: Tasten an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Taste</em>' containment reference.
 	 * @see #setTaste(Taste_TypeClass)

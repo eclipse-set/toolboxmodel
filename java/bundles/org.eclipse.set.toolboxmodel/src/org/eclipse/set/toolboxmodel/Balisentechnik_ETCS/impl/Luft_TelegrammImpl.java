@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -6,18 +13,18 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Fachtelegramm;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdatei_Hilfe_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdaten_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegramm_Index_TypeClass;
 
-import org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
 /**
@@ -28,57 +35,16 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getEigenschaftenBinaerdatei <em>Eigenschaften Binaerdatei</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getEigenschaftenBinaerdateiHilfe <em>Eigenschaften Binaerdatei Hilfe</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getIDAnhangEADoku <em>ID Anhang EA Doku</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getIDBaliseUebertragung <em>ID Balise Uebertragung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getIDBinaerdatei <em>ID Binaerdatei</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getIDBinaerdateiHilfe <em>ID Binaerdatei Hilfe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getIDFachtelegramm <em>ID Fachtelegramm</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getLTBinaerdateiHilfe <em>LT Binaerdatei Hilfe</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getLTBinaerdaten <em>LT Binaerdaten</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Luft_TelegrammImpl#getTelegrammIndex <em>Telegramm Index</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegramm {
-	/**
-	 * The cached value of the '{@link #getEigenschaftenBinaerdatei() <em>Eigenschaften Binaerdatei</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEigenschaftenBinaerdatei()
-	 * @generated
-	 * @ordered
-	 */
-	protected Eigenschaften_Datei_AttributeGroup eigenschaftenBinaerdatei;
-
-	/**
-	 * The cached value of the '{@link #getEigenschaftenBinaerdateiHilfe() <em>Eigenschaften Binaerdatei Hilfe</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEigenschaftenBinaerdateiHilfe()
-	 * @generated
-	 * @ordered
-	 */
-	protected Eigenschaften_Datei_AttributeGroup eigenschaftenBinaerdateiHilfe;
-
-	/**
-	 * The cached value of the '{@link #getIDAnhangEADoku() <em>ID Anhang EA Doku</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIDAnhangEADoku()
-	 * @generated
-	 * @ordered
-	 */
-	protected Anhang iDAnhangEADoku;
-
-	/**
-	 * This is true if the ID Anhang EA Doku reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDAnhangEADokuESet;
-
 	/**
 	 * The cached value of the '{@link #getIDBaliseUebertragung() <em>ID Balise Uebertragung</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -97,44 +63,6 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	 * @ordered
 	 */
 	protected boolean iDBaliseUebertragungESet;
-
-	/**
-	 * The cached value of the '{@link #getIDBinaerdatei() <em>ID Binaerdatei</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIDBinaerdatei()
-	 * @generated
-	 * @ordered
-	 */
-	protected Binaerdatei iDBinaerdatei;
-
-	/**
-	 * This is true if the ID Binaerdatei reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDBinaerdateiESet;
-
-	/**
-	 * The cached value of the '{@link #getIDBinaerdateiHilfe() <em>ID Binaerdatei Hilfe</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIDBinaerdateiHilfe()
-	 * @generated
-	 * @ordered
-	 */
-	protected Binaerdatei iDBinaerdateiHilfe;
-
-	/**
-	 * This is true if the ID Binaerdatei Hilfe reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDBinaerdateiHilfeESet;
 
 	/**
 	 * The cached value of the '{@link #getIDFachtelegramm() <em>ID Fachtelegramm</em>}' reference.
@@ -156,6 +84,36 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	protected boolean iDFachtelegrammESet;
 
 	/**
+	 * The cached value of the '{@link #getLTBinaerdateiHilfe() <em>LT Binaerdatei Hilfe</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLTBinaerdateiHilfe()
+	 * @generated
+	 * @ordered
+	 */
+	protected LT_Binaerdatei_Hilfe_AttributeGroup lTBinaerdateiHilfe;
+
+	/**
+	 * The cached value of the '{@link #getLTBinaerdaten() <em>LT Binaerdaten</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLTBinaerdaten()
+	 * @generated
+	 * @ordered
+	 */
+	protected LT_Binaerdaten_AttributeGroup lTBinaerdaten;
+
+	/**
+	 * The cached value of the '{@link #getTelegrammIndex() <em>Telegramm Index</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTelegrammIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected Telegramm_Index_TypeClass telegrammIndex;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -172,163 +130,6 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	@Override
 	protected EClass eStaticClass() {
 		return Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Eigenschaften_Datei_AttributeGroup getEigenschaftenBinaerdatei() {
-		return eigenschaftenBinaerdatei;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup newEigenschaftenBinaerdatei, NotificationChain msgs) {
-		Eigenschaften_Datei_AttributeGroup oldEigenschaftenBinaerdatei = eigenschaftenBinaerdatei;
-		eigenschaftenBinaerdatei = newEigenschaftenBinaerdatei;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI, oldEigenschaftenBinaerdatei, newEigenschaftenBinaerdatei);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup newEigenschaftenBinaerdatei) {
-		if (newEigenschaftenBinaerdatei != eigenschaftenBinaerdatei) {
-			NotificationChain msgs = null;
-			if (eigenschaftenBinaerdatei != null)
-				msgs = ((InternalEObject)eigenschaftenBinaerdatei).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI, null, msgs);
-			if (newEigenschaftenBinaerdatei != null)
-				msgs = ((InternalEObject)newEigenschaftenBinaerdatei).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI, null, msgs);
-			msgs = basicSetEigenschaftenBinaerdatei(newEigenschaftenBinaerdatei, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI, newEigenschaftenBinaerdatei, newEigenschaftenBinaerdatei));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Eigenschaften_Datei_AttributeGroup getEigenschaftenBinaerdateiHilfe() {
-		return eigenschaftenBinaerdateiHilfe;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEigenschaftenBinaerdateiHilfe(Eigenschaften_Datei_AttributeGroup newEigenschaftenBinaerdateiHilfe, NotificationChain msgs) {
-		Eigenschaften_Datei_AttributeGroup oldEigenschaftenBinaerdateiHilfe = eigenschaftenBinaerdateiHilfe;
-		eigenschaftenBinaerdateiHilfe = newEigenschaftenBinaerdateiHilfe;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE, oldEigenschaftenBinaerdateiHilfe, newEigenschaftenBinaerdateiHilfe);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEigenschaftenBinaerdateiHilfe(Eigenschaften_Datei_AttributeGroup newEigenschaftenBinaerdateiHilfe) {
-		if (newEigenschaftenBinaerdateiHilfe != eigenschaftenBinaerdateiHilfe) {
-			NotificationChain msgs = null;
-			if (eigenschaftenBinaerdateiHilfe != null)
-				msgs = ((InternalEObject)eigenschaftenBinaerdateiHilfe).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE, null, msgs);
-			if (newEigenschaftenBinaerdateiHilfe != null)
-				msgs = ((InternalEObject)newEigenschaftenBinaerdateiHilfe).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE, null, msgs);
-			msgs = basicSetEigenschaftenBinaerdateiHilfe(newEigenschaftenBinaerdateiHilfe, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE, newEigenschaftenBinaerdateiHilfe, newEigenschaftenBinaerdateiHilfe));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Anhang getIDAnhangEADoku() {
-		if (iDAnhangEADoku != null && iDAnhangEADoku.eIsProxy()) {
-			InternalEObject oldIDAnhangEADoku = (InternalEObject)iDAnhangEADoku;
-			iDAnhangEADoku = (Anhang)eResolveProxy(oldIDAnhangEADoku);
-			if (iDAnhangEADoku != oldIDAnhangEADoku) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_ANHANG_EA_DOKU, oldIDAnhangEADoku, iDAnhangEADoku));
-			}
-		}
-		return iDAnhangEADoku;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Anhang basicGetIDAnhangEADoku() {
-		return iDAnhangEADoku;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDAnhangEADoku(Anhang newIDAnhangEADoku) {
-		Anhang oldIDAnhangEADoku = iDAnhangEADoku;
-		iDAnhangEADoku = newIDAnhangEADoku;
-		boolean oldIDAnhangEADokuESet = iDAnhangEADokuESet;
-		iDAnhangEADokuESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_ANHANG_EA_DOKU, oldIDAnhangEADoku, iDAnhangEADoku, !oldIDAnhangEADokuESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDAnhangEADoku() {
-		Anhang oldIDAnhangEADoku = iDAnhangEADoku;
-		boolean oldIDAnhangEADokuESet = iDAnhangEADokuESet;
-		iDAnhangEADoku = null;
-		iDAnhangEADokuESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_ANHANG_EA_DOKU, oldIDAnhangEADoku, null, oldIDAnhangEADokuESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDAnhangEADoku() {
-		return iDAnhangEADokuESet;
 	}
 
 	/**
@@ -404,140 +205,6 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	 * @generated
 	 */
 	@Override
-	public Binaerdatei getIDBinaerdatei() {
-		if (iDBinaerdatei != null && iDBinaerdatei.eIsProxy()) {
-			InternalEObject oldIDBinaerdatei = (InternalEObject)iDBinaerdatei;
-			iDBinaerdatei = (Binaerdatei)eResolveProxy(oldIDBinaerdatei);
-			if (iDBinaerdatei != oldIDBinaerdatei) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI, oldIDBinaerdatei, iDBinaerdatei));
-			}
-		}
-		return iDBinaerdatei;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Binaerdatei basicGetIDBinaerdatei() {
-		return iDBinaerdatei;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDBinaerdatei(Binaerdatei newIDBinaerdatei) {
-		Binaerdatei oldIDBinaerdatei = iDBinaerdatei;
-		iDBinaerdatei = newIDBinaerdatei;
-		boolean oldIDBinaerdateiESet = iDBinaerdateiESet;
-		iDBinaerdateiESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI, oldIDBinaerdatei, iDBinaerdatei, !oldIDBinaerdateiESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDBinaerdatei() {
-		Binaerdatei oldIDBinaerdatei = iDBinaerdatei;
-		boolean oldIDBinaerdateiESet = iDBinaerdateiESet;
-		iDBinaerdatei = null;
-		iDBinaerdateiESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI, oldIDBinaerdatei, null, oldIDBinaerdateiESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDBinaerdatei() {
-		return iDBinaerdateiESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Binaerdatei getIDBinaerdateiHilfe() {
-		if (iDBinaerdateiHilfe != null && iDBinaerdateiHilfe.eIsProxy()) {
-			InternalEObject oldIDBinaerdateiHilfe = (InternalEObject)iDBinaerdateiHilfe;
-			iDBinaerdateiHilfe = (Binaerdatei)eResolveProxy(oldIDBinaerdateiHilfe);
-			if (iDBinaerdateiHilfe != oldIDBinaerdateiHilfe) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI_HILFE, oldIDBinaerdateiHilfe, iDBinaerdateiHilfe));
-			}
-		}
-		return iDBinaerdateiHilfe;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Binaerdatei basicGetIDBinaerdateiHilfe() {
-		return iDBinaerdateiHilfe;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDBinaerdateiHilfe(Binaerdatei newIDBinaerdateiHilfe) {
-		Binaerdatei oldIDBinaerdateiHilfe = iDBinaerdateiHilfe;
-		iDBinaerdateiHilfe = newIDBinaerdateiHilfe;
-		boolean oldIDBinaerdateiHilfeESet = iDBinaerdateiHilfeESet;
-		iDBinaerdateiHilfeESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI_HILFE, oldIDBinaerdateiHilfe, iDBinaerdateiHilfe, !oldIDBinaerdateiHilfeESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDBinaerdateiHilfe() {
-		Binaerdatei oldIDBinaerdateiHilfe = iDBinaerdateiHilfe;
-		boolean oldIDBinaerdateiHilfeESet = iDBinaerdateiHilfeESet;
-		iDBinaerdateiHilfe = null;
-		iDBinaerdateiHilfeESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI_HILFE, oldIDBinaerdateiHilfe, null, oldIDBinaerdateiHilfeESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDBinaerdateiHilfe() {
-		return iDBinaerdateiHilfeESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Fachtelegramm getIDFachtelegramm() {
 		if (iDFachtelegramm != null && iDFachtelegramm.eIsProxy()) {
 			InternalEObject oldIDFachtelegramm = (InternalEObject)iDFachtelegramm;
@@ -605,12 +272,149 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	 * @generated
 	 */
 	@Override
+	public LT_Binaerdatei_Hilfe_AttributeGroup getLTBinaerdateiHilfe() {
+		return lTBinaerdateiHilfe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLTBinaerdateiHilfe(LT_Binaerdatei_Hilfe_AttributeGroup newLTBinaerdateiHilfe, NotificationChain msgs) {
+		LT_Binaerdatei_Hilfe_AttributeGroup oldLTBinaerdateiHilfe = lTBinaerdateiHilfe;
+		lTBinaerdateiHilfe = newLTBinaerdateiHilfe;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE, oldLTBinaerdateiHilfe, newLTBinaerdateiHilfe);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLTBinaerdateiHilfe(LT_Binaerdatei_Hilfe_AttributeGroup newLTBinaerdateiHilfe) {
+		if (newLTBinaerdateiHilfe != lTBinaerdateiHilfe) {
+			NotificationChain msgs = null;
+			if (lTBinaerdateiHilfe != null)
+				msgs = ((InternalEObject)lTBinaerdateiHilfe).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE, null, msgs);
+			if (newLTBinaerdateiHilfe != null)
+				msgs = ((InternalEObject)newLTBinaerdateiHilfe).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE, null, msgs);
+			msgs = basicSetLTBinaerdateiHilfe(newLTBinaerdateiHilfe, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE, newLTBinaerdateiHilfe, newLTBinaerdateiHilfe));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LT_Binaerdaten_AttributeGroup getLTBinaerdaten() {
+		return lTBinaerdaten;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLTBinaerdaten(LT_Binaerdaten_AttributeGroup newLTBinaerdaten, NotificationChain msgs) {
+		LT_Binaerdaten_AttributeGroup oldLTBinaerdaten = lTBinaerdaten;
+		lTBinaerdaten = newLTBinaerdaten;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN, oldLTBinaerdaten, newLTBinaerdaten);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLTBinaerdaten(LT_Binaerdaten_AttributeGroup newLTBinaerdaten) {
+		if (newLTBinaerdaten != lTBinaerdaten) {
+			NotificationChain msgs = null;
+			if (lTBinaerdaten != null)
+				msgs = ((InternalEObject)lTBinaerdaten).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN, null, msgs);
+			if (newLTBinaerdaten != null)
+				msgs = ((InternalEObject)newLTBinaerdaten).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN, null, msgs);
+			msgs = basicSetLTBinaerdaten(newLTBinaerdaten, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN, newLTBinaerdaten, newLTBinaerdaten));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Telegramm_Index_TypeClass getTelegrammIndex() {
+		return telegrammIndex;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTelegrammIndex(Telegramm_Index_TypeClass newTelegrammIndex, NotificationChain msgs) {
+		Telegramm_Index_TypeClass oldTelegrammIndex = telegrammIndex;
+		telegrammIndex = newTelegrammIndex;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX, oldTelegrammIndex, newTelegrammIndex);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTelegrammIndex(Telegramm_Index_TypeClass newTelegrammIndex) {
+		if (newTelegrammIndex != telegrammIndex) {
+			NotificationChain msgs = null;
+			if (telegrammIndex != null)
+				msgs = ((InternalEObject)telegrammIndex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX, null, msgs);
+			if (newTelegrammIndex != null)
+				msgs = ((InternalEObject)newTelegrammIndex).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX, null, msgs);
+			msgs = basicSetTelegrammIndex(newTelegrammIndex, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX, newTelegrammIndex, newTelegrammIndex));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI:
-				return basicSetEigenschaftenBinaerdatei(null, msgs);
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE:
-				return basicSetEigenschaftenBinaerdateiHilfe(null, msgs);
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE:
+				return basicSetLTBinaerdateiHilfe(null, msgs);
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN:
+				return basicSetLTBinaerdaten(null, msgs);
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX:
+				return basicSetTelegrammIndex(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -624,25 +428,18 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI:
-				return getEigenschaftenBinaerdatei();
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE:
-				return getEigenschaftenBinaerdateiHilfe();
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_ANHANG_EA_DOKU:
-				if (resolve) return getIDAnhangEADoku();
-				return basicGetIDAnhangEADoku();
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BALISE_UEBERTRAGUNG:
 				if (resolve) return getIDBaliseUebertragung();
 				return basicGetIDBaliseUebertragung();
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI:
-				if (resolve) return getIDBinaerdatei();
-				return basicGetIDBinaerdatei();
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI_HILFE:
-				if (resolve) return getIDBinaerdateiHilfe();
-				return basicGetIDBinaerdateiHilfe();
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_FACHTELEGRAMM:
 				if (resolve) return getIDFachtelegramm();
 				return basicGetIDFachtelegramm();
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE:
+				return getLTBinaerdateiHilfe();
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN:
+				return getLTBinaerdaten();
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX:
+				return getTelegrammIndex();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -656,26 +453,20 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI:
-				setEigenschaftenBinaerdatei((Eigenschaften_Datei_AttributeGroup)newValue);
-				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE:
-				setEigenschaftenBinaerdateiHilfe((Eigenschaften_Datei_AttributeGroup)newValue);
-				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_ANHANG_EA_DOKU:
-				setIDAnhangEADoku((Anhang)newValue);
-				return;
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BALISE_UEBERTRAGUNG:
 				setIDBaliseUebertragung((Balise)newValue);
 				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI:
-				setIDBinaerdatei((Binaerdatei)newValue);
-				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI_HILFE:
-				setIDBinaerdateiHilfe((Binaerdatei)newValue);
-				return;
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_FACHTELEGRAMM:
 				setIDFachtelegramm((Fachtelegramm)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE:
+				setLTBinaerdateiHilfe((LT_Binaerdatei_Hilfe_AttributeGroup)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN:
+				setLTBinaerdaten((LT_Binaerdaten_AttributeGroup)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX:
+				setTelegrammIndex((Telegramm_Index_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -691,26 +482,20 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI:
-				setEigenschaftenBinaerdatei((Eigenschaften_Datei_AttributeGroup)null);
-				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE:
-				setEigenschaftenBinaerdateiHilfe((Eigenschaften_Datei_AttributeGroup)null);
-				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_ANHANG_EA_DOKU:
-				unsetIDAnhangEADoku();
-				return;
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BALISE_UEBERTRAGUNG:
 				unsetIDBaliseUebertragung();
 				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI:
-				unsetIDBinaerdatei();
-				return;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI_HILFE:
-				unsetIDBinaerdateiHilfe();
-				return;
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_FACHTELEGRAMM:
 				unsetIDFachtelegramm();
+				return;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE:
+				setLTBinaerdateiHilfe((LT_Binaerdatei_Hilfe_AttributeGroup)null);
+				return;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN:
+				setLTBinaerdaten((LT_Binaerdaten_AttributeGroup)null);
+				return;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX:
+				setTelegrammIndex((Telegramm_Index_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -726,20 +511,16 @@ public class Luft_TelegrammImpl extends Basis_ObjektImpl implements Luft_Telegra
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI:
-				return eigenschaftenBinaerdatei != null;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE:
-				return eigenschaftenBinaerdateiHilfe != null;
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_ANHANG_EA_DOKU:
-				return isSetIDAnhangEADoku();
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BALISE_UEBERTRAGUNG:
 				return isSetIDBaliseUebertragung();
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI:
-				return isSetIDBinaerdatei();
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_BINAERDATEI_HILFE:
-				return isSetIDBinaerdateiHilfe();
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__ID_FACHTELEGRAMM:
 				return isSetIDFachtelegramm();
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE:
+				return lTBinaerdateiHilfe != null;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN:
+				return lTBinaerdaten != null;
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX:
+				return telegrammIndex != null;
 			default:
 				return super.eIsSet(featureID);
 		}

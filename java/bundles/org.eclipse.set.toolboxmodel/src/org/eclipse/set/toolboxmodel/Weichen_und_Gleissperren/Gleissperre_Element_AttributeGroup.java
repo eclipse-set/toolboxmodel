@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -53,12 +60,12 @@ public interface Gleissperre_Element_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Vorzugslage der Gleissperre (Grundstellung). Dieses Attribut enthält den Eintrag abgelegt oder aufgelegt. Mit dem Attribut Vorzugslage Automatik kann festgelegt werden, dass diese Vorzugslage automatisch hergestellt wird. .
+	 * Vorzugslage der Gleissperre (Grundstellung). Dieses Attribut enthält den Eintrag abgelegt oder aufgelegt. Mit dem Attribut Vorzugslage Automatik kann festgelegt werden, dass diese Vorzugslage automatisch hergestellt wird. In großen Rangierbahnhöfen wird u. U. auf die Festlegung einer Vorzugslage verzichtet.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gleissperre Vorzugslage</em>' containment reference.
 	 * @see #setGleissperreVorzugslage(Gleissperre_Vorzugslage_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage#getGleissperre_Element_AttributeGroup_GleissperreVorzugslage()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Gleissperre_Vorzugslage'"
 	 * @generated
 	 */

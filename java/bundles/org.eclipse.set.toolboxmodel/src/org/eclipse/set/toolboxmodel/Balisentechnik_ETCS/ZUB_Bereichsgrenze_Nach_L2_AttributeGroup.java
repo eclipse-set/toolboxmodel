@@ -1,10 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -17,12 +25,13 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getAbstandGrenzeBereichC <em>Abstand Grenze Bereich C</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getBaselineSRS <em>Baseline SRS</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getBaselineSystemVersion <em>Baseline System Version</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getBgrenzeNachL2BedEinstieg <em>Bgrenze Nach L2 Bed Einstieg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getEinstiegOhneRueckwSig <em>Einstieg Ohne Rueckw Sig</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getIDRBCNachGrenze <em>IDRBC Nach Grenze</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getIDSignalZufahrtsicherungL2oS <em>ID Signal Zufahrtsicherung L2o S</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getPrioritaet <em>Prioritaet</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getZUBBereichsgrenzeNachL2VonESG <em>ZUB Bereichsgrenze Nach L2 Von ESG</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_Nach_L2_AttributeGroup()
@@ -35,7 +44,7 @@ public interface ZUB_Bereichsgrenze_Nach_L2_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Abstand der Grenze des Bereichs C von der ZUB-Bereichsgrenze entgegengesetzt zu deren Wirkrichtung.
+	 * Abstand der Grenze des Bereichs (C) von der ZUB-Bereichsgrenze entgegengesetzt zu deren Wirkrichtung. Das Attribut bildet die maximale Zugänge ab (dmax_Zuglänge). Hinweis: Der beim Ausstieg benötigte Bremswegabstand wird über das Bereichsobjekt "Strecke_Bremsweg" ermittelt.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Abstand Grenze Bereich C</em>' containment reference.
 	 * @see #setAbstandGrenzeBereichC(Abstand_Grenze_Bereich_C_TypeClass)
@@ -57,30 +66,30 @@ public interface ZUB_Bereichsgrenze_Nach_L2_AttributeGroup extends EObject {
 	void setAbstandGrenzeBereichC(Abstand_Grenze_Bereich_C_TypeClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Baseline SRS</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Baseline System Version</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Baseline der System Requirement Specification.
+	 * Baseline der System-Version, z. B. B3R2.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Baseline SRS</em>' containment reference.
-	 * @see #setBaselineSRS(Baseline_SRS_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BaselineSRS()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Baseline_SRS'"
+	 * @return the value of the '<em>Baseline System Version</em>' containment reference.
+	 * @see #setBaselineSystemVersion(Baseline_System_Version_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BaselineSystemVersion()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Baseline_System_Version'"
 	 * @generated
 	 */
-	Baseline_SRS_TypeClass getBaselineSRS();
+	Baseline_System_Version_TypeClass getBaselineSystemVersion();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getBaselineSRS <em>Baseline SRS</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup#getBaselineSystemVersion <em>Baseline System Version</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Baseline SRS</em>' containment reference.
-	 * @see #getBaselineSRS()
+	 * @param value the new value of the '<em>Baseline System Version</em>' containment reference.
+	 * @see #getBaselineSystemVersion()
 	 * @generated
 	 */
-	void setBaselineSRS(Baseline_SRS_TypeClass value);
+	void setBaselineSystemVersion(Baseline_System_Version_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Bgrenze Nach L2 Bed Einstieg</b></em>' containment reference list.
@@ -88,7 +97,7 @@ public interface ZUB_Bereichsgrenze_Nach_L2_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angaben zur Entscheidungsweiche bei bedingtem Einsteig (entspricht einem bedingten Ausstieg aus dem vorherigen System).
+	 * Angaben zur Entscheidungsweiche bei bedingtem Einstieg (entspricht einem bedingten Ausstieg aus dem vorherigen System).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bgrenze Nach L2 Bed Einstieg</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BgrenzeNachL2BedEinstieg()
@@ -217,5 +226,18 @@ public interface ZUB_Bereichsgrenze_Nach_L2_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setPrioritaet(Prioritaet_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>ZUB Bereichsgrenze Nach L2 Von ESG</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ZUB Bereichsgrenze Nach L2 Von ESG</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_ZUBBereichsgrenzeNachL2VonESG()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ZUB_Bereichsgrenze_Nach_L2_Von_ESG'"
+	 * @generated
+	 */
+	EList<ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup> getZUBBereichsgrenzeNachL2VonESG();
 
 } // ZUB_Bereichsgrenze_Nach_L2_AttributeGroup

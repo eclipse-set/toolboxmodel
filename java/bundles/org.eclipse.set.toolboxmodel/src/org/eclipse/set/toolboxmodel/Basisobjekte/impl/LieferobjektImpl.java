@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.impl;
 
@@ -10,17 +17,20 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Beschreibung_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.LO_Ersatz_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.LO_Material_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt;
+
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.LieferobjektImpl#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.LieferobjektImpl#getIDGEOPunkt <em>IDGEO Punkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.LieferobjektImpl#getIDLOEinbau <em>IDLO Einbau</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.LieferobjektImpl#getLOErsatz <em>LO Ersatz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.LieferobjektImpl#getLOMaterial <em>LO Material</em>}</li>
@@ -48,6 +59,16 @@ public class LieferobjektImpl extends Basis_ObjektImpl implements Lieferobjekt {
 	 * @ordered
 	 */
 	protected Beschreibung_TypeClass beschreibung;
+
+	/**
+	 * The cached value of the '{@link #getIDGEOPunkt() <em>IDGEO Punkt</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDGEOPunkt()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GEO_Punkt> iDGEOPunkt;
 
 	/**
 	 * The cached value of the '{@link #getIDLOEinbau() <em>IDLO Einbau</em>}' reference list.
@@ -141,6 +162,19 @@ public class LieferobjektImpl extends Basis_ObjektImpl implements Lieferobjekt {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BasisobjektePackage.LIEFEROBJEKT__BESCHREIBUNG, newBeschreibung, newBeschreibung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<GEO_Punkt> getIDGEOPunkt() {
+		if (iDGEOPunkt == null) {
+			iDGEOPunkt = new EObjectResolvingEList<GEO_Punkt>(GEO_Punkt.class, this, BasisobjektePackage.LIEFEROBJEKT__IDGEO_PUNKT);
+		}
+		return iDGEOPunkt;
 	}
 
 	/**
@@ -275,6 +309,8 @@ public class LieferobjektImpl extends Basis_ObjektImpl implements Lieferobjekt {
 		switch (featureID) {
 			case BasisobjektePackage.LIEFEROBJEKT__BESCHREIBUNG:
 				return getBeschreibung();
+			case BasisobjektePackage.LIEFEROBJEKT__IDGEO_PUNKT:
+				return getIDGEOPunkt();
 			case BasisobjektePackage.LIEFEROBJEKT__IDLO_EINBAU:
 				return getIDLOEinbau();
 			case BasisobjektePackage.LIEFEROBJEKT__LO_ERSATZ:
@@ -297,6 +333,10 @@ public class LieferobjektImpl extends Basis_ObjektImpl implements Lieferobjekt {
 		switch (featureID) {
 			case BasisobjektePackage.LIEFEROBJEKT__BESCHREIBUNG:
 				setBeschreibung((Beschreibung_TypeClass)newValue);
+				return;
+			case BasisobjektePackage.LIEFEROBJEKT__IDGEO_PUNKT:
+				getIDGEOPunkt().clear();
+				getIDGEOPunkt().addAll((Collection<? extends GEO_Punkt>)newValue);
 				return;
 			case BasisobjektePackage.LIEFEROBJEKT__IDLO_EINBAU:
 				getIDLOEinbau().clear();
@@ -325,6 +365,9 @@ public class LieferobjektImpl extends Basis_ObjektImpl implements Lieferobjekt {
 			case BasisobjektePackage.LIEFEROBJEKT__BESCHREIBUNG:
 				setBeschreibung((Beschreibung_TypeClass)null);
 				return;
+			case BasisobjektePackage.LIEFEROBJEKT__IDGEO_PUNKT:
+				getIDGEOPunkt().clear();
+				return;
 			case BasisobjektePackage.LIEFEROBJEKT__IDLO_EINBAU:
 				getIDLOEinbau().clear();
 				return;
@@ -350,6 +393,8 @@ public class LieferobjektImpl extends Basis_ObjektImpl implements Lieferobjekt {
 		switch (featureID) {
 			case BasisobjektePackage.LIEFEROBJEKT__BESCHREIBUNG:
 				return beschreibung != null;
+			case BasisobjektePackage.LIEFEROBJEKT__IDGEO_PUNKT:
+				return iDGEOPunkt != null && !iDGEOPunkt.isEmpty();
 			case BasisobjektePackage.LIEFEROBJEKT__IDLO_EINBAU:
 				return iDLOEinbau != null && !iDLOEinbau.isEmpty();
 			case BasisobjektePackage.LIEFEROBJEKT__LO_ERSATZ:

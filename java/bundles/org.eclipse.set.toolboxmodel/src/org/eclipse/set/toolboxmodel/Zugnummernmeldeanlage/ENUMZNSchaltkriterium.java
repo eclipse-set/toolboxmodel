@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage;
 
@@ -19,46 +26,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMZNSchaltkriterium implements Enumerator {
 	/**
-	 * The '<em><b>ENUMZN Schaltkriterium kein</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_KEIN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMZN_SCHALTKRITERIUM_KEIN(0, "ENUMZN_Schaltkriterium_kein", "kein"),
-
-	/**
-	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Hauptsignal</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL(1, "ENUMZN_Schaltkriterium_Signalhaltfall_Hauptsignal", "Signalhaltfall_Hauptsignal"),
-
-	/**
-	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Rangiersignal</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL(2, "ENUMZN_Schaltkriterium_Signalhaltfall_Rangiersignal", "Signalhaltfall_Rangiersignal"),
-
-	/**
-	 * The '<em><b>ENUMZN Schaltkriterium sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMZN_SCHALTKRITERIUM_SONSTIGE(3, "ENUMZN_Schaltkriterium_sonstige", "sonstige"),
-
-	/**
 	 * The '<em><b>ENUMZN Schaltkriterium Gleis belegen</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,7 +33,7 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN(4, "ENUMZN_Schaltkriterium_Gleis_belegen", "Gleis_belegen"),
+	ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN(0, "ENUMZN_Schaltkriterium_Gleis_belegen", "Gleis_belegen"),
 
 	/**
 	 * The '<em><b>ENUMZN Schaltkriterium Gleis belegen und davor freifahren</b></em>' literal object.
@@ -76,7 +43,7 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN(5, "ENUMZN_Schaltkriterium_Gleis_belegen_und_davor_freifahren", "Gleis_belegen_und_davor_freifahren"),
+	ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN(1, "ENUMZN_Schaltkriterium_Gleis_belegen_und_davor_freifahren", "Gleis_belegen_und_davor_freifahren"),
 
 	/**
 	 * The '<em><b>ENUMZN Schaltkriterium Gleis freifahren</b></em>' literal object.
@@ -86,7 +53,17 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN(6, "ENUMZN_Schaltkriterium_Gleis_freifahren", "Gleis_freifahren"),
+	ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN(2, "ENUMZN_Schaltkriterium_Gleis_freifahren", "Gleis_freifahren"),
+
+	/**
+	 * The '<em><b>ENUMZN Schaltkriterium kein</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMZN_SCHALTKRITERIUM_KEIN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMZN_SCHALTKRITERIUM_KEIN(3, "ENUMZN_Schaltkriterium_kein", "kein"),
 
 	/**
 	 * The '<em><b>ENUMZN Schaltkriterium manuell</b></em>' literal object.
@@ -96,51 +73,37 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMZN_SCHALTKRITERIUM_MANUELL(7, "ENUMZN_Schaltkriterium_manuell", "manuell");
+	ENUMZN_SCHALTKRITERIUM_MANUELL(4, "ENUMZN_Schaltkriterium_manuell", "manuell"),
 
 	/**
-	 * The '<em><b>ENUMZN Schaltkriterium kein</b></em>' literal value.
+	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Hauptsignal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_KEIN
-	 * @model name="ENUMZN_Schaltkriterium_kein" literal="kein"
+	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_KEIN_VALUE = 0;
+	ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL(5, "ENUMZN_Schaltkriterium_Signalhaltfall_Hauptsignal", "Signalhaltfall_Hauptsignal"),
 
 	/**
-	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Hauptsignal</b></em>' literal value.
+	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Rangiersignal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL
-	 * @model name="ENUMZN_Schaltkriterium_Signalhaltfall_Hauptsignal" literal="Signalhaltfall_Hauptsignal"
+	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL_VALUE = 1;
+	ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL(6, "ENUMZN_Schaltkriterium_Signalhaltfall_Rangiersignal", "Signalhaltfall_Rangiersignal"),
 
 	/**
-	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Rangiersignal</b></em>' literal value.
+	 * The '<em><b>ENUMZN Schaltkriterium sonstige</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL
-	 * @model name="ENUMZN_Schaltkriterium_Signalhaltfall_Rangiersignal" literal="Signalhaltfall_Rangiersignal"
+	 * @see #ENUMZN_SCHALTKRITERIUM_SONSTIGE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUMZN Schaltkriterium sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMZN_SCHALTKRITERIUM_SONSTIGE
-	 * @model name="ENUMZN_Schaltkriterium_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_SONSTIGE_VALUE = 3;
+	ENUMZN_SCHALTKRITERIUM_SONSTIGE(7, "ENUMZN_Schaltkriterium_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUMZN Schaltkriterium Gleis belegen</b></em>' literal value.
@@ -151,7 +114,7 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_VALUE = 4;
+	public static final int ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUMZN Schaltkriterium Gleis belegen und davor freifahren</b></em>' literal value.
@@ -162,7 +125,7 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN_VALUE = 5;
+	public static final int ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUMZN Schaltkriterium Gleis freifahren</b></em>' literal value.
@@ -173,7 +136,18 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN_VALUE = 6;
+	public static final int ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUMZN Schaltkriterium kein</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMZN_SCHALTKRITERIUM_KEIN
+	 * @model name="ENUMZN_Schaltkriterium_kein" literal="kein"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMZN_SCHALTKRITERIUM_KEIN_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMZN Schaltkriterium manuell</b></em>' literal value.
@@ -184,7 +158,40 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMZN_SCHALTKRITERIUM_MANUELL_VALUE = 7;
+	public static final int ENUMZN_SCHALTKRITERIUM_MANUELL_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Hauptsignal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL
+	 * @model name="ENUMZN_Schaltkriterium_Signalhaltfall_Hauptsignal" literal="Signalhaltfall_Hauptsignal"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUMZN Schaltkriterium Signalhaltfall Rangiersignal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL
+	 * @model name="ENUMZN_Schaltkriterium_Signalhaltfall_Rangiersignal" literal="Signalhaltfall_Rangiersignal"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL_VALUE = 6;
+
+	/**
+	 * The '<em><b>ENUMZN Schaltkriterium sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMZN_SCHALTKRITERIUM_SONSTIGE
+	 * @model name="ENUMZN_Schaltkriterium_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMZN_SCHALTKRITERIUM_SONSTIGE_VALUE = 7;
 
 	/**
 	 * An array of all the '<em><b>ENUMZN Schaltkriterium</b></em>' enumerators.
@@ -194,14 +201,14 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 */
 	private static final ENUMZNSchaltkriterium[] VALUES_ARRAY =
 		new ENUMZNSchaltkriterium[] {
-			ENUMZN_SCHALTKRITERIUM_KEIN,
-			ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL,
-			ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL,
-			ENUMZN_SCHALTKRITERIUM_SONSTIGE,
 			ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN,
 			ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN,
 			ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN,
+			ENUMZN_SCHALTKRITERIUM_KEIN,
 			ENUMZN_SCHALTKRITERIUM_MANUELL,
+			ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL,
+			ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL,
+			ENUMZN_SCHALTKRITERIUM_SONSTIGE,
 		};
 
 	/**
@@ -258,14 +265,14 @@ public enum ENUMZNSchaltkriterium implements Enumerator {
 	 */
 	public static ENUMZNSchaltkriterium get(int value) {
 		switch (value) {
-			case ENUMZN_SCHALTKRITERIUM_KEIN_VALUE: return ENUMZN_SCHALTKRITERIUM_KEIN;
-			case ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL_VALUE: return ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL;
-			case ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL_VALUE: return ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL;
-			case ENUMZN_SCHALTKRITERIUM_SONSTIGE_VALUE: return ENUMZN_SCHALTKRITERIUM_SONSTIGE;
 			case ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_VALUE: return ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN;
 			case ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN_VALUE: return ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN;
 			case ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN_VALUE: return ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN;
+			case ENUMZN_SCHALTKRITERIUM_KEIN_VALUE: return ENUMZN_SCHALTKRITERIUM_KEIN;
 			case ENUMZN_SCHALTKRITERIUM_MANUELL_VALUE: return ENUMZN_SCHALTKRITERIUM_MANUELL;
+			case ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL_VALUE: return ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL;
+			case ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL_VALUE: return ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL;
+			case ENUMZN_SCHALTKRITERIUM_SONSTIGE_VALUE: return ENUMZN_SCHALTKRITERIUM_SONSTIGE;
 			default: return null;
 		}
 	}

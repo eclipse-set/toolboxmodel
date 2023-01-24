@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen;
 
@@ -59,17 +66,7 @@ public enum ENUMPruefsummeArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_PRUEFSUMME_ART_SHA256(3, "ENUMPruefsumme_Art_SHA256", "SHA256"),
-
-	/**
-	 * The '<em><b>ENUM Pruefsumme Art sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PRUEFSUMME_ART_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_PRUEFSUMME_ART_SONSTIGE(4, "ENUMPruefsumme_Art_sonstige", "sonstige");
+	ENUM_PRUEFSUMME_ART_SHA256(3, "ENUMPruefsumme_Art_SHA256", "SHA256");
 
 	/**
 	 * The '<em><b>ENUM Pruefsumme Art MD4</b></em>' literal value.
@@ -116,17 +113,6 @@ public enum ENUMPruefsummeArt implements Enumerator {
 	public static final int ENUM_PRUEFSUMME_ART_SHA256_VALUE = 3;
 
 	/**
-	 * The '<em><b>ENUM Pruefsumme Art sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PRUEFSUMME_ART_SONSTIGE
-	 * @model name="ENUMPruefsumme_Art_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_PRUEFSUMME_ART_SONSTIGE_VALUE = 4;
-
-	/**
 	 * An array of all the '<em><b>ENUM Pruefsumme Art</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,7 +124,6 @@ public enum ENUMPruefsummeArt implements Enumerator {
 			ENUM_PRUEFSUMME_ART_MD5,
 			ENUM_PRUEFSUMME_ART_SHA1,
 			ENUM_PRUEFSUMME_ART_SHA256,
-			ENUM_PRUEFSUMME_ART_SONSTIGE,
 		};
 
 	/**
@@ -199,7 +184,6 @@ public enum ENUMPruefsummeArt implements Enumerator {
 			case ENUM_PRUEFSUMME_ART_MD5_VALUE: return ENUM_PRUEFSUMME_ART_MD5;
 			case ENUM_PRUEFSUMME_ART_SHA1_VALUE: return ENUM_PRUEFSUMME_ART_SHA1;
 			case ENUM_PRUEFSUMME_ART_SHA256_VALUE: return ENUM_PRUEFSUMME_ART_SHA256;
-			case ENUM_PRUEFSUMME_ART_SONSTIGE_VALUE: return ENUM_PRUEFSUMME_ART_SONSTIGE;
 			default: return null;
 		}
 	}

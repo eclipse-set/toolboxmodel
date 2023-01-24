@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageFactory;
@@ -59,55 +60,9 @@ public class ZN_UnterstationItemProvider extends Basis_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIDGEOPunktPropertyDescriptor(object);
-			addIDStreckePunktPropertyDescriptor(object);
 			addIDZNZBSPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the IDGEO Punkt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDGEOPunktPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ZN_Unterstation_iDGEOPunkt_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ZN_Unterstation_iDGEOPunkt_feature", "_UI_ZN_Unterstation_type"),
-				 ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION__IDGEO_PUNKT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Strecke Punkt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDStreckePunktPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ZN_Unterstation_iDStreckePunkt_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ZN_Unterstation_iDStreckePunkt_feature", "_UI_ZN_Unterstation_type"),
-				 ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION__ID_STRECKE_PUNKT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

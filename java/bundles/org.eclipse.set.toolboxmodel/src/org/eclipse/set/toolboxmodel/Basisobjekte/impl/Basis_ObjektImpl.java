@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.impl;
 
@@ -10,16 +17,21 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Objektreferenzen_AttributeGroup;
+
+import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +43,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Objektreferenzen_AttributeGroup
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl#getBasisObjektAllg <em>Basis Objekt Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl#getIDBearbeitungsvermerk <em>ID Bearbeitungsvermerk</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl#getIDOertlichkeitAusgabe <em>ID Oertlichkeit Ausgabe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl#getObjektreferenzen <em>Objektreferenzen</em>}</li>
  * </ul>
  *
@@ -48,14 +61,33 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 	protected Basis_Objekt_Allg_AttributeGroup basisObjektAllg;
 
 	/**
-	 * The cached value of the '{@link #getIDBearbeitungsvermerk() <em>ID Bearbeitungsvermerk</em>}' reference list.
+	 * The cached value of the '{@link #getIDBearbeitungsvermerk() <em>ID Bearbeitungsvermerk</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIDBearbeitungsvermerk()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Bearbeitungsvermerk> iDBearbeitungsvermerk;
+	protected EList<ID_Bearbeitungsvermerk_TypeClass> iDBearbeitungsvermerk;
+
+	/**
+	 * The cached value of the '{@link #getIDOertlichkeitAusgabe() <em>ID Oertlichkeit Ausgabe</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDOertlichkeitAusgabe()
+	 * @generated
+	 * @ordered
+	 */
+	protected Oertlichkeit iDOertlichkeitAusgabe;
+
+	/**
+	 * This is true if the ID Oertlichkeit Ausgabe reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDOertlichkeitAusgabeESet;
 
 	/**
 	 * The cached value of the '{@link #getObjektreferenzen() <em>Objektreferenzen</em>}' containment reference.
@@ -137,11 +169,78 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 	 * @generated
 	 */
 	@Override
-	public EList<Bearbeitungsvermerk> getIDBearbeitungsvermerk() {
+	public EList<ID_Bearbeitungsvermerk_TypeClass> getIDBearbeitungsvermerk() {
 		if (iDBearbeitungsvermerk == null) {
-			iDBearbeitungsvermerk = new EObjectResolvingEList<Bearbeitungsvermerk>(Bearbeitungsvermerk.class, this, BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK);
+			iDBearbeitungsvermerk = new EObjectContainmentEList<ID_Bearbeitungsvermerk_TypeClass>(ID_Bearbeitungsvermerk_TypeClass.class, this, BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK);
 		}
 		return iDBearbeitungsvermerk;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Oertlichkeit getIDOertlichkeitAusgabe() {
+		if (iDOertlichkeitAusgabe != null && iDOertlichkeitAusgabe.eIsProxy()) {
+			InternalEObject oldIDOertlichkeitAusgabe = (InternalEObject)iDOertlichkeitAusgabe;
+			iDOertlichkeitAusgabe = (Oertlichkeit)eResolveProxy(oldIDOertlichkeitAusgabe);
+			if (iDOertlichkeitAusgabe != oldIDOertlichkeitAusgabe) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE, oldIDOertlichkeitAusgabe, iDOertlichkeitAusgabe));
+			}
+		}
+		return iDOertlichkeitAusgabe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oertlichkeit basicGetIDOertlichkeitAusgabe() {
+		return iDOertlichkeitAusgabe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDOertlichkeitAusgabe(Oertlichkeit newIDOertlichkeitAusgabe) {
+		Oertlichkeit oldIDOertlichkeitAusgabe = iDOertlichkeitAusgabe;
+		iDOertlichkeitAusgabe = newIDOertlichkeitAusgabe;
+		boolean oldIDOertlichkeitAusgabeESet = iDOertlichkeitAusgabeESet;
+		iDOertlichkeitAusgabeESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE, oldIDOertlichkeitAusgabe, iDOertlichkeitAusgabe, !oldIDOertlichkeitAusgabeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDOertlichkeitAusgabe() {
+		Oertlichkeit oldIDOertlichkeitAusgabe = iDOertlichkeitAusgabe;
+		boolean oldIDOertlichkeitAusgabeESet = iDOertlichkeitAusgabeESet;
+		iDOertlichkeitAusgabe = null;
+		iDOertlichkeitAusgabeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE, oldIDOertlichkeitAusgabe, null, oldIDOertlichkeitAusgabeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDOertlichkeitAusgabe() {
+		return iDOertlichkeitAusgabeESet;
 	}
 
 	/**
@@ -199,6 +298,8 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 		switch (featureID) {
 			case BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG:
 				return basicSetBasisObjektAllg(null, msgs);
+			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
+				return ((InternalEList<?>)getIDBearbeitungsvermerk()).basicRemove(otherEnd, msgs);
 			case BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN:
 				return basicSetObjektreferenzen(null, msgs);
 			default:
@@ -218,6 +319,9 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 				return getBasisObjektAllg();
 			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
 				return getIDBearbeitungsvermerk();
+			case BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE:
+				if (resolve) return getIDOertlichkeitAusgabe();
+				return basicGetIDOertlichkeitAusgabe();
 			case BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN:
 				return getObjektreferenzen();
 			default:
@@ -239,7 +343,10 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 				return;
 			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
 				getIDBearbeitungsvermerk().clear();
-				getIDBearbeitungsvermerk().addAll((Collection<? extends Bearbeitungsvermerk>)newValue);
+				getIDBearbeitungsvermerk().addAll((Collection<? extends ID_Bearbeitungsvermerk_TypeClass>)newValue);
+				return;
+			case BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE:
+				setIDOertlichkeitAusgabe((Oertlichkeit)newValue);
 				return;
 			case BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN:
 				setObjektreferenzen((Objektreferenzen_AttributeGroup)newValue);
@@ -264,6 +371,9 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
 				getIDBearbeitungsvermerk().clear();
 				return;
+			case BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE:
+				unsetIDOertlichkeitAusgabe();
+				return;
 			case BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN:
 				setObjektreferenzen((Objektreferenzen_AttributeGroup)null);
 				return;
@@ -285,6 +395,8 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 				return basisObjektAllg != null;
 			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
 				return iDBearbeitungsvermerk != null && !iDBearbeitungsvermerk.isEmpty();
+			case BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE:
+				return isSetIDOertlichkeitAusgabe();
 			case BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN:
 				return objektreferenzen != null;
 			default:

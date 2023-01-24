@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -216,6 +217,29 @@ public class Medien_und_TrassenItemProviderAdapterFactory extends Medien_und_Tra
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Induktionsschutz_TypeClassItemProvider induktionsschutz_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInduktionsschutz_TypeClassAdapter() {
+		if (induktionsschutz_TypeClassItemProvider == null) {
+			induktionsschutz_TypeClassItemProvider = new Induktionsschutz_TypeClassItemProvider(this);
+		}
+
+		return induktionsschutz_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -305,6 +329,29 @@ public class Medien_und_TrassenItemProviderAdapterFactory extends Medien_und_Tra
 		}
 
 		return kabel_Bezeichnung_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Kabel_Element_AttributeGroupItemProvider kabel_Element_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createKabel_Element_AttributeGroupAdapter() {
+		if (kabel_Element_AttributeGroupItemProvider == null) {
+			kabel_Element_AttributeGroupItemProvider = new Kabel_Element_AttributeGroupItemProvider(this);
+		}
+
+		return kabel_Element_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -420,6 +467,29 @@ public class Medien_und_TrassenItemProviderAdapterFactory extends Medien_und_Tra
 		}
 
 		return kabel_Verteilpunkt_Bezeichnung_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Nagetierschutz_TypeClassItemProvider nagetierschutz_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNagetierschutz_TypeClassAdapter() {
+		if (nagetierschutz_TypeClassItemProvider == null) {
+			nagetierschutz_TypeClassItemProvider = new Nagetierschutz_TypeClassItemProvider(this);
+		}
+
+		return nagetierschutz_TypeClassItemProvider;
 	}
 
 	/**
@@ -671,15 +741,18 @@ public class Medien_und_TrassenItemProviderAdapterFactory extends Medien_und_Tra
 		if (anzahl_Verseilelemente_TypeClassItemProvider != null) anzahl_Verseilelemente_TypeClassItemProvider.dispose();
 		if (bezeichnung_Kabel_TypeClassItemProvider != null) bezeichnung_Kabel_TypeClassItemProvider.dispose();
 		if (bezeichnung_Kabel_Verteilpunkt_TypeClassItemProvider != null) bezeichnung_Kabel_Verteilpunkt_TypeClassItemProvider.dispose();
+		if (induktionsschutz_TypeClassItemProvider != null) induktionsschutz_TypeClassItemProvider.dispose();
 		if (kabelItemProvider != null) kabelItemProvider.dispose();
 		if (kabel_Allg_AttributeGroupItemProvider != null) kabel_Allg_AttributeGroupItemProvider.dispose();
 		if (kabel_Art_TypeClassItemProvider != null) kabel_Art_TypeClassItemProvider.dispose();
 		if (kabel_Bezeichnung_AttributeGroupItemProvider != null) kabel_Bezeichnung_AttributeGroupItemProvider.dispose();
+		if (kabel_Element_AttributeGroupItemProvider != null) kabel_Element_AttributeGroupItemProvider.dispose();
 		if (kabel_Laenge_TypeClassItemProvider != null) kabel_Laenge_TypeClassItemProvider.dispose();
 		if (kabel_Typ_TypeClassItemProvider != null) kabel_Typ_TypeClassItemProvider.dispose();
 		if (kabel_VerteilpunktItemProvider != null) kabel_VerteilpunktItemProvider.dispose();
 		if (kabel_Verteilpunkt_Art_TypeClassItemProvider != null) kabel_Verteilpunkt_Art_TypeClassItemProvider.dispose();
 		if (kabel_Verteilpunkt_Bezeichnung_AttributeGroupItemProvider != null) kabel_Verteilpunkt_Bezeichnung_AttributeGroupItemProvider.dispose();
+		if (nagetierschutz_TypeClassItemProvider != null) nagetierschutz_TypeClassItemProvider.dispose();
 		if (trasse_KanteItemProvider != null) trasse_KanteItemProvider.dispose();
 		if (trasse_Kante_Art_TypeClassItemProvider != null) trasse_Kante_Art_TypeClassItemProvider.dispose();
 		if (trasse_KnotenItemProvider != null) trasse_KnotenItemProvider.dispose();

@@ -59,15 +59,11 @@ public interface Polygone_Planungsbereich_AttributeGroup extends EObject {
 	 * Polygonzug zur Beschreibung des Planungsbereichs unter Nutzung des GML-Standards.
 	 * Der definierte Planungsbereich gilt für alle Einzelplanungen der Planung Gruppe und dient der Ermittlung der eingeschlossenen Objekte der LST-Anlage sowie der Beschreibung des flächenhaften Bereichs.
 	 * Der Planungsbereich kann vom LST-Fachplaner durch Ändern, Eintragen und Löschen von Objekten in einer Einzelplanung verändert werden.
-	 * 
 	 * Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess
-	 * 
 	 * Für den Planungsbereich gibt es einen oder mehrere Polygonzüge, durch die eine geografische Ausdehnung definiert ist. Über die geografische Zuordnung hinaus gibt es Möglichkeiten, weitere Objekte dem Planungsbereich zuzuordnen oder von ihm ausnehmen. Innerhalb dieser geografischen Ausdehnung können Objekte mit GEO-Referenzen nur vom Planer des Planungsbereichs hinzugefügt oder geändert werden. Der Planungsbereich ist in der 1. Umsetzungsstufe PlanPro auf den Bereich einer ESTW-ZE festgelegt. Er wird durch die Angabe aller darin befindlichen Streckenabschnitte mit Strecke, Abschnittsanfang und Abschnittsende hinreichend beschrieben, alle Bahnhofsgleise werden gemäß den örtlichen Richtlinien der Betriebsstellen den Streckengleisen zugeordnet.
-	 * 
 	 * Als Schnittstellen zwischen zwei ESTW-Zentraleinheiten kommen nur die Bahnhofs- und Blockschnittstellen in Frage. An den Planungsbereich kann ein oder können mehrere Betrachtungsbereich(e) angrenzen. Alle Objekte, auf die aus dem Planungsbereich heraus verwiesen wird, müssen im Betrachtungsbereich liegen. Ebenfalls müssen Objekte im Betrachtungsbereich liegen, die auf Objekte im Planungsbereich verweisen.
-	 *  
 	 * DB-Regelwerk
-	 * Bisher keine eindeutige Abbildung. 
+	 * Bisher keine eindeutige Abbildung.
 	 * Prozessuale Definition indirekt durch Sperrung entsprechender Bestandspläne der Bestandsdokumentation gemäß Ril 809.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Polygonzug Planungsbereich</em>' containment reference list.

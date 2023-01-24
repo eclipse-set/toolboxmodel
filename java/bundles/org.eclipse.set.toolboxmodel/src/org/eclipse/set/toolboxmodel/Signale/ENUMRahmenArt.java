@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -59,16 +66,6 @@ public enum ENUMRahmenArt implements Enumerator {
 	ENUM_RAHMEN_ART_SCHIRM(3, "ENUMRahmen_Art_Schirm", "Schirm"),
 
 	/**
-	 * The '<em><b>ENUM Rahmen Art Zusatzanzeiger</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_RAHMEN_ART_ZUSATZANZEIGER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_RAHMEN_ART_ZUSATZANZEIGER(4, "ENUMRahmen_Art_Zusatzanzeiger", "Zusatzanzeiger"),
-
-	/**
 	 * The '<em><b>ENUM Rahmen Art sonstige</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,7 +73,17 @@ public enum ENUMRahmenArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_RAHMEN_ART_SONSTIGE(5, "ENUMRahmen_Art_sonstige", "sonstige");
+	ENUM_RAHMEN_ART_SONSTIGE(4, "ENUMRahmen_Art_sonstige", "sonstige"),
+
+	/**
+	 * The '<em><b>ENUM Rahmen Art Zusatzanzeiger</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_RAHMEN_ART_ZUSATZANZEIGER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_RAHMEN_ART_ZUSATZANZEIGER(5, "ENUMRahmen_Art_Zusatzanzeiger", "Zusatzanzeiger");
 
 	/**
 	 * The '<em><b>ENUM Rahmen Art Bezeichnungsschild</b></em>' literal value.
@@ -123,17 +130,6 @@ public enum ENUMRahmenArt implements Enumerator {
 	public static final int ENUM_RAHMEN_ART_SCHIRM_VALUE = 3;
 
 	/**
-	 * The '<em><b>ENUM Rahmen Art Zusatzanzeiger</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_RAHMEN_ART_ZUSATZANZEIGER
-	 * @model name="ENUMRahmen_Art_Zusatzanzeiger" literal="Zusatzanzeiger"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_RAHMEN_ART_ZUSATZANZEIGER_VALUE = 4;
-
-	/**
 	 * The '<em><b>ENUM Rahmen Art sonstige</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,7 +138,18 @@ public enum ENUMRahmenArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_RAHMEN_ART_SONSTIGE_VALUE = 5;
+	public static final int ENUM_RAHMEN_ART_SONSTIGE_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Rahmen Art Zusatzanzeiger</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_RAHMEN_ART_ZUSATZANZEIGER
+	 * @model name="ENUMRahmen_Art_Zusatzanzeiger" literal="Zusatzanzeiger"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_RAHMEN_ART_ZUSATZANZEIGER_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>ENUM Rahmen Art</b></em>' enumerators.
@@ -156,8 +163,8 @@ public enum ENUMRahmenArt implements Enumerator {
 			ENUM_RAHMEN_ART_BLECHTAFEL,
 			ENUM_RAHMEN_ART_KERAMIKKOERPER,
 			ENUM_RAHMEN_ART_SCHIRM,
-			ENUM_RAHMEN_ART_ZUSATZANZEIGER,
 			ENUM_RAHMEN_ART_SONSTIGE,
+			ENUM_RAHMEN_ART_ZUSATZANZEIGER,
 		};
 
 	/**
@@ -218,8 +225,8 @@ public enum ENUMRahmenArt implements Enumerator {
 			case ENUM_RAHMEN_ART_BLECHTAFEL_VALUE: return ENUM_RAHMEN_ART_BLECHTAFEL;
 			case ENUM_RAHMEN_ART_KERAMIKKOERPER_VALUE: return ENUM_RAHMEN_ART_KERAMIKKOERPER;
 			case ENUM_RAHMEN_ART_SCHIRM_VALUE: return ENUM_RAHMEN_ART_SCHIRM;
-			case ENUM_RAHMEN_ART_ZUSATZANZEIGER_VALUE: return ENUM_RAHMEN_ART_ZUSATZANZEIGER;
 			case ENUM_RAHMEN_ART_SONSTIGE_VALUE: return ENUM_RAHMEN_ART_SONSTIGE;
+			case ENUM_RAHMEN_ART_ZUSATZANZEIGER_VALUE: return ENUM_RAHMEN_ART_ZUSATZANZEIGER;
 			default: return null;
 		}
 	}

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -308,6 +309,29 @@ public class Ansteuerung_ElementItemProviderAdapterFactory extends Ansteuerung_E
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Bezeichnung_Stellwerk_TypeClassItemProvider bezeichnung_Stellwerk_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBezeichnung_Stellwerk_TypeClassAdapter() {
+		if (bezeichnung_Stellwerk_TypeClassItemProvider == null) {
+			bezeichnung_Stellwerk_TypeClassItemProvider = new Bezeichnung_Stellwerk_TypeClassItemProvider(this);
+		}
+
+		return bezeichnung_Stellwerk_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_TSO_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -374,6 +398,29 @@ public class Ansteuerung_ElementItemProviderAdapterFactory extends Ansteuerung_E
 		}
 
 		return energieversorgung_Art_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ESTW_ZE_Energieversorgung_AttributeGroupItemProvider estW_ZE_Energieversorgung_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createESTW_ZE_Energieversorgung_AttributeGroupAdapter() {
+		if (estW_ZE_Energieversorgung_AttributeGroupItemProvider == null) {
+			estW_ZE_Energieversorgung_AttributeGroupItemProvider = new ESTW_ZE_Energieversorgung_AttributeGroupItemProvider(this);
+		}
+
+		return estW_ZE_Energieversorgung_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -929,6 +976,29 @@ public class Ansteuerung_ElementItemProviderAdapterFactory extends Ansteuerung_E
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tueranschlag_TypeClassItemProvider tueranschlag_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTueranschlag_TypeClassAdapter() {
+		if (tueranschlag_TypeClassItemProvider == null) {
+			tueranschlag_TypeClassItemProvider = new Tueranschlag_TypeClassItemProvider(this);
+		}
+
+		return tueranschlag_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Uebertragungsweg} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1090,6 +1160,52 @@ public class Ansteuerung_ElementItemProviderAdapterFactory extends Ansteuerung_E
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Unterbringung_Polygonzug_TypeClassItemProvider unterbringung_Polygonzug_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnterbringung_Polygonzug_TypeClassAdapter() {
+		if (unterbringung_Polygonzug_TypeClassItemProvider == null) {
+			unterbringung_Polygonzug_TypeClassItemProvider = new Unterbringung_Polygonzug_TypeClassItemProvider(this);
+		}
+
+		return unterbringung_Polygonzug_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Zusatzinformation_Stellwerk_TypeClassItemProvider zusatzinformation_Stellwerk_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZusatzinformation_Stellwerk_TypeClassAdapter() {
+		if (zusatzinformation_Stellwerk_TypeClassItemProvider == null) {
+			zusatzinformation_Stellwerk_TypeClassItemProvider = new Zusatzinformation_Stellwerk_TypeClassItemProvider(this);
+		}
+
+		return zusatzinformation_Stellwerk_TypeClassItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1204,9 +1320,11 @@ public class Ansteuerung_ElementItemProviderAdapterFactory extends Ansteuerung_E
 		if (bauart_TypeClassItemProvider != null) bauart_TypeClassItemProvider.dispose();
 		if (bezeichnung_AEA_TypeClassItemProvider != null) bezeichnung_AEA_TypeClassItemProvider.dispose();
 		if (bezeichnung_ESTW_ZE_TypeClassItemProvider != null) bezeichnung_ESTW_ZE_TypeClassItemProvider.dispose();
+		if (bezeichnung_Stellwerk_TypeClassItemProvider != null) bezeichnung_Stellwerk_TypeClassItemProvider.dispose();
 		if (bezeichnung_TSO_TypeClassItemProvider != null) bezeichnung_TSO_TypeClassItemProvider.dispose();
 		if (energieversorgung_Art_Ersatz_TypeClassItemProvider != null) energieversorgung_Art_Ersatz_TypeClassItemProvider.dispose();
 		if (energieversorgung_Art_TypeClassItemProvider != null) energieversorgung_Art_TypeClassItemProvider.dispose();
+		if (estW_ZE_Energieversorgung_AttributeGroupItemProvider != null) estW_ZE_Energieversorgung_AttributeGroupItemProvider.dispose();
 		if (estW_ZentraleinheitItemProvider != null) estW_ZentraleinheitItemProvider.dispose();
 		if (estW_Zentraleinheit_Allg_AttributeGroupItemProvider != null) estW_Zentraleinheit_Allg_AttributeGroupItemProvider.dispose();
 		if (estW_Zentraleinheit_Bezeichnung_AttributeGroupItemProvider != null) estW_Zentraleinheit_Bezeichnung_AttributeGroupItemProvider.dispose();
@@ -1231,6 +1349,7 @@ public class Ansteuerung_ElementItemProviderAdapterFactory extends Ansteuerung_E
 		if (tsO_IP_AB_Teilsystem_AttributeGroupItemProvider != null) tsO_IP_AB_Teilsystem_AttributeGroupItemProvider.dispose();
 		if (tsO_IP_Adressblock_AttributeGroupItemProvider != null) tsO_IP_Adressblock_AttributeGroupItemProvider.dispose();
 		if (tsO_Teilsystem_Art_TypeClassItemProvider != null) tsO_Teilsystem_Art_TypeClassItemProvider.dispose();
+		if (tueranschlag_TypeClassItemProvider != null) tueranschlag_TypeClassItemProvider.dispose();
 		if (uebertragungswegItemProvider != null) uebertragungswegItemProvider.dispose();
 		if (uebertragungsweg_Art_TypeClassItemProvider != null) uebertragungsweg_Art_TypeClassItemProvider.dispose();
 		if (uebertragungsweg_Technik_AttributeGroupItemProvider != null) uebertragungsweg_Technik_AttributeGroupItemProvider.dispose();
@@ -1238,6 +1357,8 @@ public class Ansteuerung_ElementItemProviderAdapterFactory extends Ansteuerung_E
 		if (unterbringung_Allg_AttributeGroupItemProvider != null) unterbringung_Allg_AttributeGroupItemProvider.dispose();
 		if (unterbringung_Art_TypeClassItemProvider != null) unterbringung_Art_TypeClassItemProvider.dispose();
 		if (unterbringung_Befestigung_TypeClassItemProvider != null) unterbringung_Befestigung_TypeClassItemProvider.dispose();
+		if (unterbringung_Polygonzug_TypeClassItemProvider != null) unterbringung_Polygonzug_TypeClassItemProvider.dispose();
+		if (zusatzinformation_Stellwerk_TypeClassItemProvider != null) zusatzinformation_Stellwerk_TypeClassItemProvider.dispose();
 	}
 
 }

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungFactory;
@@ -87,6 +88,7 @@ public class ZL_Fstr_Allg_AttributeGroupItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ZuglenkungPackage.Literals.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__ANNAEHERUNGSGESCHWINDIGKEIT);
 			childrenFeatures.add(ZuglenkungPackage.Literals.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO);
+			childrenFeatures.add(ZuglenkungPackage.Literals.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT);
 			childrenFeatures.add(ZuglenkungPackage.Literals.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG);
 			childrenFeatures.add(ZuglenkungPackage.Literals.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__SICHTZEIT_VORSIGNAL);
 		}
@@ -143,6 +145,7 @@ public class ZL_Fstr_Allg_AttributeGroupItemProvider
 		switch (notification.getFeatureID(ZL_Fstr_Allg_AttributeGroup.class)) {
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__ANNAEHERUNGSGESCHWINDIGKEIT:
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO:
+			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG:
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__SICHTZEIT_VORSIGNAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -173,6 +176,11 @@ public class ZL_Fstr_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(ZuglenkungPackage.Literals.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO,
 				 ZuglenkungFactory.eINSTANCE.createDWeg_Prio_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ZuglenkungPackage.Literals.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT,
+				 ZuglenkungFactory.eINSTANCE.createFstr_Bildezeit_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -30,7 +30,6 @@ public interface Fachdaten_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Einbindung der konkreten Lieferung von LST-Fachdaten.
-	 * 
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementFacto
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup} object.
@@ -86,9 +87,6 @@ public class ESTW_Zentraleinheit_Allg_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__BAUART);
-			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART);
-			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ);
-			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__HERSTELLER);
 		}
 		return childrenFeatures;
@@ -143,9 +141,6 @@ public class ESTW_Zentraleinheit_Allg_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(ESTW_Zentraleinheit_Allg_AttributeGroup.class)) {
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__BAUART:
-			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART:
-			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ:
-			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2:
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -173,46 +168,8 @@ public class ESTW_Zentraleinheit_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART,
-				 Ansteuerung_ElementFactory.eINSTANCE.createEnergieversorgung_Art_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ,
-				 Ansteuerung_ElementFactory.eINSTANCE.createEnergieversorgung_Art_Ersatz_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2,
-				 Ansteuerung_ElementFactory.eINSTANCE.createEnergieversorgung_Art_Ersatz_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__HERSTELLER,
 				 Ansteuerung_ElementFactory.eINSTANCE.createHersteller_TypeClass()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ ||
-			childFeature == Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

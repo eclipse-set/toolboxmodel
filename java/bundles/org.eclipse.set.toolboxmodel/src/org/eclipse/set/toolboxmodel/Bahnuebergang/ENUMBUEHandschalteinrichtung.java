@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -29,16 +36,6 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	ENUMBUE_HANDSCHALTEINRICHTUNG_AT(0, "ENUMBUE_Handschalteinrichtung_AT", "AT"),
 
 	/**
-	 * The '<em><b>ENUMBUE Handschalteinrichtung sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE(1, "ENUMBUE_Handschalteinrichtung_sonstige", "sonstige"),
-
-	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung ET</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,7 +43,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_HANDSCHALTEINRICHTUNG_ET(2, "ENUMBUE_Handschalteinrichtung_ET", "ET"),
+	ENUMBUE_HANDSCHALTEINRICHTUNG_ET(1, "ENUMBUE_Handschalteinrichtung_ET", "ET"),
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung HAT</b></em>' literal object.
@@ -56,7 +53,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_HANDSCHALTEINRICHTUNG_HAT(3, "ENUMBUE_Handschalteinrichtung_HAT", "HAT"),
+	ENUMBUE_HANDSCHALTEINRICHTUNG_HAT(2, "ENUMBUE_Handschalteinrichtung_HAT", "HAT"),
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung HET</b></em>' literal object.
@@ -66,7 +63,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_HANDSCHALTEINRICHTUNG_HET(4, "ENUMBUE_Handschalteinrichtung_HET", "HET"),
+	ENUMBUE_HANDSCHALTEINRICHTUNG_HET(3, "ENUMBUE_Handschalteinrichtung_HET", "HET"),
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung RS</b></em>' literal object.
@@ -76,7 +73,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_HANDSCHALTEINRICHTUNG_RS(5, "ENUMBUE_Handschalteinrichtung_RS", "RS"),
+	ENUMBUE_HANDSCHALTEINRICHTUNG_RS(4, "ENUMBUE_Handschalteinrichtung_RS", "RS"),
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung RT ein aus</b></em>' literal object.
@@ -86,7 +83,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_AUS(6, "ENUMBUE_Handschalteinrichtung_RT_ein_aus", "RT_ein_aus"),
+	ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_AUS(5, "ENUMBUE_Handschalteinrichtung_RT_ein_aus", "RT_ein_aus"),
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung RT ein RT aus</b></em>' literal object.
@@ -96,7 +93,17 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_RT_AUS(7, "ENUMBUE_Handschalteinrichtung_RT_ein_RT_aus", "RT_ein_RT_aus"),
+	ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_RT_AUS(6, "ENUMBUE_Handschalteinrichtung_RT_ein_RT_aus", "RT_ein_RT_aus"),
+
+	/**
+	 * The '<em><b>ENUMBUE Handschalteinrichtung sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE(7, "ENUMBUE_Handschalteinrichtung_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung UT</b></em>' literal object.
@@ -120,17 +127,6 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_AT_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUMBUE Handschalteinrichtung sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE
-	 * @model name="ENUMBUE_Handschalteinrichtung_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE_VALUE = 1;
-
-	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung ET</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,7 +135,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_ET_VALUE = 2;
+	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_ET_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung HAT</b></em>' literal value.
@@ -150,7 +146,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_HAT_VALUE = 3;
+	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_HAT_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung HET</b></em>' literal value.
@@ -161,7 +157,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_HET_VALUE = 4;
+	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_HET_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung RS</b></em>' literal value.
@@ -172,7 +168,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_RS_VALUE = 5;
+	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_RS_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung RT ein aus</b></em>' literal value.
@@ -183,7 +179,7 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_AUS_VALUE = 6;
+	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_AUS_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung RT ein RT aus</b></em>' literal value.
@@ -194,7 +190,18 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_RT_AUS_VALUE = 7;
+	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_RT_AUS_VALUE = 6;
+
+	/**
+	 * The '<em><b>ENUMBUE Handschalteinrichtung sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE
+	 * @model name="ENUMBUE_Handschalteinrichtung_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUMBUE Handschalteinrichtung UT</b></em>' literal value.
@@ -216,13 +223,13 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	private static final ENUMBUEHandschalteinrichtung[] VALUES_ARRAY =
 		new ENUMBUEHandschalteinrichtung[] {
 			ENUMBUE_HANDSCHALTEINRICHTUNG_AT,
-			ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE,
 			ENUMBUE_HANDSCHALTEINRICHTUNG_ET,
 			ENUMBUE_HANDSCHALTEINRICHTUNG_HAT,
 			ENUMBUE_HANDSCHALTEINRICHTUNG_HET,
 			ENUMBUE_HANDSCHALTEINRICHTUNG_RS,
 			ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_AUS,
 			ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_RT_AUS,
+			ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE,
 			ENUMBUE_HANDSCHALTEINRICHTUNG_UT,
 		};
 
@@ -281,13 +288,13 @@ public enum ENUMBUEHandschalteinrichtung implements Enumerator {
 	public static ENUMBUEHandschalteinrichtung get(int value) {
 		switch (value) {
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_AT_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_AT;
-			case ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE;
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_ET_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_ET;
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_HAT_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_HAT;
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_HET_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_HET;
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_RS_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_RS;
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_AUS_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_AUS;
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_RT_AUS_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_RT_EIN_RT_AUS;
+			case ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_SONSTIGE;
 			case ENUMBUE_HANDSCHALTEINRICHTUNG_UT_VALUE: return ENUMBUE_HANDSCHALTEINRICHTUNG_UT;
 			default: return null;
 		}

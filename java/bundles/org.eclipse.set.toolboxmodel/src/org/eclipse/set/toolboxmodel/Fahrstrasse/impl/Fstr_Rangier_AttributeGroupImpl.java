@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.impl;
 
@@ -10,16 +17,19 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Automatische_Einstellung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Rangier_Gegenfahrtausschluss_TypeClass;
+
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage;
 
 /**
@@ -31,6 +41,7 @@ import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_AttributeGroupImpl#getAutomatischeEinstellung <em>Automatische Einstellung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_AttributeGroupImpl#getFstrRangierArt <em>Fstr Rangier Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_AttributeGroupImpl#getIDFMAAnlageRangierFrei <em>IDFMA Anlage Rangier Frei</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_AttributeGroupImpl#getRangierGegenfahrtausschluss <em>Rangier Gegenfahrtausschluss</em>}</li>
  * </ul>
@@ -47,6 +58,16 @@ public class Fstr_Rangier_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected Automatische_Einstellung_TypeClass automatischeEinstellung;
+
+	/**
+	 * The cached value of the '{@link #getFstrRangierArt() <em>Fstr Rangier Art</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFstrRangierArt()
+	 * @generated
+	 * @ordered
+	 */
+	protected Fstr_Rangier_Art_TypeClass fstrRangierArt;
 
 	/**
 	 * The cached value of the '{@link #getIDFMAAnlageRangierFrei() <em>IDFMA Anlage Rangier Frei</em>}' reference list.
@@ -138,6 +159,51 @@ public class Fstr_Rangier_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	@Override
+	public Fstr_Rangier_Art_TypeClass getFstrRangierArt() {
+		return fstrRangierArt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFstrRangierArt(Fstr_Rangier_Art_TypeClass newFstrRangierArt, NotificationChain msgs) {
+		Fstr_Rangier_Art_TypeClass oldFstrRangierArt = fstrRangierArt;
+		fstrRangierArt = newFstrRangierArt;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART, oldFstrRangierArt, newFstrRangierArt);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFstrRangierArt(Fstr_Rangier_Art_TypeClass newFstrRangierArt) {
+		if (newFstrRangierArt != fstrRangierArt) {
+			NotificationChain msgs = null;
+			if (fstrRangierArt != null)
+				msgs = ((InternalEObject)fstrRangierArt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART, null, msgs);
+			if (newFstrRangierArt != null)
+				msgs = ((InternalEObject)newFstrRangierArt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART, null, msgs);
+			msgs = basicSetFstrRangierArt(newFstrRangierArt, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART, newFstrRangierArt, newFstrRangierArt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<FMA_Anlage> getIDFMAAnlageRangierFrei() {
 		if (iDFMAAnlageRangierFrei == null) {
 			iDFMAAnlageRangierFrei = new EObjectResolvingEList<FMA_Anlage>(FMA_Anlage.class, this, FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI);
@@ -200,6 +266,8 @@ public class Fstr_Rangier_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG:
 				return basicSetAutomatischeEinstellung(null, msgs);
+			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART:
+				return basicSetFstrRangierArt(null, msgs);
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS:
 				return basicSetRangierGegenfahrtausschluss(null, msgs);
 			default:
@@ -217,6 +285,8 @@ public class Fstr_Rangier_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG:
 				return getAutomatischeEinstellung();
+			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART:
+				return getFstrRangierArt();
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI:
 				return getIDFMAAnlageRangierFrei();
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS:
@@ -237,6 +307,9 @@ public class Fstr_Rangier_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG:
 				setAutomatischeEinstellung((Automatische_Einstellung_TypeClass)newValue);
+				return;
+			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART:
+				setFstrRangierArt((Fstr_Rangier_Art_TypeClass)newValue);
 				return;
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI:
 				getIDFMAAnlageRangierFrei().clear();
@@ -262,6 +335,9 @@ public class Fstr_Rangier_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG:
 				setAutomatischeEinstellung((Automatische_Einstellung_TypeClass)null);
 				return;
+			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART:
+				setFstrRangierArt((Fstr_Rangier_Art_TypeClass)null);
+				return;
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI:
 				getIDFMAAnlageRangierFrei().clear();
 				return;
@@ -284,6 +360,8 @@ public class Fstr_Rangier_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG:
 				return automatischeEinstellung != null;
+			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART:
+				return fstrRangierArt != null;
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI:
 				return iDFMAAnlageRangierFrei != null && !iDFMAAnlageRangierFrei.isEmpty();
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS:

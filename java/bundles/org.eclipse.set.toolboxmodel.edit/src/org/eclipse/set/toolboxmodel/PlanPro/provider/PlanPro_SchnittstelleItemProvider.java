@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -23,6 +24,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Ur_ObjektItemProvider;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProFactory;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage;
@@ -75,6 +78,7 @@ public class PlanPro_SchnittstelleItemProvider extends Ur_ObjektItemProvider {
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_PlanProSchnittstelleAllg());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_LSTPlanung());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_LSTZustand());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_WzkInvalidIDReferences());
 		}
 		return childrenFeatures;
 	}
@@ -130,6 +134,7 @@ public class PlanPro_SchnittstelleItemProvider extends Ur_ObjektItemProvider {
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLAN_PRO_SCHNITTSTELLE_ALLG:
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_PLANUNG:
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND:
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -163,6 +168,11 @@ public class PlanPro_SchnittstelleItemProvider extends Ur_ObjektItemProvider {
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_LSTZustand(),
 				 PlanProFactory.eINSTANCE.createLST_Zustand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_WzkInvalidIDReferences(),
+				 PlanProFactory.eINSTANCE.createWzkInvalidIDReference()));
 	}
 
 	/**

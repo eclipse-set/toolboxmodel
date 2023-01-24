@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.impl;
 
@@ -15,6 +22,10 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -64,13 +75,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -95,9 +110,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.Anschaltdauer_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Auto_Einstellung_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Befestigung_Art_TypeClass;
@@ -112,6 +129,8 @@ import org.eclipse.set.toolboxmodel.Signale.ENUMBefestigungArt;
 import org.eclipse.set.toolboxmodel.Signale.ENUMBeleuchtet;
 import org.eclipse.set.toolboxmodel.Signale.ENUMDurchfahrt;
 import org.eclipse.set.toolboxmodel.Signale.ENUMFiktivesSignalFunktion;
+import org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt;
+import org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal;
 import org.eclipse.set.toolboxmodel.Signale.ENUMGeltungsbereich;
 import org.eclipse.set.toolboxmodel.Signale.ENUMRahmenArt;
 import org.eclipse.set.toolboxmodel.Signale.ENUMSignalArt;
@@ -123,6 +142,8 @@ import org.eclipse.set.toolboxmodel.Signale.ENUMStreuscheibeArt;
 import org.eclipse.set.toolboxmodel.Signale.ENUMStreuscheibeBetriebsstellung;
 import org.eclipse.set.toolboxmodel.Signale.ENUMTunnelsignal;
 import org.eclipse.set.toolboxmodel.Signale.Fiktives_Signal_Funktion_TypeClass;
+import org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Gegengleis_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Geltungsbereich_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Geschaltet_TypeClass;
@@ -130,6 +151,7 @@ import org.eclipse.set.toolboxmodel.Signale.Hoehe_Fundamentoberkante_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Obere_Lichtpunkthoehe_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.PZB_Schutzstrecke_Soll_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Rahmen_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Rangierstrasse_Restaufloesung_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Richtpunkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Richtpunktentfernung_TypeClass;
@@ -255,6 +277,20 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass fundament_Art_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass funktion_Ohne_Signal_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass gegengleis_TypeClassEClass = null;
 
 	/**
@@ -298,6 +334,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	private EClass rahmen_Art_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rahmen_Hoehe_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -549,6 +592,20 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum enumFundamentArtEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum enumFunktionOhneSignalEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum enumGeltungsbereichEEnum = null;
 
 	/**
@@ -661,6 +718,20 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType enumFundamentArtObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumFunktionOhneSignalObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType enumGeltungsbereichObjectEDataType = null;
 
 	/**
@@ -752,6 +823,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType rahmen_Hoehe_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType richtpunkt_TypeEDataType = null;
 
 	/**
@@ -833,30 +911,34 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -873,8 +955,8 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -892,16 +974,18 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 
 		// Create package meta-data objects
 		theSignalePackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -909,23 +993,25 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSignalePackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -933,7 +1019,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -1148,6 +1234,46 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFundament_Art_TypeClass() {
+		return fundament_Art_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFundament_Art_TypeClass_Wert() {
+		return (EAttribute)fundament_Art_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFunktion_Ohne_Signal_TypeClass() {
+		return funktion_Ohne_Signal_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFunktion_Ohne_Signal_TypeClass_Wert() {
+		return (EAttribute)funktion_Ohne_Signal_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getGegengleis_TypeClass() {
 		return gegengleis_TypeClassEClass;
 	}
@@ -1280,6 +1406,26 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	@Override
 	public EAttribute getRahmen_Art_TypeClass_Wert() {
 		return (EAttribute)rahmen_Art_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRahmen_Hoehe_TypeClass() {
+		return rahmen_Hoehe_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRahmen_Hoehe_TypeClass_Wert() {
+		return (EAttribute)rahmen_Hoehe_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1468,7 +1614,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Befestigung_IDRegelzeichnungVsigTafel() {
+	public EReference getSignal_Befestigung_SignalBefestigungAllg() {
 		return (EReference)signal_BefestigungEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1478,7 +1624,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Befestigung_IDSignalBefestigung() {
+	public EReference getSignal_Befestigung_IDBefestigungBauwerk() {
 		return (EReference)signal_BefestigungEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1488,7 +1634,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Befestigung_SignalBefestigungAllg() {
+	public EReference getSignal_Befestigung_IDSignalBefestigung() {
 		return (EReference)signal_BefestigungEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1518,7 +1664,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Befestigung_Allg_AttributeGroup_HoeheFundamentoberkante() {
+	public EReference getSignal_Befestigung_Allg_AttributeGroup_FundamentArt() {
 		return (EReference)signal_Befestigung_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1528,8 +1674,18 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Befestigung_Allg_AttributeGroup_ObereLichtpunkthoehe() {
+	public EReference getSignal_Befestigung_Allg_AttributeGroup_HoeheFundamentoberkante() {
 		return (EReference)signal_Befestigung_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Befestigung_Allg_AttributeGroup_ObereLichtpunkthoehe() {
+		return (EReference)signal_Befestigung_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1778,7 +1934,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Rahmen_IDSignal() {
+	public EReference getSignal_Rahmen_IDRegelzeichnung() {
 		return (EReference)signal_RahmenEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1788,7 +1944,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Rahmen_IDSignalBefestigung() {
+	public EReference getSignal_Rahmen_IDSignal() {
 		return (EReference)signal_RahmenEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1798,7 +1954,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Rahmen_IDSignalNachordnung() {
+	public EReference getSignal_Rahmen_IDSignalBefestigung() {
 		return (EReference)signal_RahmenEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1808,8 +1964,28 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Rahmen_RahmenArt() {
+	public EReference getSignal_Rahmen_IDSignalNachordnung() {
 		return (EReference)signal_RahmenEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Rahmen_RahmenArt() {
+		return (EReference)signal_RahmenEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Rahmen_RahmenHoehe() {
+		return (EReference)signal_RahmenEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1848,7 +2024,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_AttributeGroup_SignalFunktion() {
+	public EReference getSignal_Real_Aktiv_AttributeGroup_SonstigeZulaessigeAnordnung() {
 		return (EReference)signal_Real_Aktiv_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1858,48 +2034,8 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_AttributeGroup_SignalsichtErreichbar() {
-		return (EReference)signal_Real_Aktiv_AttributeGroupEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSignal_Real_Aktiv_AttributeGroup_SignalsichtMindest() {
-		return (EReference)signal_Real_Aktiv_AttributeGroupEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSignal_Real_Aktiv_AttributeGroup_SignalsichtSoll() {
-		return (EReference)signal_Real_Aktiv_AttributeGroupEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSignal_Real_Aktiv_AttributeGroup_SonstigeZulaessigeAnordnung() {
-		return (EReference)signal_Real_Aktiv_AttributeGroupEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getSignal_Real_Aktiv_AttributeGroup_Tunnelsignal() {
-		return (EReference)signal_Real_Aktiv_AttributeGroupEClass.getEStructuralFeatures().get(7);
+		return (EReference)signal_Real_Aktiv_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1918,7 +2054,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Dunkelschaltung() {
+	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunkt() {
 		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1928,7 +2064,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunkt() {
+	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunktentfernung() {
 		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1938,7 +2074,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunktentfernung() {
+	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_SignalArt() {
 		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1948,7 +2084,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_SignalArt() {
+	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Signalsystem() {
 		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1958,7 +2094,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Signalsystem() {
+	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_StreuscheibeArt() {
 		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1968,18 +2104,8 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_StreuscheibeArt() {
-		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_StreuscheibeBetriebsstellung() {
-		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(6);
+		return (EReference)signal_Real_Aktiv_Schirm_AttributeGroupEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1998,7 +2124,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_AttributeGroup_Geltungsbereich() {
+	public EReference getSignal_Real_AttributeGroup_Dunkelschaltung() {
 		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2008,7 +2134,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_AttributeGroup_SignalBefestigungsart() {
+	public EReference getSignal_Real_AttributeGroup_FunktionOhneSignal() {
 		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2018,7 +2144,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_AttributeGroup_SignalRealAktiv() {
+	public EReference getSignal_Real_AttributeGroup_Geltungsbereich() {
 		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2028,8 +2154,68 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSignal_Real_AttributeGroup_SignalRealAktivSchirm() {
+	public EReference getSignal_Real_AttributeGroup_SignalBefestigungsart() {
 		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Real_AttributeGroup_SignalFunktion() {
+		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Real_AttributeGroup_SignalRealAktiv() {
+		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Real_AttributeGroup_SignalRealAktivSchirm() {
+		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Real_AttributeGroup_SignalsichtErreichbar() {
+		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Real_AttributeGroup_SignalsichtMindest() {
+		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSignal_Real_AttributeGroup_SignalsichtSoll() {
+		return (EReference)signal_Real_AttributeGroupEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2368,6 +2554,26 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getENUMFundamentArt() {
+		return enumFundamentArtEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMFunktionOhneSignal() {
+		return enumFunktionOhneSignalEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getENUMGeltungsbereich() {
 		return enumGeltungsbereichEEnum;
 	}
@@ -2528,6 +2734,26 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getENUMFundamentArtObject() {
+		return enumFundamentArtObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMFunktionOhneSignalObject() {
+		return enumFunktionOhneSignalObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getENUMGeltungsbereichObject() {
 		return enumGeltungsbereichObjectEDataType;
 	}
@@ -2658,6 +2884,16 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getRahmen_Hoehe_Type() {
+		return rahmen_Hoehe_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getRichtpunkt_Type() {
 		return richtpunkt_TypeEDataType;
 	}
@@ -2758,6 +2994,12 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		fiktives_Signal_Funktion_TypeClassEClass = createEClass(FIKTIVES_SIGNAL_FUNKTION_TYPE_CLASS);
 		createEAttribute(fiktives_Signal_Funktion_TypeClassEClass, FIKTIVES_SIGNAL_FUNKTION_TYPE_CLASS__WERT);
 
+		fundament_Art_TypeClassEClass = createEClass(FUNDAMENT_ART_TYPE_CLASS);
+		createEAttribute(fundament_Art_TypeClassEClass, FUNDAMENT_ART_TYPE_CLASS__WERT);
+
+		funktion_Ohne_Signal_TypeClassEClass = createEClass(FUNKTION_OHNE_SIGNAL_TYPE_CLASS);
+		createEAttribute(funktion_Ohne_Signal_TypeClassEClass, FUNKTION_OHNE_SIGNAL_TYPE_CLASS__WERT);
+
 		gegengleis_TypeClassEClass = createEClass(GEGENGLEIS_TYPE_CLASS);
 		createEAttribute(gegengleis_TypeClassEClass, GEGENGLEIS_TYPE_CLASS__WERT);
 
@@ -2778,6 +3020,9 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 
 		rahmen_Art_TypeClassEClass = createEClass(RAHMEN_ART_TYPE_CLASS);
 		createEAttribute(rahmen_Art_TypeClassEClass, RAHMEN_ART_TYPE_CLASS__WERT);
+
+		rahmen_Hoehe_TypeClassEClass = createEClass(RAHMEN_HOEHE_TYPE_CLASS);
+		createEAttribute(rahmen_Hoehe_TypeClassEClass, RAHMEN_HOEHE_TYPE_CLASS__WERT);
 
 		rangierstrasse_Restaufloesung_TypeClassEClass = createEClass(RANGIERSTRASSE_RESTAUFLOESUNG_TYPE_CLASS);
 		createEAttribute(rangierstrasse_Restaufloesung_TypeClassEClass, RANGIERSTRASSE_RESTAUFLOESUNG_TYPE_CLASS__WERT);
@@ -2802,12 +3047,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 
 		signal_BefestigungEClass = createEClass(SIGNAL_BEFESTIGUNG);
 		createEReference(signal_BefestigungEClass, SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG);
-		createEReference(signal_BefestigungEClass, SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL);
-		createEReference(signal_BefestigungEClass, SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG);
 		createEReference(signal_BefestigungEClass, SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG);
+		createEReference(signal_BefestigungEClass, SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK);
+		createEReference(signal_BefestigungEClass, SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG);
 
 		signal_Befestigung_Allg_AttributeGroupEClass = createEClass(SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP);
 		createEReference(signal_Befestigung_Allg_AttributeGroupEClass, SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART);
+		createEReference(signal_Befestigung_Allg_AttributeGroupEClass, SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART);
 		createEReference(signal_Befestigung_Allg_AttributeGroupEClass, SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE);
 		createEReference(signal_Befestigung_Allg_AttributeGroupEClass, SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE);
 
@@ -2842,23 +3088,20 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		createEAttribute(signal_Funktion_TypeClassEClass, SIGNAL_FUNKTION_TYPE_CLASS__WERT);
 
 		signal_RahmenEClass = createEClass(SIGNAL_RAHMEN);
+		createEReference(signal_RahmenEClass, SIGNAL_RAHMEN__ID_REGELZEICHNUNG);
 		createEReference(signal_RahmenEClass, SIGNAL_RAHMEN__ID_SIGNAL);
 		createEReference(signal_RahmenEClass, SIGNAL_RAHMEN__ID_SIGNAL_BEFESTIGUNG);
 		createEReference(signal_RahmenEClass, SIGNAL_RAHMEN__ID_SIGNAL_NACHORDNUNG);
 		createEReference(signal_RahmenEClass, SIGNAL_RAHMEN__RAHMEN_ART);
+		createEReference(signal_RahmenEClass, SIGNAL_RAHMEN__RAHMEN_HOEHE);
 
 		signal_Real_Aktiv_AttributeGroupEClass = createEClass(SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP);
 		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__AUTO_EINSTELLUNG);
 		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__ID_STELLELEMENT);
-		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNAL_FUNKTION);
-		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR);
-		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST);
-		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL);
 		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SONSTIGE_ZULAESSIGE_ANORDNUNG);
 		createEReference(signal_Real_Aktiv_AttributeGroupEClass, SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__TUNNELSIGNAL);
 
 		signal_Real_Aktiv_Schirm_AttributeGroupEClass = createEClass(SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP);
-		createEReference(signal_Real_Aktiv_Schirm_AttributeGroupEClass, SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG);
 		createEReference(signal_Real_Aktiv_Schirm_AttributeGroupEClass, SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT);
 		createEReference(signal_Real_Aktiv_Schirm_AttributeGroupEClass, SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG);
 		createEReference(signal_Real_Aktiv_Schirm_AttributeGroupEClass, SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__SIGNAL_ART);
@@ -2867,10 +3110,16 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		createEReference(signal_Real_Aktiv_Schirm_AttributeGroupEClass, SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__STREUSCHEIBE_BETRIEBSSTELLUNG);
 
 		signal_Real_AttributeGroupEClass = createEClass(SIGNAL_REAL_ATTRIBUTE_GROUP);
+		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__DUNKELSCHALTUNG);
+		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__FUNKTION_OHNE_SIGNAL);
 		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__GELTUNGSBEREICH);
 		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNGSART);
+		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_FUNKTION);
 		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV);
 		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV_SCHIRM);
+		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR);
+		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST);
+		createEReference(signal_Real_AttributeGroupEClass, SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL);
 
 		signal_SignalbegriffEClass = createEClass(SIGNAL_SIGNALBEGRIFF);
 		createEReference(signal_SignalbegriffEClass, SIGNAL_SIGNALBEGRIFF__ID_SIGNAL_RAHMEN);
@@ -2917,6 +3166,8 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		enumBeleuchtetEEnum = createEEnum(ENUM_BELEUCHTET);
 		enumDurchfahrtEEnum = createEEnum(ENUM_DURCHFAHRT);
 		enumFiktivesSignalFunktionEEnum = createEEnum(ENUM_FIKTIVES_SIGNAL_FUNKTION);
+		enumFundamentArtEEnum = createEEnum(ENUM_FUNDAMENT_ART);
+		enumFunktionOhneSignalEEnum = createEEnum(ENUM_FUNKTION_OHNE_SIGNAL);
 		enumGeltungsbereichEEnum = createEEnum(ENUM_GELTUNGSBEREICH);
 		enumRahmenArtEEnum = createEEnum(ENUM_RAHMEN_ART);
 		enumSignalArtEEnum = createEEnum(ENUM_SIGNAL_ART);
@@ -2935,6 +3186,8 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		enumBeleuchtetObjectEDataType = createEDataType(ENUM_BELEUCHTET_OBJECT);
 		enumDurchfahrtObjectEDataType = createEDataType(ENUM_DURCHFAHRT_OBJECT);
 		enumFiktivesSignalFunktionObjectEDataType = createEDataType(ENUM_FIKTIVES_SIGNAL_FUNKTION_OBJECT);
+		enumFundamentArtObjectEDataType = createEDataType(ENUM_FUNDAMENT_ART_OBJECT);
+		enumFunktionOhneSignalObjectEDataType = createEDataType(ENUM_FUNKTION_OHNE_SIGNAL_OBJECT);
 		enumGeltungsbereichObjectEDataType = createEDataType(ENUM_GELTUNGSBEREICH_OBJECT);
 		enumRahmenArtObjectEDataType = createEDataType(ENUM_RAHMEN_ART_OBJECT);
 		enumSignalArtObjectEDataType = createEDataType(ENUM_SIGNAL_ART_OBJECT);
@@ -2948,6 +3201,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		hoehe_Fundamentoberkante_TypeEDataType = createEDataType(HOEHE_FUNDAMENTOBERKANTE_TYPE);
 		obere_Lichtpunkthoehe_TypeEDataType = createEDataType(OBERE_LICHTPUNKTHOEHE_TYPE);
 		pzB_Schutzstrecke_Soll_TypeEDataType = createEDataType(PZB_SCHUTZSTRECKE_SOLL_TYPE);
+		rahmen_Hoehe_TypeEDataType = createEDataType(RAHMEN_HOEHE_TYPE);
 		richtpunkt_TypeEDataType = createEDataType(RICHTPUNKT_TYPE);
 		richtpunktentfernung_TypeEDataType = createEDataType(RICHTPUNKTENTFERNUNG_TYPE);
 		signalsicht_Erreichbar_TypeEDataType = createEDataType(SIGNALSICHT_ERREICHBAR_TYPE);
@@ -3003,6 +3257,8 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		dunkelschaltung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		durchfahrt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fiktives_Signal_Funktion_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		fundament_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		funktion_Ohne_Signal_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		gegengleis_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		geltungsbereich_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		geschaltet_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -3010,6 +3266,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		obere_Lichtpunkthoehe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		pzB_Schutzstrecke_Soll_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		rahmen_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		rahmen_Hoehe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		rangierstrasse_Restaufloesung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		richtpunkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		richtpunktentfernung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -3059,6 +3316,12 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		initEClass(fiktives_Signal_Funktion_TypeClassEClass, Fiktives_Signal_Funktion_TypeClass.class, "Fiktives_Signal_Funktion_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFiktives_Signal_Funktion_TypeClass_Wert(), this.getENUMFiktivesSignalFunktionObject(), "wert", null, 1, 1, Fiktives_Signal_Funktion_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(fundament_Art_TypeClassEClass, Fundament_Art_TypeClass.class, "Fundament_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFundament_Art_TypeClass_Wert(), this.getENUMFundamentArtObject(), "wert", null, 1, 1, Fundament_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(funktion_Ohne_Signal_TypeClassEClass, Funktion_Ohne_Signal_TypeClass.class, "Funktion_Ohne_Signal_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunktion_Ohne_Signal_TypeClass_Wert(), this.getENUMFunktionOhneSignalObject(), "wert", null, 1, 1, Funktion_Ohne_Signal_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(gegengleis_TypeClassEClass, Gegengleis_TypeClass.class, "Gegengleis_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGegengleis_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Gegengleis_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3079,6 +3342,9 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 
 		initEClass(rahmen_Art_TypeClassEClass, Rahmen_Art_TypeClass.class, "Rahmen_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRahmen_Art_TypeClass_Wert(), this.getENUMRahmenArtObject(), "wert", null, 1, 1, Rahmen_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rahmen_Hoehe_TypeClassEClass, Rahmen_Hoehe_TypeClass.class, "Rahmen_Hoehe_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRahmen_Hoehe_TypeClass_Wert(), this.getRahmen_Hoehe_Type(), "wert", null, 1, 1, Rahmen_Hoehe_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rangierstrasse_Restaufloesung_TypeClassEClass, Rangierstrasse_Restaufloesung_TypeClass.class, "Rangierstrasse_Restaufloesung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRangierstrasse_Restaufloesung_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Rangierstrasse_Restaufloesung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3103,12 +3369,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 
 		initEClass(signal_BefestigungEClass, Signal_Befestigung.class, "Signal_Befestigung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignal_Befestigung_IDRegelzeichnung(), theRegelzeichnungPackage.getRegelzeichnung(), null, "iDRegelzeichnung", null, 0, -1, Signal_Befestigung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignal_Befestigung_IDRegelzeichnungVsigTafel(), theRegelzeichnungPackage.getRegelzeichnung(), null, "iDRegelzeichnungVsigTafel", null, 0, 1, Signal_Befestigung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignal_Befestigung_IDSignalBefestigung(), this.getSignal_Befestigung(), null, "iDSignalBefestigung", null, 0, 1, Signal_Befestigung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Befestigung_SignalBefestigungAllg(), this.getSignal_Befestigung_Allg_AttributeGroup(), null, "signalBefestigungAllg", null, 1, 1, Signal_Befestigung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Befestigung_IDBefestigungBauwerk(), theBasisobjektePackage.getBasis_Objekt(), null, "iDBefestigungBauwerk", null, 0, 1, Signal_Befestigung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Befestigung_IDSignalBefestigung(), this.getSignal_Befestigung(), null, "iDSignalBefestigung", null, 0, 1, Signal_Befestigung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signal_Befestigung_Allg_AttributeGroupEClass, Signal_Befestigung_Allg_AttributeGroup.class, "Signal_Befestigung_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignal_Befestigung_Allg_AttributeGroup_BefestigungArt(), this.getBefestigung_Art_TypeClass(), null, "befestigungArt", null, 1, 1, Signal_Befestigung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Befestigung_Allg_AttributeGroup_FundamentArt(), this.getFundament_Art_TypeClass(), null, "fundamentArt", null, 0, 1, Signal_Befestigung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Befestigung_Allg_AttributeGroup_HoeheFundamentoberkante(), this.getHoehe_Fundamentoberkante_TypeClass(), null, "hoeheFundamentoberkante", null, 0, 1, Signal_Befestigung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Befestigung_Allg_AttributeGroup_ObereLichtpunkthoehe(), this.getObere_Lichtpunkthoehe_TypeClass(), null, "obereLichtpunkthoehe", null, 0, 1, Signal_Befestigung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3143,23 +3410,20 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		initEAttribute(getSignal_Funktion_TypeClass_Wert(), this.getENUMSignalFunktionObject(), "wert", null, 1, 1, Signal_Funktion_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signal_RahmenEClass, Signal_Rahmen.class, "Signal_Rahmen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSignal_Rahmen_IDRegelzeichnung(), theRegelzeichnungPackage.getRegelzeichnung(), null, "iDRegelzeichnung", null, 0, 1, Signal_Rahmen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Rahmen_IDSignal(), this.getSignal(), null, "iDSignal", null, 1, 1, Signal_Rahmen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Rahmen_IDSignalBefestigung(), this.getSignal_Befestigung(), null, "iDSignalBefestigung", null, 0, 1, Signal_Rahmen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Rahmen_IDSignalNachordnung(), this.getSignal(), null, "iDSignalNachordnung", null, 0, 1, Signal_Rahmen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Rahmen_RahmenArt(), this.getRahmen_Art_TypeClass(), null, "rahmenArt", null, 1, 1, Signal_Rahmen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Rahmen_RahmenHoehe(), this.getRahmen_Hoehe_TypeClass(), null, "rahmenHoehe", null, 0, 1, Signal_Rahmen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signal_Real_Aktiv_AttributeGroupEClass, Signal_Real_Aktiv_AttributeGroup.class, "Signal_Real_Aktiv_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignal_Real_Aktiv_AttributeGroup_AutoEinstellung(), this.getAuto_Einstellung_TypeClass(), null, "autoEinstellung", null, 0, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_Aktiv_AttributeGroup_IDStellelement(), theAnsteuerung_ElementPackage.getStellelement(), null, "iDStellelement", null, 1, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignal_Real_Aktiv_AttributeGroup_SignalFunktion(), this.getSignal_Funktion_TypeClass(), null, "signalFunktion", null, 1, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignal_Real_Aktiv_AttributeGroup_SignalsichtErreichbar(), this.getSignalsicht_Erreichbar_TypeClass(), null, "signalsichtErreichbar", null, 0, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignal_Real_Aktiv_AttributeGroup_SignalsichtMindest(), this.getSignalsicht_Mindest_TypeClass(), null, "signalsichtMindest", null, 0, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignal_Real_Aktiv_AttributeGroup_SignalsichtSoll(), this.getSignalsicht_Soll_TypeClass(), null, "signalsichtSoll", null, 0, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_Aktiv_AttributeGroup_SonstigeZulaessigeAnordnung(), this.getSonstige_Zulaessige_Anordnung_TypeClass(), null, "sonstigeZulaessigeAnordnung", null, 0, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_Aktiv_AttributeGroup_Tunnelsignal(), this.getTunnelsignal_TypeClass(), null, "tunnelsignal", null, 0, 1, Signal_Real_Aktiv_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signal_Real_Aktiv_Schirm_AttributeGroupEClass, Signal_Real_Aktiv_Schirm_AttributeGroup.class, "Signal_Real_Aktiv_Schirm_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSignal_Real_Aktiv_Schirm_AttributeGroup_Dunkelschaltung(), this.getDunkelschaltung_TypeClass(), null, "dunkelschaltung", null, 0, 1, Signal_Real_Aktiv_Schirm_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunkt(), this.getRichtpunkt_TypeClass(), null, "richtpunkt", null, 0, 1, Signal_Real_Aktiv_Schirm_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunktentfernung(), this.getRichtpunktentfernung_TypeClass(), null, "richtpunktentfernung", null, 1, 1, Signal_Real_Aktiv_Schirm_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_Aktiv_Schirm_AttributeGroup_SignalArt(), this.getSignal_Art_TypeClass(), null, "signalArt", null, 1, 1, Signal_Real_Aktiv_Schirm_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3168,10 +3432,16 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		initEReference(getSignal_Real_Aktiv_Schirm_AttributeGroup_StreuscheibeBetriebsstellung(), this.getStreuscheibe_Betriebsstellung_TypeClass(), null, "streuscheibeBetriebsstellung", null, 0, 1, Signal_Real_Aktiv_Schirm_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signal_Real_AttributeGroupEClass, Signal_Real_AttributeGroup.class, "Signal_Real_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSignal_Real_AttributeGroup_Dunkelschaltung(), this.getDunkelschaltung_TypeClass(), null, "dunkelschaltung", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Real_AttributeGroup_FunktionOhneSignal(), this.getFunktion_Ohne_Signal_TypeClass(), null, "funktionOhneSignal", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_AttributeGroup_Geltungsbereich(), this.getGeltungsbereich_TypeClass(), null, "geltungsbereich", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_AttributeGroup_SignalBefestigungsart(), this.getSignal_Befestigungsart_TypeClass(), null, "signalBefestigungsart", null, 1, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Real_AttributeGroup_SignalFunktion(), this.getSignal_Funktion_TypeClass(), null, "signalFunktion", null, 1, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_AttributeGroup_SignalRealAktiv(), this.getSignal_Real_Aktiv_AttributeGroup(), null, "signalRealAktiv", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Real_AttributeGroup_SignalRealAktivSchirm(), this.getSignal_Real_Aktiv_Schirm_AttributeGroup(), null, "signalRealAktivSchirm", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Real_AttributeGroup_SignalsichtErreichbar(), this.getSignalsicht_Erreichbar_TypeClass(), null, "signalsichtErreichbar", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Real_AttributeGroup_SignalsichtMindest(), this.getSignalsicht_Mindest_TypeClass(), null, "signalsichtMindest", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Real_AttributeGroup_SignalsichtSoll(), this.getSignalsicht_Soll_TypeClass(), null, "signalsichtSoll", null, 0, 1, Signal_Real_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signal_SignalbegriffEClass, Signal_Signalbegriff.class, "Signal_Signalbegriff", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignal_Signalbegriff_IDSignalRahmen(), this.getSignal_Rahmen(), null, "iDSignalRahmen", null, 1, 1, Signal_Signalbegriff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3223,17 +3493,31 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		addEEnumLiteral(enumAutoEinstellungEEnum, ENUMAutoEinstellung.ENUM_AUTO_EINSTELLUNG_ZL);
 
 		initEEnum(enumBefestigungArtEEnum, ENUMBefestigungArt.class, "ENUMBefestigungArt");
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_ANDERE);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_ANDERE_SONDERKONSTRUKTION);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_ARBEITSBUEHNE);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_BAHNSTEIG);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_DACH_DECKE);
 		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_FUNDAMENT);
-		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_PFOSTEN);
-		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SCHIENENFUSS);
-		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_MAST);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_KONSTRUKTIONSTEIL);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_OL_KETTENWERK);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_OL_MAST);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_PFAHL);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_PFOSTEN_HOCH);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_PFOSTEN_NIEDRIG);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_PRELLBOCK);
 		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_RAHMEN);
-		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SIGNAL_ANORDNUNG_ARBEITSBUEHNE);
-		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SIGNAL_ANORDNUNG_MAST);
-		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SIGNAL_ANORDNUNG_SONSTIGE);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_REGELANORDNUNG_MAST_HOCH);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_REGELANORDNUNG_MAST_NIEDRIG);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_REGELANORDNUNG_SONSTIGE_HOCH);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_REGELANORDNUNG_SONSTIGE_NIEDRIG);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SCHIENENFUSS);
 		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SIGNALAUSLEGER);
 		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SIGNALBRUECKE);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SONDERANORDNUNG_MAST_HOCH);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SONDERANORDNUNG_MAST_NIEDRIG);
 		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_SONSTIGE);
+		addEEnumLiteral(enumBefestigungArtEEnum, ENUMBefestigungArt.ENUM_BEFESTIGUNG_ART_WAND);
 
 		initEEnum(enumBeleuchtetEEnum, ENUMBeleuchtet.class, "ENUMBeleuchtet");
 		addEEnumLiteral(enumBeleuchtetEEnum, ENUMBeleuchtet.ENUM_BELEUCHTET_ANGESTRAHLT);
@@ -3256,6 +3540,19 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		addEEnumLiteral(enumFiktivesSignalFunktionEEnum, ENUMFiktivesSignalFunktion.ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_AWANST);
 		addEEnumLiteral(enumFiktivesSignalFunktionEEnum, ENUMFiktivesSignalFunktion.ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_OHNE_SIGNAL);
 		addEEnumLiteral(enumFiktivesSignalFunktionEEnum, ENUMFiktivesSignalFunktion.ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_STRECKE);
+		addEEnumLiteral(enumFiktivesSignalFunktionEEnum, ENUMFiktivesSignalFunktion.ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL);
+		addEEnumLiteral(enumFiktivesSignalFunktionEEnum, ENUMFiktivesSignalFunktion.ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK);
+		addEEnumLiteral(enumFiktivesSignalFunktionEEnum, ENUMFiktivesSignalFunktion.ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14);
+
+		initEEnum(enumFundamentArtEEnum, ENUMFundamentArt.class, "ENUMFundamentArt");
+		addEEnumLiteral(enumFundamentArtEEnum, ENUMFundamentArt.ENUM_FUNDAMENT_ART_GROSS);
+		addEEnumLiteral(enumFundamentArtEEnum, ENUMFundamentArt.ENUM_FUNDAMENT_ART_KLEIN);
+		addEEnumLiteral(enumFundamentArtEEnum, ENUMFundamentArt.ENUM_FUNDAMENT_ART_SONSTIGE);
+
+		initEEnum(enumFunktionOhneSignalEEnum, ENUMFunktionOhneSignal.class, "ENUMFunktionOhneSignal");
+		addEEnumLiteral(enumFunktionOhneSignalEEnum, ENUMFunktionOhneSignal.ENUM_FUNKTION_OHNE_SIGNAL_RS);
+		addEEnumLiteral(enumFunktionOhneSignalEEnum, ENUMFunktionOhneSignal.ENUM_FUNKTION_OHNE_SIGNAL_SONSTIGE);
+		addEEnumLiteral(enumFunktionOhneSignalEEnum, ENUMFunktionOhneSignal.ENUM_FUNKTION_OHNE_SIGNAL_ZS);
 
 		initEEnum(enumGeltungsbereichEEnum, ENUMGeltungsbereich.class, "ENUMGeltungsbereich");
 		addEEnumLiteral(enumGeltungsbereichEEnum, ENUMGeltungsbereich.ENUM_GELTUNGSBEREICH_DS);
@@ -3268,13 +3565,14 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		addEEnumLiteral(enumRahmenArtEEnum, ENUMRahmenArt.ENUM_RAHMEN_ART_BLECHTAFEL);
 		addEEnumLiteral(enumRahmenArtEEnum, ENUMRahmenArt.ENUM_RAHMEN_ART_KERAMIKKOERPER);
 		addEEnumLiteral(enumRahmenArtEEnum, ENUMRahmenArt.ENUM_RAHMEN_ART_SCHIRM);
-		addEEnumLiteral(enumRahmenArtEEnum, ENUMRahmenArt.ENUM_RAHMEN_ART_ZUSATZANZEIGER);
 		addEEnumLiteral(enumRahmenArtEEnum, ENUMRahmenArt.ENUM_RAHMEN_ART_SONSTIGE);
+		addEEnumLiteral(enumRahmenArtEEnum, ENUMRahmenArt.ENUM_RAHMEN_ART_ZUSATZANZEIGER);
 
 		initEEnum(enumSignalArtEEnum, ENUMSignalArt.class, "ENUMSignalArt");
 		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_ANDERE);
 		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_HAUPTSIGNAL);
 		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL);
+		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS);
 		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL);
 		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL);
 		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_SPERRSIGNAL);
@@ -3283,29 +3581,20 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		addEEnumLiteral(enumSignalArtEEnum, ENUMSignalArt.ENUM_SIGNAL_ART_ZUGDECKUNGSSIGNAL);
 
 		initEEnum(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.class, "ENUMSignalBefestigungsart");
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG);
+		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE);
 		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_FUNDAMENT);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK);
+		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_MAST);
 		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER);
 		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE);
 		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_DACH);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_MAST);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL);
-		addEEnumLiteral(enumSignalBefestigungsartEEnum, ENUMSignalBefestigungsart.ENUM_SIGNAL_BEFESTIGUNGSART_WAND);
 
 		initEEnum(enumSignalFunktionEEnum, ENUMSignalFunktion.class, "ENUMSignalFunktion");
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_ALLEINSTEHENDES_ZUSATZSIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_ANDERE);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_AUSFAHR_SIGNAL);
-		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL);
-		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER);
-		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL);
+		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL);
@@ -3314,7 +3603,9 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL);
+		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL);
+		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL);
 		addEEnumLiteral(enumSignalFunktionEEnum, ENUMSignalFunktion.ENUM_SIGNAL_FUNKTION_ZWISCHEN_SIGNAL);
 
 		initEEnum(enumSignalsystemEEnum, ENUMSignalsystem.class, "ENUMSignalsystem");
@@ -3330,12 +3621,12 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		addEEnumLiteral(enumSonstigeZulaessigeAnordnungEEnum, ENUMSonstigeZulaessigeAnordnung.ENUM_SONSTIGE_ZULAESSIGE_ANORDNUNG_NICHTGELTUNG_FUER_FAHRTEN_AUF_DEM_GEGENGLEIS);
 
 		initEEnum(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.class, "ENUMStreuscheibeArt");
-		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_LED);
-		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_SONSTIGE);
-		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_HRL);
 		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_HG);
 		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_HN);
+		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_HRL);
+		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_LED);
 		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_ORL);
+		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_SONSTIGE);
 		addEEnumLiteral(enumStreuscheibeArtEEnum, ENUMStreuscheibeArt.ENUM_STREUSCHEIBE_ART_VRL);
 
 		initEEnum(enumStreuscheibeBetriebsstellungEEnum, ENUMStreuscheibeBetriebsstellung.class, "ENUMStreuscheibeBetriebsstellung");
@@ -3356,9 +3647,9 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		addEEnumLiteral(enumStreuscheibeBetriebsstellungEEnum, ENUMStreuscheibeBetriebsstellung.ENUM_STREUSCHEIBE_BETRIEBSSTELLUNG_VR);
 
 		initEEnum(enumTunnelsignalEEnum, ENUMTunnelsignal.class, "ENUMTunnelsignal");
+		addEEnumLiteral(enumTunnelsignalEEnum, ENUMTunnelsignal.ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG);
 		addEEnumLiteral(enumTunnelsignalEEnum, ENUMTunnelsignal.ENUM_TUNNELSIGNAL_NEIN);
 		addEEnumLiteral(enumTunnelsignalEEnum, ENUMTunnelsignal.ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG);
-		addEEnumLiteral(enumTunnelsignalEEnum, ENUMTunnelsignal.ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG);
 
 		// Initialize data types
 		initEDataType(enumAnschaltdauerObjectEDataType, ENUMAnschaltdauer.class, "ENUMAnschaltdauerObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -3367,6 +3658,8 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		initEDataType(enumBeleuchtetObjectEDataType, ENUMBeleuchtet.class, "ENUMBeleuchtetObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumDurchfahrtObjectEDataType, ENUMDurchfahrt.class, "ENUMDurchfahrtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumFiktivesSignalFunktionObjectEDataType, ENUMFiktivesSignalFunktion.class, "ENUMFiktivesSignalFunktionObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumFundamentArtObjectEDataType, ENUMFundamentArt.class, "ENUMFundamentArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumFunktionOhneSignalObjectEDataType, ENUMFunktionOhneSignal.class, "ENUMFunktionOhneSignalObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumGeltungsbereichObjectEDataType, ENUMGeltungsbereich.class, "ENUMGeltungsbereichObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumRahmenArtObjectEDataType, ENUMRahmenArt.class, "ENUMRahmenArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumSignalArtObjectEDataType, ENUMSignalArt.class, "ENUMSignalArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -3380,6 +3673,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		initEDataType(hoehe_Fundamentoberkante_TypeEDataType, BigDecimal.class, "Hoehe_Fundamentoberkante_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(obere_Lichtpunkthoehe_TypeEDataType, BigDecimal.class, "Obere_Lichtpunkthoehe_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(pzB_Schutzstrecke_Soll_TypeEDataType, BigDecimal.class, "PZB_Schutzstrecke_Soll_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(rahmen_Hoehe_TypeEDataType, BigDecimal.class, "Rahmen_Hoehe_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(richtpunkt_TypeEDataType, String.class, "Richtpunkt_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(richtpunktentfernung_TypeEDataType, BigDecimal.class, "Richtpunktentfernung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(signalsicht_Erreichbar_TypeEDataType, BigDecimal.class, "Signalsicht_Erreichbar_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -3410,7 +3704,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (enumStreuscheibeBetriebsstellungEEnum,
@@ -3449,10 +3743,10 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "documentation", "Verweis auf ein Objekt Regelzeichnung. F\u00fcr Signale werden in der Regel die Regelzeichnungen der Gruppe S800x,yy verwendet, die die grunds\u00e4tzliche Anordnung am Gleis beschreiben. Die angegebene Regelzeichnung wird mittels Parametern (z. B.: \"Bild\") weiter spezifiziert. Der Verweis kann mehrfach verwendet werden, wenn die Zuordnung mehrerer Regelzeichnungen explizit erforderlich ist. "
 		   });
 		addAnnotation
-		  (getSignal_Befestigung_IDRegelzeichnungVsigTafel(),
+		  (getSignal_Befestigung_IDBefestigungBauwerk(),
 		   source,
 		   new String[] {
-			   "documentation", "Verweis auf die Regelzeichnung f\u00fcr die Vorsignaltafel."
+			   "documentation", "Verweis auf ein Nicht-LST-Objekt (OL-Mast, Br\u00fccke, St\u00fctzwand), an dem die Signalbefestigung befestigt ist."
 		   });
 		addAnnotation
 		  (getSignal_Befestigung_IDSignalBefestigung(),
@@ -3464,7 +3758,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (getSignal_Befestigung_Allg_AttributeGroup_BefestigungArt(),
 		   source,
 		   new String[] {
-			   "documentation", "Beschreibung der Signalbefestigung, um auch ohne Regelzeichnung die grunds\u00e4tzliche Art erkennen zu k\u00f6nnen. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. DB-Regelwerk Im bisherigen PT1 keine eindeutige Darstellung, in der Regel aus den Eintr\u00e4gen in der Signaltabelle 1 zu erkennen. "
+			   "documentation", "Beschreibung der Signalbefestigung, um auch ohne Regelzeichnung die grunds\u00e4tzliche Art erkennen zu k\u00f6nnen.\nDie Werte \"Regelanordnung_Mast_...\" bilden Regel-Signalanordnungen am Mast ab. Mit den Werten \"Regelanordnung_Sonstige_...\" wird eine sonstige Regel-Anordnung beschrieben, z. B. am Pfosten (Lf). Sofern eine Sonderkonstruktion notwendig ist, sind die Werte \"Sonderanordnung_Mast_...\" und \"Pfosten_...\" zu nutzen. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. DB-Regelwerk Im bisherigen PT1 keine eindeutige Darstellung, in der Regel aus den Eintr\u00e4gen in der Signaltabelle 1 zu erkennen."
+		   });
+		addAnnotation
+		  (getSignal_Befestigung_Allg_AttributeGroup_FundamentArt(),
+		   source,
+		   new String[] {
+			   "documentation", "Bei Fundament: Angabe der Fundamentart, da bei herstellerneutraler Planung noch keine Regelzeichnungsnummer bzw. kein Bild gew\u00e4hlt werden kann."
 		   });
 		addAnnotation
 		  (getSignal_Befestigung_Allg_AttributeGroup_HoeheFundamentoberkante(),
@@ -3482,7 +3782,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (signal_Fank_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Abbildung des Fahrtank\u00fcnders (Wei\u00dfes Dreieck) sowie Zuordnung der Startsignale, f\u00fcr die eine Fahrtank\u00fcndigung erfolgen soll. Ein physischer Fahrtank\u00fcnder (Anzeiger) wird als Signal abgebildet, wobei hierbei nur die Attributgruppen Bezeichnung sowie Signal_Real zu nutzen sind (nicht: Signal_Real_Aktiv, da kein Anschluss mittels ID_Stellelement an ein Stellwerk). Erfolgt die Fahrtank\u00fcndigung ausschlie\u00dflich auf mobilen Endger\u00e4ten, so entf\u00e4llt das Anlegen des Signals f\u00fcr den Fahrtank\u00fcnder. "
+			   "documentation", "Abbildung des Fahrtank\u00fcnders (Wei\u00dfes Dreieck) sowie Zuordnung der Startsignale, f\u00fcr die eine Fahrtank\u00fcndigung erfolgen soll. Ein physischer Fahrtank\u00fcnder (Anzeiger) wird als Signal abgebildet, wobei hierbei nur die Attributgruppen Bezeichnung sowie Signal_Real zu nutzen sind (nicht: Signal_Real_Aktiv, da kein Anschluss mittels ID_Stellelement an ein Stellwerk). Erfolgt die Fahrtank\u00fcndigung ausschlie\u00dflich auf mobilen Endger\u00e4ten, so entf\u00e4llt das Anlegen des Signals f\u00fcr den Fahrtank\u00fcnder."
 		   });
 		addAnnotation
 		  (getSignal_Fank_Zuordnung_IDSignalFank(),
@@ -3500,13 +3800,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (getSignal_Fiktiv_AttributeGroup_AutoEinstellung(),
 		   source,
 		   new String[] {
-			   "documentation", "Zus\u00e4tzliche Angabe zu Aktiven Signalen, die sich selbstt\u00e4tig stellen k\u00f6nnen. Dabei wird unterschieden zwischen Signalen mit Signalselbststellbetrieb (Sb) und in der Zuglenkung (ZL). DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung, mittelbar aus Angaben in der Zugstra\u00dfentabelle zu erkennen. "
+			   "documentation", "Art der automatischen Einstellung.\nDB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung; bei realen, aktiven Signalen mittelbar aus Angaben in der Zugstra\u00dfentabelle zu erkennen."
 		   });
 		addAnnotation
 		  (getSignal_Fiktiv_AttributeGroup_FiktivesSignalFunktion(),
 		   source,
 		   new String[] {
-			   "documentation", "Funktion (Verwendungsm\u00f6glichkeit) eines fiktiven Signals. Sollen an einem Punkt mehrere Funktionen realisiert werden, so muss f\u00fcr jede Funktion je ein fiktives Signal an diesem Punkt vorgesehen werden. DB-Regelwerk Fiktive Signale sind als Start- oder Zielpunkte in den Zug- oder Rangierstra\u00dfentabellen erkennbar. Ihre Funktion ist nicht unmittelbar dargestellt, sie ergibt sich aus der Verwendung."
+			   "documentation", "Funktion (Verwendungsm\u00f6glichkeit) eines fiktiven Signals. Sollen an einem Punkt mehrere Funktionen realisiert werden, ist das Attribut mehrfach einzubinden. DB-Regelwerk Fiktive Signale sind als Start- oder Zielpunkte in den Zug- oder Rangierstra\u00dfentabellen erkennbar. Ihre Funktion ist nicht unmittelbar dargestellt, sie ergibt sich aus der Verwendung."
 		   });
 		addAnnotation
 		  (getSignal_Fstr_AttributeGroup_BesetzteAusfahrt(),
@@ -3524,7 +3824,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (getSignal_Fstr_AttributeGroup_Durchfahrt(),
 		   source,
 		   new String[] {
-			   "documentation", "Gibt an, ob und wie Weiterfahren ohne Halt \u00fcber das Zielsignal eines Fahrweges hinaus gestattet sind. Ist die Durchfahrt mittels \u00fcberstellten Zugstra\u00dfen verboten, mittels einzeln angew\u00e4hlter Zugstra\u00dfen auf dieses Signal und von diesem Signal aber zu gestatten, so ist der Wert \"erlaubt\" zu verwenden. In diesem Fall wird allerdings kein Objekt Fstr Aneinander \u00fcber dieses Signal angelegt. Ist betrieblich die Weiterfahrt einer Zugfahrt als Rangierfahrt zu gestatten (diese \u00c4nderung der Ril 408 ist noch nicht Bestandteil des Lastenheftes ESTW), so ist der Wert \"nur_mit_Sh1\" zu verwenden. Technisch schlie\u00dft eine Zugfahrt mit Durchrutschweg D0 an, das Signal zeigt Hp0 und Sh1. DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung. Die Symbolik im Sicherungstechnischen Lageplan gem\u00e4\u00dfe 819.9002 (11) ist f\u00fcr diesen Sachverhalt nicht ausreichend. "
+			   "documentation", "Gibt an, ob und wie Weiterfahren ohne Halt \u00fcber das Zielsignal eines Fahrweges hinaus gestattet sind. Ist die Durchfahrt mittels aneinandergereihter Zugstra\u00dfen verboten, mittels einzeln angew\u00e4hlter Zugstra\u00dfen auf dieses Signal und von diesem Signal aber zu gestatten, so ist der Wert \"erlaubt\" zu verwenden. In diesem Fall wird allerdings kein Objekt Fstr Aneinander \u00fcber dieses Signal angelegt. Ist betrieblich die Weiterfahrt einer Zugfahrt als Rangierfahrt zu gestatten (diese \u00c4nderung der Ril 408 ist noch nicht Bestandteil des Lastenheftes ESTW), so ist der Wert \"nur_mit_Sh1\" zu verwenden. Technisch schlie\u00dft eine Zugfahrt mit Durchrutschweg D0 an, das Signal zeigt Hp 0 und Sh 1. DB-Regelwerk Im bisherigen PT 1 ohne eindeutige Darstellung. Die Symbolik im Sicherungstechnischen Lageplan gem\u00e4\u00dfe 819.9002 (11) ist f\u00fcr diesen Sachverhalt nicht ausreichend."
 		   });
 		addAnnotation
 		  (getSignal_Fstr_AttributeGroup_IDRaZielErlaubnisabhaengig(),
@@ -3575,6 +3875,12 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "documentation", "Fiktive Signale haben keinen Signalrahmen, da sie keinen Signalbegriff zeigen k\u00f6nnen. Ein oder mehrere Signalrahmen bilden ein Signal. Die Gruppierung von Signalbegriffen innerhalb eines Signals zu Signalrahmen wird anhand der konstruktiven Gestaltung vorgenommen, z.B. werden alle Signalbegriffe des Hauptsignalschirms oder alle Signalbegriffe eines Zusatzanzeigers jeweils zu einem Signalrahmen zusammengefasst. Kann die Anzahl oder Art der Signalbegriffe eines Signalrahmens in Abh\u00e4ngigkeit vom betrieblichen Zustand ge\u00e4ndert werden, so wird dieser als schaltbar bezeichnet, andernfalls als fest. Im LST-Datenmodell ist diese Eigenschaft als Attribut zu den Signalbegriffen definiert; ein Signalrahmen ist danach genau dann schaltbar, wenn mindestens eines der enthaltenen Signalbegriffe schaltbar ist. Typische schaltbare Signalrahmen sind der Signalschirm eines Mehrabschnittssignals, das Lichtsignal eines Zusatzanzeigers und das Form- oder Lichtsignal eines Weichensignals. Typische feste Signalrahmen sind das Mastschild eines Hauptsignals, das Formsignal eines Zusatzanzeigers und die Haltetafel. \u00dcber den Signalrahmen erfolgt, sofern dies geplant ist, die Zuordnung von Signalbegriffen eines nachgeordneten Signals zu einem anderen Signal ohne Bezug zur Fahrstra\u00dfe, siehe dazu ID Signal Nachordnung Ausf\u00fchrliche Beschreibung s. Modellierung Signal. DB-Regelwerk Planungsdaten: im bisherigen PT1 ohne eindeutige Darstellung. In der Regel aus den Angaben in der Signaltabelle 1 zu erkennen. "
 		   });
 		addAnnotation
+		  (getSignal_Rahmen_IDRegelzeichnung(),
+		   source,
+		   new String[] {
+			   "documentation", "Verweis auf eine Regelzeichnung, sofern diese nur den Signalrahmen abbildet (z. B. Vorsignaltafel)."
+		   });
+		addAnnotation
 		  (getSignal_Rahmen_IDSignal(),
 		   source,
 		   new String[] {
@@ -3599,40 +3905,22 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "documentation", "Beschreibung des Signalrahmens, um auch ohne Regelzeichnung die grunds\u00e4tzliche Art erkennen zu k\u00f6nnen. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. DB-Regelwerk Im bisherigen PT 1 keine eindeutige Darstellung, in der Regel aus den Eintr\u00e4gen in der Signaltabelle1 zu erkennen. "
 		   });
 		addAnnotation
+		  (getSignal_Rahmen_RahmenHoehe(),
+		   source,
+		   new String[] {
+			   "documentation", "H\u00f6he des Rahmen-Mittelpunkts \u00fcber Schienenoberkante (SO). Die Angabe ist f\u00fcr die Zusammenstellung von Bauteilgruppen im BIM-Kontext relevant."
+		   });
+		addAnnotation
 		  (getSignal_Real_Aktiv_AttributeGroup_AutoEinstellung(),
 		   source,
 		   new String[] {
-			   "documentation", "Zus\u00e4tzliche Angabe zu Aktiven Signalen, die sich selbstt\u00e4tig stellen k\u00f6nnen. Dabei wird unterschieden zwischen Signalen mit Signalselbststellbetrieb (Sb) und in der Zuglenkung (ZL). DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung, mittelbar aus Angaben in der Zugstra\u00dfentabelle zu erkennen. "
+			   "documentation", "Art der automatischen Einstellung.\nDB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung; bei realen, aktiven Signalen mittelbar aus Angaben in der Zugstra\u00dfentabelle zu erkennen."
 		   });
 		addAnnotation
 		  (getSignal_Real_Aktiv_AttributeGroup_IDStellelement(),
 		   source,
 		   new String[] {
 			   "documentation", "Verweis auf das Objekt Stellelement zur Zusammenfassung von Eigenschaften der Objekte BUE Schnittstelle, PZB Element, Schluesselsperre, Signal, W Kr Gsp Element. Das Stellelement enth\u00e4lt Informationen \u00fcber den energetischen und logischen Anschluss der Objekte. F\u00fcr das PZB Element ist der Verweis nur zu f\u00fcllen, wenn das PZB_Element eine G\u00dc ist. DB-Regelwerk Bisher ohne eindeutige Darstellung "
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalFunktion(),
-		   source,
-		   new String[] {
-			   "documentation", "Angabe der betrieblichen Funktion eines Aktiven Signals f\u00fcr Zugfahrten. Aktive Signale sind Signale, an denen mindestens ein Signalbegriff schaltbar ist. Hauptsignale und Mehrabschnittssignale werden dabei detailliert in Einfahr-, Ausfahr-, Zwischen-, Nachr\u00fcck-, Block-, Deckungs-, Zugdeckungs- oder Gruppensignale bzw. Kombinationen aus diesen betrieblichen Funktionen unterteilt. Von den anderen aktiven Signalen wird nur noch das Zugzielsignal (z.B. hohes Sperrsignal als Zielsignal bei Zugfahrten) mit einem eigenen Attribut hervorgehoben, alle weiteren Aktiven Signale werden unter \"andere\" zusammengefasst. DB-Regelwerk 301, 819.20, Planungsdaten: im bisherigen PT 1 nur bei Signalen im Geltungsbereich der Ril 819.20, Tabelle f\u00fcr Signalabst\u00e4nde und Schutzstrecken, sonst ohne eindeutige Darstellung. "
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtErreichbar(),
-		   source,
-		   new String[] {
-			   "documentation", "Tats\u00e4chlich erreichbare Signalsicht innerhalb der Sollsignalsicht. Die Signalsicht beschreibt die Entfernung, ab der ein Aktives Signal eindeutig erkennbar sein soll (Sollsignalsicht) bzw. muss (Mindestsignalsicht), so dass vom Triebfahrzeugf\u00fchrer grunds\u00e4tzliche Handlungsweisen daraus ableitbar sind. Die erreichbare Signalsicht darf unter bestimmten Voraussetzungen kleiner als die Sollsignalsicht, jedoch nur mit besonderen Ma\u00dfnahmen kleiner als die Mindestsignalsicht sein. Die Signalsicht ist an das gesamte Signal gekoppelt, das bedeutet jedoch nicht, dass jeder Signalbegriff von Beginn der Signalsicht an vollst\u00e4ndig gelesen werden muss - die Festlegungen daf\u00fcr finden sich in den zugeh\u00f6rigen detaillierten Regelzeichnungen oder anderen Zulassungsdokumenten. DB-Regelwerk 819.02, 819.03, Planungsdaten: im bisherigen PT1 ohne eindeutige Darstellung, erg\u00e4nzt die Eintr\u00e4ge in Zeile 7 der Signaltabelle 1 um den Wert der am konkreten Ort erreichbaren Signalsicht "
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtMindest(),
-		   source,
-		   new String[] {
-			   "documentation", "Mindestsignalsicht gem\u00e4\u00df \u00f6rtlich zugelassener Geschwindigkeit vor dem Signal nach 6,75 s-Regel. Die Signalsicht beschreibt die Entfernung, ab der ein Aktives Signal eindeutig erkennbar sein soll (Sollsignalsicht) bzw. muss (Mindestsignalsicht), so dass vom Triebfahrzeugf\u00fchrer grunds\u00e4tzliche Handlungsweisen daraus ableitbar sind. Die erreichbare Signalsicht darf nur mit zus\u00e4tzlichen Ma\u00dfnahmen kleiner als die Mindestsignalsicht sein. Die Signalsicht ist an das gesamte Signal gekoppelt, das bedeutet jedoch nicht, dass jeder Signalbegriff von Beginn der Signalsicht an vollst\u00e4ndig gelesen werden muss - die Festlegungen daf\u00fcr finden sich in den zugeh\u00f6rigen detaillierten Regelzeichnungen oder anderen Zulassungsdokumenten. DB-Regelwerk 819.02, 819.03, Planungsdaten: entspricht dem zweiten (eingeklammerten) Eintrag in Zeile 7 der Signaltabelle 1. "
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtSoll(),
-		   source,
-		   new String[] {
-			   "documentation", "Sollsignalsicht gem\u00e4\u00df \u00f6rtlich zugelassener Geschwindigkeit vor dem Signal. Die Signalsicht beschreibt die Entfernung, ab der ein Aktives Signal eindeutig erkennbar sein soll (Sollsignalsicht) bzw. muss (Mindestsignalsicht), so dass vom Triebfahrzeugf\u00fchrer grunds\u00e4tzliche Handlungsweisen daraus ableitbar sind. Die erreichbare Signalsicht darf unter bestimmten Voraussetzungen kleiner als die Sollsignalsicht sein. Die Signalsicht ist an das gesamte Signal gekoppelt, das bedeutet jedoch nicht, dass jeder Signalbegriff von Beginn der Signalsicht an vollst\u00e4ndig gelesen werden muss - die Festlegungen daf\u00fcr finden sich in den zugeh\u00f6rigen detaillierten Regelzeichnungen oder anderen Zulassungsdokumenten. DB-Regelwerk 819.02, 819.03, Planungsdaten: entspricht dem ersten Eintrag in Zeile 7 der Signaltabelle 1. "
 		   });
 		addAnnotation
 		  (getSignal_Real_Aktiv_AttributeGroup_SonstigeZulaessigeAnordnung(),
@@ -3645,12 +3933,6 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		   source,
 		   new String[] {
 			   "documentation", "Enth\u00e4lt zus\u00e4tzliche Angaben zu Aktiven Signalen mit schaltbaren Signalbegriffen bez\u00fcglich der Nachtschaltung. DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung. "
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_Schirm_AttributeGroup_Dunkelschaltung(),
-		   source,
-		   new String[] {
-			   "documentation", "Zusatzangabe, ob ein Schirm-Signal dunkel geschaltet werden kann. Die Dunkelschaltung ist z. B. bei Strecken mit LZB-gef\u00fchrten Zugfahrten und bei Schnittstellen zu SIL 2 - ESTW relevant. Die Angabe ist bei Haupt- und Vorsignalen erforderlich, nicht jedoch f\u00fcr Sperrsignale. Wertzuordnung: true - Signal muss dunkel geschaltet werden k\u00f6nnen, false - Signal muss nicht dunkel geschaltet werden k\u00f6nnen. DB-Regelwerk Planungsdaten: Signaltabelle 1, Zeile 40"
 		   });
 		addAnnotation
 		  (getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunkt(),
@@ -3689,6 +3971,18 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "documentation", "Bezeichnung der Stellung der Streuscheibe eines Schirm-Signals, die der Signalsichtbestimmung zugrunde liegt. Bei der Betriebsstellung \"...gw\" ist die jeweilige Streuscheibe gewendet. DB-Regelwerk Planungsdaten: Signaltabelle 1, Zeile 9 (zweiter Eintrag) "
 		   });
 		addAnnotation
+		  (getSignal_Real_AttributeGroup_Dunkelschaltung(),
+		   source,
+		   new String[] {
+			   "documentation", "Zusatzangabe, ob ein Schirm-Signal dunkel geschaltet werden kann. Die Dunkelschaltung ist z. B. bei Strecken mit LZB-gef\u00fchrten Zugfahrten und bei Schnittstellen zu SIL 2 - ESTW relevant. Die Angabe ist bei Haupt- und Vorsignalen erforderlich, nicht jedoch f\u00fcr Sperrsignale. Wertzuordnung: true - Signal muss dunkel geschaltet werden k\u00f6nnen, false - Signal muss nicht dunkel geschaltet werden k\u00f6nnen. DB-Regelwerk Planungsdaten: Signaltabelle 1, Zeile 40"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_FunktionOhneSignal(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe zus\u00e4tzlicher Fahrstra\u00dfenfunktionen ohne Signal (RS = Rangierstra\u00dfenfunktion ohne Signal zur Anwendung bei Hauptsignalen ohne Ls-Anteil, ZS = Zugstra\u00dfenfunktion ohne Signal zur Anwendung bei Ls-Signalen)."
+		   });
+		addAnnotation
 		  (getSignal_Real_AttributeGroup_Geltungsbereich(),
 		   source,
 		   new String[] {
@@ -3699,6 +3993,30 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		   source,
 		   new String[] {
 			   "documentation", "Grunds\u00e4tzliche Art der Befestigung eines Signals. Einzelne Elemente des Signals (z. B. ein zum Hauptsignal geh\u00f6rendes, nicht am Hauptsignalmast angebrachtes Zusatzsignal) k\u00f6nnen von der grunds\u00e4tzlichen Befestigungsart abweichen, die exakte Konstruktion des Gesamtsignals ist im Modell in den Instanzen des Objekts Signal Befestigung dargestellt. DB-Regelwerk Signaltabelle 1, Zeile 12 "
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalFunktion(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe der betrieblichen Funktion eines Aktiven Signals f\u00fcr Zugfahrten. Aktive Signale sind Signale, an denen mindestens ein Signalbegriff schaltbar ist. Hauptsignale und Mehrabschnittssignale werden dabei detailliert in Einfahr-, Ausfahr-, Zwischen-, Nachr\u00fcck-, Block-, Deckungs-, Zugdeckungs- oder Gruppensignale bzw. Kombinationen aus diesen betrieblichen Funktionen unterteilt. Von den anderen aktiven Signalen wird nur noch das Zugzielsignal (z.B. hohes Sperrsignal als Zielsignal bei Zugfahrten) mit einem eigenen Attribut hervorgehoben, alle weiteren Aktiven Signale werden unter \"andere\" zusammengefasst. DB-Regelwerk 301, 819.20, Planungsdaten: im bisherigen PT 1 nur bei Signalen im Geltungsbereich der Ril 819.20, Tabelle f\u00fcr Signalabst\u00e4nde und Schutzstrecken, sonst ohne eindeutige Darstellung. "
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtErreichbar(),
+		   source,
+		   new String[] {
+			   "documentation", "Tats\u00e4chlich erreichbare Signalsicht innerhalb der Sollsignalsicht. Die Signalsicht beschreibt die Entfernung, ab der ein Aktives Signal eindeutig erkennbar sein soll (Sollsignalsicht) bzw. muss (Mindestsignalsicht), so dass vom Triebfahrzeugf\u00fchrer grunds\u00e4tzliche Handlungsweisen daraus ableitbar sind. Die erreichbare Signalsicht darf unter bestimmten Voraussetzungen kleiner als die Sollsignalsicht, jedoch nur mit besonderen Ma\u00dfnahmen kleiner als die Mindestsignalsicht sein. Die Signalsicht ist an das gesamte Signal gekoppelt, das bedeutet jedoch nicht, dass jeder Signalbegriff von Beginn der Signalsicht an vollst\u00e4ndig gelesen werden muss - die Festlegungen daf\u00fcr finden sich in den zugeh\u00f6rigen detaillierten Regelzeichnungen oder anderen Zulassungsdokumenten. DB-Regelwerk 819.02, 819.03, Planungsdaten: im bisherigen PT1 ohne eindeutige Darstellung, erg\u00e4nzt die Eintr\u00e4ge in Zeile 7 der Signaltabelle 1 um den Wert der am konkreten Ort erreichbaren Signalsicht "
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtMindest(),
+		   source,
+		   new String[] {
+			   "documentation", "Mindestsignalsicht gem\u00e4\u00df \u00f6rtlich zugelassener Geschwindigkeit vor dem Signal nach 6,75 s-Regel. Die Signalsicht beschreibt die Entfernung, ab der ein Aktives Signal eindeutig erkennbar sein soll (Sollsignalsicht) bzw. muss (Mindestsignalsicht), so dass vom Triebfahrzeugf\u00fchrer grunds\u00e4tzliche Handlungsweisen daraus ableitbar sind. Die erreichbare Signalsicht darf nur mit zus\u00e4tzlichen Ma\u00dfnahmen kleiner als die Mindestsignalsicht sein. Die Signalsicht ist an das gesamte Signal gekoppelt, das bedeutet jedoch nicht, dass jeder Signalbegriff von Beginn der Signalsicht an vollst\u00e4ndig gelesen werden muss - die Festlegungen daf\u00fcr finden sich in den zugeh\u00f6rigen detaillierten Regelzeichnungen oder anderen Zulassungsdokumenten. DB-Regelwerk 819.02, 819.03, Planungsdaten: entspricht dem zweiten (eingeklammerten) Eintrag in Zeile 7 der Signaltabelle 1. "
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtSoll(),
+		   source,
+		   new String[] {
+			   "documentation", "Sollsignalsicht gem\u00e4\u00df \u00f6rtlich zugelassener Geschwindigkeit vor dem Signal. Die Signalsicht beschreibt die Entfernung, ab der ein Aktives Signal eindeutig erkennbar sein soll (Sollsignalsicht) bzw. muss (Mindestsignalsicht), so dass vom Triebfahrzeugf\u00fchrer grunds\u00e4tzliche Handlungsweisen daraus ableitbar sind. Die erreichbare Signalsicht darf unter bestimmten Voraussetzungen kleiner als die Sollsignalsicht sein. Die Signalsicht ist an das gesamte Signal gekoppelt, das bedeutet jedoch nicht, dass jeder Signalbegriff von Beginn der Signalsicht an vollst\u00e4ndig gelesen werden muss - die Festlegungen daf\u00fcr finden sich in den zugeh\u00f6rigen detaillierten Regelzeichnungen oder anderen Zulassungsdokumenten. DB-Regelwerk 819.02, 819.03, Planungsdaten: entspricht dem ersten Eintrag in Zeile 7 der Signaltabelle 1. "
 		   });
 		addAnnotation
 		  (signal_SignalbegriffEClass,
@@ -3943,6 +4261,32 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "baseType", "ENUMFiktives_Signal_Funktion"
 		   });
 		addAnnotation
+		  (enumFundamentArtEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMFundament_Art"
+		   });
+		addAnnotation
+		  (enumFundamentArtObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMFundament_Art:Object",
+			   "baseType", "ENUMFundament_Art"
+		   });
+		addAnnotation
+		  (enumFunktionOhneSignalEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMFunktion_Ohne_Signal"
+		   });
+		addAnnotation
+		  (enumFunktionOhneSignalObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMFunktion_Ohne_Signal:Object",
+			   "baseType", "ENUMFunktion_Ohne_Signal"
+		   });
+		addAnnotation
 		  (enumGeltungsbereichEEnum,
 		   source,
 		   new String[] {
@@ -4087,6 +4431,34 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (fundament_Art_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCFundament_Art",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFundament_Art_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (funktion_Ohne_Signal_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCFunktion_Ohne_Signal",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFunktion_Ohne_Signal_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (gegengleis_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -4203,6 +4575,27 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		   });
 		addAnnotation
 		  (getRahmen_Art_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (rahmen_Hoehe_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TRahmen_Hoehe",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TMeter"
+		   });
+		addAnnotation
+		  (rahmen_Hoehe_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCRahmen_Hoehe",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getRahmen_Hoehe_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -4351,11 +4744,18 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "name", "ID_Regelzeichnung"
 		   });
 		addAnnotation
-		  (getSignal_Befestigung_IDRegelzeichnungVsigTafel(),
+		  (getSignal_Befestigung_SignalBefestigungAllg(),
 		   source,
 		   new String[] {
 			   "kind", "element",
-			   "name", "ID_Regelzeichnung_Vsig_Tafel"
+			   "name", "Signal_Befestigung_Allg"
+		   });
+		addAnnotation
+		  (getSignal_Befestigung_IDBefestigungBauwerk(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_Befestigung_Bauwerk"
 		   });
 		addAnnotation
 		  (getSignal_Befestigung_IDSignalBefestigung(),
@@ -4363,13 +4763,6 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		   new String[] {
 			   "kind", "element",
 			   "name", "ID_Signal_Befestigung"
-		   });
-		addAnnotation
-		  (getSignal_Befestigung_SignalBefestigungAllg(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Signal_Befestigung_Allg"
 		   });
 		addAnnotation
 		  (signal_Befestigung_Allg_AttributeGroupEClass,
@@ -4384,6 +4777,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		   new String[] {
 			   "kind", "element",
 			   "name", "Befestigung_Art"
+		   });
+		addAnnotation
+		  (getSignal_Befestigung_Allg_AttributeGroup_FundamentArt(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Fundament_Art"
 		   });
 		addAnnotation
 		  (getSignal_Befestigung_Allg_AttributeGroup_HoeheFundamentoberkante(),
@@ -4568,6 +4968,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (getSignal_Rahmen_IDRegelzeichnung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_Regelzeichnung"
+		   });
+		addAnnotation
 		  (getSignal_Rahmen_IDSignal(),
 		   source,
 		   new String[] {
@@ -4596,6 +5003,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "name", "Rahmen_Art"
 		   });
 		addAnnotation
+		  (getSignal_Rahmen_RahmenHoehe(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Rahmen_Hoehe"
+		   });
+		addAnnotation
 		  (signal_Real_Aktiv_AttributeGroupEClass,
 		   source,
 		   new String[] {
@@ -4617,34 +5031,6 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "name", "ID_Stellelement"
 		   });
 		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalFunktion(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Signal_Funktion"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtErreichbar(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Signalsicht_Erreichbar"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtMindest(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Signalsicht_Mindest"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtSoll(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Signalsicht_Soll"
-		   });
-		addAnnotation
 		  (getSignal_Real_Aktiv_AttributeGroup_SonstigeZulaessigeAnordnung(),
 		   source,
 		   new String[] {
@@ -4664,13 +5050,6 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		   new String[] {
 			   "name", "CSignal_Real_Aktiv_Schirm",
 			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_Schirm_AttributeGroup_Dunkelschaltung(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Dunkelschaltung"
 		   });
 		addAnnotation
 		  (getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunkt(),
@@ -4722,6 +5101,20 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (getSignal_Real_AttributeGroup_Dunkelschaltung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Dunkelschaltung"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_FunktionOhneSignal(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Funktion_Ohne_Signal"
+		   });
+		addAnnotation
 		  (getSignal_Real_AttributeGroup_Geltungsbereich(),
 		   source,
 		   new String[] {
@@ -4736,6 +5129,13 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "name", "Signal_Befestigungsart"
 		   });
 		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalFunktion(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Signal_Funktion"
+		   });
+		addAnnotation
 		  (getSignal_Real_AttributeGroup_SignalRealAktiv(),
 		   source,
 		   new String[] {
@@ -4748,6 +5148,27 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		   new String[] {
 			   "kind", "element",
 			   "name", "Signal_Real_Aktiv_Schirm"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtErreichbar(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Signalsicht_Erreichbar"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtMindest(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Signalsicht_Mindest"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtSoll(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Signalsicht_Soll"
 		   });
 		addAnnotation
 		  (signal_SignalbegriffEClass,
@@ -4976,7 +5397,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (signalEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSignal_PZBSchutzstreckeSoll(),
@@ -4988,7 +5409,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (signal_BefestigungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSignal_Befestigung_Allg_AttributeGroup_HoeheFundamentoberkante(),
@@ -5006,7 +5427,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (signal_Fank_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSignal_Fstr_AttributeGroup_BesetzteAusfahrt(),
@@ -5024,31 +5445,7 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 		  (signal_RahmenEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalFunktion(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <PlanningStage>EP</PlanningStage>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtErreichbar(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..500] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtMindest(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..300] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
-		   });
-		addAnnotation
-		  (getSignal_Real_Aktiv_AttributeGroup_SignalsichtSoll(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <PlanningStage>EP</PlanningStage>\r\n                         \r\n    <Patternbeschreibung> [1..500] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSignal_Real_Aktiv_Schirm_AttributeGroup_Richtpunkt(),
@@ -5075,10 +5472,34 @@ public class SignalePackageImpl extends EPackageImpl implements SignalePackage {
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <PlanningStage>PT1</PlanningStage>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalFunktion(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <PlanningStage>EP</PlanningStage>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtErreichbar(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..500] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtMindest(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..300] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+		   });
+		addAnnotation
+		  (getSignal_Real_AttributeGroup_SignalsichtSoll(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <PlanningStage>EP</PlanningStage>\r\n                         \r\n    <Patternbeschreibung> [1..500] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+		   });
+		addAnnotation
 		  (signal_SignalbegriffEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSignal_Signalbegriff_Allg_AttributeGroup_Anschaltdauer(),

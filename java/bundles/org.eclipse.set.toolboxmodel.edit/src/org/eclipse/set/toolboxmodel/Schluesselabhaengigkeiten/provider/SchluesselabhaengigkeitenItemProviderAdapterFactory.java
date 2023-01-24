@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -676,6 +677,29 @@ public class SchluesselabhaengigkeitenItemProviderAdapterFactory extends Schlues
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Sonderanlage_Lage_TypeClassItemProvider sonderanlage_Lage_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSonderanlage_Lage_TypeClassAdapter() {
+		if (sonderanlage_Lage_TypeClassItemProvider == null) {
+			sonderanlage_Lage_TypeClassItemProvider = new Sonderanlage_Lage_TypeClassItemProvider(this);
+		}
+
+		return sonderanlage_Lage_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Technisch_Berechtigter_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -699,26 +723,26 @@ public class SchluesselabhaengigkeitenItemProviderAdapterFactory extends Schlues
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Verschluss_Herzstueck_TypeClassItemProvider verschluss_Herzstueck_TypeClassItemProvider;
+	protected Verschluss_Ort_TypeClassItemProvider verschluss_Ort_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createVerschluss_Herzstueck_TypeClassAdapter() {
-		if (verschluss_Herzstueck_TypeClassItemProvider == null) {
-			verschluss_Herzstueck_TypeClassItemProvider = new Verschluss_Herzstueck_TypeClassItemProvider(this);
+	public Adapter createVerschluss_Ort_TypeClassAdapter() {
+		if (verschluss_Ort_TypeClassItemProvider == null) {
+			verschluss_Ort_TypeClassItemProvider = new Verschluss_Ort_TypeClassItemProvider(this);
 		}
 
-		return verschluss_Herzstueck_TypeClassItemProvider;
+		return verschluss_Ort_TypeClassItemProvider;
 	}
 
 	/**
@@ -898,8 +922,9 @@ public class SchluesselabhaengigkeitenItemProviderAdapterFactory extends Schlues
 		if (schluessel_Gruppe_TypeClassItemProvider != null) schluessel_Gruppe_TypeClassItemProvider.dispose();
 		if (schluessel_In_Grdst_Eingeschl_TypeClassItemProvider != null) schluessel_In_Grdst_Eingeschl_TypeClassItemProvider.dispose();
 		if (schluesselsperreItemProvider != null) schluesselsperreItemProvider.dispose();
+		if (sonderanlage_Lage_TypeClassItemProvider != null) sonderanlage_Lage_TypeClassItemProvider.dispose();
 		if (technisch_Berechtigter_TypeClassItemProvider != null) technisch_Berechtigter_TypeClassItemProvider.dispose();
-		if (verschluss_Herzstueck_TypeClassItemProvider != null) verschluss_Herzstueck_TypeClassItemProvider.dispose();
+		if (verschluss_Ort_TypeClassItemProvider != null) verschluss_Ort_TypeClassItemProvider.dispose();
 		if (w_Anbaulage_TypeClassItemProvider != null) w_Anbaulage_TypeClassItemProvider.dispose();
 		if (w_Lage_TypeClassItemProvider != null) w_Lage_TypeClassItemProvider.dispose();
 	}

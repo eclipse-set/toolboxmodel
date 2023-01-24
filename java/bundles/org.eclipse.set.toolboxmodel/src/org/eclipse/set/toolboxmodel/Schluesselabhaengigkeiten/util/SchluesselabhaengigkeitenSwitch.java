@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.util;
 
@@ -145,6 +152,8 @@ public class SchluesselabhaengigkeitenSwitch<T> extends Switch<T> {
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP: {
 				Schloss_Bezeichnung_AttributeGroup schloss_Bezeichnung_AttributeGroup = (Schloss_Bezeichnung_AttributeGroup)theEObject;
 				T result = caseSchloss_Bezeichnung_AttributeGroup(schloss_Bezeichnung_AttributeGroup);
+				if (result == null) result = caseBasis_Objekt(schloss_Bezeichnung_AttributeGroup);
+				if (result == null) result = caseUr_Objekt(schloss_Bezeichnung_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -247,6 +256,13 @@ public class SchluesselabhaengigkeitenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SchluesselabhaengigkeitenPackage.SONDERANLAGE_LAGE_TYPE_CLASS: {
+				Sonderanlage_Lage_TypeClass sonderanlage_Lage_TypeClass = (Sonderanlage_Lage_TypeClass)theEObject;
+				T result = caseSonderanlage_Lage_TypeClass(sonderanlage_Lage_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(sonderanlage_Lage_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SchluesselabhaengigkeitenPackage.TECHNISCH_BERECHTIGTER_TYPE_CLASS: {
 				Technisch_Berechtigter_TypeClass technisch_Berechtigter_TypeClass = (Technisch_Berechtigter_TypeClass)theEObject;
 				T result = caseTechnisch_Berechtigter_TypeClass(technisch_Berechtigter_TypeClass);
@@ -254,10 +270,10 @@ public class SchluesselabhaengigkeitenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SchluesselabhaengigkeitenPackage.VERSCHLUSS_HERZSTUECK_TYPE_CLASS: {
-				Verschluss_Herzstueck_TypeClass verschluss_Herzstueck_TypeClass = (Verschluss_Herzstueck_TypeClass)theEObject;
-				T result = caseVerschluss_Herzstueck_TypeClass(verschluss_Herzstueck_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(verschluss_Herzstueck_TypeClass);
+			case SchluesselabhaengigkeitenPackage.VERSCHLUSS_ORT_TYPE_CLASS: {
+				Verschluss_Ort_TypeClass verschluss_Ort_TypeClass = (Verschluss_Ort_TypeClass)theEObject;
+				T result = caseVerschluss_Ort_TypeClass(verschluss_Ort_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(verschluss_Ort_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -670,6 +686,21 @@ public class SchluesselabhaengigkeitenSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sonderanlage Lage Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sonderanlage Lage Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSonderanlage_Lage_TypeClass(Sonderanlage_Lage_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Technisch Berechtigter Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -685,17 +716,17 @@ public class SchluesselabhaengigkeitenSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Verschluss Herzstueck Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Verschluss Ort Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Verschluss Herzstueck Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Verschluss Ort Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVerschluss_Herzstueck_TypeClass(Verschluss_Herzstueck_TypeClass object) {
+	public T caseVerschluss_Ort_TypeClass(Verschluss_Ort_TypeClass object) {
 		return null;
 	}
 

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Fahrweg_Teil_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Fahrweg_Teil_Allg_AttributeGroup} object.
@@ -85,6 +86,7 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_Fahrweg_Teil_Allg_AttributeGroup_FWTeilNummer());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_Fahrweg_Teil_Allg_AttributeGroup_Umfahrstrasse());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_Fahrweg_Teil_Allg_AttributeGroup_ZielIstFahrwegende());
 		}
@@ -139,6 +141,7 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FT_Fahrweg_Teil_Allg_AttributeGroup.class)) {
+			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER:
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__UMFAHRSTRASSE:
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__ZIEL_IST_FAHRWEGENDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -159,6 +162,11 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_Fahrweg_Teil_Allg_AttributeGroup_FWTeilNummer(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createFW_Teil_Nummer_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

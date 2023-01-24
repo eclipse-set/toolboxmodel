@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage;
 
@@ -92,6 +99,15 @@ public interface ZugnummernmeldeanlageFactory extends EFactory {
 	 * @generated
 	 */
 	Besonderes_Schaltkriterium_TypeClass createBesonderes_Schaltkriterium_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Bezeichnung Besondere Anlage Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bezeichnung Besondere Anlage Type Class</em>'.
+	 * @generated
+	 */
+	Bezeichnung_Besondere_Anlage_TypeClass createBezeichnung_Besondere_Anlage_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Bf Kennung Type Class</em>'.
@@ -200,6 +216,15 @@ public interface ZugnummernmeldeanlageFactory extends EFactory {
 	 * @generated
 	 */
 	Koppelunterstation_TypeClass createKoppelunterstation_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>KUs Zeittelegramm Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>KUs Zeittelegramm Type Class</em>'.
+	 * @generated
+	 */
+	KUs_Zeittelegramm_TypeClass createKUs_Zeittelegramm_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Meldedruck Type Class</em>'.
@@ -427,6 +452,15 @@ public interface ZugnummernmeldeanlageFactory extends EFactory {
 	ZBS_Schnittstelle_TypeClass createZBS_Schnittstelle_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Zeitsynchronisation Funkuhr Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Zeitsynchronisation Funkuhr Type Class</em>'.
+	 * @generated
+	 */
+	Zeitsynchronisation_Funkuhr_TypeClass createZeitsynchronisation_Funkuhr_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ZLV Bus</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -443,6 +477,33 @@ public interface ZugnummernmeldeanlageFactory extends EFactory {
 	 * @generated
 	 */
 	ZLV_Bus_Allg_AttributeGroup createZLV_Bus_Allg_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>ZLV Bus Besondere Anlage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZLV Bus Besondere Anlage</em>'.
+	 * @generated
+	 */
+	ZLV_Bus_Besondere_Anlage createZLV_Bus_Besondere_Anlage();
+
+	/**
+	 * Returns a new object of class '<em>ZLV Bus Besondere Anlage Bezeichnung Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZLV Bus Besondere Anlage Bezeichnung Attribute Group</em>'.
+	 * @generated
+	 */
+	ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup createZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>ZLV Bus Bezeichnung Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZLV Bus Bezeichnung Attribute Group</em>'.
+	 * @generated
+	 */
+	ZLV_Bus_Bezeichnung_AttributeGroup createZLV_Bus_Bezeichnung_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>ZLV Bus Nr Type Class</em>'.
@@ -686,15 +747,6 @@ public interface ZugnummernmeldeanlageFactory extends EFactory {
 	 * @generated
 	 */
 	ZN_ZBS createZN_ZBS();
-
-	/**
-	 * Returns a new object of class '<em>ZN ZBS Allg Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ZN ZBS Allg Attribute Group</em>'.
-	 * @generated
-	 */
-	ZN_ZBS_Allg_AttributeGroup createZN_ZBS_Allg_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>Zugvorbereitungsmeldung Type Class</em>'.

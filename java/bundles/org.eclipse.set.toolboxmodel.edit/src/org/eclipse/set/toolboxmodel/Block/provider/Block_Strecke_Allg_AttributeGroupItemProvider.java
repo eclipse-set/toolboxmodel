@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Block.BlockFactory;
 import org.eclipse.set.toolboxmodel.Block.BlockPackage;
 import org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup} object.
@@ -87,9 +88,9 @@ public class Block_Strecke_Allg_AttributeGroupItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BETRIEBSFUEHRUNG);
 			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG);
-			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT);
 			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART);
-			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART);
+			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT);
+			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH);
 			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART);
 			childrenFeatures.add(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION);
 		}
@@ -146,9 +147,9 @@ public class Block_Strecke_Allg_AttributeGroupItemProvider
 		switch (notification.getFeatureID(Block_Strecke_Allg_AttributeGroup.class)) {
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BETRIEBSFUEHRUNG:
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG:
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT:
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART:
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART:
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT:
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH:
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART:
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -182,18 +183,18 @@ public class Block_Strecke_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT,
-				 BlockFactory.eINSTANCE.createEntwurfsgeschwindigkeit_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART,
 				 BlockFactory.eINSTANCE.createStrecke_Art_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART,
-				 BlockFactory.eINSTANCE.createTraktion_Art_TypeClass()));
+				(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT,
+				 BlockFactory.eINSTANCE.createStreckengeschwindigkeit_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BlockPackage.Literals.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH,
+				 BlockFactory.eINSTANCE.createTraktion_Art_Elektrisch_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

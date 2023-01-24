@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl;
 
@@ -13,7 +20,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Unterstation_Max_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Allg_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Nr_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Modem_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlagePackage;
 
@@ -26,7 +32,6 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageP
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZLV_Bus_Allg_AttributeGroupImpl#getUnterstationMax <em>Unterstation Max</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZLV_Bus_Allg_AttributeGroupImpl#getZLVBusNr <em>ZLV Bus Nr</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZLV_Bus_Allg_AttributeGroupImpl#getZNModem <em>ZN Modem</em>}</li>
  * </ul>
  *
@@ -42,16 +47,6 @@ public class ZLV_Bus_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected Unterstation_Max_TypeClass unterstationMax;
-
-	/**
-	 * The cached value of the '{@link #getZLVBusNr() <em>ZLV Bus Nr</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getZLVBusNr()
-	 * @generated
-	 * @ordered
-	 */
-	protected ZLV_Bus_Nr_TypeClass zLVBusNr;
 
 	/**
 	 * The cached value of the '{@link #getZNModem() <em>ZN Modem</em>}' containment reference.
@@ -133,51 +128,6 @@ public class ZLV_Bus_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	@Override
-	public ZLV_Bus_Nr_TypeClass getZLVBusNr() {
-		return zLVBusNr;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetZLVBusNr(ZLV_Bus_Nr_TypeClass newZLVBusNr, NotificationChain msgs) {
-		ZLV_Bus_Nr_TypeClass oldZLVBusNr = zLVBusNr;
-		zLVBusNr = newZLVBusNr;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR, oldZLVBusNr, newZLVBusNr);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setZLVBusNr(ZLV_Bus_Nr_TypeClass newZLVBusNr) {
-		if (newZLVBusNr != zLVBusNr) {
-			NotificationChain msgs = null;
-			if (zLVBusNr != null)
-				msgs = ((InternalEObject)zLVBusNr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR, null, msgs);
-			if (newZLVBusNr != null)
-				msgs = ((InternalEObject)newZLVBusNr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR, null, msgs);
-			msgs = basicSetZLVBusNr(newZLVBusNr, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR, newZLVBusNr, newZLVBusNr));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ZN_Modem_TypeClass getZNModem() {
 		return zNModem;
 	}
@@ -227,8 +177,6 @@ public class ZLV_Bus_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX:
 				return basicSetUnterstationMax(null, msgs);
-			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR:
-				return basicSetZLVBusNr(null, msgs);
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM:
 				return basicSetZNModem(null, msgs);
 			default:
@@ -246,8 +194,6 @@ public class ZLV_Bus_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX:
 				return getUnterstationMax();
-			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR:
-				return getZLVBusNr();
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM:
 				return getZNModem();
 			default:
@@ -265,9 +211,6 @@ public class ZLV_Bus_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX:
 				setUnterstationMax((Unterstation_Max_TypeClass)newValue);
-				return;
-			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR:
-				setZLVBusNr((ZLV_Bus_Nr_TypeClass)newValue);
 				return;
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM:
 				setZNModem((ZN_Modem_TypeClass)newValue);
@@ -289,9 +232,6 @@ public class ZLV_Bus_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX:
 				setUnterstationMax((Unterstation_Max_TypeClass)null);
 				return;
-			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR:
-				setZLVBusNr((ZLV_Bus_Nr_TypeClass)null);
-				return;
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM:
 				setZNModem((ZN_Modem_TypeClass)null);
 				return;
@@ -311,8 +251,6 @@ public class ZLV_Bus_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX:
 				return unterstationMax != null;
-			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR:
-				return zLVBusNr != null;
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM:
 				return zNModem != null;
 			default:

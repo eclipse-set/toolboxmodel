@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -12,6 +19,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
+
+import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,9 +43,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +62,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +81,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +100,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +119,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +138,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +157,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +176,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +195,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +214,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +233,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +252,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +271,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +290,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +309,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +328,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +347,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +366,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +385,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +404,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +423,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +442,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +461,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +480,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +499,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -590,6 +568,52 @@ public interface GeodatenPackage extends EPackage {
 	GeodatenPackage eINSTANCE = org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Anzeigegefuehrt_ES_Kategorie_TypeClassImpl <em>Anzeigegefuehrt ES Kategorie Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Anzeigegefuehrt_ES_Kategorie_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getAnzeigegefuehrt_ES_Kategorie_TypeClass()
+	 * @generated
+	 */
+	int ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS = 0;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Anzeigegefuehrt ES Kategorie Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Anzeigegefuehrt ES Kategorie Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Bezeichnung_Strecke_TypeClassImpl <em>Bezeichnung Strecke Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,10 +621,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getBezeichnung_Strecke_TypeClass()
 	 * @generated
 	 */
-	int BEZEICHNUNG_STRECKE_TYPE_CLASS = 0;
+	int BEZEICHNUNG_STRECKE_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -636,6 +660,52 @@ public interface GeodatenPackage extends EPackage {
 	int BEZEICHNUNG_STRECKE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Bremsweg_TypeClassImpl <em>Bremsweg Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Bremsweg_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getBremsweg_TypeClass()
+	 * @generated
+	 */
+	int BREMSWEG_TYPE_CLASS = 2;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREMSWEG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREMSWEG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Bremsweg Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREMSWEG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Bremsweg Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BREMSWEG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Form_TypeClassImpl <em>GEO Form Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -643,10 +713,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Form_TypeClass()
 	 * @generated
 	 */
-	int GEO_FORM_TYPE_CLASS = 1;
+	int GEO_FORM_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -682,6 +752,52 @@ public interface GeodatenPackage extends EPackage {
 	int GEO_FORM_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KAD_TypeClassImpl <em>GEO KAD Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KAD_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KAD_TypeClass()
+	 * @generated
+	 */
+	int GEO_KAD_TYPE_CLASS = 4;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_KAD_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_KAD_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>GEO KAD Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_KAD_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>GEO KAD Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_KAD_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KanteImpl <em>GEO Kante</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -689,7 +805,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Kante()
 	 * @generated
 	 */
-	int GEO_KANTE = 2;
+	int GEO_KANTE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -710,13 +826,22 @@ public interface GeodatenPackage extends EPackage {
 	int GEO_KANTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GEO_KANTE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_KANTE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -789,7 +914,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Kante_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP = 3;
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP = 6;
 
 	/**
 	 * The feature id for the '<em><b>GEO Form</b></em>' containment reference.
@@ -801,13 +926,22 @@ public interface GeodatenPackage extends EPackage {
 	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM = 0;
 
 	/**
+	 * The feature id for the '<em><b>GEOKAD</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD = 1;
+
+	/**
 	 * The feature id for the '<em><b>GEO Laenge</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE = 1;
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE = 2;
 
 	/**
 	 * The feature id for the '<em><b>GEO Radius A</b></em>' containment reference.
@@ -816,7 +950,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A = 2;
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A = 3;
 
 	/**
 	 * The feature id for the '<em><b>GEO Radius B</b></em>' containment reference.
@@ -825,7 +959,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_B = 3;
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_B = 4;
 
 	/**
 	 * The feature id for the '<em><b>GEO Richtungswinkel</b></em>' containment reference.
@@ -834,7 +968,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RICHTUNGSWINKEL = 4;
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RICHTUNGSWINKEL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Plan Quelle</b></em>' containment reference.
@@ -843,7 +977,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE = 5;
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE = 6;
 
 	/**
 	 * The number of structural features of the '<em>GEO Kante Allg Attribute Group</em>' class.
@@ -852,7 +986,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
+	int GEO_KANTE_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>GEO Kante Allg Attribute Group</em>' class.
@@ -871,7 +1005,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Knoten()
 	 * @generated
 	 */
-	int GEO_KNOTEN = 4;
+	int GEO_KNOTEN = 7;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -892,13 +1026,22 @@ public interface GeodatenPackage extends EPackage {
 	int GEO_KNOTEN__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GEO_KNOTEN__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_KNOTEN__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -937,23 +1080,23 @@ public interface GeodatenPackage extends EPackage {
 	int GEO_KNOTEN_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_LSys_TypeClassImpl <em>GEO Koordinaten System LSys Type Class</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Koordinatensystem_TypeClassImpl <em>GEO Koordinatensystem Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_LSys_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_LSys_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Koordinatensystem_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Koordinatensystem_TypeClass()
 	 * @generated
 	 */
-	int GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS = 5;
+	int GEO_KOORDINATENSYSTEM_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+	int GEO_KOORDINATENSYSTEM_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
 
 	/**
 	 * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -962,71 +1105,25 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+	int GEO_KOORDINATENSYSTEM_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>GEO Koordinaten System LSys Type Class</em>' class.
+	 * The number of structural features of the '<em>GEO Koordinatensystem Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+	int GEO_KOORDINATENSYSTEM_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>GEO Koordinaten System LSys Type Class</em>' class.
+	 * The number of operations of the '<em>GEO Koordinatensystem Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_Sonstige_TypeClassImpl <em>GEO Koordinaten System Sonstige Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_Sonstige_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_Sonstige_TypeClass()
-	 * @generated
-	 */
-	int GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS = 6;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>GEO Koordinaten System Sonstige Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>GEO Koordinaten System Sonstige Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+	int GEO_KOORDINATENSYSTEM_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Laenge_TypeClassImpl <em>GEO Laenge Type Class</em>}' class.
@@ -1036,10 +1133,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Laenge_TypeClass()
 	 * @generated
 	 */
-	int GEO_LAENGE_TYPE_CLASS = 7;
+	int GEO_LAENGE_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1082,10 +1179,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_PAD_TypeClass()
 	 * @generated
 	 */
-	int GEO_PAD_TYPE_CLASS = 8;
+	int GEO_PAD_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1128,7 +1225,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Punkt()
 	 * @generated
 	 */
-	int GEO_PUNKT = 9;
+	int GEO_PUNKT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1149,13 +1246,22 @@ public interface GeodatenPackage extends EPackage {
 	int GEO_PUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GEO_PUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_PUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1176,13 +1282,22 @@ public interface GeodatenPackage extends EPackage {
 	int GEO_PUNKT__GEO_PUNKT_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>IDGEO Kante</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_PUNKT__IDGEO_KANTE = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>IDGEO Knoten</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_PUNKT__IDGEO_KNOTEN = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
+	int GEO_PUNKT__IDGEO_KNOTEN = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>GEO Punkt</em>' class.
@@ -1191,7 +1306,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_PUNKT_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+	int GEO_PUNKT_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>GEO Punkt</em>' class.
@@ -1210,7 +1325,16 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Punkt_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP = 10;
+	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP = 12;
+
+	/**
+	 * The feature id for the '<em><b>GEO Koordinatensystem</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM = 0;
 
 	/**
 	 * The feature id for the '<em><b>GKX</b></em>' containment reference.
@@ -1219,7 +1343,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX = 0;
+	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX = 1;
 
 	/**
 	 * The feature id for the '<em><b>GKY</b></em>' containment reference.
@@ -1228,7 +1352,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY = 1;
+	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY = 2;
 
 	/**
 	 * The feature id for the '<em><b>GKZ</b></em>' containment reference.
@@ -1237,7 +1361,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKZ = 2;
+	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKZ = 3;
 
 	/**
 	 * The feature id for the '<em><b>Plan Quelle</b></em>' containment reference.
@@ -1246,25 +1370,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE = 3;
-
-	/**
-	 * The feature id for the '<em><b>GEO Koordinaten System LSys</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS = 4;
-
-	/**
-	 * The feature id for the '<em><b>GEO Koordinaten System Sonstige</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE = 5;
+	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE = 4;
 
 	/**
 	 * The number of structural features of the '<em>GEO Punkt Allg Attribute Group</em>' class.
@@ -1273,7 +1379,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
+	int GEO_PUNKT_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>GEO Punkt Allg Attribute Group</em>' class.
@@ -1292,10 +1398,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Radius_A_TypeClass()
 	 * @generated
 	 */
-	int GEO_RADIUS_ATYPE_CLASS = 11;
+	int GEO_RADIUS_ATYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1338,10 +1444,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Radius_B_TypeClass()
 	 * @generated
 	 */
-	int GEO_RADIUS_BTYPE_CLASS = 12;
+	int GEO_RADIUS_BTYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1384,10 +1490,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Richtungswinkel_TypeClass()
 	 * @generated
 	 */
-	int GEO_RICHTUNGSWINKEL_TYPE_CLASS = 13;
+	int GEO_RICHTUNGSWINKEL_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1430,10 +1536,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGeschwindigkeit_TypeClass()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_TYPE_CLASS = 14;
+	int GESCHWINDIGKEIT_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1476,7 +1582,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGeschwindigkeitsprofil()
 	 * @generated
 	 */
-	int GESCHWINDIGKEITSPROFIL = 15;
+	int GESCHWINDIGKEITSPROFIL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1497,13 +1603,22 @@ public interface GeodatenPackage extends EPackage {
 	int GESCHWINDIGKEITSPROFIL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GESCHWINDIGKEITSPROFIL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GESCHWINDIGKEITSPROFIL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1558,7 +1673,16 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGeschwindigkeitsprofil_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP = 16;
+	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP = 18;
+
+	/**
+	 * The feature id for the '<em><b>Anzeigegefuehrt ES Kategorie</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Geschwindigkeit</b></em>' containment reference.
@@ -1567,7 +1691,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT = 0;
+	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT = 1;
 
 	/**
 	 * The feature id for the '<em><b>VProfil Art</b></em>' containment reference.
@@ -1576,16 +1700,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART = 1;
-
-	/**
-	 * The feature id for the '<em><b>Wirkrichtung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG = 2;
+	int GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART = 2;
 
 	/**
 	 * The number of structural features of the '<em>Geschwindigkeitsprofil Allg Attribute Group</em>' class.
@@ -1613,10 +1728,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGK_X_TypeClass()
 	 * @generated
 	 */
-	int GK_XTYPE_CLASS = 17;
+	int GK_XTYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1659,10 +1774,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGK_Y_TypeClass()
 	 * @generated
 	 */
-	int GK_YTYPE_CLASS = 18;
+	int GK_YTYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1705,10 +1820,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGK_Z_TypeClass()
 	 * @generated
 	 */
-	int GK_ZTYPE_CLASS = 19;
+	int GK_ZTYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1751,7 +1866,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenlinie()
 	 * @generated
 	 */
-	int HOEHENLINIE = 20;
+	int HOEHENLINIE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1772,13 +1887,22 @@ public interface GeodatenPackage extends EPackage {
 	int HOEHENLINIE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int HOEHENLINIE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOEHENLINIE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1842,7 +1966,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenlinie_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int HOEHENLINIE_ALLG_ATTRIBUTE_GROUP = 21;
+	int HOEHENLINIE_ALLG_ATTRIBUTE_GROUP = 23;
 
 	/**
 	 * The feature id for the '<em><b>Hoehenlinie Form</b></em>' containment reference.
@@ -1897,10 +2021,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenlinie_Form_TypeClass()
 	 * @generated
 	 */
-	int HOEHENLINIE_FORM_TYPE_CLASS = 22;
+	int HOEHENLINIE_FORM_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1943,10 +2067,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenlinie_Laenge_TypeClass()
 	 * @generated
 	 */
-	int HOEHENLINIE_LAENGE_TYPE_CLASS = 23;
+	int HOEHENLINIE_LAENGE_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1989,7 +2113,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenpunkt()
 	 * @generated
 	 */
-	int HOEHENPUNKT = 24;
+	int HOEHENPUNKT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2010,13 +2134,22 @@ public interface GeodatenPackage extends EPackage {
 	int HOEHENPUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int HOEHENPUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOEHENPUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2080,7 +2213,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenpunkt_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int HOEHENPUNKT_ALLG_ATTRIBUTE_GROUP = 25;
+	int HOEHENPUNKT_ALLG_ATTRIBUTE_GROUP = 27;
 
 	/**
 	 * The feature id for the '<em><b>GEOPAD</b></em>' containment reference.
@@ -2162,10 +2295,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenpunkt_Datum_TypeClass()
 	 * @generated
 	 */
-	int HOEHENPUNKT_DATUM_TYPE_CLASS = 26;
+	int HOEHENPUNKT_DATUM_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2208,10 +2341,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenpunkt_Hoehe_TypeClass()
 	 * @generated
 	 */
-	int HOEHENPUNKT_HOEHE_TYPE_CLASS = 27;
+	int HOEHENPUNKT_HOEHE_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2254,10 +2387,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHSystem_TypeClass()
 	 * @generated
 	 */
-	int HSYSTEM_TYPE_CLASS = 28;
+	int HSYSTEM_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2293,6 +2426,52 @@ public interface GeodatenPackage extends EPackage {
 	int HSYSTEM_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Kantenname_TypeClassImpl <em>Kantenname Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Kantenname_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getKantenname_TypeClass()
+	 * @generated
+	 */
+	int KANTENNAME_TYPE_CLASS = 31;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KANTENNAME_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KANTENNAME_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Kantenname Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KANTENNAME_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Kantenname Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KANTENNAME_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Knotenname_TypeClassImpl <em>Knotenname Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2300,10 +2479,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getKnotenname_TypeClass()
 	 * @generated
 	 */
-	int KNOTENNAME_TYPE_CLASS = 29;
+	int KNOTENNAME_TYPE_CLASS = 32;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2346,10 +2525,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getNeigung_TypeClass()
 	 * @generated
 	 */
-	int NEIGUNG_TYPE_CLASS = 30;
+	int NEIGUNG_TYPE_CLASS = 33;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2392,7 +2571,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit()
 	 * @generated
 	 */
-	int OERTLICHKEIT = 31;
+	int OERTLICHKEIT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2413,13 +2592,22 @@ public interface GeodatenPackage extends EPackage {
 	int OERTLICHKEIT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int OERTLICHKEIT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OERTLICHKEIT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2449,13 +2637,22 @@ public interface GeodatenPackage extends EPackage {
 	int OERTLICHKEIT__ID_OERTLICHKEIT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Awanst Bedient</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>ID Strecke Punkt</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OERTLICHKEIT__ID_STRECKE_PUNKT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+	int OERTLICHKEIT__ID_STRECKE_PUNKT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Oertlichkeit Allg</b></em>' containment reference.
@@ -2464,7 +2661,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OERTLICHKEIT__OERTLICHKEIT_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int OERTLICHKEIT__OERTLICHKEIT_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Oertlichkeit</em>' class.
@@ -2473,7 +2670,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OERTLICHKEIT_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int OERTLICHKEIT_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Oertlichkeit</em>' class.
@@ -2492,10 +2689,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Abkuerzung_TypeClass()
 	 * @generated
 	 */
-	int OERTLICHKEIT_ABKUERZUNG_TYPE_CLASS = 32;
+	int OERTLICHKEIT_ABKUERZUNG_TYPE_CLASS = 35;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2538,7 +2735,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int OERTLICHKEIT_ALLG_ATTRIBUTE_GROUP = 33;
+	int OERTLICHKEIT_ALLG_ATTRIBUTE_GROUP = 36;
 
 	/**
 	 * The feature id for the '<em><b>Oertlichkeit Art</b></em>' containment reference.
@@ -2593,10 +2790,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Art_TypeClass()
 	 * @generated
 	 */
-	int OERTLICHKEIT_ART_TYPE_CLASS = 34;
+	int OERTLICHKEIT_ART_TYPE_CLASS = 37;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2639,7 +2836,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int OERTLICHKEIT_BEZEICHNUNG_ATTRIBUTE_GROUP = 35;
+	int OERTLICHKEIT_BEZEICHNUNG_ATTRIBUTE_GROUP = 38;
 
 	/**
 	 * The feature id for the '<em><b>Oertlichkeit Abkuerzung</b></em>' containment reference.
@@ -2694,10 +2891,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Gueltig_Ab_TypeClass()
 	 * @generated
 	 */
-	int OERTLICHKEIT_GUELTIG_AB_TYPE_CLASS = 36;
+	int OERTLICHKEIT_GUELTIG_AB_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2740,10 +2937,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Gueltig_Bis_TypeClass()
 	 * @generated
 	 */
-	int OERTLICHKEIT_GUELTIG_BIS_TYPE_CLASS = 37;
+	int OERTLICHKEIT_GUELTIG_BIS_TYPE_CLASS = 40;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2786,10 +2983,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Kurzname_TypeClass()
 	 * @generated
 	 */
-	int OERTLICHKEIT_KURZNAME_TYPE_CLASS = 38;
+	int OERTLICHKEIT_KURZNAME_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2832,10 +3029,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Langname_TypeClass()
 	 * @generated
 	 */
-	int OERTLICHKEIT_LANGNAME_TYPE_CLASS = 39;
+	int OERTLICHKEIT_LANGNAME_TYPE_CLASS = 42;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2878,10 +3075,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getPlan_Quelle_TypeClass()
 	 * @generated
 	 */
-	int PLAN_QUELLE_TYPE_CLASS = 40;
+	int PLAN_QUELLE_TYPE_CLASS = 43;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2924,7 +3121,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke()
 	 * @generated
 	 */
-	int STRECKE = 41;
+	int STRECKE = 44;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2945,13 +3142,22 @@ public interface GeodatenPackage extends EPackage {
 	int STRECKE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int STRECKE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3006,7 +3212,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP = 42;
+	int STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP = 45;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung Strecke</b></em>' containment reference.
@@ -3036,6 +3242,106 @@ public interface GeodatenPackage extends EPackage {
 	int STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_BremswegImpl <em>Strecke Bremsweg</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_BremswegImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Bremsweg()
+	 * @generated
+	 */
+	int STRECKE_BREMSWEG = 46;
+
+	/**
+	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__IDENTITAET = BasisobjektePackage.BEREICH_OBJEKT__IDENTITAET;
+
+	/**
+	 * The feature id for the '<em><b>Basis Objekt Allg</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
+
+	/**
+	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__OBJEKTREFERENZEN = BasisobjektePackage.BEREICH_OBJEKT__OBJEKTREFERENZEN;
+
+	/**
+	 * The feature id for the '<em><b>Bereich Objekt Teilbereich</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__BEREICH_OBJEKT_TEILBEREICH = BasisobjektePackage.BEREICH_OBJEKT__BEREICH_OBJEKT_TEILBEREICH;
+
+	/**
+	 * The feature id for the '<em><b>Bremsweg</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__BREMSWEG = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Strecke Richtung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG__STRECKE_RICHTUNG = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Strecke Bremsweg</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG_FEATURE_COUNT = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Strecke Bremsweg</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_BREMSWEG_OPERATION_COUNT = BasisobjektePackage.BEREICH_OBJEKT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_Meter_TypeClassImpl <em>Strecke Meter Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3043,10 +3349,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Meter_TypeClass()
 	 * @generated
 	 */
-	int STRECKE_METER_TYPE_CLASS = 43;
+	int STRECKE_METER_TYPE_CLASS = 47;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3089,7 +3395,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Punkt()
 	 * @generated
 	 */
-	int STRECKE_PUNKT = 44;
+	int STRECKE_PUNKT = 48;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3110,13 +3416,22 @@ public interface GeodatenPackage extends EPackage {
 	int STRECKE_PUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int STRECKE_PUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_PUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3173,6 +3488,52 @@ public interface GeodatenPackage extends EPackage {
 	int STRECKE_PUNKT_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_Richtung_TypeClassImpl <em>Strecke Richtung Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_Richtung_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Richtung_TypeClass()
+	 * @generated
+	 */
+	int STRECKE_RICHTUNG_TYPE_CLASS = 49;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_RICHTUNG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_RICHTUNG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Strecke Richtung Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_RICHTUNG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Strecke Richtung Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRECKE_RICHTUNG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.TB_Art_TypeClassImpl <em>TB Art Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3180,10 +3541,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTB_Art_TypeClass()
 	 * @generated
 	 */
-	int TB_ART_TYPE_CLASS = 45;
+	int TB_ART_TYPE_CLASS = 50;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3226,10 +3587,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTB_Beschreibung_TypeClass()
 	 * @generated
 	 */
-	int TB_BESCHREIBUNG_TYPE_CLASS = 46;
+	int TB_BESCHREIBUNG_TYPE_CLASS = 51;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3272,7 +3633,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTechnischer_Bereich()
 	 * @generated
 	 */
-	int TECHNISCHER_BEREICH = 47;
+	int TECHNISCHER_BEREICH = 52;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3293,13 +3654,22 @@ public interface GeodatenPackage extends EPackage {
 	int TECHNISCHER_BEREICH__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TECHNISCHER_BEREICH__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNISCHER_BEREICH__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3363,7 +3733,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTechnischer_Punkt()
 	 * @generated
 	 */
-	int TECHNISCHER_PUNKT = 48;
+	int TECHNISCHER_PUNKT = 53;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3384,13 +3754,22 @@ public interface GeodatenPackage extends EPackage {
 	int TECHNISCHER_PUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TECHNISCHER_PUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNISCHER_PUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3463,10 +3842,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTOP_Anschluss_A_TypeClass()
 	 * @generated
 	 */
-	int TOP_ANSCHLUSS_ATYPE_CLASS = 49;
+	int TOP_ANSCHLUSS_ATYPE_CLASS = 54;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3509,10 +3888,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTOP_Anschluss_B_TypeClass()
 	 * @generated
 	 */
-	int TOP_ANSCHLUSS_BTYPE_CLASS = 50;
+	int TOP_ANSCHLUSS_BTYPE_CLASS = 55;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3555,7 +3934,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTOP_Kante()
 	 * @generated
 	 */
-	int TOP_KANTE = 51;
+	int TOP_KANTE = 56;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3576,13 +3955,22 @@ public interface GeodatenPackage extends EPackage {
 	int TOP_KANTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TOP_KANTE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOP_KANTE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3646,7 +4034,16 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTOP_Kante_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP = 52;
+	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP = 57;
+
+	/**
+	 * The feature id for the '<em><b>Kantenname</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>TOP Anschluss A</b></em>' containment reference.
@@ -3655,7 +4052,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A = 0;
+	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A = 1;
 
 	/**
 	 * The feature id for the '<em><b>TOP Anschluss B</b></em>' containment reference.
@@ -3664,7 +4061,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B = 1;
+	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B = 2;
 
 	/**
 	 * The feature id for the '<em><b>TOP Laenge</b></em>' containment reference.
@@ -3673,7 +4070,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_LAENGE = 2;
+	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_LAENGE = 3;
 
 	/**
 	 * The number of structural features of the '<em>TOP Kante Allg Attribute Group</em>' class.
@@ -3682,7 +4079,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
+	int TOP_KANTE_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>TOP Kante Allg Attribute Group</em>' class.
@@ -3701,7 +4098,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTOP_Knoten()
 	 * @generated
 	 */
-	int TOP_KNOTEN = 53;
+	int TOP_KNOTEN = 58;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3722,13 +4119,22 @@ public interface GeodatenPackage extends EPackage {
 	int TOP_KNOTEN__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TOP_KNOTEN__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOP_KNOTEN__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3783,10 +4189,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTOP_Laenge_TypeClass()
 	 * @generated
 	 */
-	int TOP_LAENGE_TYPE_CLASS = 54;
+	int TOP_LAENGE_TYPE_CLASS = 59;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3829,10 +4235,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTP_Art_TypeClass()
 	 * @generated
 	 */
-	int TP_ART_TYPE_CLASS = 55;
+	int TP_ART_TYPE_CLASS = 60;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3875,10 +4281,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTP_Beschreibung_TypeClass()
 	 * @generated
 	 */
-	int TP_BESCHREIBUNG_TYPE_CLASS = 56;
+	int TP_BESCHREIBUNG_TYPE_CLASS = 61;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3914,6 +4320,115 @@ public interface GeodatenPackage extends EPackage {
 	int TP_BESCHREIBUNG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Trasse_Kante_child_AttributeGroupImpl <em>Trasse Kante child Attribute Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Trasse_Kante_child_AttributeGroupImpl
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTrasse_Kante_child_AttributeGroup()
+	 * @generated
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP = 62;
+
+	/**
+	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__IDENTITAET = Medien_und_TrassenPackage.TRASSE_KANTE__IDENTITAET;
+
+	/**
+	 * The feature id for the '<em><b>Basis Objekt Allg</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__BASIS_OBJEKT_ALLG = Medien_und_TrassenPackage.TRASSE_KANTE__BASIS_OBJEKT_ALLG;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK = Medien_und_TrassenPackage.TRASSE_KANTE__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__ID_OERTLICHKEIT_AUSGABE = Medien_und_TrassenPackage.TRASSE_KANTE__ID_OERTLICHKEIT_AUSGABE;
+
+	/**
+	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__OBJEKTREFERENZEN = Medien_und_TrassenPackage.TRASSE_KANTE__OBJEKTREFERENZEN;
+
+	/**
+	 * The feature id for the '<em><b>ID Trasse Knoten A</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__ID_TRASSE_KNOTEN_A = Medien_und_TrassenPackage.TRASSE_KANTE__ID_TRASSE_KNOTEN_A;
+
+	/**
+	 * The feature id for the '<em><b>ID Trasse Knoten B</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__ID_TRASSE_KNOTEN_B = Medien_und_TrassenPackage.TRASSE_KANTE__ID_TRASSE_KNOTEN_B;
+
+	/**
+	 * The feature id for the '<em><b>Trasse Kante Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__TRASSE_KANTE_ART = Medien_und_TrassenPackage.TRASSE_KANTE__TRASSE_KANTE_ART;
+
+	/**
+	 * The feature id for the '<em><b>Trasse Nutzer</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP__TRASSE_NUTZER = Medien_und_TrassenPackage.TRASSE_KANTE__TRASSE_NUTZER;
+
+	/**
+	 * The number of structural features of the '<em>Trasse Kante child Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP_FEATURE_COUNT = Medien_und_TrassenPackage.TRASSE_KANTE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Trasse Kante child Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP_OPERATION_COUNT = Medien_und_TrassenPackage.TRASSE_KANTE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.UeberhoehungImpl <em>Ueberhoehung</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3921,7 +4436,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehung()
 	 * @generated
 	 */
-	int UEBERHOEHUNG = 57;
+	int UEBERHOEHUNG = 63;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3942,13 +4457,22 @@ public interface GeodatenPackage extends EPackage {
 	int UEBERHOEHUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int UEBERHOEHUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UEBERHOEHUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -4012,7 +4536,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehung_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int UEBERHOEHUNG_ALLG_ATTRIBUTE_GROUP = 58;
+	int UEBERHOEHUNG_ALLG_ATTRIBUTE_GROUP = 64;
 
 	/**
 	 * The feature id for the '<em><b>GEOPAD</b></em>' containment reference.
@@ -4076,10 +4600,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehung_Datum_TypeClass()
 	 * @generated
 	 */
-	int UEBERHOEHUNG_DATUM_TYPE_CLASS = 59;
+	int UEBERHOEHUNG_DATUM_TYPE_CLASS = 65;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4122,10 +4646,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehung_Hoehe_TypeClass()
 	 * @generated
 	 */
-	int UEBERHOEHUNG_HOEHE_TYPE_CLASS = 60;
+	int UEBERHOEHUNG_HOEHE_TYPE_CLASS = 66;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4168,7 +4692,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehungslinie()
 	 * @generated
 	 */
-	int UEBERHOEHUNGSLINIE = 61;
+	int UEBERHOEHUNGSLINIE = 67;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -4189,13 +4713,22 @@ public interface GeodatenPackage extends EPackage {
 	int UEBERHOEHUNGSLINIE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int UEBERHOEHUNGSLINIE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UEBERHOEHUNGSLINIE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -4259,7 +4792,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehungslinie_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int UEBERHOEHUNGSLINIE_ALLG_ATTRIBUTE_GROUP = 62;
+	int UEBERHOEHUNGSLINIE_ALLG_ATTRIBUTE_GROUP = 68;
 
 	/**
 	 * The feature id for the '<em><b>Plan Quelle</b></em>' containment reference.
@@ -4314,10 +4847,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehungslinie_Form_TypeClass()
 	 * @generated
 	 */
-	int UEBERHOEHUNGSLINIE_FORM_TYPE_CLASS = 63;
+	int UEBERHOEHUNGSLINIE_FORM_TYPE_CLASS = 69;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4360,10 +4893,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehungslinie_Laenge_TypeClass()
 	 * @generated
 	 */
-	int UEBERHOEHUNGSLINIE_LAENGE_TYPE_CLASS = 64;
+	int UEBERHOEHUNGSLINIE_LAENGE_TYPE_CLASS = 70;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4406,10 +4939,10 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getV_Profil_Art_TypeClass()
 	 * @generated
 	 */
-	int VPROFIL_ART_TYPE_CLASS = 65;
+	int VPROFIL_ART_TYPE_CLASS = 71;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4445,52 +4978,6 @@ public interface GeodatenPackage extends EPackage {
 	int VPROFIL_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Wirkrichtung_TypeClassImpl <em>Wirkrichtung Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Wirkrichtung_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getWirkrichtung_TypeClass()
-	 * @generated
-	 */
-	int WIRKRICHTUNG_TYPE_CLASS = 66;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIRKRICHTUNG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIRKRICHTUNG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Wirkrichtung Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIRKRICHTUNG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Wirkrichtung Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIRKRICHTUNG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOForm <em>ENUMGEO Form</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4498,7 +4985,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMGEOForm()
 	 * @generated
 	 */
-	int ENUMGEO_FORM = 67;
+	int ENUMGEO_FORM = 72;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem <em>ENUMGEO Koordinatensystem</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMGEOKoordinatensystem()
+	 * @generated
+	 */
+	int ENUMGEO_KOORDINATENSYSTEM = 73;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMHoehenlinieForm <em>ENUM Hoehenlinie Form</em>}' enum.
@@ -4508,7 +5005,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMHoehenlinieForm()
 	 * @generated
 	 */
-	int ENUM_HOEHENLINIE_FORM = 68;
+	int ENUM_HOEHENLINIE_FORM = 74;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMHSystem <em>ENUMH System</em>}' enum.
@@ -4518,7 +5015,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMHSystem()
 	 * @generated
 	 */
-	int ENUMH_SYSTEM = 69;
+	int ENUMH_SYSTEM = 75;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMOertlichkeitArt <em>ENUM Oertlichkeit Art</em>}' enum.
@@ -4528,7 +5025,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMOertlichkeitArt()
 	 * @generated
 	 */
-	int ENUM_OERTLICHKEIT_ART = 70;
+	int ENUM_OERTLICHKEIT_ART = 76;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMPlanQuelle <em>ENUM Plan Quelle</em>}' enum.
@@ -4538,7 +5035,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMPlanQuelle()
 	 * @generated
 	 */
-	int ENUM_PLAN_QUELLE = 71;
+	int ENUM_PLAN_QUELLE = 77;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung <em>ENUM Strecke Richtung</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMStreckeRichtung()
+	 * @generated
+	 */
+	int ENUM_STRECKE_RICHTUNG = 78;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMTBArt <em>ENUMTB Art</em>}' enum.
@@ -4548,7 +5055,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMTBArt()
 	 * @generated
 	 */
-	int ENUMTB_ART = 72;
+	int ENUMTB_ART = 79;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMTOPAnschluss <em>ENUMTOP Anschluss</em>}' enum.
@@ -4558,7 +5065,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMTOPAnschluss()
 	 * @generated
 	 */
-	int ENUMTOP_ANSCHLUSS = 73;
+	int ENUMTOP_ANSCHLUSS = 80;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMTPArt <em>ENUMTP Art</em>}' enum.
@@ -4568,7 +5075,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMTPArt()
 	 * @generated
 	 */
-	int ENUMTP_ART = 74;
+	int ENUMTP_ART = 81;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMUeberhoehungslinieForm <em>ENUM Ueberhoehungslinie Form</em>}' enum.
@@ -4578,7 +5085,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMUeberhoehungslinieForm()
 	 * @generated
 	 */
-	int ENUM_UEBERHOEHUNGSLINIE_FORM = 75;
+	int ENUM_UEBERHOEHUNGSLINIE_FORM = 82;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMVProfilArt <em>ENUMV Profil Art</em>}' enum.
@@ -4588,7 +5095,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMVProfilArt()
 	 * @generated
 	 */
-	int ENUMV_PROFIL_ART = 76;
+	int ENUMV_PROFIL_ART = 83;
+
+	/**
+	 * The meta object id for the '<em>Anzeigegefuehrt ES Kategorie Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getAnzeigegefuehrt_ES_Kategorie_Type()
+	 * @generated
+	 */
+	int ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE = 84;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Strecke Type</em>' data type.
@@ -4598,7 +5115,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getBezeichnung_Strecke_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_STRECKE_TYPE = 77;
+	int BEZEICHNUNG_STRECKE_TYPE = 85;
+
+	/**
+	 * The meta object id for the '<em>Enumeration1</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getEnumeration1()
+	 * @generated
+	 */
+	int ENUMERATION1 = 86;
 
 	/**
 	 * The meta object id for the '<em>ENUMGEO Form Object</em>' data type.
@@ -4608,7 +5135,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMGEOFormObject()
 	 * @generated
 	 */
-	int ENUMGEO_FORM_OBJECT = 78;
+	int ENUMGEO_FORM_OBJECT = 87;
+
+	/**
+	 * The meta object id for the '<em>ENUMGEO Koordinatensystem Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMGEOKoordinatensystemObject()
+	 * @generated
+	 */
+	int ENUMGEO_KOORDINATENSYSTEM_OBJECT = 88;
 
 	/**
 	 * The meta object id for the '<em>ENUM Hoehenlinie Form Object</em>' data type.
@@ -4618,7 +5155,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMHoehenlinieFormObject()
 	 * @generated
 	 */
-	int ENUM_HOEHENLINIE_FORM_OBJECT = 79;
+	int ENUM_HOEHENLINIE_FORM_OBJECT = 89;
 
 	/**
 	 * The meta object id for the '<em>ENUMH System Object</em>' data type.
@@ -4628,7 +5165,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMHSystemObject()
 	 * @generated
 	 */
-	int ENUMH_SYSTEM_OBJECT = 80;
+	int ENUMH_SYSTEM_OBJECT = 90;
 
 	/**
 	 * The meta object id for the '<em>ENUM Oertlichkeit Art Object</em>' data type.
@@ -4638,7 +5175,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMOertlichkeitArtObject()
 	 * @generated
 	 */
-	int ENUM_OERTLICHKEIT_ART_OBJECT = 81;
+	int ENUM_OERTLICHKEIT_ART_OBJECT = 91;
 
 	/**
 	 * The meta object id for the '<em>ENUM Plan Quelle Object</em>' data type.
@@ -4648,7 +5185,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMPlanQuelleObject()
 	 * @generated
 	 */
-	int ENUM_PLAN_QUELLE_OBJECT = 82;
+	int ENUM_PLAN_QUELLE_OBJECT = 92;
+
+	/**
+	 * The meta object id for the '<em>ENUM Strecke Richtung Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMStreckeRichtungObject()
+	 * @generated
+	 */
+	int ENUM_STRECKE_RICHTUNG_OBJECT = 93;
 
 	/**
 	 * The meta object id for the '<em>ENUMTB Art Object</em>' data type.
@@ -4658,7 +5205,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMTBArtObject()
 	 * @generated
 	 */
-	int ENUMTB_ART_OBJECT = 83;
+	int ENUMTB_ART_OBJECT = 94;
 
 	/**
 	 * The meta object id for the '<em>ENUMTOP Anschluss Object</em>' data type.
@@ -4668,7 +5215,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMTOPAnschlussObject()
 	 * @generated
 	 */
-	int ENUMTOP_ANSCHLUSS_OBJECT = 84;
+	int ENUMTOP_ANSCHLUSS_OBJECT = 95;
 
 	/**
 	 * The meta object id for the '<em>ENUMTP Art Object</em>' data type.
@@ -4678,7 +5225,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMTPArtObject()
 	 * @generated
 	 */
-	int ENUMTP_ART_OBJECT = 85;
+	int ENUMTP_ART_OBJECT = 96;
 
 	/**
 	 * The meta object id for the '<em>ENUM Ueberhoehungslinie Form Object</em>' data type.
@@ -4688,7 +5235,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMUeberhoehungslinieFormObject()
 	 * @generated
 	 */
-	int ENUM_UEBERHOEHUNGSLINIE_FORM_OBJECT = 86;
+	int ENUM_UEBERHOEHUNGSLINIE_FORM_OBJECT = 97;
 
 	/**
 	 * The meta object id for the '<em>ENUMV Profil Art Object</em>' data type.
@@ -4698,27 +5245,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMVProfilArtObject()
 	 * @generated
 	 */
-	int ENUMV_PROFIL_ART_OBJECT = 87;
+	int ENUMV_PROFIL_ART_OBJECT = 98;
 
 	/**
-	 * The meta object id for the '<em>GEO Koordinaten System LSys Type</em>' data type.
+	 * The meta object id for the '<em>GEO KAD Type</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.lang.String
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_LSys_Type()
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KAD_Type()
 	 * @generated
 	 */
-	int GEO_KOORDINATEN_SYSTEM_LSYS_TYPE = 88;
-
-	/**
-	 * The meta object id for the '<em>GEO Koordinaten System Sonstige Type</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.lang.String
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_Sonstige_Type()
-	 * @generated
-	 */
-	int GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE = 89;
+	int GEO_KAD_TYPE = 99;
 
 	/**
 	 * The meta object id for the '<em>GEO Laenge Type</em>' data type.
@@ -4728,7 +5265,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Laenge_Type()
 	 * @generated
 	 */
-	int GEO_LAENGE_TYPE = 90;
+	int GEO_LAENGE_TYPE = 100;
 
 	/**
 	 * The meta object id for the '<em>GEO PAD Type</em>' data type.
@@ -4738,7 +5275,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_PAD_Type()
 	 * @generated
 	 */
-	int GEO_PAD_TYPE = 91;
+	int GEO_PAD_TYPE = 101;
 
 	/**
 	 * The meta object id for the '<em>GEO Radius AType</em>' data type.
@@ -4748,7 +5285,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Radius_A_Type()
 	 * @generated
 	 */
-	int GEO_RADIUS_ATYPE = 92;
+	int GEO_RADIUS_ATYPE = 102;
 
 	/**
 	 * The meta object id for the '<em>GEO Radius BType</em>' data type.
@@ -4758,7 +5295,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Radius_B_Type()
 	 * @generated
 	 */
-	int GEO_RADIUS_BTYPE = 93;
+	int GEO_RADIUS_BTYPE = 103;
 
 	/**
 	 * The meta object id for the '<em>GEO Richtungswinkel Type</em>' data type.
@@ -4768,7 +5305,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Richtungswinkel_Type()
 	 * @generated
 	 */
-	int GEO_RICHTUNGSWINKEL_TYPE = 94;
+	int GEO_RICHTUNGSWINKEL_TYPE = 104;
 
 	/**
 	 * The meta object id for the '<em>Geschwindigkeit Type</em>' data type.
@@ -4778,7 +5315,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGeschwindigkeit_Type()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_TYPE = 95;
+	int GESCHWINDIGKEIT_TYPE = 105;
 
 	/**
 	 * The meta object id for the '<em>GK XType</em>' data type.
@@ -4788,7 +5325,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGK_X_Type()
 	 * @generated
 	 */
-	int GK_XTYPE = 96;
+	int GK_XTYPE = 106;
 
 	/**
 	 * The meta object id for the '<em>GK YType</em>' data type.
@@ -4798,7 +5335,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGK_Y_Type()
 	 * @generated
 	 */
-	int GK_YTYPE = 97;
+	int GK_YTYPE = 107;
 
 	/**
 	 * The meta object id for the '<em>GK ZType</em>' data type.
@@ -4808,7 +5345,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGK_Z_Type()
 	 * @generated
 	 */
-	int GK_ZTYPE = 98;
+	int GK_ZTYPE = 108;
 
 	/**
 	 * The meta object id for the '<em>Hoehenlinie Laenge Type</em>' data type.
@@ -4818,7 +5355,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenlinie_Laenge_Type()
 	 * @generated
 	 */
-	int HOEHENLINIE_LAENGE_TYPE = 99;
+	int HOEHENLINIE_LAENGE_TYPE = 109;
 
 	/**
 	 * The meta object id for the '<em>Hoehenpunkt Hoehe Type</em>' data type.
@@ -4828,7 +5365,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getHoehenpunkt_Hoehe_Type()
 	 * @generated
 	 */
-	int HOEHENPUNKT_HOEHE_TYPE = 100;
+	int HOEHENPUNKT_HOEHE_TYPE = 110;
+
+	/**
+	 * The meta object id for the '<em>Kantenname Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getKantenname_Type()
+	 * @generated
+	 */
+	int KANTENNAME_TYPE = 111;
 
 	/**
 	 * The meta object id for the '<em>Knotenname Type</em>' data type.
@@ -4838,7 +5385,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getKnotenname_Type()
 	 * @generated
 	 */
-	int KNOTENNAME_TYPE = 101;
+	int KNOTENNAME_TYPE = 112;
 
 	/**
 	 * The meta object id for the '<em>Neigung Type</em>' data type.
@@ -4848,7 +5395,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getNeigung_Type()
 	 * @generated
 	 */
-	int NEIGUNG_TYPE = 102;
+	int NEIGUNG_TYPE = 113;
 
 	/**
 	 * The meta object id for the '<em>Oertlichkeit Abkuerzung Type</em>' data type.
@@ -4858,7 +5405,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Abkuerzung_Type()
 	 * @generated
 	 */
-	int OERTLICHKEIT_ABKUERZUNG_TYPE = 103;
+	int OERTLICHKEIT_ABKUERZUNG_TYPE = 114;
 
 	/**
 	 * The meta object id for the '<em>Oertlichkeit Kurzname Type</em>' data type.
@@ -4868,7 +5415,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Kurzname_Type()
 	 * @generated
 	 */
-	int OERTLICHKEIT_KURZNAME_TYPE = 104;
+	int OERTLICHKEIT_KURZNAME_TYPE = 115;
 
 	/**
 	 * The meta object id for the '<em>Oertlichkeit Langname Type</em>' data type.
@@ -4878,7 +5425,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getOertlichkeit_Langname_Type()
 	 * @generated
 	 */
-	int OERTLICHKEIT_LANGNAME_TYPE = 105;
+	int OERTLICHKEIT_LANGNAME_TYPE = 116;
 
 	/**
 	 * The meta object id for the '<em>Strecke Meter Type</em>' data type.
@@ -4888,7 +5435,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Meter_Type()
 	 * @generated
 	 */
-	int STRECKE_METER_TYPE = 106;
+	int STRECKE_METER_TYPE = 117;
 
 	/**
 	 * The meta object id for the '<em>TB Beschreibung Type</em>' data type.
@@ -4898,7 +5445,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTB_Beschreibung_Type()
 	 * @generated
 	 */
-	int TB_BESCHREIBUNG_TYPE = 107;
+	int TB_BESCHREIBUNG_TYPE = 118;
 
 	/**
 	 * The meta object id for the '<em>TOP Laenge Type</em>' data type.
@@ -4908,7 +5455,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTOP_Laenge_Type()
 	 * @generated
 	 */
-	int TOP_LAENGE_TYPE = 108;
+	int TOP_LAENGE_TYPE = 119;
 
 	/**
 	 * The meta object id for the '<em>TP Beschreibung Type</em>' data type.
@@ -4918,7 +5465,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTP_Beschreibung_Type()
 	 * @generated
 	 */
-	int TP_BESCHREIBUNG_TYPE = 109;
+	int TP_BESCHREIBUNG_TYPE = 120;
 
 	/**
 	 * The meta object id for the '<em>Ueberhoehung Hoehe Type</em>' data type.
@@ -4928,7 +5475,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehung_Hoehe_Type()
 	 * @generated
 	 */
-	int UEBERHOEHUNG_HOEHE_TYPE = 110;
+	int UEBERHOEHUNG_HOEHE_TYPE = 121;
 
 	/**
 	 * The meta object id for the '<em>Ueberhoehungslinie Laenge Type</em>' data type.
@@ -4938,18 +5485,29 @@ public interface GeodatenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getUeberhoehungslinie_Laenge_Type()
 	 * @generated
 	 */
-	int UEBERHOEHUNGSLINIE_LAENGE_TYPE = 111;
+	int UEBERHOEHUNGSLINIE_LAENGE_TYPE = 122;
+
 
 	/**
-	 * The meta object id for the '<em>Wirkrichtung Type</em>' data type.
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass <em>Anzeigegefuehrt ES Kategorie Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getWirkrichtung_Type()
+	 * @return the meta object for class '<em>Anzeigegefuehrt ES Kategorie Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass
 	 * @generated
 	 */
-	int WIRKRICHTUNG_TYPE = 112;
+	EClass getAnzeigegefuehrt_ES_Kategorie_TypeClass();
 
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass#getWert()
+	 * @see #getAnzeigegefuehrt_ES_Kategorie_TypeClass()
+	 * @generated
+	 */
+	EAttribute getAnzeigegefuehrt_ES_Kategorie_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Bezeichnung_Strecke_TypeClass <em>Bezeichnung Strecke Type Class</em>}'.
@@ -4973,6 +5531,27 @@ public interface GeodatenPackage extends EPackage {
 	EAttribute getBezeichnung_Strecke_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass <em>Bremsweg Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bremsweg Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass
+	 * @generated
+	 */
+	EClass getBremsweg_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass#getWert()
+	 * @see #getBremsweg_TypeClass()
+	 * @generated
+	 */
+	EAttribute getBremsweg_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Form_TypeClass <em>GEO Form Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4992,6 +5571,27 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGEO_Form_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass <em>GEO KAD Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GEO KAD Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass
+	 * @generated
+	 */
+	EClass getGEO_KAD_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass#getWert()
+	 * @see #getGEO_KAD_TypeClass()
+	 * @generated
+	 */
+	EAttribute getGEO_KAD_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante <em>GEO Kante</em>}'.
@@ -5067,6 +5667,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGEO_Kante_Allg_AttributeGroup_GEOForm();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEOKAD <em>GEOKAD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>GEOKAD</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEOKAD()
+	 * @see #getGEO_Kante_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getGEO_Kante_Allg_AttributeGroup_GEOKAD();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEOLaenge <em>GEO Laenge</em>}'.
@@ -5145,46 +5756,25 @@ public interface GeodatenPackage extends EPackage {
 	EReference getGEO_Knoten_GEOPAD();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass <em>GEO Koordinaten System LSys Type Class</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass <em>GEO Koordinatensystem Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GEO Koordinaten System LSys Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass
+	 * @return the meta object for class '<em>GEO Koordinatensystem Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass
 	 * @generated
 	 */
-	EClass getGEO_KoordinatenSystem_LSys_TypeClass();
+	EClass getGEO_Koordinatensystem_TypeClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass#getWert <em>Wert</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass#getWert <em>Wert</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass#getWert()
-	 * @see #getGEO_KoordinatenSystem_LSys_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass#getWert()
+	 * @see #getGEO_Koordinatensystem_TypeClass()
 	 * @generated
 	 */
-	EAttribute getGEO_KoordinatenSystem_LSys_TypeClass_Wert();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass <em>GEO Koordinaten System Sonstige Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GEO Koordinaten System Sonstige Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass
-	 * @generated
-	 */
-	EClass getGEO_KoordinatenSystem_Sonstige_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass#getWert()
-	 * @see #getGEO_KoordinatenSystem_Sonstige_TypeClass()
-	 * @generated
-	 */
-	EAttribute getGEO_KoordinatenSystem_Sonstige_TypeClass_Wert();
+	EAttribute getGEO_Koordinatensystem_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Laenge_TypeClass <em>GEO Laenge Type Class</em>}'.
@@ -5250,6 +5840,17 @@ public interface GeodatenPackage extends EPackage {
 	EReference getGEO_Punkt_GEOPunktAllg();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKante <em>IDGEO Kante</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>IDGEO Kante</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKante()
+	 * @see #getGEO_Punkt()
+	 * @generated
+	 */
+	EReference getGEO_Punkt_IDGEOKante();
+
+	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKnoten <em>IDGEO Knoten</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5269,6 +5870,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGEO_Punkt_Allg_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatensystem <em>GEO Koordinatensystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>GEO Koordinatensystem</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatensystem()
+	 * @see #getGEO_Punkt_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatensystem();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGKX <em>GKX</em>}'.
@@ -5313,28 +5925,6 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGEO_Punkt_Allg_AttributeGroup_PlanQuelle();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemLSys <em>GEO Koordinaten System LSys</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GEO Koordinaten System LSys</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemLSys()
-	 * @see #getGEO_Punkt_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemSonstige <em>GEO Koordinaten System Sonstige</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GEO Koordinaten System Sonstige</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemSonstige()
-	 * @see #getGEO_Punkt_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemSonstige();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Radius_A_TypeClass <em>GEO Radius AType Class</em>}'.
@@ -5452,6 +6042,17 @@ public interface GeodatenPackage extends EPackage {
 	EClass getGeschwindigkeitsprofil_Allg_AttributeGroup();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getAnzeigegefuehrtESKategorie <em>Anzeigegefuehrt ES Kategorie</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Anzeigegefuehrt ES Kategorie</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getAnzeigegefuehrtESKategorie()
+	 * @see #getGeschwindigkeitsprofil_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_AnzeigegefuehrtESKategorie();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getGeschwindigkeit <em>Geschwindigkeit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5472,17 +6073,6 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_VProfilArt();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getWirkrichtung <em>Wirkrichtung</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Wirkrichtung</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getWirkrichtung()
-	 * @see #getGeschwindigkeitsprofil_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_Wirkrichtung();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.GK_X_TypeClass <em>GK XType Class</em>}'.
@@ -5836,6 +6426,27 @@ public interface GeodatenPackage extends EPackage {
 	EAttribute getHSystem_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass <em>Kantenname Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kantenname Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass
+	 * @generated
+	 */
+	EClass getKantenname_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass#getWert()
+	 * @see #getKantenname_TypeClass()
+	 * @generated
+	 */
+	EAttribute getKantenname_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Knotenname_TypeClass <em>Knotenname Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5908,6 +6519,17 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOertlichkeit_IDOertlichkeit();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit#getIDOertlichkeitAwanstBedient <em>ID Oertlichkeit Awanst Bedient</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Oertlichkeit Awanst Bedient</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit#getIDOertlichkeitAwanstBedient()
+	 * @see #getOertlichkeit()
+	 * @generated
+	 */
+	EReference getOertlichkeit_IDOertlichkeitAwanstBedient();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit#getIDStreckePunkt <em>ID Strecke Punkt</em>}'.
@@ -6207,6 +6829,38 @@ public interface GeodatenPackage extends EPackage {
 	EReference getStrecke_Bezeichnung_AttributeGroup_BezeichnungStrecke();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg <em>Strecke Bremsweg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Strecke Bremsweg</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg
+	 * @generated
+	 */
+	EClass getStrecke_Bremsweg();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg#getBremsweg <em>Bremsweg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Bremsweg</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg#getBremsweg()
+	 * @see #getStrecke_Bremsweg()
+	 * @generated
+	 */
+	EReference getStrecke_Bremsweg_Bremsweg();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg#getStreckeRichtung <em>Strecke Richtung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Strecke Richtung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg#getStreckeRichtung()
+	 * @see #getStrecke_Bremsweg()
+	 * @generated
+	 */
+	EReference getStrecke_Bremsweg_StreckeRichtung();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Meter_TypeClass <em>Strecke Meter Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6269,6 +6923,27 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStrecke_Punkt_StreckeMeter();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass <em>Strecke Richtung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Strecke Richtung Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass
+	 * @generated
+	 */
+	EClass getStrecke_Richtung_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass#getWert()
+	 * @see #getStrecke_Richtung_TypeClass()
+	 * @generated
+	 */
+	EAttribute getStrecke_Richtung_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.TB_Art_TypeClass <em>TB Art Type Class</em>}'.
@@ -6472,6 +7147,17 @@ public interface GeodatenPackage extends EPackage {
 	EClass getTOP_Kante_Allg_AttributeGroup();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getKantenname <em>Kantenname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Kantenname</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getKantenname()
+	 * @see #getTOP_Kante_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getTOP_Kante_Allg_AttributeGroup_Kantenname();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getTOPAnschlussA <em>TOP Anschluss A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6598,6 +7284,16 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTP_Beschreibung_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Trasse_Kante_child_AttributeGroup <em>Trasse Kante child Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trasse Kante child Attribute Group</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.Trasse_Kante_child_AttributeGroup
+	 * @generated
+	 */
+	EClass getTrasse_Kante_child_AttributeGroup();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehung <em>Ueberhoehung</em>}'.
@@ -6866,27 +7562,6 @@ public interface GeodatenPackage extends EPackage {
 	EAttribute getV_Profil_Art_TypeClass_Wert();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass <em>Wirkrichtung Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wirkrichtung Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass
-	 * @generated
-	 */
-	EClass getWirkrichtung_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass#getWert()
-	 * @see #getWirkrichtung_TypeClass()
-	 * @generated
-	 */
-	EAttribute getWirkrichtung_TypeClass_Wert();
-
-	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOForm <em>ENUMGEO Form</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6895,6 +7570,16 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getENUMGEOForm();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem <em>ENUMGEO Koordinatensystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUMGEO Koordinatensystem</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem
+	 * @generated
+	 */
+	EEnum getENUMGEOKoordinatensystem();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMHoehenlinieForm <em>ENUM Hoehenlinie Form</em>}'.
@@ -6935,6 +7620,16 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getENUMPlanQuelle();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung <em>ENUM Strecke Richtung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Strecke Richtung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung
+	 * @generated
+	 */
+	EEnum getENUMStreckeRichtung();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMTBArt <em>ENUMTB Art</em>}'.
@@ -6987,6 +7682,18 @@ public interface GeodatenPackage extends EPackage {
 	EEnum getENUMVProfilArt();
 
 	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Anzeigegefuehrt ES Kategorie Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Anzeigegefuehrt ES Kategorie Type</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='TAnzeigegefuehrt_ES_Kategorie' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
+	 * @generated
+	 */
+	EDataType getAnzeigegefuehrt_ES_Kategorie_Type();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Bezeichnung Strecke Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6999,6 +7706,18 @@ public interface GeodatenPackage extends EPackage {
 	EDataType getBezeichnung_Strecke_Type();
 
 	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Enumeration1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Enumeration1</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='Enumeration1' baseType='http://www.eclipse.org/emf/2003/XMLType#string'"
+	 * @generated
+	 */
+	EDataType getEnumeration1();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOForm <em>ENUMGEO Form Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7009,6 +7728,18 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMGEOFormObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem <em>ENUMGEO Koordinatensystem Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUMGEO Koordinatensystem Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem"
+	 *        extendedMetaData="name='ENUMGEO_Koordinatensystem:Object' baseType='ENUMGEO_Koordinatensystem'"
+	 * @generated
+	 */
+	EDataType getENUMGEOKoordinatensystemObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMHoehenlinieForm <em>ENUM Hoehenlinie Form Object</em>}'.
@@ -7057,6 +7788,18 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMPlanQuelleObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung <em>ENUM Strecke Richtung Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Strecke Richtung Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung"
+	 *        extendedMetaData="name='ENUMStrecke_Richtung:Object' baseType='ENUMStrecke_Richtung'"
+	 * @generated
+	 */
+	EDataType getENUMStreckeRichtungObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMTBArt <em>ENUMTB Art Object</em>}'.
@@ -7119,28 +7862,16 @@ public interface GeodatenPackage extends EPackage {
 	EDataType getENUMVProfilArtObject();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.String <em>GEO Koordinaten System LSys Type</em>}'.
+	 * Returns the meta object for data type '{@link java.lang.String <em>GEO KAD Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>GEO Koordinaten System LSys Type</em>'.
+	 * @return the meta object for data type '<em>GEO KAD Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TGEO_KoordinatenSystem_LSys' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TZeichenkette' pattern='[C-F][A-C|R|S][0-9A-Z]'"
+	 *        extendedMetaData="name='TGEO_KAD' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
 	 * @generated
 	 */
-	EDataType getGEO_KoordinatenSystem_LSys_Type();
-
-	/**
-	 * Returns the meta object for data type '{@link java.lang.String <em>GEO Koordinaten System Sonstige Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>GEO Koordinaten System Sonstige Type</em>'.
-	 * @see java.lang.String
-	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TGEO_KoordinatenSystem_Sonstige' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TZeichenkette'"
-	 * @generated
-	 */
-	EDataType getGEO_KoordinatenSystem_Sonstige_Type();
+	EDataType getGEO_KAD_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>GEO Laenge Type</em>}'.
@@ -7275,6 +8006,18 @@ public interface GeodatenPackage extends EPackage {
 	EDataType getHoehenpunkt_Hoehe_Type();
 
 	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Kantenname Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Kantenname Type</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='TKantenname' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
+	 * @generated
+	 */
+	EDataType getKantenname_Type();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Knotenname Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7293,7 +8036,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @return the meta object for data type '<em>Neigung Type</em>'.
 	 * @see java.math.BigDecimal
 	 * @model instanceClass="java.math.BigDecimal"
-	 *        extendedMetaData="name='TNeigung' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' pattern='-100\\.000|-([1-9][0-9]{0,1}\\.[0-9]{3})|(-0\\.[1-9][0-9]{2}|-0\\.0[1-9][0-9]|-0\\.0[0-9][1-9])|((0|[1-9][0-9]{0,1})\\.[0-9]{3})|100\\.000'"
+	 *        extendedMetaData="name='TNeigung' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' pattern='0\\.000|([1-9][0-9]{0,1}\\.[0-9]{3})|(0\\.[1-9][0-9]{2}|0\\.0[1-9][0-9]|0\\.0[0-9][1-9])|((0|[1-9][0-9]{0,1})\\.[0-9]{3})|100\\.000'"
 	 * @generated
 	 */
 	EDataType getNeigung_Type();
@@ -7305,7 +8048,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @return the meta object for data type '<em>Oertlichkeit Abkuerzung Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TOertlichkeit_Abkuerzung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText' pattern='[A-Z]{2,5}'"
+	 *        extendedMetaData="name='TOertlichkeit_Abkuerzung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText' pattern='[A-Z][A-Z0-9%20]{1,4}'"
 	 * @generated
 	 */
 	EDataType getOertlichkeit_Abkuerzung_Type();
@@ -7353,7 +8096,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @return the meta object for data type '<em>TB Beschreibung Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TTB_Beschreibung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TFreiText'"
+	 *        extendedMetaData="name='TTB_Beschreibung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
 	 * @generated
 	 */
 	EDataType getTB_Beschreibung_Type();
@@ -7377,7 +8120,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @return the meta object for data type '<em>TP Beschreibung Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TTP_Beschreibung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TFreiText'"
+	 *        extendedMetaData="name='TTP_Beschreibung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
 	 * @generated
 	 */
 	EDataType getTP_Beschreibung_Type();
@@ -7389,7 +8132,7 @@ public interface GeodatenPackage extends EPackage {
 	 * @return the meta object for data type '<em>Ueberhoehung Hoehe Type</em>'.
 	 * @see java.math.BigDecimal
 	 * @model instanceClass="java.math.BigDecimal"
-	 *        extendedMetaData="name='TUeberhoehung_Hoehe' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TMeter' pattern='0\\.[01][0-9][0-9]|0\\.200'"
+	 *        extendedMetaData="name='TUeberhoehung_Hoehe' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TMeter' pattern='-?(0\\.[01][0-9][0-9]|0\\.200)'"
 	 * @generated
 	 */
 	EDataType getUeberhoehung_Hoehe_Type();
@@ -7405,18 +8148,6 @@ public interface GeodatenPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getUeberhoehungslinie_Laenge_Type();
-
-	/**
-	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung <em>Wirkrichtung Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Wirkrichtung Type</em>'.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung
-	 * @model instanceClass="org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung"
-	 *        extendedMetaData="name='TWirkrichtung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TWirkrichtung'"
-	 * @generated
-	 */
-	EDataType getWirkrichtung_Type();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -7442,6 +8173,24 @@ public interface GeodatenPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Anzeigegefuehrt_ES_Kategorie_TypeClassImpl <em>Anzeigegefuehrt ES Kategorie Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Anzeigegefuehrt_ES_Kategorie_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getAnzeigegefuehrt_ES_Kategorie_TypeClass()
+		 * @generated
+		 */
+		EClass ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS = eINSTANCE.getAnzeigegefuehrt_ES_Kategorie_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS__WERT = eINSTANCE.getAnzeigegefuehrt_ES_Kategorie_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Bezeichnung_Strecke_TypeClassImpl <em>Bezeichnung Strecke Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7460,6 +8209,24 @@ public interface GeodatenPackage extends EPackage {
 		EAttribute BEZEICHNUNG_STRECKE_TYPE_CLASS__WERT = eINSTANCE.getBezeichnung_Strecke_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Bremsweg_TypeClassImpl <em>Bremsweg Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Bremsweg_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getBremsweg_TypeClass()
+		 * @generated
+		 */
+		EClass BREMSWEG_TYPE_CLASS = eINSTANCE.getBremsweg_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BREMSWEG_TYPE_CLASS__WERT = eINSTANCE.getBremsweg_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Form_TypeClassImpl <em>GEO Form Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7476,6 +8243,24 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GEO_FORM_TYPE_CLASS__WERT = eINSTANCE.getGEO_Form_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KAD_TypeClassImpl <em>GEO KAD Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KAD_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KAD_TypeClass()
+		 * @generated
+		 */
+		EClass GEO_KAD_TYPE_CLASS = eINSTANCE.getGEO_KAD_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEO_KAD_TYPE_CLASS__WERT = eINSTANCE.getGEO_KAD_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KanteImpl <em>GEO Kante</em>}' class.
@@ -7538,6 +8323,14 @@ public interface GeodatenPackage extends EPackage {
 		EReference GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM = eINSTANCE.getGEO_Kante_Allg_AttributeGroup_GEOForm();
 
 		/**
+		 * The meta object literal for the '<em><b>GEOKAD</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD = eINSTANCE.getGEO_Kante_Allg_AttributeGroup_GEOKAD();
+
+		/**
 		 * The meta object literal for the '<em><b>GEO Laenge</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7596,14 +8389,14 @@ public interface GeodatenPackage extends EPackage {
 		EReference GEO_KNOTEN__GEOPAD = eINSTANCE.getGEO_Knoten_GEOPAD();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_LSys_TypeClassImpl <em>GEO Koordinaten System LSys Type Class</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Koordinatensystem_TypeClassImpl <em>GEO Koordinatensystem Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_LSys_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_LSys_TypeClass()
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Koordinatensystem_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_Koordinatensystem_TypeClass()
 		 * @generated
 		 */
-		EClass GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS = eINSTANCE.getGEO_KoordinatenSystem_LSys_TypeClass();
+		EClass GEO_KOORDINATENSYSTEM_TYPE_CLASS = eINSTANCE.getGEO_Koordinatensystem_TypeClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
@@ -7611,25 +8404,7 @@ public interface GeodatenPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS__WERT = eINSTANCE.getGEO_KoordinatenSystem_LSys_TypeClass_Wert();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_Sonstige_TypeClassImpl <em>GEO Koordinaten System Sonstige Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_KoordinatenSystem_Sonstige_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_Sonstige_TypeClass()
-		 * @generated
-		 */
-		EClass GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS = eINSTANCE.getGEO_KoordinatenSystem_Sonstige_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS__WERT = eINSTANCE.getGEO_KoordinatenSystem_Sonstige_TypeClass_Wert();
+		EAttribute GEO_KOORDINATENSYSTEM_TYPE_CLASS__WERT = eINSTANCE.getGEO_Koordinatensystem_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Laenge_TypeClassImpl <em>GEO Laenge Type Class</em>}' class.
@@ -7686,6 +8461,14 @@ public interface GeodatenPackage extends EPackage {
 		EReference GEO_PUNKT__GEO_PUNKT_ALLG = eINSTANCE.getGEO_Punkt_GEOPunktAllg();
 
 		/**
+		 * The meta object literal for the '<em><b>IDGEO Kante</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEO_PUNKT__IDGEO_KANTE = eINSTANCE.getGEO_Punkt_IDGEOKante();
+
+		/**
 		 * The meta object literal for the '<em><b>IDGEO Knoten</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7702,6 +8485,14 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GEO_PUNKT_ALLG_ATTRIBUTE_GROUP = eINSTANCE.getGEO_Punkt_Allg_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>GEO Koordinatensystem</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM = eINSTANCE.getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatensystem();
 
 		/**
 		 * The meta object literal for the '<em><b>GKX</b></em>' containment reference feature.
@@ -7734,22 +8525,6 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE = eINSTANCE.getGEO_Punkt_Allg_AttributeGroup_PlanQuelle();
-
-		/**
-		 * The meta object literal for the '<em><b>GEO Koordinaten System LSys</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS = eINSTANCE.getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys();
-
-		/**
-		 * The meta object literal for the '<em><b>GEO Koordinaten System Sonstige</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE = eINSTANCE.getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemSonstige();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Radius_A_TypeClassImpl <em>GEO Radius AType Class</em>}' class.
@@ -7852,6 +8627,14 @@ public interface GeodatenPackage extends EPackage {
 		EClass GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP = eINSTANCE.getGeschwindigkeitsprofil_Allg_AttributeGroup();
 
 		/**
+		 * The meta object literal for the '<em><b>Anzeigegefuehrt ES Kategorie</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE = eINSTANCE.getGeschwindigkeitsprofil_Allg_AttributeGroup_AnzeigegefuehrtESKategorie();
+
+		/**
 		 * The meta object literal for the '<em><b>Geschwindigkeit</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7866,14 +8649,6 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART = eINSTANCE.getGeschwindigkeitsprofil_Allg_AttributeGroup_VProfilArt();
-
-		/**
-		 * The meta object literal for the '<em><b>Wirkrichtung</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG = eINSTANCE.getGeschwindigkeitsprofil_Allg_AttributeGroup_Wirkrichtung();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GK_X_TypeClassImpl <em>GK XType Class</em>}' class.
@@ -8164,6 +8939,24 @@ public interface GeodatenPackage extends EPackage {
 		EAttribute HSYSTEM_TYPE_CLASS__WERT = eINSTANCE.getHSystem_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Kantenname_TypeClassImpl <em>Kantenname Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Kantenname_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getKantenname_TypeClass()
+		 * @generated
+		 */
+		EClass KANTENNAME_TYPE_CLASS = eINSTANCE.getKantenname_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KANTENNAME_TYPE_CLASS__WERT = eINSTANCE.getKantenname_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Knotenname_TypeClassImpl <em>Knotenname Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8224,6 +9017,14 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OERTLICHKEIT__ID_OERTLICHKEIT = eINSTANCE.getOertlichkeit_IDOertlichkeit();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Oertlichkeit Awanst Bedient</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT = eINSTANCE.getOertlichkeit_IDOertlichkeitAwanstBedient();
 
 		/**
 		 * The meta object literal for the '<em><b>ID Strecke Punkt</b></em>' reference list feature.
@@ -8472,6 +9273,32 @@ public interface GeodatenPackage extends EPackage {
 		EReference STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP__BEZEICHNUNG_STRECKE = eINSTANCE.getStrecke_Bezeichnung_AttributeGroup_BezeichnungStrecke();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_BremswegImpl <em>Strecke Bremsweg</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_BremswegImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Bremsweg()
+		 * @generated
+		 */
+		EClass STRECKE_BREMSWEG = eINSTANCE.getStrecke_Bremsweg();
+
+		/**
+		 * The meta object literal for the '<em><b>Bremsweg</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRECKE_BREMSWEG__BREMSWEG = eINSTANCE.getStrecke_Bremsweg_Bremsweg();
+
+		/**
+		 * The meta object literal for the '<em><b>Strecke Richtung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRECKE_BREMSWEG__STRECKE_RICHTUNG = eINSTANCE.getStrecke_Bremsweg_StreckeRichtung();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_Meter_TypeClassImpl <em>Strecke Meter Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8522,6 +9349,24 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STRECKE_PUNKT__STRECKE_METER = eINSTANCE.getStrecke_Punkt_StreckeMeter();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_Richtung_TypeClassImpl <em>Strecke Richtung Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Strecke_Richtung_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getStrecke_Richtung_TypeClass()
+		 * @generated
+		 */
+		EClass STRECKE_RICHTUNG_TYPE_CLASS = eINSTANCE.getStrecke_Richtung_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRECKE_RICHTUNG_TYPE_CLASS__WERT = eINSTANCE.getStrecke_Richtung_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.TB_Art_TypeClassImpl <em>TB Art Type Class</em>}' class.
@@ -8692,6 +9537,14 @@ public interface GeodatenPackage extends EPackage {
 		EClass TOP_KANTE_ALLG_ATTRIBUTE_GROUP = eINSTANCE.getTOP_Kante_Allg_AttributeGroup();
 
 		/**
+		 * The meta object literal for the '<em><b>Kantenname</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME = eINSTANCE.getTOP_Kante_Allg_AttributeGroup_Kantenname();
+
+		/**
 		 * The meta object literal for the '<em><b>TOP Anschluss A</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8794,6 +9647,16 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TP_BESCHREIBUNG_TYPE_CLASS__WERT = eINSTANCE.getTP_Beschreibung_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Trasse_Kante_child_AttributeGroupImpl <em>Trasse Kante child Attribute Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Trasse_Kante_child_AttributeGroupImpl
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getTrasse_Kante_child_AttributeGroup()
+		 * @generated
+		 */
+		EClass TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP = eINSTANCE.getTrasse_Kante_child_AttributeGroup();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.UeberhoehungImpl <em>Ueberhoehung</em>}' class.
@@ -9014,24 +9877,6 @@ public interface GeodatenPackage extends EPackage {
 		EAttribute VPROFIL_ART_TYPE_CLASS__WERT = eINSTANCE.getV_Profil_Art_TypeClass_Wert();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Wirkrichtung_TypeClassImpl <em>Wirkrichtung Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.Wirkrichtung_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getWirkrichtung_TypeClass()
-		 * @generated
-		 */
-		EClass WIRKRICHTUNG_TYPE_CLASS = eINSTANCE.getWirkrichtung_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WIRKRICHTUNG_TYPE_CLASS__WERT = eINSTANCE.getWirkrichtung_TypeClass_Wert();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOForm <em>ENUMGEO Form</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9040,6 +9885,16 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ENUMGEO_FORM = eINSTANCE.getENUMGEOForm();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem <em>ENUMGEO Koordinatensystem</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMGEOKoordinatensystem()
+		 * @generated
+		 */
+		EEnum ENUMGEO_KOORDINATENSYSTEM = eINSTANCE.getENUMGEOKoordinatensystem();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMHoehenlinieForm <em>ENUM Hoehenlinie Form</em>}' enum.
@@ -9080,6 +9935,16 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ENUM_PLAN_QUELLE = eINSTANCE.getENUMPlanQuelle();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung <em>ENUM Strecke Richtung</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMStreckeRichtung()
+		 * @generated
+		 */
+		EEnum ENUM_STRECKE_RICHTUNG = eINSTANCE.getENUMStreckeRichtung();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Geodaten.ENUMTBArt <em>ENUMTB Art</em>}' enum.
@@ -9132,6 +9997,16 @@ public interface GeodatenPackage extends EPackage {
 		EEnum ENUMV_PROFIL_ART = eINSTANCE.getENUMVProfilArt();
 
 		/**
+		 * The meta object literal for the '<em>Anzeigegefuehrt ES Kategorie Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getAnzeigegefuehrt_ES_Kategorie_Type()
+		 * @generated
+		 */
+		EDataType ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE = eINSTANCE.getAnzeigegefuehrt_ES_Kategorie_Type();
+
+		/**
 		 * The meta object literal for the '<em>Bezeichnung Strecke Type</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9142,6 +10017,16 @@ public interface GeodatenPackage extends EPackage {
 		EDataType BEZEICHNUNG_STRECKE_TYPE = eINSTANCE.getBezeichnung_Strecke_Type();
 
 		/**
+		 * The meta object literal for the '<em>Enumeration1</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getEnumeration1()
+		 * @generated
+		 */
+		EDataType ENUMERATION1 = eINSTANCE.getEnumeration1();
+
+		/**
 		 * The meta object literal for the '<em>ENUMGEO Form Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9150,6 +10035,16 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUMGEO_FORM_OBJECT = eINSTANCE.getENUMGEOFormObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUMGEO Koordinatensystem Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMGEOKoordinatensystemObject()
+		 * @generated
+		 */
+		EDataType ENUMGEO_KOORDINATENSYSTEM_OBJECT = eINSTANCE.getENUMGEOKoordinatensystemObject();
 
 		/**
 		 * The meta object literal for the '<em>ENUM Hoehenlinie Form Object</em>' data type.
@@ -9190,6 +10085,16 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_PLAN_QUELLE_OBJECT = eINSTANCE.getENUMPlanQuelleObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Strecke Richtung Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getENUMStreckeRichtungObject()
+		 * @generated
+		 */
+		EDataType ENUM_STRECKE_RICHTUNG_OBJECT = eINSTANCE.getENUMStreckeRichtungObject();
 
 		/**
 		 * The meta object literal for the '<em>ENUMTB Art Object</em>' data type.
@@ -9242,24 +10147,14 @@ public interface GeodatenPackage extends EPackage {
 		EDataType ENUMV_PROFIL_ART_OBJECT = eINSTANCE.getENUMVProfilArtObject();
 
 		/**
-		 * The meta object literal for the '<em>GEO Koordinaten System LSys Type</em>' data type.
+		 * The meta object literal for the '<em>GEO KAD Type</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.lang.String
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_LSys_Type()
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KAD_Type()
 		 * @generated
 		 */
-		EDataType GEO_KOORDINATEN_SYSTEM_LSYS_TYPE = eINSTANCE.getGEO_KoordinatenSystem_LSys_Type();
-
-		/**
-		 * The meta object literal for the '<em>GEO Koordinaten System Sonstige Type</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.lang.String
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getGEO_KoordinatenSystem_Sonstige_Type()
-		 * @generated
-		 */
-		EDataType GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE = eINSTANCE.getGEO_KoordinatenSystem_Sonstige_Type();
+		EDataType GEO_KAD_TYPE = eINSTANCE.getGEO_KAD_Type();
 
 		/**
 		 * The meta object literal for the '<em>GEO Laenge Type</em>' data type.
@@ -9372,6 +10267,16 @@ public interface GeodatenPackage extends EPackage {
 		EDataType HOEHENPUNKT_HOEHE_TYPE = eINSTANCE.getHoehenpunkt_Hoehe_Type();
 
 		/**
+		 * The meta object literal for the '<em>Kantenname Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getKantenname_Type()
+		 * @generated
+		 */
+		EDataType KANTENNAME_TYPE = eINSTANCE.getKantenname_Type();
+
+		/**
 		 * The meta object literal for the '<em>Knotenname Type</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9480,16 +10385,6 @@ public interface GeodatenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType UEBERHOEHUNGSLINIE_LAENGE_TYPE = eINSTANCE.getUeberhoehungslinie_Laenge_Type();
-
-		/**
-		 * The meta object literal for the '<em>Wirkrichtung Type</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung
-		 * @see org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenPackageImpl#getWirkrichtung_Type()
-		 * @generated
-		 */
-		EDataType WIRKRICHTUNG_TYPE = eINSTANCE.getWirkrichtung_Type();
 
 	}
 

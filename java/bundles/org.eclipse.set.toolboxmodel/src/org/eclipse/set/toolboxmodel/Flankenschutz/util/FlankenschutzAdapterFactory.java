@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz.util;
 
@@ -72,6 +79,10 @@ public class FlankenschutzAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected FlankenschutzSwitch<Adapter> modelSwitch =
 		new FlankenschutzSwitch<Adapter>() {
+			@Override
+			public Adapter caseEKW_Kr_Anteil_TypeClass(EKW_Kr_Anteil_TypeClass object) {
+				return createEKW_Kr_Anteil_TypeClassAdapter();
+			}
 			@Override
 			public Adapter caseFahrt_Ueber_TypeClass(Fahrt_Ueber_TypeClass object) {
 				return createFahrt_Ueber_TypeClassAdapter();
@@ -167,6 +178,20 @@ public class FlankenschutzAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass <em>EKW Kr Anteil Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass
+	 * @generated
+	 */
+	public Adapter createEKW_Kr_Anteil_TypeClassAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fahrt_Ueber_TypeClass <em>Fahrt Ueber Type Class</em>}'.

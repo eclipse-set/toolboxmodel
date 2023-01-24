@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -19,17 +20,16 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
+
 import org.eclipse.set.toolboxmodel.PZB.PZBFactory;
 import org.eclipse.set.toolboxmodel.PZB.PZBPackage;
 import org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung;
-
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung} object.
@@ -59,54 +59,8 @@ public class PZB_Element_ZuordnungItemProvider extends Basis_ObjektItemProvider 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIDFstrZugRangierPropertyDescriptor(object);
-			addIDPZBElementBezugspunktPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Fstr Zug Rangier feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDFstrZugRangierPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PZB_Element_Zuordnung_iDFstrZugRangier_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PZB_Element_Zuordnung_iDFstrZugRangier_feature", "_UI_PZB_Element_Zuordnung_type"),
-				 PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__ID_FSTR_ZUG_RANGIER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the IDPZB Element Bezugspunkt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDPZBElementBezugspunktPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PZB_Element_Zuordnung_iDPZBElementBezugspunkt_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PZB_Element_Zuordnung_iDPZBElementBezugspunkt_feature", "_UI_PZB_Element_Zuordnung_type"),
-				 PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__IDPZB_ELEMENT_BEZUGSPUNKT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -121,8 +75,8 @@ public class PZB_Element_ZuordnungItemProvider extends Basis_ObjektItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_INA);
-			childrenFeatures.add(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__WIRKSAMKEIT);
+			childrenFeatures.add(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_BP);
+			childrenFeatures.add(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_FSTR);
 		}
 		return childrenFeatures;
 	}
@@ -175,8 +129,8 @@ public class PZB_Element_ZuordnungItemProvider extends Basis_ObjektItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PZB_Element_Zuordnung.class)) {
-			case PZBPackage.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_INA:
-			case PZBPackage.PZB_ELEMENT_ZUORDNUNG__WIRKSAMKEIT:
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_BP:
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_FSTR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -198,13 +152,13 @@ public class PZB_Element_ZuordnungItemProvider extends Basis_ObjektItemProvider 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_INA,
-				 PZBFactory.eINSTANCE.createPZB_Element_Zuordnung_INA_AttributeGroup()));
+				(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_BP,
+				 PZBFactory.eINSTANCE.createPZB_Element_Zuordnung_BP_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__WIRKSAMKEIT,
-				 PZBFactory.eINSTANCE.createWirksamkeit_TypeClass()));
+				(PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_FSTR,
+				 PZBFactory.eINSTANCE.createPZB_Element_Zuordnung_Fstr_AttributeGroup()));
 	}
 
 	/**

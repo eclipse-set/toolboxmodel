@@ -1,10 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bedienung;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
@@ -14,7 +21,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Abbildung einer örtlichen Bedieneinrichtung (Stelltafel, Bedienpult etc.) als physisches Element der Außenanlage. Bedienbare Elemente, die nicht von einer ESTW-Bedienoberfläche bedient werden, sind durch eine entsprechende Bedieneinrichtung umstellbar. Weiterhin sind in der Bedieneinrichtung Tasten für die Kommunikation zwischen özF und Bediener untergebracht. Im Objekt Bedien_Einrichtung_Oertlich wird die physische Ausbildung der Bedieneinrichtung abgebildet. Die dazugehörigen Melder, Schalter und Taster sind im Objekt Bedien Anzeige Element modelliert. Die logischen Funktionen einer Bedieneinrichtung für Nahbedienbereiche und Bahnübergänge befinden sich in den Objekten „BUE Bedien Anzeige Element“ oder „NB Bedien Anzeige Element“. Die Bedien_Einrichtung_Oertlich kommt zur Anwendung bei: Nahbedienbereichen Bahnübergängen (HET, UT, etc.) Gefahrschaltern (Berliner S-Bahn) (noch nicht abschließend modelliert) Schlüsselschaltern- und Tastern (Zustimmung, Gleisfreimeldung, Zugschlussmeldung, etc.) ZP 10/9 –Bediensäulen örtliche Abgabe von Zugschlussmeldungen und Bedieneinrichtungen an Schnittstellen zum Zugleitbetrieb. Bedieneinrichtungen von elektrisch ortsgestellten Weichen (EOW) werden mit diesem Objekt nicht modelliert. 
+ * Abbildung einer örtlichen Bedieneinrichtung (Stelltafel, Bedienpult etc.) als physisches Element der Außenanlage. Bedienbare Elemente, die nicht von einer ESTW-Bedienoberfläche bedient werden, sind durch eine entsprechende Bedieneinrichtung umstellbar. Weiterhin sind in der Bedieneinrichtung Tasten für die Kommunikation zwischen özF und Bediener untergebracht. Im Objekt Bedien_Einrichtung_Oertlich wird die physische Ausbildung der Bedieneinrichtung abgebildet. Die dazugehörigen Melder, Schalter und Taster sind im Objekt Bedien Anzeige Element modelliert. Die logischen Funktionen einer Bedieneinrichtung für Nahstellbereiche und Bahnübergänge befinden sich in den Objekten „BUE Bedien Anzeige Element“ oder „NB Bedien Anzeige Element“. Die Bedien_Einrichtung_Oertlich kommt zur Anwendung bei: Nahstellbereichen, Bahnübergängen (HET, UT, etc.), Schlüsselschaltern- und Tastern (Zustimmung, Gleisfreimeldung, Zugschlussmeldung, etc.), ZP 10/9-Bediensäulen, örtlicher Abgabe von Zugschlussmeldungen und Bedieneinrichtungen an Schnittstellen zum Zugleitbetrieb. Bedieneinrichtungen von elektrisch ortsgestellten Weichen (EOW) werden mit diesem Objekt nicht modelliert.
  * <!-- end-model-doc -->
  *
  * <p>

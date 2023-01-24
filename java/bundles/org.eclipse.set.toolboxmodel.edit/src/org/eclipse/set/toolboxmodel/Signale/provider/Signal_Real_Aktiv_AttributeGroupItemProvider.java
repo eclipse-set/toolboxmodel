@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Signale.SignaleFactory;
@@ -110,10 +111,6 @@ public class Signal_Real_Aktiv_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__AUTO_EINSTELLUNG);
-			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNAL_FUNKTION);
-			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR);
-			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST);
-			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SONSTIGE_ZULAESSIGE_ANORDNUNG);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__TUNNELSIGNAL);
 		}
@@ -169,10 +166,6 @@ public class Signal_Real_Aktiv_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Signal_Real_Aktiv_AttributeGroup.class)) {
 			case SignalePackage.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__AUTO_EINSTELLUNG:
-			case SignalePackage.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNAL_FUNKTION:
-			case SignalePackage.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR:
-			case SignalePackage.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST:
-			case SignalePackage.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL:
 			case SignalePackage.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SONSTIGE_ZULAESSIGE_ANORDNUNG:
 			case SignalePackage.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__TUNNELSIGNAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -198,26 +191,6 @@ public class Signal_Real_Aktiv_AttributeGroupItemProvider
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__AUTO_EINSTELLUNG,
 				 SignaleFactory.eINSTANCE.createAuto_Einstellung_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNAL_FUNKTION,
-				 SignaleFactory.eINSTANCE.createSignal_Funktion_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR,
-				 SignaleFactory.eINSTANCE.createSignalsicht_Erreichbar_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST,
-				 SignaleFactory.eINSTANCE.createSignalsicht_Mindest_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SignalePackage.Literals.SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL,
-				 SignaleFactory.eINSTANCE.createSignalsicht_Soll_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

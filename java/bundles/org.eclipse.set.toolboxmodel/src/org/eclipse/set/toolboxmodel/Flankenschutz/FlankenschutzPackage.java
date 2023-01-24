@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -590,6 +566,52 @@ public interface FlankenschutzPackage extends EPackage {
 	FlankenschutzPackage eINSTANCE = org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.EKW_Kr_Anteil_TypeClassImpl <em>EKW Kr Anteil Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.EKW_Kr_Anteil_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getEKW_Kr_Anteil_TypeClass()
+	 * @generated
+	 */
+	int EKW_KR_ANTEIL_TYPE_CLASS = 0;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EKW_KR_ANTEIL_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EKW_KR_ANTEIL_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>EKW Kr Anteil Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EKW_KR_ANTEIL_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>EKW Kr Anteil Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EKW_KR_ANTEIL_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fahrt_Ueber_TypeClassImpl <em>Fahrt Ueber Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,10 +619,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFahrt_Ueber_TypeClass()
 	 * @generated
 	 */
-	int FAHRT_UEBER_TYPE_CLASS = 0;
+	int FAHRT_UEBER_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -643,7 +665,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Freimelde_Zuordnung()
 	 * @generated
 	 */
-	int FLA_FREIMELDE_ZUORDNUNG = 1;
+	int FLA_FREIMELDE_ZUORDNUNG = 2;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -664,13 +686,22 @@ public interface FlankenschutzPackage extends EPackage {
 	int FLA_FREIMELDE_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FLA_FREIMELDE_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLA_FREIMELDE_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -734,10 +765,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Raum_Freimeldung_TypeClass()
 	 * @generated
 	 */
-	int FLA_RAUM_FREIMELDUNG_TYPE_CLASS = 2;
+	int FLA_RAUM_FREIMELDUNG_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -780,7 +811,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Schutz()
 	 * @generated
 	 */
-	int FLA_SCHUTZ = 3;
+	int FLA_SCHUTZ = 4;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -801,13 +832,22 @@ public interface FlankenschutzPackage extends EPackage {
 	int FLA_SCHUTZ__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FLA_SCHUTZ__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLA_SCHUTZ__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -828,22 +868,13 @@ public interface FlankenschutzPackage extends EPackage {
 	int FLA_SCHUTZ__FLA_SCHUTZ_ANFORDERER = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Fla Weitergabe EKW</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Fla Schutz Signal</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ__FLA_SCHUTZ_SIGNAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+	int FLA_SCHUTZ__FLA_SCHUTZ_SIGNAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Fla Schutz WGsp</b></em>' containment reference.
@@ -852,7 +883,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ__FLA_SCHUTZ_WGSP = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int FLA_SCHUTZ__FLA_SCHUTZ_WGSP = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Fla Schutz Weitergabe</b></em>' containment reference.
@@ -861,7 +892,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ__FLA_SCHUTZ_WEITERGABE = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int FLA_SCHUTZ__FLA_SCHUTZ_WEITERGABE = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Fla Verzicht</b></em>' containment reference.
@@ -870,7 +901,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ__FLA_VERZICHT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
+	int FLA_SCHUTZ__FLA_VERZICHT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Fla Schutz</em>' class.
@@ -879,7 +910,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 6;
+	int FLA_SCHUTZ_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Fla Schutz</em>' class.
@@ -898,7 +929,16 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Schutz_Anforderer_AttributeGroup()
 	 * @generated
 	 */
-	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP = 4;
+	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP = 5;
+
+	/**
+	 * The feature id for the '<em><b>EKW Kr Anteil</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Fahrt Ueber</b></em>' containment reference.
@@ -907,7 +947,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER = 0;
+	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER = 1;
 
 	/**
 	 * The feature id for the '<em><b>ID Anforderer Element</b></em>' reference.
@@ -916,7 +956,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__ID_ANFORDERER_ELEMENT = 1;
+	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__ID_ANFORDERER_ELEMENT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Fla Schutz Anforderer Attribute Group</em>' class.
@@ -925,7 +965,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
+	int FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Fla Schutz Anforderer Attribute Group</em>' class.
@@ -944,7 +984,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Schutz_Signal_AttributeGroup()
 	 * @generated
 	 */
-	int FLA_SCHUTZ_SIGNAL_ATTRIBUTE_GROUP = 5;
+	int FLA_SCHUTZ_SIGNAL_ATTRIBUTE_GROUP = 6;
 
 	/**
 	 * The feature id for the '<em><b>Fla Signal Zielsperrung</b></em>' containment reference.
@@ -990,7 +1030,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Schutz_W_Gsp_AttributeGroup()
 	 * @generated
 	 */
-	int FLA_SCHUTZ_WGSP_ATTRIBUTE_GROUP = 6;
+	int FLA_SCHUTZ_WGSP_ATTRIBUTE_GROUP = 7;
 
 	/**
 	 * The feature id for the '<em><b>Fla WLage</b></em>' containment reference.
@@ -1036,7 +1076,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Schutz_Weitergabe_AttributeGroup()
 	 * @generated
 	 */
-	int FLA_SCHUTZ_WEITERGABE_ATTRIBUTE_GROUP = 7;
+	int FLA_SCHUTZ_WEITERGABE_ATTRIBUTE_GROUP = 8;
 
 	/**
 	 * The feature id for the '<em><b>ID Fla Weitergabe L</b></em>' reference.
@@ -1082,10 +1122,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Signal_Zielsperrung_TypeClass()
 	 * @generated
 	 */
-	int FLA_SIGNAL_ZIELSPERRUNG_TYPE_CLASS = 8;
+	int FLA_SIGNAL_ZIELSPERRUNG_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1128,10 +1168,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Verzicht_TypeClass()
 	 * @generated
 	 */
-	int FLA_VERZICHT_TYPE_CLASS = 9;
+	int FLA_VERZICHT_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1174,10 +1214,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_W_Lage_TypeClass()
 	 * @generated
 	 */
-	int FLA_WLAGE_TYPE_CLASS = 10;
+	int FLA_WLAGE_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1220,7 +1260,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Zwieschutz()
 	 * @generated
 	 */
-	int FLA_ZWIESCHUTZ = 11;
+	int FLA_ZWIESCHUTZ = 12;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1241,13 +1281,22 @@ public interface FlankenschutzPackage extends EPackage {
 	int FLA_ZWIESCHUTZ__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FLA_ZWIESCHUTZ__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLA_ZWIESCHUTZ__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1311,7 +1360,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_Zwieschutz_Element_AttributeGroup()
 	 * @generated
 	 */
-	int FLA_ZWIESCHUTZ_ELEMENT_ATTRIBUTE_GROUP = 12;
+	int FLA_ZWIESCHUTZ_ELEMENT_ATTRIBUTE_GROUP = 13;
 
 	/**
 	 * The feature id for the '<em><b>ID Fla Schutz L</b></em>' reference.
@@ -1384,10 +1433,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getMassnahme_TypeClass()
 	 * @generated
 	 */
-	int MASSNAHME_TYPE_CLASS = 13;
+	int MASSNAHME_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1430,10 +1479,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getNachlaufverhinderung_TypeClass()
 	 * @generated
 	 */
-	int NACHLAUFVERHINDERUNG_TYPE_CLASS = 14;
+	int NACHLAUFVERHINDERUNG_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1476,10 +1525,10 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getZwieschutz_Art_TypeClass()
 	 * @generated
 	 */
-	int ZWIESCHUTZ_ART_TYPE_CLASS = 15;
+	int ZWIESCHUTZ_ART_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1522,7 +1571,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getENUMFahrtUeber()
 	 * @generated
 	 */
-	int ENUM_FAHRT_UEBER = 16;
+	int ENUM_FAHRT_UEBER = 17;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.ENUMMassnahme <em>ENUM Massnahme</em>}' enum.
@@ -1532,7 +1581,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getENUMMassnahme()
 	 * @generated
 	 */
-	int ENUM_MASSNAHME = 17;
+	int ENUM_MASSNAHME = 18;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.ENUMZwieschutzArt <em>ENUM Zwieschutz Art</em>}' enum.
@@ -1542,7 +1591,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getENUMZwieschutzArt()
 	 * @generated
 	 */
-	int ENUM_ZWIESCHUTZ_ART = 18;
+	int ENUM_ZWIESCHUTZ_ART = 19;
 
 	/**
 	 * The meta object id for the '<em>ENUM Fahrt Ueber Object</em>' data type.
@@ -1552,7 +1601,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getENUMFahrtUeberObject()
 	 * @generated
 	 */
-	int ENUM_FAHRT_UEBER_OBJECT = 19;
+	int ENUM_FAHRT_UEBER_OBJECT = 20;
 
 	/**
 	 * The meta object id for the '<em>ENUM Massnahme Object</em>' data type.
@@ -1562,7 +1611,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getENUMMassnahmeObject()
 	 * @generated
 	 */
-	int ENUM_MASSNAHME_OBJECT = 20;
+	int ENUM_MASSNAHME_OBJECT = 21;
 
 	/**
 	 * The meta object id for the '<em>ENUM Zwieschutz Art Object</em>' data type.
@@ -1572,7 +1621,7 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getENUMZwieschutzArtObject()
 	 * @generated
 	 */
-	int ENUM_ZWIESCHUTZ_ART_OBJECT = 21;
+	int ENUM_ZWIESCHUTZ_ART_OBJECT = 22;
 
 	/**
 	 * The meta object id for the '<em>Fla WLage Type</em>' data type.
@@ -1582,8 +1631,29 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getFla_W_Lage_Type()
 	 * @generated
 	 */
-	int FLA_WLAGE_TYPE = 22;
+	int FLA_WLAGE_TYPE = 23;
 
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass <em>EKW Kr Anteil Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EKW Kr Anteil Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass
+	 * @generated
+	 */
+	EClass getEKW_Kr_Anteil_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass#getWert()
+	 * @see #getEKW_Kr_Anteil_TypeClass()
+	 * @generated
+	 */
+	EAttribute getEKW_Kr_Anteil_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fahrt_Ueber_TypeClass <em>Fahrt Ueber Type Class</em>}'.
@@ -1692,17 +1762,6 @@ public interface FlankenschutzPackage extends EPackage {
 	EReference getFla_Schutz_FlaSchutzAnforderer();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getIDFlaWeitergabeEKW <em>ID Fla Weitergabe EKW</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>ID Fla Weitergabe EKW</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getIDFlaWeitergabeEKW()
-	 * @see #getFla_Schutz()
-	 * @generated
-	 */
-	EReference getFla_Schutz_IDFlaWeitergabeEKW();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getFlaSchutzSignal <em>Fla Schutz Signal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1755,6 +1814,17 @@ public interface FlankenschutzPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFla_Schutz_Anforderer_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz_Anforderer_AttributeGroup#getEKWKrAnteil <em>EKW Kr Anteil</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>EKW Kr Anteil</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz_Anforderer_AttributeGroup#getEKWKrAnteil()
+	 * @see #getFla_Schutz_Anforderer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getFla_Schutz_Anforderer_AttributeGroup_EKWKrAnteil();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz_Anforderer_AttributeGroup#getFahrtUeber <em>Fahrt Ueber</em>}'.
@@ -2210,6 +2280,24 @@ public interface FlankenschutzPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.EKW_Kr_Anteil_TypeClassImpl <em>EKW Kr Anteil Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.EKW_Kr_Anteil_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl#getEKW_Kr_Anteil_TypeClass()
+		 * @generated
+		 */
+		EClass EKW_KR_ANTEIL_TYPE_CLASS = eINSTANCE.getEKW_Kr_Anteil_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EKW_KR_ANTEIL_TYPE_CLASS__WERT = eINSTANCE.getEKW_Kr_Anteil_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fahrt_Ueber_TypeClassImpl <em>Fahrt Ueber Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2298,14 +2386,6 @@ public interface FlankenschutzPackage extends EPackage {
 		EReference FLA_SCHUTZ__FLA_SCHUTZ_ANFORDERER = eINSTANCE.getFla_Schutz_FlaSchutzAnforderer();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Fla Weitergabe EKW</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW = eINSTANCE.getFla_Schutz_IDFlaWeitergabeEKW();
-
-		/**
 		 * The meta object literal for the '<em><b>Fla Schutz Signal</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2346,6 +2426,14 @@ public interface FlankenschutzPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP = eINSTANCE.getFla_Schutz_Anforderer_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>EKW Kr Anteil</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL = eINSTANCE.getFla_Schutz_Anforderer_AttributeGroup_EKWKrAnteil();
 
 		/**
 		 * The meta object literal for the '<em><b>Fahrt Ueber</b></em>' containment reference feature.

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bedienung;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface BedienungPackage extends EPackage {
 	int AWERT_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface BedienungPackage extends EPackage {
 	int ANBINDUNG_IB2_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface BedienungPackage extends EPackage {
 	int ANBINDUNG_IB3_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface BedienungPackage extends EPackage {
 	int BWERT_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -802,13 +778,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_ANRUECKABSCHNITT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_ANRUECKABSCHNITT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_ANRUECKABSCHNITT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -930,13 +915,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_ANZEIGE_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_ANZEIGE_ELEMENT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_ANZEIGE_ELEMENT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1122,13 +1116,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_BEZIRK__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_BEZIRK__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_BEZIRK__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1432,7 +1435,7 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_EINRICHT_BAUART_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1478,7 +1481,7 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_EINRICHT_OERTL_BEZ_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1588,13 +1591,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_EINRICHTUNG_OERTLICH__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_EINRICHTUNG_OERTLICH__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_EINRICHTUNG_OERTLICH__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1734,13 +1746,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_GBT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_GBT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_GBT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1871,13 +1892,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_OBERFLAECHE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_OBERFLAECHE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_OBERFLAECHE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2008,13 +2038,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_OBERFLAECHE_BILD__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_OBERFLAECHE_BILD__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_OBERFLAECHE_BILD__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2145,13 +2184,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_OERTLICHKEIT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_OERTLICHKEIT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_OERTLICHKEIT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2282,13 +2330,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_PLATZ__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_PLATZ__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_PLATZ__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2446,7 +2503,7 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_PLATZ_ART_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2510,13 +2567,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_STANDORT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_STANDORT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_STANDORT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2638,13 +2704,22 @@ public interface BedienungPackage extends EPackage {
 	int BEDIEN_ZENTRALE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEDIEN_ZENTRALE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEDIEN_ZENTRALE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2766,7 +2841,7 @@ public interface BedienungPackage extends EPackage {
 	int BEDIENPLATZBEZEICHNUNG_TYPE_CLASS = 33;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2812,7 +2887,7 @@ public interface BedienungPackage extends EPackage {
 	int BEDIENPLATZNUMMER_TYPE_CLASS = 34;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2858,7 +2933,7 @@ public interface BedienungPackage extends EPackage {
 	int BEDIENRAUMNUMMER_TYPE_CLASS = 35;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2904,7 +2979,7 @@ public interface BedienungPackage extends EPackage {
 	int BETRIEBSSTELLENBEZEICHNER_TYPE_CLASS = 36;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2950,7 +3025,7 @@ public interface BedienungPackage extends EPackage {
 	int BEZ_BED_ANRUECKABSCHNITT_TYPE_CLASS = 37;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2996,7 +3071,7 @@ public interface BedienungPackage extends EPackage {
 	int BEZ_BED_ANZEIGE_ELEMENT_TYPE_CLASS = 38;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3042,7 +3117,7 @@ public interface BedienungPackage extends EPackage {
 	int BEZ_BED_ZENTRALE_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3088,7 +3163,7 @@ public interface BedienungPackage extends EPackage {
 	int BEZEICHNUNG_BSO_TYPE_CLASS = 40;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3271,7 +3346,7 @@ public interface BedienungPackage extends EPackage {
 	int BSO_TEILSYSTEM_ART_TYPE_CLASS = 43;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3317,7 +3392,7 @@ public interface BedienungPackage extends EPackage {
 	int CWERT_TYPE_CLASS = 44;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3363,7 +3438,7 @@ public interface BedienungPackage extends EPackage {
 	int DD_WERT_TYPE_CLASS = 45;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3409,7 +3484,7 @@ public interface BedienungPackage extends EPackage {
 	int HERSTELLER_TYPE_CLASS = 46;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3455,7 +3530,7 @@ public interface BedienungPackage extends EPackage {
 	int HUPE_ANSCHALTZEIT_TYPE_CLASS = 47;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3501,7 +3576,7 @@ public interface BedienungPackage extends EPackage {
 	int IP_ADRESSBLOCK_BLAU_TYPE_CLASS = 48;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3547,7 +3622,7 @@ public interface BedienungPackage extends EPackage {
 	int IP_ADRESSBLOCK_BLAU_V4_TYPE_CLASS = 49;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3593,7 +3668,7 @@ public interface BedienungPackage extends EPackage {
 	int IP_ADRESSBLOCK_BLAU_V6_TYPE_CLASS = 50;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3639,7 +3714,7 @@ public interface BedienungPackage extends EPackage {
 	int IP_ADRESSBLOCK_GRAU_TYPE_CLASS = 51;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3685,7 +3760,7 @@ public interface BedienungPackage extends EPackage {
 	int IP_ADRESSBLOCK_GRAU_V4_TYPE_CLASS = 52;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3731,7 +3806,7 @@ public interface BedienungPackage extends EPackage {
 	int IP_ADRESSBLOCK_GRAU_V6_TYPE_CLASS = 53;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3777,7 +3852,7 @@ public interface BedienungPackage extends EPackage {
 	int KENNZAHL_TYPE_CLASS = 54;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3823,7 +3898,7 @@ public interface BedienungPackage extends EPackage {
 	int MELDER_TYPE_CLASS = 55;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3869,7 +3944,7 @@ public interface BedienungPackage extends EPackage {
 	int OBERFLAECHE_BILDART_TYPE_CLASS = 56;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3915,7 +3990,7 @@ public interface BedienungPackage extends EPackage {
 	int OBERFLAECHE_ZUSTAENDIGKEIT_TYPE_CLASS = 57;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3961,7 +4036,7 @@ public interface BedienungPackage extends EPackage {
 	int REGIONALBEREICH_TYPE_CLASS = 58;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4007,7 +4082,7 @@ public interface BedienungPackage extends EPackage {
 	int RUECKSCHAUZEIT_TYPE_CLASS = 59;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4053,7 +4128,7 @@ public interface BedienungPackage extends EPackage {
 	int SCHALTER_TYPE_CLASS = 60;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4099,7 +4174,7 @@ public interface BedienungPackage extends EPackage {
 	int SCHRANKREIHE_TYPE_CLASS = 61;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4145,7 +4220,7 @@ public interface BedienungPackage extends EPackage {
 	int STEUERBEZIRKSNAME_TYPE_CLASS = 62;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4191,7 +4266,7 @@ public interface BedienungPackage extends EPackage {
 	int STEUERBEZIRKSNUMMER_TYPE_CLASS = 63;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4237,7 +4312,7 @@ public interface BedienungPackage extends EPackage {
 	int TASTE_TYPE_CLASS = 64;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4283,7 +4358,7 @@ public interface BedienungPackage extends EPackage {
 	int VORSCHAUZEIT_TYPE_CLASS = 65;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4329,7 +4404,7 @@ public interface BedienungPackage extends EPackage {
 	int XWERT_TYPE_CLASS = 66;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4375,7 +4450,7 @@ public interface BedienungPackage extends EPackage {
 	int YWERT_TYPE_CLASS = 67;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4421,7 +4496,7 @@ public interface BedienungPackage extends EPackage {
 	int YY_WERT_TYPE_CLASS = 68;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -190,6 +191,29 @@ public class ZuglenkungItemProviderAdapterFactory extends ZuglenkungAdapterFacto
 		}
 
 		return einstellkontrollzeit_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Fstr_Bildezeit_TypeClassItemProvider fstr_Bildezeit_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFstr_Bildezeit_TypeClassAdapter() {
+		if (fstr_Bildezeit_TypeClassItemProvider == null) {
+			fstr_Bildezeit_TypeClassItemProvider = new Fstr_Bildezeit_TypeClassItemProvider(this);
+		}
+
+		return fstr_Bildezeit_TypeClassItemProvider;
 	}
 
 	/**
@@ -877,6 +901,7 @@ public class ZuglenkungItemProviderAdapterFactory extends ZuglenkungAdapterFacto
 		if (deadlockpruefung_TypeClassItemProvider != null) deadlockpruefung_TypeClassItemProvider.dispose();
 		if (dWeg_Prio_TypeClassItemProvider != null) dWeg_Prio_TypeClassItemProvider.dispose();
 		if (einstellkontrollzeit_TypeClassItemProvider != null) einstellkontrollzeit_TypeClassItemProvider.dispose();
+		if (fstr_Bildezeit_TypeClassItemProvider != null) fstr_Bildezeit_TypeClassItemProvider.dispose();
 		if (fueM_Auswertung_TypeClassItemProvider != null) fueM_Auswertung_TypeClassItemProvider.dispose();
 		if (gK_TypeClassItemProvider != null) gK_TypeClassItemProvider.dispose();
 		if (gkzsS_TypeClassItemProvider != null) gkzsS_TypeClassItemProvider.dispose();

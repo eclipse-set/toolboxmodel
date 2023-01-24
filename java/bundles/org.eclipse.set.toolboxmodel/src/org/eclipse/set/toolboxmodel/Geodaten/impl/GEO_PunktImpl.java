@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -6,12 +13,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Knoten;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup;
@@ -26,6 +34,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_PunktImpl#getGEOPunktAllg <em>GEO Punkt Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_PunktImpl#getIDGEOKante <em>IDGEO Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_PunktImpl#getIDGEOKnoten <em>IDGEO Knoten</em>}</li>
  * </ul>
  *
@@ -41,6 +50,25 @@ public class GEO_PunktImpl extends Basis_ObjektImpl implements GEO_Punkt {
 	 * @ordered
 	 */
 	protected GEO_Punkt_Allg_AttributeGroup gEOPunktAllg;
+
+	/**
+	 * The cached value of the '{@link #getIDGEOKante() <em>IDGEO Kante</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDGEOKante()
+	 * @generated
+	 * @ordered
+	 */
+	protected GEO_Kante iDGEOKante;
+
+	/**
+	 * This is true if the IDGEO Kante reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDGEOKanteESet;
 
 	/**
 	 * The cached value of the '{@link #getIDGEOKnoten() <em>IDGEO Knoten</em>}' reference.
@@ -123,6 +151,73 @@ public class GEO_PunktImpl extends Basis_ObjektImpl implements GEO_Punkt {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT__GEO_PUNKT_ALLG, newGEOPunktAllg, newGEOPunktAllg));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GEO_Kante getIDGEOKante() {
+		if (iDGEOKante != null && iDGEOKante.eIsProxy()) {
+			InternalEObject oldIDGEOKante = (InternalEObject)iDGEOKante;
+			iDGEOKante = (GEO_Kante)eResolveProxy(oldIDGEOKante);
+			if (iDGEOKante != oldIDGEOKante) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeodatenPackage.GEO_PUNKT__IDGEO_KANTE, oldIDGEOKante, iDGEOKante));
+			}
+		}
+		return iDGEOKante;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GEO_Kante basicGetIDGEOKante() {
+		return iDGEOKante;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDGEOKante(GEO_Kante newIDGEOKante) {
+		GEO_Kante oldIDGEOKante = iDGEOKante;
+		iDGEOKante = newIDGEOKante;
+		boolean oldIDGEOKanteESet = iDGEOKanteESet;
+		iDGEOKanteESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT__IDGEO_KANTE, oldIDGEOKante, iDGEOKante, !oldIDGEOKanteESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDGEOKante() {
+		GEO_Kante oldIDGEOKante = iDGEOKante;
+		boolean oldIDGEOKanteESet = iDGEOKanteESet;
+		iDGEOKante = null;
+		iDGEOKanteESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeodatenPackage.GEO_PUNKT__IDGEO_KANTE, oldIDGEOKante, null, oldIDGEOKanteESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDGEOKante() {
+		return iDGEOKanteESet;
 	}
 
 	/**
@@ -217,6 +312,9 @@ public class GEO_PunktImpl extends Basis_ObjektImpl implements GEO_Punkt {
 		switch (featureID) {
 			case GeodatenPackage.GEO_PUNKT__GEO_PUNKT_ALLG:
 				return getGEOPunktAllg();
+			case GeodatenPackage.GEO_PUNKT__IDGEO_KANTE:
+				if (resolve) return getIDGEOKante();
+				return basicGetIDGEOKante();
 			case GeodatenPackage.GEO_PUNKT__IDGEO_KNOTEN:
 				if (resolve) return getIDGEOKnoten();
 				return basicGetIDGEOKnoten();
@@ -235,6 +333,9 @@ public class GEO_PunktImpl extends Basis_ObjektImpl implements GEO_Punkt {
 		switch (featureID) {
 			case GeodatenPackage.GEO_PUNKT__GEO_PUNKT_ALLG:
 				setGEOPunktAllg((GEO_Punkt_Allg_AttributeGroup)newValue);
+				return;
+			case GeodatenPackage.GEO_PUNKT__IDGEO_KANTE:
+				setIDGEOKante((GEO_Kante)newValue);
 				return;
 			case GeodatenPackage.GEO_PUNKT__IDGEO_KNOTEN:
 				setIDGEOKnoten((GEO_Knoten)newValue);
@@ -256,6 +357,9 @@ public class GEO_PunktImpl extends Basis_ObjektImpl implements GEO_Punkt {
 			case GeodatenPackage.GEO_PUNKT__GEO_PUNKT_ALLG:
 				setGEOPunktAllg((GEO_Punkt_Allg_AttributeGroup)null);
 				return;
+			case GeodatenPackage.GEO_PUNKT__IDGEO_KANTE:
+				unsetIDGEOKante();
+				return;
 			case GeodatenPackage.GEO_PUNKT__IDGEO_KNOTEN:
 				unsetIDGEOKnoten();
 				return;
@@ -275,6 +379,8 @@ public class GEO_PunktImpl extends Basis_ObjektImpl implements GEO_Punkt {
 		switch (featureID) {
 			case GeodatenPackage.GEO_PUNKT__GEO_PUNKT_ALLG:
 				return gEOPunktAllg != null;
+			case GeodatenPackage.GEO_PUNKT__IDGEO_KANTE:
+				return isSetIDGEOKante();
 			case GeodatenPackage.GEO_PUNKT__IDGEO_KNOTEN:
 				return isSetIDGEOKnoten();
 			default:

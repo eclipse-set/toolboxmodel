@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.util;
 
@@ -105,6 +112,10 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 				return createBesonderes_Schaltkriterium_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseBezeichnung_Besondere_Anlage_TypeClass(Bezeichnung_Besondere_Anlage_TypeClass object) {
+				return createBezeichnung_Besondere_Anlage_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseBf_Kennung_TypeClass(Bf_Kennung_TypeClass object) {
 				return createBf_Kennung_TypeClassAdapter();
 			}
@@ -151,6 +162,10 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseKoppelunterstation_TypeClass(Koppelunterstation_TypeClass object) {
 				return createKoppelunterstation_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseKUs_Zeittelegramm_TypeClass(KUs_Zeittelegramm_TypeClass object) {
+				return createKUs_Zeittelegramm_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseMeldedruck_TypeClass(Meldedruck_TypeClass object) {
@@ -253,12 +268,28 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 				return createZBS_Schnittstelle_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseZeitsynchronisation_Funkuhr_TypeClass(Zeitsynchronisation_Funkuhr_TypeClass object) {
+				return createZeitsynchronisation_Funkuhr_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseZLV_Bus(ZLV_Bus object) {
 				return createZLV_BusAdapter();
 			}
 			@Override
 			public Adapter caseZLV_Bus_Allg_AttributeGroup(ZLV_Bus_Allg_AttributeGroup object) {
 				return createZLV_Bus_Allg_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseZLV_Bus_Besondere_Anlage(ZLV_Bus_Besondere_Anlage object) {
+				return createZLV_Bus_Besondere_AnlageAdapter();
+			}
+			@Override
+			public Adapter caseZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup(ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup object) {
+				return createZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseZLV_Bus_Bezeichnung_AttributeGroup(ZLV_Bus_Bezeichnung_AttributeGroup object) {
+				return createZLV_Bus_Bezeichnung_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseZLV_Bus_Nr_TypeClass(ZLV_Bus_Nr_TypeClass object) {
@@ -367,10 +398,6 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseZN_ZBS(ZN_ZBS object) {
 				return createZN_ZBSAdapter();
-			}
-			@Override
-			public Adapter caseZN_ZBS_Allg_AttributeGroup(ZN_ZBS_Allg_AttributeGroup object) {
-				return createZN_ZBS_Allg_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseZugvorbereitungsmeldung_TypeClass(Zugvorbereitungsmeldung_TypeClass object) {
@@ -517,6 +544,20 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBesonderes_Schaltkriterium_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bezeichnung_Besondere_Anlage_TypeClass <em>Bezeichnung Besondere Anlage Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bezeichnung_Besondere_Anlage_TypeClass
+	 * @generated
+	 */
+	public Adapter createBezeichnung_Besondere_Anlage_TypeClassAdapter() {
 		return null;
 	}
 
@@ -685,6 +726,20 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createKoppelunterstation_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.KUs_Zeittelegramm_TypeClass <em>KUs Zeittelegramm Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.KUs_Zeittelegramm_TypeClass
+	 * @generated
+	 */
+	public Adapter createKUs_Zeittelegramm_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1039,6 +1094,20 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zeitsynchronisation_Funkuhr_TypeClass <em>Zeitsynchronisation Funkuhr Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zeitsynchronisation_Funkuhr_TypeClass
+	 * @generated
+	 */
+	public Adapter createZeitsynchronisation_Funkuhr_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus <em>ZLV Bus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1063,6 +1132,48 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createZLV_Bus_Allg_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage <em>ZLV Bus Besondere Anlage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage
+	 * @generated
+	 */
+	public Adapter createZLV_Bus_Besondere_AnlageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup <em>ZLV Bus Besondere Anlage Bezeichnung Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Bezeichnung_AttributeGroup <em>ZLV Bus Bezeichnung Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Bezeichnung_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createZLV_Bus_Bezeichnung_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -1441,20 +1552,6 @@ public class ZugnummernmeldeanlageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createZN_ZBSAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS_Allg_AttributeGroup <em>ZN ZBS Allg Attribute Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS_Allg_AttributeGroup
-	 * @generated
-	 */
-	public Adapter createZN_ZBS_Allg_AttributeGroupAdapter() {
 		return null;
 	}
 

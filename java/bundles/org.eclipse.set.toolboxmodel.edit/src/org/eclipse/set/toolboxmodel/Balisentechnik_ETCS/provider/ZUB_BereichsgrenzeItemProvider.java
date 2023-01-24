@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Punkt_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze} object.
@@ -107,6 +108,7 @@ public class ZUB_BereichsgrenzeItemProvider extends Punkt_ObjektItemProvider {
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachOhne());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachPZB());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachSonstige());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachZBS());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBgrenzeRBCWechsel());
 		}
 		return childrenFeatures;
@@ -169,6 +171,7 @@ public class ZUB_BereichsgrenzeItemProvider extends Punkt_ObjektItemProvider {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_OHNE:
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_PZB:
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_SONSTIGE:
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BEREICHSGRENZE_NACH_ZBS:
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE__ZUB_BGRENZE_RBC_WECHSEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -207,7 +210,7 @@ public class ZUB_BereichsgrenzeItemProvider extends Punkt_ObjektItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachGNT(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createZUB_Bereichsgrenze_Nach_GNT_AttributeGroup()));
+				 Balisentechnik_ETCSFactory.eINSTANCE.createZUB_Bereichsgrenze_Nach_GNT_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -233,6 +236,11 @@ public class ZUB_BereichsgrenzeItemProvider extends Punkt_ObjektItemProvider {
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachSonstige(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachZBS(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter

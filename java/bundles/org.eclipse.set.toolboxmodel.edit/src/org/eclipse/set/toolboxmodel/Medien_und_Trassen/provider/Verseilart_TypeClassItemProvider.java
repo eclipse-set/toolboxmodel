@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -26,10 +27,10 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.provider.BasisAttribut_AttributeGroupItemProvider;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Verseilart_TypeClass;
-
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Verseilart_TypeClass} object.

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen.util;
 
@@ -96,8 +103,8 @@ public class BasisTypenAdapterFactory extends AdapterFactoryImpl {
 				return createDatum_Auslieferung_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseEigenschaften_Datei_AttributeGroup(Eigenschaften_Datei_AttributeGroup object) {
-				return createEigenschaften_Datei_AttributeGroupAdapter();
+			public Adapter caseID_Bearbeitungsvermerk_TypeClass(ID_Bearbeitungsvermerk_TypeClass object) {
+				return createID_Bearbeitungsvermerk_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseKennzahl_TypeClass(Kennzahl_TypeClass object) {
@@ -106,6 +113,10 @@ public class BasisTypenAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOertlicher_Elementname_TypeClass(Oertlicher_Elementname_TypeClass object) {
 				return createOertlicher_Elementname_TypeClassAdapter();
+			}
+			@Override
+			public Adapter casePruefmerkmale_Daten_AttributeGroup(Pruefmerkmale_Daten_AttributeGroup object) {
+				return createPruefmerkmale_Daten_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter casePruefsumme_Art_TypeClass(Pruefsumme_Art_TypeClass object) {
@@ -242,16 +253,16 @@ public class BasisTypenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup <em>Eigenschaften Datei Attribute Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass <em>ID Bearbeitungsvermerk Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass
 	 * @generated
 	 */
-	public Adapter createEigenschaften_Datei_AttributeGroupAdapter() {
+	public Adapter createID_Bearbeitungsvermerk_TypeClassAdapter() {
 		return null;
 	}
 
@@ -280,6 +291,20 @@ public class BasisTypenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOertlicher_Elementname_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup <em>Pruefmerkmale Daten Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createPruefmerkmale_Daten_AttributeGroupAdapter() {
 		return null;
 	}
 

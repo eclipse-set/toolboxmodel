@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen;
 
@@ -45,7 +52,11 @@ public interface Bezeichnung_Element_AttributeGroup extends EObject {
 	 * • ein Hauptsignal hat in der Außenanlage ein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird befüllt; 
 	 * • ein Vorsignal hat in der Außenanlage kein Bezeichnungsschild, aber auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird befüllt; 
 	 * • ein Bedienpunkt (fiktives Signal) existiert gar nicht in der Außenanlage, hat aber mindestens im Tabellenwerk einen spezifischen Bezeichner, das Attribut wird befüllt; 
-	 * • ein Lf 7 hat in der Außenanlage kein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan keinen spezifischen Bezeichner, das Attribut entfällt (Hinweis: Auch wenn im Lageplan der Bezeichner 
+	 * • ein Lf 7 hat in der Außenanlage kein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan keinen spezifischen Bezeichner, das Attribut entfällt (Hinweis: Auch wenn im Lageplan der Bezeichner "LF7" eingetragen wird, so ist das dennoch kein spezifischer Bezeichner, sondern ein allgemeiner Bezeichner für alle Signale Lf 7). 
+	 * 
+	 * DB-Regelwerk
+	 * • 819.9001
+	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bezeichnung Aussenanlage</em>' containment reference.
 	 * @see #setBezeichnungAussenanlage(Bezeichnung_Aussenanlage_TypeClass)
@@ -156,9 +167,9 @@ public interface Bezeichnung_Element_AttributeGroup extends EObject {
 	 * 
 	 * Die ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!
 	 * 
-	 * Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \„HH Kennzahl 06\“ und \„HHZX Kennzahl 30\“).
+	 * Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten "HH Kennzahl 06" und "HHZX Kennzahl 30").
 	 * 
-	 * Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \„Üst Giften HGIF\“ und \„Üst Ritterkamp HRIT\“.
+	 * Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit "Üst Giften HGIF" und "Üst Ritterkamp HRIT".
 	 * 
 	 * In Stellbereichen von Bedienbezirken werden für Betriebsstellen (z. B. Bahnhöfe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.
 	 * 

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -16,6 +23,8 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Schaltkasten_Positio
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Position_Sonstige_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Position_TypeClass;
 
+import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>LEU Schaltkasten Position Attribute Group</b></em>'.
@@ -24,6 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Position_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_Schaltkasten_Position_AttributeGroupImpl#getIDBezugspunktPositionierung <em>ID Bezugspunkt Positionierung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_Schaltkasten_Position_AttributeGroupImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_Schaltkasten_Position_AttributeGroupImpl#getPositionSonstige <em>Position Sonstige</em>}</li>
  * </ul>
@@ -31,6 +41,25 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Position_TypeClass;
  * @generated
  */
 public class LEU_Schaltkasten_Position_AttributeGroupImpl extends MinimalEObjectImpl.Container implements LEU_Schaltkasten_Position_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getIDBezugspunktPositionierung() <em>ID Bezugspunkt Positionierung</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDBezugspunktPositionierung()
+	 * @generated
+	 * @ordered
+	 */
+	protected Basis_Objekt iDBezugspunktPositionierung;
+
+	/**
+	 * This is true if the ID Bezugspunkt Positionierung reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDBezugspunktPositionierungESet;
+
 	/**
 	 * The cached value of the '{@link #getPosition() <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -68,6 +97,73 @@ public class LEU_Schaltkasten_Position_AttributeGroupImpl extends MinimalEObject
 	@Override
 	protected EClass eStaticClass() {
 		return Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_Position_AttributeGroup();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Basis_Objekt getIDBezugspunktPositionierung() {
+		if (iDBezugspunktPositionierung != null && iDBezugspunktPositionierung.eIsProxy()) {
+			InternalEObject oldIDBezugspunktPositionierung = (InternalEObject)iDBezugspunktPositionierung;
+			iDBezugspunktPositionierung = (Basis_Objekt)eResolveProxy(oldIDBezugspunktPositionierung);
+			if (iDBezugspunktPositionierung != oldIDBezugspunktPositionierung) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__ID_BEZUGSPUNKT_POSITIONIERUNG, oldIDBezugspunktPositionierung, iDBezugspunktPositionierung));
+			}
+		}
+		return iDBezugspunktPositionierung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Basis_Objekt basicGetIDBezugspunktPositionierung() {
+		return iDBezugspunktPositionierung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDBezugspunktPositionierung(Basis_Objekt newIDBezugspunktPositionierung) {
+		Basis_Objekt oldIDBezugspunktPositionierung = iDBezugspunktPositionierung;
+		iDBezugspunktPositionierung = newIDBezugspunktPositionierung;
+		boolean oldIDBezugspunktPositionierungESet = iDBezugspunktPositionierungESet;
+		iDBezugspunktPositionierungESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__ID_BEZUGSPUNKT_POSITIONIERUNG, oldIDBezugspunktPositionierung, iDBezugspunktPositionierung, !oldIDBezugspunktPositionierungESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDBezugspunktPositionierung() {
+		Basis_Objekt oldIDBezugspunktPositionierung = iDBezugspunktPositionierung;
+		boolean oldIDBezugspunktPositionierungESet = iDBezugspunktPositionierungESet;
+		iDBezugspunktPositionierung = null;
+		iDBezugspunktPositionierungESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__ID_BEZUGSPUNKT_POSITIONIERUNG, oldIDBezugspunktPositionierung, null, oldIDBezugspunktPositionierungESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDBezugspunktPositionierung() {
+		return iDBezugspunktPositionierungESet;
 	}
 
 	/**
@@ -185,6 +281,9 @@ public class LEU_Schaltkasten_Position_AttributeGroupImpl extends MinimalEObject
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__ID_BEZUGSPUNKT_POSITIONIERUNG:
+				if (resolve) return getIDBezugspunktPositionierung();
+				return basicGetIDBezugspunktPositionierung();
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__POSITION:
 				return getPosition();
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__POSITION_SONSTIGE:
@@ -202,6 +301,9 @@ public class LEU_Schaltkasten_Position_AttributeGroupImpl extends MinimalEObject
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__ID_BEZUGSPUNKT_POSITIONIERUNG:
+				setIDBezugspunktPositionierung((Basis_Objekt)newValue);
+				return;
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__POSITION:
 				setPosition((Position_TypeClass)newValue);
 				return;
@@ -222,6 +324,9 @@ public class LEU_Schaltkasten_Position_AttributeGroupImpl extends MinimalEObject
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__ID_BEZUGSPUNKT_POSITIONIERUNG:
+				unsetIDBezugspunktPositionierung();
+				return;
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__POSITION:
 				setPosition((Position_TypeClass)null);
 				return;
@@ -242,6 +347,8 @@ public class LEU_Schaltkasten_Position_AttributeGroupImpl extends MinimalEObject
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__ID_BEZUGSPUNKT_POSITIONIERUNG:
+				return isSetIDBezugspunktPositionierung();
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__POSITION:
 				return position != null;
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_POSITION_ATTRIBUTE_GROUP__POSITION_SONSTIGE:

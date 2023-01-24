@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.util;
 
@@ -177,12 +184,16 @@ public class SchluesselabhaengigkeitenAdapterFactory extends AdapterFactoryImpl 
 				return createSchluesselsperreAdapter();
 			}
 			@Override
+			public Adapter caseSonderanlage_Lage_TypeClass(Sonderanlage_Lage_TypeClass object) {
+				return createSonderanlage_Lage_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseTechnisch_Berechtigter_TypeClass(Technisch_Berechtigter_TypeClass object) {
 				return createTechnisch_Berechtigter_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseVerschluss_Herzstueck_TypeClass(Verschluss_Herzstueck_TypeClass object) {
-				return createVerschluss_Herzstueck_TypeClassAdapter();
+			public Adapter caseVerschluss_Ort_TypeClass(Verschluss_Ort_TypeClass object) {
+				return createVerschluss_Ort_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseW_Anbaulage_TypeClass(W_Anbaulage_TypeClass object) {
@@ -589,6 +600,20 @@ public class SchluesselabhaengigkeitenAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass <em>Sonderanlage Lage Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass
+	 * @generated
+	 */
+	public Adapter createSonderanlage_Lage_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Technisch_Berechtigter_TypeClass <em>Technisch Berechtigter Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -603,16 +628,16 @@ public class SchluesselabhaengigkeitenAdapterFactory extends AdapterFactoryImpl 
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass <em>Verschluss Herzstueck Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass <em>Verschluss Ort Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass
 	 * @generated
 	 */
-	public Adapter createVerschluss_Herzstueck_TypeClassAdapter() {
+	public Adapter createVerschluss_Ort_TypeClassAdapter() {
 		return null;
 	}
 

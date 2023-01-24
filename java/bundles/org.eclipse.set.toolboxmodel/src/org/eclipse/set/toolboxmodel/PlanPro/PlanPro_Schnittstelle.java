@@ -2,6 +2,7 @@
  */
 package org.eclipse.set.toolboxmodel.PlanPro;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
 
 /**
@@ -10,15 +11,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Ermöglicht die globale Angabe und Zuordnung von Daten, die für alle Einzelplanungen einer Planungsgruppe gleichermaßen gelten. Dabei können in organisatorische und inhaltliche Angaben unterschieden werden. 
- * Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess
- * Die ~ muss vor Beginn der Erstellung nachfolgender Einzelplanungen festgelegt sein. 
- * Enthält Informationen zur Bezeichnung der Planungsgruppe, zum gesperrten Planungsbereich und zum notwendigen Betrachtungsbereich.
- * Beim Anlegen der ~ erfolgt keine Festlegung der Anzahl der Einzelplanungen. Der erste Bauzustand ist entweder eine Neuplanung oder baut auf einer Bestandsdokumentationbzw. Bestandsdatenauf. Alle weiteren Bauzustände bauen auf der neutralisierten Bezugsplanung des jeweiligen Vorgängers auf.
- * Eine Planungsgruppe durchläuft definierte Status. Spätestens vor Abschluss einer ~ (sowie nach jeder Revision/Rev_letzte_Planung_E) werden neue Bestandsdaten erstellt.
- * 
- * DB-Regelwerk
- * Bisher nicht abgebildet.
+ * Oberstes Objekt der Content-XML, das in jeder Datei vorhanden ist. Damit jede Ausgabe in Form einer XML-Datei über die Identität von ~ eindeutig zu identifizieren ist, muss bei jeder Erzeugung einer XML-Ausgabe für eine Planung eine neue GUID für das Objekt PlanPro_Schnittstelle vergeben werden.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -28,6 +21,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getPlanProSchnittstelleAllg <em>Plan Pro Schnittstelle Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getLSTPlanung <em>LST Planung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getLSTZustand <em>LST Zustand</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getWzkInvalidIDReferences <em>Wzk Invalid ID References</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getPlanPro_Schnittstelle()
@@ -109,5 +103,17 @@ public interface PlanPro_Schnittstelle extends Ur_Objekt {
 	 * @generated
 	 */
 	void setLSTZustand(LST_Zustand value);
+
+	/**
+	 * Returns the value of the '<em><b>Wzk Invalid ID References</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wzk Invalid ID References</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getPlanPro_Schnittstelle_WzkInvalidIDReferences()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<WzkInvalidIDReference> getWzkInvalidIDReferences();
 
 } // PlanPro_Schnittstelle

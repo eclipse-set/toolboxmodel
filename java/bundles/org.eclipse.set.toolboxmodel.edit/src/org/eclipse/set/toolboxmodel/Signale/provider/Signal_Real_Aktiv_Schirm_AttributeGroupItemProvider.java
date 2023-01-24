@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Signale.SignaleFactory;
@@ -85,7 +86,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__SIGNAL_ART);
@@ -144,7 +144,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Signal_Real_Aktiv_Schirm_AttributeGroup.class)) {
-			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG:
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT:
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG:
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__SIGNAL_ART:
@@ -169,11 +168,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SignalePackage.Literals.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG,
-				 SignaleFactory.eINSTANCE.createDunkelschaltung_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

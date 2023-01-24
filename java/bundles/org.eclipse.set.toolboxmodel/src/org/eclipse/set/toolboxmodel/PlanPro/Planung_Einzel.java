@@ -3,8 +3,6 @@
 package org.eclipse.set.toolboxmodel.PlanPro;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
 
@@ -14,7 +12,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Oberstes Objekt, das in jeder Datei vorhanden ist. Damit jede Ausgabe in Form einer XML-Datei über die Identität von ~ eindeutig zu identifizieren ist, muss bei jeder Erzeugung einer XML-Ausgabe für eine Planung eine neue GUID für das Objekt PlanPro_Schnittstelle vergeben werden.
+ * Angabe und Zuordnung von Daten, die für eine Einzelplanung innerhalb einer definierten Planungsgruppe gelten.
+ * Die Attribute des Objekts Planung_Einzel werden zum Teil während der Erstellung der beauftragten Planung befüllt. Mit der Weiterschaltung des jeweiligen Planungsstatus können im Rahmen nachfolgender Prozessschritte (z. B. Planprüfung) weitere Attribute befüllt werden.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -44,9 +43,7 @@ public interface Planung_Einzel extends Ur_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Zur Planung gehörender Erläuterungsbericht, welcher als *.pdf der Planung angehängt wird.
-	 * 
 	 * DB-Regelwerk
-	 * 
 	 * Bisher ohne eindeutige Darstellung.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Anhang Erlaeuterungsbericht</em>' containment reference list.
@@ -64,9 +61,7 @@ public interface Planung_Einzel extends Ur_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Anhang zur Angabe von Besonderheiten, die von der Signalbauindustrie bei der Materialisierung beachtet werden müssen, z. B. beigestellte bzw. wiederverwendete Materialien.
-	 *  
 	 * DB-Regelwerk
-	 * 
 	 * Bisher ohne eindeutige Darstellung.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Anhang Material Besonders</em>' containment reference list.
@@ -84,13 +79,9 @@ public interface Planung_Einzel extends Ur_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Das bei der Erstellung der Planung zu Grunde gelegte VzG des Zielzustandes für die Strecken im Planungsbereich.
-	 * 
 	 * Das VzG wird als *.pdf der Planung angehängt.
-	 * 
 	 * Das Ausgabedatum des VzG ist in die Dateibezeichnung aufzunehmen, da auch unterjährig aktualisierte VzG herausgegeben werden können.
-	 *  
 	 * DB-Regelwerk
-	 * 
 	 * Bisher ohne eindeutige Abbildung.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Anhang Vz G</em>' containment reference list.
@@ -257,14 +248,11 @@ public interface Planung_Einzel extends Ur_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Referenz auf eine Planung Einzel mit dem Ausgabestand, der als Grundlage für die Erstellung der aktuellen Planung_Einzel verwendet wurde.
-	 *  
 	 * Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess
-	 * 
 	 * Bei einer Planung der Eigenschaft Planung E Art = Bestandsdigitalisierung_Geo_Topo ist keine Referenz_Planung_Basis vorhanden. Gleiches gilt für Planungen der Art Bestandsdigitalisierung_LST, Geodaten oder Bauzustand, sofern zuvor keine separaten Planungsdaten erzeugt wurden. Alle anderen Planungen verfügen über eine Referenz_Planung_Basis, über deren Verlinkung weitere Angaben im Schriftfeld gefüllt werden können (Ersteller, Bauzustand).
-	 *  
 	 * DB-Regelwerk
-	 * Bisher keine eindeutige Abbildung. 
-	 * Herleitbar aus Schriftfeldeinträgen gemäß Ril 819.0103 einschließlich Erläuterungen, insbesondere Änderungsindex/-historie sowie aufbauendem Ausgabestand.
+	 * Bisher keine eindeutige Abbildung.
+	 * Herleitbar aus Schriftfeldeinträgen gemäß Ril 886.0102 einschließlich Erläuterungen, insbesondere Änderungsindex/-historie sowie aufbauendem Ausgabestand.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Referenz Planung Basis</em>' containment reference.
 	 * @see #setReferenzPlanungBasis(Referenz_Planung_Basis_TypeClass)

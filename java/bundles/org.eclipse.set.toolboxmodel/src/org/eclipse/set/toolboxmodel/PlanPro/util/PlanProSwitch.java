@@ -371,6 +371,12 @@ public class PlanProSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PlanProPackage.WZK_INVALID_ID_REFERENCE: {
+				WzkInvalidIDReference wzkInvalidIDReference = (WzkInvalidIDReference)theEObject;
+				T result = caseWzkInvalidIDReference(wzkInvalidIDReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE_ALLG_ATTRIBUTE_GROUP: {
 				PlanPro_Schnittstelle_Allg_AttributeGroup planPro_Schnittstelle_Allg_AttributeGroup = (PlanPro_Schnittstelle_Allg_AttributeGroup)theEObject;
 				T result = casePlanPro_Schnittstelle_Allg_AttributeGroup(planPro_Schnittstelle_Allg_AttributeGroup);
@@ -1246,6 +1252,21 @@ public class PlanProSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePlanPro_Schnittstelle(PlanPro_Schnittstelle object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wzk Invalid ID Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wzk Invalid ID Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWzkInvalidIDReference(WzkInvalidIDReference object) {
 		return null;
 	}
 

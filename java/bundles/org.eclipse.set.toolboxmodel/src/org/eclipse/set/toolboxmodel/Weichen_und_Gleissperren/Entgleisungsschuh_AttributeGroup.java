@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -28,12 +35,12 @@ public interface Entgleisungsschuh_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Entgleisungsrichtung eines Fahrzeugs, das über den Entgleisungsschuh fährt. Die Entgleisungsrichtung ist in Bewegungsrichtung des Fahrzeuges auf den Entgleisungsschuhs zu sehen und ist nicht auf die Wirkrichtung der topologischen Kante bezogen. Da das zugehörige Objekt (W_Kr_Gsp_Komponente als Punktobjekt auf eine Fahrschiene des Gleises (Topologiekante) verortet ist, kann daraus ebenfalls die Auswurfrichtung ermittelt werden. Achtung: Die Angabe ist redundant zu den Angaben im Punktobjekt bezüglich der Attribute Seitliche Lage und Wirkrichtung! Es wird deshalb nochmals geprüft auf dieses Attribut künftig zu verzichten.
+	 * Entgleisungsrichtung eines Fahrzeugs, das über den Entgleisungsschuh fährt. Die Entgleisungsrichtung ist in Bewegungsrichtung des Fahrzeuges auf den Entgleisungsschuhs zu sehen und ist nicht auf die Wirkrichtung der topologischen Kante bezogen. Da das zugehörige Objekt (W_Kr_Gsp_Komponente) als Punktobjekt auf eine Fahrschiene des Gleises (Topologiekante) verortet ist, kann daraus ebenfalls die Auswurfrichtung ermittelt werden. Achtung: Die Angabe ist redundant zu den Angaben im Punktobjekt bezüglich der Attribute Seitliche Lage und Wirkrichtung und soll daher zukünftig entfallen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auswurfrichtung</em>' containment reference.
 	 * @see #setAuswurfrichtung(Auswurfrichtung_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage#getEntgleisungsschuh_AttributeGroup_Auswurfrichtung()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Auswurfrichtung'"
 	 * @generated
 	 */

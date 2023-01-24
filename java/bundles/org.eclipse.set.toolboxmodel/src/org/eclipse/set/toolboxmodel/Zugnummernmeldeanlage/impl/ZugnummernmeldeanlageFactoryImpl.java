@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl;
 
@@ -74,6 +81,7 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 			case ZugnummernmeldeanlagePackage.AUSFAHRDRUCK_TYPE_CLASS: return createAusfahrdruck_TypeClass();
 			case ZugnummernmeldeanlagePackage.BEDIENBARKEIT_ANZEIGEFELD_TYPE_CLASS: return createBedienbarkeit_Anzeigefeld_TypeClass();
 			case ZugnummernmeldeanlagePackage.BESONDERES_SCHALTKRITERIUM_TYPE_CLASS: return createBesonderes_Schaltkriterium_TypeClass();
+			case ZugnummernmeldeanlagePackage.BEZEICHNUNG_BESONDERE_ANLAGE_TYPE_CLASS: return createBezeichnung_Besondere_Anlage_TypeClass();
 			case ZugnummernmeldeanlagePackage.BF_KENNUNG_TYPE_CLASS: return createBf_Kennung_TypeClass();
 			case ZugnummernmeldeanlagePackage.BF_NR_ANB_TYPE_CLASS: return createBf_Nr_ANB_TypeClass();
 			case ZugnummernmeldeanlagePackage.BF_NR_TYPE_CLASS: return createBf_Nr_TypeClass();
@@ -86,6 +94,7 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 			case ZugnummernmeldeanlagePackage.HOA_TYPE_CLASS: return createHOA_TypeClass();
 			case ZugnummernmeldeanlagePackage.IP_ADRESSE_TYPE_CLASS: return createIP_Adresse_TypeClass();
 			case ZugnummernmeldeanlagePackage.KOPPELUNTERSTATION_TYPE_CLASS: return createKoppelunterstation_TypeClass();
+			case ZugnummernmeldeanlagePackage.KUS_ZEITTELEGRAMM_TYPE_CLASS: return createKUs_Zeittelegramm_TypeClass();
 			case ZugnummernmeldeanlagePackage.MELDEDRUCK_TYPE_CLASS: return createMeldedruck_TypeClass();
 			case ZugnummernmeldeanlagePackage.PRIORITAET_TYPE_CLASS: return createPrioritaet_TypeClass();
 			case ZugnummernmeldeanlagePackage.REAKTIVIERUNGSFUNKTION_TYPE_CLASS: return createReaktivierungsfunktion_TypeClass();
@@ -111,8 +120,12 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 			case ZugnummernmeldeanlagePackage.ZBS_ADRESSE_TYPE_CLASS: return createZBS_Adresse_TypeClass();
 			case ZugnummernmeldeanlagePackage.ZBS_ANBINDUNG_TYPE_CLASS: return createZBS_Anbindung_TypeClass();
 			case ZugnummernmeldeanlagePackage.ZBS_SCHNITTSTELLE_TYPE_CLASS: return createZBS_Schnittstelle_TypeClass();
+			case ZugnummernmeldeanlagePackage.ZEITSYNCHRONISATION_FUNKUHR_TYPE_CLASS: return createZeitsynchronisation_Funkuhr_TypeClass();
 			case ZugnummernmeldeanlagePackage.ZLV_BUS: return createZLV_Bus();
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP: return createZLV_Bus_Allg_AttributeGroup();
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BESONDERE_ANLAGE: return createZLV_Bus_Besondere_Anlage();
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BESONDERE_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP: return createZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup();
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BEZEICHNUNG_ATTRIBUTE_GROUP: return createZLV_Bus_Bezeichnung_AttributeGroup();
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_NR_TYPE_CLASS: return createZLV_Bus_Nr_TypeClass();
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_US_ZUORDNUNG: return createZLV_Bus_US_Zuordnung();
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_US_ZUORDNUNG_TELEGRAMM_ATTRIBUTE_GROUP: return createZLV_Bus_US_Zuordnung_Telegramm_AttributeGroup();
@@ -140,7 +153,6 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP: return createZN_Unterstation_Allg_AttributeGroup();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_BF_NR_ATTRIBUTE_GROUP: return createZN_Unterstation_Bf_Nr_AttributeGroup();
 			case ZugnummernmeldeanlagePackage.ZN_ZBS: return createZN_ZBS();
-			case ZugnummernmeldeanlagePackage.ZN_ZBS_ALLG_ATTRIBUTE_GROUP: return createZN_ZBS_Allg_AttributeGroup();
 			case ZugnummernmeldeanlagePackage.ZUGVORBEREITUNGSMELDUNG_TYPE_CLASS: return createZugvorbereitungsmeldung_TypeClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -177,6 +189,8 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 				return createAnschlussnummer_TypeFromString(eDataType, initialValue);
 			case ZugnummernmeldeanlagePackage.BESONDERES_SCHALTKRITERIUM_TYPE:
 				return createBesonderes_Schaltkriterium_TypeFromString(eDataType, initialValue);
+			case ZugnummernmeldeanlagePackage.BEZEICHNUNG_BESONDERE_ANLAGE_TYPE:
+				return createBezeichnung_Besondere_Anlage_TypeFromString(eDataType, initialValue);
 			case ZugnummernmeldeanlagePackage.BF_NR_TYPE:
 				return createBf_Nr_TypeFromString(eDataType, initialValue);
 			case ZugnummernmeldeanlagePackage.ENUM_AKUSTIK_ANB_ANN_OBJECT:
@@ -250,6 +264,8 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 				return convertAnschlussnummer_TypeToString(eDataType, instanceValue);
 			case ZugnummernmeldeanlagePackage.BESONDERES_SCHALTKRITERIUM_TYPE:
 				return convertBesonderes_Schaltkriterium_TypeToString(eDataType, instanceValue);
+			case ZugnummernmeldeanlagePackage.BEZEICHNUNG_BESONDERE_ANLAGE_TYPE:
+				return convertBezeichnung_Besondere_Anlage_TypeToString(eDataType, instanceValue);
 			case ZugnummernmeldeanlagePackage.BF_NR_TYPE:
 				return convertBf_Nr_TypeToString(eDataType, instanceValue);
 			case ZugnummernmeldeanlagePackage.ENUM_AKUSTIK_ANB_ANN_OBJECT:
@@ -387,6 +403,17 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 	 * @generated
 	 */
 	@Override
+	public Bezeichnung_Besondere_Anlage_TypeClass createBezeichnung_Besondere_Anlage_TypeClass() {
+		Bezeichnung_Besondere_Anlage_TypeClassImpl bezeichnung_Besondere_Anlage_TypeClass = new Bezeichnung_Besondere_Anlage_TypeClassImpl();
+		return bezeichnung_Besondere_Anlage_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Bf_Kennung_TypeClass createBf_Kennung_TypeClass() {
 		Bf_Kennung_TypeClassImpl bf_Kennung_TypeClass = new Bf_Kennung_TypeClassImpl();
 		return bf_Kennung_TypeClass;
@@ -511,6 +538,17 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 	public Koppelunterstation_TypeClass createKoppelunterstation_TypeClass() {
 		Koppelunterstation_TypeClassImpl koppelunterstation_TypeClass = new Koppelunterstation_TypeClassImpl();
 		return koppelunterstation_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public KUs_Zeittelegramm_TypeClass createKUs_Zeittelegramm_TypeClass() {
+		KUs_Zeittelegramm_TypeClassImpl kUs_Zeittelegramm_TypeClass = new KUs_Zeittelegramm_TypeClassImpl();
+		return kUs_Zeittelegramm_TypeClass;
 	}
 
 	/**
@@ -794,6 +832,17 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 	 * @generated
 	 */
 	@Override
+	public Zeitsynchronisation_Funkuhr_TypeClass createZeitsynchronisation_Funkuhr_TypeClass() {
+		Zeitsynchronisation_Funkuhr_TypeClassImpl zeitsynchronisation_Funkuhr_TypeClass = new Zeitsynchronisation_Funkuhr_TypeClassImpl();
+		return zeitsynchronisation_Funkuhr_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ZLV_Bus createZLV_Bus() {
 		ZLV_BusImpl zlV_Bus = new ZLV_BusImpl();
 		return zlV_Bus;
@@ -808,6 +857,39 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 	public ZLV_Bus_Allg_AttributeGroup createZLV_Bus_Allg_AttributeGroup() {
 		ZLV_Bus_Allg_AttributeGroupImpl zlV_Bus_Allg_AttributeGroup = new ZLV_Bus_Allg_AttributeGroupImpl();
 		return zlV_Bus_Allg_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZLV_Bus_Besondere_Anlage createZLV_Bus_Besondere_Anlage() {
+		ZLV_Bus_Besondere_AnlageImpl zlV_Bus_Besondere_Anlage = new ZLV_Bus_Besondere_AnlageImpl();
+		return zlV_Bus_Besondere_Anlage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup createZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup() {
+		ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupImpl zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup = new ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupImpl();
+		return zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZLV_Bus_Bezeichnung_AttributeGroup createZLV_Bus_Bezeichnung_AttributeGroup() {
+		ZLV_Bus_Bezeichnung_AttributeGroupImpl zlV_Bus_Bezeichnung_AttributeGroup = new ZLV_Bus_Bezeichnung_AttributeGroupImpl();
+		return zlV_Bus_Bezeichnung_AttributeGroup;
 	}
 
 	/**
@@ -1113,17 +1195,6 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public ZN_ZBS_Allg_AttributeGroup createZN_ZBS_Allg_AttributeGroup() {
-		ZN_ZBS_Allg_AttributeGroupImpl zN_ZBS_Allg_AttributeGroup = new ZN_ZBS_Allg_AttributeGroupImpl();
-		return zN_ZBS_Allg_AttributeGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Zugvorbereitungsmeldung_TypeClass createZugvorbereitungsmeldung_TypeClass() {
 		Zugvorbereitungsmeldung_TypeClassImpl zugvorbereitungsmeldung_TypeClass = new Zugvorbereitungsmeldung_TypeClassImpl();
 		return zugvorbereitungsmeldung_TypeClass;
@@ -1342,6 +1413,24 @@ public class ZugnummernmeldeanlageFactoryImpl extends EFactoryImpl implements Zu
 	 * @generated
 	 */
 	public String convertBesonderes_Schaltkriterium_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createBezeichnung_Besondere_Anlage_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBezeichnung_Besondere_Anlage_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 

@@ -1,9 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Gleis.Gleis_Abschnitt;
 
 /**
@@ -29,57 +38,20 @@ import org.eclipse.set.toolboxmodel.Gleis.Gleis_Abschnitt;
  */
 public interface ZL_DLP_Abschnitt extends Basis_Objekt {
 	/**
-	 * Returns the value of the '<em><b>ID Gleis Abschnitt</b></em>' reference.
+	 * Returns the value of the '<em><b>ID Gleis Abschnitt</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Gleis.Gleis_Abschnitt}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe, welcher Freimeldeabschnitt geprüft werden muss.
+	 * Angabe, welche Freimeldeabschnitte geprüft werden müssen.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Gleis Abschnitt</em>' reference.
-	 * @see #isSetIDGleisAbschnitt()
-	 * @see #unsetIDGleisAbschnitt()
-	 * @see #setIDGleisAbschnitt(Gleis_Abschnitt)
+	 * @return the value of the '<em>ID Gleis Abschnitt</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_DLP_Abschnitt_IDGleisAbschnitt()
-	 * @model unsettable="true" required="true"
+	 * @model required="true"
 	 *        extendedMetaData="kind='element' name='ID_Gleis_Abschnitt'"
 	 * @generated
 	 */
-	Gleis_Abschnitt getIDGleisAbschnitt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Abschnitt#getIDGleisAbschnitt <em>ID Gleis Abschnitt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Gleis Abschnitt</em>' reference.
-	 * @see #isSetIDGleisAbschnitt()
-	 * @see #unsetIDGleisAbschnitt()
-	 * @see #getIDGleisAbschnitt()
-	 * @generated
-	 */
-	void setIDGleisAbschnitt(Gleis_Abschnitt value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Abschnitt#getIDGleisAbschnitt <em>ID Gleis Abschnitt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDGleisAbschnitt()
-	 * @see #getIDGleisAbschnitt()
-	 * @see #setIDGleisAbschnitt(Gleis_Abschnitt)
-	 * @generated
-	 */
-	void unsetIDGleisAbschnitt();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Abschnitt#getIDGleisAbschnitt <em>ID Gleis Abschnitt</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Gleis Abschnitt</em>' reference is set.
-	 * @see #unsetIDGleisAbschnitt()
-	 * @see #getIDGleisAbschnitt()
-	 * @see #setIDGleisAbschnitt(Gleis_Abschnitt)
-	 * @generated
-	 */
-	boolean isSetIDGleisAbschnitt();
+	EList<Gleis_Abschnitt> getIDGleisAbschnitt();
 
 	/**
 	 * Returns the value of the '<em><b>IDZLDLP Fstr</b></em>' reference.

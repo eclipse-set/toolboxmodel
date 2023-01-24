@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -23,14 +24,13 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFactory;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm;
 
-import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenFactory;
-
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm} object.
@@ -60,35 +60,10 @@ public class Luft_TelegrammItemProvider extends Basis_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIDAnhangEADokuPropertyDescriptor(object);
 			addIDBaliseUebertragungPropertyDescriptor(object);
-			addIDBinaerdateiPropertyDescriptor(object);
-			addIDBinaerdateiHilfePropertyDescriptor(object);
 			addIDFachtelegrammPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Anhang EA Doku feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDAnhangEADokuPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Luft_Telegramm_iDAnhangEADoku_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Luft_Telegramm_iDAnhangEADoku_feature", "_UI_Luft_Telegramm_type"),
-				 Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_IDAnhangEADoku(),
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -105,50 +80,6 @@ public class Luft_TelegrammItemProvider extends Basis_ObjektItemProvider {
 				 getString("_UI_Luft_Telegramm_iDBaliseUebertragung_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Luft_Telegramm_iDBaliseUebertragung_feature", "_UI_Luft_Telegramm_type"),
 				 Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_IDBaliseUebertragung(),
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Binaerdatei feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDBinaerdateiPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Luft_Telegramm_iDBinaerdatei_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Luft_Telegramm_iDBinaerdatei_feature", "_UI_Luft_Telegramm_type"),
-				 Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_IDBinaerdatei(),
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Binaerdatei Hilfe feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDBinaerdateiHilfePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Luft_Telegramm_iDBinaerdateiHilfe_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Luft_Telegramm_iDBinaerdateiHilfe_feature", "_UI_Luft_Telegramm_type"),
-				 Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_IDBinaerdateiHilfe(),
 				 true,
 				 false,
 				 true,
@@ -191,8 +122,9 @@ public class Luft_TelegrammItemProvider extends Basis_ObjektItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_EigenschaftenBinaerdatei());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_EigenschaftenBinaerdateiHilfe());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_LTBinaerdateiHilfe());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_LTBinaerdaten());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_TelegrammIndex());
 		}
 		return childrenFeatures;
 	}
@@ -245,8 +177,9 @@ public class Luft_TelegrammItemProvider extends Basis_ObjektItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Luft_Telegramm.class)) {
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI:
-			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__EIGENSCHAFTEN_BINAERDATEI_HILFE:
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEI_HILFE:
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__LT_BINAERDATEN:
+			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM__TELEGRAMM_INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -268,36 +201,18 @@ public class Luft_TelegrammItemProvider extends Basis_ObjektItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_EigenschaftenBinaerdatei(),
-				 BasisTypenFactory.eINSTANCE.createEigenschaften_Datei_AttributeGroup()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_LTBinaerdateiHilfe(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createLT_Binaerdatei_Hilfe_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_EigenschaftenBinaerdateiHilfe(),
-				 BasisTypenFactory.eINSTANCE.createEigenschaften_Datei_AttributeGroup()));
-	}
+				(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_LTBinaerdaten(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createLT_Binaerdaten_AttributeGroup()));
 
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_EigenschaftenBinaerdatei() ||
-			childFeature == Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_EigenschaftenBinaerdateiHilfe();
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getLuft_Telegramm_TelegrammIndex(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createTelegramm_Index_TypeClass()));
 	}
 
 	/**

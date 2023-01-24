@@ -1,8 +1,13 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis;
-
-import java.util.List;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup;
 import org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom;
@@ -31,13 +36,13 @@ public interface Fahrstrom_TypeClass extends BasisAttribut_AttributeGroup {
 	 * @return the value of the '<em>Wert</em>' attribute.
 	 * @see #isSetWert()
 	 * @see #unsetWert()
-	 * @see #setWert(List)
+	 * @see #setWert(ENUMFahrstrom)
 	 * @see org.eclipse.set.toolboxmodel.Gleis.GleisPackage#getFahrstrom_TypeClass_Wert()
-	 * @model unsettable="true" dataType="org.eclipse.set.toolboxmodel.BasisTypen.Fahrstrom_Type" required="true" many="false"
+	 * @model unsettable="true" dataType="org.eclipse.set.toolboxmodel.Gleis.Fahrstrom_Type" required="true"
 	 *        extendedMetaData="kind='element' name='Wert'"
 	 * @generated
 	 */
-	List<ENUMFahrstrom> getWert();
+	ENUMFahrstrom getWert();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Gleis.Fahrstrom_TypeClass#getWert <em>Wert</em>}' attribute.
@@ -49,7 +54,7 @@ public interface Fahrstrom_TypeClass extends BasisAttribut_AttributeGroup {
 	 * @see #getWert()
 	 * @generated
 	 */
-	void setWert(List<ENUMFahrstrom> value);
+	void setWert(ENUMFahrstrom value);
 
 	/**
 	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Gleis.Fahrstrom_TypeClass#getWert <em>Wert</em>}' attribute.
@@ -57,7 +62,7 @@ public interface Fahrstrom_TypeClass extends BasisAttribut_AttributeGroup {
 	 * <!-- end-user-doc -->
 	 * @see #isSetWert()
 	 * @see #getWert()
-	 * @see #setWert(List)
+	 * @see #setWert(ENUMFahrstrom)
 	 * @generated
 	 */
 	void unsetWert();
@@ -69,7 +74,7 @@ public interface Fahrstrom_TypeClass extends BasisAttribut_AttributeGroup {
 	 * @return whether the value of the '<em>Wert</em>' attribute is set.
 	 * @see #unsetWert()
 	 * @see #getWert()
-	 * @see #setWert(List)
+	 * @see #setWert(ENUMFahrstrom)
 	 * @generated
 	 */
 	boolean isSetWert();

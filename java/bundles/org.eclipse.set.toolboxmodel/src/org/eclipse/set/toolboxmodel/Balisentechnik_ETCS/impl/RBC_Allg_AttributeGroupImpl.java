@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -13,7 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Unterversion_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_ETCS_System_Version_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Version_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Rufnummer_TypeClass;
 
@@ -25,7 +32,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Rufnummer_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.RBC_Allg_AttributeGroupImpl#getRBCSRSUnterversion <em>RBCSRS Unterversion</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.RBC_Allg_AttributeGroupImpl#getRBCETCSSystemVersion <em>RBCETCS System Version</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.RBC_Allg_AttributeGroupImpl#getRBCSRSVersion <em>RBCSRS Version</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.RBC_Allg_AttributeGroupImpl#getRufnummer <em>Rufnummer</em>}</li>
  * </ul>
@@ -34,14 +41,14 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Rufnummer_TypeClass;
  */
 public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements RBC_Allg_AttributeGroup {
 	/**
-	 * The cached value of the '{@link #getRBCSRSUnterversion() <em>RBCSRS Unterversion</em>}' containment reference.
+	 * The cached value of the '{@link #getRBCETCSSystemVersion() <em>RBCETCS System Version</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRBCSRSUnterversion()
+	 * @see #getRBCETCSSystemVersion()
 	 * @generated
 	 * @ordered
 	 */
-	protected RBC_SRS_Unterversion_TypeClass rBCSRSUnterversion;
+	protected RBC_ETCS_System_Version_TypeClass rBCETCSSystemVersion;
 
 	/**
 	 * The cached value of the '{@link #getRBCSRSVersion() <em>RBCSRS Version</em>}' containment reference.
@@ -88,8 +95,8 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public RBC_SRS_Unterversion_TypeClass getRBCSRSUnterversion() {
-		return rBCSRSUnterversion;
+	public RBC_ETCS_System_Version_TypeClass getRBCETCSSystemVersion() {
+		return rBCETCSSystemVersion;
 	}
 
 	/**
@@ -97,11 +104,11 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRBCSRSUnterversion(RBC_SRS_Unterversion_TypeClass newRBCSRSUnterversion, NotificationChain msgs) {
-		RBC_SRS_Unterversion_TypeClass oldRBCSRSUnterversion = rBCSRSUnterversion;
-		rBCSRSUnterversion = newRBCSRSUnterversion;
+	public NotificationChain basicSetRBCETCSSystemVersion(RBC_ETCS_System_Version_TypeClass newRBCETCSSystemVersion, NotificationChain msgs) {
+		RBC_ETCS_System_Version_TypeClass oldRBCETCSSystemVersion = rBCETCSSystemVersion;
+		rBCETCSSystemVersion = newRBCETCSSystemVersion;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION, oldRBCSRSUnterversion, newRBCSRSUnterversion);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION, oldRBCETCSSystemVersion, newRBCETCSSystemVersion);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -113,18 +120,18 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void setRBCSRSUnterversion(RBC_SRS_Unterversion_TypeClass newRBCSRSUnterversion) {
-		if (newRBCSRSUnterversion != rBCSRSUnterversion) {
+	public void setRBCETCSSystemVersion(RBC_ETCS_System_Version_TypeClass newRBCETCSSystemVersion) {
+		if (newRBCETCSSystemVersion != rBCETCSSystemVersion) {
 			NotificationChain msgs = null;
-			if (rBCSRSUnterversion != null)
-				msgs = ((InternalEObject)rBCSRSUnterversion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION, null, msgs);
-			if (newRBCSRSUnterversion != null)
-				msgs = ((InternalEObject)newRBCSRSUnterversion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION, null, msgs);
-			msgs = basicSetRBCSRSUnterversion(newRBCSRSUnterversion, msgs);
+			if (rBCETCSSystemVersion != null)
+				msgs = ((InternalEObject)rBCETCSSystemVersion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION, null, msgs);
+			if (newRBCETCSSystemVersion != null)
+				msgs = ((InternalEObject)newRBCETCSSystemVersion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION, null, msgs);
+			msgs = basicSetRBCETCSSystemVersion(newRBCETCSSystemVersion, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION, newRBCSRSUnterversion, newRBCSRSUnterversion));
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION, newRBCETCSSystemVersion, newRBCETCSSystemVersion));
 	}
 
 	/**
@@ -225,8 +232,8 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION:
-				return basicSetRBCSRSUnterversion(null, msgs);
+			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION:
+				return basicSetRBCETCSSystemVersion(null, msgs);
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_VERSION:
 				return basicSetRBCSRSVersion(null, msgs);
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RUFNUMMER:
@@ -244,8 +251,8 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION:
-				return getRBCSRSUnterversion();
+			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION:
+				return getRBCETCSSystemVersion();
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_VERSION:
 				return getRBCSRSVersion();
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RUFNUMMER:
@@ -263,8 +270,8 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION:
-				setRBCSRSUnterversion((RBC_SRS_Unterversion_TypeClass)newValue);
+			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION:
+				setRBCETCSSystemVersion((RBC_ETCS_System_Version_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_VERSION:
 				setRBCSRSVersion((RBC_SRS_Version_TypeClass)newValue);
@@ -286,8 +293,8 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION:
-				setRBCSRSUnterversion((RBC_SRS_Unterversion_TypeClass)null);
+			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION:
+				setRBCETCSSystemVersion((RBC_ETCS_System_Version_TypeClass)null);
 				return;
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_VERSION:
 				setRBCSRSVersion((RBC_SRS_Version_TypeClass)null);
@@ -309,8 +316,8 @@ public class RBC_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION:
-				return rBCSRSUnterversion != null;
+			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION:
+				return rBCETCSSystemVersion != null;
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_VERSION:
 				return rBCSRSVersion != null;
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RUFNUMMER:

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage;
 
@@ -19,109 +26,151 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMBfKennung implements Enumerator {
 	/**
-	 * The '<em><b>ENUM Bf Kennung 0</b></em>' literal object.
+	 * The '<em><b>ENUM Bf Kennung 20</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_0_VALUE
+	 * @see #ENUM_BF_KENNUNG_20_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BF_KENNUNG_0(0, "ENUMBf_Kennung_0", "0"),
+	ENUM_BF_KENNUNG_20(0, "ENUMBf_Kennung_20", "20"),
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 1</b></em>' literal object.
+	 * The '<em><b>ENUM Bf Kennung 21</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_1_VALUE
+	 * @see #ENUM_BF_KENNUNG_21_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BF_KENNUNG_1(1, "ENUMBf_Kennung_1", "1"),
+	ENUM_BF_KENNUNG_21(1, "ENUMBf_Kennung_21", "21"),
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 2</b></em>' literal object.
+	 * The '<em><b>ENUM Bf Kennung 22</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_2_VALUE
+	 * @see #ENUM_BF_KENNUNG_22_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BF_KENNUNG_2(2, "ENUMBf_Kennung_2", "2"),
+	ENUM_BF_KENNUNG_22(2, "ENUMBf_Kennung_22", "22"),
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 3</b></em>' literal object.
+	 * The '<em><b>ENUM Bf Kennung 23</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_3_VALUE
+	 * @see #ENUM_BF_KENNUNG_23_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BF_KENNUNG_3(3, "ENUMBf_Kennung_3", "3"),
+	ENUM_BF_KENNUNG_23(3, "ENUMBf_Kennung_23", "23"),
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 4</b></em>' literal object.
+	 * The '<em><b>ENUM Bf Kennung 24</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_4_VALUE
+	 * @see #ENUM_BF_KENNUNG_24_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BF_KENNUNG_4(4, "ENUMBf_Kennung_4", "4");
+	ENUM_BF_KENNUNG_24(4, "ENUMBf_Kennung_24", "24"),
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 0</b></em>' literal value.
+	 * The '<em><b>ENUM Bf Kennung 50</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_0
-	 * @model name="ENUMBf_Kennung_0" literal="0"
+	 * @see #ENUM_BF_KENNUNG_50_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BF_KENNUNG_0_VALUE = 0;
+	ENUM_BF_KENNUNG_50(5, "ENUMBf_Kennung_50", "50"),
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 1</b></em>' literal value.
+	 * The '<em><b>ENUM Bf Kennung 51</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_1
-	 * @model name="ENUMBf_Kennung_1" literal="1"
+	 * @see #ENUM_BF_KENNUNG_51_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BF_KENNUNG_1_VALUE = 1;
+	ENUM_BF_KENNUNG_51(6, "ENUMBf_Kennung_51", "51");
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 2</b></em>' literal value.
+	 * The '<em><b>ENUM Bf Kennung 20</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_2
-	 * @model name="ENUMBf_Kennung_2" literal="2"
+	 * @see #ENUM_BF_KENNUNG_20
+	 * @model name="ENUMBf_Kennung_20" literal="20"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BF_KENNUNG_2_VALUE = 2;
+	public static final int ENUM_BF_KENNUNG_20_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 3</b></em>' literal value.
+	 * The '<em><b>ENUM Bf Kennung 21</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_3
-	 * @model name="ENUMBf_Kennung_3" literal="3"
+	 * @see #ENUM_BF_KENNUNG_21
+	 * @model name="ENUMBf_Kennung_21" literal="21"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BF_KENNUNG_3_VALUE = 3;
+	public static final int ENUM_BF_KENNUNG_21_VALUE = 1;
 
 	/**
-	 * The '<em><b>ENUM Bf Kennung 4</b></em>' literal value.
+	 * The '<em><b>ENUM Bf Kennung 22</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BF_KENNUNG_4
-	 * @model name="ENUMBf_Kennung_4" literal="4"
+	 * @see #ENUM_BF_KENNUNG_22
+	 * @model name="ENUMBf_Kennung_22" literal="22"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BF_KENNUNG_4_VALUE = 4;
+	public static final int ENUM_BF_KENNUNG_22_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUM Bf Kennung 23</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BF_KENNUNG_23
+	 * @model name="ENUMBf_Kennung_23" literal="23"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BF_KENNUNG_23_VALUE = 3;
+
+	/**
+	 * The '<em><b>ENUM Bf Kennung 24</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BF_KENNUNG_24
+	 * @model name="ENUMBf_Kennung_24" literal="24"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BF_KENNUNG_24_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Bf Kennung 50</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BF_KENNUNG_50
+	 * @model name="ENUMBf_Kennung_50" literal="50"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BF_KENNUNG_50_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUM Bf Kennung 51</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BF_KENNUNG_51
+	 * @model name="ENUMBf_Kennung_51" literal="51"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BF_KENNUNG_51_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>ENUM Bf Kennung</b></em>' enumerators.
@@ -131,11 +180,13 @@ public enum ENUMBfKennung implements Enumerator {
 	 */
 	private static final ENUMBfKennung[] VALUES_ARRAY =
 		new ENUMBfKennung[] {
-			ENUM_BF_KENNUNG_0,
-			ENUM_BF_KENNUNG_1,
-			ENUM_BF_KENNUNG_2,
-			ENUM_BF_KENNUNG_3,
-			ENUM_BF_KENNUNG_4,
+			ENUM_BF_KENNUNG_20,
+			ENUM_BF_KENNUNG_21,
+			ENUM_BF_KENNUNG_22,
+			ENUM_BF_KENNUNG_23,
+			ENUM_BF_KENNUNG_24,
+			ENUM_BF_KENNUNG_50,
+			ENUM_BF_KENNUNG_51,
 		};
 
 	/**
@@ -192,11 +243,13 @@ public enum ENUMBfKennung implements Enumerator {
 	 */
 	public static ENUMBfKennung get(int value) {
 		switch (value) {
-			case ENUM_BF_KENNUNG_0_VALUE: return ENUM_BF_KENNUNG_0;
-			case ENUM_BF_KENNUNG_1_VALUE: return ENUM_BF_KENNUNG_1;
-			case ENUM_BF_KENNUNG_2_VALUE: return ENUM_BF_KENNUNG_2;
-			case ENUM_BF_KENNUNG_3_VALUE: return ENUM_BF_KENNUNG_3;
-			case ENUM_BF_KENNUNG_4_VALUE: return ENUM_BF_KENNUNG_4;
+			case ENUM_BF_KENNUNG_20_VALUE: return ENUM_BF_KENNUNG_20;
+			case ENUM_BF_KENNUNG_21_VALUE: return ENUM_BF_KENNUNG_21;
+			case ENUM_BF_KENNUNG_22_VALUE: return ENUM_BF_KENNUNG_22;
+			case ENUM_BF_KENNUNG_23_VALUE: return ENUM_BF_KENNUNG_23;
+			case ENUM_BF_KENNUNG_24_VALUE: return ENUM_BF_KENNUNG_24;
+			case ENUM_BF_KENNUNG_50_VALUE: return ENUM_BF_KENNUNG_50;
+			case ENUM_BF_KENNUNG_51_VALUE: return ENUM_BF_KENNUNG_51;
 			default: return null;
 		}
 	}

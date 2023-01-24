@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.impl;
 
@@ -25,6 +32,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -75,13 +86,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -106,9 +121,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -646,6 +663,13 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	private EClass gleis_Am_Bue_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass haltezeit_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1478,6 +1502,13 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType haltezeit_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType kontrastblende_TypeEDataType = null;
 
 	/**
@@ -1788,32 +1819,36 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -1828,8 +1863,8 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -1846,17 +1881,19 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 		theSignalbegriffe_Ril_301Package.loadPackage();
 
 		// Create package meta-data objects
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -1864,23 +1901,25 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -1888,7 +1927,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -2341,8 +2380,18 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	@Override
-	public EReference getBUE_Anlage_IDBUESchnittstelle() {
+	public EReference getBUE_Anlage_IDAEABUEAnschaltung() {
         return (EReference)getBUE_Anlage().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBUE_Anlage_IDBUESchnittstelle() {
+        return (EReference)getBUE_Anlage().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2913,7 +2962,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	@Override
-	public EReference getBUE_Einschaltung_Hp_AttributeGroup_Kurzzugschaltung() {
+	public EReference getBUE_Einschaltung_Hp_AttributeGroup_Haltezeit() {
         return (EReference)getBUE_Einschaltung_Hp_AttributeGroup().getEStructuralFeatures().get(2);
 	}
 
@@ -2923,7 +2972,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	@Override
-	public EReference getBUE_Einschaltung_Hp_AttributeGroup_SignalverzErrechnet() {
+	public EReference getBUE_Einschaltung_Hp_AttributeGroup_Kurzzugschaltung() {
         return (EReference)getBUE_Einschaltung_Hp_AttributeGroup().getEStructuralFeatures().get(3);
 	}
 
@@ -2933,7 +2982,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	@Override
-	public EReference getBUE_Einschaltung_Hp_AttributeGroup_SignalverzGewaehlt() {
+	public EReference getBUE_Einschaltung_Hp_AttributeGroup_SignalverzErrechnet() {
         return (EReference)getBUE_Einschaltung_Hp_AttributeGroup().getEStructuralFeatures().get(4);
 	}
 
@@ -2943,8 +2992,18 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	@Override
-	public EReference getBUE_Einschaltung_Hp_AttributeGroup_Teilvorgabezeit() {
+	public EReference getBUE_Einschaltung_Hp_AttributeGroup_SignalverzGewaehlt() {
         return (EReference)getBUE_Einschaltung_Hp_AttributeGroup().getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBUE_Einschaltung_Hp_AttributeGroup_Teilvorgabezeit() {
+        return (EReference)getBUE_Einschaltung_Hp_AttributeGroup().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -3179,6 +3238,16 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EReference getBUE_Kreuzungsplan_IDAnhangKreuzungsplan() {
         return (EReference)getBUE_Kreuzungsplan().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBUE_Kreuzungsplan_IDBUEAnlage() {
+        return (EReference)getBUE_Kreuzungsplan().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4189,9 +4258,32 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	@Override
+	public EClass getHaltezeit_TypeClass() {
+		if (haltezeit_TypeClassEClass == null) {
+			haltezeit_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(133);
+		}
+		return haltezeit_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHaltezeit_TypeClass_Wert() {
+        return (EAttribute)getHaltezeit_TypeClass().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getHersteller_TypeClass() {
 		if (hersteller_TypeClassEClass == null) {
-			hersteller_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(132);
+			hersteller_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(134);
 		}
 		return hersteller_TypeClassEClass;
 	}
@@ -4214,7 +4306,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getHp_Ersatzstecker_TypeClass() {
 		if (hp_Ersatzstecker_TypeClassEClass == null) {
-			hp_Ersatzstecker_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(133);
+			hp_Ersatzstecker_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(135);
 		}
 		return hp_Ersatzstecker_TypeClassEClass;
 	}
@@ -4237,7 +4329,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getKlassifizierung_TypeClass() {
 		if (klassifizierung_TypeClassEClass == null) {
-			klassifizierung_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(134);
+			klassifizierung_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(136);
 		}
 		return klassifizierung_TypeClassEClass;
 	}
@@ -4260,7 +4352,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getKontrastblende_TypeClass() {
 		if (kontrastblende_TypeClassEClass == null) {
-			kontrastblende_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(136);
+			kontrastblende_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(138);
 		}
 		return kontrastblende_TypeClassEClass;
 	}
@@ -4283,7 +4375,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getKreuzungswinkel_TypeClass() {
 		if (kreuzungswinkel_TypeClassEClass == null) {
-			kreuzungswinkel_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(139);
+			kreuzungswinkel_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(141);
 		}
 		return kreuzungswinkel_TypeClassEClass;
 	}
@@ -4306,7 +4398,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getKurzzugschaltung_TypeClass() {
 		if (kurzzugschaltung_TypeClassEClass == null) {
-			kurzzugschaltung_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(140);
+			kurzzugschaltung_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(142);
 		}
 		return kurzzugschaltung_TypeClassEClass;
 	}
@@ -4329,7 +4421,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getLagerung_Art_TypeClass() {
 		if (lagerung_Art_TypeClassEClass == null) {
-			lagerung_Art_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(141);
+			lagerung_Art_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(143);
 		}
 		return lagerung_Art_TypeClassEClass;
 	}
@@ -4352,7 +4444,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getLFUE_Impuls_TypeClass() {
 		if (lfuE_Impuls_TypeClassEClass == null) {
-			lfuE_Impuls_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(142);
+			lfuE_Impuls_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(144);
 		}
 		return lfuE_Impuls_TypeClassEClass;
 	}
@@ -4375,7 +4467,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getLieferlaenge_TypeClass() {
 		if (lieferlaenge_TypeClassEClass == null) {
-			lieferlaenge_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(144);
+			lieferlaenge_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(146);
 		}
 		return lieferlaenge_TypeClassEClass;
 	}
@@ -4398,7 +4490,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getMontage_Ausgleichsgewichte_TypeClass() {
 		if (montage_Ausgleichsgewichte_TypeClassEClass == null) {
-			montage_Ausgleichsgewichte_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(145);
+			montage_Ausgleichsgewichte_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(147);
 		}
 		return montage_Ausgleichsgewichte_TypeClassEClass;
 	}
@@ -4421,7 +4513,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getMontage_Besonders_TypeClass() {
 		if (montage_Besonders_TypeClassEClass == null) {
-			montage_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(147);
+			montage_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(149);
 		}
 		return montage_Besonders_TypeClassEClass;
 	}
@@ -4444,7 +4536,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getMontagehoehe_TypeClass() {
 		if (montagehoehe_TypeClassEClass == null) {
-			montagehoehe_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(149);
+			montagehoehe_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(151);
 		}
 		return montagehoehe_TypeClassEClass;
 	}
@@ -4467,7 +4559,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getOptik_Durchmesser_TypeClass() {
 		if (optik_Durchmesser_TypeClassEClass == null) {
-			optik_Durchmesser_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(151);
+			optik_Durchmesser_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(153);
 		}
 		return optik_Durchmesser_TypeClassEClass;
 	}
@@ -4490,7 +4582,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getOptik_Symbolmaske_TypeClass() {
 		if (optik_Symbolmaske_TypeClassEClass == null) {
-			optik_Symbolmaske_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(152);
+			optik_Symbolmaske_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(154);
 		}
 		return optik_Symbolmaske_TypeClassEClass;
 	}
@@ -4513,7 +4605,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getPegel_TypeClass() {
 		if (pegel_TypeClassEClass == null) {
-			pegel_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(154);
+			pegel_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(156);
 		}
 		return pegel_TypeClassEClass;
 	}
@@ -4536,7 +4628,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getPixel_Koordinate_X_TypeClass() {
 		if (pixel_Koordinate_X_TypeClassEClass == null) {
-			pixel_Koordinate_X_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(156);
+			pixel_Koordinate_X_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(158);
 		}
 		return pixel_Koordinate_X_TypeClassEClass;
 	}
@@ -4559,7 +4651,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getPixel_Koordinate_Y_TypeClass() {
 		if (pixel_Koordinate_Y_TypeClassEClass == null) {
-			pixel_Koordinate_Y_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(158);
+			pixel_Koordinate_Y_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(160);
 		}
 		return pixel_Koordinate_Y_TypeClassEClass;
 	}
@@ -4582,7 +4674,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getRaeumstrecke_DAB_TypeClass() {
 		if (raeumstrecke_DAB_TypeClassEClass == null) {
-			raeumstrecke_DAB_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(160);
+			raeumstrecke_DAB_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(162);
 		}
 		return raeumstrecke_DAB_TypeClassEClass;
 	}
@@ -4605,7 +4697,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getRaeumstrecke_DBK_TypeClass() {
 		if (raeumstrecke_DBK_TypeClassEClass == null) {
-			raeumstrecke_DBK_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(162);
+			raeumstrecke_DBK_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(164);
 		}
 		return raeumstrecke_DBK_TypeClassEClass;
 	}
@@ -4628,7 +4720,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getRaeumstrecke_DCK_TypeClass() {
 		if (raeumstrecke_DCK_TypeClassEClass == null) {
-			raeumstrecke_DCK_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(164);
+			raeumstrecke_DCK_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(166);
 		}
 		return raeumstrecke_DCK_TypeClassEClass;
 	}
@@ -4651,7 +4743,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getRaeumstrecke_DSK_Strich_TypeClass() {
 		if (raeumstrecke_DSK_Strich_TypeClassEClass == null) {
-			raeumstrecke_DSK_Strich_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(166);
+			raeumstrecke_DSK_Strich_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(168);
 		}
 		return raeumstrecke_DSK_Strich_TypeClassEClass;
 	}
@@ -4674,7 +4766,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getRaeumstrecke_TypeClass() {
 		if (raeumstrecke_TypeClassEClass == null) {
-			raeumstrecke_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(168);
+			raeumstrecke_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(170);
 		}
 		return raeumstrecke_TypeClassEClass;
 	}
@@ -4697,7 +4789,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getRichtungspfeil_TypeClass() {
 		if (richtungspfeil_TypeClassEClass == null) {
-			richtungspfeil_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(169);
+			richtungspfeil_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(171);
 		}
 		return richtungspfeil_TypeClassEClass;
 	}
@@ -4720,7 +4812,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSA_Schrankenbaum_AttributeGroup() {
 		if (sA_Schrankenbaum_AttributeGroupEClass == null) {
-			sA_Schrankenbaum_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(170);
+			sA_Schrankenbaum_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(172);
 		}
 		return sA_Schrankenbaum_AttributeGroupEClass;
 	}
@@ -4813,7 +4905,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSchaltgruppe_TypeClass() {
 		if (schaltgruppe_TypeClassEClass == null) {
-			schaltgruppe_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(172);
+			schaltgruppe_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(174);
 		}
 		return schaltgruppe_TypeClassEClass;
 	}
@@ -4836,7 +4928,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSchaltmittel_Fstr_Zuordnung() {
 		if (schaltmittel_Fstr_ZuordnungEClass == null) {
-			schaltmittel_Fstr_ZuordnungEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(173);
+			schaltmittel_Fstr_ZuordnungEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(175);
 		}
 		return schaltmittel_Fstr_ZuordnungEClass;
 	}
@@ -4869,7 +4961,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSchrankenantrieb() {
 		if (schrankenantriebEClass == null) {
-			schrankenantriebEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(174);
+			schrankenantriebEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(176);
 		}
 		return schrankenantriebEClass;
 	}
@@ -4922,7 +5014,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSchrankenantrieb_Allg_AttributeGroup() {
 		if (schrankenantrieb_Allg_AttributeGroupEClass == null) {
-			schrankenantrieb_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(175);
+			schrankenantrieb_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(177);
 		}
 		return schrankenantrieb_Allg_AttributeGroupEClass;
 	}
@@ -4965,7 +5057,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSchrankenantrieb_Bezeichnung_AttributeGroup() {
 		if (schrankenantrieb_Bezeichnung_AttributeGroupEClass == null) {
-			schrankenantrieb_Bezeichnung_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(176);
+			schrankenantrieb_Bezeichnung_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(178);
 		}
 		return schrankenantrieb_Bezeichnung_AttributeGroupEClass;
 	}
@@ -4988,7 +5080,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSchutzbuegel_TypeClass() {
 		if (schutzbuegel_TypeClassEClass == null) {
-			schutzbuegel_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(178);
+			schutzbuegel_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(180);
 		}
 		return schutzbuegel_TypeClassEClass;
 	}
@@ -5011,7 +5103,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSicherheitsabstand_TypeClass() {
 		if (sicherheitsabstand_TypeClassEClass == null) {
-			sicherheitsabstand_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(181);
+			sicherheitsabstand_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(183);
 		}
 		return sicherheitsabstand_TypeClassEClass;
 	}
@@ -5034,7 +5126,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSignalverz_Errechnet_TypeClass() {
 		if (signalverz_Errechnet_TypeClassEClass == null) {
-			signalverz_Errechnet_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(183);
+			signalverz_Errechnet_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(185);
 		}
 		return signalverz_Errechnet_TypeClassEClass;
 	}
@@ -5057,7 +5149,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSignalverz_Gewaehlt_TypeClass() {
 		if (signalverz_Gewaehlt_TypeClassEClass == null) {
-			signalverz_Gewaehlt_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(185);
+			signalverz_Gewaehlt_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(187);
 		}
 		return signalverz_Gewaehlt_TypeClassEClass;
 	}
@@ -5080,7 +5172,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSperrlaenge_TypeClass() {
 		if (sperrlaenge_TypeClassEClass == null) {
-			sperrlaenge_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(187);
+			sperrlaenge_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(189);
 		}
 		return sperrlaenge_TypeClassEClass;
 	}
@@ -5103,7 +5195,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSperrstrecke_Fussgaenger_TypeClass() {
 		if (sperrstrecke_Fussgaenger_TypeClassEClass == null) {
-			sperrstrecke_Fussgaenger_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(189);
+			sperrstrecke_Fussgaenger_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(191);
 		}
 		return sperrstrecke_Fussgaenger_TypeClassEClass;
 	}
@@ -5126,7 +5218,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getSperrstrecke_TypeClass() {
 		if (sperrstrecke_TypeClassEClass == null) {
-			sperrstrecke_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(191);
+			sperrstrecke_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(193);
 		}
 		return sperrstrecke_TypeClassEClass;
 	}
@@ -5149,7 +5241,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getStoerhalt_Haltfall_TypeClass() {
 		if (stoerhalt_Haltfall_TypeClassEClass == null) {
-			stoerhalt_Haltfall_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(192);
+			stoerhalt_Haltfall_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(194);
 		}
 		return stoerhalt_Haltfall_TypeClassEClass;
 	}
@@ -5172,7 +5264,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getStoerhalt_Merkhinweis_TypeClass() {
 		if (stoerhalt_Merkhinweis_TypeClassEClass == null) {
-			stoerhalt_Merkhinweis_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(193);
+			stoerhalt_Merkhinweis_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(195);
 		}
 		return stoerhalt_Merkhinweis_TypeClassEClass;
 	}
@@ -5195,7 +5287,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getTeilsperrstrecke_TypeClass() {
 		if (teilsperrstrecke_TypeClassEClass == null) {
-			teilsperrstrecke_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(195);
+			teilsperrstrecke_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(197);
 		}
 		return teilsperrstrecke_TypeClassEClass;
 	}
@@ -5218,7 +5310,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getTeilvorgabezeit_TypeClass() {
 		if (teilvorgabezeit_TypeClassEClass == null) {
-			teilvorgabezeit_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(197);
+			teilvorgabezeit_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(199);
 		}
 		return teilvorgabezeit_TypeClassEClass;
 	}
@@ -5241,7 +5333,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getTragkopf_Verstellbar_TypeClass() {
 		if (tragkopf_Verstellbar_TypeClassEClass == null) {
-			tragkopf_Verstellbar_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(199);
+			tragkopf_Verstellbar_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(201);
 		}
 		return tragkopf_Verstellbar_TypeClassEClass;
 	}
@@ -5264,7 +5356,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getV_Max_Schiene_TypeClass() {
 		if (v_Max_Schiene_TypeClassEClass == null) {
-			v_Max_Schiene_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(202);
+			v_Max_Schiene_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(204);
 		}
 		return v_Max_Schiene_TypeClassEClass;
 	}
@@ -5287,7 +5379,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getV_Max_Strasse_TypeClass() {
 		if (v_Max_Strasse_TypeClassEClass == null) {
-			v_Max_Strasse_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(204);
+			v_Max_Strasse_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(206);
 		}
 		return v_Max_Strasse_TypeClassEClass;
 	}
@@ -5310,7 +5402,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getV_Min_Fussweg_TypeClass() {
 		if (v_Min_Fussweg_TypeClassEClass == null) {
-			v_Min_Fussweg_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(206);
+			v_Min_Fussweg_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(208);
 		}
 		return v_Min_Fussweg_TypeClassEClass;
 	}
@@ -5333,7 +5425,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getV_Min_Schiene_TypeClass() {
 		if (v_Min_Schiene_TypeClassEClass == null) {
-			v_Min_Schiene_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(208);
+			v_Min_Schiene_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(210);
 		}
 		return v_Min_Schiene_TypeClassEClass;
 	}
@@ -5356,7 +5448,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getV_Min_Strasse_TypeClass() {
 		if (v_Min_Strasse_TypeClassEClass == null) {
-			v_Min_Strasse_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(210);
+			v_Min_Strasse_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(212);
 		}
 		return v_Min_Strasse_TypeClassEClass;
 	}
@@ -5379,7 +5471,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVerkehrszeichen() {
 		if (verkehrszeichenEClass == null) {
-			verkehrszeichenEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(211);
+			verkehrszeichenEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(213);
 		}
 		return verkehrszeichenEClass;
 	}
@@ -5462,7 +5554,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVerkehrszeichen_Allg_AttributeGroup() {
 		if (verkehrszeichen_Allg_AttributeGroupEClass == null) {
-			verkehrszeichen_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(212);
+			verkehrszeichen_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(214);
 		}
 		return verkehrszeichen_Allg_AttributeGroupEClass;
 	}
@@ -5505,7 +5597,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVerkehrszeichen_Andreaskreuz_AttributeGroup() {
 		if (verkehrszeichen_Andreaskreuz_AttributeGroupEClass == null) {
-			verkehrszeichen_Andreaskreuz_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(213);
+			verkehrszeichen_Andreaskreuz_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(215);
 		}
 		return verkehrszeichen_Andreaskreuz_AttributeGroupEClass;
 	}
@@ -5568,7 +5660,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVerkehrszeichen_Bezeichnung_AttributeGroup() {
 		if (verkehrszeichen_Bezeichnung_AttributeGroupEClass == null) {
-			verkehrszeichen_Bezeichnung_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(214);
+			verkehrszeichen_Bezeichnung_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(216);
 		}
 		return verkehrszeichen_Bezeichnung_AttributeGroupEClass;
 	}
@@ -5591,7 +5683,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVerkehrszeichen_Lz_AttributeGroup() {
 		if (verkehrszeichen_Lz_AttributeGroupEClass == null) {
-			verkehrszeichen_Lz_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(215);
+			verkehrszeichen_Lz_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(217);
 		}
 		return verkehrszeichen_Lz_AttributeGroupEClass;
 	}
@@ -5674,7 +5766,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVorgeschaltet_TypeClass() {
 		if (vorgeschaltet_TypeClassEClass == null) {
-			vorgeschaltet_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(217);
+			vorgeschaltet_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(219);
 		}
 		return vorgeschaltet_TypeClassEClass;
 	}
@@ -5697,7 +5789,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVz_Sperrstrecke_AttributeGroup() {
 		if (vz_Sperrstrecke_AttributeGroupEClass == null) {
-			vz_Sperrstrecke_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(219);
+			vz_Sperrstrecke_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(221);
 		}
 		return vz_Sperrstrecke_AttributeGroupEClass;
 	}
@@ -5750,7 +5842,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVz_Sperrstrecke_Schranke_AttributeGroup() {
 		if (vz_Sperrstrecke_Schranke_AttributeGroupEClass == null) {
-			vz_Sperrstrecke_Schranke_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(220);
+			vz_Sperrstrecke_Schranke_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(222);
 		}
 		return vz_Sperrstrecke_Schranke_AttributeGroupEClass;
 	}
@@ -5783,7 +5875,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getVz_Sperrstrecke_Vorgeschaltet_AttributeGroup() {
 		if (vz_Sperrstrecke_Vorgeschaltet_AttributeGroupEClass == null) {
-			vz_Sperrstrecke_Vorgeschaltet_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(221);
+			vz_Sperrstrecke_Vorgeschaltet_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(223);
 		}
 		return vz_Sperrstrecke_Vorgeschaltet_AttributeGroupEClass;
 	}
@@ -5846,7 +5938,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getWinkel_Alpha_TypeClass() {
 		if (winkel_Alpha_TypeClassEClass == null) {
-			winkel_Alpha_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(223);
+			winkel_Alpha_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(225);
 		}
 		return winkel_Alpha_TypeClassEClass;
 	}
@@ -5869,7 +5961,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getZeitueberschreitungsmeldung_TypeClass() {
 		if (zeitueberschreitungsmeldung_TypeClassEClass == null) {
-			zeitueberschreitungsmeldung_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(225);
+			zeitueberschreitungsmeldung_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(227);
 		}
 		return zeitueberschreitungsmeldung_TypeClassEClass;
 	}
@@ -5892,7 +5984,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EClass getZusatzschild_TypeClass() {
 		if (zusatzschild_TypeClassEClass == null) {
-			zusatzschild_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(227);
+			zusatzschild_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(229);
 		}
 		return zusatzschild_TypeClassEClass;
 	}
@@ -6693,9 +6785,22 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	 * @generated
 	 */
 	@Override
+	public EDataType getHaltezeit_Type() {
+		if (haltezeit_TypeEDataType == null) {
+			haltezeit_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(132);
+		}
+		return haltezeit_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getKontrastblende_Type() {
 		if (kontrastblende_TypeEDataType == null) {
-			kontrastblende_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(135);
+			kontrastblende_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(137);
 		}
 		return kontrastblende_TypeEDataType;
 	}
@@ -6708,7 +6813,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getKontrastblende_TypeObject() {
 		if (kontrastblende_TypeObjectEDataType == null) {
-			kontrastblende_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(137);
+			kontrastblende_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(139);
 		}
 		return kontrastblende_TypeObjectEDataType;
 	}
@@ -6721,7 +6826,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getKreuzungswinkel_Type() {
 		if (kreuzungswinkel_TypeEDataType == null) {
-			kreuzungswinkel_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(138);
+			kreuzungswinkel_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(140);
 		}
 		return kreuzungswinkel_TypeEDataType;
 	}
@@ -6734,7 +6839,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getLieferlaenge_Type() {
 		if (lieferlaenge_TypeEDataType == null) {
-			lieferlaenge_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(143);
+			lieferlaenge_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(145);
 		}
 		return lieferlaenge_TypeEDataType;
 	}
@@ -6747,7 +6852,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getMontage_Besonders_Type() {
 		if (montage_Besonders_TypeEDataType == null) {
-			montage_Besonders_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(146);
+			montage_Besonders_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(148);
 		}
 		return montage_Besonders_TypeEDataType;
 	}
@@ -6760,7 +6865,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getMontagehoehe_Type() {
 		if (montagehoehe_TypeEDataType == null) {
-			montagehoehe_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(148);
+			montagehoehe_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(150);
 		}
 		return montagehoehe_TypeEDataType;
 	}
@@ -6773,7 +6878,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getOptik_Durchmesser_Type() {
 		if (optik_Durchmesser_TypeEDataType == null) {
-			optik_Durchmesser_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(150);
+			optik_Durchmesser_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(152);
 		}
 		return optik_Durchmesser_TypeEDataType;
 	}
@@ -6786,7 +6891,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getPegel_Type() {
 		if (pegel_TypeEDataType == null) {
-			pegel_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(153);
+			pegel_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(155);
 		}
 		return pegel_TypeEDataType;
 	}
@@ -6799,7 +6904,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getPixel_Koordinate_X_Type() {
 		if (pixel_Koordinate_X_TypeEDataType == null) {
-			pixel_Koordinate_X_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(155);
+			pixel_Koordinate_X_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(157);
 		}
 		return pixel_Koordinate_X_TypeEDataType;
 	}
@@ -6812,7 +6917,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getPixel_Koordinate_Y_Type() {
 		if (pixel_Koordinate_Y_TypeEDataType == null) {
-			pixel_Koordinate_Y_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(157);
+			pixel_Koordinate_Y_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(159);
 		}
 		return pixel_Koordinate_Y_TypeEDataType;
 	}
@@ -6825,7 +6930,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getRaeumstrecke_DAB_Type() {
 		if (raeumstrecke_DAB_TypeEDataType == null) {
-			raeumstrecke_DAB_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(159);
+			raeumstrecke_DAB_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(161);
 		}
 		return raeumstrecke_DAB_TypeEDataType;
 	}
@@ -6838,7 +6943,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getRaeumstrecke_DBK_Type() {
 		if (raeumstrecke_DBK_TypeEDataType == null) {
-			raeumstrecke_DBK_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(161);
+			raeumstrecke_DBK_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(163);
 		}
 		return raeumstrecke_DBK_TypeEDataType;
 	}
@@ -6851,7 +6956,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getRaeumstrecke_DCK_Type() {
 		if (raeumstrecke_DCK_TypeEDataType == null) {
-			raeumstrecke_DCK_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(163);
+			raeumstrecke_DCK_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(165);
 		}
 		return raeumstrecke_DCK_TypeEDataType;
 	}
@@ -6864,7 +6969,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getRaeumstrecke_DSK_Strich_Type() {
 		if (raeumstrecke_DSK_Strich_TypeEDataType == null) {
-			raeumstrecke_DSK_Strich_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(165);
+			raeumstrecke_DSK_Strich_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(167);
 		}
 		return raeumstrecke_DSK_Strich_TypeEDataType;
 	}
@@ -6877,7 +6982,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getRaeumstrecke_Type() {
 		if (raeumstrecke_TypeEDataType == null) {
-			raeumstrecke_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(167);
+			raeumstrecke_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(169);
 		}
 		return raeumstrecke_TypeEDataType;
 	}
@@ -6890,7 +6995,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSchaltgruppe_Type() {
 		if (schaltgruppe_TypeEDataType == null) {
-			schaltgruppe_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(171);
+			schaltgruppe_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(173);
 		}
 		return schaltgruppe_TypeEDataType;
 	}
@@ -6903,7 +7008,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSchutzbuegel_Type() {
 		if (schutzbuegel_TypeEDataType == null) {
-			schutzbuegel_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(177);
+			schutzbuegel_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(179);
 		}
 		return schutzbuegel_TypeEDataType;
 	}
@@ -6916,7 +7021,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSchutzbuegel_TypeObject() {
 		if (schutzbuegel_TypeObjectEDataType == null) {
-			schutzbuegel_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(179);
+			schutzbuegel_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(181);
 		}
 		return schutzbuegel_TypeObjectEDataType;
 	}
@@ -6929,7 +7034,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSicherheitsabstand_Type() {
 		if (sicherheitsabstand_TypeEDataType == null) {
-			sicherheitsabstand_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(180);
+			sicherheitsabstand_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(182);
 		}
 		return sicherheitsabstand_TypeEDataType;
 	}
@@ -6942,7 +7047,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSignalverz_Errechnet_Type() {
 		if (signalverz_Errechnet_TypeEDataType == null) {
-			signalverz_Errechnet_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(182);
+			signalverz_Errechnet_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(184);
 		}
 		return signalverz_Errechnet_TypeEDataType;
 	}
@@ -6955,7 +7060,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSignalverz_Gewaehlt_Type() {
 		if (signalverz_Gewaehlt_TypeEDataType == null) {
-			signalverz_Gewaehlt_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(184);
+			signalverz_Gewaehlt_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(186);
 		}
 		return signalverz_Gewaehlt_TypeEDataType;
 	}
@@ -6968,7 +7073,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSperrlaenge_Type() {
 		if (sperrlaenge_TypeEDataType == null) {
-			sperrlaenge_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(186);
+			sperrlaenge_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(188);
 		}
 		return sperrlaenge_TypeEDataType;
 	}
@@ -6981,7 +7086,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSperrstrecke_Fussgaenger_Type() {
 		if (sperrstrecke_Fussgaenger_TypeEDataType == null) {
-			sperrstrecke_Fussgaenger_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(188);
+			sperrstrecke_Fussgaenger_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(190);
 		}
 		return sperrstrecke_Fussgaenger_TypeEDataType;
 	}
@@ -6994,7 +7099,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getSperrstrecke_Type() {
 		if (sperrstrecke_TypeEDataType == null) {
-			sperrstrecke_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(190);
+			sperrstrecke_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(192);
 		}
 		return sperrstrecke_TypeEDataType;
 	}
@@ -7007,7 +7112,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getTeilsperrstrecke_Type() {
 		if (teilsperrstrecke_TypeEDataType == null) {
-			teilsperrstrecke_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(194);
+			teilsperrstrecke_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(196);
 		}
 		return teilsperrstrecke_TypeEDataType;
 	}
@@ -7020,7 +7125,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getTeilvorgabezeit_Type() {
 		if (teilvorgabezeit_TypeEDataType == null) {
-			teilvorgabezeit_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(196);
+			teilvorgabezeit_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(198);
 		}
 		return teilvorgabezeit_TypeEDataType;
 	}
@@ -7033,7 +7138,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getTragkopf_Verstellbar_Type() {
 		if (tragkopf_Verstellbar_TypeEDataType == null) {
-			tragkopf_Verstellbar_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(198);
+			tragkopf_Verstellbar_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(200);
 		}
 		return tragkopf_Verstellbar_TypeEDataType;
 	}
@@ -7046,7 +7151,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getTragkopf_Verstellbar_TypeObject() {
 		if (tragkopf_Verstellbar_TypeObjectEDataType == null) {
-			tragkopf_Verstellbar_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(200);
+			tragkopf_Verstellbar_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(202);
 		}
 		return tragkopf_Verstellbar_TypeObjectEDataType;
 	}
@@ -7059,7 +7164,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getV_Max_Schiene_Type() {
 		if (v_Max_Schiene_TypeEDataType == null) {
-			v_Max_Schiene_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(201);
+			v_Max_Schiene_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(203);
 		}
 		return v_Max_Schiene_TypeEDataType;
 	}
@@ -7072,7 +7177,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getV_Max_Strasse_Type() {
 		if (v_Max_Strasse_TypeEDataType == null) {
-			v_Max_Strasse_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(203);
+			v_Max_Strasse_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(205);
 		}
 		return v_Max_Strasse_TypeEDataType;
 	}
@@ -7085,7 +7190,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getV_Min_Fussweg_Type() {
 		if (v_Min_Fussweg_TypeEDataType == null) {
-			v_Min_Fussweg_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(205);
+			v_Min_Fussweg_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(207);
 		}
 		return v_Min_Fussweg_TypeEDataType;
 	}
@@ -7098,7 +7203,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getV_Min_Schiene_Type() {
 		if (v_Min_Schiene_TypeEDataType == null) {
-			v_Min_Schiene_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(207);
+			v_Min_Schiene_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(209);
 		}
 		return v_Min_Schiene_TypeEDataType;
 	}
@@ -7111,7 +7216,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getV_Min_Strasse_Type() {
 		if (v_Min_Strasse_TypeEDataType == null) {
-			v_Min_Strasse_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(209);
+			v_Min_Strasse_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(211);
 		}
 		return v_Min_Strasse_TypeEDataType;
 	}
@@ -7124,7 +7229,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getVorgeschaltet_Type() {
 		if (vorgeschaltet_TypeEDataType == null) {
-			vorgeschaltet_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(216);
+			vorgeschaltet_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(218);
 		}
 		return vorgeschaltet_TypeEDataType;
 	}
@@ -7137,7 +7242,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getVorgeschaltet_TypeObject() {
 		if (vorgeschaltet_TypeObjectEDataType == null) {
-			vorgeschaltet_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(218);
+			vorgeschaltet_TypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(220);
 		}
 		return vorgeschaltet_TypeObjectEDataType;
 	}
@@ -7150,7 +7255,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getWinkel_Alpha_Type() {
 		if (winkel_Alpha_TypeEDataType == null) {
-			winkel_Alpha_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(222);
+			winkel_Alpha_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(224);
 		}
 		return winkel_Alpha_TypeEDataType;
 	}
@@ -7163,7 +7268,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getZeitueberschreitungsmeldung_Type() {
 		if (zeitueberschreitungsmeldung_TypeEDataType == null) {
-			zeitueberschreitungsmeldung_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(224);
+			zeitueberschreitungsmeldung_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(226);
 		}
 		return zeitueberschreitungsmeldung_TypeEDataType;
 	}
@@ -7176,7 +7281,7 @@ public class BahnuebergangPackageImpl extends EPackageImpl implements Bahnueberg
 	@Override
 	public EDataType getZusatzschild_Type() {
 		if (zusatzschild_TypeEDataType == null) {
-			zusatzschild_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(226);
+			zusatzschild_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(BahnuebergangPackage.eNS_URI).getEClassifiers().get(228);
 		}
 		return zusatzschild_TypeEDataType;
 	}

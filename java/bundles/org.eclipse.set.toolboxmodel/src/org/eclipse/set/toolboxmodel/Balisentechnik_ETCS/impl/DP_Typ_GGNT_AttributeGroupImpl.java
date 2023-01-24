@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -23,21 +30,21 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GNT_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GGNT_AttributeGroupImpl#getTCDPTypGNT <em>TCDP Typ GNT</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GGNT_AttributeGroupImpl#getDPTypGNT <em>DP Typ GNT</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container implements DP_Typ_GGNT_AttributeGroup {
 	/**
-	 * The cached value of the '{@link #getTCDPTypGNT() <em>TCDP Typ GNT</em>}' containment reference.
+	 * The cached value of the '{@link #getDPTypGNT() <em>DP Typ GNT</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTCDPTypGNT()
+	 * @see #getDPTypGNT()
 	 * @generated
 	 * @ordered
 	 */
-	protected DP_Typ_GNT_TypeClass tCDPTypGNT;
+	protected DP_Typ_GNT_TypeClass dPTypGNT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,8 +71,8 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public DP_Typ_GNT_TypeClass getTCDPTypGNT() {
-		return tCDPTypGNT;
+	public DP_Typ_GNT_TypeClass getDPTypGNT() {
+		return dPTypGNT;
 	}
 
 	/**
@@ -73,11 +80,11 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTCDPTypGNT(DP_Typ_GNT_TypeClass newTCDPTypGNT, NotificationChain msgs) {
-		DP_Typ_GNT_TypeClass oldTCDPTypGNT = tCDPTypGNT;
-		tCDPTypGNT = newTCDPTypGNT;
+	public NotificationChain basicSetDPTypGNT(DP_Typ_GNT_TypeClass newDPTypGNT, NotificationChain msgs) {
+		DP_Typ_GNT_TypeClass oldDPTypGNT = dPTypGNT;
+		dPTypGNT = newDPTypGNT;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT, oldTCDPTypGNT, newTCDPTypGNT);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT, oldDPTypGNT, newDPTypGNT);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -89,18 +96,18 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public void setTCDPTypGNT(DP_Typ_GNT_TypeClass newTCDPTypGNT) {
-		if (newTCDPTypGNT != tCDPTypGNT) {
+	public void setDPTypGNT(DP_Typ_GNT_TypeClass newDPTypGNT) {
+		if (newDPTypGNT != dPTypGNT) {
 			NotificationChain msgs = null;
-			if (tCDPTypGNT != null)
-				msgs = ((InternalEObject)tCDPTypGNT).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT, null, msgs);
-			if (newTCDPTypGNT != null)
-				msgs = ((InternalEObject)newTCDPTypGNT).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT, null, msgs);
-			msgs = basicSetTCDPTypGNT(newTCDPTypGNT, msgs);
+			if (dPTypGNT != null)
+				msgs = ((InternalEObject)dPTypGNT).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT, null, msgs);
+			if (newDPTypGNT != null)
+				msgs = ((InternalEObject)newDPTypGNT).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT, null, msgs);
+			msgs = basicSetDPTypGNT(newDPTypGNT, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT, newTCDPTypGNT, newTCDPTypGNT));
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT, newDPTypGNT, newDPTypGNT));
 	}
 
 	/**
@@ -111,8 +118,8 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT:
-				return basicSetTCDPTypGNT(null, msgs);
+			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT:
+				return basicSetDPTypGNT(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -126,8 +133,8 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT:
-				return getTCDPTypGNT();
+			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT:
+				return getDPTypGNT();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -141,8 +148,8 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT:
-				setTCDPTypGNT((DP_Typ_GNT_TypeClass)newValue);
+			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT:
+				setDPTypGNT((DP_Typ_GNT_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -158,8 +165,8 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT:
-				setTCDPTypGNT((DP_Typ_GNT_TypeClass)null);
+			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT:
+				setDPTypGNT((DP_Typ_GNT_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -175,8 +182,8 @@ public class DP_Typ_GGNT_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT:
-				return tCDPTypGNT != null;
+			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT:
+				return dPTypGNT != null;
 			default:
 				return super.eIsSet(featureID);
 		}

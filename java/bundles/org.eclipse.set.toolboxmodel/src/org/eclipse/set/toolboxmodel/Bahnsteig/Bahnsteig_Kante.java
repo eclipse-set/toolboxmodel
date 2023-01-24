@@ -1,8 +1,14 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnsteig;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bereich_Objekt;
 
 /**
@@ -11,7 +17,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Bereich_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Parallel zum Gleis verlaufende Kante eines Bahnsteigs, die für den Fahrgastwechsel nutzbar ist. Für die LST-Planung sind Beginn und Ende der genutzten Bahnsteigkante z. B. für die Zugbeeinflussung (PZB 90) sowie die Festlegung von Signalstandorten und Gefahrpunkten maßgebend. Die Baulänge der Bahnsteigkante wird im Datenmodell durch die Länge des Bereichsobjekts Bahnsteig_Kante abgebildet. Eventuell daran anschließende Tiefbauobjekte (auch stillgelegte Bahnsteigbereiche) können als Ingenieurbauwerke (momentan noch nicht modelliert) abgebildet werden. DB-Regelwerk Darstellung einer Doppellinie im sicherungstechnischen Lageplan
+ * Parallel zum Gleis verlaufende Kante eines Bahnsteigs, die für den Fahrgastwechsel nutzbar ist (Nettobaulänge). Für die LST-Planung sind Beginn und Ende z. B. für die Zugbeeinflussung (PZB 90) sowie die Festlegung von Signalstandorten und Gefahrpunkten maßgebend. Die Nettobaulänge der Bahnsteigkante wird im Datenmodell durch die Länge des Bereichsobjekts Bahnsteig_Kante abgebildet. Eventuell daran anschließende Tiefbauobjekte (auch stillgelegte Bahnsteigbereiche) können als Ingenieurbauwerke (Technischer_Bereich) abgebildet werden. DB-Regelwerk Darstellung einer Doppellinie im sicherungstechnischen Lageplan, Ril 413.0507
  * <!-- end-model-doc -->
  *
  * <p>

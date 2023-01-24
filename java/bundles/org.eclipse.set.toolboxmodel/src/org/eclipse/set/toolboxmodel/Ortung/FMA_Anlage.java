@@ -1,10 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Gleis.Gleis_Abschnitt;
 
 /**
@@ -13,7 +21,7 @@ import org.eclipse.set.toolboxmodel.Gleis.Gleis_Abschnitt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Technische Anlage, die einen Gleisabschnitt auf Freisein von Schienenfahrzeugen überwacht; entspricht im gewöhnlichen Sprachgebrauch dem Freimeldeabschnitt. Eine FMA_Anlage wird alleinstehend zur Fahrwegfreiprüfung bzw. zur Freiprüfung des Flankenschutzraumes genutzt sowie in Auswertung der Reihenfolge von Belegung und Wieder-Frei-Werden zur Erfassung einer Fahrt und damit zur Auflösung von Teilfahrstraßen. Auch andere Schaltvorgänge können durch eine FMA_Anlage ausgelöst werden. Die FMA_Anlage hat mindestens eine Außenanlage (z. B. Drosselspule, Achszählpunkt) und beansprucht Anteile an einer Gleisfreimelde-Innenanlage (z. B. Motorrelaisgruppe, Achszählrechner). DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Gleisfreimeldepläne (Achszählübersichtsplan, Gleisisolierplan); Freimeldetabelle. 
+ * Technische Anlage, die einen Gleisabschnitt auf Freisein von Schienenfahrzeugen überwacht; entspricht im gewöhnlichen Sprachgebrauch dem Freimeldeabschnitt. Eine FMA_Anlage wird alleinstehend zur Fahrwegfreiprüfung bzw. zur Freiprüfung des Flankenschutzraumes genutzt sowie in Auswertung der Reihenfolge von Belegung und Wieder-Frei-Werden zur Erfassung einer Fahrt und damit zur Auflösung von Teilfahrstraßen. Auch andere Schaltvorgänge können durch eine FMA_Anlage ausgelöst werden. Die FMA_Anlage hat mindestens eine Außenanlage (z. B. Drosselspule, Achszählpunkt) und beansprucht Anteile an einer Gleisfreimelde-Innenanlage (z. B. Motorrelaisgruppe, Achszählrechner). DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Gleisfreimeldepläne (Achszählübersichtsplan, Gleisisolierplan); Freimeldetabelle.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -44,7 +52,7 @@ public interface FMA_Anlage extends Basis_Objekt {
 	 * @return the value of the '<em>Bezeichnung</em>' containment reference.
 	 * @see #setBezeichnung(FMA_Anlage_Bezeichnung_AttributeGroup)
 	 * @see org.eclipse.set.toolboxmodel.Ortung.OrtungPackage#getFMA_Anlage_Bezeichnung()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Bezeichnung'"
 	 * @generated
 	 */

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -112,6 +119,15 @@ public interface Ansteuerung_ElementFactory extends EFactory {
 	Bezeichnung_ESTW_ZE_TypeClass createBezeichnung_ESTW_ZE_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Bezeichnung Stellwerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bezeichnung Stellwerk Type Class</em>'.
+	 * @generated
+	 */
+	Bezeichnung_Stellwerk_TypeClass createBezeichnung_Stellwerk_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Bezeichnung TSO Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,6 +153,15 @@ public interface Ansteuerung_ElementFactory extends EFactory {
 	 * @generated
 	 */
 	Energieversorgung_Art_TypeClass createEnergieversorgung_Art_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ESTW ZE Energieversorgung Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ESTW ZE Energieversorgung Attribute Group</em>'.
+	 * @generated
+	 */
+	ESTW_ZE_Energieversorgung_AttributeGroup createESTW_ZE_Energieversorgung_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>ESTW Zentraleinheit</em>'.
@@ -355,6 +380,15 @@ public interface Ansteuerung_ElementFactory extends EFactory {
 	TSO_Teilsystem_Art_TypeClass createTSO_Teilsystem_Art_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Tueranschlag Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tueranschlag Type Class</em>'.
+	 * @generated
+	 */
+	Tueranschlag_TypeClass createTueranschlag_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Uebertragungsweg</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -416,6 +450,24 @@ public interface Ansteuerung_ElementFactory extends EFactory {
 	 * @generated
 	 */
 	Unterbringung_Befestigung_TypeClass createUnterbringung_Befestigung_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Unterbringung Polygonzug Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unterbringung Polygonzug Type Class</em>'.
+	 * @generated
+	 */
+	Unterbringung_Polygonzug_TypeClass createUnterbringung_Polygonzug_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Zusatzinformation Stellwerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Zusatzinformation Stellwerk Type Class</em>'.
+	 * @generated
+	 */
+	Zusatzinformation_Stellwerk_TypeClass createZusatzinformation_Stellwerk_TypeClass();
 
 	/**
 	 * Returns the package supported by this factory.

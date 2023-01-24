@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.util;
 
@@ -76,6 +83,13 @@ public class Weichen_und_GleissperrenSwitch<T> extends Switch<T> {
 				Auffahrortung_TypeClass auffahrortung_TypeClass = (Auffahrortung_TypeClass)theEObject;
 				T result = caseAuffahrortung_TypeClass(auffahrortung_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(auffahrortung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Weichen_und_GleissperrenPackage.AUSTAUSCH_ANTRIEBE_TYPE_CLASS: {
+				Austausch_Antriebe_TypeClass austausch_Antriebe_TypeClass = (Austausch_Antriebe_TypeClass)theEObject;
+				T result = caseAustausch_Antriebe_TypeClass(austausch_Antriebe_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(austausch_Antriebe_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -203,6 +217,13 @@ public class Weichen_und_GleissperrenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Weichen_und_GleissperrenPackage.KR_KR_WSEITENZUORDNUNG_TYPE_CLASS: {
+				Kr_KrW_Seitenzuordnung_TypeClass kr_KrW_Seitenzuordnung_TypeClass = (Kr_KrW_Seitenzuordnung_TypeClass)theEObject;
+				T result = caseKr_KrW_Seitenzuordnung_TypeClass(kr_KrW_Seitenzuordnung_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(kr_KrW_Seitenzuordnung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Weichen_und_GleissperrenPackage.KREUZUNG_ATTRIBUTE_GROUP: {
 				Kreuzung_AttributeGroup kreuzung_AttributeGroup = (Kreuzung_AttributeGroup)theEObject;
 				T result = caseKreuzung_AttributeGroup(kreuzung_AttributeGroup);
@@ -220,6 +241,13 @@ public class Weichen_und_GleissperrenSwitch<T> extends Switch<T> {
 				Schutzschiene_TypeClass schutzschiene_TypeClass = (Schutzschiene_TypeClass)theEObject;
 				T result = caseSchutzschiene_TypeClass(schutzschiene_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(schutzschiene_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Weichen_und_GleissperrenPackage.STAMMGLEIS_TYPE_CLASS: {
+				Stammgleis_TypeClass stammgleis_TypeClass = (Stammgleis_TypeClass)theEObject;
+				T result = caseStammgleis_TypeClass(stammgleis_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(stammgleis_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -360,6 +388,21 @@ public class Weichen_und_GleissperrenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAuffahrortung_TypeClass(Auffahrortung_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Austausch Antriebe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Austausch Antriebe Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAustausch_Antriebe_TypeClass(Austausch_Antriebe_TypeClass object) {
 		return null;
 	}
 
@@ -634,6 +677,21 @@ public class Weichen_und_GleissperrenSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kr Kr WSeitenzuordnung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kr Kr WSeitenzuordnung Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKr_KrW_Seitenzuordnung_TypeClass(Kr_KrW_Seitenzuordnung_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Kreuzung Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -675,6 +733,21 @@ public class Weichen_und_GleissperrenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSchutzschiene_TypeClass(Schutzschiene_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Stammgleis Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Stammgleis Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStammgleis_TypeClass(Stammgleis_TypeClass object) {
 		return null;
 	}
 

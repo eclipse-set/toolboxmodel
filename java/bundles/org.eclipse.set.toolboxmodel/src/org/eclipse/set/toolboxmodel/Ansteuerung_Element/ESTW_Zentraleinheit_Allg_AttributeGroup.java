@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -14,9 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getBauart <em>Bauart</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArt <em>Energieversorgung Art</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz <em>Energieversorgung Art Ersatz</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz2 <em>Energieversorgung Art Ersatz2</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getHersteller <em>Hersteller</em>}</li>
  * </ul>
  *
@@ -50,84 +54,6 @@ public interface ESTW_Zentraleinheit_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setBauart(Bauart_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Energieversorgung Art</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Grundsätzliche Art der Energieversorgung. Wird für die Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Primaer angegeben. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Energieversorgung Art</em>' containment reference.
-	 * @see #setEnergieversorgungArt(Energieversorgung_Art_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArt()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Energieversorgung_Art'"
-	 * @generated
-	 */
-	Energieversorgung_Art_TypeClass getEnergieversorgungArt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArt <em>Energieversorgung Art</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Energieversorgung Art</em>' containment reference.
-	 * @see #getEnergieversorgungArt()
-	 * @generated
-	 */
-	void setEnergieversorgungArt(Energieversorgung_Art_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Energieversorgung Art Ersatz</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Grundsätzliche Art der Ersatz-Energieversorgung. Wird für die Ersatz-Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Sekundaer angegeben. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Energieversorgung Art Ersatz</em>' containment reference.
-	 * @see #setEnergieversorgungArtErsatz(Energieversorgung_Art_Ersatz_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Energieversorgung_Art_Ersatz'"
-	 * @generated
-	 */
-	Energieversorgung_Art_Ersatz_TypeClass getEnergieversorgungArtErsatz();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz <em>Energieversorgung Art Ersatz</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Energieversorgung Art Ersatz</em>' containment reference.
-	 * @see #getEnergieversorgungArtErsatz()
-	 * @generated
-	 */
-	void setEnergieversorgungArtErsatz(Energieversorgung_Art_Ersatz_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Energieversorgung Art Ersatz2</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Angabe der zweiten Ersatz-Energieversorgung (bei DSTW: 1. Ersatz Fahrleitung, 2. Ersatz NEA).
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Energieversorgung Art Ersatz2</em>' containment reference.
-	 * @see #setEnergieversorgungArtErsatz2(Energieversorgung_Art_Ersatz_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz2()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Energieversorgung_Art_Ersatz_2'"
-	 * @generated
-	 */
-	Energieversorgung_Art_Ersatz_TypeClass getEnergieversorgungArtErsatz2();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz2 <em>Energieversorgung Art Ersatz2</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Energieversorgung Art Ersatz2</em>' containment reference.
-	 * @see #getEnergieversorgungArtErsatz2()
-	 * @generated
-	 */
-	void setEnergieversorgungArtErsatz2(Energieversorgung_Art_Ersatz_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Hersteller</b></em>' containment reference.

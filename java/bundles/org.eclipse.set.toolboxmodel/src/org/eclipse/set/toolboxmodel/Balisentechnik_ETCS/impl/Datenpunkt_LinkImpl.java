@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,16 +17,18 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_ESG_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_GNT_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Fachtelegramm;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.GNT_Merkmale_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Link_Distanz_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Merkmale_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ziel_DP_Ausrichtung_TypeClass;
@@ -39,7 +48,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Datenpunkt_LinkImpl#getIDFachtelegramm <em>ID Fachtelegramm</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Datenpunkt_LinkImpl#getLinkDistanz <em>Link Distanz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Datenpunkt_LinkImpl#getZielDPAusrichtung <em>Ziel DP Ausrichtung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Datenpunkt_LinkImpl#getGNTMerkmale <em>GNT Merkmale</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Datenpunkt_LinkImpl#getAnwendungESG <em>Anwendung ESG</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Datenpunkt_LinkImpl#getAnwendungGNT <em>Anwendung GNT</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Datenpunkt_LinkImpl#getZBSMerkmale <em>ZBS Merkmale</em>}</li>
  * </ul>
  *
@@ -115,14 +125,24 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 	protected Ziel_DP_Ausrichtung_TypeClass zielDPAusrichtung;
 
 	/**
-	 * The cached value of the '{@link #getGNTMerkmale() <em>GNT Merkmale</em>}' containment reference.
+	 * The cached value of the '{@link #getAnwendungESG() <em>Anwendung ESG</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGNTMerkmale()
+	 * @see #getAnwendungESG()
 	 * @generated
 	 * @ordered
 	 */
-	protected GNT_Merkmale_AttributeGroup gNTMerkmale;
+	protected Anwendung_ESG_TypeClass anwendungESG;
+
+	/**
+	 * The cached value of the '{@link #getAnwendungGNT() <em>Anwendung GNT</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnwendungGNT()
+	 * @generated
+	 * @ordered
+	 */
+	protected Anwendung_GNT_TypeClass anwendungGNT;
 
 	/**
 	 * The cached value of the '{@link #getZBSMerkmale() <em>ZBS Merkmale</em>}' containment reference.
@@ -396,8 +416,8 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 	 * @generated
 	 */
 	@Override
-	public GNT_Merkmale_AttributeGroup getGNTMerkmale() {
-		return gNTMerkmale;
+	public Anwendung_ESG_TypeClass getAnwendungESG() {
+		return anwendungESG;
 	}
 
 	/**
@@ -405,11 +425,11 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGNTMerkmale(GNT_Merkmale_AttributeGroup newGNTMerkmale, NotificationChain msgs) {
-		GNT_Merkmale_AttributeGroup oldGNTMerkmale = gNTMerkmale;
-		gNTMerkmale = newGNTMerkmale;
+	public NotificationChain basicSetAnwendungESG(Anwendung_ESG_TypeClass newAnwendungESG, NotificationChain msgs) {
+		Anwendung_ESG_TypeClass oldAnwendungESG = anwendungESG;
+		anwendungESG = newAnwendungESG;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE, oldGNTMerkmale, newGNTMerkmale);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG, oldAnwendungESG, newAnwendungESG);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -421,18 +441,63 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 	 * @generated
 	 */
 	@Override
-	public void setGNTMerkmale(GNT_Merkmale_AttributeGroup newGNTMerkmale) {
-		if (newGNTMerkmale != gNTMerkmale) {
+	public void setAnwendungESG(Anwendung_ESG_TypeClass newAnwendungESG) {
+		if (newAnwendungESG != anwendungESG) {
 			NotificationChain msgs = null;
-			if (gNTMerkmale != null)
-				msgs = ((InternalEObject)gNTMerkmale).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE, null, msgs);
-			if (newGNTMerkmale != null)
-				msgs = ((InternalEObject)newGNTMerkmale).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE, null, msgs);
-			msgs = basicSetGNTMerkmale(newGNTMerkmale, msgs);
+			if (anwendungESG != null)
+				msgs = ((InternalEObject)anwendungESG).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG, null, msgs);
+			if (newAnwendungESG != null)
+				msgs = ((InternalEObject)newAnwendungESG).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG, null, msgs);
+			msgs = basicSetAnwendungESG(newAnwendungESG, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE, newGNTMerkmale, newGNTMerkmale));
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG, newAnwendungESG, newAnwendungESG));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Anwendung_GNT_TypeClass getAnwendungGNT() {
+		return anwendungGNT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAnwendungGNT(Anwendung_GNT_TypeClass newAnwendungGNT, NotificationChain msgs) {
+		Anwendung_GNT_TypeClass oldAnwendungGNT = anwendungGNT;
+		anwendungGNT = newAnwendungGNT;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT, oldAnwendungGNT, newAnwendungGNT);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAnwendungGNT(Anwendung_GNT_TypeClass newAnwendungGNT) {
+		if (newAnwendungGNT != anwendungGNT) {
+			NotificationChain msgs = null;
+			if (anwendungGNT != null)
+				msgs = ((InternalEObject)anwendungGNT).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT, null, msgs);
+			if (newAnwendungGNT != null)
+				msgs = ((InternalEObject)newAnwendungGNT).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT, null, msgs);
+			msgs = basicSetAnwendungGNT(newAnwendungGNT, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT, newAnwendungGNT, newAnwendungGNT));
 	}
 
 	/**
@@ -492,8 +557,10 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 				return basicSetLinkDistanz(null, msgs);
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZIEL_DP_AUSRICHTUNG:
 				return basicSetZielDPAusrichtung(null, msgs);
-			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE:
-				return basicSetGNTMerkmale(null, msgs);
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG:
+				return basicSetAnwendungESG(null, msgs);
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT:
+				return basicSetAnwendungGNT(null, msgs);
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZBS_MERKMALE:
 				return basicSetZBSMerkmale(null, msgs);
 			default:
@@ -521,8 +588,10 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 				return getLinkDistanz();
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZIEL_DP_AUSRICHTUNG:
 				return getZielDPAusrichtung();
-			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE:
-				return getGNTMerkmale();
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG:
+				return getAnwendungESG();
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT:
+				return getAnwendungGNT();
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZBS_MERKMALE:
 				return getZBSMerkmale();
 			default:
@@ -555,8 +624,11 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZIEL_DP_AUSRICHTUNG:
 				setZielDPAusrichtung((Ziel_DP_Ausrichtung_TypeClass)newValue);
 				return;
-			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE:
-				setGNTMerkmale((GNT_Merkmale_AttributeGroup)newValue);
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG:
+				setAnwendungESG((Anwendung_ESG_TypeClass)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT:
+				setAnwendungGNT((Anwendung_GNT_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZBS_MERKMALE:
 				setZBSMerkmale((ZBS_Merkmale_AttributeGroup)newValue);
@@ -590,8 +662,11 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZIEL_DP_AUSRICHTUNG:
 				setZielDPAusrichtung((Ziel_DP_Ausrichtung_TypeClass)null);
 				return;
-			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE:
-				setGNTMerkmale((GNT_Merkmale_AttributeGroup)null);
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG:
+				setAnwendungESG((Anwendung_ESG_TypeClass)null);
+				return;
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT:
+				setAnwendungGNT((Anwendung_GNT_TypeClass)null);
 				return;
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZBS_MERKMALE:
 				setZBSMerkmale((ZBS_Merkmale_AttributeGroup)null);
@@ -620,8 +695,10 @@ public class Datenpunkt_LinkImpl extends Basis_ObjektImpl implements Datenpunkt_
 				return linkDistanz != null;
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZIEL_DP_AUSRICHTUNG:
 				return zielDPAusrichtung != null;
-			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE:
-				return gNTMerkmale != null;
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG:
+				return anwendungESG != null;
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT:
+				return anwendungGNT != null;
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZBS_MERKMALE:
 				return zBSMerkmale != null;
 			default:

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -33,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bedingung_Signal_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bedingung_Signal_AttributeGroup} object.
@@ -71,6 +72,7 @@ public class Bedingung_Signal_AttributeGroupItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIDSignalSignalbegriffPropertyDescriptor(object);
+			addIDSignalbegriffWeitererPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +91,28 @@ public class Bedingung_Signal_AttributeGroupItemProvider
 				 getString("_UI_Bedingung_Signal_AttributeGroup_iDSignalSignalbegriff_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Bedingung_Signal_AttributeGroup_iDSignalSignalbegriff_feature", "_UI_Bedingung_Signal_AttributeGroup_type"),
 				 Balisentechnik_ETCSPackage.eINSTANCE.getBedingung_Signal_AttributeGroup_IDSignalSignalbegriff(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the ID Signalbegriff Weiterer feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDSignalbegriffWeitererPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Bedingung_Signal_AttributeGroup_iDSignalbegriffWeiterer_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Bedingung_Signal_AttributeGroup_iDSignalbegriffWeiterer_feature", "_UI_Bedingung_Signal_AttributeGroup_type"),
+				 Balisentechnik_ETCSPackage.eINSTANCE.getBedingung_Signal_AttributeGroup_IDSignalbegriffWeiterer(),
 				 true,
 				 false,
 				 true,

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl;
 
@@ -13,6 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Hersteller_TypeClass;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Befestigung_TypeClass;
@@ -26,6 +34,7 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Befestigun
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Allg_AttributeGroupImpl#getHersteller <em>Hersteller</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Allg_AttributeGroupImpl#getTueranschlag <em>Tueranschlag</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Allg_AttributeGroupImpl#getUnterbringungArt <em>Unterbringung Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Allg_AttributeGroupImpl#getUnterbringungBefestigung <em>Unterbringung Befestigung</em>}</li>
  * </ul>
@@ -42,6 +51,16 @@ public class Unterbringung_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * @ordered
 	 */
 	protected Hersteller_TypeClass hersteller;
+
+	/**
+	 * The cached value of the '{@link #getTueranschlag() <em>Tueranschlag</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTueranschlag()
+	 * @generated
+	 * @ordered
+	 */
+	protected Tueranschlag_TypeClass tueranschlag;
 
 	/**
 	 * The cached value of the '{@link #getUnterbringungArt() <em>Unterbringung Art</em>}' containment reference.
@@ -125,6 +144,51 @@ public class Unterbringung_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER, newHersteller, newHersteller));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Tueranschlag_TypeClass getTueranschlag() {
+		return tueranschlag;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTueranschlag(Tueranschlag_TypeClass newTueranschlag, NotificationChain msgs) {
+		Tueranschlag_TypeClass oldTueranschlag = tueranschlag;
+		tueranschlag = newTueranschlag;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG, oldTueranschlag, newTueranschlag);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTueranschlag(Tueranschlag_TypeClass newTueranschlag) {
+		if (newTueranschlag != tueranschlag) {
+			NotificationChain msgs = null;
+			if (tueranschlag != null)
+				msgs = ((InternalEObject)tueranschlag).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG, null, msgs);
+			if (newTueranschlag != null)
+				msgs = ((InternalEObject)newTueranschlag).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG, null, msgs);
+			msgs = basicSetTueranschlag(newTueranschlag, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG, newTueranschlag, newTueranschlag));
 	}
 
 	/**
@@ -227,6 +291,8 @@ public class Unterbringung_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				return basicSetHersteller(null, msgs);
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG:
+				return basicSetTueranschlag(null, msgs);
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART:
 				return basicSetUnterbringungArt(null, msgs);
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG:
@@ -246,6 +312,8 @@ public class Unterbringung_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				return getHersteller();
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG:
+				return getTueranschlag();
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART:
 				return getUnterbringungArt();
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG:
@@ -265,6 +333,9 @@ public class Unterbringung_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				setHersteller((Hersteller_TypeClass)newValue);
+				return;
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG:
+				setTueranschlag((Tueranschlag_TypeClass)newValue);
 				return;
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART:
 				setUnterbringungArt((Unterbringung_Art_TypeClass)newValue);
@@ -289,6 +360,9 @@ public class Unterbringung_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				setHersteller((Hersteller_TypeClass)null);
 				return;
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG:
+				setTueranschlag((Tueranschlag_TypeClass)null);
+				return;
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART:
 				setUnterbringungArt((Unterbringung_Art_TypeClass)null);
 				return;
@@ -311,6 +385,8 @@ public class Unterbringung_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				return hersteller != null;
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG:
+				return tueranschlag != null;
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART:
 				return unterbringungArt != null;
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG:

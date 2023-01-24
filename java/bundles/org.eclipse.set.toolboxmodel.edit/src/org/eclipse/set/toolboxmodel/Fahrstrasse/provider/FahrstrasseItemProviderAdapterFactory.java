@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -78,26 +79,26 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Aufloesung_Ssp_Zielgeis_TypeClassItemProvider aufloesung_Ssp_Zielgeis_TypeClassItemProvider;
+	protected Aufloesung_Ssp_Zielgleis_TypeClassItemProvider aufloesung_Ssp_Zielgleis_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAufloesung_Ssp_Zielgeis_TypeClassAdapter() {
-		if (aufloesung_Ssp_Zielgeis_TypeClassItemProvider == null) {
-			aufloesung_Ssp_Zielgeis_TypeClassItemProvider = new Aufloesung_Ssp_Zielgeis_TypeClassItemProvider(this);
+	public Adapter createAufloesung_Ssp_Zielgleis_TypeClassAdapter() {
+		if (aufloesung_Ssp_Zielgleis_TypeClassItemProvider == null) {
+			aufloesung_Ssp_Zielgleis_TypeClassItemProvider = new Aufloesung_Ssp_Zielgleis_TypeClassItemProvider(this);
 		}
 
-		return aufloesung_Ssp_Zielgeis_TypeClassItemProvider;
+		return aufloesung_Ssp_Zielgleis_TypeClassItemProvider;
 	}
 
 	/**
@@ -446,29 +447,6 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Fstr_Art_TypeClassItemProvider fstr_Art_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFstr_Art_TypeClassAdapter() {
-		if (fstr_Art_TypeClassItemProvider == null) {
-			fstr_Art_TypeClassItemProvider = new Fstr_Art_TypeClassItemProvider(this);
-		}
-
-		return fstr_Art_TypeClassItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bedienstring_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -489,29 +467,6 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 		}
 
 		return fstr_Bedienstring_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Fstr_Bildezeit_TypeClassItemProvider fstr_Bildezeit_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFstr_Bildezeit_TypeClassAdapter() {
-		if (fstr_Bildezeit_TypeClassItemProvider == null) {
-			fstr_Bildezeit_TypeClassItemProvider = new Fstr_Bildezeit_TypeClassItemProvider(this);
-		}
-
-		return fstr_Bildezeit_TypeClassItemProvider;
 	}
 
 	/**
@@ -630,75 +585,6 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFstr_DWeg_W_Kr_Allg_AttributeGroupAdapter() {
-		if (fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider == null) {
-			fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider = new Fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider(this);
-		}
-
-		return fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_child_AttributeGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_child_AttributeGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFstr_DWeg_W_Kr_Allg_child_AttributeGroupAdapter() {
-		if (fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider == null) {
-			fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider = new Fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider(this);
-		}
-
-		return fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Fstr_DWeg_W_Kr_TypeClassItemProvider fstr_DWeg_W_Kr_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFstr_DWeg_W_Kr_TypeClassAdapter() {
-		if (fstr_DWeg_W_Kr_TypeClassItemProvider == null) {
-			fstr_DWeg_W_Kr_TypeClassItemProvider = new Fstr_DWeg_W_Kr_TypeClassItemProvider(this);
-		}
-
-		return fstr_DWeg_W_Kr_TypeClassItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -719,6 +605,29 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 		}
 
 		return fstr_FahrwegItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Fstr_Mittel_Art_TypeClassItemProvider fstr_Mittel_Art_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFstr_Mittel_Art_TypeClassAdapter() {
+		if (fstr_Mittel_Art_TypeClassItemProvider == null) {
+			fstr_Mittel_Art_TypeClassItemProvider = new Fstr_Mittel_Art_TypeClassItemProvider(this);
+		}
+
+		return fstr_Mittel_Art_TypeClassItemProvider;
 	}
 
 	/**
@@ -788,6 +697,29 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 		}
 
 		return fstr_NichthaltfallItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Fstr_Rangier_Art_TypeClassItemProvider fstr_Rangier_Art_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFstr_Rangier_Art_TypeClassAdapter() {
+		if (fstr_Rangier_Art_TypeClassItemProvider == null) {
+			fstr_Rangier_Art_TypeClassItemProvider = new Fstr_Rangier_Art_TypeClassItemProvider(this);
+		}
+
+		return fstr_Rangier_Art_TypeClassItemProvider;
 	}
 
 	/**
@@ -972,6 +904,29 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 		}
 
 		return fstr_Vsigabstand_Verkuerzt_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Fstr_Zug_Art_TypeClassItemProvider fstr_Zug_Art_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFstr_Zug_Art_TypeClassAdapter() {
+		if (fstr_Zug_Art_TypeClassItemProvider == null) {
+			fstr_Zug_Art_TypeClassItemProvider = new Fstr_Zug_Art_TypeClassItemProvider(this);
+		}
+
+		return fstr_Zug_Art_TypeClassItemProvider;
 	}
 
 	/**
@@ -1205,6 +1160,29 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Start_Signal_Charakter_TypeClassItemProvider start_Signal_Charakter_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStart_Signal_Charakter_TypeClassAdapter() {
+		if (start_Signal_Charakter_TypeClassItemProvider == null) {
+			start_Signal_Charakter_TypeClassItemProvider = new Start_Signal_Charakter_TypeClassItemProvider(this);
+		}
+
+		return start_Signal_Charakter_TypeClassItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1309,7 +1287,7 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 	 */
 	@Override
 	public void dispose() {
-		if (aufloesung_Ssp_Zielgeis_TypeClassItemProvider != null) aufloesung_Ssp_Zielgeis_TypeClassItemProvider.dispose();
+		if (aufloesung_Ssp_Zielgleis_TypeClassItemProvider != null) aufloesung_Ssp_Zielgleis_TypeClassItemProvider.dispose();
 		if (aufloesung_Verzoegerung_TypeClassItemProvider != null) aufloesung_Verzoegerung_TypeClassItemProvider.dispose();
 		if (automatische_Einstellung_TypeClassItemProvider != null) automatische_Einstellung_TypeClassItemProvider.dispose();
 		if (bezeichnung_Fstr_DWeg_TypeClassItemProvider != null) bezeichnung_Fstr_DWeg_TypeClassItemProvider.dispose();
@@ -1325,21 +1303,18 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 		if (fstr_AneinanderItemProvider != null) fstr_AneinanderItemProvider.dispose();
 		if (fstr_Aneinander_Bedienstring_TypeClassItemProvider != null) fstr_Aneinander_Bedienstring_TypeClassItemProvider.dispose();
 		if (fstr_Aneinander_ZuordnungItemProvider != null) fstr_Aneinander_ZuordnungItemProvider.dispose();
-		if (fstr_Art_TypeClassItemProvider != null) fstr_Art_TypeClassItemProvider.dispose();
 		if (fstr_Bedienstring_TypeClassItemProvider != null) fstr_Bedienstring_TypeClassItemProvider.dispose();
-		if (fstr_Bildezeit_TypeClassItemProvider != null) fstr_Bildezeit_TypeClassItemProvider.dispose();
 		if (fstr_DWegItemProvider != null) fstr_DWegItemProvider.dispose();
 		if (fstr_DWeg_Allg_AttributeGroupItemProvider != null) fstr_DWeg_Allg_AttributeGroupItemProvider.dispose();
 		if (fstr_DWeg_Bezeichnung_AttributeGroupItemProvider != null) fstr_DWeg_Bezeichnung_AttributeGroupItemProvider.dispose();
 		if (fstr_DWeg_Spezifisch_AttributeGroupItemProvider != null) fstr_DWeg_Spezifisch_AttributeGroupItemProvider.dispose();
 		if (fstr_DWeg_W_KrItemProvider != null) fstr_DWeg_W_KrItemProvider.dispose();
-		if (fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider != null) fstr_DWeg_W_Kr_Allg_AttributeGroupItemProvider.dispose();
-		if (fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider != null) fstr_DWeg_W_Kr_Allg_child_AttributeGroupItemProvider.dispose();
-		if (fstr_DWeg_W_Kr_TypeClassItemProvider != null) fstr_DWeg_W_Kr_TypeClassItemProvider.dispose();
 		if (fstr_FahrwegItemProvider != null) fstr_FahrwegItemProvider.dispose();
+		if (fstr_Mittel_Art_TypeClassItemProvider != null) fstr_Mittel_Art_TypeClassItemProvider.dispose();
 		if (fstr_Mittel_AttributeGroupItemProvider != null) fstr_Mittel_AttributeGroupItemProvider.dispose();
 		if (fstr_Mittel_V_Aufwertung_TypeClassItemProvider != null) fstr_Mittel_V_Aufwertung_TypeClassItemProvider.dispose();
 		if (fstr_NichthaltfallItemProvider != null) fstr_NichthaltfallItemProvider.dispose();
+		if (fstr_Rangier_Art_TypeClassItemProvider != null) fstr_Rangier_Art_TypeClassItemProvider.dispose();
 		if (fstr_Rangier_AttributeGroupItemProvider != null) fstr_Rangier_AttributeGroupItemProvider.dispose();
 		if (fstr_Rangier_Fla_ZuordnungItemProvider != null) fstr_Rangier_Fla_ZuordnungItemProvider.dispose();
 		if (fstr_Reihenfolge_TypeClassItemProvider != null) fstr_Reihenfolge_TypeClassItemProvider.dispose();
@@ -1348,6 +1323,7 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 		if (fstr_V_Hg_TypeClassItemProvider != null) fstr_V_Hg_TypeClassItemProvider.dispose();
 		if (fstr_V_TypeClassItemProvider != null) fstr_V_TypeClassItemProvider.dispose();
 		if (fstr_Vsigabstand_Verkuerzt_TypeClassItemProvider != null) fstr_Vsigabstand_Verkuerzt_TypeClassItemProvider.dispose();
+		if (fstr_Zug_Art_TypeClassItemProvider != null) fstr_Zug_Art_TypeClassItemProvider.dispose();
 		if (fstr_Zug_AttributeGroupItemProvider != null) fstr_Zug_AttributeGroupItemProvider.dispose();
 		if (fstr_Zug_DWeg_AttributeGroupItemProvider != null) fstr_Zug_DWeg_AttributeGroupItemProvider.dispose();
 		if (fstr_Zug_RangierItemProvider != null) fstr_Zug_RangierItemProvider.dispose();
@@ -1358,6 +1334,7 @@ public class FahrstrasseItemProviderAdapterFactory extends FahrstrasseAdapterFac
 		if (massgebende_Neigung_TypeClassItemProvider != null) massgebende_Neigung_TypeClassItemProvider.dispose();
 		if (rangier_Gegenfahrtausschluss_TypeClassItemProvider != null) rangier_Gegenfahrtausschluss_TypeClassItemProvider.dispose();
 		if (sonstiger_PunktItemProvider != null) sonstiger_PunktItemProvider.dispose();
+		if (start_Signal_Charakter_TypeClassItemProvider != null) start_Signal_Charakter_TypeClassItemProvider.dispose();
 	}
 
 }

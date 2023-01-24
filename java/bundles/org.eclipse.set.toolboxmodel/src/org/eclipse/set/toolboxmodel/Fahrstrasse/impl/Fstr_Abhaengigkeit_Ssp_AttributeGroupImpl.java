@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.impl;
 
@@ -6,15 +13,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup;
+
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schluesselsperre;
 
 /**
@@ -25,7 +32,7 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schluesselsperre;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl#getAufloesungSspZielgeis <em>Aufloesung Ssp Zielgeis</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl#getAufloesungSspZielgleis <em>Aufloesung Ssp Zielgleis</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl#getIDSchluesselsperre <em>ID Schluesselsperre</em>}</li>
  * </ul>
  *
@@ -33,14 +40,14 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schluesselsperre;
  */
 public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImpl.Container implements Fstr_Abhaengigkeit_Ssp_AttributeGroup {
 	/**
-	 * The cached value of the '{@link #getAufloesungSspZielgeis() <em>Aufloesung Ssp Zielgeis</em>}' containment reference.
+	 * The cached value of the '{@link #getAufloesungSspZielgleis() <em>Aufloesung Ssp Zielgleis</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAufloesungSspZielgeis()
+	 * @see #getAufloesungSspZielgleis()
 	 * @generated
 	 * @ordered
 	 */
-	protected Aufloesung_Ssp_Zielgeis_TypeClass aufloesungSspZielgeis;
+	protected Aufloesung_Ssp_Zielgleis_TypeClass aufloesungSspZielgleis;
 
 	/**
 	 * The cached value of the '{@link #getIDSchluesselsperre() <em>ID Schluesselsperre</em>}' reference.
@@ -86,8 +93,8 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	 * @generated
 	 */
 	@Override
-	public Aufloesung_Ssp_Zielgeis_TypeClass getAufloesungSspZielgeis() {
-		return aufloesungSspZielgeis;
+	public Aufloesung_Ssp_Zielgleis_TypeClass getAufloesungSspZielgleis() {
+		return aufloesungSspZielgleis;
 	}
 
 	/**
@@ -95,11 +102,11 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAufloesungSspZielgeis(Aufloesung_Ssp_Zielgeis_TypeClass newAufloesungSspZielgeis, NotificationChain msgs) {
-		Aufloesung_Ssp_Zielgeis_TypeClass oldAufloesungSspZielgeis = aufloesungSspZielgeis;
-		aufloesungSspZielgeis = newAufloesungSspZielgeis;
+	public NotificationChain basicSetAufloesungSspZielgleis(Aufloesung_Ssp_Zielgleis_TypeClass newAufloesungSspZielgleis, NotificationChain msgs) {
+		Aufloesung_Ssp_Zielgleis_TypeClass oldAufloesungSspZielgleis = aufloesungSspZielgleis;
+		aufloesungSspZielgleis = newAufloesungSspZielgleis;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS, oldAufloesungSspZielgeis, newAufloesungSspZielgeis);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS, oldAufloesungSspZielgleis, newAufloesungSspZielgleis);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -111,18 +118,18 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	 * @generated
 	 */
 	@Override
-	public void setAufloesungSspZielgeis(Aufloesung_Ssp_Zielgeis_TypeClass newAufloesungSspZielgeis) {
-		if (newAufloesungSspZielgeis != aufloesungSspZielgeis) {
+	public void setAufloesungSspZielgleis(Aufloesung_Ssp_Zielgleis_TypeClass newAufloesungSspZielgleis) {
+		if (newAufloesungSspZielgleis != aufloesungSspZielgleis) {
 			NotificationChain msgs = null;
-			if (aufloesungSspZielgeis != null)
-				msgs = ((InternalEObject)aufloesungSspZielgeis).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS, null, msgs);
-			if (newAufloesungSspZielgeis != null)
-				msgs = ((InternalEObject)newAufloesungSspZielgeis).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS, null, msgs);
-			msgs = basicSetAufloesungSspZielgeis(newAufloesungSspZielgeis, msgs);
+			if (aufloesungSspZielgleis != null)
+				msgs = ((InternalEObject)aufloesungSspZielgleis).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS, null, msgs);
+			if (newAufloesungSspZielgleis != null)
+				msgs = ((InternalEObject)newAufloesungSspZielgleis).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS, null, msgs);
+			msgs = basicSetAufloesungSspZielgleis(newAufloesungSspZielgleis, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS, newAufloesungSspZielgeis, newAufloesungSspZielgeis));
+			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS, newAufloesungSspZielgleis, newAufloesungSspZielgleis));
 	}
 
 	/**
@@ -200,8 +207,8 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS:
-				return basicSetAufloesungSspZielgeis(null, msgs);
+			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS:
+				return basicSetAufloesungSspZielgleis(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -215,8 +222,8 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS:
-				return getAufloesungSspZielgeis();
+			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS:
+				return getAufloesungSspZielgleis();
 			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__ID_SCHLUESSELSPERRE:
 				if (resolve) return getIDSchluesselsperre();
 				return basicGetIDSchluesselsperre();
@@ -233,8 +240,8 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS:
-				setAufloesungSspZielgeis((Aufloesung_Ssp_Zielgeis_TypeClass)newValue);
+			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS:
+				setAufloesungSspZielgleis((Aufloesung_Ssp_Zielgleis_TypeClass)newValue);
 				return;
 			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__ID_SCHLUESSELSPERRE:
 				setIDSchluesselsperre((Schluesselsperre)newValue);
@@ -253,8 +260,8 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS:
-				setAufloesungSspZielgeis((Aufloesung_Ssp_Zielgeis_TypeClass)null);
+			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS:
+				setAufloesungSspZielgleis((Aufloesung_Ssp_Zielgleis_TypeClass)null);
 				return;
 			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__ID_SCHLUESSELSPERRE:
 				unsetIDSchluesselsperre();
@@ -273,8 +280,8 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupImpl extends MinimalEObjectImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS:
-				return aufloesungSspZielgeis != null;
+			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS:
+				return aufloesungSspZielgleis != null;
 			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__ID_SCHLUESSELSPERRE:
 				return isSetIDSchluesselsperre();
 			default:

@@ -28,6 +28,32 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated PlanPro -->
       <factory
+            uri="http://www.plan-pro.org/modell/ATO/toolbox"
+            class="org.eclipse.set.toolboxmodel.ATO.provider.ATOItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated PlanPro -->
+      <factory
+            uri="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+            class="org.eclipse.set.toolboxmodel.Layoutinformationen.provider.LayoutinformationenItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated PlanPro -->
+      <factory
             uri="http://www.plan-pro.org/modell/Basisobjekte/toolbox"
             class="org.eclipse.set.toolboxmodel.Basisobjekte.provider.BasisobjekteItemProviderAdapterFactory"
             supportedTypes=
@@ -223,8 +249,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated PlanPro -->
       <factory
-            uri="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-            class="org.eclipse.set.toolboxmodel.Nahbedienbereich.provider.NahbedienbereichItemProviderAdapterFactory"
+            uri="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+            class="org.eclipse.set.toolboxmodel.Nahbedienung.provider.NahbedienungItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB;
 
@@ -67,6 +74,15 @@ public interface PZBFactory extends EFactory {
 	GUE_Messstrecke_TypeClass createGUE_Messstrecke_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>INA Gefahrstelle Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>INA Gefahrstelle Attribute Group</em>'.
+	 * @generated
+	 */
+	INA_Gefahrstelle_AttributeGroup createINA_Gefahrstelle_AttributeGroup();
+
+	/**
 	 * Returns a new object of class '<em>Messfehler Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +90,15 @@ public interface PZBFactory extends EFactory {
 	 * @generated
 	 */
 	Messfehler_TypeClass createMessfehler_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Prioritaet Gefahrstelle Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prioritaet Gefahrstelle Type Class</em>'.
+	 * @generated
+	 */
+	Prioritaet_Gefahrstelle_TypeClass createPrioritaet_Gefahrstelle_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Pruefgeschwindigkeit Type Class</em>'.
@@ -148,6 +173,24 @@ public interface PZBFactory extends EFactory {
 	PZB_Element_Zuordnung createPZB_Element_Zuordnung();
 
 	/**
+	 * Returns a new object of class '<em>PZB Element Zuordnung BP Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PZB Element Zuordnung BP Attribute Group</em>'.
+	 * @generated
+	 */
+	PZB_Element_Zuordnung_BP_AttributeGroup createPZB_Element_Zuordnung_BP_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>PZB Element Zuordnung Fstr Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PZB Element Zuordnung Fstr Attribute Group</em>'.
+	 * @generated
+	 */
+	PZB_Element_Zuordnung_Fstr_AttributeGroup createPZB_Element_Zuordnung_Fstr_AttributeGroup();
+
+	/**
 	 * Returns a new object of class '<em>PZB Element Zuordnung INA Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,6 +216,15 @@ public interface PZBFactory extends EFactory {
 	 * @generated
 	 */
 	PZB_Zuordnung_Signal createPZB_Zuordnung_Signal();
+
+	/**
+	 * Returns a new object of class '<em>Wirksamkeit Fstr Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wirksamkeit Fstr Type Class</em>'.
+	 * @generated
+	 */
+	Wirksamkeit_Fstr_TypeClass createWirksamkeit_Fstr_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Wirksamkeit Type Class</em>'.

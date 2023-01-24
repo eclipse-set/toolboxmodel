@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -31,7 +38,7 @@ public interface Datenpunkt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Auf dem Balisenschild angegebenes Hauptanwendungssystem des Datenpunkts (z. B. GNT, ETCS).
+	 * Auf dem Balisenschild angegebenes Hauptanwendungssystem des Datenpunkts (z. B. GNT, ETCS). Die Kennzeichnung von Datenpunkten im ETCS-Übersichtsplan wird nicht aus diesem Attribut abgeleitet, sondern aus den vorhandenen Attributgruppen DP_Typ_Gxxxx.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Anwendungssystem</em>' containment reference.
 	 * @see #setAnwendungssystem(Anwendungssystem_TypeClass)
@@ -57,7 +64,7 @@ public interface Datenpunkt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * (Physikalische) Ausrichtung der Balisengruppe in Bezug auf die Topologierichtung. Bei der Angabe "keine" handelt es sich um eine Einzelbalise.
+	 * (Physikalische) Ausrichtung der Balisengruppe in Bezug auf die Topologierichtung. Bei der Angabe "keine" handelt es sich um eine Einzelbalise. In diesem Fall kann dem Fahrzeuggerät die Ausrichtung über die Linking-Information von einem zurückliegenden Datenpunkt übermittelt werden.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ausrichtung</em>' containment reference.
 	 * @see #setAusrichtung(Ausrichtung_TypeClass)
@@ -109,12 +116,12 @@ public interface Datenpunkt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Abstand zwischen erster und letzter Balise des Datenpunkts. Die genaue Verteilung der Balisen innerhalb dieser Länge wird nicht abgebildet.
+	 * Abstand zwischen erster und letzter Balise des Datenpunkts. Die genaue Verteilung der Balisen innerhalb dieser Länge wird nicht abgebildet. Die Angabe entfällt, sofern es sich um eine Einzel-Balise handelt.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Datenpunkt Laenge</em>' containment reference.
 	 * @see #setDatenpunktLaenge(Datenpunkt_Laenge_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_Allg_AttributeGroup_DatenpunktLaenge()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Datenpunkt_Laenge'"
 	 * @generated
 	 */
@@ -135,7 +142,7 @@ public interface Datenpunkt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Sonstige Angabe des Balisenstandortes, sofern nicht übereinstimmend mit Standortangabe_Balisenschild. Beispiele: "60W32L", "BGRU 023" (= Berlin-Grunewald Nr. 23).
+	 * Sonstige Angabe des Balisenstandortes, sofern unter Standortangabe_Balisenschild die Option "Strecke sonstiger Standort" gewählt wurde. Beispiele: "60W32L", "BGRU 023" (= Berlin-Grunewald Nr. 23).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sonstige Standortangabe</em>' containment reference.
 	 * @see #setSonstigeStandortangabe(Sonstige_Standortangabe_TypeClass)
@@ -161,12 +168,12 @@ public interface Datenpunkt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe des Balisenstandortes auf dem Balisenschild. Die Bezeichnung ergibt sich aus weiteren im Datenmodell vorhandenen Angaben.
+	 * Auswahl der Bezeichnungskomponenten für die Angabe des Balisenstandortes auf dem Balisenschild. Die aufzubringende Bezeichnung ergibt sich aus weiteren im Datenmodell vorhandenen Angaben und wird regelbasiert durch den Hersteller festgelegt.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Standortangabe Balisenschild</em>' containment reference.
 	 * @see #setStandortangabeBalisenschild(Standortangabe_Balisenschild_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_Allg_AttributeGroup_StandortangabeBalisenschild()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Standortangabe_Balisenschild'"
 	 * @generated
 	 */

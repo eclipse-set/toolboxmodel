@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnsteig;
 
@@ -29,34 +36,14 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	ENUM_BAHNSTEIG_ZUGANG_ART_AUFZUG(0, "ENUMBahnsteig_Zugang_Art_Aufzug", "Aufzug"),
 
 	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art Bahnhofsgebäude</b></em>' literal object.
+	 * The '<em><b>ENUM Bahnsteig Zugang Art Empfangsgebäude</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_BAHNHOFSGEBÄUDE_VALUE
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_EMPFANGSGEBÄUDE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BAHNSTEIG_ZUGANG_ART_BAHNHOFSGEBÄUDE(1, "ENUMBahnsteig_Zugang_Art_Bahnhofsgebäude", "Bahnhofsgeb\u00e4ude"),
-
-	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE(2, "ENUMBahnsteig_Zugang_Art_sonstige", "sonstige"),
-
-	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art Weg</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_WEG_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_BAHNSTEIG_ZUGANG_ART_WEG(3, "ENUMBahnsteig_Zugang_Art_Weg", "Weg"),
+	ENUM_BAHNSTEIG_ZUGANG_ART_EMPFANGSGEBÄUDE(1, "ENUMBahnsteig_Zugang_Art_Empfangsgebäude", "Empfangsgeb\u00e4ude"),
 
 	/**
 	 * The '<em><b>ENUM Bahnsteig Zugang Art Rampe</b></em>' literal object.
@@ -66,7 +53,17 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BAHNSTEIG_ZUGANG_ART_RAMPE(4, "ENUMBahnsteig_Zugang_Art_Rampe", "Rampe"),
+	ENUM_BAHNSTEIG_ZUGANG_ART_RAMPE(2, "ENUMBahnsteig_Zugang_Art_Rampe", "Rampe"),
+
+	/**
+	 * The '<em><b>ENUM Bahnsteig Zugang Art sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE(3, "ENUMBahnsteig_Zugang_Art_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUM Bahnsteig Zugang Art Treppe</b></em>' literal object.
@@ -76,17 +73,27 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BAHNSTEIG_ZUGANG_ART_TREPPE(5, "ENUMBahnsteig_Zugang_Art_Treppe", "Treppe"),
+	ENUM_BAHNSTEIG_ZUGANG_ART_TREPPE(4, "ENUMBahnsteig_Zugang_Art_Treppe", "Treppe"),
 
 	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art Resi</b></em>' literal object.
+	 * The '<em><b>ENUM Bahnsteig Zugang Art tResi</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_RESI_VALUE
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_TRESI_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BAHNSTEIG_ZUGANG_ART_RESI(6, "ENUMBahnsteig_Zugang_Art_Resi", "Resi");
+	ENUM_BAHNSTEIG_ZUGANG_ART_TRESI(5, "ENUMBahnsteig_Zugang_Art_tResi", "tResi"),
+
+	/**
+	 * The '<em><b>ENUM Bahnsteig Zugang Art Weg</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_WEG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_BAHNSTEIG_ZUGANG_ART_WEG(6, "ENUMBahnsteig_Zugang_Art_Weg", "Weg");
 
 	/**
 	 * The '<em><b>ENUM Bahnsteig Zugang Art Aufzug</b></em>' literal value.
@@ -100,37 +107,15 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_AUFZUG_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art Bahnhofsgebäude</b></em>' literal value.
+	 * The '<em><b>ENUM Bahnsteig Zugang Art Empfangsgebäude</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_BAHNHOFSGEBÄUDE
-	 * @model name="ENUMBahnsteig_Zugang_Art_Bahnhofsgebäude" literal="Bahnhofsgeb\344ude"
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_EMPFANGSGEBÄUDE
+	 * @model name="ENUMBahnsteig_Zugang_Art_Empfangsgebäude" literal="Empfangsgeb\344ude"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_BAHNHOFSGEBÄUDE_VALUE = 1;
-
-	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE
-	 * @model name="ENUMBahnsteig_Zugang_Art_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art Weg</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_WEG
-	 * @model name="ENUMBahnsteig_Zugang_Art_Weg" literal="Weg"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_WEG_VALUE = 3;
+	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_EMPFANGSGEBÄUDE_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Bahnsteig Zugang Art Rampe</b></em>' literal value.
@@ -141,7 +126,18 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_RAMPE_VALUE = 4;
+	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_RAMPE_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUM Bahnsteig Zugang Art sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE
+	 * @model name="ENUMBahnsteig_Zugang_Art_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Bahnsteig Zugang Art Treppe</b></em>' literal value.
@@ -152,18 +148,29 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_TREPPE_VALUE = 5;
+	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_TREPPE_VALUE = 4;
 
 	/**
-	 * The '<em><b>ENUM Bahnsteig Zugang Art Resi</b></em>' literal value.
+	 * The '<em><b>ENUM Bahnsteig Zugang Art tResi</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_RESI
-	 * @model name="ENUMBahnsteig_Zugang_Art_Resi" literal="Resi"
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_TRESI
+	 * @model name="ENUMBahnsteig_Zugang_Art_tResi" literal="tResi"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_RESI_VALUE = 6;
+	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_TRESI_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUM Bahnsteig Zugang Art Weg</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BAHNSTEIG_ZUGANG_ART_WEG
+	 * @model name="ENUMBahnsteig_Zugang_Art_Weg" literal="Weg"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BAHNSTEIG_ZUGANG_ART_WEG_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>ENUM Bahnsteig Zugang Art</b></em>' enumerators.
@@ -174,12 +181,12 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	private static final ENUMBahnsteigZugangArt[] VALUES_ARRAY =
 		new ENUMBahnsteigZugangArt[] {
 			ENUM_BAHNSTEIG_ZUGANG_ART_AUFZUG,
-			ENUM_BAHNSTEIG_ZUGANG_ART_BAHNHOFSGEBÄUDE,
-			ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE,
-			ENUM_BAHNSTEIG_ZUGANG_ART_WEG,
+			ENUM_BAHNSTEIG_ZUGANG_ART_EMPFANGSGEBÄUDE,
 			ENUM_BAHNSTEIG_ZUGANG_ART_RAMPE,
+			ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE,
 			ENUM_BAHNSTEIG_ZUGANG_ART_TREPPE,
-			ENUM_BAHNSTEIG_ZUGANG_ART_RESI,
+			ENUM_BAHNSTEIG_ZUGANG_ART_TRESI,
+			ENUM_BAHNSTEIG_ZUGANG_ART_WEG,
 		};
 
 	/**
@@ -237,12 +244,12 @@ public enum ENUMBahnsteigZugangArt implements Enumerator {
 	public static ENUMBahnsteigZugangArt get(int value) {
 		switch (value) {
 			case ENUM_BAHNSTEIG_ZUGANG_ART_AUFZUG_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_AUFZUG;
-			case ENUM_BAHNSTEIG_ZUGANG_ART_BAHNHOFSGEBÄUDE_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_BAHNHOFSGEBÄUDE;
-			case ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE;
-			case ENUM_BAHNSTEIG_ZUGANG_ART_WEG_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_WEG;
+			case ENUM_BAHNSTEIG_ZUGANG_ART_EMPFANGSGEBÄUDE_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_EMPFANGSGEBÄUDE;
 			case ENUM_BAHNSTEIG_ZUGANG_ART_RAMPE_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_RAMPE;
+			case ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_SONSTIGE;
 			case ENUM_BAHNSTEIG_ZUGANG_ART_TREPPE_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_TREPPE;
-			case ENUM_BAHNSTEIG_ZUGANG_ART_RESI_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_RESI;
+			case ENUM_BAHNSTEIG_ZUGANG_ART_TRESI_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_TRESI;
+			case ENUM_BAHNSTEIG_ZUGANG_ART_WEG_VALUE: return ENUM_BAHNSTEIG_ZUGANG_ART_WEG;
 			default: return null;
 		}
 	}

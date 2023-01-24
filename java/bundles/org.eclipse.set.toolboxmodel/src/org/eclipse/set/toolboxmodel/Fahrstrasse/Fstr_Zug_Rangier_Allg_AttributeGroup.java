@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
@@ -14,9 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFBedienung <em>FBedienung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrArt <em>Fstr Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrBedienstring <em>Fstr Bedienstring</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrBildezeit <em>Fstr Bildezeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrReihenfolge <em>Fstr Reihenfolge</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrV <em>Fstr V</em>}</li>
  * </ul>
@@ -53,32 +58,6 @@ public interface Fstr_Zug_Rangier_Allg_AttributeGroup extends EObject {
 	void setFBedienung(F_Bedienung_TypeClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Fstr Art</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Art der Fahrstraße. RR – RangierRegel-, RT - RangierTeil-, RTU - RangierTeilUmfahr-, RU – RangierUmfahr-, ZH – ZugHilfs-, ZM – ZugMittelweichenteil-, ZR – ZugRegel-, ZU – ZugUmfahr-, ZUH – ZugUmfahrhilfs-, ZUM – ZugUmfahrMittelweichenteil-, ZB – ZugZentralblock-, ZT - ZugTeil-, ZTU - ZugTeilUmfahr-. ZB: Anwendung im Zentralblock oder an Schnittstellen zu anderen Stellwerkstechniken bei Mehrabschnittssignalisierung, Signalabhängigkeiten von Fahrwegelementen auf der freien Strecke oder bei Bedienung einer Awanst. DB-Regelwerk Zug-/Rangierstraßentabelle, Spalte 2 "Art"
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Fstr Art</em>' containment reference.
-	 * @see #setFstrArt(Fstr_Art_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage#getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Fstr_Art'"
-	 * @generated
-	 */
-	Fstr_Art_TypeClass getFstrArt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrArt <em>Fstr Art</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fstr Art</em>' containment reference.
-	 * @see #getFstrArt()
-	 * @generated
-	 */
-	void setFstrArt(Fstr_Art_TypeClass value);
-
-	/**
 	 * Returns the value of the '<em><b>Fstr Bedienstring</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,32 +82,6 @@ public interface Fstr_Zug_Rangier_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setFstrBedienstring(Fstr_Bedienstring_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Fstr Bildezeit</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Für die ZL notwendige Fahrstraßenbildezeit. Das Attribut ist Bestandteil des Untergewerks "Zuglenkung". DB-Regelwerk ZL-Planung
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Fstr Bildezeit</em>' containment reference.
-	 * @see #setFstrBildezeit(Fstr_Bildezeit_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage#getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Fstr_Bildezeit'"
-	 * @generated
-	 */
-	Fstr_Bildezeit_TypeClass getFstrBildezeit();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrBildezeit <em>Fstr Bildezeit</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fstr Bildezeit</em>' containment reference.
-	 * @see #getFstrBildezeit()
-	 * @generated
-	 */
-	void setFstrBildezeit(Fstr_Bildezeit_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Fstr Reihenfolge</b></em>' containment reference.

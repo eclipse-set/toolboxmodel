@@ -1,23 +1,24 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
-import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
-import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
+
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
@@ -31,8 +32,6 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageP
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_UnterstationImpl#getIDGEOPunkt <em>IDGEO Punkt</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_UnterstationImpl#getIDStreckePunkt <em>ID Strecke Punkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_UnterstationImpl#getIDZNZBS <em>IDZNZBS</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_UnterstationImpl#getZNUnterstationAllg <em>ZN Unterstation Allg</em>}</li>
  * </ul>
@@ -40,35 +39,6 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageP
  * @generated
  */
 public class ZN_UnterstationImpl extends Basis_ObjektImpl implements ZN_Unterstation {
-	/**
-	 * The cached value of the '{@link #getIDGEOPunkt() <em>IDGEO Punkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIDGEOPunkt()
-	 * @generated
-	 * @ordered
-	 */
-	protected GEO_Punkt iDGEOPunkt;
-
-	/**
-	 * This is true if the IDGEO Punkt reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDGEOPunktESet;
-
-	/**
-	 * The cached value of the '{@link #getIDStreckePunkt() <em>ID Strecke Punkt</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIDStreckePunkt()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Strecke_Punkt> iDStreckePunkt;
-
 	/**
 	 * The cached value of the '{@link #getIDZNZBS() <em>IDZNZBS</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -115,86 +85,6 @@ public class ZN_UnterstationImpl extends Basis_ObjektImpl implements ZN_Untersta
 	@Override
 	protected EClass eStaticClass() {
 		return ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public GEO_Punkt getIDGEOPunkt() {
-		if (iDGEOPunkt != null && iDGEOPunkt.eIsProxy()) {
-			InternalEObject oldIDGEOPunkt = (InternalEObject)iDGEOPunkt;
-			iDGEOPunkt = (GEO_Punkt)eResolveProxy(oldIDGEOPunkt);
-			if (iDGEOPunkt != oldIDGEOPunkt) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDGEO_PUNKT, oldIDGEOPunkt, iDGEOPunkt));
-			}
-		}
-		return iDGEOPunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GEO_Punkt basicGetIDGEOPunkt() {
-		return iDGEOPunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDGEOPunkt(GEO_Punkt newIDGEOPunkt) {
-		GEO_Punkt oldIDGEOPunkt = iDGEOPunkt;
-		iDGEOPunkt = newIDGEOPunkt;
-		boolean oldIDGEOPunktESet = iDGEOPunktESet;
-		iDGEOPunktESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDGEO_PUNKT, oldIDGEOPunkt, iDGEOPunkt, !oldIDGEOPunktESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDGEOPunkt() {
-		GEO_Punkt oldIDGEOPunkt = iDGEOPunkt;
-		boolean oldIDGEOPunktESet = iDGEOPunktESet;
-		iDGEOPunkt = null;
-		iDGEOPunktESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDGEO_PUNKT, oldIDGEOPunkt, null, oldIDGEOPunktESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDGEOPunkt() {
-		return iDGEOPunktESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Strecke_Punkt> getIDStreckePunkt() {
-		if (iDStreckePunkt == null) {
-			iDStreckePunkt = new EObjectResolvingEList<Strecke_Punkt>(Strecke_Punkt.class, this, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__ID_STRECKE_PUNKT);
-		}
-		return iDStreckePunkt;
 	}
 
 	/**
@@ -332,11 +222,6 @@ public class ZN_UnterstationImpl extends Basis_ObjektImpl implements ZN_Untersta
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDGEO_PUNKT:
-				if (resolve) return getIDGEOPunkt();
-				return basicGetIDGEOPunkt();
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__ID_STRECKE_PUNKT:
-				return getIDStreckePunkt();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDZNZBS:
 				if (resolve) return getIDZNZBS();
 				return basicGetIDZNZBS();
@@ -352,17 +237,9 @@ public class ZN_UnterstationImpl extends Basis_ObjektImpl implements ZN_Untersta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDGEO_PUNKT:
-				setIDGEOPunkt((GEO_Punkt)newValue);
-				return;
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__ID_STRECKE_PUNKT:
-				getIDStreckePunkt().clear();
-				getIDStreckePunkt().addAll((Collection<? extends Strecke_Punkt>)newValue);
-				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDZNZBS:
 				setIDZNZBS((ZN_ZBS)newValue);
 				return;
@@ -383,12 +260,6 @@ public class ZN_UnterstationImpl extends Basis_ObjektImpl implements ZN_Untersta
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDGEO_PUNKT:
-				unsetIDGEOPunkt();
-				return;
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__ID_STRECKE_PUNKT:
-				getIDStreckePunkt().clear();
-				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDZNZBS:
 				unsetIDZNZBS();
 				return;
@@ -409,10 +280,6 @@ public class ZN_UnterstationImpl extends Basis_ObjektImpl implements ZN_Untersta
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDGEO_PUNKT:
-				return isSetIDGEOPunkt();
-			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__ID_STRECKE_PUNKT:
-				return iDStreckePunkt != null && !iDStreckePunkt.isEmpty();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__IDZNZBS:
 				return isSetIDZNZBS();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION__ZN_UNTERSTATION_ALLG:

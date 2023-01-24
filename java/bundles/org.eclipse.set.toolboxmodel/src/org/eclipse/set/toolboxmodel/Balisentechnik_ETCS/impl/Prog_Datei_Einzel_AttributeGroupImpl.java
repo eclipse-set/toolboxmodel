@@ -1,26 +1,39 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anzeigetext_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Einzeldatei_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Konfigurationskennung_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_TypeClass;
 
-import org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup;
+import org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,10 +44,11 @@ import org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGrou
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getAnzeigetext <em>Anzeigetext</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getEigenschaftenBinaerdatei <em>Eigenschaften Binaerdatei</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getEinzeldateiArt <em>Einzeldatei Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getIDBinaerdatei <em>ID Binaerdatei</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getKonfigurationskennung <em>Konfigurationskennung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getPruefmerkmaleBinaerdatei <em>Pruefmerkmale Binaerdatei</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getPruefmerkmaleProgKomponente <em>Pruefmerkmale Prog Komponente</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_Einzel_AttributeGroupImpl#getVerwendung <em>Verwendung</em>}</li>
  * </ul>
  *
@@ -50,16 +64,6 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * @ordered
 	 */
 	protected Anzeigetext_TypeClass anzeigetext;
-
-	/**
-	 * The cached value of the '{@link #getEigenschaftenBinaerdatei() <em>Eigenschaften Binaerdatei</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEigenschaftenBinaerdatei()
-	 * @generated
-	 * @ordered
-	 */
-	protected Eigenschaften_Datei_AttributeGroup eigenschaftenBinaerdatei;
 
 	/**
 	 * The cached value of the '{@link #getEinzeldateiArt() <em>Einzeldatei Art</em>}' containment reference.
@@ -79,7 +83,7 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 * @ordered
 	 */
-	protected Binaerdatei iDBinaerdatei;
+	protected Binaerdaten iDBinaerdatei;
 
 	/**
 	 * This is true if the ID Binaerdatei reference has been set.
@@ -99,6 +103,26 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * @ordered
 	 */
 	protected Konfigurationskennung_TypeClass konfigurationskennung;
+
+	/**
+	 * The cached value of the '{@link #getPruefmerkmaleBinaerdatei() <em>Pruefmerkmale Binaerdatei</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPruefmerkmaleBinaerdatei()
+	 * @generated
+	 * @ordered
+	 */
+	protected Pruefmerkmale_Daten_AttributeGroup pruefmerkmaleBinaerdatei;
+
+	/**
+	 * The cached value of the '{@link #getPruefmerkmaleProgKomponente() <em>Pruefmerkmale Prog Komponente</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPruefmerkmaleProgKomponente()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Pruefmerkmale_Daten_AttributeGroup> pruefmerkmaleProgKomponente;
 
 	/**
 	 * The cached value of the '{@link #getVerwendung() <em>Verwendung</em>}' containment reference.
@@ -180,51 +204,6 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 */
 	@Override
-	public Eigenschaften_Datei_AttributeGroup getEigenschaftenBinaerdatei() {
-		return eigenschaftenBinaerdatei;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup newEigenschaftenBinaerdatei, NotificationChain msgs) {
-		Eigenschaften_Datei_AttributeGroup oldEigenschaftenBinaerdatei = eigenschaftenBinaerdatei;
-		eigenschaftenBinaerdatei = newEigenschaftenBinaerdatei;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI, oldEigenschaftenBinaerdatei, newEigenschaftenBinaerdatei);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup newEigenschaftenBinaerdatei) {
-		if (newEigenschaftenBinaerdatei != eigenschaftenBinaerdatei) {
-			NotificationChain msgs = null;
-			if (eigenschaftenBinaerdatei != null)
-				msgs = ((InternalEObject)eigenschaftenBinaerdatei).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI, null, msgs);
-			if (newEigenschaftenBinaerdatei != null)
-				msgs = ((InternalEObject)newEigenschaftenBinaerdatei).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI, null, msgs);
-			msgs = basicSetEigenschaftenBinaerdatei(newEigenschaftenBinaerdatei, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI, newEigenschaftenBinaerdatei, newEigenschaftenBinaerdatei));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Einzeldatei_Art_TypeClass getEinzeldateiArt() {
 		return einzeldateiArt;
 	}
@@ -270,10 +249,10 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 */
 	@Override
-	public Binaerdatei getIDBinaerdatei() {
+	public Binaerdaten getIDBinaerdatei() {
 		if (iDBinaerdatei != null && iDBinaerdatei.eIsProxy()) {
 			InternalEObject oldIDBinaerdatei = (InternalEObject)iDBinaerdatei;
-			iDBinaerdatei = (Binaerdatei)eResolveProxy(oldIDBinaerdatei);
+			iDBinaerdatei = (Binaerdaten)eResolveProxy(oldIDBinaerdatei);
 			if (iDBinaerdatei != oldIDBinaerdatei) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ID_BINAERDATEI, oldIDBinaerdatei, iDBinaerdatei));
@@ -287,7 +266,7 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Binaerdatei basicGetIDBinaerdatei() {
+	public Binaerdaten basicGetIDBinaerdatei() {
 		return iDBinaerdatei;
 	}
 
@@ -297,8 +276,8 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 */
 	@Override
-	public void setIDBinaerdatei(Binaerdatei newIDBinaerdatei) {
-		Binaerdatei oldIDBinaerdatei = iDBinaerdatei;
+	public void setIDBinaerdatei(Binaerdaten newIDBinaerdatei) {
+		Binaerdaten oldIDBinaerdatei = iDBinaerdatei;
 		iDBinaerdatei = newIDBinaerdatei;
 		boolean oldIDBinaerdateiESet = iDBinaerdateiESet;
 		iDBinaerdateiESet = true;
@@ -313,7 +292,7 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 */
 	@Override
 	public void unsetIDBinaerdatei() {
-		Binaerdatei oldIDBinaerdatei = iDBinaerdatei;
+		Binaerdaten oldIDBinaerdatei = iDBinaerdatei;
 		boolean oldIDBinaerdateiESet = iDBinaerdateiESet;
 		iDBinaerdatei = null;
 		iDBinaerdateiESet = false;
@@ -382,6 +361,64 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 */
 	@Override
+	public Pruefmerkmale_Daten_AttributeGroup getPruefmerkmaleBinaerdatei() {
+		return pruefmerkmaleBinaerdatei;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPruefmerkmaleBinaerdatei(Pruefmerkmale_Daten_AttributeGroup newPruefmerkmaleBinaerdatei, NotificationChain msgs) {
+		Pruefmerkmale_Daten_AttributeGroup oldPruefmerkmaleBinaerdatei = pruefmerkmaleBinaerdatei;
+		pruefmerkmaleBinaerdatei = newPruefmerkmaleBinaerdatei;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI, oldPruefmerkmaleBinaerdatei, newPruefmerkmaleBinaerdatei);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPruefmerkmaleBinaerdatei(Pruefmerkmale_Daten_AttributeGroup newPruefmerkmaleBinaerdatei) {
+		if (newPruefmerkmaleBinaerdatei != pruefmerkmaleBinaerdatei) {
+			NotificationChain msgs = null;
+			if (pruefmerkmaleBinaerdatei != null)
+				msgs = ((InternalEObject)pruefmerkmaleBinaerdatei).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI, null, msgs);
+			if (newPruefmerkmaleBinaerdatei != null)
+				msgs = ((InternalEObject)newPruefmerkmaleBinaerdatei).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI, null, msgs);
+			msgs = basicSetPruefmerkmaleBinaerdatei(newPruefmerkmaleBinaerdatei, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI, newPruefmerkmaleBinaerdatei, newPruefmerkmaleBinaerdatei));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Pruefmerkmale_Daten_AttributeGroup> getPruefmerkmaleProgKomponente() {
+		if (pruefmerkmaleProgKomponente == null) {
+			pruefmerkmaleProgKomponente = new EObjectContainmentEList<Pruefmerkmale_Daten_AttributeGroup>(Pruefmerkmale_Daten_AttributeGroup.class, this, Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_PROG_KOMPONENTE);
+		}
+		return pruefmerkmaleProgKomponente;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Verwendung_TypeClass getVerwendung() {
 		return verwendung;
 	}
@@ -431,12 +468,14 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ANZEIGETEXT:
 				return basicSetAnzeigetext(null, msgs);
-			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI:
-				return basicSetEigenschaftenBinaerdatei(null, msgs);
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EINZELDATEI_ART:
 				return basicSetEinzeldateiArt(null, msgs);
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__KONFIGURATIONSKENNUNG:
 				return basicSetKonfigurationskennung(null, msgs);
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI:
+				return basicSetPruefmerkmaleBinaerdatei(null, msgs);
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_PROG_KOMPONENTE:
+				return ((InternalEList<?>)getPruefmerkmaleProgKomponente()).basicRemove(otherEnd, msgs);
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__VERWENDUNG:
 				return basicSetVerwendung(null, msgs);
 			default:
@@ -454,8 +493,6 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ANZEIGETEXT:
 				return getAnzeigetext();
-			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI:
-				return getEigenschaftenBinaerdatei();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EINZELDATEI_ART:
 				return getEinzeldateiArt();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ID_BINAERDATEI:
@@ -463,6 +500,10 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 				return basicGetIDBinaerdatei();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__KONFIGURATIONSKENNUNG:
 				return getKonfigurationskennung();
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI:
+				return getPruefmerkmaleBinaerdatei();
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_PROG_KOMPONENTE:
+				return getPruefmerkmaleProgKomponente();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__VERWENDUNG:
 				return getVerwendung();
 			default:
@@ -475,23 +516,28 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ANZEIGETEXT:
 				setAnzeigetext((Anzeigetext_TypeClass)newValue);
 				return;
-			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI:
-				setEigenschaftenBinaerdatei((Eigenschaften_Datei_AttributeGroup)newValue);
-				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EINZELDATEI_ART:
 				setEinzeldateiArt((Einzeldatei_Art_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ID_BINAERDATEI:
-				setIDBinaerdatei((Binaerdatei)newValue);
+				setIDBinaerdatei((Binaerdaten)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__KONFIGURATIONSKENNUNG:
 				setKonfigurationskennung((Konfigurationskennung_TypeClass)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI:
+				setPruefmerkmaleBinaerdatei((Pruefmerkmale_Daten_AttributeGroup)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_PROG_KOMPONENTE:
+				getPruefmerkmaleProgKomponente().clear();
+				getPruefmerkmaleProgKomponente().addAll((Collection<? extends Pruefmerkmale_Daten_AttributeGroup>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__VERWENDUNG:
 				setVerwendung((Verwendung_TypeClass)newValue);
@@ -513,9 +559,6 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ANZEIGETEXT:
 				setAnzeigetext((Anzeigetext_TypeClass)null);
 				return;
-			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI:
-				setEigenschaftenBinaerdatei((Eigenschaften_Datei_AttributeGroup)null);
-				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EINZELDATEI_ART:
 				setEinzeldateiArt((Einzeldatei_Art_TypeClass)null);
 				return;
@@ -524,6 +567,12 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__KONFIGURATIONSKENNUNG:
 				setKonfigurationskennung((Konfigurationskennung_TypeClass)null);
+				return;
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI:
+				setPruefmerkmaleBinaerdatei((Pruefmerkmale_Daten_AttributeGroup)null);
+				return;
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_PROG_KOMPONENTE:
+				getPruefmerkmaleProgKomponente().clear();
 				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__VERWENDUNG:
 				setVerwendung((Verwendung_TypeClass)null);
@@ -544,14 +593,16 @@ public class Prog_Datei_Einzel_AttributeGroupImpl extends MinimalEObjectImpl.Con
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ANZEIGETEXT:
 				return anzeigetext != null;
-			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI:
-				return eigenschaftenBinaerdatei != null;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EINZELDATEI_ART:
 				return einzeldateiArt != null;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ID_BINAERDATEI:
 				return isSetIDBinaerdatei();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__KONFIGURATIONSKENNUNG:
 				return konfigurationskennung != null;
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI:
+				return pruefmerkmaleBinaerdatei != null;
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_PROG_KOMPONENTE:
+				return pruefmerkmaleProgKomponente != null && !pruefmerkmaleProgKomponente.isEmpty();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__VERWENDUNG:
 				return verwendung != null;
 			default:

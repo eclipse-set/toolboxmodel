@@ -14,7 +14,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * Derzeit insbesondere verwendet zur Abbildung des beteiligten Ingenieurbüros.
  * Bisher werden in PlanPro lediglich Name und Kontaktdaten der Organisation erfasst. Die Vergabe von Berechtigungen erfolgt in der Prozessrolle des LST-Fachplaners im Zusammenhang mit den definierten Planungsschritten und Planungsstatus.
  * DB-Regelwerk
- * Schriftfeldeintrag gemäß Ril 819.0103.
+ * Schriftfeldeintrag gemäß Ril 886.0102.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -41,7 +41,7 @@ public interface Organisation extends Ur_Objekt {
 	 * <!-- begin-model-doc -->
 	 * Adresse der Organisation, Postleitzahl, Ort.
 	 * DB Regelwerk
-	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 819.0103 zum mit der Planung beauftragten Ingenieurbüro.
+	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 886.0102 zum mit der Planung beauftragten Ingenieurbüro.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Adresse PLZ Ort</em>' containment reference.
 	 * @see #setAdressePLZOrt(Adresse_PLZ_Ort_TypeClass)
@@ -69,7 +69,7 @@ public interface Organisation extends Ur_Objekt {
 	 * <!-- begin-model-doc -->
 	 * Adresse der Organisation, konkret Straße und Hausnummer. Alternativ ist auch die Eintragung des Postfachs möglich.
 	 * DB Regelwerk
-	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 819.0103 zum mit der Planung beauftragten Ingenieurbüro.
+	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 886.0102 zum mit der Planung beauftragten Ingenieurbüro.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Adresse Strasse Nr</em>' containment reference.
 	 * @see #setAdresseStrasseNr(Adresse_Strasse_Nr_TypeClass)
@@ -97,7 +97,7 @@ public interface Organisation extends Ur_Objekt {
 	 * <!-- begin-model-doc -->
 	 * E-Mail-Adresse der Organisation.
 	 * DB Regelwerk
-	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 819.0103 zum mit der Planung beauftragten Ingenieurbüro.
+	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 886.0102 zum mit der Planung beauftragten Ingenieurbüro.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>EMail Adresse</em>' containment reference.
 	 * @see #setEMailAdresse(E_Mail_Adresse_TypeClass)
@@ -125,7 +125,7 @@ public interface Organisation extends Ur_Objekt {
 	 * <!-- begin-model-doc -->
 	 * Name der Organisation.
 	 * DB Regelwerk
-	 * Schriftfeldeintrag des mit der Planung beauftragten Ingenieurbüros gemäß Ril 819.0103.
+	 * Schriftfeldeintrag des mit der Planung beauftragten Ingenieurbüros gemäß Ril 886.0102.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name Organisation</em>' containment reference.
 	 * @see #setNameOrganisation(Name_Organisation_TypeClass)
@@ -153,7 +153,7 @@ public interface Organisation extends Ur_Objekt {
 	 * <!-- begin-model-doc -->
 	 * Organisationseinheit bzw. Abteilung der Organisationseinheit.
 	 * DB Regelwerk
-	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 819.0103 zum mit der Planung beauftragten Ingenieurbüro.
+	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 886.0102 zum mit der Planung beauftragten Ingenieurbüro.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Organisationseinheit</em>' containment reference.
 	 * @see #setOrganisationseinheit(Organisationseinheit_TypeClass)
@@ -181,7 +181,7 @@ public interface Organisation extends Ur_Objekt {
 	 * <!-- begin-model-doc -->
 	 * Telefonnummer der Organisation.
 	 * DB Regelwerk
-	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 819.0103 zum mit der Planung beauftragten Ingenieurbüro.
+	 * Ggf. Bestandteil des Schriftfeldeintrages gemäß Ril 886.0102 zum mit der Planung beauftragten Ingenieurbüro.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Telefonnummer</em>' containment reference.
 	 * @see #setTelefonnummer(Telefonnummer_TypeClass)

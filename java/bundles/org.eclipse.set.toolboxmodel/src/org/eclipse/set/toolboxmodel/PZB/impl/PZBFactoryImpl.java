@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB.impl;
 
@@ -13,6 +20,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenFactory;
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
@@ -68,7 +78,9 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 			case PZBPackage.GUE_BAUART_TYPE_CLASS: return createGUE_Bauart_TypeClass();
 			case PZBPackage.GUE_ENERGIEVERSORGUNG_TYPE_CLASS: return createGUE_Energieversorgung_TypeClass();
 			case PZBPackage.GUE_MESSSTRECKE_TYPE_CLASS: return createGUE_Messstrecke_TypeClass();
+			case PZBPackage.INA_GEFAHRSTELLE_ATTRIBUTE_GROUP: return createINA_Gefahrstelle_AttributeGroup();
 			case PZBPackage.MESSFEHLER_TYPE_CLASS: return createMessfehler_TypeClass();
+			case PZBPackage.PRIORITAET_GEFAHRSTELLE_TYPE_CLASS: return createPrioritaet_Gefahrstelle_TypeClass();
 			case PZBPackage.PRUEFGESCHWINDIGKEIT_TYPE_CLASS: return createPruefgeschwindigkeit_TypeClass();
 			case PZBPackage.PRUEFZEIT_TYPE_CLASS: return createPruefzeit_TypeClass();
 			case PZBPackage.PZB_ABSTAND_GM_TYPE_CLASS: return createPZB_Abstand_GM_TypeClass();
@@ -77,9 +89,12 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 			case PZBPackage.PZB_ELEMENT_GM_ATTRIBUTE_GROUP: return createPZB_Element_GM_AttributeGroup();
 			case PZBPackage.PZB_ELEMENT_GUE_ATTRIBUTE_GROUP: return createPZB_Element_GUE_AttributeGroup();
 			case PZBPackage.PZB_ELEMENT_ZUORDNUNG: return createPZB_Element_Zuordnung();
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP: return createPZB_Element_Zuordnung_BP_AttributeGroup();
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP: return createPZB_Element_Zuordnung_Fstr_AttributeGroup();
 			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP: return createPZB_Element_Zuordnung_INA_AttributeGroup();
 			case PZBPackage.PZB_INA_TYPE_CLASS: return createPZB_INA_TypeClass();
 			case PZBPackage.PZB_ZUORDNUNG_SIGNAL: return createPZB_Zuordnung_Signal();
+			case PZBPackage.WIRKSAMKEIT_FSTR_TYPE_CLASS: return createWirksamkeit_Fstr_TypeClass();
 			case PZBPackage.WIRKSAMKEIT_TYPE_CLASS: return createWirksamkeit_TypeClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -106,6 +121,8 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 				return createENUMPZBArtFromString(eDataType, initialValue);
 			case PZBPackage.ENUM_WIRKSAMKEIT:
 				return createENUMWirksamkeitFromString(eDataType, initialValue);
+			case PZBPackage.ENUM_WIRKSAMKEIT_FSTR:
+				return createENUMWirksamkeitFstrFromString(eDataType, initialValue);
 			case PZBPackage.ENUMGUE_ANORDNUNG_OBJECT:
 				return createENUMGUEAnordnungObjectFromString(eDataType, initialValue);
 			case PZBPackage.ENUMGUE_BAUART_OBJECT:
@@ -116,12 +133,16 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 				return createENUMMessfehlerObjectFromString(eDataType, initialValue);
 			case PZBPackage.ENUMPZB_ART_OBJECT:
 				return createENUMPZBArtObjectFromString(eDataType, initialValue);
+			case PZBPackage.ENUM_WIRKSAMKEIT_FSTR_OBJECT:
+				return createENUMWirksamkeitFstrObjectFromString(eDataType, initialValue);
 			case PZBPackage.ENUM_WIRKSAMKEIT_OBJECT:
 				return createENUMWirksamkeitObjectFromString(eDataType, initialValue);
 			case PZBPackage.GUE_ABSTAND_ABWEICHEND_TYPE:
 				return createGUE_Abstand_Abweichend_TypeFromString(eDataType, initialValue);
 			case PZBPackage.GUE_MESSSTRECKE_TYPE:
 				return createGUE_Messstrecke_TypeFromString(eDataType, initialValue);
+			case PZBPackage.PRIORITAET_GEFAHRSTELLE_TYPE:
+				return createPrioritaet_Gefahrstelle_TypeFromString(eDataType, initialValue);
 			case PZBPackage.PRUEFGESCHWINDIGKEIT_TYPE:
 				return createPruefgeschwindigkeit_TypeFromString(eDataType, initialValue);
 			case PZBPackage.PRUEFZEIT_TYPE:
@@ -153,6 +174,8 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 				return convertENUMPZBArtToString(eDataType, instanceValue);
 			case PZBPackage.ENUM_WIRKSAMKEIT:
 				return convertENUMWirksamkeitToString(eDataType, instanceValue);
+			case PZBPackage.ENUM_WIRKSAMKEIT_FSTR:
+				return convertENUMWirksamkeitFstrToString(eDataType, instanceValue);
 			case PZBPackage.ENUMGUE_ANORDNUNG_OBJECT:
 				return convertENUMGUEAnordnungObjectToString(eDataType, instanceValue);
 			case PZBPackage.ENUMGUE_BAUART_OBJECT:
@@ -163,12 +186,16 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 				return convertENUMMessfehlerObjectToString(eDataType, instanceValue);
 			case PZBPackage.ENUMPZB_ART_OBJECT:
 				return convertENUMPZBArtObjectToString(eDataType, instanceValue);
+			case PZBPackage.ENUM_WIRKSAMKEIT_FSTR_OBJECT:
+				return convertENUMWirksamkeitFstrObjectToString(eDataType, instanceValue);
 			case PZBPackage.ENUM_WIRKSAMKEIT_OBJECT:
 				return convertENUMWirksamkeitObjectToString(eDataType, instanceValue);
 			case PZBPackage.GUE_ABSTAND_ABWEICHEND_TYPE:
 				return convertGUE_Abstand_Abweichend_TypeToString(eDataType, instanceValue);
 			case PZBPackage.GUE_MESSSTRECKE_TYPE:
 				return convertGUE_Messstrecke_TypeToString(eDataType, instanceValue);
+			case PZBPackage.PRIORITAET_GEFAHRSTELLE_TYPE:
+				return convertPrioritaet_Gefahrstelle_TypeToString(eDataType, instanceValue);
 			case PZBPackage.PRUEFGESCHWINDIGKEIT_TYPE:
 				return convertPruefgeschwindigkeit_TypeToString(eDataType, instanceValue);
 			case PZBPackage.PRUEFZEIT_TYPE:
@@ -241,9 +268,31 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 	 * @generated
 	 */
 	@Override
+	public INA_Gefahrstelle_AttributeGroup createINA_Gefahrstelle_AttributeGroup() {
+		INA_Gefahrstelle_AttributeGroupImpl inA_Gefahrstelle_AttributeGroup = new INA_Gefahrstelle_AttributeGroupImpl();
+		return inA_Gefahrstelle_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Messfehler_TypeClass createMessfehler_TypeClass() {
 		Messfehler_TypeClassImpl messfehler_TypeClass = new Messfehler_TypeClassImpl();
 		return messfehler_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Prioritaet_Gefahrstelle_TypeClass createPrioritaet_Gefahrstelle_TypeClass() {
+		Prioritaet_Gefahrstelle_TypeClassImpl prioritaet_Gefahrstelle_TypeClass = new Prioritaet_Gefahrstelle_TypeClassImpl();
+		return prioritaet_Gefahrstelle_TypeClass;
 	}
 
 	/**
@@ -340,6 +389,28 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 	 * @generated
 	 */
 	@Override
+	public PZB_Element_Zuordnung_BP_AttributeGroup createPZB_Element_Zuordnung_BP_AttributeGroup() {
+		PZB_Element_Zuordnung_BP_AttributeGroupImpl pzB_Element_Zuordnung_BP_AttributeGroup = new PZB_Element_Zuordnung_BP_AttributeGroupImpl();
+		return pzB_Element_Zuordnung_BP_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PZB_Element_Zuordnung_Fstr_AttributeGroup createPZB_Element_Zuordnung_Fstr_AttributeGroup() {
+		PZB_Element_Zuordnung_Fstr_AttributeGroupImpl pzB_Element_Zuordnung_Fstr_AttributeGroup = new PZB_Element_Zuordnung_Fstr_AttributeGroupImpl();
+		return pzB_Element_Zuordnung_Fstr_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public PZB_Element_Zuordnung_INA_AttributeGroup createPZB_Element_Zuordnung_INA_AttributeGroup() {
 		PZB_Element_Zuordnung_INA_AttributeGroupImpl pzB_Element_Zuordnung_INA_AttributeGroup = new PZB_Element_Zuordnung_INA_AttributeGroupImpl();
 		return pzB_Element_Zuordnung_INA_AttributeGroup;
@@ -365,6 +436,17 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 	public PZB_Zuordnung_Signal createPZB_Zuordnung_Signal() {
 		PZB_Zuordnung_SignalImpl pzB_Zuordnung_Signal = new PZB_Zuordnung_SignalImpl();
 		return pzB_Zuordnung_Signal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Wirksamkeit_Fstr_TypeClass createWirksamkeit_Fstr_TypeClass() {
+		Wirksamkeit_Fstr_TypeClassImpl wirksamkeit_Fstr_TypeClass = new Wirksamkeit_Fstr_TypeClassImpl();
+		return wirksamkeit_Fstr_TypeClass;
 	}
 
 	/**
@@ -503,6 +585,26 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMWirksamkeitFstr createENUMWirksamkeitFstrFromString(EDataType eDataType, String initialValue) {
+		ENUMWirksamkeitFstr result = ENUMWirksamkeitFstr.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMWirksamkeitFstrToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMGUEAnordnung createENUMGUEAnordnungObjectFromString(EDataType eDataType, String initialValue) {
 		return createENUMGUEAnordnungFromString(PZBPackage.Literals.ENUMGUE_ANORDNUNG, initialValue);
 	}
@@ -593,6 +695,24 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMWirksamkeitFstr createENUMWirksamkeitFstrObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMWirksamkeitFstrFromString(PZBPackage.Literals.ENUM_WIRKSAMKEIT_FSTR, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMWirksamkeitFstrObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMWirksamkeitFstrToString(PZBPackage.Literals.ENUM_WIRKSAMKEIT_FSTR, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMWirksamkeit createENUMWirksamkeitObjectFromString(EDataType eDataType, String initialValue) {
 		return createENUMWirksamkeitFromString(PZBPackage.Literals.ENUM_WIRKSAMKEIT, initialValue);
 	}
@@ -640,6 +760,24 @@ public class PZBFactoryImpl extends EFactoryImpl implements PZBFactory {
 	 */
 	public String convertGUE_Messstrecke_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createPrioritaet_Gefahrstelle_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPrioritaet_Gefahrstelle_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
 	}
 
 	/**

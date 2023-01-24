@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -14,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getBefestigungArt <em>Befestigung Art</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getFundamentArt <em>Fundament Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getHoeheFundamentoberkante <em>Hoehe Fundamentoberkante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getObereLichtpunkthoehe <em>Obere Lichtpunkthoehe</em>}</li>
  * </ul>
@@ -28,7 +36,8 @@ public interface Signal_Befestigung_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Beschreibung der Signalbefestigung, um auch ohne Regelzeichnung die grundsätzliche Art erkennen zu können. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Im bisherigen PT1 keine eindeutige Darstellung, in der Regel aus den Einträgen in der Signaltabelle 1 zu erkennen. 
+	 * Beschreibung der Signalbefestigung, um auch ohne Regelzeichnung die grundsätzliche Art erkennen zu können.
+	 * Die Werte "Regelanordnung_Mast_..." bilden Regel-Signalanordnungen am Mast ab. Mit den Werten "Regelanordnung_Sonstige_..." wird eine sonstige Regel-Anordnung beschrieben, z. B. am Pfosten (Lf). Sofern eine Sonderkonstruktion notwendig ist, sind die Werte "Sonderanordnung_Mast_..." und "Pfosten_..." zu nutzen. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Im bisherigen PT1 keine eindeutige Darstellung, in der Regel aus den Einträgen in der Signaltabelle 1 zu erkennen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Befestigung Art</em>' containment reference.
 	 * @see #setBefestigungArt(Befestigung_Art_TypeClass)
@@ -48,6 +57,32 @@ public interface Signal_Befestigung_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setBefestigungArt(Befestigung_Art_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Fundament Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Bei Fundament: Angabe der Fundamentart, da bei herstellerneutraler Planung noch keine Regelzeichnungsnummer bzw. kein Bild gewählt werden kann.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Fundament Art</em>' containment reference.
+	 * @see #setFundamentArt(Fundament_Art_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Befestigung_Allg_AttributeGroup_FundamentArt()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Fundament_Art'"
+	 * @generated
+	 */
+	Fundament_Art_TypeClass getFundamentArt();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getFundamentArt <em>Fundament Art</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fundament Art</em>' containment reference.
+	 * @see #getFundamentArt()
+	 * @generated
+	 */
+	void setFundamentArt(Fundament_Art_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Hoehe Fundamentoberkante</b></em>' containment reference.

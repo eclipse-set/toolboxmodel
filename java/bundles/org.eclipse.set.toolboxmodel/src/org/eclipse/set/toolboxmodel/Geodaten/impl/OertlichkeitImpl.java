@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -10,11 +17,12 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
@@ -33,6 +41,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.OertlichkeitImpl#getBezeichnung <em>Bezeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.OertlichkeitImpl#getIDOertlichkeit <em>ID Oertlichkeit</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.OertlichkeitImpl#getIDOertlichkeitAwanstBedient <em>ID Oertlichkeit Awanst Bedient</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.OertlichkeitImpl#getIDStreckePunkt <em>ID Strecke Punkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.OertlichkeitImpl#getOertlichkeitAllg <em>Oertlichkeit Allg</em>}</li>
  * </ul>
@@ -68,6 +77,25 @@ public class OertlichkeitImpl extends Basis_ObjektImpl implements Oertlichkeit {
 	 * @ordered
 	 */
 	protected boolean iDOertlichkeitESet;
+
+	/**
+	 * The cached value of the '{@link #getIDOertlichkeitAwanstBedient() <em>ID Oertlichkeit Awanst Bedient</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDOertlichkeitAwanstBedient()
+	 * @generated
+	 * @ordered
+	 */
+	protected Oertlichkeit iDOertlichkeitAwanstBedient;
+
+	/**
+	 * This is true if the ID Oertlichkeit Awanst Bedient reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDOertlichkeitAwanstBedientESet;
 
 	/**
 	 * The cached value of the '{@link #getIDStreckePunkt() <em>ID Strecke Punkt</em>}' reference list.
@@ -226,6 +254,73 @@ public class OertlichkeitImpl extends Basis_ObjektImpl implements Oertlichkeit {
 	 * @generated
 	 */
 	@Override
+	public Oertlichkeit getIDOertlichkeitAwanstBedient() {
+		if (iDOertlichkeitAwanstBedient != null && iDOertlichkeitAwanstBedient.eIsProxy()) {
+			InternalEObject oldIDOertlichkeitAwanstBedient = (InternalEObject)iDOertlichkeitAwanstBedient;
+			iDOertlichkeitAwanstBedient = (Oertlichkeit)eResolveProxy(oldIDOertlichkeitAwanstBedient);
+			if (iDOertlichkeitAwanstBedient != oldIDOertlichkeitAwanstBedient) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT, oldIDOertlichkeitAwanstBedient, iDOertlichkeitAwanstBedient));
+			}
+		}
+		return iDOertlichkeitAwanstBedient;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oertlichkeit basicGetIDOertlichkeitAwanstBedient() {
+		return iDOertlichkeitAwanstBedient;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDOertlichkeitAwanstBedient(Oertlichkeit newIDOertlichkeitAwanstBedient) {
+		Oertlichkeit oldIDOertlichkeitAwanstBedient = iDOertlichkeitAwanstBedient;
+		iDOertlichkeitAwanstBedient = newIDOertlichkeitAwanstBedient;
+		boolean oldIDOertlichkeitAwanstBedientESet = iDOertlichkeitAwanstBedientESet;
+		iDOertlichkeitAwanstBedientESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT, oldIDOertlichkeitAwanstBedient, iDOertlichkeitAwanstBedient, !oldIDOertlichkeitAwanstBedientESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDOertlichkeitAwanstBedient() {
+		Oertlichkeit oldIDOertlichkeitAwanstBedient = iDOertlichkeitAwanstBedient;
+		boolean oldIDOertlichkeitAwanstBedientESet = iDOertlichkeitAwanstBedientESet;
+		iDOertlichkeitAwanstBedient = null;
+		iDOertlichkeitAwanstBedientESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT, oldIDOertlichkeitAwanstBedient, null, oldIDOertlichkeitAwanstBedientESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDOertlichkeitAwanstBedient() {
+		return iDOertlichkeitAwanstBedientESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<Strecke_Punkt> getIDStreckePunkt() {
 		if (iDStreckePunkt == null) {
 			iDStreckePunkt = new EObjectResolvingEList<Strecke_Punkt>(Strecke_Punkt.class, this, GeodatenPackage.OERTLICHKEIT__ID_STRECKE_PUNKT);
@@ -308,6 +403,9 @@ public class OertlichkeitImpl extends Basis_ObjektImpl implements Oertlichkeit {
 			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT:
 				if (resolve) return getIDOertlichkeit();
 				return basicGetIDOertlichkeit();
+			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT:
+				if (resolve) return getIDOertlichkeitAwanstBedient();
+				return basicGetIDOertlichkeitAwanstBedient();
 			case GeodatenPackage.OERTLICHKEIT__ID_STRECKE_PUNKT:
 				return getIDStreckePunkt();
 			case GeodatenPackage.OERTLICHKEIT__OERTLICHKEIT_ALLG:
@@ -331,6 +429,9 @@ public class OertlichkeitImpl extends Basis_ObjektImpl implements Oertlichkeit {
 				return;
 			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT:
 				setIDOertlichkeit((Oertlichkeit)newValue);
+				return;
+			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT:
+				setIDOertlichkeitAwanstBedient((Oertlichkeit)newValue);
 				return;
 			case GeodatenPackage.OERTLICHKEIT__ID_STRECKE_PUNKT:
 				getIDStreckePunkt().clear();
@@ -359,6 +460,9 @@ public class OertlichkeitImpl extends Basis_ObjektImpl implements Oertlichkeit {
 			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT:
 				unsetIDOertlichkeit();
 				return;
+			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT:
+				unsetIDOertlichkeitAwanstBedient();
+				return;
 			case GeodatenPackage.OERTLICHKEIT__ID_STRECKE_PUNKT:
 				getIDStreckePunkt().clear();
 				return;
@@ -383,6 +487,8 @@ public class OertlichkeitImpl extends Basis_ObjektImpl implements Oertlichkeit {
 				return bezeichnung != null;
 			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT:
 				return isSetIDOertlichkeit();
+			case GeodatenPackage.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT:
+				return isSetIDOertlichkeitAwanstBedient();
 			case GeodatenPackage.OERTLICHKEIT__ID_STRECKE_PUNKT:
 				return iDStreckePunkt != null && !iDStreckePunkt.isEmpty();
 			case GeodatenPackage.OERTLICHKEIT__OERTLICHKEIT_ALLG:

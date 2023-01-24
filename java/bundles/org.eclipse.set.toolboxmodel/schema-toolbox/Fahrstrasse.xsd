@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
             xmlns:func="localhost/function"
+            xmlns:nsATO="http://www.plan-pro.org/modell/ATO/toolbox"
             xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
             xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
             xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -13,8 +14,9 @@
             xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
             xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
             xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsLayoutinformationen="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
             xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
-            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsNahbedienung="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
             xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
             xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
             xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -33,6 +35,8 @@
             targetNamespace="http://www.plan-pro.org/modell/Fahrstrasse/toolbox">
    <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
                schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/ATO/toolbox"
+               schemaLocation="ATO.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
                schemaLocation="Bahnsteig.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -53,10 +57,12 @@
                schemaLocation="Geodaten.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
                schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+               schemaLocation="Layoutinformationen.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
                schemaLocation="Medien_und_Trassen.xsd"/>
-   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+               schemaLocation="Nahbedienung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
                schemaLocation="Ortung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -90,9 +96,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -104,19 +108,6 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
    </xs:annotation>
-   <xs:complexType ecore:name="Fstr_Art_TypeClass" name="TCFstr_Art">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsFahrstrasse:ENUMFstr_Art"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Bezeichnung_Markanter_Punkt_TypeClass"
                     name="TCBezeichnung_Markanter_Punkt">
       <xs:complexContent>
@@ -137,6 +128,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -170,7 +162,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                             minOccurs="0"
                             maxOccurs="1">
                   <xs:annotation>
-                     <xs:documentation>Optionale Bedingung für die Anzeige von Fstr_Signalisierung_Besonders.ID Signal Signalbegriff. Das Zielsignal ist meist das Signal am Fahrstraßenziel, kann aber auch davor (z. B. gestufte Geschwindigkeitssignalisierung) oder dahinter (z. B. nach dem Ende des Weichenbereiches bei Ausfahrten) liegen.</xs:documentation>
+                     <xs:documentation>Optionale Bedingung für die Anzeige von Fstr_Signalisierung.ID Signal Signalbegriff. Das Zielsignal ist meist das Signal am Fahrstraßenziel, kann aber auch davor (z. B. gestufte Geschwindigkeitssignalisierung) oder dahinter (z. B. nach dem Ende des Weichenbereiches bei Ausfahrten) liegen.</xs:documentation>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
@@ -179,10 +171,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Fstr_Zug_Rangier" name="CFstr_Zug_Rangier">
       <xs:annotation>
-         <xs:documentation>Zug- oder Rangierstraße. Jeder Zugstraße ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstraßen mit mehreren Durchrutschwegen, so werden dafür mehrere Zugstraßen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstraßen geplant. Der hiermit verknüpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstraße (Fstr_Art==ZB) über die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstraßen (Fstr_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der Länge Null entstehen, wenn die zweite Teilblockfahrstraße nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstraße. Fahrstraßen über eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstraßen (Fstr_Art==ZT/ZTU/RT/RTU) geplant. Kann die erste Teilfahrstraße mit mehreren weiteren Teilfahrstraßen fortgesetzt werden, so muss für jede geplante Kombination eine eigene Instanz der ersten Teilfahrstraße angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Die Verknüpfung zur zweiten Teilfahrstraße geschieht über Fstr_Zug_Rangier.ID Fstr Folgeabhaengigkeit. Eine Mittelweichenteilfahrstraße besitzt keinen Durchrutschweg. Eine explizite Verknüpfung von Mittelweichenteilfahrstraßen untereinander und mit der Zugstraße erfolgt nicht, da sich diese über die Topologie und insbesondere über Start und Ziel ergeben. Eine Rangierstraße besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstraße werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschließen. Gruppenausfahrten werden als Zugstraßen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstraße ist somit eindeutig erkennbar. DB-Regelwerk Zugstraßentabelle (eine Zeile), Rangierstraßentabelle (eine Zeile), Mittelweichenteilfahrstraßentabelle (eine Zeile). </xs:documentation>
+         <xs:documentation>Zug- oder Rangierstraße. Jeder Zugstraße ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstraßen mit mehreren Durchrutschwegen, so werden dafür mehrere Zugstraßen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstraßen geplant. Der hiermit verknüpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstraße (Fstr_Zug_Art==ZB) über die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstraßen (Fstr_Zug_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der Länge Null entstehen, wenn die zweite Teilblockfahrstraße nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstraße. Fahrstraßen über eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstraßen (Fstr_Zug_Art==ZT/ZTU; Fstr_Rangier_Art==RT/RTU) geplant. Kann die erste Teilfahrstraße mit mehreren weiteren Teilfahrstraßen fortgesetzt werden, so muss für jede geplante Kombination eine eigene Instanz der ersten Teilfahrstraße angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Eine Mittelweichenteilfahrstraße besitzt keinen Durchrutschweg. Eine explizite Verknüpfung von Mittelweichenteilfahrstraßen untereinander und mit der Zugstraße erfolgt nicht, da sich diese über die Topologie und insbesondere über Start und Ziel ergeben. Eine Rangierstraße besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstraße werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschließen. Gruppenausfahrten werden als Zugstraßen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstraße ist somit eindeutig erkennbar. DB-Regelwerk Zugstraßentabelle (eine Zeile), Rangierstraßentabelle (eine Zeile), Mittelweichenteilfahrstraßentabelle (eine Zeile).</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -233,10 +226,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Fstr_Nichthaltfall" name="CFstr_Nichthaltfall">
       <xs:annotation>
-         <xs:documentation>Nichthaltfallabschnitt (auch: Haltfallverhinderungsabschnitt). Im Gegensatz zur bisherigen Praxis der LST-Planung, den Haltfallabschnitt zu planen, werden im Datenmodell nur die Nichthaltfallabschnitte für jede Zugstraße geplant. In der Regel ist es einer, selten mehrere. DB-Regelwerk Haltfallabschnitt bisher: Zugstraßentabelle, Spalte 6: Signalhaltfall</xs:documentation>
+         <xs:documentation>Nichthaltfallabschnitt (auch: Haltfallverhinderungsabschnitt). Im Gegensatz zur bisherigen Praxis der LST-Planung, den Haltfallabschnitt zu planen, werden im Datenmodell nur die Nichthaltfallabschnitte für jeden Fahrweg geplant. In der Regel ist es einer, selten mehrere. DB-Regelwerk Haltfallabschnitt bisher: Zugstraßentabelle, Spalte 6: Signalhaltfall</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -310,6 +304,19 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Fstr_Mittel_AttributeGroup" name="CFstr_Mittel">
       <xs:sequence>
+         <xs:element name="Fstr_Mittel_Art"
+                      type="nsFahrstrasse:TCFstr_Mittel_Art"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Art der Mittelweichenteil-Fahrstraße. ZM – ZugMittelweichenteil-, ZUM – ZugUmfahrMittelweichenteil-. DB-Regelwerk Zugstraßentabelle, Spalte 2 "Art"</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <ProposedValue>ZM</ProposedValue>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
          <xs:element name="Fstr_Mittel_V_Aufwertung"
                       type="nsFahrstrasse:TCFstr_Mittel_V_Aufwertung"
                       minOccurs="1"
@@ -361,19 +368,6 @@ XML Schema for PlanPro interface.</xs:documentation>
                </xs:appinfo>
             </xs:annotation>
          </xs:element>
-         <xs:element name="Fstr_Art"
-                      type="nsFahrstrasse:TCFstr_Art"
-                      minOccurs="1"
-                      maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>Art der Fahrstraße. RR – RangierRegel-, RT - RangierTeil-, RTU - RangierTeilUmfahr-, RU – RangierUmfahr-, ZH – ZugHilfs-, ZM – ZugMittelweichenteil-, ZR – ZugRegel-, ZU – ZugUmfahr-, ZUH – ZugUmfahrhilfs-, ZUM – ZugUmfahrMittelweichenteil-, ZB – ZugZentralblock-, ZT - ZugTeil-, ZTU - ZugTeilUmfahr-. ZB: Anwendung im Zentralblock oder an Schnittstellen zu anderen Stellwerkstechniken bei Mehrabschnittssignalisierung, Signalabhängigkeiten von Fahrwegelementen auf der freien Strecke oder bei Bedienung einer Awanst. DB-Regelwerk Zug-/Rangierstraßentabelle, Spalte 2 "Art"</xs:documentation>
-               <xs:appinfo>
-                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
-                     <ProposedValue>ZR</ProposedValue>
-                  </WorkflowInformation>
-               </xs:appinfo>
-            </xs:annotation>
-         </xs:element>
          <xs:element name="Fstr_Bedienstring"
                       type="nsFahrstrasse:TCFstr_Bedienstring"
                       minOccurs="0"
@@ -383,19 +377,6 @@ XML Schema for PlanPro interface.</xs:documentation>
                <xs:appinfo>
                   <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                      <Patternbeschreibung>[3..26] </Patternbeschreibung>
-                  </WorkflowInformation>
-               </xs:appinfo>
-            </xs:annotation>
-         </xs:element>
-         <xs:element name="Fstr_Bildezeit"
-                      type="nsFahrstrasse:TCFstr_Bildezeit"
-                      minOccurs="0"
-                      maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>Für die ZL notwendige Fahrstraßenbildezeit. Das Attribut ist Bestandteil des Untergewerks "Zuglenkung". DB-Regelwerk ZL-Planung</xs:documentation>
-               <xs:appinfo>
-                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
-                     <Patternbeschreibung> [0..900] </Patternbeschreibung>
                   </WorkflowInformation>
                </xs:appinfo>
             </xs:annotation>
@@ -496,6 +477,7 @@ XML Schema for PlanPro interface.</xs:documentation>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <Patternbeschreibung>[3..20]</Patternbeschreibung>
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -522,8 +504,8 @@ XML Schema for PlanPro interface.</xs:documentation>
    <xs:complexType ecore:name="Fstr_Abhaengigkeit_Ssp_AttributeGroup"
                     name="CFstr_Abhaengigkeit_Ssp">
       <xs:sequence>
-         <xs:element name="Aufloesung_Ssp_Zielgeis"
-                      type="nsFahrstrasse:TCAufloesung_Ssp_Zielgeis"
+         <xs:element name="Aufloesung_Ssp_Zielgleis"
+                      type="nsFahrstrasse:TCAufloesung_Ssp_Zielgleis"
                       minOccurs="0"
                       maxOccurs="1">
             <xs:annotation>
@@ -553,6 +535,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -648,23 +631,6 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:simpleType name="ENUMFstr_Art">
-      <xs:restriction base="xs:string">
-         <xs:enumeration ecore:name="ENUMFstr_Art_RR" value="RR"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZZ" value="ZZ"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_RU" value="RU"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZH" value="ZH"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZM" value="ZM"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZR" value="ZR"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZU" value="ZU"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZUH" value="ZUH"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZUM" value="ZUM"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_RT" value="RT"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZT" value="ZT"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_RTU" value="RTU"/>
-         <xs:enumeration ecore:name="ENUMFstr_Art_ZTU" value="ZTU"/>
-      </xs:restriction>
-   </xs:simpleType>
    <xs:complexType ecore:name="Automatische_Einstellung_TypeClass"
                     name="TCAutomatische_Einstellung">
       <xs:complexContent>
@@ -692,13 +658,12 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Aufloesung_Ssp_Zielgeis_TypeClass"
-                    name="TCAufloesung_Ssp_Zielgeis">
+   <xs:complexType ecore:name="Fstr_Zug_Art_TypeClass" name="TCFstr_Zug_Art">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="nsFahrstrasse:ENUMAufloesung_Ssp_Zielgleis"
+                            type="nsFahrstrasse:ENUMFstr_Zug_Art"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -706,12 +671,13 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Fstr_DWeg_W_Kr_TypeClass" name="TCFstr_DWeg_W_Kr">
+   <xs:complexType ecore:name="Aufloesung_Ssp_Zielgleis_TypeClass"
+                    name="TCAufloesung_Ssp_Zielgleis">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="xs:boolean"
+                            type="nsFahrstrasse:ENUMAufloesung_Ssp_Zielgleis"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -776,6 +742,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -812,6 +779,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -844,6 +812,14 @@ XML Schema for PlanPro interface.</xs:documentation>
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Zielpunkt von Fstr Fahrweg. Der Zielpunkt besteht beim befahrenen Teil aus einem Signal mit der Ausprägung Hauptsignal, Sperrsignal oder Bedienpunkt, beim Durchrutschweg aus einem markanten Punkt. DB-Regelwerk Befahrener Teil: In der Fahrstraßentabelle genanntes Ziel der Fahrstraße; Durchrutschweg: Durchrutschwegtabelle, Spalte 2 "bis". </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Start_Signal_Charakter"
+                            type="nsFahrstrasse:TCStart_Signal_Charakter"
+                            minOccurs="0"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Fahrwegbezogener Charakter des Start-Signals, sofern abweichend von der im Signal definierten Signal_Funktion. DB-Regelwerk Ril 819.1361, Tabelle der Signalabstände und Schutzstrecken</xs:documentation>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
@@ -952,6 +928,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -998,14 +975,6 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:enumeration ecore:name="ENUMRangier_Gegenfahrtausschluss_nein" value="nein"/>
       </xs:restriction>
    </xs:simpleType>
-   <xs:complexType ecore:name="Fstr_DWeg_W_Kr_Allg_child_AttributeGroup"
-                    name="CFstr_DWeg_W_Kr_Allg_child">
-      <xs:complexContent>
-         <xs:extension base="nsFahrstrasse:CFstr_DWeg_W_Kr_Allg">
-            <xs:sequence/>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:simpleType ecore:name="Bezeichnung_Markanter_Punkt_Type"
                    name="TBezeichnung_Markanter_Punkt">
       <xs:restriction base="nsBasisTypen:TText">
@@ -1031,6 +1000,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>Bedienung Fdl ESTW-ZE</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1073,6 +1043,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1111,11 +1082,44 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
-   <xs:simpleType ecore:name="Fstr_Bildezeit_Type" name="TFstr_Bildezeit">
-      <xs:restriction base="nsBasisTypen:TSekunde">
-         <xs:pattern value="0|[1-9][0-9]{0,1}|[1-8][0-9]{2}|900"/>
+   <xs:complexType ecore:name="Fstr_Rangier_Art_TypeClass" name="TCFstr_Rangier_Art">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsFahrstrasse:ENUMFstr_Rangier_Art"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="ENUMFstr_Zug_Art">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_B" value="B"/>
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_ZH" value="ZH"/>
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_ZR" value="ZR"/>
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_ZT" value="ZT"/>
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_ZTU" value="ZTU"/>
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_ZU" value="ZU"/>
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_ZUH" value="ZUH"/>
+         <xs:enumeration ecore:name="ENUMFstr_Zug_Art_ZZ" value="ZZ"/>
       </xs:restriction>
    </xs:simpleType>
+   <xs:complexType ecore:name="Fstr_Mittel_Art_TypeClass" name="TCFstr_Mittel_Art">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsFahrstrasse:ENUMFstr_Mittel_Art"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType ecore:name="DWeg_Vorzug_TypeClass" name="TCDWeg_Vorzug">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -1132,6 +1136,20 @@ XML Schema for PlanPro interface.</xs:documentation>
    <xs:simpleType ecore:name="DWeg_Reihenfolge_Type" name="TDWeg_Reihenfolge">
       <xs:restriction base="xs:integer">
          <xs:pattern value="[1-9]|1[0-5]"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="ENUMStart_Signal_Charakter">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMStart_Signal_Charakter_Ausfahr_Signal"
+                          value="Ausfahr_Signal"/>
+         <xs:enumeration ecore:name="ENUMStart_Signal_Charakter_Ausfahr_Signal_nachgelagert"
+                          value="Ausfahr_Signal_nachgelagert"/>
+         <xs:enumeration ecore:name="ENUMStart_Signal_Charakter_Block_Signal"
+                          value="Block_Signal"/>
+         <xs:enumeration ecore:name="ENUMStart_Signal_Charakter_Einfahr_Signal"
+                          value="Einfahr_Signal"/>
+         <xs:enumeration ecore:name="ENUMStart_Signal_Charakter_Nachrueck_Signal"
+                          value="Nachrueck_Signal"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="Rangier_Gegenfahrtausschluss_TypeClass"
@@ -1177,6 +1195,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1221,25 +1240,13 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Fstr_Bildezeit_TypeClass" name="TCFstr_Bildezeit">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsFahrstrasse:TFstr_Bildezeit"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Fstr_Abhaengigkeit" name="CFstr_Abhaengigkeit">
       <xs:annotation>
          <xs:documentation>Zuordnung aller für einen Fstr Fahrweg zu sichernden und nicht durch die Topologie auffindbaren Objekte. Nicht durch die Topologie findbar sind insbesondere: Schluesselsperre, Zustimmungsschalter/-taster. Spezialfall: Für eine Rangierstraße kann richtungsabhängig geplant werden, dass eine Schlüsselsperre im Zielgleis nicht überwacht wird. In dem (sehr seltenen) Fall müssen für eine Zug- und eine Rangierstraße mit identischem Fahrweg zwei Instanzen Fstr Fahrweg angelegt werden. DB-Regelwerk Schlüsselsperre: Zugstraßentabelle, Spalte 5: "Ssp in der Fahrstraße verschlossen und überwacht"; Rangierstraßentabelle, Spalte 15: "Ssp in der Rangierstraße verschlossen und überwacht". Zustimmungsschalter/-taster: Bemerkung/Fußnote. </xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1304,6 +1311,19 @@ XML Schema for PlanPro interface.</xs:documentation>
                </xs:appinfo>
             </xs:annotation>
          </xs:element>
+         <xs:element name="Fstr_Zug_Art"
+                      type="nsFahrstrasse:TCFstr_Zug_Art"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Art der Zugstraße. ZH – ZugHilfs-, ZR – ZugRegel-, ZU – ZugUmfahr-, ZUH – ZugUmfahrhilfs-, ZZ – ZugZentralblock-, ZT - ZugTeil-, ZTU - ZugTeilUmfahr-. ZZ: Anwendung im Zentralblock oder an Schnittstellen zu anderen Stellwerkstechniken bei Mehrabschnittssignalisierung, Signalabhängigkeiten von Fahrwegelementen auf der freien Strecke oder bei Bedienung einer Awanst. DB-Regelwerk Zugstraßentabelle, Spalte 2 "Art"</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <ProposedValue>ZR</ProposedValue>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
          <xs:element name="Fstr_Zug_DWeg"
                       type="nsFahrstrasse:CFstr_Zug_DWeg"
                       minOccurs="0"
@@ -1330,22 +1350,29 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
+   <xs:simpleType name="ENUMFstr_Mittel_Art">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMFstr_Mittel_Art_ZM" value="ZM"/>
+         <xs:enumeration ecore:name="ENUMFstr_Mittel_Art_ZUM" value="ZUM"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType ecore:name="Start_Signal_Charakter_TypeClass"
+                    name="TCStart_Signal_Charakter">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsFahrstrasse:ENUMStart_Signal_Charakter"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:simpleType ecore:name="Fstr_V_Hg_Type" name="TFstr_V_Hg">
       <xs:restriction base="nsBasisTypen:TGeschwindigkeit"/>
    </xs:simpleType>
-   <xs:complexType ecore:name="Fstr_DWeg_W_Kr_Allg_AttributeGroup"
-                    name="CFstr_DWeg_W_Kr_Allg">
-      <xs:sequence>
-         <xs:element name="Fstr_DWeg_W_Kr"
-                      type="nsFahrstrasse:TCFstr_DWeg_W_Kr"
-                      minOccurs="1"
-                      maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>Verschluss der Weiche im Durchrutschweg. Stumpf berutschte, auffahrbare Weichen im Durchrutschweg können unverschlossen bleiben. Das Attribut ist herstellerneutralitätskritisch. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"</xs:documentation>
-            </xs:annotation>
-         </xs:element>
-      </xs:sequence>
-   </xs:complexType>
    <xs:simpleType ecore:name="Fstr_Aneinander_Bedienstring_Type"
                    name="TFstr_Aneinander_Bedienstring">
       <xs:restriction base="nsBasisTypen:TText">
@@ -1376,12 +1403,21 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:pattern value="20|30|40|60|100|160"/>
       </xs:restriction>
    </xs:simpleType>
+   <xs:simpleType name="ENUMFstr_Rangier_Art">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMFstr_Rangier_Art_RR" value="RR"/>
+         <xs:enumeration ecore:name="ENUMFstr_Rangier_Art_RT" value="RT"/>
+         <xs:enumeration ecore:name="ENUMFstr_Rangier_Art_RTU" value="RTU"/>
+         <xs:enumeration ecore:name="ENUMFstr_Rangier_Art_RU" value="RU"/>
+      </xs:restriction>
+   </xs:simpleType>
    <xs:complexType ecore:name="Fstr_DWeg_W_Kr" name="CFstr_DWeg_W_Kr">
       <xs:annotation>
-         <xs:documentation>Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen über den zugrunde liegenden Fstr Fahrweg ist nicht möglich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Außerdem muss für Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden und ob sie Flankenschutz anfordern sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese über Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spaltenüberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"</xs:documentation>
+         <xs:documentation>Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen über den zugrunde liegenden Fstr Fahrweg ist nicht möglich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Außerdem muss für Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese über Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spaltenüberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1394,11 +1430,9 @@ XML Schema for PlanPro interface.</xs:documentation>
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Verschluss der Weiche im Durchrutschweg. Stumpf berutschte, auffahrbare Weichen im Durchrutschweg können unverschlossen bleiben.
-
 Das Attribut ist herstellerneutralitätskritisch.
- 
-DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"
-</xs:documentation>
+DB-Regelwerk 
+Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="ID_Fstr_DWeg"
@@ -1433,6 +1467,19 @@ DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleiss
                       maxOccurs="1">
             <xs:annotation>
                <xs:documentation>Möglichkeit des Fahrstraßenanstoßes über die manuelle Bedienung hinaus. Die Angabe für eine Zugstraße gilt auch für eventuell zugehörige (davorliegende) Mittelweichenteilfahrstraßen. DB-Regelwerk Zugstraßentabelle, Spalte 9 "Selbststellbetrieb/Zuglenkung" </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Fstr_Rangier_Art"
+                      type="nsFahrstrasse:TCFstr_Rangier_Art"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Art der Rangierstraße. RR – RangierRegel-, RT - RangierTeil-, RTU - RangierTeilUmfahr-, RU – RangierUmfahr-. DB-Regelwerk Rangierstraßentabelle, Spalte 2 "Art"</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <ProposedValue>RR</ProposedValue>
+                  </WorkflowInformation>
+               </xs:appinfo>
             </xs:annotation>
          </xs:element>
          <xs:element name="ID_FMA_Anlage_Rangier_Frei"

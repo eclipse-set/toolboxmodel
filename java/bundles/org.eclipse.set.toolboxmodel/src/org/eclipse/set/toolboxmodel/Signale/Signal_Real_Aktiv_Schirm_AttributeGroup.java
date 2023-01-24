@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -13,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getDunkelschaltung <em>Dunkelschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getRichtpunkt <em>Richtpunkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getRichtpunktentfernung <em>Richtpunktentfernung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getSignalArt <em>Signal Art</em>}</li>
@@ -27,32 +33,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Signal_Real_Aktiv_Schirm_AttributeGroup extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Dunkelschaltung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Zusatzangabe, ob ein Schirm-Signal dunkel geschaltet werden kann. Die Dunkelschaltung ist z. B. bei Strecken mit LZB-geführten Zugfahrten und bei Schnittstellen zu SIL 2 - ESTW relevant. Die Angabe ist bei Haupt- und Vorsignalen erforderlich, nicht jedoch für Sperrsignale. Wertzuordnung: true - Signal muss dunkel geschaltet werden können, false - Signal muss nicht dunkel geschaltet werden können. DB-Regelwerk Planungsdaten: Signaltabelle 1, Zeile 40
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Dunkelschaltung</em>' containment reference.
-	 * @see #setDunkelschaltung(Dunkelschaltung_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Real_Aktiv_Schirm_AttributeGroup_Dunkelschaltung()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Dunkelschaltung'"
-	 * @generated
-	 */
-	Dunkelschaltung_TypeClass getDunkelschaltung();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getDunkelschaltung <em>Dunkelschaltung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dunkelschaltung</em>' containment reference.
-	 * @see #getDunkelschaltung()
-	 * @generated
-	 */
-	void setDunkelschaltung(Dunkelschaltung_TypeClass value);
-
 	/**
 	 * Returns the value of the '<em><b>Richtpunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

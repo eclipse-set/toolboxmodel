@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit} object.
@@ -168,6 +169,7 @@ public class ESTW_ZentraleinheitItemProvider extends Basis_ObjektItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT__BEZEICHNUNG);
+			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG);
 		}
 		return childrenFeatures;
@@ -222,6 +224,7 @@ public class ESTW_ZentraleinheitItemProvider extends Basis_ObjektItemProvider {
 
 		switch (notification.getFeatureID(ESTW_Zentraleinheit.class)) {
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__BEZEICHNUNG:
+			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG:
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -246,6 +249,11 @@ public class ESTW_ZentraleinheitItemProvider extends Basis_ObjektItemProvider {
 			(createChildParameter
 				(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT__BEZEICHNUNG,
 				 Ansteuerung_ElementFactory.eINSTANCE.createESTW_Zentraleinheit_Bezeichnung_AttributeGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Ansteuerung_ElementPackage.Literals.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG,
+				 Ansteuerung_ElementFactory.eINSTANCE.createESTW_ZE_Energieversorgung_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter

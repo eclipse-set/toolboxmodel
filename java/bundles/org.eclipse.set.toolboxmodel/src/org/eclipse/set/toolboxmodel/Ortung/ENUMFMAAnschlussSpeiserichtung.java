@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
@@ -19,16 +26,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMFMAAnschlussSpeiserichtung implements Enumerator {
 	/**
-	 * The '<em><b>ENUMFMA Anschluss Speiserichtung Einspeisung</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG(0, "ENUMFMA_Anschluss_Speiserichtung_Einspeisung", "Einspeisung"),
-
-	/**
 	 * The '<em><b>ENUMFMA Anschluss Speiserichtung Ausspeisung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,18 +33,17 @@ public enum ENUMFMAAnschlussSpeiserichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_AUSSPEISUNG(1, "ENUMFMA_Anschluss_Speiserichtung_Ausspeisung", "Ausspeisung");
+	ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_AUSSPEISUNG(0, "ENUMFMA_Anschluss_Speiserichtung_Ausspeisung", "Ausspeisung"),
 
 	/**
-	 * The '<em><b>ENUMFMA Anschluss Speiserichtung Einspeisung</b></em>' literal value.
+	 * The '<em><b>ENUMFMA Anschluss Speiserichtung Einspeisung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG
-	 * @model name="ENUMFMA_Anschluss_Speiserichtung_Einspeisung" literal="Einspeisung"
+	 * @see #ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG_VALUE = 0;
+	ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG(1, "ENUMFMA_Anschluss_Speiserichtung_Einspeisung", "Einspeisung");
 
 	/**
 	 * The '<em><b>ENUMFMA Anschluss Speiserichtung Ausspeisung</b></em>' literal value.
@@ -58,7 +54,18 @@ public enum ENUMFMAAnschlussSpeiserichtung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_AUSSPEISUNG_VALUE = 1;
+	public static final int ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_AUSSPEISUNG_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUMFMA Anschluss Speiserichtung Einspeisung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG
+	 * @model name="ENUMFMA_Anschluss_Speiserichtung_Einspeisung" literal="Einspeisung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>ENUMFMA Anschluss Speiserichtung</b></em>' enumerators.
@@ -68,8 +75,8 @@ public enum ENUMFMAAnschlussSpeiserichtung implements Enumerator {
 	 */
 	private static final ENUMFMAAnschlussSpeiserichtung[] VALUES_ARRAY =
 		new ENUMFMAAnschlussSpeiserichtung[] {
-			ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG,
 			ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_AUSSPEISUNG,
+			ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG,
 		};
 
 	/**
@@ -126,8 +133,8 @@ public enum ENUMFMAAnschlussSpeiserichtung implements Enumerator {
 	 */
 	public static ENUMFMAAnschlussSpeiserichtung get(int value) {
 		switch (value) {
-			case ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG_VALUE: return ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG;
 			case ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_AUSSPEISUNG_VALUE: return ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_AUSSPEISUNG;
+			case ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG_VALUE: return ENUMFMA_ANSCHLUSS_SPEISERICHTUNG_EINSPEISUNG;
 			default: return null;
 		}
 	}

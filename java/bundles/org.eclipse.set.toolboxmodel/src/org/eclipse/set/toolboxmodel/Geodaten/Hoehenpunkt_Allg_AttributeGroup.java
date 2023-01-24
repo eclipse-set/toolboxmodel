@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -57,7 +64,8 @@ public interface Hoehenpunkt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Aufnahmedatum der Höhenwerte des Hoehenpunktes. GND: Punktdatum; Ivl und Ivmg: Datum der letzten Bearbeitung; Kopie: Datum aus kopierter Höhe; Neutrassierung: Freigabedatum; sonstige: Datum der letzten Bearbeitung. 
+	 * Aufnahmedatum der Höhenwerte des Hoehenpunktes. GND: Punktdatum; Ivl und Ivmg: Datum der letzten Bearbeitung; Kopie: Datum aus kopierter Höhe; Neutrassierung: Freigabedatum; sonstige: Datum der letzten Bearbeitung.
+	 * Die Information wird zukünftig über das Attribut Datum_Regelwerk abgebildet. Das Attribut soll daher langfristig entfallen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Hoehenpunkt Datum</em>' containment reference.
 	 * @see #setHoehenpunktDatum(Hoehenpunkt_Datum_TypeClass)
@@ -135,7 +143,7 @@ public interface Hoehenpunkt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Neigung des Gleises bzw. der Hoehenlinie am Ort des Hoehenpunkts. Die Angabe ist nur bei geradem Neigungsverlauf sinnvoll.
+	 * Neigung des Gleises bzw. der Hoehenlinie am Ort des Hoehenpunkts. Die Art der Neigung (Steigung/Gefälle) muss durch Auswertung der Wirkrichtung ermittelt werden. Die Angabe ist nur bei Vorhandensein einer Höhenlinie sinnvoll.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Neigung</em>' containment reference.
 	 * @see #setNeigung(Neigung_TypeClass)

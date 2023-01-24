@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup} object.
@@ -85,9 +86,8 @@ public class DP_Typ_GESG_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_Bremsweg());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_DPTypESG());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_Individuell());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_DPVerlinkt());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_LfdNrAmBezugspunkt());
 		}
 		return childrenFeatures;
@@ -141,9 +141,8 @@ public class DP_Typ_GESG_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DP_Typ_GESG_AttributeGroup.class)) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG:
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_TYP_ESG:
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL:
+			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT:
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__LFD_NR_AM_BEZUGSPUNKT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -166,18 +165,13 @@ public class DP_Typ_GESG_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_Bremsweg(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createBremsweg_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_DPTypESG(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createDP_Typ_ESG_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_Individuell(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createIndividuell_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup_DPVerlinkt(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createDP_Verlinkt_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

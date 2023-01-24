@@ -1,8 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
 
 /**
@@ -14,6 +22,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup#getSonderanlageLage <em>Sonderanlage Lage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup#getBeschreibungSonderanlage <em>Beschreibung Sonderanlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup#getIDSonderanlage <em>ID Sonderanlage</em>}</li>
  * </ul>
@@ -23,6 +32,32 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
  * @generated
  */
 public interface Schloss_Sonderanlage_AttributeGroup extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Sonderanlage Lage</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Lage, in der die Sonderanlage verschlossen wird. DB-Regelwerk Die Abhängigkeiten werden heute durch eine Zeichnung im Lageplan nach 819.9002 3 dargestellt.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Sonderanlage Lage</em>' containment reference.
+	 * @see #setSonderanlageLage(Sonderanlage_Lage_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenPackage#getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='Sonderanlage_Lage'"
+	 * @generated
+	 */
+	Sonderanlage_Lage_TypeClass getSonderanlageLage();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup#getSonderanlageLage <em>Sonderanlage Lage</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sonderanlage Lage</em>' containment reference.
+	 * @see #getSonderanlageLage()
+	 * @generated
+	 */
+	void setSonderanlageLage(Sonderanlage_Lage_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>Beschreibung Sonderanlage</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

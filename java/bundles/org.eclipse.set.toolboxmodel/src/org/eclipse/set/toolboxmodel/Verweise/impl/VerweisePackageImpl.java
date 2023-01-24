@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Verweise.impl;
 
@@ -6,6 +13,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -55,13 +66,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -86,20 +101,26 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
 
+import org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Anforderer_Element_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Anforderung_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_AnhangBearbeitungsvermerk_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Anhang_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Anhang_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Anschluss_Element_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Aussenelementansteuerung_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Aussenelementansteuerung_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_BUE_Anlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_BUE_Anlage_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_BUE_Bedien_Anzeige_Element_TypeClass;
@@ -113,22 +134,24 @@ import org.eclipse.set.toolboxmodel.Verweise.ID_Bahnsteig_Kante_ohne_Proxy_TypeC
 import org.eclipse.set.toolboxmodel.Verweise.ID_Balise_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Balise_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Basis_Objekt_TypeClass;
-import org.eclipse.set.toolboxmodel.Verweise.ID_Bearbeitungsvermerk_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Anzeige_Element_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Bezirk_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Einrichtung_Oertlich_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Oberflaeche_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Standort_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Zentrale_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Befestigung_Bauwerk_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Beginn_Bereich_TypeClass;
-import org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdatei_ohne_Proxy_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Bezugspunkt_Positionierung_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdaten_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Block_Anlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Block_Element_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Block_Strecke_TypeClass;
-import org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezugspunkt_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezug_Funktional_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Datenpunkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Datenpunkt_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_ESTW_Zentraleinheit_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_ETCS_Kante_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_ETCS_Knoten_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_ETCS_Knoten_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_EV_Modul_TypeClass;
@@ -137,7 +160,7 @@ import org.eclipse.set.toolboxmodel.Verweise.ID_Element_Grenze_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Element_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Element_Unterbringung_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Energie_Eingang_TypeClass;
-import org.eclipse.set.toolboxmodel.Verweise.ID_Energie_Primaer_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Energie_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_FMA_Anlage_Rangier_Frei_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_FMA_Anlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_FMA_Element_TypeClass;
@@ -145,19 +168,22 @@ import org.eclipse.set.toolboxmodel.Verweise.ID_FMA_Komponente_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_FT_Anschaltbedingung_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_FT_Fahrweg_Teil_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fachtelegramm_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Fachtelegramm_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fla_Schutz_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fortschaltung_Start_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Aneinander_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Ausschluss_Besonders_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Fahrweg_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Fahrweg_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Zug_Rangier_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Kante_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Knoten_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Punkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Punkt_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_GFR_Anlage_ohne_Proxy_TypeClass;
-import org.eclipse.set.toolboxmodel.Verweise.ID_Geraet_Programmiert_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Gleis_Abschnitt_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Gleis_Bezeichnung_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Grenzzeichen_TypeClass;
@@ -165,16 +191,22 @@ import org.eclipse.set.toolboxmodel.Verweise.ID_Handschalt_Wirkfunktion_TypeClas
 import org.eclipse.set.toolboxmodel.Verweise.ID_Hoehenpunkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Information_Eingang_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Information_Primaer_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Komponente_Programmiert_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Anlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Anlage_ohne_Proxy_TypeClass;
-import org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezugspunkt_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezug_Funktional_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Schaltkasten_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_LO_Einbau_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Blattschnitt_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Zustand_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Markante_Stelle_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Markanter_Punkt_Gleis_Abschluss_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Markanter_Punkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_NB_Element_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_NB_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_NB_Zone_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Oertlichkeit_Ausgabe_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Oertlichkeit_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Oertlichkeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_PZB_Element_Bezugspunkt_TypeClass;
@@ -187,6 +219,7 @@ import org.eclipse.set.toolboxmodel.Verweise.ID_Planungsgrundlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Quellelement_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_RBC_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Regelzeichnung_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Regelzeichnung_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Schalter_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Schaltmittel_Zuordnung_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Schlosskombination_TypeClass;
@@ -203,6 +236,7 @@ import org.eclipse.set.toolboxmodel.Verweise.ID_Signal_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Sonderanlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Stellelement_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Stellwerk_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_Strecke_Bremsweg_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Strecke_Punkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Strecke_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_TOP_Kante_TypeClass;
@@ -226,6 +260,7 @@ import org.eclipse.set.toolboxmodel.Verweise.ID_W_Kr_Gsp_Element_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_W_Kr_Gsp_Komponente_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_Weichenlaufkette_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_ZLV_Bus_TypeClass;
+import org.eclipse.set.toolboxmodel.Verweise.ID_ZLV_Bus_ohne_Proxy_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_ZL_DLP_Fstr_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_ZL_Fstr_TypeClass;
 import org.eclipse.set.toolboxmodel.Verweise.ID_ZL_Signalgruppe_TypeClass;
@@ -294,6 +329,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass iD_AnhangBearbeitungsvermerk_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass iD_Anschluss_Element_TypeClassEClass = null;
 
 	/**
@@ -301,7 +343,28 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass iD_ATO_TS_Instanz_ohne_Proxy_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_ATO_TS_Instanz_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Aussenelementansteuerung_ohne_Proxy_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -357,13 +420,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iD_Bearbeitungsvermerk_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass iD_Bedien_Anzeige_Element_TypeClassEClass = null;
 
 	/**
@@ -406,6 +462,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass iD_Befestigung_Bauwerk_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass iD_Beginn_Bereich_TypeClassEClass = null;
 
 	/**
@@ -413,7 +476,14 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iD_Binaerdatei_ohne_Proxy_TypeClassEClass = null;
+	private EClass iD_Bezugspunkt_Positionierung_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Binaerdaten_ohne_Proxy_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -504,7 +574,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iD_DP_Bezugspunkt_TypeClassEClass = null;
+	private EClass iD_DP_Bezug_Funktional_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -546,7 +616,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iD_Energie_Primaer_TypeClassEClass = null;
+	private EClass iD_Energie_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -554,6 +624,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	private EClass iD_ESTW_Zentraleinheit_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_ETCS_Kante_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -575,6 +652,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	private EClass iD_EV_Modul_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Fachtelegramm_ohne_Proxy_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -644,7 +728,21 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass iD_Fstr_DWeg_ohne_Proxy_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass iD_Fstr_DWeg_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Fstr_Fahrweg_ohne_Proxy_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -686,6 +784,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass iD_GEO_Kante_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass iD_GEO_Knoten_TypeClassEClass = null;
 
 	/**
@@ -701,13 +806,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	private EClass iD_GEO_Punkt_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass iD_Geraet_Programmiert_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -770,6 +868,34 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass iD_Komponente_Programmiert_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Lageplan_Blattschnitt_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Lageplan_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Lageplan_Zustand_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass iD_LEU_Anlage_ohne_Proxy_TypeClassEClass = null;
 
 	/**
@@ -784,7 +910,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iD_LEU_Bezugspunkt_TypeClassEClass = null;
+	private EClass iD_LEU_Bezug_Funktional_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -806,6 +932,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	private EClass iD_Markante_Stelle_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Markanter_Punkt_Gleis_Abschluss_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -834,6 +967,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	private EClass iD_NB_Zone_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Oertlichkeit_Ausgabe_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -911,6 +1051,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	private EClass iD_RBC_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Regelzeichnung_ohne_Proxy_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1030,6 +1177,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	private EClass iD_Stellwerk_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iD_Strecke_Bremsweg_ohne_Proxy_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1225,6 +1379,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass iD_ZLV_Bus_ohne_Proxy_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass iD_ZLV_Bus_TypeClassEClass = null;
 
 	/**
@@ -1331,32 +1492,36 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -1373,8 +1538,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -1390,17 +1555,19 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		// Create package meta-data objects
 		theVerweisePackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -1408,23 +1575,25 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theVerweisePackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -1432,7 +1601,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 
@@ -1496,6 +1665,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
+	public EClass getID_AnhangBearbeitungsvermerk_TypeClass() {
+		return iD_AnhangBearbeitungsvermerk_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getID_Anschluss_Element_TypeClass() {
 		return iD_Anschluss_Element_TypeClassEClass;
 	}
@@ -1506,8 +1685,38 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
+	public EClass getID_ATO_TS_Instanz_ohne_Proxy_TypeClass() {
+		return iD_ATO_TS_Instanz_ohne_Proxy_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_ATO_TS_Instanz_TypeClass() {
+		return iD_ATO_TS_Instanz_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass() {
 		return iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Aussenelementansteuerung_ohne_Proxy_TypeClass() {
+		return iD_Aussenelementansteuerung_ohne_Proxy_TypeClassEClass;
 	}
 
 	/**
@@ -1586,16 +1795,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
-	public EClass getID_Bearbeitungsvermerk_TypeClass() {
-		return iD_Bearbeitungsvermerk_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getID_Bedien_Anzeige_Element_TypeClass() {
 		return iD_Bedien_Anzeige_Element_TypeClassEClass;
 	}
@@ -1656,6 +1855,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
+	public EClass getID_Befestigung_Bauwerk_TypeClass() {
+		return iD_Befestigung_Bauwerk_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getID_Beginn_Bereich_TypeClass() {
 		return iD_Beginn_Bereich_TypeClassEClass;
 	}
@@ -1666,8 +1875,18 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
-	public EClass getID_Binaerdatei_ohne_Proxy_TypeClass() {
-		return iD_Binaerdatei_ohne_Proxy_TypeClassEClass;
+	public EClass getID_Bezugspunkt_Positionierung_TypeClass() {
+		return iD_Bezugspunkt_Positionierung_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Binaerdaten_ohne_Proxy_TypeClass() {
+		return iD_Binaerdaten_ohne_Proxy_TypeClassEClass;
 	}
 
 	/**
@@ -1796,8 +2015,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
-	public EClass getID_DP_Bezugspunkt_TypeClass() {
-		return iD_DP_Bezugspunkt_TypeClassEClass;
+	public EClass getID_DP_Bezug_Funktional_TypeClass() {
+		return iD_DP_Bezug_Funktional_TypeClassEClass;
 	}
 
 	/**
@@ -1856,8 +2075,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
-	public EClass getID_Energie_Primaer_TypeClass() {
-		return iD_Energie_Primaer_TypeClassEClass;
+	public EClass getID_Energie_TypeClass() {
+		return iD_Energie_TypeClassEClass;
 	}
 
 	/**
@@ -1868,6 +2087,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	@Override
 	public EClass getID_ESTW_Zentraleinheit_TypeClass() {
 		return iD_ESTW_Zentraleinheit_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_ETCS_Kante_TypeClass() {
+		return iD_ETCS_Kante_TypeClassEClass;
 	}
 
 	/**
@@ -1898,6 +2127,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	@Override
 	public EClass getID_EV_Modul_TypeClass() {
 		return iD_EV_Modul_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Fachtelegramm_ohne_Proxy_TypeClass() {
+		return iD_Fachtelegramm_ohne_Proxy_TypeClassEClass;
 	}
 
 	/**
@@ -1996,8 +2235,28 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
+	public EClass getID_Fstr_DWeg_ohne_Proxy_TypeClass() {
+		return iD_Fstr_DWeg_ohne_Proxy_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getID_Fstr_DWeg_TypeClass() {
 		return iD_Fstr_DWeg_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Fstr_Fahrweg_ohne_Proxy_TypeClass() {
+		return iD_Fstr_Fahrweg_ohne_Proxy_TypeClassEClass;
 	}
 
 	/**
@@ -2056,6 +2315,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
+	public EClass getID_GEO_Kante_TypeClass() {
+		return iD_GEO_Kante_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getID_GEO_Knoten_TypeClass() {
 		return iD_GEO_Knoten_TypeClassEClass;
 	}
@@ -2078,16 +2347,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	@Override
 	public EClass getID_GEO_Punkt_TypeClass() {
 		return iD_GEO_Punkt_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getID_Geraet_Programmiert_TypeClass() {
-		return iD_Geraet_Programmiert_TypeClassEClass;
 	}
 
 	/**
@@ -2176,6 +2435,46 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
+	public EClass getID_Komponente_Programmiert_TypeClass() {
+		return iD_Komponente_Programmiert_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Lageplan_Blattschnitt_TypeClass() {
+		return iD_Lageplan_Blattschnitt_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Lageplan_TypeClass() {
+		return iD_Lageplan_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Lageplan_Zustand_TypeClass() {
+		return iD_Lageplan_Zustand_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getID_LEU_Anlage_ohne_Proxy_TypeClass() {
 		return iD_LEU_Anlage_ohne_Proxy_TypeClassEClass;
 	}
@@ -2196,8 +2495,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
-	public EClass getID_LEU_Bezugspunkt_TypeClass() {
-		return iD_LEU_Bezugspunkt_TypeClassEClass;
+	public EClass getID_LEU_Bezug_Funktional_TypeClass() {
+		return iD_LEU_Bezug_Funktional_TypeClassEClass;
 	}
 
 	/**
@@ -2228,6 +2527,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	@Override
 	public EClass getID_Markante_Stelle_TypeClass() {
 		return iD_Markante_Stelle_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Markanter_Punkt_Gleis_Abschluss_TypeClass() {
+		return iD_Markanter_Punkt_Gleis_Abschluss_TypeClassEClass;
 	}
 
 	/**
@@ -2268,6 +2577,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	@Override
 	public EClass getID_NB_Zone_TypeClass() {
 		return iD_NB_Zone_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Oertlichkeit_Ausgabe_TypeClass() {
+		return iD_Oertlichkeit_Ausgabe_TypeClassEClass;
 	}
 
 	/**
@@ -2378,6 +2697,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	@Override
 	public EClass getID_RBC_TypeClass() {
 		return iD_RBC_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Regelzeichnung_ohne_Proxy_TypeClass() {
+		return iD_Regelzeichnung_ohne_Proxy_TypeClassEClass;
 	}
 
 	/**
@@ -2548,6 +2877,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	@Override
 	public EClass getID_Stellwerk_TypeClass() {
 		return iD_Stellwerk_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getID_Strecke_Bremsweg_ohne_Proxy_TypeClass() {
+		return iD_Strecke_Bremsweg_ohne_Proxy_TypeClassEClass;
 	}
 
 	/**
@@ -2826,6 +3165,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 	 * @generated
 	 */
 	@Override
+	public EClass getID_ZLV_Bus_ohne_Proxy_TypeClass() {
+		return iD_ZLV_Bus_ohne_Proxy_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getID_ZLV_Bus_TypeClass() {
 		return iD_ZLV_Bus_TypeClassEClass;
 	}
@@ -2947,9 +3296,17 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_Anhang_TypeClassEClass = createEClass(ID_ANHANG_TYPE_CLASS);
 
+		iD_AnhangBearbeitungsvermerk_TypeClassEClass = createEClass(ID_ANHANG_BEARBEITUNGSVERMERK_TYPE_CLASS);
+
 		iD_Anschluss_Element_TypeClassEClass = createEClass(ID_ANSCHLUSS_ELEMENT_TYPE_CLASS);
 
+		iD_ATO_TS_Instanz_ohne_Proxy_TypeClassEClass = createEClass(ID_ATO_TS_INSTANZ_OHNE_PROXY_TYPE_CLASS);
+
+		iD_ATO_TS_Instanz_TypeClassEClass = createEClass(ID_ATO_TS_INSTANZ_TYPE_CLASS);
+
 		iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassEClass = createEClass(ID_AUSGABE_FACHDATEN_OHNE_PROXY_TYPE_CLASS);
+
+		iD_Aussenelementansteuerung_ohne_Proxy_TypeClassEClass = createEClass(ID_AUSSENELEMENTANSTEUERUNG_OHNE_PROXY_TYPE_CLASS);
 
 		iD_Aussenelementansteuerung_TypeClassEClass = createEClass(ID_AUSSENELEMENTANSTEUERUNG_TYPE_CLASS);
 
@@ -2965,8 +3322,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_Basis_Objekt_TypeClassEClass = createEClass(ID_BASIS_OBJEKT_TYPE_CLASS);
 
-		iD_Bearbeitungsvermerk_TypeClassEClass = createEClass(ID_BEARBEITUNGSVERMERK_TYPE_CLASS);
-
 		iD_Bedien_Anzeige_Element_TypeClassEClass = createEClass(ID_BEDIEN_ANZEIGE_ELEMENT_TYPE_CLASS);
 
 		iD_Bedien_Bezirk_TypeClassEClass = createEClass(ID_BEDIEN_BEZIRK_TYPE_CLASS);
@@ -2979,9 +3334,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_Bedien_Zentrale_TypeClassEClass = createEClass(ID_BEDIEN_ZENTRALE_TYPE_CLASS);
 
+		iD_Befestigung_Bauwerk_TypeClassEClass = createEClass(ID_BEFESTIGUNG_BAUWERK_TYPE_CLASS);
+
 		iD_Beginn_Bereich_TypeClassEClass = createEClass(ID_BEGINN_BEREICH_TYPE_CLASS);
 
-		iD_Binaerdatei_ohne_Proxy_TypeClassEClass = createEClass(ID_BINAERDATEI_OHNE_PROXY_TYPE_CLASS);
+		iD_Bezugspunkt_Positionierung_TypeClassEClass = createEClass(ID_BEZUGSPUNKT_POSITIONIERUNG_TYPE_CLASS);
+
+		iD_Binaerdaten_ohne_Proxy_TypeClassEClass = createEClass(ID_BINAERDATEN_OHNE_PROXY_TYPE_CLASS);
 
 		iD_Block_Anlage_TypeClassEClass = createEClass(ID_BLOCK_ANLAGE_TYPE_CLASS);
 
@@ -3007,7 +3366,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_Datenpunkt_TypeClassEClass = createEClass(ID_DATENPUNKT_TYPE_CLASS);
 
-		iD_DP_Bezugspunkt_TypeClassEClass = createEClass(ID_DP_BEZUGSPUNKT_TYPE_CLASS);
+		iD_DP_Bezug_Funktional_TypeClassEClass = createEClass(ID_DP_BEZUG_FUNKTIONAL_TYPE_CLASS);
 
 		iD_Einschaltpunkt_TypeClassEClass = createEClass(ID_EINSCHALTPUNKT_TYPE_CLASS);
 
@@ -3019,15 +3378,19 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_Energie_Eingang_TypeClassEClass = createEClass(ID_ENERGIE_EINGANG_TYPE_CLASS);
 
-		iD_Energie_Primaer_TypeClassEClass = createEClass(ID_ENERGIE_PRIMAER_TYPE_CLASS);
+		iD_Energie_TypeClassEClass = createEClass(ID_ENERGIE_TYPE_CLASS);
 
 		iD_ESTW_Zentraleinheit_TypeClassEClass = createEClass(ID_ESTW_ZENTRALEINHEIT_TYPE_CLASS);
+
+		iD_ETCS_Kante_TypeClassEClass = createEClass(ID_ETCS_KANTE_TYPE_CLASS);
 
 		iD_ETCS_Knoten_ohne_Proxy_TypeClassEClass = createEClass(ID_ETCS_KNOTEN_OHNE_PROXY_TYPE_CLASS);
 
 		iD_ETCS_Knoten_TypeClassEClass = createEClass(ID_ETCS_KNOTEN_TYPE_CLASS);
 
 		iD_EV_Modul_TypeClassEClass = createEClass(ID_EV_MODUL_TYPE_CLASS);
+
+		iD_Fachtelegramm_ohne_Proxy_TypeClassEClass = createEClass(ID_FACHTELEGRAMM_OHNE_PROXY_TYPE_CLASS);
 
 		iD_Fachtelegramm_TypeClassEClass = createEClass(ID_FACHTELEGRAMM_TYPE_CLASS);
 
@@ -3047,7 +3410,11 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_Fstr_Ausschluss_Besonders_TypeClassEClass = createEClass(ID_FSTR_AUSSCHLUSS_BESONDERS_TYPE_CLASS);
 
+		iD_Fstr_DWeg_ohne_Proxy_TypeClassEClass = createEClass(ID_FSTR_DWEG_OHNE_PROXY_TYPE_CLASS);
+
 		iD_Fstr_DWeg_TypeClassEClass = createEClass(ID_FSTR_DWEG_TYPE_CLASS);
+
+		iD_Fstr_Fahrweg_ohne_Proxy_TypeClassEClass = createEClass(ID_FSTR_FAHRWEG_OHNE_PROXY_TYPE_CLASS);
 
 		iD_Fstr_Fahrweg_TypeClassEClass = createEClass(ID_FSTR_FAHRWEG_TYPE_CLASS);
 
@@ -3059,13 +3426,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_GEO_Art_TypeClassEClass = createEClass(ID_GEO_ART_TYPE_CLASS);
 
+		iD_GEO_Kante_TypeClassEClass = createEClass(ID_GEO_KANTE_TYPE_CLASS);
+
 		iD_GEO_Knoten_TypeClassEClass = createEClass(ID_GEO_KNOTEN_TYPE_CLASS);
 
 		iD_GEO_Punkt_ohne_Proxy_TypeClassEClass = createEClass(ID_GEO_PUNKT_OHNE_PROXY_TYPE_CLASS);
 
 		iD_GEO_Punkt_TypeClassEClass = createEClass(ID_GEO_PUNKT_TYPE_CLASS);
-
-		iD_Geraet_Programmiert_TypeClassEClass = createEClass(ID_GERAET_PROGRAMMIERT_TYPE_CLASS);
 
 		iD_GFR_Anlage_ohne_Proxy_TypeClassEClass = createEClass(ID_GFR_ANLAGE_OHNE_PROXY_TYPE_CLASS);
 
@@ -3083,17 +3450,27 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_Information_Primaer_TypeClassEClass = createEClass(ID_INFORMATION_PRIMAER_TYPE_CLASS);
 
+		iD_Komponente_Programmiert_TypeClassEClass = createEClass(ID_KOMPONENTE_PROGRAMMIERT_TYPE_CLASS);
+
+		iD_Lageplan_Blattschnitt_TypeClassEClass = createEClass(ID_LAGEPLAN_BLATTSCHNITT_TYPE_CLASS);
+
+		iD_Lageplan_TypeClassEClass = createEClass(ID_LAGEPLAN_TYPE_CLASS);
+
+		iD_Lageplan_Zustand_TypeClassEClass = createEClass(ID_LAGEPLAN_ZUSTAND_TYPE_CLASS);
+
 		iD_LEU_Anlage_ohne_Proxy_TypeClassEClass = createEClass(ID_LEU_ANLAGE_OHNE_PROXY_TYPE_CLASS);
 
 		iD_LEU_Anlage_TypeClassEClass = createEClass(ID_LEU_ANLAGE_TYPE_CLASS);
 
-		iD_LEU_Bezugspunkt_TypeClassEClass = createEClass(ID_LEU_BEZUGSPUNKT_TYPE_CLASS);
+		iD_LEU_Bezug_Funktional_TypeClassEClass = createEClass(ID_LEU_BEZUG_FUNKTIONAL_TYPE_CLASS);
 
 		iD_LEU_Schaltkasten_ohne_Proxy_TypeClassEClass = createEClass(ID_LEU_SCHALTKASTEN_OHNE_PROXY_TYPE_CLASS);
 
 		iD_LO_Einbau_TypeClassEClass = createEClass(ID_LO_EINBAU_TYPE_CLASS);
 
 		iD_Markante_Stelle_TypeClassEClass = createEClass(ID_MARKANTE_STELLE_TYPE_CLASS);
+
+		iD_Markanter_Punkt_Gleis_Abschluss_TypeClassEClass = createEClass(ID_MARKANTER_PUNKT_GLEIS_ABSCHLUSS_TYPE_CLASS);
 
 		iD_Markanter_Punkt_TypeClassEClass = createEClass(ID_MARKANTER_PUNKT_TYPE_CLASS);
 
@@ -3102,6 +3479,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_NB_TypeClassEClass = createEClass(ID_NB_TYPE_CLASS);
 
 		iD_NB_Zone_TypeClassEClass = createEClass(ID_NB_ZONE_TYPE_CLASS);
+
+		iD_Oertlichkeit_Ausgabe_TypeClassEClass = createEClass(ID_OERTLICHKEIT_AUSGABE_TYPE_CLASS);
 
 		iD_Oertlichkeit_Proxy_TypeClassEClass = createEClass(ID_OERTLICHKEIT_PROXY_TYPE_CLASS);
 
@@ -3124,6 +3503,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_Quellelement_TypeClassEClass = createEClass(ID_QUELLELEMENT_TYPE_CLASS);
 
 		iD_RBC_TypeClassEClass = createEClass(ID_RBC_TYPE_CLASS);
+
+		iD_Regelzeichnung_ohne_Proxy_TypeClassEClass = createEClass(ID_REGELZEICHNUNG_OHNE_PROXY_TYPE_CLASS);
 
 		iD_Regelzeichnung_TypeClassEClass = createEClass(ID_REGELZEICHNUNG_TYPE_CLASS);
 
@@ -3158,6 +3539,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_Stellelement_TypeClassEClass = createEClass(ID_STELLELEMENT_TYPE_CLASS);
 
 		iD_Stellwerk_TypeClassEClass = createEClass(ID_STELLWERK_TYPE_CLASS);
+
+		iD_Strecke_Bremsweg_ohne_Proxy_TypeClassEClass = createEClass(ID_STRECKE_BREMSWEG_OHNE_PROXY_TYPE_CLASS);
 
 		iD_Strecke_Punkt_TypeClassEClass = createEClass(ID_STRECKE_PUNKT_TYPE_CLASS);
 
@@ -3213,6 +3596,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		iD_ZL_TypeClassEClass = createEClass(ID_ZL_TYPE_CLASS);
 
+		iD_ZLV_Bus_ohne_Proxy_TypeClassEClass = createEClass(ID_ZLV_BUS_OHNE_PROXY_TYPE_CLASS);
+
 		iD_ZLV_Bus_TypeClassEClass = createEClass(ID_ZLV_BUS_TYPE_CLASS);
 
 		iD_ZN_Anzeigefeld_Anstoss_TypeClassEClass = createEClass(ID_ZN_ANZEIGEFELD_ANSTOSS_TYPE_CLASS);
@@ -3267,8 +3652,12 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_Anforderung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Anhang_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Anhang_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_AnhangBearbeitungsvermerk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Anschluss_Element_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_ATO_TS_Instanz_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_ATO_TS_Instanz_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Aussenelementansteuerung_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Aussenelementansteuerung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bahnsteig_Anlage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bahnsteig_Kante_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3276,15 +3665,16 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_Balise_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Balise_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Basis_Objekt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
-		iD_Bearbeitungsvermerk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bedien_Anzeige_Element_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bedien_Bezirk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bedien_Einrichtung_Oertlich_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bedien_Oberflaeche_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bedien_Standort_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Bedien_Zentrale_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Befestigung_Bauwerk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Beginn_Bereich_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
-		iD_Binaerdatei_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Bezugspunkt_Positionierung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Binaerdaten_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Block_Anlage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Block_Element_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Block_Strecke_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3297,17 +3687,19 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_BUE_WS_Fstr_Zuordnung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Datenpunkt_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Datenpunkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
-		iD_DP_Bezugspunkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_DP_Bezug_Funktional_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Einschaltpunkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Element_Grenze_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Element_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Element_Unterbringung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Energie_Eingang_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
-		iD_Energie_Primaer_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Energie_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ESTW_Zentraleinheit_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_ETCS_Kante_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ETCS_Knoten_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ETCS_Knoten_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_EV_Modul_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Fachtelegramm_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Fachtelegramm_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Fla_Schutz_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_FMA_Anlage_Rangier_Frei_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3317,16 +3709,18 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_Fortschaltung_Start_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Fstr_Aneinander_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Fstr_Ausschluss_Besonders_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Fstr_DWeg_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Fstr_DWeg_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Fstr_Fahrweg_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Fstr_Fahrweg_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Fstr_Zug_Rangier_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_FT_Anschaltbedingung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_FT_Fahrweg_Teil_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_GEO_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_GEO_Kante_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_GEO_Knoten_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_GEO_Punkt_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_GEO_Punkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
-		iD_Geraet_Programmiert_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_GFR_Anlage_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Gleis_Abschnitt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Gleis_Bezeichnung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3335,16 +3729,22 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_Hoehenpunkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Information_Eingang_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Information_Primaer_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Komponente_Programmiert_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Lageplan_Blattschnitt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Lageplan_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Lageplan_Zustand_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_LEU_Anlage_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_LEU_Anlage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
-		iD_LEU_Bezugspunkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_LEU_Bezug_Funktional_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_LEU_Schaltkasten_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_LO_Einbau_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Markante_Stelle_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Markanter_Punkt_Gleis_Abschluss_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Markanter_Punkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_NB_Element_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_NB_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_NB_Zone_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Oertlichkeit_Ausgabe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Oertlichkeit_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Oertlichkeit_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_PlanPro_Schnittstelle_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3356,6 +3756,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_PZB_Element_Zuordnung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Quellelement_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_RBC_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Regelzeichnung_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Regelzeichnung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Schalter_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Schaltmittel_Zuordnung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3373,6 +3774,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_Sonderanlage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Stellelement_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Stellwerk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_Strecke_Bremsweg_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Strecke_Punkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Strecke_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_Technischer_Punkt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3400,6 +3802,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		iD_ZL_Fstr_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ZL_Signalgruppe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ZL_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
+		iD_ZLV_Bus_ohne_Proxy_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ZLV_Bus_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ZN_Anzeigefeld_Anstoss_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
 		iD_ZN_Anzeigefeld_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getZeiger_TypeClass());
@@ -3419,9 +3822,17 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_Anhang_TypeClassEClass, ID_Anhang_TypeClass.class, "ID_Anhang_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(iD_AnhangBearbeitungsvermerk_TypeClassEClass, ID_AnhangBearbeitungsvermerk_TypeClass.class, "ID_AnhangBearbeitungsvermerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(iD_Anschluss_Element_TypeClassEClass, ID_Anschluss_Element_TypeClass.class, "ID_Anschluss_Element_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(iD_ATO_TS_Instanz_ohne_Proxy_TypeClassEClass, ID_ATO_TS_Instanz_ohne_Proxy_TypeClass.class, "ID_ATO_TS_Instanz_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_ATO_TS_Instanz_TypeClassEClass, ID_ATO_TS_Instanz_TypeClass.class, "ID_ATO_TS_Instanz_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassEClass, ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass.class, "ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Aussenelementansteuerung_ohne_Proxy_TypeClassEClass, ID_Aussenelementansteuerung_ohne_Proxy_TypeClass.class, "ID_Aussenelementansteuerung_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Aussenelementansteuerung_TypeClassEClass, ID_Aussenelementansteuerung_TypeClass.class, "ID_Aussenelementansteuerung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3437,8 +3848,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_Basis_Objekt_TypeClassEClass, ID_Basis_Objekt_TypeClass.class, "ID_Basis_Objekt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iD_Bearbeitungsvermerk_TypeClassEClass, ID_Bearbeitungsvermerk_TypeClass.class, "ID_Bearbeitungsvermerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(iD_Bedien_Anzeige_Element_TypeClassEClass, ID_Bedien_Anzeige_Element_TypeClass.class, "ID_Bedien_Anzeige_Element_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Bedien_Bezirk_TypeClassEClass, ID_Bedien_Bezirk_TypeClass.class, "ID_Bedien_Bezirk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3451,9 +3860,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_Bedien_Zentrale_TypeClassEClass, ID_Bedien_Zentrale_TypeClass.class, "ID_Bedien_Zentrale_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(iD_Befestigung_Bauwerk_TypeClassEClass, ID_Befestigung_Bauwerk_TypeClass.class, "ID_Befestigung_Bauwerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(iD_Beginn_Bereich_TypeClassEClass, ID_Beginn_Bereich_TypeClass.class, "ID_Beginn_Bereich_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iD_Binaerdatei_ohne_Proxy_TypeClassEClass, ID_Binaerdatei_ohne_Proxy_TypeClass.class, "ID_Binaerdatei_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iD_Bezugspunkt_Positionierung_TypeClassEClass, ID_Bezugspunkt_Positionierung_TypeClass.class, "ID_Bezugspunkt_Positionierung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Binaerdaten_ohne_Proxy_TypeClassEClass, ID_Binaerdaten_ohne_Proxy_TypeClass.class, "ID_Binaerdaten_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Block_Anlage_TypeClassEClass, ID_Block_Anlage_TypeClass.class, "ID_Block_Anlage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3479,7 +3892,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_Datenpunkt_TypeClassEClass, ID_Datenpunkt_TypeClass.class, "ID_Datenpunkt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iD_DP_Bezugspunkt_TypeClassEClass, ID_DP_Bezugspunkt_TypeClass.class, "ID_DP_Bezugspunkt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iD_DP_Bezug_Funktional_TypeClassEClass, ID_DP_Bezug_Funktional_TypeClass.class, "ID_DP_Bezug_Funktional_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Einschaltpunkt_TypeClassEClass, ID_Einschaltpunkt_TypeClass.class, "ID_Einschaltpunkt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3491,15 +3904,19 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_Energie_Eingang_TypeClassEClass, ID_Energie_Eingang_TypeClass.class, "ID_Energie_Eingang_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iD_Energie_Primaer_TypeClassEClass, ID_Energie_Primaer_TypeClass.class, "ID_Energie_Primaer_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iD_Energie_TypeClassEClass, ID_Energie_TypeClass.class, "ID_Energie_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_ESTW_Zentraleinheit_TypeClassEClass, ID_ESTW_Zentraleinheit_TypeClass.class, "ID_ESTW_Zentraleinheit_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_ETCS_Kante_TypeClassEClass, ID_ETCS_Kante_TypeClass.class, "ID_ETCS_Kante_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_ETCS_Knoten_ohne_Proxy_TypeClassEClass, ID_ETCS_Knoten_ohne_Proxy_TypeClass.class, "ID_ETCS_Knoten_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_ETCS_Knoten_TypeClassEClass, ID_ETCS_Knoten_TypeClass.class, "ID_ETCS_Knoten_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_EV_Modul_TypeClassEClass, ID_EV_Modul_TypeClass.class, "ID_EV_Modul_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Fachtelegramm_ohne_Proxy_TypeClassEClass, ID_Fachtelegramm_ohne_Proxy_TypeClass.class, "ID_Fachtelegramm_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Fachtelegramm_TypeClassEClass, ID_Fachtelegramm_TypeClass.class, "ID_Fachtelegramm_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3519,7 +3936,11 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_Fstr_Ausschluss_Besonders_TypeClassEClass, ID_Fstr_Ausschluss_Besonders_TypeClass.class, "ID_Fstr_Ausschluss_Besonders_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(iD_Fstr_DWeg_ohne_Proxy_TypeClassEClass, ID_Fstr_DWeg_ohne_Proxy_TypeClass.class, "ID_Fstr_DWeg_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(iD_Fstr_DWeg_TypeClassEClass, ID_Fstr_DWeg_TypeClass.class, "ID_Fstr_DWeg_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Fstr_Fahrweg_ohne_Proxy_TypeClassEClass, ID_Fstr_Fahrweg_ohne_Proxy_TypeClass.class, "ID_Fstr_Fahrweg_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Fstr_Fahrweg_TypeClassEClass, ID_Fstr_Fahrweg_TypeClass.class, "ID_Fstr_Fahrweg_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3531,13 +3952,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_GEO_Art_TypeClassEClass, ID_GEO_Art_TypeClass.class, "ID_GEO_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(iD_GEO_Kante_TypeClassEClass, ID_GEO_Kante_TypeClass.class, "ID_GEO_Kante_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(iD_GEO_Knoten_TypeClassEClass, ID_GEO_Knoten_TypeClass.class, "ID_GEO_Knoten_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_GEO_Punkt_ohne_Proxy_TypeClassEClass, ID_GEO_Punkt_ohne_Proxy_TypeClass.class, "ID_GEO_Punkt_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_GEO_Punkt_TypeClassEClass, ID_GEO_Punkt_TypeClass.class, "ID_GEO_Punkt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(iD_Geraet_Programmiert_TypeClassEClass, ID_Geraet_Programmiert_TypeClass.class, "ID_Geraet_Programmiert_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_GFR_Anlage_ohne_Proxy_TypeClassEClass, ID_GFR_Anlage_ohne_Proxy_TypeClass.class, "ID_GFR_Anlage_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3555,17 +3976,27 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_Information_Primaer_TypeClassEClass, ID_Information_Primaer_TypeClass.class, "ID_Information_Primaer_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(iD_Komponente_Programmiert_TypeClassEClass, ID_Komponente_Programmiert_TypeClass.class, "ID_Komponente_Programmiert_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Lageplan_Blattschnitt_TypeClassEClass, ID_Lageplan_Blattschnitt_TypeClass.class, "ID_Lageplan_Blattschnitt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Lageplan_TypeClassEClass, ID_Lageplan_TypeClass.class, "ID_Lageplan_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Lageplan_Zustand_TypeClassEClass, ID_Lageplan_Zustand_TypeClass.class, "ID_Lageplan_Zustand_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(iD_LEU_Anlage_ohne_Proxy_TypeClassEClass, ID_LEU_Anlage_ohne_Proxy_TypeClass.class, "ID_LEU_Anlage_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_LEU_Anlage_TypeClassEClass, ID_LEU_Anlage_TypeClass.class, "ID_LEU_Anlage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iD_LEU_Bezugspunkt_TypeClassEClass, ID_LEU_Bezugspunkt_TypeClass.class, "ID_LEU_Bezugspunkt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iD_LEU_Bezug_Funktional_TypeClassEClass, ID_LEU_Bezug_Funktional_TypeClass.class, "ID_LEU_Bezug_Funktional_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_LEU_Schaltkasten_ohne_Proxy_TypeClassEClass, ID_LEU_Schaltkasten_ohne_Proxy_TypeClass.class, "ID_LEU_Schaltkasten_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_LO_Einbau_TypeClassEClass, ID_LO_Einbau_TypeClass.class, "ID_LO_Einbau_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Markante_Stelle_TypeClassEClass, ID_Markante_Stelle_TypeClass.class, "ID_Markante_Stelle_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Markanter_Punkt_Gleis_Abschluss_TypeClassEClass, ID_Markanter_Punkt_Gleis_Abschluss_TypeClass.class, "ID_Markanter_Punkt_Gleis_Abschluss_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Markanter_Punkt_TypeClassEClass, ID_Markanter_Punkt_TypeClass.class, "ID_Markanter_Punkt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3574,6 +4005,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		initEClass(iD_NB_TypeClassEClass, ID_NB_TypeClass.class, "ID_NB_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_NB_Zone_TypeClassEClass, ID_NB_Zone_TypeClass.class, "ID_NB_Zone_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Oertlichkeit_Ausgabe_TypeClassEClass, ID_Oertlichkeit_Ausgabe_TypeClass.class, "ID_Oertlichkeit_Ausgabe_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Oertlichkeit_Proxy_TypeClassEClass, ID_Oertlichkeit_Proxy_TypeClass.class, "ID_Oertlichkeit_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3596,6 +4029,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		initEClass(iD_Quellelement_TypeClassEClass, ID_Quellelement_TypeClass.class, "ID_Quellelement_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_RBC_TypeClassEClass, ID_RBC_TypeClass.class, "ID_RBC_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Regelzeichnung_ohne_Proxy_TypeClassEClass, ID_Regelzeichnung_ohne_Proxy_TypeClass.class, "ID_Regelzeichnung_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Regelzeichnung_TypeClassEClass, ID_Regelzeichnung_TypeClass.class, "ID_Regelzeichnung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3630,6 +4065,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		initEClass(iD_Stellelement_TypeClassEClass, ID_Stellelement_TypeClass.class, "ID_Stellelement_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Stellwerk_TypeClassEClass, ID_Stellwerk_TypeClass.class, "ID_Stellwerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(iD_Strecke_Bremsweg_ohne_Proxy_TypeClassEClass, ID_Strecke_Bremsweg_ohne_Proxy_TypeClass.class, "ID_Strecke_Bremsweg_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_Strecke_Punkt_TypeClassEClass, ID_Strecke_Punkt_TypeClass.class, "ID_Strecke_Punkt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3685,6 +4122,8 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 
 		initEClass(iD_ZL_TypeClassEClass, ID_ZL_TypeClass.class, "ID_ZL_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(iD_ZLV_Bus_ohne_Proxy_TypeClassEClass, ID_ZLV_Bus_ohne_Proxy_TypeClass.class, "ID_ZLV_Bus_ohne_Proxy_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(iD_ZLV_Bus_TypeClassEClass, ID_ZLV_Bus_TypeClass.class, "ID_ZLV_Bus_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iD_ZN_Anzeigefeld_Anstoss_TypeClassEClass, ID_ZN_Anzeigefeld_Anstoss_TypeClass.class, "ID_ZN_Anzeigefeld_Anstoss_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3725,7 +4164,7 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 	}
 
@@ -3766,6 +4205,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (iD_AnhangBearbeitungsvermerk_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_AnhangBearbeitungsvermerk",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
 		  (iD_Anschluss_Element_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -3773,10 +4219,31 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (iD_ATO_TS_Instanz_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_ATO_TS_Instanz_ohne_Proxy",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_ATO_TS_Instanz_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_ATO_TS_Instanz",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
 		  (iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassEClass,
 		   source,
 		   new String[] {
 			   "name", "TCID_Ausgabe_Fachdaten_ohne_Proxy",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Aussenelementansteuerung_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Aussenelementansteuerung_ohne_Proxy",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -3829,13 +4296,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (iD_Bearbeitungsvermerk_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCID_Bearbeitungsvermerk",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
 		  (iD_Bedien_Anzeige_Element_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -3878,6 +4338,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (iD_Befestigung_Bauwerk_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Befestigung_Bauwerk",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
 		  (iD_Beginn_Bereich_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -3885,10 +4352,17 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (iD_Binaerdatei_ohne_Proxy_TypeClassEClass,
+		  (iD_Bezugspunkt_Positionierung_TypeClassEClass,
 		   source,
 		   new String[] {
-			   "name", "TCID_Binaerdatei_ohne_Proxy",
+			   "name", "TCID_Bezugspunkt_Positionierung",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Binaerdaten_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Binaerdaten_ohne_Proxy",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -3976,10 +4450,10 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (iD_DP_Bezugspunkt_TypeClassEClass,
+		  (iD_DP_Bezug_Funktional_TypeClassEClass,
 		   source,
 		   new String[] {
-			   "name", "TCID_DP_Bezugspunkt",
+			   "name", "TCID_DP_Bezug_Funktional",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4018,10 +4492,10 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (iD_Energie_Primaer_TypeClassEClass,
+		  (iD_Energie_TypeClassEClass,
 		   source,
 		   new String[] {
-			   "name", "TCID_Energie_Primaer",
+			   "name", "TCID_Energie",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4029,6 +4503,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_ESTW_Zentraleinheit",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_ETCS_Kante_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_ETCS_Kante",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4050,6 +4531,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_EV_Modul",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Fachtelegramm_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Fachtelegramm_ohne_Proxy",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4116,10 +4604,24 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (iD_Fstr_DWeg_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Fstr_DWeg_ohne_Proxy",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
 		  (iD_Fstr_DWeg_TypeClassEClass,
 		   source,
 		   new String[] {
 			   "name", "TCID_Fstr_DWeg",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Fstr_Fahrweg_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Fstr_Fahrweg_ohne_Proxy",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4158,6 +4660,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (iD_GEO_Kante_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_GEO_Kante",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
 		  (iD_GEO_Knoten_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -4176,13 +4685,6 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_GEO_Punkt",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (iD_Geraet_Programmiert_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCID_Geraet_Programmiert",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4242,6 +4744,34 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (iD_Komponente_Programmiert_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Komponente_Programmiert",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Lageplan_Blattschnitt_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Lageplan_Blattschnitt",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Lageplan_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Lageplan",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Lageplan_Zustand_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Lageplan_Zustand",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
 		  (iD_LEU_Anlage_ohne_Proxy_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -4256,10 +4786,10 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (iD_LEU_Bezugspunkt_TypeClassEClass,
+		  (iD_LEU_Bezug_Funktional_TypeClassEClass,
 		   source,
 		   new String[] {
-			   "name", "TCID_LEU_Bezugspunkt",
+			   "name", "TCID_LEU_Bezug_Funktional",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4281,6 +4811,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_Markante_Stelle",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Markanter_Punkt_Gleis_Abschluss_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Markanter_Punkt_Gleis_Abschluss",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4309,6 +4846,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_NB_Zone",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Oertlichkeit_Ausgabe_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Oertlichkeit_Ausgabe",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4386,6 +4930,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_RBC",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Regelzeichnung_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Regelzeichnung_ohne_Proxy",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4505,6 +5056,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_Stellwerk",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_Strecke_Bremsweg_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Strecke_Bremsweg_ohne_Proxy",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
@@ -4694,6 +5252,13 @@ public class VerweisePackageImpl extends EPackageImpl implements VerweisePackage
 		   source,
 		   new String[] {
 			   "name", "TCID_ZL",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (iD_ZLV_Bus_ohne_Proxy_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_ZLV_Bus_ohne_Proxy",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation

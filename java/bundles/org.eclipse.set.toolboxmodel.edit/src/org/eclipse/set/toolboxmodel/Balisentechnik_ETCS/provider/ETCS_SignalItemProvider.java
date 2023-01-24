@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal} object.
@@ -60,6 +61,7 @@ public class ETCS_SignalItemProvider extends Basis_ObjektItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIDETCSGefahrpunktPropertyDescriptor(object);
+			addIDETCSGefahrpunkt2PropertyDescriptor(object);
 			addIDHOAFBOAPropertyDescriptor(object);
 			addIDRBCPropertyDescriptor(object);
 			addIDSignalPropertyDescriptor(object);
@@ -81,6 +83,28 @@ public class ETCS_SignalItemProvider extends Basis_ObjektItemProvider {
 				 getString("_UI_ETCS_Signal_iDETCSGefahrpunkt_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ETCS_Signal_iDETCSGefahrpunkt_feature", "_UI_ETCS_Signal_type"),
 				 Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal_IDETCSGefahrpunkt(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the IDETCS Gefahrpunkt2 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDETCSGefahrpunkt2PropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ETCS_Signal_iDETCSGefahrpunkt2_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ETCS_Signal_iDETCSGefahrpunkt2_feature", "_UI_ETCS_Signal_type"),
+				 Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal_IDETCSGefahrpunkt2(),
 				 true,
 				 false,
 				 true,
@@ -167,6 +191,7 @@ public class ETCS_SignalItemProvider extends Basis_ObjektItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal_ETCSGefahrpunktabstandAbweichend());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal_ETCSSignalAllg());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal_ETCSSignalDWeg());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal_ETCSSignalTBV());
@@ -222,6 +247,7 @@ public class ETCS_SignalItemProvider extends Basis_ObjektItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ETCS_Signal.class)) {
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND:
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_ALLG:
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_DWEG:
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_TBV:
@@ -243,6 +269,11 @@ public class ETCS_SignalItemProvider extends Basis_ObjektItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal_ETCSGefahrpunktabstandAbweichend(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_Gefahrpunktabstand_Abweichend_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

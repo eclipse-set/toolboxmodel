@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Factory;
 
@@ -194,6 +195,11 @@ public class Signal_SignalbegriffItemProvider extends Basis_ObjektItemProvider {
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
 				 Signalbegriffe_Ril_301Factory.eINSTANCE.createBSWdh()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
+				 Signalbegriffe_Ril_301Factory.eINSTANCE.createBSZBSBer()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -488,6 +494,11 @@ public class Signal_SignalbegriffItemProvider extends Basis_ObjektItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
+				 Signalbegriffe_Ril_301Factory.eINSTANCE.createLf1Wdh()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
 				 Signalbegriffe_Ril_301Factory.eINSTANCE.createLf2()));
 
 		newChildDescriptors.add
@@ -524,11 +535,6 @@ public class Signal_SignalbegriffItemProvider extends Basis_ObjektItemProvider {
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
 				 Signalbegriffe_Ril_301Factory.eINSTANCE.createLf7()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
-				 Signalbegriffe_Ril_301Factory.eINSTANCE.createLfPf()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -678,11 +684,6 @@ public class Signal_SignalbegriffItemProvider extends Basis_ObjektItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
-				 Signalbegriffe_Ril_301Factory.eINSTANCE.createNISESHM()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
 				 Signalbegriffe_Ril_301Factory.eINSTANCE.createOzAutoET()));
 
 		newChildDescriptors.add
@@ -708,7 +709,17 @@ public class Signal_SignalbegriffItemProvider extends Basis_ObjektItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
+				 Signalbegriffe_Ril_301Factory.eINSTANCE.createOzGSMR()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
 				 Signalbegriffe_Ril_301Factory.eINSTANCE.createOzHET()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_SIGNALBEGRIFF__SIGNALBEGRIFF_ID,
+				 Signalbegriffe_Ril_301Factory.eINSTANCE.createOzHM()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Punkt_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung;
 import org.eclipse.set.toolboxmodel.Signale.SignaleFactory;
@@ -60,7 +61,7 @@ public class Signal_BefestigungItemProvider extends Punkt_ObjektItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIDRegelzeichnungPropertyDescriptor(object);
-			addIDRegelzeichnungVsigTafelPropertyDescriptor(object);
+			addIDBefestigungBauwerkPropertyDescriptor(object);
 			addIDSignalBefestigungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -89,19 +90,19 @@ public class Signal_BefestigungItemProvider extends Punkt_ObjektItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the ID Regelzeichnung Vsig Tafel feature.
+	 * This adds a property descriptor for the ID Befestigung Bauwerk feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIDRegelzeichnungVsigTafelPropertyDescriptor(Object object) {
+	protected void addIDBefestigungBauwerkPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Signal_Befestigung_iDRegelzeichnungVsigTafel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Signal_Befestigung_iDRegelzeichnungVsigTafel_feature", "_UI_Signal_Befestigung_type"),
-				 SignalePackage.Literals.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL,
+				 getString("_UI_Signal_Befestigung_iDBefestigungBauwerk_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Signal_Befestigung_iDBefestigungBauwerk_feature", "_UI_Signal_Befestigung_type"),
+				 SignalePackage.Literals.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK,
 				 true,
 				 false,
 				 true,

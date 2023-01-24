@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen.util;
 
@@ -113,6 +120,13 @@ public class Medien_und_TrassenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Medien_und_TrassenPackage.INDUKTIONSSCHUTZ_TYPE_CLASS: {
+				Induktionsschutz_TypeClass induktionsschutz_TypeClass = (Induktionsschutz_TypeClass)theEObject;
+				T result = caseInduktionsschutz_TypeClass(induktionsschutz_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(induktionsschutz_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Medien_und_TrassenPackage.KABEL: {
 				Kabel kabel = (Kabel)theEObject;
 				T result = caseKabel(kabel);
@@ -137,6 +151,12 @@ public class Medien_und_TrassenSwitch<T> extends Switch<T> {
 			case Medien_und_TrassenPackage.KABEL_BEZEICHNUNG_ATTRIBUTE_GROUP: {
 				Kabel_Bezeichnung_AttributeGroup kabel_Bezeichnung_AttributeGroup = (Kabel_Bezeichnung_AttributeGroup)theEObject;
 				T result = caseKabel_Bezeichnung_AttributeGroup(kabel_Bezeichnung_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Medien_und_TrassenPackage.KABEL_ELEMENT_ATTRIBUTE_GROUP: {
+				Kabel_Element_AttributeGroup kabel_Element_AttributeGroup = (Kabel_Element_AttributeGroup)theEObject;
+				T result = caseKabel_Element_AttributeGroup(kabel_Element_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -172,6 +192,13 @@ public class Medien_und_TrassenSwitch<T> extends Switch<T> {
 			case Medien_und_TrassenPackage.KABEL_VERTEILPUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP: {
 				Kabel_Verteilpunkt_Bezeichnung_AttributeGroup kabel_Verteilpunkt_Bezeichnung_AttributeGroup = (Kabel_Verteilpunkt_Bezeichnung_AttributeGroup)theEObject;
 				T result = caseKabel_Verteilpunkt_Bezeichnung_AttributeGroup(kabel_Verteilpunkt_Bezeichnung_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Medien_und_TrassenPackage.NAGETIERSCHUTZ_TYPE_CLASS: {
+				Nagetierschutz_TypeClass nagetierschutz_TypeClass = (Nagetierschutz_TypeClass)theEObject;
+				T result = caseNagetierschutz_TypeClass(nagetierschutz_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(nagetierschutz_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -314,6 +341,21 @@ public class Medien_und_TrassenSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Induktionsschutz Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Induktionsschutz Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInduktionsschutz_TypeClass(Induktionsschutz_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Kabel</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -370,6 +412,21 @@ public class Medien_und_TrassenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKabel_Bezeichnung_AttributeGroup(Kabel_Bezeichnung_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kabel Element Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kabel Element Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKabel_Element_AttributeGroup(Kabel_Element_AttributeGroup object) {
 		return null;
 	}
 
@@ -445,6 +502,21 @@ public class Medien_und_TrassenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKabel_Verteilpunkt_Bezeichnung_AttributeGroup(Kabel_Verteilpunkt_Bezeichnung_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Nagetierschutz Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Nagetierschutz Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNagetierschutz_TypeClass(Nagetierschutz_TypeClass object) {
 		return null;
 	}
 

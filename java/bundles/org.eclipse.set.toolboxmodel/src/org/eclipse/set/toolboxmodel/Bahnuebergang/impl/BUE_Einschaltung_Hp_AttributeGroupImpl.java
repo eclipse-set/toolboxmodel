@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.impl;
 
@@ -15,6 +22,7 @@ import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeG
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Einschaltverz_Errechnet_TypeClass;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Einschaltverz_Gewaehlt_TypeClass;
+import org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Kurzzugschaltung_TypeClass;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Signalverz_Errechnet_TypeClass;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Signalverz_Gewaehlt_TypeClass;
@@ -30,6 +38,7 @@ import org.eclipse.set.toolboxmodel.Bahnuebergang.Teilvorgabezeit_TypeClass;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_Einschaltung_Hp_AttributeGroupImpl#getEinschaltverzErrechnet <em>Einschaltverz Errechnet</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_Einschaltung_Hp_AttributeGroupImpl#getEinschaltverzGewaehlt <em>Einschaltverz Gewaehlt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_Einschaltung_Hp_AttributeGroupImpl#getHaltezeit <em>Haltezeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_Einschaltung_Hp_AttributeGroupImpl#getKurzzugschaltung <em>Kurzzugschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_Einschaltung_Hp_AttributeGroupImpl#getSignalverzErrechnet <em>Signalverz Errechnet</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_Einschaltung_Hp_AttributeGroupImpl#getSignalverzGewaehlt <em>Signalverz Gewaehlt</em>}</li>
@@ -58,6 +67,16 @@ public class BUE_Einschaltung_Hp_AttributeGroupImpl extends MinimalEObjectImpl.C
 	 * @ordered
 	 */
 	protected Einschaltverz_Gewaehlt_TypeClass einschaltverzGewaehlt;
+
+	/**
+	 * The cached value of the '{@link #getHaltezeit() <em>Haltezeit</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHaltezeit()
+	 * @generated
+	 * @ordered
+	 */
+	protected Haltezeit_TypeClass haltezeit;
 
 	/**
 	 * The cached value of the '{@link #getKurzzugschaltung() <em>Kurzzugschaltung</em>}' containment reference.
@@ -206,6 +225,51 @@ public class BUE_Einschaltung_Hp_AttributeGroupImpl extends MinimalEObjectImpl.C
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT, newEinschaltverzGewaehlt, newEinschaltverzGewaehlt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Haltezeit_TypeClass getHaltezeit() {
+		return haltezeit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetHaltezeit(Haltezeit_TypeClass newHaltezeit, NotificationChain msgs) {
+		Haltezeit_TypeClass oldHaltezeit = haltezeit;
+		haltezeit = newHaltezeit;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT, oldHaltezeit, newHaltezeit);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHaltezeit(Haltezeit_TypeClass newHaltezeit) {
+		if (newHaltezeit != haltezeit) {
+			NotificationChain msgs = null;
+			if (haltezeit != null)
+				msgs = ((InternalEObject)haltezeit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT, null, msgs);
+			if (newHaltezeit != null)
+				msgs = ((InternalEObject)newHaltezeit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT, null, msgs);
+			msgs = basicSetHaltezeit(newHaltezeit, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT, newHaltezeit, newHaltezeit));
 	}
 
 	/**
@@ -400,6 +464,8 @@ public class BUE_Einschaltung_Hp_AttributeGroupImpl extends MinimalEObjectImpl.C
 				return basicSetEinschaltverzErrechnet(null, msgs);
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT:
 				return basicSetEinschaltverzGewaehlt(null, msgs);
+			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT:
+				return basicSetHaltezeit(null, msgs);
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG:
 				return basicSetKurzzugschaltung(null, msgs);
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_ERRECHNET:
@@ -425,6 +491,8 @@ public class BUE_Einschaltung_Hp_AttributeGroupImpl extends MinimalEObjectImpl.C
 				return getEinschaltverzErrechnet();
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT:
 				return getEinschaltverzGewaehlt();
+			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT:
+				return getHaltezeit();
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG:
 				return getKurzzugschaltung();
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_ERRECHNET:
@@ -451,6 +519,9 @@ public class BUE_Einschaltung_Hp_AttributeGroupImpl extends MinimalEObjectImpl.C
 				return;
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT:
 				setEinschaltverzGewaehlt((Einschaltverz_Gewaehlt_TypeClass)newValue);
+				return;
+			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT:
+				setHaltezeit((Haltezeit_TypeClass)newValue);
 				return;
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG:
 				setKurzzugschaltung((Kurzzugschaltung_TypeClass)newValue);
@@ -484,6 +555,9 @@ public class BUE_Einschaltung_Hp_AttributeGroupImpl extends MinimalEObjectImpl.C
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT:
 				setEinschaltverzGewaehlt((Einschaltverz_Gewaehlt_TypeClass)null);
 				return;
+			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT:
+				setHaltezeit((Haltezeit_TypeClass)null);
+				return;
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG:
 				setKurzzugschaltung((Kurzzugschaltung_TypeClass)null);
 				return;
@@ -514,6 +588,8 @@ public class BUE_Einschaltung_Hp_AttributeGroupImpl extends MinimalEObjectImpl.C
 				return einschaltverzErrechnet != null;
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT:
 				return einschaltverzGewaehlt != null;
+			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT:
+				return haltezeit != null;
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG:
 				return kurzzugschaltung != null;
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_ERRECHNET:

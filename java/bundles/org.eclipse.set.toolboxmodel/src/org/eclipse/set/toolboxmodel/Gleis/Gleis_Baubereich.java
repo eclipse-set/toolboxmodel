@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis;
 
@@ -10,7 +17,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Bereich_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der während einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten. 
+ * Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der während einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten.
  * <!-- end-model-doc -->
  *
  * <p>

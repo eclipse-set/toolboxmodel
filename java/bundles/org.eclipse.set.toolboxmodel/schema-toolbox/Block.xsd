@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
             xmlns:func="localhost/function"
+            xmlns:nsATO="http://www.plan-pro.org/modell/ATO/toolbox"
             xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
             xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
             xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -13,8 +14,9 @@
             xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
             xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
             xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsLayoutinformationen="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
             xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
-            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsNahbedienung="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
             xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
             xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
             xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -33,6 +35,8 @@
             targetNamespace="http://www.plan-pro.org/modell/Block/toolbox">
    <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
                schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/ATO/toolbox"
+               schemaLocation="ATO.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
                schemaLocation="Bahnsteig.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -53,10 +57,12 @@
                schemaLocation="Geodaten.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
                schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+               schemaLocation="Layoutinformationen.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
                schemaLocation="Medien_und_Trassen.xsd"/>
-   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+               schemaLocation="Nahbedienung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
                schemaLocation="Ortung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -90,9 +96,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -110,6 +114,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -148,7 +153,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                             type="xs:anyURI"
                             ecore:reference="nsSignale:CSignal"
                             nillable="true"
-                            minOccurs="0"
+                            minOccurs="1"
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Verweis auf ein fiktives Signal (Ausfahrziel), über das die Abhängigkeit des zugehörigen A-Feldes beschrieben wird. </xs:documentation>
@@ -168,6 +173,20 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:complexType ecore:name="Zugbeeinflussung_Art_TypeClass"
+                    name="TCZugbeeinflussung_Art">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBasisTypen:TAnwendungssystem"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType ecore:name="Schutzuebertrager_TypeClass" name="TCSchutzuebertrager">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -181,16 +200,16 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:simpleType ecore:name="Entwurfsgeschwindigkeit_Type"
-                   name="TEntwurfsgeschwindigkeit">
+   <xs:simpleType ecore:name="Streckengeschwindigkeit_Type"
+                   name="TStreckengeschwindigkeit">
       <xs:restriction base="nsBasisTypen:TGeschwindigkeit"/>
    </xs:simpleType>
    <xs:simpleType name="ENUMSchaltung">
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMSchaltung_3_Drahtschaltung" value="3_Drahtschaltung"/>
-         <xs:enumeration ecore:name="ENUMSchaltung_sonstige" value="sonstige"/>
          <xs:enumeration ecore:name="ENUMSchaltung_6_Drahtschaltung" value="6_Drahtschaltung"/>
          <xs:enumeration ecore:name="ENUMSchaltung_9_Drahtschaltung" value="9_Drahtschaltung"/>
+         <xs:enumeration ecore:name="ENUMSchaltung_sonstige" value="sonstige"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="Auto_Erlaubnisholen_TypeClass" name="TCAuto_Erlaubnisholen">
@@ -237,9 +256,11 @@ XML Schema for PlanPro interface.</xs:documentation>
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMBlock_Bauform_AB64" value="AB64"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_AB70" value="AB70"/>
+         <xs:enumeration ecore:name="ENUMBlock_Bauform_Blockanpassung_RB"
+                          value="Blockanpassung_RB"/>
+         <xs:enumeration ecore:name="ENUMBlock_Bauform_DB_Block" value="DB_Block"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_elektronischer_Block_EBL2000"
                           value="elektronischer_Block_EBL2000"/>
-         <xs:enumeration ecore:name="ENUMBlock_Bauform_sonstige" value="sonstige"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_ESTW_Zentralblock"
                           value="ESTW_Zentralblock"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_ESTW_Zentralblock_mit_Sb_Abschluss_MCL84"
@@ -248,18 +269,13 @@ XML Schema for PlanPro interface.</xs:documentation>
                           value="ESTW_Zentralblock_mit_Sb_Abschluss_SBL60"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_ESTW_Zentralblock_mit_Sb_Abschluss_SBS59"
                           value="ESTW_Zentralblock_mit_Sb_Abschluss_SBS59"/>
-         <xs:enumeration ecore:name="ENUMBlock_Bauform_Zentralblock_ZSB2000"
-                          value="Zentralblock_ZSB2000"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_ESTW_Zentralblock_mit_Sb_Abschluss_SBS60"
                           value="ESTW_Zentralblock_mit_Sb_Abschluss_SBS60"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_Felderblock" value="Felderblock"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_firmenneutrale_Blockschnittstelle"
                           value="firmenneutrale_Blockschnittstelle"/>
-         <xs:enumeration ecore:name="ENUMBlock_Bauform_DB_Block" value="DB_Block"/>
-         <xs:enumeration ecore:name="ENUMBlock_Bauform_Zentralblock_ZBS65"
-                          value="Zentralblock_ZBS65"/>
-         <xs:enumeration ecore:name="ENUMBlock_Bauform_Zentralblock_ZBS600"
-                          value="Zentralblock_ZBS600"/>
+         <xs:enumeration ecore:name="ENUMBlock_Bauform_ILS_Adapter" value="ILS-Adapter"/>
+         <xs:enumeration ecore:name="ENUMBlock_Bauform_sonstige" value="sonstige"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_Selbstblock_SBL60"
                           value="Selbstblock_SBL60"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_Selbstblock_SBS59"
@@ -272,6 +288,12 @@ XML Schema for PlanPro interface.</xs:documentation>
                           value="Relaisblock_RBIISp64b"/>
          <xs:enumeration ecore:name="ENUMBlock_Bauform_Relaisblock_RBIIISp68"
                           value="Relaisblock_RBIIISp68"/>
+         <xs:enumeration ecore:name="ENUMBlock_Bauform_Zentralblock_ZSB2000"
+                          value="Zentralblock_ZSB2000"/>
+         <xs:enumeration ecore:name="ENUMBlock_Bauform_Zentralblock_ZBS600"
+                          value="Zentralblock_ZBS600"/>
+         <xs:enumeration ecore:name="ENUMBlock_Bauform_Zentralblock_ZBS65"
+                          value="Zentralblock_ZBS65"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="Block_Strecke" name="CBlock_Strecke">
@@ -280,6 +302,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -307,7 +330,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                             minOccurs="0"
                             maxOccurs="1">
                   <xs:annotation>
-                     <xs:documentation>Verweis auf die Örtlichkeit des nächsten Knotenbahnhofs.</xs:documentation>
+                     <xs:documentation>Verweis auf die Örtlichkeit des nächsten Knotenbahnhofs oder am Streckenende zur besseren Orientierung. Das Attribut ist nicht zu befüllen, wenn ID_Betriebsstelle_Nachbar bereits auf einen Knotenbahnhof oder die Örtlichkeit am Streckenende verweist.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="ID_Strecke"
@@ -318,6 +341,16 @@ XML Schema for PlanPro interface.</xs:documentation>
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Zuordnung auf die Strecke. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ID_Strecke_Bremsweg"
+                            type="xs:anyURI"
+                            ecore:reference="nsGeodaten:CStrecke_Bremsweg"
+                            nillable="true"
+                            minOccurs="0"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Verweis auf das Bereichsobjekt Strecke_Bremsweg zur Angabe des Bremswegs der Strecke. Es besteht übergangsweise noch die Möglichkeit, das Attribut Bremsweg zu befüllen.</xs:documentation>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
@@ -331,6 +364,19 @@ XML Schema for PlanPro interface.</xs:documentation>
             <xs:sequence>
                <xs:element name="Wert"
                             type="xs:boolean"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Strecke_Art_TypeClass" name="TCStrecke_Art">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBlock:ENUMStrecke_Art"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -416,6 +462,33 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
+   <xs:complexType ecore:name="Zusatzinformation_TypeClass" name="TCZusatzinformation">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBlock:TZusatzinformation"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType ecore:name="Traktion_Art_Elektrisch_TypeClass"
+                    name="TCTraktion_Art_Elektrisch">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBasisTypen:TFahrstrom"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:simpleType ecore:name="Zusatzinformation_Type" name="TZusatzinformation">
       <xs:restriction base="nsBasisTypen:TText">
          <xs:pattern value=".{1,50}"/>
@@ -451,19 +524,6 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:enumeration ecore:name="ENUMStrecke_Art_Nebenbahn" value="Nebenbahn"/>
       </xs:restriction>
    </xs:simpleType>
-   <xs:complexType ecore:name="Traktion_Art_TypeClass" name="TCTraktion_Art">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBasisTypen:TFahrstrom"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Auto_Erlaubnisruecklauf_TypeClass"
                     name="TCAuto_Erlaubnisruecklauf">
       <xs:complexContent>
@@ -497,6 +557,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -505,7 +566,7 @@ XML Schema for PlanPro interface.</xs:documentation>
             <xs:sequence>
                <xs:element name="Block_Anlage_Allg"
                             type="nsBlock:CBlock_Anlage_Allg"
-                            minOccurs="1"
+                            minOccurs="0"
                             maxOccurs="1"/>
                <xs:element name="ID_Block_Element_A"
                             type="xs:anyURI"
@@ -559,23 +620,15 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:element>
          <xs:element name="Bremsweg"
                       type="nsBlock:TCBremsweg"
-                      minOccurs="1"
+                      minOccurs="0"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Bremsweg als Grundlage für die Dimesionierung der zugehörigen Strecke. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen.</xs:documentation>
+               <xs:documentation>Bremsweg als Grundlage für die Dimesionierung der zugehörigen Strecke. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. Das Attribut wird zukünftig durch einen Verweis auf das Objekt Strecke_Bremsweg ersetzt. Zur Unterstützung der Migration wird das Attribut jedoch zunächst optional beibehalten.</xs:documentation>
                <xs:appinfo>
                   <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                      <ProposedValue>1000</ProposedValue>
                   </WorkflowInformation>
                </xs:appinfo>
-            </xs:annotation>
-         </xs:element>
-         <xs:element name="Entwurfsgeschwindigkeit"
-                      type="nsBlock:TCEntwurfsgeschwindigkeit"
-                      minOccurs="1"
-                      maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>Entwurfsgeschwindigkeit für die Dimensionierung der zugehörigen Strecke.</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Strecke_Art"
@@ -586,20 +639,28 @@ XML Schema for PlanPro interface.</xs:documentation>
                <xs:documentation>Rechtliche Klassifizierung der Strecke (Haupt-/Nebenbahn). DB-Regelwerk Angabe auf dem LP</xs:documentation>
             </xs:annotation>
          </xs:element>
-         <xs:element name="Traktion_Art"
-                      type="nsBlock:TCTraktion_Art"
+         <xs:element name="Streckengeschwindigkeit"
+                      type="nsBlock:TCStreckengeschwindigkeit"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>VzG-Geschwindigkeit der zugehörigen Strecke.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Traktion_Art_Elektrisch"
+                      type="nsBlock:TCTraktion_Art_Elektrisch"
                       minOccurs="0"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Art der Fahrstromversorgung (Stromart, Spannung, besondere Zuführung). DB-Regelwerk Angabe auf dem LP</xs:documentation>
+               <xs:documentation>Art der Fahrstromversorgung (Stromart, Spannung, besondere Zuführung). Die Angabe entfällt bei nicht elektrifizierten Strecken. Auf die Angabe verschiedener nicht-elektrischer Traktionsarten (Diesel, Batterie, Wasserstoff etc.) wird verzichtet. DB-Regelwerk Angabe auf dem LP</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Zugbeeinflussung_Art"
                       type="nsBlock:TCZugbeeinflussung_Art"
                       minOccurs="0"
-                      maxOccurs="1">
+                      maxOccurs="unbounded">
             <xs:annotation>
-               <xs:documentation>Vorhandenes bzw. vorgesehenes Zugbeeinflussungssystem. DB-Regelwerk Angabe auf dem LP</xs:documentation>
+               <xs:documentation>Vorhandenes bzw. vorgesehenes Zugbeeinflussungssystem. Bei Mehrfachausrüstung ist das Attribut mehrfach einzubinden. DB-Regelwerk Angabe auf dem LP</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Zusatzinformation"
@@ -623,33 +684,6 @@ XML Schema for PlanPro interface.</xs:documentation>
             <xs:sequence>
                <xs:element name="Wert"
                             type="nsBlock:ENUMBetriebsfuehrung"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType ecore:name="Zugbeeinflussung_Art_TypeClass"
-                    name="TCZugbeeinflussung_Art">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBasisTypen:TAnwendungssystem"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType ecore:name="Strecke_Art_TypeClass" name="TCStrecke_Art">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBlock:ENUMStrecke_Art"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -742,26 +776,13 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType ecore:name="Zusatzinformation_TypeClass" name="TCZusatzinformation">
+   <xs:complexType ecore:name="Streckengeschwindigkeit_TypeClass"
+                    name="TCStreckengeschwindigkeit">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="nsBlock:TZusatzinformation"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType ecore:name="Entwurfsgeschwindigkeit_TypeClass"
-                    name="TCEntwurfsgeschwindigkeit">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBlock:TEntwurfsgeschwindigkeit"
+                            type="nsBlock:TStreckengeschwindigkeit"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>

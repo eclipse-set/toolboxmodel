@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl;
 
@@ -67,6 +74,7 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case Weichen_und_GleissperrenPackage.AUFFAHRORTUNG_TYPE_CLASS: return createAuffahrortung_TypeClass();
+			case Weichen_und_GleissperrenPackage.AUSTAUSCH_ANTRIEBE_TYPE_CLASS: return createAustausch_Antriebe_TypeClass();
 			case Weichen_und_GleissperrenPackage.AUSWURFRICHTUNG_TYPE_CLASS: return createAuswurfrichtung_TypeClass();
 			case Weichen_und_GleissperrenPackage.BESONDERES_FAHRWEGELEMENT_TYPE_CLASS: return createBesonderes_Fahrwegelement_TypeClass();
 			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE_CLASS: return createElektrischer_Antrieb_Anzahl_TypeClass();
@@ -85,9 +93,11 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 			case Weichen_und_GleissperrenPackage.GZ_FREIMELDUNG_RATTRIBUTE_GROUP: return createGZ_Freimeldung_R_AttributeGroup();
 			case Weichen_und_GleissperrenPackage.HERZSTUECK_ANTRIEBE_TYPE_CLASS: return createHerzstueck_Antriebe_TypeClass();
 			case Weichen_und_GleissperrenPackage.ISOLIERFALL_TYPE_CLASS: return createIsolierfall_TypeClass();
+			case Weichen_und_GleissperrenPackage.KR_KR_WSEITENZUORDNUNG_TYPE_CLASS: return createKr_KrW_Seitenzuordnung_TypeClass();
 			case Weichen_und_GleissperrenPackage.KREUZUNG_ATTRIBUTE_GROUP: return createKreuzung_AttributeGroup();
 			case Weichen_und_GleissperrenPackage.KREUZUNGSGLEIS_TYPE_CLASS: return createKreuzungsgleis_TypeClass();
 			case Weichen_und_GleissperrenPackage.SCHUTZSCHIENE_TYPE_CLASS: return createSchutzschiene_TypeClass();
+			case Weichen_und_GleissperrenPackage.STAMMGLEIS_TYPE_CLASS: return createStammgleis_TypeClass();
 			case Weichen_und_GleissperrenPackage.VORZUGSLAGE_AUTOMATIK_TYPE_CLASS: return createVorzugslage_Automatik_TypeClass();
 			case Weichen_und_GleissperrenPackage.WKR_ANLAGE: return createW_Kr_Anlage();
 			case Weichen_und_GleissperrenPackage.WKR_ANLAGE_ALLG_ATTRIBUTE_GROUP: return createW_Kr_Anlage_Allg_AttributeGroup();
@@ -120,6 +130,8 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 		switch (eDataType.getClassifierID()) {
 			case Weichen_und_GleissperrenPackage.ENUM_BESONDERES_FAHRWEGELEMENT:
 				return createENUMBesonderesFahrwegelementFromString(eDataType, initialValue);
+			case Weichen_und_GleissperrenPackage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE:
+				return createENUMElektrischerAntriebLageFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.ENUM_ELEMENT_LAGE:
 				return createENUMElementLageFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.ENUM_GLEIS_ABSCHLUSS_ART:
@@ -142,10 +154,10 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 				return createCAuswurfrichtungFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE:
 				return createElektrischer_Antrieb_Anzahl_TypeFromString(eDataType, initialValue);
-			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_LAGE_TYPE:
-				return createElektrischer_Antrieb_Lage_TypeFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.ENUM_BESONDERES_FAHRWEGELEMENT_OBJECT:
 				return createENUMBesonderesFahrwegelementObjectFromString(eDataType, initialValue);
+			case Weichen_und_GleissperrenPackage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE_OBJECT:
+				return createENUMElektrischerAntriebLageObjectFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.ENUM_ELEMENT_LAGE_OBJECT:
 				return createENUMElementLageObjectFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.ENUM_GLEIS_ABSCHLUSS_ART_OBJECT:
@@ -172,8 +184,12 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 				return createHerzstueck_Antriebe_TypeFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.ISOLIERFALL_TYPE:
 				return createIsolierfall_TypeFromString(eDataType, initialValue);
+			case Weichen_und_GleissperrenPackage.KR_KR_WSEITENZUORDNUNG_TYPE:
+				return createKr_KrW_Seitenzuordnung_TypeFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.KREUZUNGSGLEIS_TYPE:
 				return createKreuzungsgleis_TypeFromString(eDataType, initialValue);
+			case Weichen_und_GleissperrenPackage.STAMMGLEIS_TYPE:
+				return createStammgleis_TypeFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.WKR_GRUNDFORM_TYPE:
 				return createW_Kr_Grundform_TypeFromString(eDataType, initialValue);
 			case Weichen_und_GleissperrenPackage.WEICHE_VORZUGSLAGE_TYPE:
@@ -195,6 +211,8 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 		switch (eDataType.getClassifierID()) {
 			case Weichen_und_GleissperrenPackage.ENUM_BESONDERES_FAHRWEGELEMENT:
 				return convertENUMBesonderesFahrwegelementToString(eDataType, instanceValue);
+			case Weichen_und_GleissperrenPackage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE:
+				return convertENUMElektrischerAntriebLageToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.ENUM_ELEMENT_LAGE:
 				return convertENUMElementLageToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.ENUM_GLEIS_ABSCHLUSS_ART:
@@ -217,10 +235,10 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 				return convertCAuswurfrichtungToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE:
 				return convertElektrischer_Antrieb_Anzahl_TypeToString(eDataType, instanceValue);
-			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_LAGE_TYPE:
-				return convertElektrischer_Antrieb_Lage_TypeToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.ENUM_BESONDERES_FAHRWEGELEMENT_OBJECT:
 				return convertENUMBesonderesFahrwegelementObjectToString(eDataType, instanceValue);
+			case Weichen_und_GleissperrenPackage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE_OBJECT:
+				return convertENUMElektrischerAntriebLageObjectToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.ENUM_ELEMENT_LAGE_OBJECT:
 				return convertENUMElementLageObjectToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.ENUM_GLEIS_ABSCHLUSS_ART_OBJECT:
@@ -247,8 +265,12 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 				return convertHerzstueck_Antriebe_TypeToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.ISOLIERFALL_TYPE:
 				return convertIsolierfall_TypeToString(eDataType, instanceValue);
+			case Weichen_und_GleissperrenPackage.KR_KR_WSEITENZUORDNUNG_TYPE:
+				return convertKr_KrW_Seitenzuordnung_TypeToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.KREUZUNGSGLEIS_TYPE:
 				return convertKreuzungsgleis_TypeToString(eDataType, instanceValue);
+			case Weichen_und_GleissperrenPackage.STAMMGLEIS_TYPE:
+				return convertStammgleis_TypeToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.WKR_GRUNDFORM_TYPE:
 				return convertW_Kr_Grundform_TypeToString(eDataType, instanceValue);
 			case Weichen_und_GleissperrenPackage.WEICHE_VORZUGSLAGE_TYPE:
@@ -269,6 +291,17 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	public Auffahrortung_TypeClass createAuffahrortung_TypeClass() {
 		Auffahrortung_TypeClassImpl auffahrortung_TypeClass = new Auffahrortung_TypeClassImpl();
 		return auffahrortung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Austausch_Antriebe_TypeClass createAustausch_Antriebe_TypeClass() {
+		Austausch_Antriebe_TypeClassImpl austausch_Antriebe_TypeClass = new Austausch_Antriebe_TypeClassImpl();
+		return austausch_Antriebe_TypeClass;
 	}
 
 	/**
@@ -475,6 +508,17 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	@Override
+	public Kr_KrW_Seitenzuordnung_TypeClass createKr_KrW_Seitenzuordnung_TypeClass() {
+		Kr_KrW_Seitenzuordnung_TypeClassImpl kr_KrW_Seitenzuordnung_TypeClass = new Kr_KrW_Seitenzuordnung_TypeClassImpl();
+		return kr_KrW_Seitenzuordnung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Kreuzung_AttributeGroup createKreuzung_AttributeGroup() {
 		Kreuzung_AttributeGroupImpl kreuzung_AttributeGroup = new Kreuzung_AttributeGroupImpl();
 		return kreuzung_AttributeGroup;
@@ -500,6 +544,17 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	public Schutzschiene_TypeClass createSchutzschiene_TypeClass() {
 		Schutzschiene_TypeClassImpl schutzschiene_TypeClass = new Schutzschiene_TypeClassImpl();
 		return schutzschiene_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Stammgleis_TypeClass createStammgleis_TypeClass() {
+		Stammgleis_TypeClassImpl stammgleis_TypeClass = new Stammgleis_TypeClassImpl();
+		return stammgleis_TypeClass;
 	}
 
 	/**
@@ -706,6 +761,26 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	public String convertENUMBesonderesFahrwegelementToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMElektrischerAntriebLage createENUMElektrischerAntriebLageFromString(EDataType eDataType, String initialValue) {
+		ENUMElektrischerAntriebLage result = ENUMElektrischerAntriebLage.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMElektrischerAntriebLageToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -930,24 +1005,6 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ENUMLinksRechts createElektrischer_Antrieb_Lage_TypeFromString(EDataType eDataType, String initialValue) {
-		return (ENUMLinksRechts)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertElektrischer_Antrieb_Lage_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ENUMBesonderesFahrwegelement createENUMBesonderesFahrwegelementObjectFromString(EDataType eDataType, String initialValue) {
 		return createENUMBesonderesFahrwegelementFromString(Weichen_und_GleissperrenPackage.Literals.ENUM_BESONDERES_FAHRWEGELEMENT, initialValue);
 	}
@@ -959,6 +1016,24 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	 */
 	public String convertENUMBesonderesFahrwegelementObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMBesonderesFahrwegelementToString(Weichen_und_GleissperrenPackage.Literals.ENUM_BESONDERES_FAHRWEGELEMENT, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMElektrischerAntriebLage createENUMElektrischerAntriebLageObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMElektrischerAntriebLageFromString(Weichen_und_GleissperrenPackage.Literals.ENUM_ELEKTRISCHER_ANTRIEB_LAGE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMElektrischerAntriebLageObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMElektrischerAntriebLageToString(Weichen_und_GleissperrenPackage.Literals.ENUM_ELEKTRISCHER_ANTRIEB_LAGE, instanceValue);
 	}
 
 	/**
@@ -1200,6 +1275,24 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMLinksRechts createKr_KrW_Seitenzuordnung_TypeFromString(EDataType eDataType, String initialValue) {
+		return (ENUMLinksRechts)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertKr_KrW_Seitenzuordnung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMLinksRechts createKreuzungsgleis_TypeFromString(EDataType eDataType, String initialValue) {
 		return (ENUMLinksRechts)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, initialValue);
 	}
@@ -1210,6 +1303,24 @@ public class Weichen_und_GleissperrenFactoryImpl extends EFactoryImpl implements
 	 * @generated
 	 */
 	public String convertKreuzungsgleis_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMLinksRechts createStammgleis_TypeFromString(EDataType eDataType, String initialValue) {
+		return (ENUMLinksRechts)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertStammgleis_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.LINKS_RECHTS_TYPE, instanceValue);
 	}
 

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.GeodatenFactory;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit} object.
@@ -60,6 +61,7 @@ public class OertlichkeitItemProvider extends Basis_ObjektItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIDOertlichkeitPropertyDescriptor(object);
+			addIDOertlichkeitAwanstBedientPropertyDescriptor(object);
 			addIDStreckePunktPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -79,6 +81,28 @@ public class OertlichkeitItemProvider extends Basis_ObjektItemProvider {
 				 getString("_UI_Oertlichkeit_iDOertlichkeit_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Oertlichkeit_iDOertlichkeit_feature", "_UI_Oertlichkeit_type"),
 				 GeodatenPackage.Literals.OERTLICHKEIT__ID_OERTLICHKEIT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the ID Oertlichkeit Awanst Bedient feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDOertlichkeitAwanstBedientPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Oertlichkeit_iDOertlichkeitAwanstBedient_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Oertlichkeit_iDOertlichkeitAwanstBedient_feature", "_UI_Oertlichkeit_type"),
+				 GeodatenPackage.Literals.OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT,
 				 true,
 				 false,
 				 true,

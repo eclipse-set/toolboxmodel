@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
@@ -22,13 +29,13 @@ public interface FahrstrasseFactory extends EFactory {
 	FahrstrasseFactory eINSTANCE = org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrasseFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Aufloesung Ssp Zielgeis Type Class</em>'.
+	 * Returns a new object of class '<em>Aufloesung Ssp Zielgleis Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Aufloesung Ssp Zielgeis Type Class</em>'.
+	 * @return a new object of class '<em>Aufloesung Ssp Zielgleis Type Class</em>'.
 	 * @generated
 	 */
-	Aufloesung_Ssp_Zielgeis_TypeClass createAufloesung_Ssp_Zielgeis_TypeClass();
+	Aufloesung_Ssp_Zielgleis_TypeClass createAufloesung_Ssp_Zielgleis_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Aufloesung Verzoegerung Type Class</em>'.
@@ -166,15 +173,6 @@ public interface FahrstrasseFactory extends EFactory {
 	Fstr_Aneinander_Zuordnung createFstr_Aneinander_Zuordnung();
 
 	/**
-	 * Returns a new object of class '<em>Fstr Art Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fstr Art Type Class</em>'.
-	 * @generated
-	 */
-	Fstr_Art_TypeClass createFstr_Art_TypeClass();
-
-	/**
 	 * Returns a new object of class '<em>Fstr Bedienstring Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -182,15 +180,6 @@ public interface FahrstrasseFactory extends EFactory {
 	 * @generated
 	 */
 	Fstr_Bedienstring_TypeClass createFstr_Bedienstring_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>Fstr Bildezeit Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fstr Bildezeit Type Class</em>'.
-	 * @generated
-	 */
-	Fstr_Bildezeit_TypeClass createFstr_Bildezeit_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Fstr DWeg</em>'.
@@ -238,33 +227,6 @@ public interface FahrstrasseFactory extends EFactory {
 	Fstr_DWeg_W_Kr createFstr_DWeg_W_Kr();
 
 	/**
-	 * Returns a new object of class '<em>Fstr DWeg WKr Allg Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fstr DWeg WKr Allg Attribute Group</em>'.
-	 * @generated
-	 */
-	Fstr_DWeg_W_Kr_Allg_AttributeGroup createFstr_DWeg_W_Kr_Allg_AttributeGroup();
-
-	/**
-	 * Returns a new object of class '<em>Fstr DWeg WKr Allg child Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fstr DWeg WKr Allg child Attribute Group</em>'.
-	 * @generated
-	 */
-	Fstr_DWeg_W_Kr_Allg_child_AttributeGroup createFstr_DWeg_W_Kr_Allg_child_AttributeGroup();
-
-	/**
-	 * Returns a new object of class '<em>Fstr DWeg WKr Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fstr DWeg WKr Type Class</em>'.
-	 * @generated
-	 */
-	Fstr_DWeg_W_Kr_TypeClass createFstr_DWeg_W_Kr_TypeClass();
-
-	/**
 	 * Returns a new object of class '<em>Fstr Fahrweg</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -272,6 +234,15 @@ public interface FahrstrasseFactory extends EFactory {
 	 * @generated
 	 */
 	Fstr_Fahrweg createFstr_Fahrweg();
+
+	/**
+	 * Returns a new object of class '<em>Fstr Mittel Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fstr Mittel Art Type Class</em>'.
+	 * @generated
+	 */
+	Fstr_Mittel_Art_TypeClass createFstr_Mittel_Art_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Fstr Mittel Attribute Group</em>'.
@@ -299,6 +270,15 @@ public interface FahrstrasseFactory extends EFactory {
 	 * @generated
 	 */
 	Fstr_Nichthaltfall createFstr_Nichthaltfall();
+
+	/**
+	 * Returns a new object of class '<em>Fstr Rangier Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fstr Rangier Art Type Class</em>'.
+	 * @generated
+	 */
+	Fstr_Rangier_Art_TypeClass createFstr_Rangier_Art_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Fstr Rangier Attribute Group</em>'.
@@ -371,6 +351,15 @@ public interface FahrstrasseFactory extends EFactory {
 	 * @generated
 	 */
 	Fstr_Vsigabstand_Verkuerzt_TypeClass createFstr_Vsigabstand_Verkuerzt_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Fstr Zug Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fstr Zug Art Type Class</em>'.
+	 * @generated
+	 */
+	Fstr_Zug_Art_TypeClass createFstr_Zug_Art_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Fstr Zug Attribute Group</em>'.
@@ -461,6 +450,15 @@ public interface FahrstrasseFactory extends EFactory {
 	 * @generated
 	 */
 	Sonstiger_Punkt createSonstiger_Punkt();
+
+	/**
+	 * Returns a new object of class '<em>Start Signal Charakter Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start Signal Charakter Type Class</em>'.
+	 * @generated
+	 */
+	Start_Signal_Charakter_TypeClass createStart_Signal_Charakter_TypeClass();
 
 	/**
 	 * Returns the package supported by this factory.

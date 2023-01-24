@@ -1,8 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Block.Block_Element;
 
 /**
@@ -83,7 +91,7 @@ public interface Signal_Fstr_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Gibt an, ob und wie Weiterfahren ohne Halt über das Zielsignal eines Fahrweges hinaus gestattet sind. Ist die Durchfahrt mittels überstellten Zugstraßen verboten, mittels einzeln angewählter Zugstraßen auf dieses Signal und von diesem Signal aber zu gestatten, so ist der Wert "erlaubt" zu verwenden. In diesem Fall wird allerdings kein Objekt Fstr Aneinander über dieses Signal angelegt. Ist betrieblich die Weiterfahrt einer Zugfahrt als Rangierfahrt zu gestatten (diese Änderung der Ril 408 ist noch nicht Bestandteil des Lastenheftes ESTW), so ist der Wert "nur_mit_Sh1" zu verwenden. Technisch schließt eine Zugfahrt mit Durchrutschweg D0 an, das Signal zeigt Hp0 und Sh1. DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung. Die Symbolik im Sicherungstechnischen Lageplan gemäße 819.9002 (11) ist für diesen Sachverhalt nicht ausreichend. 
+	 * Gibt an, ob und wie Weiterfahren ohne Halt über das Zielsignal eines Fahrweges hinaus gestattet sind. Ist die Durchfahrt mittels aneinandergereihter Zugstraßen verboten, mittels einzeln angewählter Zugstraßen auf dieses Signal und von diesem Signal aber zu gestatten, so ist der Wert "erlaubt" zu verwenden. In diesem Fall wird allerdings kein Objekt Fstr Aneinander über dieses Signal angelegt. Ist betrieblich die Weiterfahrt einer Zugfahrt als Rangierfahrt zu gestatten (diese Änderung der Ril 408 ist noch nicht Bestandteil des Lastenheftes ESTW), so ist der Wert "nur_mit_Sh1" zu verwenden. Technisch schließt eine Zugfahrt mit Durchrutschweg D0 an, das Signal zeigt Hp 0 und Sh 1. DB-Regelwerk Im bisherigen PT 1 ohne eindeutige Darstellung. Die Symbolik im Sicherungstechnischen Lageplan gemäße 819.9002 (11) ist für diesen Sachverhalt nicht ausreichend.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Durchfahrt</em>' containment reference.
 	 * @see #setDurchfahrt(Durchfahrt_TypeClass)

@@ -56,18 +56,14 @@ public interface Polygone_Betrachtungsbereich_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Polygonzug zur Beschreibung des Betrachtungsbereichs unter Nutzung des GML-Standards. 
+	 * Polygonzug zur Beschreibung des Betrachtungsbereichs unter Nutzung des GML-Standards.
 	 * Der definierte Betrachtungsbereich gilt für alle Einzelplanungen der Planung Gruppe und dient der Ermittlung der eingeschlossenen Objekte der LST-Anlage sowie der Beschreibung des flächenhaften Bereichs.
 	 * Der Betrachtungsbereich muss vom LST-Fachplaner für die Erbringung seiner beauftragten Leistungen berücksichtigt werden und kann nicht verändert werden.
-	 * 
 	 * Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess
-	 * 
-	 * Bedingt durch die flächenhafte Abgrenzung können auch weitere Objekte enthalten sein, die für die Erstellung der Planung nicht relevant sind. Die Vereinigung aller Betrachtungsbereiche muss alle für die Planung relevanten Objekte außerhalb des Planungsbereichs enthalten. Der Betrachtungsbereich ist benachbart zum Planungsbereich, im besonderen Fall umschließt er diesen vollständig. 
-	 * 
+	 * Bedingt durch die flächenhafte Abgrenzung können auch weitere Objekte enthalten sein, die für die Erstellung der Planung nicht relevant sind. Die Vereinigung aller Betrachtungsbereiche muss alle für die Planung relevanten Objekte außerhalb des Planungsbereichs enthalten. Der Betrachtungsbereich ist benachbart zum Planungsbereich, im besonderen Fall umschließt er diesen vollständig.
 	 * Durch den Prozess der Planung können keine neuen Objekte in den Betrachtungsbereich eingebracht oder vorhandene Objekte modifiziert bzw. entfernt werden. Ist dies erforderlich, muss der Planungsbereich erweitert werden. Sofern für den Betrachtungsbereich noch keine Bestandsdaten vorhanden sind, ist ein eigenes Projekt zur Bestandsdigitalisierung durchzuführen.
-	 *  
 	 * DB-Regelwerk
-	 * Bisher keine eindeutige Abbildung. 
+	 * Bisher keine eindeutige Abbildung.
 	 * Ggf. planerspezifische Darstellungsformen (z. B. grau, gestrichelt).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Polygonzug Betrachtungsbereich</em>' containment reference list.

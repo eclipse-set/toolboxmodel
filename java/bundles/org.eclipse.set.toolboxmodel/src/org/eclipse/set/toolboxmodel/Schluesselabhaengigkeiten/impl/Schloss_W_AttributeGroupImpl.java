@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl;
 
@@ -6,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -15,9 +21,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenPackage;
-import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass;
+import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.W_Anbaulage_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.W_Lage_TypeClass;
+
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
 
 /**
@@ -30,7 +37,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_W_AttributeGroupImpl#getIDWKrElement <em>IDW Kr Element</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_W_AttributeGroupImpl#getSchlossArt <em>Schloss Art</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_W_AttributeGroupImpl#getVerschlussHerzstueck <em>Verschluss Herzstueck</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_W_AttributeGroupImpl#getVerschlussOrt <em>Verschluss Ort</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_W_AttributeGroupImpl#getWAnbaulage <em>WAnbaulage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_W_AttributeGroupImpl#getWLage <em>WLage</em>}</li>
  * </ul>
@@ -68,14 +75,14 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	protected Schloss_Art_TypeClass schlossArt;
 
 	/**
-	 * The cached value of the '{@link #getVerschlussHerzstueck() <em>Verschluss Herzstueck</em>}' containment reference.
+	 * The cached value of the '{@link #getVerschlussOrt() <em>Verschluss Ort</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVerschlussHerzstueck()
+	 * @see #getVerschlussOrt()
 	 * @generated
 	 * @ordered
 	 */
-	protected Verschluss_Herzstueck_TypeClass verschlussHerzstueck;
+	protected Verschluss_Ort_TypeClass verschlussOrt;
 
 	/**
 	 * The cached value of the '{@link #getWAnbaulage() <em>WAnbaulage</em>}' containment reference.
@@ -234,8 +241,8 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
-	public Verschluss_Herzstueck_TypeClass getVerschlussHerzstueck() {
-		return verschlussHerzstueck;
+	public Verschluss_Ort_TypeClass getVerschlussOrt() {
+		return verschlussOrt;
 	}
 
 	/**
@@ -243,11 +250,11 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVerschlussHerzstueck(Verschluss_Herzstueck_TypeClass newVerschlussHerzstueck, NotificationChain msgs) {
-		Verschluss_Herzstueck_TypeClass oldVerschlussHerzstueck = verschlussHerzstueck;
-		verschlussHerzstueck = newVerschlussHerzstueck;
+	public NotificationChain basicSetVerschlussOrt(Verschluss_Ort_TypeClass newVerschlussOrt, NotificationChain msgs) {
+		Verschluss_Ort_TypeClass oldVerschlussOrt = verschlussOrt;
+		verschlussOrt = newVerschlussOrt;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK, oldVerschlussHerzstueck, newVerschlussHerzstueck);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT, oldVerschlussOrt, newVerschlussOrt);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -259,18 +266,18 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
-	public void setVerschlussHerzstueck(Verschluss_Herzstueck_TypeClass newVerschlussHerzstueck) {
-		if (newVerschlussHerzstueck != verschlussHerzstueck) {
+	public void setVerschlussOrt(Verschluss_Ort_TypeClass newVerschlussOrt) {
+		if (newVerschlussOrt != verschlussOrt) {
 			NotificationChain msgs = null;
-			if (verschlussHerzstueck != null)
-				msgs = ((InternalEObject)verschlussHerzstueck).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK, null, msgs);
-			if (newVerschlussHerzstueck != null)
-				msgs = ((InternalEObject)newVerschlussHerzstueck).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK, null, msgs);
-			msgs = basicSetVerschlussHerzstueck(newVerschlussHerzstueck, msgs);
+			if (verschlussOrt != null)
+				msgs = ((InternalEObject)verschlussOrt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT, null, msgs);
+			if (newVerschlussOrt != null)
+				msgs = ((InternalEObject)newVerschlussOrt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT, null, msgs);
+			msgs = basicSetVerschlussOrt(newVerschlussOrt, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK, newVerschlussHerzstueck, newVerschlussHerzstueck));
+			eNotify(new ENotificationImpl(this, Notification.SET, SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT, newVerschlussOrt, newVerschlussOrt));
 	}
 
 	/**
@@ -373,8 +380,8 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART:
 				return basicSetSchlossArt(null, msgs);
-			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK:
-				return basicSetVerschlussHerzstueck(null, msgs);
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT:
+				return basicSetVerschlussOrt(null, msgs);
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE:
 				return basicSetWAnbaulage(null, msgs);
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WLAGE:
@@ -397,8 +404,8 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return basicGetIDWKrElement();
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART:
 				return getSchlossArt();
-			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK:
-				return getVerschlussHerzstueck();
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT:
+				return getVerschlussOrt();
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE:
 				return getWAnbaulage();
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WLAGE:
@@ -422,8 +429,8 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART:
 				setSchlossArt((Schloss_Art_TypeClass)newValue);
 				return;
-			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK:
-				setVerschlussHerzstueck((Verschluss_Herzstueck_TypeClass)newValue);
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT:
+				setVerschlussOrt((Verschluss_Ort_TypeClass)newValue);
 				return;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE:
 				setWAnbaulage((W_Anbaulage_TypeClass)newValue);
@@ -451,8 +458,8 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART:
 				setSchlossArt((Schloss_Art_TypeClass)null);
 				return;
-			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK:
-				setVerschlussHerzstueck((Verschluss_Herzstueck_TypeClass)null);
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT:
+				setVerschlussOrt((Verschluss_Ort_TypeClass)null);
 				return;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE:
 				setWAnbaulage((W_Anbaulage_TypeClass)null);
@@ -478,8 +485,8 @@ public class Schloss_W_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return isSetIDWKrElement();
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART:
 				return schlossArt != null;
-			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK:
-				return verschlussHerzstueck != null;
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT:
+				return verschlussOrt != null;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE:
 				return wAnbaulage != null;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WLAGE:

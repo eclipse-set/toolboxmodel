@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB.util;
 
@@ -121,8 +128,12 @@ public class PZBValidator extends EObjectValidator {
 				return validateGUE_Energieversorgung_TypeClass((GUE_Energieversorgung_TypeClass)value, diagnostics, context);
 			case PZBPackage.GUE_MESSSTRECKE_TYPE_CLASS:
 				return validateGUE_Messstrecke_TypeClass((GUE_Messstrecke_TypeClass)value, diagnostics, context);
+			case PZBPackage.INA_GEFAHRSTELLE_ATTRIBUTE_GROUP:
+				return validateINA_Gefahrstelle_AttributeGroup((INA_Gefahrstelle_AttributeGroup)value, diagnostics, context);
 			case PZBPackage.MESSFEHLER_TYPE_CLASS:
 				return validateMessfehler_TypeClass((Messfehler_TypeClass)value, diagnostics, context);
+			case PZBPackage.PRIORITAET_GEFAHRSTELLE_TYPE_CLASS:
+				return validatePrioritaet_Gefahrstelle_TypeClass((Prioritaet_Gefahrstelle_TypeClass)value, diagnostics, context);
 			case PZBPackage.PRUEFGESCHWINDIGKEIT_TYPE_CLASS:
 				return validatePruefgeschwindigkeit_TypeClass((Pruefgeschwindigkeit_TypeClass)value, diagnostics, context);
 			case PZBPackage.PRUEFZEIT_TYPE_CLASS:
@@ -139,12 +150,18 @@ public class PZBValidator extends EObjectValidator {
 				return validatePZB_Element_GUE_AttributeGroup((PZB_Element_GUE_AttributeGroup)value, diagnostics, context);
 			case PZBPackage.PZB_ELEMENT_ZUORDNUNG:
 				return validatePZB_Element_Zuordnung((PZB_Element_Zuordnung)value, diagnostics, context);
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP:
+				return validatePZB_Element_Zuordnung_BP_AttributeGroup((PZB_Element_Zuordnung_BP_AttributeGroup)value, diagnostics, context);
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP:
+				return validatePZB_Element_Zuordnung_Fstr_AttributeGroup((PZB_Element_Zuordnung_Fstr_AttributeGroup)value, diagnostics, context);
 			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP:
 				return validatePZB_Element_Zuordnung_INA_AttributeGroup((PZB_Element_Zuordnung_INA_AttributeGroup)value, diagnostics, context);
 			case PZBPackage.PZB_INA_TYPE_CLASS:
 				return validatePZB_INA_TypeClass((PZB_INA_TypeClass)value, diagnostics, context);
 			case PZBPackage.PZB_ZUORDNUNG_SIGNAL:
 				return validatePZB_Zuordnung_Signal((PZB_Zuordnung_Signal)value, diagnostics, context);
+			case PZBPackage.WIRKSAMKEIT_FSTR_TYPE_CLASS:
+				return validateWirksamkeit_Fstr_TypeClass((Wirksamkeit_Fstr_TypeClass)value, diagnostics, context);
 			case PZBPackage.WIRKSAMKEIT_TYPE_CLASS:
 				return validateWirksamkeit_TypeClass((Wirksamkeit_TypeClass)value, diagnostics, context);
 			case PZBPackage.ENUMGUE_ANORDNUNG:
@@ -159,6 +176,8 @@ public class PZBValidator extends EObjectValidator {
 				return validateENUMPZBArt((ENUMPZBArt)value, diagnostics, context);
 			case PZBPackage.ENUM_WIRKSAMKEIT:
 				return validateENUMWirksamkeit((ENUMWirksamkeit)value, diagnostics, context);
+			case PZBPackage.ENUM_WIRKSAMKEIT_FSTR:
+				return validateENUMWirksamkeitFstr((ENUMWirksamkeitFstr)value, diagnostics, context);
 			case PZBPackage.ENUMGUE_ANORDNUNG_OBJECT:
 				return validateENUMGUEAnordnungObject((ENUMGUEAnordnung)value, diagnostics, context);
 			case PZBPackage.ENUMGUE_BAUART_OBJECT:
@@ -169,12 +188,16 @@ public class PZBValidator extends EObjectValidator {
 				return validateENUMMessfehlerObject((ENUMMessfehler)value, diagnostics, context);
 			case PZBPackage.ENUMPZB_ART_OBJECT:
 				return validateENUMPZBArtObject((ENUMPZBArt)value, diagnostics, context);
+			case PZBPackage.ENUM_WIRKSAMKEIT_FSTR_OBJECT:
+				return validateENUMWirksamkeitFstrObject((ENUMWirksamkeitFstr)value, diagnostics, context);
 			case PZBPackage.ENUM_WIRKSAMKEIT_OBJECT:
 				return validateENUMWirksamkeitObject((ENUMWirksamkeit)value, diagnostics, context);
 			case PZBPackage.GUE_ABSTAND_ABWEICHEND_TYPE:
 				return validateGUE_Abstand_Abweichend_Type((BigDecimal)value, diagnostics, context);
 			case PZBPackage.GUE_MESSSTRECKE_TYPE:
 				return validateGUE_Messstrecke_Type((BigDecimal)value, diagnostics, context);
+			case PZBPackage.PRIORITAET_GEFAHRSTELLE_TYPE:
+				return validatePrioritaet_Gefahrstelle_Type((BigInteger)value, diagnostics, context);
 			case PZBPackage.PRUEFGESCHWINDIGKEIT_TYPE:
 				return validatePruefgeschwindigkeit_Type((BigInteger)value, diagnostics, context);
 			case PZBPackage.PRUEFZEIT_TYPE:
@@ -236,8 +259,26 @@ public class PZBValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateINA_Gefahrstelle_AttributeGroup(INA_Gefahrstelle_AttributeGroup inA_Gefahrstelle_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(inA_Gefahrstelle_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateMessfehler_TypeClass(Messfehler_TypeClass messfehler_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(messfehler_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePrioritaet_Gefahrstelle_TypeClass(Prioritaet_Gefahrstelle_TypeClass prioritaet_Gefahrstelle_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(prioritaet_Gefahrstelle_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -317,6 +358,24 @@ public class PZBValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validatePZB_Element_Zuordnung_BP_AttributeGroup(PZB_Element_Zuordnung_BP_AttributeGroup pzB_Element_Zuordnung_BP_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(pzB_Element_Zuordnung_BP_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePZB_Element_Zuordnung_Fstr_AttributeGroup(PZB_Element_Zuordnung_Fstr_AttributeGroup pzB_Element_Zuordnung_Fstr_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(pzB_Element_Zuordnung_Fstr_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validatePZB_Element_Zuordnung_INA_AttributeGroup(PZB_Element_Zuordnung_INA_AttributeGroup pzB_Element_Zuordnung_INA_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(pzB_Element_Zuordnung_INA_AttributeGroup, diagnostics, context);
 	}
@@ -337,6 +396,15 @@ public class PZBValidator extends EObjectValidator {
 	 */
 	public boolean validatePZB_Zuordnung_Signal(PZB_Zuordnung_Signal pzB_Zuordnung_Signal, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(pzB_Zuordnung_Signal, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateWirksamkeit_Fstr_TypeClass(Wirksamkeit_Fstr_TypeClass wirksamkeit_Fstr_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(wirksamkeit_Fstr_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -407,6 +475,15 @@ public class PZBValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateENUMWirksamkeitFstr(ENUMWirksamkeitFstr enumWirksamkeitFstr, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateENUMGUEAnordnungObject(ENUMGUEAnordnung enumgueAnordnungObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -444,6 +521,15 @@ public class PZBValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMPZBArtObject(ENUMPZBArt enumpzbArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMWirksamkeitFstrObject(ENUMWirksamkeitFstr enumWirksamkeitFstrObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -496,6 +582,15 @@ public class PZBValidator extends EObjectValidator {
 	 */
 	public boolean validateGUE_Messstrecke_Type_Pattern(BigDecimal guE_Messstrecke_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(PZBPackage.Literals.GUE_MESSSTRECKE_TYPE, guE_Messstrecke_Type, GUE_MESSSTRECKE_TYPE__PATTERN__VALUES, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePrioritaet_Gefahrstelle_Type(BigInteger prioritaet_Gefahrstelle_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -27,6 +28,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProFactory;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage;
@@ -88,6 +93,7 @@ public class Planung_G_Schriftfeld_AttributeGroupItemProvider
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanung_G_Schriftfeld_AttributeGroup_BezeichnungPlanungGruppe());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanung_G_Schriftfeld_AttributeGroup_BezeichnungUnteranlage());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanung_G_Schriftfeld_AttributeGroup_Planungsbuero());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanung_G_Schriftfeld_AttributeGroup_PlanungsbueroLogo());
 		}
 		return childrenFeatures;
 	}
@@ -145,6 +151,7 @@ public class Planung_G_Schriftfeld_AttributeGroupItemProvider
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__BEZEICHNUNG_PLANUNG_GRUPPE:
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__BEZEICHNUNG_UNTERANLAGE:
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO:
+			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -188,6 +195,11 @@ public class Planung_G_Schriftfeld_AttributeGroupItemProvider
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getPlanung_G_Schriftfeld_AttributeGroup_Planungsbuero(),
 				 PlanProFactory.eINSTANCE.createOrganisation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getPlanung_G_Schriftfeld_AttributeGroup_PlanungsbueroLogo(),
+				 BasisobjekteFactory.eINSTANCE.createAnhang()));
 	}
 
 	/**

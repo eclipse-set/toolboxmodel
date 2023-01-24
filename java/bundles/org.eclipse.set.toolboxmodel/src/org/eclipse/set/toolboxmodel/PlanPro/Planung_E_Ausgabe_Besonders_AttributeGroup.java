@@ -29,11 +29,8 @@ public interface Planung_E_Ausgabe_Besonders_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Technische Grundlage des Vergleichs zwischen 2 Ausgaben einer Einzelplanung.
-	 * 
-	 * Die GUID von derjenigen Ausgabe, die der aktuell erstellten Ausgabe zugrunde liegt, ist manuell anzugeben. Das Attribut wird nur bei einer Änderungsplanung benötigt. 
-	 *  
+	 * Die GUID von derjenigen Ausgabe, die der aktuell erstellten Ausgabe zugrunde liegt, ist manuell anzugeben. Das Attribut wird nur bei einer Änderungsplanung benötigt.
 	 * DB-Regelwerk
-	 * 
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Referenz Vergleich Besonders</em>' containment reference.
@@ -60,12 +57,9 @@ public interface Planung_E_Ausgabe_Besonders_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Informative menschenlesbare Grundlage des Vergleichs zwischen 2 Ausgaben einer Einzelplanung. 
-	 * 
+	 * Informative menschenlesbare Grundlage des Vergleichs zwischen 2 Ausgaben einer Einzelplanung.
 	 * Die Angabe setzt sich aus Ausgabedatum und Ausgabenummer zusammen, kann aber auch ergänzt werden.
-	 *  
 	 * DB-Regelwerk
-	 * 
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vergleich Ausgabestand Basis</em>' containment reference.
@@ -93,9 +87,7 @@ public interface Planung_E_Ausgabe_Besonders_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Typ der Vergleichsoperation zwischen 2 Ausgaben einer Einzelplanung.
-	 *  
 	 * DB-Regelwerk
-	 * 
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vergleichstyp Besonders</em>' containment reference.

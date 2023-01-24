@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -19,6 +20,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -32,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ESG_Merkmale_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ESG_Merkmale_AttributeGroup} object.
@@ -69,8 +71,31 @@ public class FT_ESG_Merkmale_AttributeGroupItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIDMassgebendesZielsignalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the ID Massgebendes Zielsignal feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDMassgebendesZielsignalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FT_ESG_Merkmale_AttributeGroup_iDMassgebendesZielsignal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FT_ESG_Merkmale_AttributeGroup_iDMassgebendesZielsignal_feature", "_UI_FT_ESG_Merkmale_AttributeGroup_type"),
+				 Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_IDMassgebendesZielsignal(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -85,13 +110,19 @@ public class FT_ESG_Merkmale_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Bremsweg());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_AbstandBesLangerEinfahrweg());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_DPTypVLa());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_ESGIndividuelleMerkmale());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_ESGSpezifischeMerkmale());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_FTESGSubtyp());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_FTESGTyp());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_LfdNrInTelegrSpec());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_IndividualisierungWeitere());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_LaengeGestufteVSignalisierung());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_NIDTSR());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Projektierungsfall());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Telegrammnummer());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_UeberwachungLaenge());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_VStart());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_VZiel());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Vorsignalabstand());
 		}
 		return childrenFeatures;
 	}
@@ -144,13 +175,19 @@ public class FT_ESG_Merkmale_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FT_ESG_Merkmale_AttributeGroup.class)) {
-			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__BREMSWEG:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__ABSTAND_BES_LANGER_EINFAHRWEG:
 			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__DP_TYP_VLA:
 			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__ESG_INDIVIDUELLE_MERKMALE:
 			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__ESG_SPEZIFISCHE_MERKMALE:
-			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__FTESG_SUBTYP:
-			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__FTESG_TYP:
-			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__LFD_NR_IN_TELEGR_SPEC:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__INDIVIDUALISIERUNG_WEITERE:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__LAENGE_GESTUFTE_VSIGNALISIERUNG:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__NIDTSR:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__PROJEKTIERUNGSFALL:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__TELEGRAMMNUMMER:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__VSTART:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__VZIEL:
+			case Balisentechnik_ETCSPackage.FT_ESG_MERKMALE_ATTRIBUTE_GROUP__VORSIGNALABSTAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -172,8 +209,8 @@ public class FT_ESG_Merkmale_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Bremsweg(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createBremsweg_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_AbstandBesLangerEinfahrweg(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createAbstand_Bes_Langer_Einfahrweg_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -192,18 +229,48 @@ public class FT_ESG_Merkmale_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_FTESGSubtyp(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createFT_ESG_Subtyp_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_IndividualisierungWeitere(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createIndividualisierung_Weitere_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_FTESGTyp(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createFT_ESG_Typ_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_LaengeGestufteVSignalisierung(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createLaenge_Gestufte_V_Signalisierung_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_LfdNrInTelegrSpec(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createLfdNr_in_Telegr_Spec_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_NIDTSR(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createNID_TSR_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Projektierungsfall(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createProjektierungsfall_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Telegrammnummer(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createTelegrammnummer_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_UeberwachungLaenge(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createUeberwachung_Laenge_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_VStart(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createV_Start_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_VZiel(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createV_Ziel_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ESG_Merkmale_AttributeGroup_Vorsignalabstand(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createVorsignalabstand_TypeClass()));
 	}
 
 	/**

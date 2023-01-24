@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -19,6 +26,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMTunnelsignal implements Enumerator {
 	/**
+	 * The '<em><b>ENUM Tunnelsignal mit Dauernachtschaltung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG(0, "ENUMTunnelsignal_mit_Dauernachtschaltung", "mit_Dauernachtschaltung"),
+
+	/**
 	 * The '<em><b>ENUM Tunnelsignal nein</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +43,7 @@ public enum ENUMTunnelsignal implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TUNNELSIGNAL_NEIN(0, "ENUMTunnelsignal_nein", "nein"),
+	ENUM_TUNNELSIGNAL_NEIN(1, "ENUMTunnelsignal_nein", "nein"),
 
 	/**
 	 * The '<em><b>ENUM Tunnelsignal ohne Dauernachtschaltung</b></em>' literal object.
@@ -36,39 +53,7 @@ public enum ENUMTunnelsignal implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG(1, "ENUMTunnelsignal_ohne_Dauernachtschaltung", "ohne_Dauernachtschaltung"),
-
-	/**
-	 * The '<em><b>ENUM Tunnelsignal mit Dauernachtschaltung</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG(2, "ENUMTunnelsignal_mit_Dauernachtschaltung", "mit_Dauernachtschaltung");
-
-	/**
-	 * The '<em><b>ENUM Tunnelsignal nein</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_TUNNELSIGNAL_NEIN
-	 * @model name="ENUMTunnelsignal_nein" literal="nein"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_TUNNELSIGNAL_NEIN_VALUE = 0;
-
-	/**
-	 * The '<em><b>ENUM Tunnelsignal ohne Dauernachtschaltung</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG
-	 * @model name="ENUMTunnelsignal_ohne_Dauernachtschaltung" literal="ohne_Dauernachtschaltung"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG_VALUE = 1;
+	ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG(2, "ENUMTunnelsignal_ohne_Dauernachtschaltung", "ohne_Dauernachtschaltung");
 
 	/**
 	 * The '<em><b>ENUM Tunnelsignal mit Dauernachtschaltung</b></em>' literal value.
@@ -79,7 +64,29 @@ public enum ENUMTunnelsignal implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG_VALUE = 2;
+	public static final int ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUM Tunnelsignal nein</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TUNNELSIGNAL_NEIN
+	 * @model name="ENUMTunnelsignal_nein" literal="nein"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_TUNNELSIGNAL_NEIN_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUM Tunnelsignal ohne Dauernachtschaltung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG
+	 * @model name="ENUMTunnelsignal_ohne_Dauernachtschaltung" literal="ohne_Dauernachtschaltung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>ENUM Tunnelsignal</b></em>' enumerators.
@@ -89,9 +96,9 @@ public enum ENUMTunnelsignal implements Enumerator {
 	 */
 	private static final ENUMTunnelsignal[] VALUES_ARRAY =
 		new ENUMTunnelsignal[] {
+			ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG,
 			ENUM_TUNNELSIGNAL_NEIN,
 			ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG,
-			ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG,
 		};
 
 	/**
@@ -148,9 +155,9 @@ public enum ENUMTunnelsignal implements Enumerator {
 	 */
 	public static ENUMTunnelsignal get(int value) {
 		switch (value) {
+			case ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG_VALUE: return ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG;
 			case ENUM_TUNNELSIGNAL_NEIN_VALUE: return ENUM_TUNNELSIGNAL_NEIN;
 			case ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG_VALUE: return ENUM_TUNNELSIGNAL_OHNE_DAUERNACHTSCHALTUNG;
-			case ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG_VALUE: return ENUM_TUNNELSIGNAL_MIT_DAUERNACHTSCHALTUNG;
 			default: return null;
 		}
 	}

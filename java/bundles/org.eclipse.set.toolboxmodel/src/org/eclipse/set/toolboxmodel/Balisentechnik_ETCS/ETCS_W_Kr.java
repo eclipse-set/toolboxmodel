@@ -1,11 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Anlage;
 
 /**
@@ -21,11 +28,11 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Anlage;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getETCSWKrMUKA <em>ETCSW Kr MUKA</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getIDETCSGefahrpunktNebengleis <em>IDETCS Gefahrpunkt Nebengleis</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getIDETCSKnoten <em>IDETCS Knoten</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getIDRBC <em>IDRBC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getIDWKrAnlage <em>IDW Kr Anlage</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getETCSWKrMUKA <em>ETCSW Kr MUKA</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getETCSWOrtsgestellt <em>ETCSW Ortsgestellt</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_W_Kr()
@@ -33,6 +40,82 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Anlage;
  * @generated
  */
 public interface ETCS_W_Kr extends Basis_Objekt {
+	/**
+	 * Returns the value of the '<em><b>ETCSW Kr MUKA</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ETCSW Kr MUKA</em>' containment reference.
+	 * @see #setETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_W_Kr_ETCSWKrMUKA()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ETCS_W_Kr_MUKA'"
+	 * @generated
+	 */
+	ETCS_W_Kr_MUKA_AttributeGroup getETCSWKrMUKA();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getETCSWKrMUKA <em>ETCSW Kr MUKA</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ETCSW Kr MUKA</em>' containment reference.
+	 * @see #getETCSWKrMUKA()
+	 * @generated
+	 */
+	void setETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>IDETCS Gefahrpunkt Nebengleis</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Bei ortsgestellten Weichen: Angabe des nächsten ETCS-Gefahrpunkts hinter der ortsgestellten Weiche für den Fahrweg ins Nebengleis. DB-Regelwerk Ril 819.1344, 3.3.2 (25)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>IDETCS Gefahrpunkt Nebengleis</em>' reference.
+	 * @see #isSetIDETCSGefahrpunktNebengleis()
+	 * @see #unsetIDETCSGefahrpunktNebengleis()
+	 * @see #setIDETCSGefahrpunktNebengleis(Basis_Objekt)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_W_Kr_IDETCSGefahrpunktNebengleis()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_ETCS_Gefahrpunkt_Nebengleis'"
+	 * @generated
+	 */
+	Basis_Objekt getIDETCSGefahrpunktNebengleis();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getIDETCSGefahrpunktNebengleis <em>IDETCS Gefahrpunkt Nebengleis</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IDETCS Gefahrpunkt Nebengleis</em>' reference.
+	 * @see #isSetIDETCSGefahrpunktNebengleis()
+	 * @see #unsetIDETCSGefahrpunktNebengleis()
+	 * @see #getIDETCSGefahrpunktNebengleis()
+	 * @generated
+	 */
+	void setIDETCSGefahrpunktNebengleis(Basis_Objekt value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getIDETCSGefahrpunktNebengleis <em>IDETCS Gefahrpunkt Nebengleis</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDETCSGefahrpunktNebengleis()
+	 * @see #getIDETCSGefahrpunktNebengleis()
+	 * @see #setIDETCSGefahrpunktNebengleis(Basis_Objekt)
+	 * @generated
+	 */
+	void unsetIDETCSGefahrpunktNebengleis();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getIDETCSGefahrpunktNebengleis <em>IDETCS Gefahrpunkt Nebengleis</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>IDETCS Gefahrpunkt Nebengleis</em>' reference is set.
+	 * @see #unsetIDETCSGefahrpunktNebengleis()
+	 * @see #getIDETCSGefahrpunktNebengleis()
+	 * @see #setIDETCSGefahrpunktNebengleis(Basis_Objekt)
+	 * @generated
+	 */
+	boolean isSetIDETCSGefahrpunktNebengleis();
+
 	/**
 	 * Returns the value of the '<em><b>IDETCS Knoten</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -154,54 +237,5 @@ public interface ETCS_W_Kr extends Basis_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDWKrAnlage();
-
-	/**
-	 * Returns the value of the '<em><b>ETCSW Kr MUKA</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>ETCSW Kr MUKA</em>' containment reference.
-	 * @see #setETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_W_Kr_ETCSWKrMUKA()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='ETCS_W_Kr_MUKA'"
-	 * @generated
-	 */
-	ETCS_W_Kr_MUKA_AttributeGroup getETCSWKrMUKA();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getETCSWKrMUKA <em>ETCSW Kr MUKA</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ETCSW Kr MUKA</em>' containment reference.
-	 * @see #getETCSWKrMUKA()
-	 * @generated
-	 */
-	void setETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup value);
-
-	/**
-	 * Returns the value of the '<em><b>ETCSW Ortsgestellt</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Angabe, ob es sich um eine ortsgestellte Weiche handelt (true). Der Wert "false" wird nicht verwendet.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ETCSW Ortsgestellt</em>' containment reference.
-	 * @see #setETCSWOrtsgestellt(ETCS_W_Ortsgestellt_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_W_Kr_ETCSWOrtsgestellt()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='ETCS_W_Ortsgestellt'"
-	 * @generated
-	 */
-	ETCS_W_Ortsgestellt_TypeClass getETCSWOrtsgestellt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr#getETCSWOrtsgestellt <em>ETCSW Ortsgestellt</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ETCSW Ortsgestellt</em>' containment reference.
-	 * @see #getETCSWOrtsgestellt()
-	 * @generated
-	 */
-	void setETCSWOrtsgestellt(ETCS_W_Ortsgestellt_TypeClass value);
 
 } // ETCS_W_Kr

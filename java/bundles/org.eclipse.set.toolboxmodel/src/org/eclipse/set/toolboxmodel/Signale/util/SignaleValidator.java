@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.util;
 
@@ -128,6 +135,10 @@ public class SignaleValidator extends EObjectValidator {
 				return validateDurchfahrt_TypeClass((Durchfahrt_TypeClass)value, diagnostics, context);
 			case SignalePackage.FIKTIVES_SIGNAL_FUNKTION_TYPE_CLASS:
 				return validateFiktives_Signal_Funktion_TypeClass((Fiktives_Signal_Funktion_TypeClass)value, diagnostics, context);
+			case SignalePackage.FUNDAMENT_ART_TYPE_CLASS:
+				return validateFundament_Art_TypeClass((Fundament_Art_TypeClass)value, diagnostics, context);
+			case SignalePackage.FUNKTION_OHNE_SIGNAL_TYPE_CLASS:
+				return validateFunktion_Ohne_Signal_TypeClass((Funktion_Ohne_Signal_TypeClass)value, diagnostics, context);
 			case SignalePackage.GEGENGLEIS_TYPE_CLASS:
 				return validateGegengleis_TypeClass((Gegengleis_TypeClass)value, diagnostics, context);
 			case SignalePackage.GELTUNGSBEREICH_TYPE_CLASS:
@@ -142,6 +153,8 @@ public class SignaleValidator extends EObjectValidator {
 				return validatePZB_Schutzstrecke_Soll_TypeClass((PZB_Schutzstrecke_Soll_TypeClass)value, diagnostics, context);
 			case SignalePackage.RAHMEN_ART_TYPE_CLASS:
 				return validateRahmen_Art_TypeClass((Rahmen_Art_TypeClass)value, diagnostics, context);
+			case SignalePackage.RAHMEN_HOEHE_TYPE_CLASS:
+				return validateRahmen_Hoehe_TypeClass((Rahmen_Hoehe_TypeClass)value, diagnostics, context);
 			case SignalePackage.RANGIERSTRASSE_RESTAUFLOESUNG_TYPE_CLASS:
 				return validateRangierstrasse_Restaufloesung_TypeClass((Rangierstrasse_Restaufloesung_TypeClass)value, diagnostics, context);
 			case SignalePackage.RICHTPUNKT_TYPE_CLASS:
@@ -212,6 +225,10 @@ public class SignaleValidator extends EObjectValidator {
 				return validateENUMDurchfahrt((ENUMDurchfahrt)value, diagnostics, context);
 			case SignalePackage.ENUM_FIKTIVES_SIGNAL_FUNKTION:
 				return validateENUMFiktivesSignalFunktion((ENUMFiktivesSignalFunktion)value, diagnostics, context);
+			case SignalePackage.ENUM_FUNDAMENT_ART:
+				return validateENUMFundamentArt((ENUMFundamentArt)value, diagnostics, context);
+			case SignalePackage.ENUM_FUNKTION_OHNE_SIGNAL:
+				return validateENUMFunktionOhneSignal((ENUMFunktionOhneSignal)value, diagnostics, context);
 			case SignalePackage.ENUM_GELTUNGSBEREICH:
 				return validateENUMGeltungsbereich((ENUMGeltungsbereich)value, diagnostics, context);
 			case SignalePackage.ENUM_RAHMEN_ART:
@@ -244,6 +261,10 @@ public class SignaleValidator extends EObjectValidator {
 				return validateENUMDurchfahrtObject((ENUMDurchfahrt)value, diagnostics, context);
 			case SignalePackage.ENUM_FIKTIVES_SIGNAL_FUNKTION_OBJECT:
 				return validateENUMFiktivesSignalFunktionObject((ENUMFiktivesSignalFunktion)value, diagnostics, context);
+			case SignalePackage.ENUM_FUNDAMENT_ART_OBJECT:
+				return validateENUMFundamentArtObject((ENUMFundamentArt)value, diagnostics, context);
+			case SignalePackage.ENUM_FUNKTION_OHNE_SIGNAL_OBJECT:
+				return validateENUMFunktionOhneSignalObject((ENUMFunktionOhneSignal)value, diagnostics, context);
 			case SignalePackage.ENUM_GELTUNGSBEREICH_OBJECT:
 				return validateENUMGeltungsbereichObject((ENUMGeltungsbereich)value, diagnostics, context);
 			case SignalePackage.ENUM_RAHMEN_ART_OBJECT:
@@ -270,6 +291,8 @@ public class SignaleValidator extends EObjectValidator {
 				return validateObere_Lichtpunkthoehe_Type((BigDecimal)value, diagnostics, context);
 			case SignalePackage.PZB_SCHUTZSTRECKE_SOLL_TYPE:
 				return validatePZB_Schutzstrecke_Soll_Type((BigDecimal)value, diagnostics, context);
+			case SignalePackage.RAHMEN_HOEHE_TYPE:
+				return validateRahmen_Hoehe_Type((BigDecimal)value, diagnostics, context);
 			case SignalePackage.RICHTPUNKT_TYPE:
 				return validateRichtpunkt_Type((String)value, diagnostics, context);
 			case SignalePackage.RICHTPUNKTENTFERNUNG_TYPE:
@@ -371,6 +394,24 @@ public class SignaleValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateFundament_Art_TypeClass(Fundament_Art_TypeClass fundament_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fundament_Art_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFunktion_Ohne_Signal_TypeClass(Funktion_Ohne_Signal_TypeClass funktion_Ohne_Signal_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(funktion_Ohne_Signal_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateGegengleis_TypeClass(Gegengleis_TypeClass gegengleis_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(gegengleis_TypeClass, diagnostics, context);
 	}
@@ -427,6 +468,15 @@ public class SignaleValidator extends EObjectValidator {
 	 */
 	public boolean validateRahmen_Art_TypeClass(Rahmen_Art_TypeClass rahmen_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(rahmen_Art_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRahmen_Hoehe_TypeClass(Rahmen_Hoehe_TypeClass rahmen_Hoehe_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(rahmen_Hoehe_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -749,6 +799,24 @@ public class SignaleValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateENUMFundamentArt(ENUMFundamentArt enumFundamentArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMFunktionOhneSignal(ENUMFunktionOhneSignal enumFunktionOhneSignal, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateENUMGeltungsbereich(ENUMGeltungsbereich enumGeltungsbereich, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -885,6 +953,24 @@ public class SignaleValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMFiktivesSignalFunktionObject(ENUMFiktivesSignalFunktion enumFiktivesSignalFunktionObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMFundamentArtObject(ENUMFundamentArt enumFundamentArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMFunktionOhneSignalObject(ENUMFunktionOhneSignal enumFunktionOhneSignalObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1075,6 +1161,15 @@ public class SignaleValidator extends EObjectValidator {
 	 */
 	public boolean validatePZB_Schutzstrecke_Soll_Type_Pattern(BigDecimal pzB_Schutzstrecke_Soll_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(SignalePackage.Literals.PZB_SCHUTZSTRECKE_SOLL_TYPE, pzB_Schutzstrecke_Soll_Type, PZB_SCHUTZSTRECKE_SOLL_TYPE__PATTERN__VALUES, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRahmen_Hoehe_Type(BigDecimal rahmen_Hoehe_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**

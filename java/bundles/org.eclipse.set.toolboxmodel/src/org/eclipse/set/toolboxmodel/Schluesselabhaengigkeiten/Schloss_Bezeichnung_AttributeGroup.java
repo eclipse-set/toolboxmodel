@@ -1,8 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model extendedMetaData="name='CSchloss_Bezeichnung' kind='elementOnly'"
  * @generated
  */
-public interface Schloss_Bezeichnung_AttributeGroup extends EObject {
+public interface Schloss_Bezeichnung_AttributeGroup extends Basis_Objekt {
 	/**
 	 * Returns the value of the '<em><b>Bezeichnung Schloss</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

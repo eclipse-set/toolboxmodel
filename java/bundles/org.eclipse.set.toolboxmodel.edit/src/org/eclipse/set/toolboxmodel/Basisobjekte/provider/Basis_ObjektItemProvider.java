@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -20,6 +21,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenFactory;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
@@ -53,25 +56,25 @@ public class Basis_ObjektItemProvider extends Ur_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIDBearbeitungsvermerkPropertyDescriptor(object);
+			addIDOertlichkeitAusgabePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the ID Bearbeitungsvermerk feature.
+	 * This adds a property descriptor for the ID Oertlichkeit Ausgabe feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIDBearbeitungsvermerkPropertyDescriptor(Object object) {
+	protected void addIDOertlichkeitAusgabePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Basis_Objekt_iDBearbeitungsvermerk_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Basis_Objekt_iDBearbeitungsvermerk_feature", "_UI_Basis_Objekt_type"),
-				 BasisobjektePackage.Literals.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK,
+				 getString("_UI_Basis_Objekt_iDOertlichkeitAusgabe_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Basis_Objekt_iDOertlichkeitAusgabe_feature", "_UI_Basis_Objekt_type"),
+				 BasisobjektePackage.Literals.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE,
 				 true,
 				 false,
 				 true,
@@ -93,6 +96,7 @@ public class Basis_ObjektItemProvider extends Ur_ObjektItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BasisobjektePackage.Literals.BASIS_OBJEKT__BASIS_OBJEKT_ALLG);
+			childrenFeatures.add(BasisobjektePackage.Literals.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK);
 			childrenFeatures.add(BasisobjektePackage.Literals.BASIS_OBJEKT__OBJEKTREFERENZEN);
 		}
 		return childrenFeatures;
@@ -136,6 +140,7 @@ public class Basis_ObjektItemProvider extends Ur_ObjektItemProvider {
 
 		switch (notification.getFeatureID(Basis_Objekt.class)) {
 			case BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG:
+			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
 			case BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -160,6 +165,11 @@ public class Basis_ObjektItemProvider extends Ur_ObjektItemProvider {
 			(createChildParameter
 				(BasisobjektePackage.Literals.BASIS_OBJEKT__BASIS_OBJEKT_ALLG,
 				 BasisobjekteFactory.eINSTANCE.createBasis_Objekt_Allg_AttributeGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasisobjektePackage.Literals.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK,
+				 BasisTypenFactory.eINSTANCE.createID_Bearbeitungsvermerk_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

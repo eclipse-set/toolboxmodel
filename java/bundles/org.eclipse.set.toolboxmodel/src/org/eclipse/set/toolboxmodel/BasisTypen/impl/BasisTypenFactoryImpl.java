@@ -1,12 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen.impl;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
@@ -74,9 +78,10 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 			case BasisTypenPackage.BEZEICHNUNG_LAGEPLAN_LANG_TYPE_CLASS: return createBezeichnung_Lageplan_Lang_TypeClass();
 			case BasisTypenPackage.BEZEICHNUNG_TABELLE_TYPE_CLASS: return createBezeichnung_Tabelle_TypeClass();
 			case BasisTypenPackage.DATUM_AUSLIEFERUNG_TYPE_CLASS: return createDatum_Auslieferung_TypeClass();
-			case BasisTypenPackage.EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP: return createEigenschaften_Datei_AttributeGroup();
+			case BasisTypenPackage.ID_BEARBEITUNGSVERMERK_TYPE_CLASS: return createID_Bearbeitungsvermerk_TypeClass();
 			case BasisTypenPackage.KENNZAHL_TYPE_CLASS: return createKennzahl_TypeClass();
 			case BasisTypenPackage.OERTLICHER_ELEMENTNAME_TYPE_CLASS: return createOertlicher_Elementname_TypeClass();
+			case BasisTypenPackage.PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP: return createPruefmerkmale_Daten_AttributeGroup();
 			case BasisTypenPackage.PRUEFSUMME_ART_TYPE_CLASS: return createPruefsumme_Art_TypeClass();
 			case BasisTypenPackage.PRUEFSUMME_TYPE_CLASS: return createPruefsumme_TypeClass();
 			case BasisTypenPackage.VERSION_AUSLIEFERUNG_TYPE_CLASS: return createVersion_Auslieferung_TypeClass();
@@ -166,8 +171,6 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 				return createObjektname_TypeFromString(eDataType, initialValue);
 			case BasisTypenPackage.OERTLICHER_ELEMENTNAME_TYPE:
 				return createOertlicher_Elementname_TypeFromString(eDataType, initialValue);
-			case BasisTypenPackage.PRUEFSUMME_TYPE:
-				return createPruefsumme_TypeFromString(eDataType, initialValue);
 			case BasisTypenPackage.REGIONALBEREICH_TYPE:
 				return createRegionalbereich_TypeFromString(eDataType, initialValue);
 			case BasisTypenPackage.SEKUNDE_TYPE:
@@ -265,8 +268,6 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 				return convertObjektname_TypeToString(eDataType, instanceValue);
 			case BasisTypenPackage.OERTLICHER_ELEMENTNAME_TYPE:
 				return convertOertlicher_Elementname_TypeToString(eDataType, instanceValue);
-			case BasisTypenPackage.PRUEFSUMME_TYPE:
-				return convertPruefsumme_TypeToString(eDataType, instanceValue);
 			case BasisTypenPackage.REGIONALBEREICH_TYPE:
 				return convertRegionalbereich_TypeToString(eDataType, instanceValue);
 			case BasisTypenPackage.SEKUNDE_TYPE:
@@ -356,9 +357,9 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 	 * @generated
 	 */
 	@Override
-	public Eigenschaften_Datei_AttributeGroup createEigenschaften_Datei_AttributeGroup() {
-		Eigenschaften_Datei_AttributeGroupImpl eigenschaften_Datei_AttributeGroup = new Eigenschaften_Datei_AttributeGroupImpl();
-		return eigenschaften_Datei_AttributeGroup;
+	public ID_Bearbeitungsvermerk_TypeClass createID_Bearbeitungsvermerk_TypeClass() {
+		ID_Bearbeitungsvermerk_TypeClassImpl iD_Bearbeitungsvermerk_TypeClass = new ID_Bearbeitungsvermerk_TypeClassImpl();
+		return iD_Bearbeitungsvermerk_TypeClass;
 	}
 
 	/**
@@ -381,6 +382,17 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 	public Oertlicher_Elementname_TypeClass createOertlicher_Elementname_TypeClass() {
 		Oertlicher_Elementname_TypeClassImpl oertlicher_Elementname_TypeClass = new Oertlicher_Elementname_TypeClassImpl();
 		return oertlicher_Elementname_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Pruefmerkmale_Daten_AttributeGroup createPruefmerkmale_Daten_AttributeGroup() {
+		Pruefmerkmale_Daten_AttributeGroupImpl pruefmerkmale_Daten_AttributeGroup = new Pruefmerkmale_Daten_AttributeGroupImpl();
+		return pruefmerkmale_Daten_AttributeGroup;
 	}
 
 	/**
@@ -898,13 +910,8 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<ENUMFahrstrom> createFahrstrom_TypeFromString(EDataType eDataType, String initialValue) {
-		if (initialValue == null) return null;
-		List<ENUMFahrstrom> result = new ArrayList<ENUMFahrstrom>();
-		for (String item : split(initialValue)) {
-			result.add(createENUMFahrstromFromString(BasisTypenPackage.Literals.ENUM_FAHRSTROM, item));
-		}
-		return result;
+	public ENUMFahrstrom createFahrstrom_TypeFromString(EDataType eDataType, String initialValue) {
+		return createENUMFahrstromFromString(BasisTypenPackage.Literals.ENUM_FAHRSTROM, initialValue);
 	}
 
 	/**
@@ -913,15 +920,7 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 	 * @generated
 	 */
 	public String convertFahrstrom_TypeToString(EDataType eDataType, Object instanceValue) {
-		if (instanceValue == null) return null;
-		List<?> list = (List<?>)instanceValue;
-		if (list.isEmpty()) return "";
-		StringBuffer result = new StringBuffer();
-		for (Object item : list) {
-			result.append(convertENUMFahrstromToString(BasisTypenPackage.Literals.ENUM_FAHRSTROM, item));
-			result.append(' ');
-		}
-		return result.substring(0, result.length() - 1);
+		return convertENUMFahrstromToString(BasisTypenPackage.Literals.ENUM_FAHRSTROM, instanceValue);
 	}
 
 	/**
@@ -1102,24 +1101,6 @@ public class BasisTypenFactoryImpl extends EFactoryImpl implements BasisTypenFac
 	 */
 	public String convertOertlicher_Elementname_TypeToString(EDataType eDataType, Object instanceValue) {
 		return convertZeichenkette_TypeToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String createPruefsumme_TypeFromString(EDataType eDataType, String initialValue) {
-		return createText_TypeFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertPruefsumme_TypeToString(EDataType eDataType, Object instanceValue) {
-		return convertText_TypeToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
 	/**

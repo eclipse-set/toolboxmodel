@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -49,56 +56,6 @@ public enum ENUMPlanQuelle implements Enumerator {
 	ENUM_PLAN_QUELLE_GND(2, "ENUMPlan_Quelle_GND", "GND"),
 
 	/**
-	 * The '<em><b>ENUM Plan Quelle Ivl</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_IVL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_PLAN_QUELLE_IVL(3, "ENUMPlan_Quelle_Ivl", "Ivl"),
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle Ivmg</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_IVMG_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_PLAN_QUELLE_IVMG(4, "ENUMPlan_Quelle_Ivmg", "Ivmg"),
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle Kopie</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_KOPIE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_PLAN_QUELLE_KOPIE(5, "ENUMPlan_Quelle_Kopie", "Kopie"),
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle Neutrassierung</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_NEUTRASSIERUNG_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_PLAN_QUELLE_NEUTRASSIERUNG(6, "ENUMPlan_Quelle_Neutrassierung", "Neutrassierung"),
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_PLAN_QUELLE_SONSTIGE(7, "ENUMPlan_Quelle_sonstige", "sonstige"),
-
-	/**
 	 * The '<em><b>ENUM Plan Quelle GND autokorr</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,7 +63,7 @@ public enum ENUMPlanQuelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_PLAN_QUELLE_GND_AUTOKORR(8, "ENUMPlan_Quelle_GND_autokorr", "GND_autokorr"),
+	ENUM_PLAN_QUELLE_GND_AUTOKORR(3, "ENUMPlan_Quelle_GND_autokorr", "GND_autokorr"),
 
 	/**
 	 * The '<em><b>ENUM Plan Quelle GND mankorr</b></em>' literal object.
@@ -116,7 +73,87 @@ public enum ENUMPlanQuelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_PLAN_QUELLE_GND_MANKORR(9, "ENUMPlan_Quelle_GND_mankorr", "GND_mankorr");
+	ENUM_PLAN_QUELLE_GND_MANKORR(4, "ENUMPlan_Quelle_GND_mankorr", "GND_mankorr"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Ivl</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_IVL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_IVL(5, "ENUMPlan_Quelle_Ivl", "Ivl"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Ivmg</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_IVMG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_IVMG(6, "ENUMPlan_Quelle_Ivmg", "Ivmg"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Kopie</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_KOPIE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_KOPIE(7, "ENUMPlan_Quelle_Kopie", "Kopie"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Neutrassierung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_NEUTRASSIERUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_NEUTRASSIERUNG(8, "ENUMPlan_Quelle_Neutrassierung", "Neutrassierung"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Planung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_PLANUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_PLANUNG(9, "ENUMPlan_Quelle_Planung", "Planung"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle PT 2</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_PT_2_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_PT_2(10, "ENUMPlan_Quelle_PT_2", "PT 2"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_SONSTIGE(11, "ENUMPlan_Quelle_sonstige", "sonstige"),
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Vermessung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_VERMESSUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_PLAN_QUELLE_VERMESSUNG(12, "ENUMPlan_Quelle_Vermessung", "Vermessung");
 
 	/**
 	 * The '<em><b>ENUM Plan Quelle Ersatztrassierung</b></em>' literal value.
@@ -152,61 +189,6 @@ public enum ENUMPlanQuelle implements Enumerator {
 	public static final int ENUM_PLAN_QUELLE_GND_VALUE = 2;
 
 	/**
-	 * The '<em><b>ENUM Plan Quelle Ivl</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_IVL
-	 * @model name="ENUMPlan_Quelle_Ivl" literal="Ivl"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_PLAN_QUELLE_IVL_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle Ivmg</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_IVMG
-	 * @model name="ENUMPlan_Quelle_Ivmg" literal="Ivmg"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_PLAN_QUELLE_IVMG_VALUE = 4;
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle Kopie</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_KOPIE
-	 * @model name="ENUMPlan_Quelle_Kopie" literal="Kopie"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_PLAN_QUELLE_KOPIE_VALUE = 5;
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle Neutrassierung</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_NEUTRASSIERUNG
-	 * @model name="ENUMPlan_Quelle_Neutrassierung" literal="Neutrassierung"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_PLAN_QUELLE_NEUTRASSIERUNG_VALUE = 6;
-
-	/**
-	 * The '<em><b>ENUM Plan Quelle sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_PLAN_QUELLE_SONSTIGE
-	 * @model name="ENUMPlan_Quelle_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_PLAN_QUELLE_SONSTIGE_VALUE = 7;
-
-	/**
 	 * The '<em><b>ENUM Plan Quelle GND autokorr</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -215,7 +197,7 @@ public enum ENUMPlanQuelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_PLAN_QUELLE_GND_AUTOKORR_VALUE = 8;
+	public static final int ENUM_PLAN_QUELLE_GND_AUTOKORR_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Plan Quelle GND mankorr</b></em>' literal value.
@@ -226,7 +208,95 @@ public enum ENUMPlanQuelle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_PLAN_QUELLE_GND_MANKORR_VALUE = 9;
+	public static final int ENUM_PLAN_QUELLE_GND_MANKORR_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Ivl</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_IVL
+	 * @model name="ENUMPlan_Quelle_Ivl" literal="Ivl"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_IVL_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Ivmg</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_IVMG
+	 * @model name="ENUMPlan_Quelle_Ivmg" literal="Ivmg"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_IVMG_VALUE = 6;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Kopie</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_KOPIE
+	 * @model name="ENUMPlan_Quelle_Kopie" literal="Kopie"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_KOPIE_VALUE = 7;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Neutrassierung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_NEUTRASSIERUNG
+	 * @model name="ENUMPlan_Quelle_Neutrassierung" literal="Neutrassierung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_NEUTRASSIERUNG_VALUE = 8;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Planung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_PLANUNG
+	 * @model name="ENUMPlan_Quelle_Planung" literal="Planung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_PLANUNG_VALUE = 9;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle PT 2</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_PT_2
+	 * @model name="ENUMPlan_Quelle_PT_2" literal="PT 2"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_PT_2_VALUE = 10;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_SONSTIGE
+	 * @model name="ENUMPlan_Quelle_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_SONSTIGE_VALUE = 11;
+
+	/**
+	 * The '<em><b>ENUM Plan Quelle Vermessung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_PLAN_QUELLE_VERMESSUNG
+	 * @model name="ENUMPlan_Quelle_Vermessung" literal="Vermessung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_PLAN_QUELLE_VERMESSUNG_VALUE = 12;
 
 	/**
 	 * An array of all the '<em><b>ENUM Plan Quelle</b></em>' enumerators.
@@ -239,13 +309,16 @@ public enum ENUMPlanQuelle implements Enumerator {
 			ENUM_PLAN_QUELLE_ERSATZTRASSIERUNG,
 			ENUM_PLAN_QUELLE_GIS,
 			ENUM_PLAN_QUELLE_GND,
+			ENUM_PLAN_QUELLE_GND_AUTOKORR,
+			ENUM_PLAN_QUELLE_GND_MANKORR,
 			ENUM_PLAN_QUELLE_IVL,
 			ENUM_PLAN_QUELLE_IVMG,
 			ENUM_PLAN_QUELLE_KOPIE,
 			ENUM_PLAN_QUELLE_NEUTRASSIERUNG,
+			ENUM_PLAN_QUELLE_PLANUNG,
+			ENUM_PLAN_QUELLE_PT_2,
 			ENUM_PLAN_QUELLE_SONSTIGE,
-			ENUM_PLAN_QUELLE_GND_AUTOKORR,
-			ENUM_PLAN_QUELLE_GND_MANKORR,
+			ENUM_PLAN_QUELLE_VERMESSUNG,
 		};
 
 	/**
@@ -305,13 +378,16 @@ public enum ENUMPlanQuelle implements Enumerator {
 			case ENUM_PLAN_QUELLE_ERSATZTRASSIERUNG_VALUE: return ENUM_PLAN_QUELLE_ERSATZTRASSIERUNG;
 			case ENUM_PLAN_QUELLE_GIS_VALUE: return ENUM_PLAN_QUELLE_GIS;
 			case ENUM_PLAN_QUELLE_GND_VALUE: return ENUM_PLAN_QUELLE_GND;
+			case ENUM_PLAN_QUELLE_GND_AUTOKORR_VALUE: return ENUM_PLAN_QUELLE_GND_AUTOKORR;
+			case ENUM_PLAN_QUELLE_GND_MANKORR_VALUE: return ENUM_PLAN_QUELLE_GND_MANKORR;
 			case ENUM_PLAN_QUELLE_IVL_VALUE: return ENUM_PLAN_QUELLE_IVL;
 			case ENUM_PLAN_QUELLE_IVMG_VALUE: return ENUM_PLAN_QUELLE_IVMG;
 			case ENUM_PLAN_QUELLE_KOPIE_VALUE: return ENUM_PLAN_QUELLE_KOPIE;
 			case ENUM_PLAN_QUELLE_NEUTRASSIERUNG_VALUE: return ENUM_PLAN_QUELLE_NEUTRASSIERUNG;
+			case ENUM_PLAN_QUELLE_PLANUNG_VALUE: return ENUM_PLAN_QUELLE_PLANUNG;
+			case ENUM_PLAN_QUELLE_PT_2_VALUE: return ENUM_PLAN_QUELLE_PT_2;
 			case ENUM_PLAN_QUELLE_SONSTIGE_VALUE: return ENUM_PLAN_QUELLE_SONSTIGE;
-			case ENUM_PLAN_QUELLE_GND_AUTOKORR_VALUE: return ENUM_PLAN_QUELLE_GND_AUTOKORR;
-			case ENUM_PLAN_QUELLE_GND_MANKORR_VALUE: return ENUM_PLAN_QUELLE_GND_MANKORR;
+			case ENUM_PLAN_QUELLE_VERMESSUNG_VALUE: return ENUM_PLAN_QUELLE_VERMESSUNG;
 			default: return null;
 		}
 	}

@@ -1,9 +1,20 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,9 +22,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass;
+import org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Rolle_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bestandsrelevanz_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Kommentar_TypeClass;
@@ -28,9 +43,10 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Zeit_Bearbeitungsvermerk_TypeCl
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getBearbeitungsvermerkKennung <em>Bearbeitungsvermerk Kennung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getBearbeitungsvermerkRolle <em>Bearbeitungsvermerk Rolle</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getBestandsrelevanz <em>Bestandsrelevanz</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getBVDarstellungInPlan <em>BV Darstellung In Plan</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getBVKategorie <em>BV Kategorie</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getKommentar <em>Kommentar</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getKurztext <em>Kurztext</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Allg_AttributeGroupImpl#getZeitBearbeitungsvermerk <em>Zeit Bearbeitungsvermerk</em>}</li>
@@ -39,16 +55,6 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Zeit_Bearbeitungsvermerk_TypeCl
  * @generated
  */
 public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements Bearbeitungsvermerk_Allg_AttributeGroup {
-	/**
-	 * The cached value of the '{@link #getBearbeitungsvermerkKennung() <em>Bearbeitungsvermerk Kennung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBearbeitungsvermerkKennung()
-	 * @generated
-	 * @ordered
-	 */
-	protected Bearbeitungsvermerk_Kennung_TypeClass bearbeitungsvermerkKennung;
-
 	/**
 	 * The cached value of the '{@link #getBearbeitungsvermerkRolle() <em>Bearbeitungsvermerk Rolle</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -68,6 +74,26 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 	 * @ordered
 	 */
 	protected Bestandsrelevanz_TypeClass bestandsrelevanz;
+
+	/**
+	 * The cached value of the '{@link #getBVDarstellungInPlan() <em>BV Darstellung In Plan</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBVDarstellungInPlan()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BV_Darstellung_In_Plan_TypeClass> bVDarstellungInPlan;
+
+	/**
+	 * The cached value of the '{@link #getBVKategorie() <em>BV Kategorie</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBVKategorie()
+	 * @generated
+	 * @ordered
+	 */
+	protected BV_Kategorie_TypeClass bVKategorie;
 
 	/**
 	 * The cached value of the '{@link #getKommentar() <em>Kommentar</em>}' containment reference.
@@ -116,51 +142,6 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	protected EClass eStaticClass() {
 		return BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Bearbeitungsvermerk_Kennung_TypeClass getBearbeitungsvermerkKennung() {
-		return bearbeitungsvermerkKennung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetBearbeitungsvermerkKennung(Bearbeitungsvermerk_Kennung_TypeClass newBearbeitungsvermerkKennung, NotificationChain msgs) {
-		Bearbeitungsvermerk_Kennung_TypeClass oldBearbeitungsvermerkKennung = bearbeitungsvermerkKennung;
-		bearbeitungsvermerkKennung = newBearbeitungsvermerkKennung;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG, oldBearbeitungsvermerkKennung, newBearbeitungsvermerkKennung);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setBearbeitungsvermerkKennung(Bearbeitungsvermerk_Kennung_TypeClass newBearbeitungsvermerkKennung) {
-		if (newBearbeitungsvermerkKennung != bearbeitungsvermerkKennung) {
-			NotificationChain msgs = null;
-			if (bearbeitungsvermerkKennung != null)
-				msgs = ((InternalEObject)bearbeitungsvermerkKennung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG, null, msgs);
-			if (newBearbeitungsvermerkKennung != null)
-				msgs = ((InternalEObject)newBearbeitungsvermerkKennung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG, null, msgs);
-			msgs = basicSetBearbeitungsvermerkKennung(newBearbeitungsvermerkKennung, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG, newBearbeitungsvermerkKennung, newBearbeitungsvermerkKennung));
 	}
 
 	/**
@@ -251,6 +232,64 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ, newBestandsrelevanz, newBestandsrelevanz));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<BV_Darstellung_In_Plan_TypeClass> getBVDarstellungInPlan() {
+		if (bVDarstellungInPlan == null) {
+			bVDarstellungInPlan = new EObjectContainmentEList<BV_Darstellung_In_Plan_TypeClass>(BV_Darstellung_In_Plan_TypeClass.class, this, BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN);
+		}
+		return bVDarstellungInPlan;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BV_Kategorie_TypeClass getBVKategorie() {
+		return bVKategorie;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBVKategorie(BV_Kategorie_TypeClass newBVKategorie, NotificationChain msgs) {
+		BV_Kategorie_TypeClass oldBVKategorie = bVKategorie;
+		bVKategorie = newBVKategorie;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE, oldBVKategorie, newBVKategorie);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBVKategorie(BV_Kategorie_TypeClass newBVKategorie) {
+		if (newBVKategorie != bVKategorie) {
+			NotificationChain msgs = null;
+			if (bVKategorie != null)
+				msgs = ((InternalEObject)bVKategorie).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE, null, msgs);
+			if (newBVKategorie != null)
+				msgs = ((InternalEObject)newBVKategorie).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE, null, msgs);
+			msgs = basicSetBVKategorie(newBVKategorie, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE, newBVKategorie, newBVKategorie));
 	}
 
 	/**
@@ -396,12 +435,14 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG:
-				return basicSetBearbeitungsvermerkKennung(null, msgs);
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE:
 				return basicSetBearbeitungsvermerkRolle(null, msgs);
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ:
 				return basicSetBestandsrelevanz(null, msgs);
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN:
+				return ((InternalEList<?>)getBVDarstellungInPlan()).basicRemove(otherEnd, msgs);
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE:
+				return basicSetBVKategorie(null, msgs);
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR:
 				return basicSetKommentar(null, msgs);
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT:
@@ -421,12 +462,14 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG:
-				return getBearbeitungsvermerkKennung();
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE:
 				return getBearbeitungsvermerkRolle();
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ:
 				return getBestandsrelevanz();
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN:
+				return getBVDarstellungInPlan();
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE:
+				return getBVKategorie();
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR:
 				return getKommentar();
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT:
@@ -443,17 +486,22 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG:
-				setBearbeitungsvermerkKennung((Bearbeitungsvermerk_Kennung_TypeClass)newValue);
-				return;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE:
 				setBearbeitungsvermerkRolle((Bearbeitungsvermerk_Rolle_TypeClass)newValue);
 				return;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ:
 				setBestandsrelevanz((Bestandsrelevanz_TypeClass)newValue);
+				return;
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN:
+				getBVDarstellungInPlan().clear();
+				getBVDarstellungInPlan().addAll((Collection<? extends BV_Darstellung_In_Plan_TypeClass>)newValue);
+				return;
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE:
+				setBVKategorie((BV_Kategorie_TypeClass)newValue);
 				return;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR:
 				setKommentar((Kommentar_TypeClass)newValue);
@@ -478,14 +526,17 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG:
-				setBearbeitungsvermerkKennung((Bearbeitungsvermerk_Kennung_TypeClass)null);
-				return;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE:
 				setBearbeitungsvermerkRolle((Bearbeitungsvermerk_Rolle_TypeClass)null);
 				return;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ:
 				setBestandsrelevanz((Bestandsrelevanz_TypeClass)null);
+				return;
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN:
+				getBVDarstellungInPlan().clear();
+				return;
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE:
+				setBVKategorie((BV_Kategorie_TypeClass)null);
 				return;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR:
 				setKommentar((Kommentar_TypeClass)null);
@@ -510,12 +561,14 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG:
-				return bearbeitungsvermerkKennung != null;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE:
 				return bearbeitungsvermerkRolle != null;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ:
 				return bestandsrelevanz != null;
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN:
+				return bVDarstellungInPlan != null && !bVDarstellungInPlan.isEmpty();
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE:
+				return bVKategorie != null;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR:
 				return kommentar != null;
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT:

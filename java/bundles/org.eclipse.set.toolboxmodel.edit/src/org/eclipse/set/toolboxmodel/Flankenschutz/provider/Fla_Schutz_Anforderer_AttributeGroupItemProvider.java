@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -33,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz_Anforderer_Attribut
 import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzFactory;
 import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz_Anforderer_AttributeGroup} object.
@@ -109,6 +110,7 @@ public class Fla_Schutz_Anforderer_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(FlankenschutzPackage.Literals.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL);
 			childrenFeatures.add(FlankenschutzPackage.Literals.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER);
 		}
 		return childrenFeatures;
@@ -162,6 +164,7 @@ public class Fla_Schutz_Anforderer_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Fla_Schutz_Anforderer_AttributeGroup.class)) {
+			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL:
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -181,6 +184,11 @@ public class Fla_Schutz_Anforderer_AttributeGroupItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FlankenschutzPackage.Literals.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL,
+				 FlankenschutzFactory.eINSTANCE.createEKW_Kr_Anteil_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block.impl;
 
@@ -74,7 +81,6 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 			case BlockPackage.BLOCK_STRECKE: return createBlock_Strecke();
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP: return createBlock_Strecke_Allg_AttributeGroup();
 			case BlockPackage.BREMSWEG_TYPE_CLASS: return createBremsweg_TypeClass();
-			case BlockPackage.ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS: return createEntwurfsgeschwindigkeit_TypeClass();
 			case BlockPackage.ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS: return createErlaubnis_Staendig_Vorhanden_TypeClass();
 			case BlockPackage.ERLAUBNISABGABESPEICHERUNG_TYPE_CLASS: return createErlaubnisabgabespeicherung_TypeClass();
 			case BlockPackage.ERLAUBNISHOLEN_TYPE_CLASS: return createErlaubnisholen_TypeClass();
@@ -82,7 +88,8 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 			case BlockPackage.SCHALTUNG_TYPE_CLASS: return createSchaltung_TypeClass();
 			case BlockPackage.SCHUTZUEBERTRAGER_TYPE_CLASS: return createSchutzuebertrager_TypeClass();
 			case BlockPackage.STRECKE_ART_TYPE_CLASS: return createStrecke_Art_TypeClass();
-			case BlockPackage.TRAKTION_ART_TYPE_CLASS: return createTraktion_Art_TypeClass();
+			case BlockPackage.STRECKENGESCHWINDIGKEIT_TYPE_CLASS: return createStreckengeschwindigkeit_TypeClass();
+			case BlockPackage.TRAKTION_ART_ELEKTRISCH_TYPE_CLASS: return createTraktion_Art_Elektrisch_TypeClass();
 			case BlockPackage.VORBLOCKWECKER_TYPE_CLASS: return createVorblockwecker_TypeClass();
 			case BlockPackage.ZUGBEEINFLUSSUNG_ART_TYPE_CLASS: return createZugbeeinflussung_Art_TypeClass();
 			case BlockPackage.ZUSATZINFORMATION_TYPE_CLASS: return createZusatzinformation_TypeClass();
@@ -107,8 +114,6 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 				return createENUMSchaltungFromString(eDataType, initialValue);
 			case BlockPackage.ENUM_STRECKE_ART:
 				return createENUMStreckeArtFromString(eDataType, initialValue);
-			case BlockPackage.ENTWURFSGESCHWINDIGKEIT_TYPE:
-				return createEntwurfsgeschwindigkeit_TypeFromString(eDataType, initialValue);
 			case BlockPackage.ENUM_BETRIEBSFUEHRUNG_OBJECT:
 				return createENUMBetriebsfuehrungObjectFromString(eDataType, initialValue);
 			case BlockPackage.ENUM_BLOCK_BAUFORM_OBJECT:
@@ -117,6 +122,8 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 				return createENUMSchaltungObjectFromString(eDataType, initialValue);
 			case BlockPackage.ENUM_STRECKE_ART_OBJECT:
 				return createENUMStreckeArtObjectFromString(eDataType, initialValue);
+			case BlockPackage.STRECKENGESCHWINDIGKEIT_TYPE:
+				return createStreckengeschwindigkeit_TypeFromString(eDataType, initialValue);
 			case BlockPackage.ZUSATZINFORMATION_TYPE:
 				return createZusatzinformation_TypeFromString(eDataType, initialValue);
 			default:
@@ -140,8 +147,6 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 				return convertENUMSchaltungToString(eDataType, instanceValue);
 			case BlockPackage.ENUM_STRECKE_ART:
 				return convertENUMStreckeArtToString(eDataType, instanceValue);
-			case BlockPackage.ENTWURFSGESCHWINDIGKEIT_TYPE:
-				return convertEntwurfsgeschwindigkeit_TypeToString(eDataType, instanceValue);
 			case BlockPackage.ENUM_BETRIEBSFUEHRUNG_OBJECT:
 				return convertENUMBetriebsfuehrungObjectToString(eDataType, instanceValue);
 			case BlockPackage.ENUM_BLOCK_BAUFORM_OBJECT:
@@ -150,6 +155,8 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 				return convertENUMSchaltungObjectToString(eDataType, instanceValue);
 			case BlockPackage.ENUM_STRECKE_ART_OBJECT:
 				return convertENUMStreckeArtObjectToString(eDataType, instanceValue);
+			case BlockPackage.STRECKENGESCHWINDIGKEIT_TYPE:
+				return convertStreckengeschwindigkeit_TypeToString(eDataType, instanceValue);
 			case BlockPackage.ZUSATZINFORMATION_TYPE:
 				return convertZusatzinformation_TypeToString(eDataType, instanceValue);
 			default:
@@ -295,17 +302,6 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 	 * @generated
 	 */
 	@Override
-	public Entwurfsgeschwindigkeit_TypeClass createEntwurfsgeschwindigkeit_TypeClass() {
-		Entwurfsgeschwindigkeit_TypeClassImpl entwurfsgeschwindigkeit_TypeClass = new Entwurfsgeschwindigkeit_TypeClassImpl();
-		return entwurfsgeschwindigkeit_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Erlaubnis_Staendig_Vorhanden_TypeClass createErlaubnis_Staendig_Vorhanden_TypeClass() {
 		Erlaubnis_Staendig_Vorhanden_TypeClassImpl erlaubnis_Staendig_Vorhanden_TypeClass = new Erlaubnis_Staendig_Vorhanden_TypeClassImpl();
 		return erlaubnis_Staendig_Vorhanden_TypeClass;
@@ -383,9 +379,20 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 	 * @generated
 	 */
 	@Override
-	public Traktion_Art_TypeClass createTraktion_Art_TypeClass() {
-		Traktion_Art_TypeClassImpl traktion_Art_TypeClass = new Traktion_Art_TypeClassImpl();
-		return traktion_Art_TypeClass;
+	public Streckengeschwindigkeit_TypeClass createStreckengeschwindigkeit_TypeClass() {
+		Streckengeschwindigkeit_TypeClassImpl streckengeschwindigkeit_TypeClass = new Streckengeschwindigkeit_TypeClassImpl();
+		return streckengeschwindigkeit_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Traktion_Art_Elektrisch_TypeClass createTraktion_Art_Elektrisch_TypeClass() {
+		Traktion_Art_Elektrisch_TypeClassImpl traktion_Art_Elektrisch_TypeClass = new Traktion_Art_Elektrisch_TypeClassImpl();
+		return traktion_Art_Elektrisch_TypeClass;
 	}
 
 	/**
@@ -506,24 +513,6 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger createEntwurfsgeschwindigkeit_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigInteger)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEntwurfsgeschwindigkeit_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ENUMBetriebsfuehrung createENUMBetriebsfuehrungObjectFromString(EDataType eDataType, String initialValue) {
 		return createENUMBetriebsfuehrungFromString(BlockPackage.Literals.ENUM_BETRIEBSFUEHRUNG, initialValue);
 	}
@@ -589,6 +578,24 @@ public class BlockFactoryImpl extends EFactoryImpl implements BlockFactory {
 	 */
 	public String convertENUMStreckeArtObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMStreckeArtToString(BlockPackage.Literals.ENUM_STRECKE_ART, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createStreckengeschwindigkeit_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertStreckengeschwindigkeit_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, instanceValue);
 	}
 
 	/**

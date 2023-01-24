@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.impl;
 
@@ -71,6 +78,8 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 			case SignalePackage.DUNKELSCHALTUNG_TYPE_CLASS: return createDunkelschaltung_TypeClass();
 			case SignalePackage.DURCHFAHRT_TYPE_CLASS: return createDurchfahrt_TypeClass();
 			case SignalePackage.FIKTIVES_SIGNAL_FUNKTION_TYPE_CLASS: return createFiktives_Signal_Funktion_TypeClass();
+			case SignalePackage.FUNDAMENT_ART_TYPE_CLASS: return createFundament_Art_TypeClass();
+			case SignalePackage.FUNKTION_OHNE_SIGNAL_TYPE_CLASS: return createFunktion_Ohne_Signal_TypeClass();
 			case SignalePackage.GEGENGLEIS_TYPE_CLASS: return createGegengleis_TypeClass();
 			case SignalePackage.GELTUNGSBEREICH_TYPE_CLASS: return createGeltungsbereich_TypeClass();
 			case SignalePackage.GESCHALTET_TYPE_CLASS: return createGeschaltet_TypeClass();
@@ -78,6 +87,7 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 			case SignalePackage.OBERE_LICHTPUNKTHOEHE_TYPE_CLASS: return createObere_Lichtpunkthoehe_TypeClass();
 			case SignalePackage.PZB_SCHUTZSTRECKE_SOLL_TYPE_CLASS: return createPZB_Schutzstrecke_Soll_TypeClass();
 			case SignalePackage.RAHMEN_ART_TYPE_CLASS: return createRahmen_Art_TypeClass();
+			case SignalePackage.RAHMEN_HOEHE_TYPE_CLASS: return createRahmen_Hoehe_TypeClass();
 			case SignalePackage.RANGIERSTRASSE_RESTAUFLOESUNG_TYPE_CLASS: return createRangierstrasse_Restaufloesung_TypeClass();
 			case SignalePackage.RICHTPUNKT_TYPE_CLASS: return createRichtpunkt_TypeClass();
 			case SignalePackage.RICHTPUNKTENTFERNUNG_TYPE_CLASS: return createRichtpunktentfernung_TypeClass();
@@ -132,6 +142,10 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 				return createENUMDurchfahrtFromString(eDataType, initialValue);
 			case SignalePackage.ENUM_FIKTIVES_SIGNAL_FUNKTION:
 				return createENUMFiktivesSignalFunktionFromString(eDataType, initialValue);
+			case SignalePackage.ENUM_FUNDAMENT_ART:
+				return createENUMFundamentArtFromString(eDataType, initialValue);
+			case SignalePackage.ENUM_FUNKTION_OHNE_SIGNAL:
+				return createENUMFunktionOhneSignalFromString(eDataType, initialValue);
 			case SignalePackage.ENUM_GELTUNGSBEREICH:
 				return createENUMGeltungsbereichFromString(eDataType, initialValue);
 			case SignalePackage.ENUM_RAHMEN_ART:
@@ -164,6 +178,10 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 				return createENUMDurchfahrtObjectFromString(eDataType, initialValue);
 			case SignalePackage.ENUM_FIKTIVES_SIGNAL_FUNKTION_OBJECT:
 				return createENUMFiktivesSignalFunktionObjectFromString(eDataType, initialValue);
+			case SignalePackage.ENUM_FUNDAMENT_ART_OBJECT:
+				return createENUMFundamentArtObjectFromString(eDataType, initialValue);
+			case SignalePackage.ENUM_FUNKTION_OHNE_SIGNAL_OBJECT:
+				return createENUMFunktionOhneSignalObjectFromString(eDataType, initialValue);
 			case SignalePackage.ENUM_GELTUNGSBEREICH_OBJECT:
 				return createENUMGeltungsbereichObjectFromString(eDataType, initialValue);
 			case SignalePackage.ENUM_RAHMEN_ART_OBJECT:
@@ -190,6 +208,8 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 				return createObere_Lichtpunkthoehe_TypeFromString(eDataType, initialValue);
 			case SignalePackage.PZB_SCHUTZSTRECKE_SOLL_TYPE:
 				return createPZB_Schutzstrecke_Soll_TypeFromString(eDataType, initialValue);
+			case SignalePackage.RAHMEN_HOEHE_TYPE:
+				return createRahmen_Hoehe_TypeFromString(eDataType, initialValue);
 			case SignalePackage.RICHTPUNKT_TYPE:
 				return createRichtpunkt_TypeFromString(eDataType, initialValue);
 			case SignalePackage.RICHTPUNKTENTFERNUNG_TYPE:
@@ -225,6 +245,10 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 				return convertENUMDurchfahrtToString(eDataType, instanceValue);
 			case SignalePackage.ENUM_FIKTIVES_SIGNAL_FUNKTION:
 				return convertENUMFiktivesSignalFunktionToString(eDataType, instanceValue);
+			case SignalePackage.ENUM_FUNDAMENT_ART:
+				return convertENUMFundamentArtToString(eDataType, instanceValue);
+			case SignalePackage.ENUM_FUNKTION_OHNE_SIGNAL:
+				return convertENUMFunktionOhneSignalToString(eDataType, instanceValue);
 			case SignalePackage.ENUM_GELTUNGSBEREICH:
 				return convertENUMGeltungsbereichToString(eDataType, instanceValue);
 			case SignalePackage.ENUM_RAHMEN_ART:
@@ -257,6 +281,10 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 				return convertENUMDurchfahrtObjectToString(eDataType, instanceValue);
 			case SignalePackage.ENUM_FIKTIVES_SIGNAL_FUNKTION_OBJECT:
 				return convertENUMFiktivesSignalFunktionObjectToString(eDataType, instanceValue);
+			case SignalePackage.ENUM_FUNDAMENT_ART_OBJECT:
+				return convertENUMFundamentArtObjectToString(eDataType, instanceValue);
+			case SignalePackage.ENUM_FUNKTION_OHNE_SIGNAL_OBJECT:
+				return convertENUMFunktionOhneSignalObjectToString(eDataType, instanceValue);
 			case SignalePackage.ENUM_GELTUNGSBEREICH_OBJECT:
 				return convertENUMGeltungsbereichObjectToString(eDataType, instanceValue);
 			case SignalePackage.ENUM_RAHMEN_ART_OBJECT:
@@ -283,6 +311,8 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 				return convertObere_Lichtpunkthoehe_TypeToString(eDataType, instanceValue);
 			case SignalePackage.PZB_SCHUTZSTRECKE_SOLL_TYPE:
 				return convertPZB_Schutzstrecke_Soll_TypeToString(eDataType, instanceValue);
+			case SignalePackage.RAHMEN_HOEHE_TYPE:
+				return convertRahmen_Hoehe_TypeToString(eDataType, instanceValue);
 			case SignalePackage.RICHTPUNKT_TYPE:
 				return convertRichtpunkt_TypeToString(eDataType, instanceValue);
 			case SignalePackage.RICHTPUNKTENTFERNUNG_TYPE:
@@ -403,6 +433,28 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 	 * @generated
 	 */
 	@Override
+	public Fundament_Art_TypeClass createFundament_Art_TypeClass() {
+		Fundament_Art_TypeClassImpl fundament_Art_TypeClass = new Fundament_Art_TypeClassImpl();
+		return fundament_Art_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Funktion_Ohne_Signal_TypeClass createFunktion_Ohne_Signal_TypeClass() {
+		Funktion_Ohne_Signal_TypeClassImpl funktion_Ohne_Signal_TypeClass = new Funktion_Ohne_Signal_TypeClassImpl();
+		return funktion_Ohne_Signal_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Gegengleis_TypeClass createGegengleis_TypeClass() {
 		Gegengleis_TypeClassImpl gegengleis_TypeClass = new Gegengleis_TypeClassImpl();
 		return gegengleis_TypeClass;
@@ -472,6 +524,17 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 	public Rahmen_Art_TypeClass createRahmen_Art_TypeClass() {
 		Rahmen_Art_TypeClassImpl rahmen_Art_TypeClass = new Rahmen_Art_TypeClassImpl();
 		return rahmen_Art_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Rahmen_Hoehe_TypeClass createRahmen_Hoehe_TypeClass() {
+		Rahmen_Hoehe_TypeClassImpl rahmen_Hoehe_TypeClass = new Rahmen_Hoehe_TypeClassImpl();
+		return rahmen_Hoehe_TypeClass;
 	}
 
 	/**
@@ -918,6 +981,46 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMFundamentArt createENUMFundamentArtFromString(EDataType eDataType, String initialValue) {
+		ENUMFundamentArt result = ENUMFundamentArt.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFundamentArtToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMFunktionOhneSignal createENUMFunktionOhneSignalFromString(EDataType eDataType, String initialValue) {
+		ENUMFunktionOhneSignal result = ENUMFunktionOhneSignal.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFunktionOhneSignalToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMGeltungsbereich createENUMGeltungsbereichFromString(EDataType eDataType, String initialValue) {
 		ENUMGeltungsbereich result = ENUMGeltungsbereich.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -1226,6 +1329,42 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMFundamentArt createENUMFundamentArtObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMFundamentArtFromString(SignalePackage.Literals.ENUM_FUNDAMENT_ART, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFundamentArtObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMFundamentArtToString(SignalePackage.Literals.ENUM_FUNDAMENT_ART, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMFunktionOhneSignal createENUMFunktionOhneSignalObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMFunktionOhneSignalFromString(SignalePackage.Literals.ENUM_FUNKTION_OHNE_SIGNAL, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFunktionOhneSignalObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMFunktionOhneSignalToString(SignalePackage.Literals.ENUM_FUNKTION_OHNE_SIGNAL, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMGeltungsbereich createENUMGeltungsbereichObjectFromString(EDataType eDataType, String initialValue) {
 		return createENUMGeltungsbereichFromString(SignalePackage.Literals.ENUM_GELTUNGSBEREICH, initialValue);
 	}
@@ -1452,6 +1591,24 @@ public class SignaleFactoryImpl extends EFactoryImpl implements SignaleFactory {
 	 * @generated
 	 */
 	public String convertPZB_Schutzstrecke_Soll_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createRahmen_Hoehe_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRahmen_Hoehe_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
 	}
 

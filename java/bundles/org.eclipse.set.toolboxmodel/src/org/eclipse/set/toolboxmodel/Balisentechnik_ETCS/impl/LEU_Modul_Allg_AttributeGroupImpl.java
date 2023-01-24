@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -15,6 +22,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPacka
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Hersteller_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Geraetestand_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Typ_TypeClass;
 
 /**
@@ -27,6 +35,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Typ_TypeClass;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_Modul_Allg_AttributeGroupImpl#getHersteller <em>Hersteller</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_Modul_Allg_AttributeGroupImpl#getLEUModulArt <em>LEU Modul Art</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_Modul_Allg_AttributeGroupImpl#getLEUModulGeraetestand <em>LEU Modul Geraetestand</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_Modul_Allg_AttributeGroupImpl#getLEUModulTyp <em>LEU Modul Typ</em>}</li>
  * </ul>
  *
@@ -52,6 +61,16 @@ public class LEU_Modul_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	 * @ordered
 	 */
 	protected LEU_Modul_Art_TypeClass lEUModulArt;
+
+	/**
+	 * The cached value of the '{@link #getLEUModulGeraetestand() <em>LEU Modul Geraetestand</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLEUModulGeraetestand()
+	 * @generated
+	 * @ordered
+	 */
+	protected LEU_Modul_Geraetestand_TypeClass lEUModulGeraetestand;
 
 	/**
 	 * The cached value of the '{@link #getLEUModulTyp() <em>LEU Modul Typ</em>}' containment reference.
@@ -178,6 +197,51 @@ public class LEU_Modul_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 */
 	@Override
+	public LEU_Modul_Geraetestand_TypeClass getLEUModulGeraetestand() {
+		return lEUModulGeraetestand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLEUModulGeraetestand(LEU_Modul_Geraetestand_TypeClass newLEUModulGeraetestand, NotificationChain msgs) {
+		LEU_Modul_Geraetestand_TypeClass oldLEUModulGeraetestand = lEUModulGeraetestand;
+		lEUModulGeraetestand = newLEUModulGeraetestand;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND, oldLEUModulGeraetestand, newLEUModulGeraetestand);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLEUModulGeraetestand(LEU_Modul_Geraetestand_TypeClass newLEUModulGeraetestand) {
+		if (newLEUModulGeraetestand != lEUModulGeraetestand) {
+			NotificationChain msgs = null;
+			if (lEUModulGeraetestand != null)
+				msgs = ((InternalEObject)lEUModulGeraetestand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND, null, msgs);
+			if (newLEUModulGeraetestand != null)
+				msgs = ((InternalEObject)newLEUModulGeraetestand).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND, null, msgs);
+			msgs = basicSetLEUModulGeraetestand(newLEUModulGeraetestand, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND, newLEUModulGeraetestand, newLEUModulGeraetestand));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public LEU_Modul_Typ_TypeClass getLEUModulTyp() {
 		return lEUModulTyp;
 	}
@@ -229,6 +293,8 @@ public class LEU_Modul_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return basicSetHersteller(null, msgs);
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_ART:
 				return basicSetLEUModulArt(null, msgs);
+			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND:
+				return basicSetLEUModulGeraetestand(null, msgs);
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_TYP:
 				return basicSetLEUModulTyp(null, msgs);
 			default:
@@ -248,6 +314,8 @@ public class LEU_Modul_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return getHersteller();
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_ART:
 				return getLEUModulArt();
+			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND:
+				return getLEUModulGeraetestand();
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_TYP:
 				return getLEUModulTyp();
 			default:
@@ -268,6 +336,9 @@ public class LEU_Modul_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return;
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_ART:
 				setLEUModulArt((LEU_Modul_Art_TypeClass)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND:
+				setLEUModulGeraetestand((LEU_Modul_Geraetestand_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_TYP:
 				setLEUModulTyp((LEU_Modul_Typ_TypeClass)newValue);
@@ -292,6 +363,9 @@ public class LEU_Modul_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_ART:
 				setLEUModulArt((LEU_Modul_Art_TypeClass)null);
 				return;
+			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND:
+				setLEUModulGeraetestand((LEU_Modul_Geraetestand_TypeClass)null);
+				return;
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_TYP:
 				setLEUModulTyp((LEU_Modul_Typ_TypeClass)null);
 				return;
@@ -313,6 +387,8 @@ public class LEU_Modul_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return hersteller != null;
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_ART:
 				return lEUModulArt != null;
+			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND:
+				return lEUModulGeraetestand != null;
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_TYP:
 				return lEUModulTyp != null;
 			default:

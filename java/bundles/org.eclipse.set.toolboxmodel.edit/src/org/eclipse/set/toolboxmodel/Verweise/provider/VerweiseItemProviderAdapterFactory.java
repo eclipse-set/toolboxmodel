@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -170,6 +171,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_AnhangBearbeitungsvermerk_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_AnhangBearbeitungsvermerk_TypeClassItemProvider iD_AnhangBearbeitungsvermerk_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_AnhangBearbeitungsvermerk_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_AnhangBearbeitungsvermerk_TypeClassAdapter() {
+		if (iD_AnhangBearbeitungsvermerk_TypeClassItemProvider == null) {
+			iD_AnhangBearbeitungsvermerk_TypeClassItemProvider = new ID_AnhangBearbeitungsvermerk_TypeClassItemProvider(this);
+		}
+
+		return iD_AnhangBearbeitungsvermerk_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Anschluss_Element_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -193,6 +217,52 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider iD_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_ATO_TS_Instanz_ohne_Proxy_TypeClassAdapter() {
+		if (iD_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider = new ID_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_ATO_TS_Instanz_TypeClassItemProvider iD_ATO_TS_Instanz_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_ATO_TS_Instanz_TypeClassAdapter() {
+		if (iD_ATO_TS_Instanz_TypeClassItemProvider == null) {
+			iD_ATO_TS_Instanz_TypeClassItemProvider = new ID_ATO_TS_Instanz_TypeClassItemProvider(this);
+		}
+
+		return iD_ATO_TS_Instanz_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,6 +283,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Aussenelementansteuerung_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider iD_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Aussenelementansteuerung_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Aussenelementansteuerung_ohne_Proxy_TypeClassAdapter() {
+		if (iD_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider = new ID_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider;
 	}
 
 	/**
@@ -377,29 +470,6 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Bearbeitungsvermerk_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ID_Bearbeitungsvermerk_TypeClassItemProvider iD_Bearbeitungsvermerk_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Bearbeitungsvermerk_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createID_Bearbeitungsvermerk_TypeClassAdapter() {
-		if (iD_Bearbeitungsvermerk_TypeClassItemProvider == null) {
-			iD_Bearbeitungsvermerk_TypeClassItemProvider = new ID_Bearbeitungsvermerk_TypeClassItemProvider(this);
-		}
-
-		return iD_Bearbeitungsvermerk_TypeClassItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Anzeige_Element_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -538,6 +608,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Befestigung_Bauwerk_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Befestigung_Bauwerk_TypeClassItemProvider iD_Befestigung_Bauwerk_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Befestigung_Bauwerk_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Befestigung_Bauwerk_TypeClassAdapter() {
+		if (iD_Befestigung_Bauwerk_TypeClassItemProvider == null) {
+			iD_Befestigung_Bauwerk_TypeClassItemProvider = new ID_Befestigung_Bauwerk_TypeClassItemProvider(this);
+		}
+
+		return iD_Befestigung_Bauwerk_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Beginn_Bereich_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -561,26 +654,49 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdatei_ohne_Proxy_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Bezugspunkt_Positionierung_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ID_Binaerdatei_ohne_Proxy_TypeClassItemProvider iD_Binaerdatei_ohne_Proxy_TypeClassItemProvider;
+	protected ID_Bezugspunkt_Positionierung_TypeClassItemProvider iD_Bezugspunkt_Positionierung_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdatei_ohne_Proxy_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Bezugspunkt_Positionierung_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createID_Binaerdatei_ohne_Proxy_TypeClassAdapter() {
-		if (iD_Binaerdatei_ohne_Proxy_TypeClassItemProvider == null) {
-			iD_Binaerdatei_ohne_Proxy_TypeClassItemProvider = new ID_Binaerdatei_ohne_Proxy_TypeClassItemProvider(this);
+	public Adapter createID_Bezugspunkt_Positionierung_TypeClassAdapter() {
+		if (iD_Bezugspunkt_Positionierung_TypeClassItemProvider == null) {
+			iD_Bezugspunkt_Positionierung_TypeClassItemProvider = new ID_Bezugspunkt_Positionierung_TypeClassItemProvider(this);
 		}
 
-		return iD_Binaerdatei_ohne_Proxy_TypeClassItemProvider;
+		return iD_Bezugspunkt_Positionierung_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdaten_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Binaerdaten_ohne_Proxy_TypeClassItemProvider iD_Binaerdaten_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdaten_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Binaerdaten_ohne_Proxy_TypeClassAdapter() {
+		if (iD_Binaerdaten_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_Binaerdaten_ohne_Proxy_TypeClassItemProvider = new ID_Binaerdaten_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_Binaerdaten_ohne_Proxy_TypeClassItemProvider;
 	}
 
 	/**
@@ -860,26 +976,26 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezugspunkt_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezug_Funktional_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ID_DP_Bezugspunkt_TypeClassItemProvider iD_DP_Bezugspunkt_TypeClassItemProvider;
+	protected ID_DP_Bezug_Funktional_TypeClassItemProvider iD_DP_Bezug_Funktional_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezugspunkt_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezug_Funktional_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createID_DP_Bezugspunkt_TypeClassAdapter() {
-		if (iD_DP_Bezugspunkt_TypeClassItemProvider == null) {
-			iD_DP_Bezugspunkt_TypeClassItemProvider = new ID_DP_Bezugspunkt_TypeClassItemProvider(this);
+	public Adapter createID_DP_Bezug_Funktional_TypeClassAdapter() {
+		if (iD_DP_Bezug_Funktional_TypeClassItemProvider == null) {
+			iD_DP_Bezug_Funktional_TypeClassItemProvider = new ID_DP_Bezug_Funktional_TypeClassItemProvider(this);
 		}
 
-		return iD_DP_Bezugspunkt_TypeClassItemProvider;
+		return iD_DP_Bezug_Funktional_TypeClassItemProvider;
 	}
 
 	/**
@@ -998,26 +1114,26 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Energie_Primaer_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Energie_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ID_Energie_Primaer_TypeClassItemProvider iD_Energie_Primaer_TypeClassItemProvider;
+	protected ID_Energie_TypeClassItemProvider iD_Energie_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Energie_Primaer_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Energie_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createID_Energie_Primaer_TypeClassAdapter() {
-		if (iD_Energie_Primaer_TypeClassItemProvider == null) {
-			iD_Energie_Primaer_TypeClassItemProvider = new ID_Energie_Primaer_TypeClassItemProvider(this);
+	public Adapter createID_Energie_TypeClassAdapter() {
+		if (iD_Energie_TypeClassItemProvider == null) {
+			iD_Energie_TypeClassItemProvider = new ID_Energie_TypeClassItemProvider(this);
 		}
 
-		return iD_Energie_Primaer_TypeClassItemProvider;
+		return iD_Energie_TypeClassItemProvider;
 	}
 
 	/**
@@ -1041,6 +1157,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_ESTW_Zentraleinheit_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_ETCS_Kante_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_ETCS_Kante_TypeClassItemProvider iD_ETCS_Kante_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_ETCS_Kante_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_ETCS_Kante_TypeClassAdapter() {
+		if (iD_ETCS_Kante_TypeClassItemProvider == null) {
+			iD_ETCS_Kante_TypeClassItemProvider = new ID_ETCS_Kante_TypeClassItemProvider(this);
+		}
+
+		return iD_ETCS_Kante_TypeClassItemProvider;
 	}
 
 	/**
@@ -1110,6 +1249,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_EV_Modul_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Fachtelegramm_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Fachtelegramm_ohne_Proxy_TypeClassItemProvider iD_Fachtelegramm_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Fachtelegramm_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Fachtelegramm_ohne_Proxy_TypeClassAdapter() {
+		if (iD_Fachtelegramm_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_Fachtelegramm_ohne_Proxy_TypeClassItemProvider = new ID_Fachtelegramm_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_Fachtelegramm_ohne_Proxy_TypeClassItemProvider;
 	}
 
 	/**
@@ -1320,6 +1482,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider iD_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Fstr_DWeg_ohne_Proxy_TypeClassAdapter() {
+		if (iD_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider = new ID_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1340,6 +1525,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_Fstr_DWeg_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Fahrweg_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider iD_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Fahrweg_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Fstr_Fahrweg_ohne_Proxy_TypeClassAdapter() {
+		if (iD_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider = new ID_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider;
 	}
 
 	/**
@@ -1458,6 +1666,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Kante_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_GEO_Kante_TypeClassItemProvider iD_GEO_Kante_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Kante_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_GEO_Kante_TypeClassAdapter() {
+		if (iD_GEO_Kante_TypeClassItemProvider == null) {
+			iD_GEO_Kante_TypeClassItemProvider = new ID_GEO_Kante_TypeClassItemProvider(this);
+		}
+
+		return iD_GEO_Kante_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Knoten_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1524,29 +1755,6 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_GEO_Punkt_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Geraet_Programmiert_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ID_Geraet_Programmiert_TypeClassItemProvider iD_Geraet_Programmiert_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Geraet_Programmiert_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createID_Geraet_Programmiert_TypeClassAdapter() {
-		if (iD_Geraet_Programmiert_TypeClassItemProvider == null) {
-			iD_Geraet_Programmiert_TypeClassItemProvider = new ID_Geraet_Programmiert_TypeClassItemProvider(this);
-		}
-
-		return iD_Geraet_Programmiert_TypeClassItemProvider;
 	}
 
 	/**
@@ -1734,6 +1942,98 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Komponente_Programmiert_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Komponente_Programmiert_TypeClassItemProvider iD_Komponente_Programmiert_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Komponente_Programmiert_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Komponente_Programmiert_TypeClassAdapter() {
+		if (iD_Komponente_Programmiert_TypeClassItemProvider == null) {
+			iD_Komponente_Programmiert_TypeClassItemProvider = new ID_Komponente_Programmiert_TypeClassItemProvider(this);
+		}
+
+		return iD_Komponente_Programmiert_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Blattschnitt_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Lageplan_Blattschnitt_TypeClassItemProvider iD_Lageplan_Blattschnitt_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Blattschnitt_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Lageplan_Blattschnitt_TypeClassAdapter() {
+		if (iD_Lageplan_Blattschnitt_TypeClassItemProvider == null) {
+			iD_Lageplan_Blattschnitt_TypeClassItemProvider = new ID_Lageplan_Blattschnitt_TypeClassItemProvider(this);
+		}
+
+		return iD_Lageplan_Blattschnitt_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Lageplan_TypeClassItemProvider iD_Lageplan_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Lageplan_TypeClassAdapter() {
+		if (iD_Lageplan_TypeClassItemProvider == null) {
+			iD_Lageplan_TypeClassItemProvider = new ID_Lageplan_TypeClassItemProvider(this);
+		}
+
+		return iD_Lageplan_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Zustand_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Lageplan_Zustand_TypeClassItemProvider iD_Lageplan_Zustand_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Zustand_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Lageplan_Zustand_TypeClassAdapter() {
+		if (iD_Lageplan_Zustand_TypeClassItemProvider == null) {
+			iD_Lageplan_Zustand_TypeClassItemProvider = new ID_Lageplan_Zustand_TypeClassItemProvider(this);
+		}
+
+		return iD_Lageplan_Zustand_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Anlage_ohne_Proxy_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1780,26 +2080,26 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezugspunkt_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezug_Funktional_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ID_LEU_Bezugspunkt_TypeClassItemProvider iD_LEU_Bezugspunkt_TypeClassItemProvider;
+	protected ID_LEU_Bezug_Funktional_TypeClassItemProvider iD_LEU_Bezug_Funktional_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezugspunkt_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezug_Funktional_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createID_LEU_Bezugspunkt_TypeClassAdapter() {
-		if (iD_LEU_Bezugspunkt_TypeClassItemProvider == null) {
-			iD_LEU_Bezugspunkt_TypeClassItemProvider = new ID_LEU_Bezugspunkt_TypeClassItemProvider(this);
+	public Adapter createID_LEU_Bezug_Funktional_TypeClassAdapter() {
+		if (iD_LEU_Bezug_Funktional_TypeClassItemProvider == null) {
+			iD_LEU_Bezug_Funktional_TypeClassItemProvider = new ID_LEU_Bezug_Funktional_TypeClassItemProvider(this);
 		}
 
-		return iD_LEU_Bezugspunkt_TypeClassItemProvider;
+		return iD_LEU_Bezug_Funktional_TypeClassItemProvider;
 	}
 
 	/**
@@ -1869,6 +2169,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_Markante_Stelle_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Markanter_Punkt_Gleis_Abschluss_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider iD_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Markanter_Punkt_Gleis_Abschluss_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Markanter_Punkt_Gleis_Abschluss_TypeClassAdapter() {
+		if (iD_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider == null) {
+			iD_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider = new ID_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider(this);
+		}
+
+		return iD_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider;
 	}
 
 	/**
@@ -1961,6 +2284,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_NB_Zone_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Oertlichkeit_Ausgabe_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Oertlichkeit_Ausgabe_TypeClassItemProvider iD_Oertlichkeit_Ausgabe_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Oertlichkeit_Ausgabe_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Oertlichkeit_Ausgabe_TypeClassAdapter() {
+		if (iD_Oertlichkeit_Ausgabe_TypeClassItemProvider == null) {
+			iD_Oertlichkeit_Ausgabe_TypeClassItemProvider = new ID_Oertlichkeit_Ausgabe_TypeClassItemProvider(this);
+		}
+
+		return iD_Oertlichkeit_Ausgabe_TypeClassItemProvider;
 	}
 
 	/**
@@ -2214,6 +2560,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_RBC_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Regelzeichnung_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Regelzeichnung_ohne_Proxy_TypeClassItemProvider iD_Regelzeichnung_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Regelzeichnung_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Regelzeichnung_ohne_Proxy_TypeClassAdapter() {
+		if (iD_Regelzeichnung_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_Regelzeichnung_ohne_Proxy_TypeClassItemProvider = new ID_Regelzeichnung_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_Regelzeichnung_ohne_Proxy_TypeClassItemProvider;
 	}
 
 	/**
@@ -2605,6 +2974,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		}
 
 		return iD_Stellwerk_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_Strecke_Bremsweg_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider iD_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_Strecke_Bremsweg_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_Strecke_Bremsweg_ohne_Proxy_TypeClassAdapter() {
+		if (iD_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider = new ID_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider;
 	}
 
 	/**
@@ -3229,6 +3621,29 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_ZLV_Bus_ohne_Proxy_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ID_ZLV_Bus_ohne_Proxy_TypeClassItemProvider iD_ZLV_Bus_ohne_Proxy_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Verweise.ID_ZLV_Bus_ohne_Proxy_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createID_ZLV_Bus_ohne_Proxy_TypeClassAdapter() {
+		if (iD_ZLV_Bus_ohne_Proxy_TypeClassItemProvider == null) {
+			iD_ZLV_Bus_ohne_Proxy_TypeClassItemProvider = new ID_ZLV_Bus_ohne_Proxy_TypeClassItemProvider(this);
+		}
+
+		return iD_ZLV_Bus_ohne_Proxy_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Verweise.ID_ZLV_Bus_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3544,8 +3959,12 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_Anforderung_TypeClassItemProvider != null) iD_Anforderung_TypeClassItemProvider.dispose();
 		if (iD_Anhang_ohne_Proxy_TypeClassItemProvider != null) iD_Anhang_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Anhang_TypeClassItemProvider != null) iD_Anhang_TypeClassItemProvider.dispose();
+		if (iD_AnhangBearbeitungsvermerk_TypeClassItemProvider != null) iD_AnhangBearbeitungsvermerk_TypeClassItemProvider.dispose();
 		if (iD_Anschluss_Element_TypeClassItemProvider != null) iD_Anschluss_Element_TypeClassItemProvider.dispose();
+		if (iD_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider != null) iD_ATO_TS_Instanz_ohne_Proxy_TypeClassItemProvider.dispose();
+		if (iD_ATO_TS_Instanz_TypeClassItemProvider != null) iD_ATO_TS_Instanz_TypeClassItemProvider.dispose();
 		if (iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassItemProvider != null) iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClassItemProvider.dispose();
+		if (iD_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider != null) iD_Aussenelementansteuerung_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Aussenelementansteuerung_TypeClassItemProvider != null) iD_Aussenelementansteuerung_TypeClassItemProvider.dispose();
 		if (iD_Bahnsteig_Anlage_TypeClassItemProvider != null) iD_Bahnsteig_Anlage_TypeClassItemProvider.dispose();
 		if (iD_Bahnsteig_Kante_ohne_Proxy_TypeClassItemProvider != null) iD_Bahnsteig_Kante_ohne_Proxy_TypeClassItemProvider.dispose();
@@ -3553,15 +3972,16 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_Balise_ohne_Proxy_TypeClassItemProvider != null) iD_Balise_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Balise_TypeClassItemProvider != null) iD_Balise_TypeClassItemProvider.dispose();
 		if (iD_Basis_Objekt_TypeClassItemProvider != null) iD_Basis_Objekt_TypeClassItemProvider.dispose();
-		if (iD_Bearbeitungsvermerk_TypeClassItemProvider != null) iD_Bearbeitungsvermerk_TypeClassItemProvider.dispose();
 		if (iD_Bedien_Anzeige_Element_TypeClassItemProvider != null) iD_Bedien_Anzeige_Element_TypeClassItemProvider.dispose();
 		if (iD_Bedien_Bezirk_TypeClassItemProvider != null) iD_Bedien_Bezirk_TypeClassItemProvider.dispose();
 		if (iD_Bedien_Einrichtung_Oertlich_TypeClassItemProvider != null) iD_Bedien_Einrichtung_Oertlich_TypeClassItemProvider.dispose();
 		if (iD_Bedien_Oberflaeche_TypeClassItemProvider != null) iD_Bedien_Oberflaeche_TypeClassItemProvider.dispose();
 		if (iD_Bedien_Standort_TypeClassItemProvider != null) iD_Bedien_Standort_TypeClassItemProvider.dispose();
 		if (iD_Bedien_Zentrale_TypeClassItemProvider != null) iD_Bedien_Zentrale_TypeClassItemProvider.dispose();
+		if (iD_Befestigung_Bauwerk_TypeClassItemProvider != null) iD_Befestigung_Bauwerk_TypeClassItemProvider.dispose();
 		if (iD_Beginn_Bereich_TypeClassItemProvider != null) iD_Beginn_Bereich_TypeClassItemProvider.dispose();
-		if (iD_Binaerdatei_ohne_Proxy_TypeClassItemProvider != null) iD_Binaerdatei_ohne_Proxy_TypeClassItemProvider.dispose();
+		if (iD_Bezugspunkt_Positionierung_TypeClassItemProvider != null) iD_Bezugspunkt_Positionierung_TypeClassItemProvider.dispose();
+		if (iD_Binaerdaten_ohne_Proxy_TypeClassItemProvider != null) iD_Binaerdaten_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Block_Anlage_TypeClassItemProvider != null) iD_Block_Anlage_TypeClassItemProvider.dispose();
 		if (iD_Block_Element_TypeClassItemProvider != null) iD_Block_Element_TypeClassItemProvider.dispose();
 		if (iD_Block_Strecke_TypeClassItemProvider != null) iD_Block_Strecke_TypeClassItemProvider.dispose();
@@ -3574,17 +3994,19 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_BUE_WS_Fstr_Zuordnung_TypeClassItemProvider != null) iD_BUE_WS_Fstr_Zuordnung_TypeClassItemProvider.dispose();
 		if (iD_Datenpunkt_ohne_Proxy_TypeClassItemProvider != null) iD_Datenpunkt_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Datenpunkt_TypeClassItemProvider != null) iD_Datenpunkt_TypeClassItemProvider.dispose();
-		if (iD_DP_Bezugspunkt_TypeClassItemProvider != null) iD_DP_Bezugspunkt_TypeClassItemProvider.dispose();
+		if (iD_DP_Bezug_Funktional_TypeClassItemProvider != null) iD_DP_Bezug_Funktional_TypeClassItemProvider.dispose();
 		if (iD_Einschaltpunkt_TypeClassItemProvider != null) iD_Einschaltpunkt_TypeClassItemProvider.dispose();
 		if (iD_Element_Grenze_TypeClassItemProvider != null) iD_Element_Grenze_TypeClassItemProvider.dispose();
 		if (iD_Element_TypeClassItemProvider != null) iD_Element_TypeClassItemProvider.dispose();
 		if (iD_Element_Unterbringung_TypeClassItemProvider != null) iD_Element_Unterbringung_TypeClassItemProvider.dispose();
 		if (iD_Energie_Eingang_TypeClassItemProvider != null) iD_Energie_Eingang_TypeClassItemProvider.dispose();
-		if (iD_Energie_Primaer_TypeClassItemProvider != null) iD_Energie_Primaer_TypeClassItemProvider.dispose();
+		if (iD_Energie_TypeClassItemProvider != null) iD_Energie_TypeClassItemProvider.dispose();
 		if (iD_ESTW_Zentraleinheit_TypeClassItemProvider != null) iD_ESTW_Zentraleinheit_TypeClassItemProvider.dispose();
+		if (iD_ETCS_Kante_TypeClassItemProvider != null) iD_ETCS_Kante_TypeClassItemProvider.dispose();
 		if (iD_ETCS_Knoten_ohne_Proxy_TypeClassItemProvider != null) iD_ETCS_Knoten_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_ETCS_Knoten_TypeClassItemProvider != null) iD_ETCS_Knoten_TypeClassItemProvider.dispose();
 		if (iD_EV_Modul_TypeClassItemProvider != null) iD_EV_Modul_TypeClassItemProvider.dispose();
+		if (iD_Fachtelegramm_ohne_Proxy_TypeClassItemProvider != null) iD_Fachtelegramm_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Fachtelegramm_TypeClassItemProvider != null) iD_Fachtelegramm_TypeClassItemProvider.dispose();
 		if (iD_Fla_Schutz_TypeClassItemProvider != null) iD_Fla_Schutz_TypeClassItemProvider.dispose();
 		if (iD_FMA_Anlage_Rangier_Frei_TypeClassItemProvider != null) iD_FMA_Anlage_Rangier_Frei_TypeClassItemProvider.dispose();
@@ -3594,16 +4016,18 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_Fortschaltung_Start_TypeClassItemProvider != null) iD_Fortschaltung_Start_TypeClassItemProvider.dispose();
 		if (iD_Fstr_Aneinander_TypeClassItemProvider != null) iD_Fstr_Aneinander_TypeClassItemProvider.dispose();
 		if (iD_Fstr_Ausschluss_Besonders_TypeClassItemProvider != null) iD_Fstr_Ausschluss_Besonders_TypeClassItemProvider.dispose();
+		if (iD_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider != null) iD_Fstr_DWeg_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Fstr_DWeg_TypeClassItemProvider != null) iD_Fstr_DWeg_TypeClassItemProvider.dispose();
+		if (iD_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider != null) iD_Fstr_Fahrweg_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Fstr_Fahrweg_TypeClassItemProvider != null) iD_Fstr_Fahrweg_TypeClassItemProvider.dispose();
 		if (iD_Fstr_Zug_Rangier_TypeClassItemProvider != null) iD_Fstr_Zug_Rangier_TypeClassItemProvider.dispose();
 		if (iD_FT_Anschaltbedingung_TypeClassItemProvider != null) iD_FT_Anschaltbedingung_TypeClassItemProvider.dispose();
 		if (iD_FT_Fahrweg_Teil_TypeClassItemProvider != null) iD_FT_Fahrweg_Teil_TypeClassItemProvider.dispose();
 		if (iD_GEO_Art_TypeClassItemProvider != null) iD_GEO_Art_TypeClassItemProvider.dispose();
+		if (iD_GEO_Kante_TypeClassItemProvider != null) iD_GEO_Kante_TypeClassItemProvider.dispose();
 		if (iD_GEO_Knoten_TypeClassItemProvider != null) iD_GEO_Knoten_TypeClassItemProvider.dispose();
 		if (iD_GEO_Punkt_ohne_Proxy_TypeClassItemProvider != null) iD_GEO_Punkt_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_GEO_Punkt_TypeClassItemProvider != null) iD_GEO_Punkt_TypeClassItemProvider.dispose();
-		if (iD_Geraet_Programmiert_TypeClassItemProvider != null) iD_Geraet_Programmiert_TypeClassItemProvider.dispose();
 		if (iD_GFR_Anlage_ohne_Proxy_TypeClassItemProvider != null) iD_GFR_Anlage_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Gleis_Abschnitt_TypeClassItemProvider != null) iD_Gleis_Abschnitt_TypeClassItemProvider.dispose();
 		if (iD_Gleis_Bezeichnung_TypeClassItemProvider != null) iD_Gleis_Bezeichnung_TypeClassItemProvider.dispose();
@@ -3612,16 +4036,22 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_Hoehenpunkt_TypeClassItemProvider != null) iD_Hoehenpunkt_TypeClassItemProvider.dispose();
 		if (iD_Information_Eingang_TypeClassItemProvider != null) iD_Information_Eingang_TypeClassItemProvider.dispose();
 		if (iD_Information_Primaer_TypeClassItemProvider != null) iD_Information_Primaer_TypeClassItemProvider.dispose();
+		if (iD_Komponente_Programmiert_TypeClassItemProvider != null) iD_Komponente_Programmiert_TypeClassItemProvider.dispose();
+		if (iD_Lageplan_Blattschnitt_TypeClassItemProvider != null) iD_Lageplan_Blattschnitt_TypeClassItemProvider.dispose();
+		if (iD_Lageplan_TypeClassItemProvider != null) iD_Lageplan_TypeClassItemProvider.dispose();
+		if (iD_Lageplan_Zustand_TypeClassItemProvider != null) iD_Lageplan_Zustand_TypeClassItemProvider.dispose();
 		if (iD_LEU_Anlage_ohne_Proxy_TypeClassItemProvider != null) iD_LEU_Anlage_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_LEU_Anlage_TypeClassItemProvider != null) iD_LEU_Anlage_TypeClassItemProvider.dispose();
-		if (iD_LEU_Bezugspunkt_TypeClassItemProvider != null) iD_LEU_Bezugspunkt_TypeClassItemProvider.dispose();
+		if (iD_LEU_Bezug_Funktional_TypeClassItemProvider != null) iD_LEU_Bezug_Funktional_TypeClassItemProvider.dispose();
 		if (iD_LEU_Schaltkasten_ohne_Proxy_TypeClassItemProvider != null) iD_LEU_Schaltkasten_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_LO_Einbau_TypeClassItemProvider != null) iD_LO_Einbau_TypeClassItemProvider.dispose();
 		if (iD_Markante_Stelle_TypeClassItemProvider != null) iD_Markante_Stelle_TypeClassItemProvider.dispose();
+		if (iD_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider != null) iD_Markanter_Punkt_Gleis_Abschluss_TypeClassItemProvider.dispose();
 		if (iD_Markanter_Punkt_TypeClassItemProvider != null) iD_Markanter_Punkt_TypeClassItemProvider.dispose();
 		if (iD_NB_Element_TypeClassItemProvider != null) iD_NB_Element_TypeClassItemProvider.dispose();
 		if (iD_NB_TypeClassItemProvider != null) iD_NB_TypeClassItemProvider.dispose();
 		if (iD_NB_Zone_TypeClassItemProvider != null) iD_NB_Zone_TypeClassItemProvider.dispose();
+		if (iD_Oertlichkeit_Ausgabe_TypeClassItemProvider != null) iD_Oertlichkeit_Ausgabe_TypeClassItemProvider.dispose();
 		if (iD_Oertlichkeit_Proxy_TypeClassItemProvider != null) iD_Oertlichkeit_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Oertlichkeit_TypeClassItemProvider != null) iD_Oertlichkeit_TypeClassItemProvider.dispose();
 		if (iD_PlanPro_Schnittstelle_TypeClassItemProvider != null) iD_PlanPro_Schnittstelle_TypeClassItemProvider.dispose();
@@ -3633,6 +4063,7 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_PZB_Element_Zuordnung_TypeClassItemProvider != null) iD_PZB_Element_Zuordnung_TypeClassItemProvider.dispose();
 		if (iD_Quellelement_TypeClassItemProvider != null) iD_Quellelement_TypeClassItemProvider.dispose();
 		if (iD_RBC_TypeClassItemProvider != null) iD_RBC_TypeClassItemProvider.dispose();
+		if (iD_Regelzeichnung_ohne_Proxy_TypeClassItemProvider != null) iD_Regelzeichnung_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Regelzeichnung_TypeClassItemProvider != null) iD_Regelzeichnung_TypeClassItemProvider.dispose();
 		if (iD_Schalter_TypeClassItemProvider != null) iD_Schalter_TypeClassItemProvider.dispose();
 		if (iD_Schaltmittel_Zuordnung_TypeClassItemProvider != null) iD_Schaltmittel_Zuordnung_TypeClassItemProvider.dispose();
@@ -3650,6 +4081,7 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_Sonderanlage_TypeClassItemProvider != null) iD_Sonderanlage_TypeClassItemProvider.dispose();
 		if (iD_Stellelement_TypeClassItemProvider != null) iD_Stellelement_TypeClassItemProvider.dispose();
 		if (iD_Stellwerk_TypeClassItemProvider != null) iD_Stellwerk_TypeClassItemProvider.dispose();
+		if (iD_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider != null) iD_Strecke_Bremsweg_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_Strecke_Punkt_TypeClassItemProvider != null) iD_Strecke_Punkt_TypeClassItemProvider.dispose();
 		if (iD_Strecke_TypeClassItemProvider != null) iD_Strecke_TypeClassItemProvider.dispose();
 		if (iD_Technischer_Punkt_TypeClassItemProvider != null) iD_Technischer_Punkt_TypeClassItemProvider.dispose();
@@ -3677,6 +4109,7 @@ public class VerweiseItemProviderAdapterFactory extends VerweiseAdapterFactory i
 		if (iD_ZL_Fstr_TypeClassItemProvider != null) iD_ZL_Fstr_TypeClassItemProvider.dispose();
 		if (iD_ZL_Signalgruppe_TypeClassItemProvider != null) iD_ZL_Signalgruppe_TypeClassItemProvider.dispose();
 		if (iD_ZL_TypeClassItemProvider != null) iD_ZL_TypeClassItemProvider.dispose();
+		if (iD_ZLV_Bus_ohne_Proxy_TypeClassItemProvider != null) iD_ZLV_Bus_ohne_Proxy_TypeClassItemProvider.dispose();
 		if (iD_ZLV_Bus_TypeClassItemProvider != null) iD_ZLV_Bus_TypeClassItemProvider.dispose();
 		if (iD_ZN_Anzeigefeld_Anstoss_TypeClassItemProvider != null) iD_ZN_Anzeigefeld_Anstoss_TypeClassItemProvider.dispose();
 		if (iD_ZN_Anzeigefeld_TypeClassItemProvider != null) iD_ZN_Anzeigefeld_TypeClassItemProvider.dispose();

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -29,7 +36,8 @@ public interface Signal_Fiktiv_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zusätzliche Angabe zu Aktiven Signalen, die sich selbsttätig stellen können. Dabei wird unterschieden zwischen Signalen mit Signalselbststellbetrieb (Sb) und in der Zuglenkung (ZL). DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung, mittelbar aus Angaben in der Zugstraßentabelle zu erkennen. 
+	 * Art der automatischen Einstellung.
+	 * DB-Regelwerk Im bisherigen PT1 ohne eindeutige Darstellung; bei realen, aktiven Signalen mittelbar aus Angaben in der Zugstraßentabelle zu erkennen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auto Einstellung</em>' containment reference.
 	 * @see #setAutoEinstellung(Auto_Einstellung_TypeClass)
@@ -56,7 +64,7 @@ public interface Signal_Fiktiv_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Funktion (Verwendungsmöglichkeit) eines fiktiven Signals. Sollen an einem Punkt mehrere Funktionen realisiert werden, so muss für jede Funktion je ein fiktives Signal an diesem Punkt vorgesehen werden. DB-Regelwerk Fiktive Signale sind als Start- oder Zielpunkte in den Zug- oder Rangierstraßentabellen erkennbar. Ihre Funktion ist nicht unmittelbar dargestellt, sie ergibt sich aus der Verwendung.
+	 * Funktion (Verwendungsmöglichkeit) eines fiktiven Signals. Sollen an einem Punkt mehrere Funktionen realisiert werden, ist das Attribut mehrfach einzubinden. DB-Regelwerk Fiktive Signale sind als Start- oder Zielpunkte in den Zug- oder Rangierstraßentabellen erkennbar. Ihre Funktion ist nicht unmittelbar dargestellt, sie ergibt sich aus der Verwendung.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fiktives Signal Funktion</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Fiktiv_AttributeGroup_FiktivesSignalFunktion()

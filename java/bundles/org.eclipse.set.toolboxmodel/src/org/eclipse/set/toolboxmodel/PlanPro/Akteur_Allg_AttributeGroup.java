@@ -54,8 +54,7 @@ public interface Akteur_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Nachname des Akteurs, beschränkt auf 10 Zeichen. DB-Regelwerk Schriftfeldeinträge gemäß Ril 819.0103, Namen der (maßgeblich) handelnden Person für definierte Rollen des Planungsprozesses.
-	 * 
+	 * Nachname des Akteurs, beschränkt auf 10 Zeichen. DB-Regelwerk Schriftfeldeinträge gemäß Ril 886.0102, Namen der (maßgeblich) handelnden Person für definierte Rollen des Planungsprozesses.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name Akteur10</em>' containment reference.
 	 * @see #setNameAkteur10(Name_Akteur_10_TypeClass)
@@ -81,8 +80,7 @@ public interface Akteur_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Nachname des Akteurs, beschränkt auf 5 Zeichen. DB-Regelwerk Schriftfeldeinträge gemäß Ril 819.0103, Namen der (maßgeblich) handelnden Person für definierte Rollen des Planungsprozesses.
-	 * 
+	 * Nachname des Akteurs, beschränkt auf 5 Zeichen. DB-Regelwerk Schriftfeldeinträge gemäß Ril 886.0102, Namen der (maßgeblich) handelnden Person für definierte Rollen des Planungsprozesses.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name Akteur5</em>' containment reference.
 	 * @see #setNameAkteur5(Name_Akteur_5_TypeClass)

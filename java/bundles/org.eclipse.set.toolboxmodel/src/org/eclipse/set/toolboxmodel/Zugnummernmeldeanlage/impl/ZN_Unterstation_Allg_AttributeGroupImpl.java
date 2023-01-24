@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl;
 
@@ -19,11 +26,13 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bf_Kennung_TypeClass;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.KUs_Zeittelegramm_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Koppelunterstation_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZBS_Adresse_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZBS_Anbindung_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation_Bf_Nr_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zeitsynchronisation_Funkuhr_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlagePackage;
 
 /**
@@ -36,8 +45,10 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageP
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_Unterstation_Allg_AttributeGroupImpl#getBfKennung <em>Bf Kennung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_Unterstation_Allg_AttributeGroupImpl#getKoppelunterstation <em>Koppelunterstation</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_Unterstation_Allg_AttributeGroupImpl#getKUsZeittelegramm <em>KUs Zeittelegramm</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_Unterstation_Allg_AttributeGroupImpl#getZBSAdresse <em>ZBS Adresse</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_Unterstation_Allg_AttributeGroupImpl#getZBSAnbindung <em>ZBS Anbindung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_Unterstation_Allg_AttributeGroupImpl#getZeitsynchronisationFunkuhr <em>Zeitsynchronisation Funkuhr</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_Unterstation_Allg_AttributeGroupImpl#getZNUnterstationBfNr <em>ZN Unterstation Bf Nr</em>}</li>
  * </ul>
  *
@@ -65,6 +76,16 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	protected Koppelunterstation_TypeClass koppelunterstation;
 
 	/**
+	 * The cached value of the '{@link #getKUsZeittelegramm() <em>KUs Zeittelegramm</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKUsZeittelegramm()
+	 * @generated
+	 * @ordered
+	 */
+	protected KUs_Zeittelegramm_TypeClass kUsZeittelegramm;
+
+	/**
 	 * The cached value of the '{@link #getZBSAdresse() <em>ZBS Adresse</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +104,16 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	 * @ordered
 	 */
 	protected ZBS_Anbindung_TypeClass zBSAnbindung;
+
+	/**
+	 * The cached value of the '{@link #getZeitsynchronisationFunkuhr() <em>Zeitsynchronisation Funkuhr</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZeitsynchronisationFunkuhr()
+	 * @generated
+	 * @ordered
+	 */
+	protected Zeitsynchronisation_Funkuhr_TypeClass zeitsynchronisationFunkuhr;
 
 	/**
 	 * The cached value of the '{@link #getZNUnterstationBfNr() <em>ZN Unterstation Bf Nr</em>}' containment reference list.
@@ -209,6 +240,51 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	 * @generated
 	 */
 	@Override
+	public KUs_Zeittelegramm_TypeClass getKUsZeittelegramm() {
+		return kUsZeittelegramm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetKUsZeittelegramm(KUs_Zeittelegramm_TypeClass newKUsZeittelegramm, NotificationChain msgs) {
+		KUs_Zeittelegramm_TypeClass oldKUsZeittelegramm = kUsZeittelegramm;
+		kUsZeittelegramm = newKUsZeittelegramm;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM, oldKUsZeittelegramm, newKUsZeittelegramm);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setKUsZeittelegramm(KUs_Zeittelegramm_TypeClass newKUsZeittelegramm) {
+		if (newKUsZeittelegramm != kUsZeittelegramm) {
+			NotificationChain msgs = null;
+			if (kUsZeittelegramm != null)
+				msgs = ((InternalEObject)kUsZeittelegramm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM, null, msgs);
+			if (newKUsZeittelegramm != null)
+				msgs = ((InternalEObject)newKUsZeittelegramm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM, null, msgs);
+			msgs = basicSetKUsZeittelegramm(newKUsZeittelegramm, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM, newKUsZeittelegramm, newKUsZeittelegramm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ZBS_Adresse_TypeClass getZBSAdresse() {
 		return zBSAdresse;
 	}
@@ -299,6 +375,51 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	 * @generated
 	 */
 	@Override
+	public Zeitsynchronisation_Funkuhr_TypeClass getZeitsynchronisationFunkuhr() {
+		return zeitsynchronisationFunkuhr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetZeitsynchronisationFunkuhr(Zeitsynchronisation_Funkuhr_TypeClass newZeitsynchronisationFunkuhr, NotificationChain msgs) {
+		Zeitsynchronisation_Funkuhr_TypeClass oldZeitsynchronisationFunkuhr = zeitsynchronisationFunkuhr;
+		zeitsynchronisationFunkuhr = newZeitsynchronisationFunkuhr;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR, oldZeitsynchronisationFunkuhr, newZeitsynchronisationFunkuhr);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setZeitsynchronisationFunkuhr(Zeitsynchronisation_Funkuhr_TypeClass newZeitsynchronisationFunkuhr) {
+		if (newZeitsynchronisationFunkuhr != zeitsynchronisationFunkuhr) {
+			NotificationChain msgs = null;
+			if (zeitsynchronisationFunkuhr != null)
+				msgs = ((InternalEObject)zeitsynchronisationFunkuhr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR, null, msgs);
+			if (newZeitsynchronisationFunkuhr != null)
+				msgs = ((InternalEObject)newZeitsynchronisationFunkuhr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR, null, msgs);
+			msgs = basicSetZeitsynchronisationFunkuhr(newZeitsynchronisationFunkuhr, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR, newZeitsynchronisationFunkuhr, newZeitsynchronisationFunkuhr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<ZN_Unterstation_Bf_Nr_AttributeGroup> getZNUnterstationBfNr() {
 		if (zNUnterstationBfNr == null) {
 			zNUnterstationBfNr = new EObjectContainmentEList<ZN_Unterstation_Bf_Nr_AttributeGroup>(ZN_Unterstation_Bf_Nr_AttributeGroup.class, this, ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR);
@@ -318,10 +439,14 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 				return basicSetBfKennung(null, msgs);
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION:
 				return basicSetKoppelunterstation(null, msgs);
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM:
+				return basicSetKUsZeittelegramm(null, msgs);
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE:
 				return basicSetZBSAdresse(null, msgs);
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG:
 				return basicSetZBSAnbindung(null, msgs);
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR:
+				return basicSetZeitsynchronisationFunkuhr(null, msgs);
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR:
 				return ((InternalEList<?>)getZNUnterstationBfNr()).basicRemove(otherEnd, msgs);
 			default:
@@ -341,10 +466,14 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 				return getBfKennung();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION:
 				return getKoppelunterstation();
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM:
+				return getKUsZeittelegramm();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE:
 				return getZBSAdresse();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG:
 				return getZBSAnbindung();
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR:
+				return getZeitsynchronisationFunkuhr();
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR:
 				return getZNUnterstationBfNr();
 			default:
@@ -367,11 +496,17 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION:
 				setKoppelunterstation((Koppelunterstation_TypeClass)newValue);
 				return;
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM:
+				setKUsZeittelegramm((KUs_Zeittelegramm_TypeClass)newValue);
+				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE:
 				setZBSAdresse((ZBS_Adresse_TypeClass)newValue);
 				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG:
 				setZBSAnbindung((ZBS_Anbindung_TypeClass)newValue);
+				return;
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR:
+				setZeitsynchronisationFunkuhr((Zeitsynchronisation_Funkuhr_TypeClass)newValue);
 				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR:
 				getZNUnterstationBfNr().clear();
@@ -397,11 +532,17 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION:
 				setKoppelunterstation((Koppelunterstation_TypeClass)null);
 				return;
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM:
+				setKUsZeittelegramm((KUs_Zeittelegramm_TypeClass)null);
+				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE:
 				setZBSAdresse((ZBS_Adresse_TypeClass)null);
 				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG:
 				setZBSAnbindung((ZBS_Anbindung_TypeClass)null);
+				return;
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR:
+				setZeitsynchronisationFunkuhr((Zeitsynchronisation_Funkuhr_TypeClass)null);
 				return;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR:
 				getZNUnterstationBfNr().clear();
@@ -424,10 +565,14 @@ public class ZN_Unterstation_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 				return bfKennung != null;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION:
 				return koppelunterstation != null;
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM:
+				return kUsZeittelegramm != null;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE:
 				return zBSAdresse != null;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG:
 				return zBSAnbindung != null;
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR:
+				return zeitsynchronisationFunkuhr != null;
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR:
 				return zNUnterstationBfNr != null && !zNUnterstationBfNr.isEmpty();
 			default:

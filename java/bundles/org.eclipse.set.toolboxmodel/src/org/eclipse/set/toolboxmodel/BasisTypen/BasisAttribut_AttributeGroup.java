@@ -1,11 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,19 +47,20 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk;
  */
 public interface BasisAttribut_AttributeGroup extends EObject {
 	/**
-	 * Returns the value of the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk}.
+	 * Returns the value of the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet. 
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Bearbeitungsvermerk</em>' reference list.
+	 * @return the value of the '<em>ID Bearbeitungsvermerk</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage#getBasisAttribut_AttributeGroup_IDBearbeitungsvermerk()
-	 * @model extendedMetaData="kind='element' name='ID_Bearbeitungsvermerk'"
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ID_Bearbeitungsvermerk'"
 	 * @generated
 	 */
-	EList<Bearbeitungsvermerk> getIDBearbeitungsvermerk();
+	EList<ID_Bearbeitungsvermerk_TypeClass> getIDBearbeitungsvermerk();
 
 } // BasisAttribut_AttributeGroup

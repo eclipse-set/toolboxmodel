@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis;
 
@@ -155,42 +162,6 @@ public interface GleisFactory extends EFactory {
 	 * @generated
 	 */
 	Lichtraumprofil_TypeClass createLichtraumprofil_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>Nutzung Gueterzug Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Nutzung Gueterzug Type Class</em>'.
-	 * @generated
-	 */
-	Nutzung_Gueterzug_TypeClass createNutzung_Gueterzug_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>Nutzung Rangier Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Nutzung Rangier Type Class</em>'.
-	 * @generated
-	 */
-	Nutzung_Rangier_TypeClass createNutzung_Rangier_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>Nutzung Reisezug Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Nutzung Reisezug Type Class</em>'.
-	 * @generated
-	 */
-	Nutzung_Reisezug_TypeClass createNutzung_Reisezug_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>Nutzung SBahn Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Nutzung SBahn Type Class</em>'.
-	 * @generated
-	 */
-	Nutzung_SBahn_TypeClass createNutzung_SBahn_TypeClass();
 
 	/**
 	 * Returns the package supported by this factory.

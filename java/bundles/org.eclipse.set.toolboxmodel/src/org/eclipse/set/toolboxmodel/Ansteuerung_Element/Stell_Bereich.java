@@ -1,8 +1,14 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bereich_Objekt;
 
 /**
@@ -18,6 +24,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Bereich_Objekt;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getZusatzinformationStellwerk <em>Zusatzinformation Stellwerk</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getBezeichnungStellwerk <em>Bezeichnung Stellwerk</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getIDAussenelementansteuerung <em>ID Aussenelementansteuerung</em>}</li>
  * </ul>
  *
@@ -26,6 +34,58 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Bereich_Objekt;
  * @generated
  */
 public interface Stell_Bereich extends Bereich_Objekt {
+	/**
+	 * Returns the value of the '<em><b>Zusatzinformation Stellwerk</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Ergänzende Information zur Beschreibung des Stellbereichs.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Zusatzinformation Stellwerk</em>' containment reference.
+	 * @see #setZusatzinformationStellwerk(Zusatzinformation_Stellwerk_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getStell_Bereich_ZusatzinformationStellwerk()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Zusatzinformation_Stellwerk'"
+	 * @generated
+	 */
+	Zusatzinformation_Stellwerk_TypeClass getZusatzinformationStellwerk();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getZusatzinformationStellwerk <em>Zusatzinformation Stellwerk</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Zusatzinformation Stellwerk</em>' containment reference.
+	 * @see #getZusatzinformationStellwerk()
+	 * @generated
+	 */
+	void setZusatzinformationStellwerk(Zusatzinformation_Stellwerk_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Bezeichnung Stellwerk</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Bezeichnung des Stellwerks, sofern kein Verweis auf eine Aussenelementansteuerung möglich ist (z. B. "Relaisstellwerk xyz").
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Bezeichnung Stellwerk</em>' containment reference.
+	 * @see #setBezeichnungStellwerk(Bezeichnung_Stellwerk_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getStell_Bereich_BezeichnungStellwerk()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Bezeichnung_Stellwerk'"
+	 * @generated
+	 */
+	Bezeichnung_Stellwerk_TypeClass getBezeichnungStellwerk();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getBezeichnungStellwerk <em>Bezeichnung Stellwerk</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bezeichnung Stellwerk</em>' containment reference.
+	 * @see #getBezeichnungStellwerk()
+	 * @generated
+	 */
+	void setBezeichnungStellwerk(Bezeichnung_Stellwerk_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>ID Aussenelementansteuerung</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -38,7 +98,7 @@ public interface Stell_Bereich extends Bereich_Objekt {
 	 * @see #unsetIDAussenelementansteuerung()
 	 * @see #setIDAussenelementansteuerung(Aussenelementansteuerung)
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getStell_Bereich_IDAussenelementansteuerung()
-	 * @model unsettable="true" required="true"
+	 * @model unsettable="true"
 	 *        extendedMetaData="kind='element' name='ID_Aussenelementansteuerung'"
 	 * @generated
 	 */

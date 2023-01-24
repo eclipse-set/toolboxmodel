@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -26,7 +33,7 @@ public interface LEU_Anlage_Bezeichnung_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Bezeichnung der LEU-Anlage. Im Regelfall ist die Bezeichnung des Bezugspunkts zu übernehmen (Planungsunterstützung). Sofern mehrere LEU-Anlagen in einem LEU-Schaltkasten vorhanden sind, wird die Bezeichnung der LEU_Anlage aus den Bezeichnungen der Bezugspunkte zusammengesetzt (z. B. 60P5/60P6).
+	 * Bezeichnung der LEU-Anlage. Im Regelfall ist die Bezeichnung des Bezugspunkts zu übernehmen (Planungsunterstützung).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bezeichnung LEU Anlage</em>' containment reference.
 	 * @see #setBezeichnungLEUAnlage(Bezeichnung_LEU_Anlage_TypeClass)

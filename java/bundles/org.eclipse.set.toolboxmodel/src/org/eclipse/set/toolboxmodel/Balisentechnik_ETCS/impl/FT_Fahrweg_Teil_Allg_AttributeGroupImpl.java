@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -13,6 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Fahrweg_Teil_Allg_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FW_Teil_Nummer_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Umfahrstrasse_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ziel_Ist_Fahrwegende_TypeClass;
 
@@ -24,6 +32,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ziel_Ist_Fahrwegende_Typ
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_Fahrweg_Teil_Allg_AttributeGroupImpl#getFWTeilNummer <em>FW Teil Nummer</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_Fahrweg_Teil_Allg_AttributeGroupImpl#getUmfahrstrasse <em>Umfahrstrasse</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_Fahrweg_Teil_Allg_AttributeGroupImpl#getZielIstFahrwegende <em>Ziel Ist Fahrwegende</em>}</li>
  * </ul>
@@ -31,6 +40,16 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ziel_Ist_Fahrwegende_Typ
  * @generated
  */
 public class FT_Fahrweg_Teil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements FT_Fahrweg_Teil_Allg_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getFWTeilNummer() <em>FW Teil Nummer</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFWTeilNummer()
+	 * @generated
+	 * @ordered
+	 */
+	protected FW_Teil_Nummer_TypeClass fWTeilNummer;
+
 	/**
 	 * The cached value of the '{@link #getUmfahrstrasse() <em>Umfahrstrasse</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -68,6 +87,51 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	protected EClass eStaticClass() {
 		return Balisentechnik_ETCSPackage.eINSTANCE.getFT_Fahrweg_Teil_Allg_AttributeGroup();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FW_Teil_Nummer_TypeClass getFWTeilNummer() {
+		return fWTeilNummer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFWTeilNummer(FW_Teil_Nummer_TypeClass newFWTeilNummer, NotificationChain msgs) {
+		FW_Teil_Nummer_TypeClass oldFWTeilNummer = fWTeilNummer;
+		fWTeilNummer = newFWTeilNummer;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER, oldFWTeilNummer, newFWTeilNummer);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFWTeilNummer(FW_Teil_Nummer_TypeClass newFWTeilNummer) {
+		if (newFWTeilNummer != fWTeilNummer) {
+			NotificationChain msgs = null;
+			if (fWTeilNummer != null)
+				msgs = ((InternalEObject)fWTeilNummer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER, null, msgs);
+			if (newFWTeilNummer != null)
+				msgs = ((InternalEObject)newFWTeilNummer).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER, null, msgs);
+			msgs = basicSetFWTeilNummer(newFWTeilNummer, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER, newFWTeilNummer, newFWTeilNummer));
 	}
 
 	/**
@@ -168,6 +232,8 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER:
+				return basicSetFWTeilNummer(null, msgs);
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__UMFAHRSTRASSE:
 				return basicSetUmfahrstrasse(null, msgs);
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__ZIEL_IST_FAHRWEGENDE:
@@ -185,6 +251,8 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER:
+				return getFWTeilNummer();
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__UMFAHRSTRASSE:
 				return getUmfahrstrasse();
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__ZIEL_IST_FAHRWEGENDE:
@@ -202,6 +270,9 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER:
+				setFWTeilNummer((FW_Teil_Nummer_TypeClass)newValue);
+				return;
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__UMFAHRSTRASSE:
 				setUmfahrstrasse((Umfahrstrasse_TypeClass)newValue);
 				return;
@@ -222,6 +293,9 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER:
+				setFWTeilNummer((FW_Teil_Nummer_TypeClass)null);
+				return;
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__UMFAHRSTRASSE:
 				setUmfahrstrasse((Umfahrstrasse_TypeClass)null);
 				return;
@@ -242,6 +316,8 @@ public class FT_Fahrweg_Teil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__FW_TEIL_NUMMER:
+				return fWTeilNummer != null;
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__UMFAHRSTRASSE:
 				return umfahrstrasse != null;
 			case Balisentechnik_ETCSPackage.FT_FAHRWEG_TEIL_ALLG_ATTRIBUTE_GROUP__ZIEL_IST_FAHRWEGENDE:

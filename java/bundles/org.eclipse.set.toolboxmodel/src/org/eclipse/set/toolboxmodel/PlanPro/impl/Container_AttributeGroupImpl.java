@@ -16,6 +16,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.set.toolboxmodel.ATO.ATO_Segment_Profile;
+import org.eclipse.set.toolboxmodel.ATO.ATO_TS_Instanz;
+import org.eclipse.set.toolboxmodel.ATO.ATO_Timing_Point;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich;
@@ -52,11 +55,12 @@ import org.eclipse.set.toolboxmodel.Bahnuebergang.Schrankenantrieb;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Verkehrszeichen;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Knoten;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Richtungsanzeige;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.EV_Modul;
@@ -69,6 +73,8 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Schaltkasten;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Gruppe;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Streckeneigenschaft;
 
@@ -119,6 +125,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Hoehenlinie;
 import org.eclipse.set.toolboxmodel.Geodaten.Hoehenpunkt;
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Knoten;
@@ -139,13 +146,11 @@ import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Verteilpunkt;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Knoten;
-
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Bedien_Anzeige_Element;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone_Element;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone_Grenze;
-
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Bedien_Anzeige_Element;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone_Element;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone_Grenze;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Element;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente;
@@ -189,6 +194,7 @@ import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Signalgruppe;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Signalgruppe_Zuordnung;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_US_Zuordnung;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Akustik;
@@ -208,6 +214,9 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getAnhang <em>Anhang</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getATOSegmentProfile <em>ATO Segment Profile</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getATOTimingPoint <em>ATO Timing Point</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getATOTSInstanz <em>ATOTS Instanz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getAussenelementansteuerung <em>Aussenelementansteuerung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBahnsteigAnlage <em>Bahnsteig Anlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBahnsteigDach <em>Bahnsteig Dach</em>}</li>
@@ -226,7 +235,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBedienPlatz <em>Bedien Platz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBedienStandort <em>Bedien Standort</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBedienZentrale <em>Bedien Zentrale</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBinaerdatei <em>Binaerdatei</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBinaerdaten <em>Binaerdaten</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBlockAnlage <em>Block Anlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBlockElement <em>Block Element</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getBlockStrecke <em>Block Strecke</em>}</li>
@@ -250,6 +259,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getESTWZentraleinheit <em>ESTW Zentraleinheit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getETCSKante <em>ETCS Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getETCSKnoten <em>ETCS Knoten</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getETCSRichtungsanzeige <em>ETCS Richtungsanzeige</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getETCSSignal <em>ETCS Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getETCSWKr <em>ETCSW Kr</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getEVModul <em>EV Modul</em>}</li>
@@ -328,6 +338,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getStellBereich <em>Stell Bereich</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getStellelement <em>Stellelement</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getStrecke <em>Strecke</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getStreckeBremsweg <em>Strecke Bremsweg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getStreckePunkt <em>Strecke Punkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getTechnikStandort <em>Technik Standort</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getTechnischerBereich <em>Technischer Bereich</em>}</li>
@@ -346,6 +357,8 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getWKrGspKomponente <em>WKr Gsp Komponente</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getWeichenlaufkette <em>Weichenlaufkette</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getWeichenlaufketteZuordnung <em>Weichenlaufkette Zuordnung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZBSSchutzstrecke <em>ZBS Schutzstrecke</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZBSSignal <em>ZBS Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZL <em>ZL</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZLDLPAbschnitt <em>ZLDLP Abschnitt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZLDLPFstr <em>ZLDLP Fstr</em>}</li>
@@ -354,6 +367,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZLSignalgruppe <em>ZL Signalgruppe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZLSignalgruppeZuordnung <em>ZL Signalgruppe Zuordnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZLVBus <em>ZLV Bus</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZLVBusBesondereAnlage <em>ZLV Bus Besondere Anlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZLVBusUSZuordnung <em>ZLV Bus US Zuordnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZN <em>ZN</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Container_AttributeGroupImpl#getZNAkustik <em>ZN Akustik</em>}</li>
@@ -380,6 +394,36 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected EList<Anhang> anhang;
+
+	/**
+	 * The cached value of the '{@link #getATOSegmentProfile() <em>ATO Segment Profile</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getATOSegmentProfile()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ATO_Segment_Profile> aTOSegmentProfile;
+
+	/**
+	 * The cached value of the '{@link #getATOTimingPoint() <em>ATO Timing Point</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getATOTimingPoint()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ATO_Timing_Point> aTOTimingPoint;
+
+	/**
+	 * The cached value of the '{@link #getATOTSInstanz() <em>ATOTS Instanz</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getATOTSInstanz()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ATO_TS_Instanz> aTOTSInstanz;
 
 	/**
 	 * The cached value of the '{@link #getAussenelementansteuerung() <em>Aussenelementansteuerung</em>}' containment reference list.
@@ -562,14 +606,14 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	protected EList<Bedien_Zentrale> bedienZentrale;
 
 	/**
-	 * The cached value of the '{@link #getBinaerdatei() <em>Binaerdatei</em>}' containment reference list.
+	 * The cached value of the '{@link #getBinaerdaten() <em>Binaerdaten</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBinaerdatei()
+	 * @see #getBinaerdaten()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Binaerdatei> binaerdatei;
+	protected EList<Binaerdaten> binaerdaten;
 
 	/**
 	 * The cached value of the '{@link #getBlockAnlage() <em>Block Anlage</em>}' containment reference list.
@@ -800,6 +844,16 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected EList<ETCS_Knoten> eTCSKnoten;
+
+	/**
+	 * The cached value of the '{@link #getETCSRichtungsanzeige() <em>ETCS Richtungsanzeige</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getETCSRichtungsanzeige()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ETCS_Richtungsanzeige> eTCSRichtungsanzeige;
 
 	/**
 	 * The cached value of the '{@link #getETCSSignal() <em>ETCS Signal</em>}' containment reference list.
@@ -1582,6 +1636,16 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	protected EList<Strecke> strecke;
 
 	/**
+	 * The cached value of the '{@link #getStreckeBremsweg() <em>Strecke Bremsweg</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStreckeBremsweg()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Strecke_Bremsweg> streckeBremsweg;
+
+	/**
 	 * The cached value of the '{@link #getStreckePunkt() <em>Strecke Punkt</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1762,6 +1826,26 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	protected EList<Weichenlaufkette_Zuordnung> weichenlaufketteZuordnung;
 
 	/**
+	 * The cached value of the '{@link #getZBSSchutzstrecke() <em>ZBS Schutzstrecke</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZBSSchutzstrecke()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ZBS_Schutzstrecke> zBSSchutzstrecke;
+
+	/**
+	 * The cached value of the '{@link #getZBSSignal() <em>ZBS Signal</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZBSSignal()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ZBS_Signal> zBSSignal;
+
+	/**
 	 * The cached value of the '{@link #getZL() <em>ZL</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1840,6 +1924,16 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected EList<ZLV_Bus> zLVBus;
+
+	/**
+	 * The cached value of the '{@link #getZLVBusBesondereAnlage() <em>ZLV Bus Besondere Anlage</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZLVBusBesondereAnlage()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ZLV_Bus_Besondere_Anlage> zLVBusBesondereAnlage;
 
 	/**
 	 * The cached value of the '{@link #getZLVBusUSZuordnung() <em>ZLV Bus US Zuordnung</em>}' containment reference list.
@@ -1991,6 +2085,45 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			anhang = new EObjectContainmentEList<Anhang>(Anhang.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ANHANG);
 		}
 		return anhang;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ATO_Segment_Profile> getATOSegmentProfile() {
+		if (aTOSegmentProfile == null) {
+			aTOSegmentProfile = new EObjectContainmentEList<ATO_Segment_Profile>(ATO_Segment_Profile.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE);
+		}
+		return aTOSegmentProfile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ATO_Timing_Point> getATOTimingPoint() {
+		if (aTOTimingPoint == null) {
+			aTOTimingPoint = new EObjectContainmentEList<ATO_Timing_Point>(ATO_Timing_Point.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT);
+		}
+		return aTOTimingPoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ATO_TS_Instanz> getATOTSInstanz() {
+		if (aTOTSInstanz == null) {
+			aTOTSInstanz = new EObjectContainmentEList<ATO_TS_Instanz>(ATO_TS_Instanz.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ);
+		}
+		return aTOTSInstanz;
 	}
 
 	/**
@@ -2233,11 +2366,11 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
-	public EList<Binaerdatei> getBinaerdatei() {
-		if (binaerdatei == null) {
-			binaerdatei = new EObjectContainmentEList<Binaerdatei>(Binaerdatei.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI);
+	public EList<Binaerdaten> getBinaerdaten() {
+		if (binaerdaten == null) {
+			binaerdaten = new EObjectContainmentEList<Binaerdaten>(Binaerdaten.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN);
 		}
-		return binaerdatei;
+		return binaerdaten;
 	}
 
 	/**
@@ -2537,6 +2670,19 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			eTCSKnoten = new EObjectContainmentEList<ETCS_Knoten>(ETCS_Knoten.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN);
 		}
 		return eTCSKnoten;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ETCS_Richtungsanzeige> getETCSRichtungsanzeige() {
+		if (eTCSRichtungsanzeige == null) {
+			eTCSRichtungsanzeige = new EObjectContainmentEList<ETCS_Richtungsanzeige>(ETCS_Richtungsanzeige.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE);
+		}
+		return eTCSRichtungsanzeige;
 	}
 
 	/**
@@ -3559,6 +3705,19 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
+	public EList<Strecke_Bremsweg> getStreckeBremsweg() {
+		if (streckeBremsweg == null) {
+			streckeBremsweg = new EObjectContainmentEList<Strecke_Bremsweg>(Strecke_Bremsweg.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG);
+		}
+		return streckeBremsweg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<Strecke_Punkt> getStreckePunkt() {
 		if (streckePunkt == null) {
 			streckePunkt = new EObjectContainmentEList<Strecke_Punkt>(Strecke_Punkt.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT);
@@ -3793,6 +3952,32 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
+	public EList<ZBS_Schutzstrecke> getZBSSchutzstrecke() {
+		if (zBSSchutzstrecke == null) {
+			zBSSchutzstrecke = new EObjectContainmentEList<ZBS_Schutzstrecke>(ZBS_Schutzstrecke.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE);
+		}
+		return zBSSchutzstrecke;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ZBS_Signal> getZBSSignal() {
+		if (zBSSignal == null) {
+			zBSSignal = new EObjectContainmentEList<ZBS_Signal>(ZBS_Signal.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL);
+		}
+		return zBSSignal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<ZL> getZL() {
 		if (zL == null) {
 			zL = new EObjectContainmentEList<ZL>(ZL.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL);
@@ -3889,6 +4074,19 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			zLVBus = new EObjectContainmentEList<ZLV_Bus>(ZLV_Bus.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS);
 		}
 		return zLVBus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ZLV_Bus_Besondere_Anlage> getZLVBusBesondereAnlage() {
+		if (zLVBusBesondereAnlage == null) {
+			zLVBusBesondereAnlage = new EObjectContainmentEList<ZLV_Bus_Besondere_Anlage>(ZLV_Bus_Besondere_Anlage.class, this, PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE);
+		}
+		return zLVBusBesondereAnlage;
 	}
 
 	/**
@@ -4057,6 +4255,12 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ANHANG:
 				return ((InternalEList<?>)getAnhang()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE:
+				return ((InternalEList<?>)getATOSegmentProfile()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT:
+				return ((InternalEList<?>)getATOTimingPoint()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ:
+				return ((InternalEList<?>)getATOTSInstanz()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG:
 				return ((InternalEList<?>)getAussenelementansteuerung()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ANLAGE:
@@ -4093,8 +4297,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return ((InternalEList<?>)getBedienStandort()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ZENTRALE:
 				return ((InternalEList<?>)getBedienZentrale()).basicRemove(otherEnd, msgs);
-			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI:
-				return ((InternalEList<?>)getBinaerdatei()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN:
+				return ((InternalEList<?>)getBinaerdaten()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE:
 				return ((InternalEList<?>)getBlockAnlage()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ELEMENT:
@@ -4141,6 +4345,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return ((InternalEList<?>)getETCSKante()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN:
 				return ((InternalEList<?>)getETCSKnoten()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE:
+				return ((InternalEList<?>)getETCSRichtungsanzeige()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL:
 				return ((InternalEList<?>)getETCSSignal()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCSW_KR:
@@ -4297,6 +4503,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return ((InternalEList<?>)getStellelement()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE:
 				return ((InternalEList<?>)getStrecke()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG:
+				return ((InternalEList<?>)getStreckeBremsweg()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT:
 				return ((InternalEList<?>)getStreckePunkt()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__TECHNIK_STANDORT:
@@ -4333,6 +4541,10 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return ((InternalEList<?>)getWeichenlaufkette()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE_ZUORDNUNG:
 				return ((InternalEList<?>)getWeichenlaufketteZuordnung()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE:
+				return ((InternalEList<?>)getZBSSchutzstrecke()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL:
+				return ((InternalEList<?>)getZBSSignal()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL:
 				return ((InternalEList<?>)getZL()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLDLP_ABSCHNITT:
@@ -4349,6 +4561,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return ((InternalEList<?>)getZLSignalgruppeZuordnung()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS:
 				return ((InternalEList<?>)getZLVBus()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE:
+				return ((InternalEList<?>)getZLVBusBesondereAnlage()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG:
 				return ((InternalEList<?>)getZLVBusUSZuordnung()).basicRemove(otherEnd, msgs);
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZN:
@@ -4388,6 +4602,12 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ANHANG:
 				return getAnhang();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE:
+				return getATOSegmentProfile();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT:
+				return getATOTimingPoint();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ:
+				return getATOTSInstanz();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG:
 				return getAussenelementansteuerung();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ANLAGE:
@@ -4424,8 +4644,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return getBedienStandort();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ZENTRALE:
 				return getBedienZentrale();
-			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI:
-				return getBinaerdatei();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN:
+				return getBinaerdaten();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE:
 				return getBlockAnlage();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ELEMENT:
@@ -4472,6 +4692,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return getETCSKante();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN:
 				return getETCSKnoten();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE:
+				return getETCSRichtungsanzeige();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL:
 				return getETCSSignal();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCSW_KR:
@@ -4628,6 +4850,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return getStellelement();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE:
 				return getStrecke();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG:
+				return getStreckeBremsweg();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT:
 				return getStreckePunkt();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__TECHNIK_STANDORT:
@@ -4664,6 +4888,10 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return getWeichenlaufkette();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE_ZUORDNUNG:
 				return getWeichenlaufketteZuordnung();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE:
+				return getZBSSchutzstrecke();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL:
+				return getZBSSignal();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL:
 				return getZL();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLDLP_ABSCHNITT:
@@ -4680,6 +4908,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return getZLSignalgruppeZuordnung();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS:
 				return getZLVBus();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE:
+				return getZLVBusBesondereAnlage();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG:
 				return getZLVBusUSZuordnung();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZN:
@@ -4721,6 +4951,18 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ANHANG:
 				getAnhang().clear();
 				getAnhang().addAll((Collection<? extends Anhang>)newValue);
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE:
+				getATOSegmentProfile().clear();
+				getATOSegmentProfile().addAll((Collection<? extends ATO_Segment_Profile>)newValue);
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT:
+				getATOTimingPoint().clear();
+				getATOTimingPoint().addAll((Collection<? extends ATO_Timing_Point>)newValue);
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ:
+				getATOTSInstanz().clear();
+				getATOTSInstanz().addAll((Collection<? extends ATO_TS_Instanz>)newValue);
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG:
 				getAussenelementansteuerung().clear();
@@ -4794,9 +5036,9 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				getBedienZentrale().clear();
 				getBedienZentrale().addAll((Collection<? extends Bedien_Zentrale>)newValue);
 				return;
-			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI:
-				getBinaerdatei().clear();
-				getBinaerdatei().addAll((Collection<? extends Binaerdatei>)newValue);
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN:
+				getBinaerdaten().clear();
+				getBinaerdaten().addAll((Collection<? extends Binaerdaten>)newValue);
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE:
 				getBlockAnlage().clear();
@@ -4889,6 +5131,10 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN:
 				getETCSKnoten().clear();
 				getETCSKnoten().addAll((Collection<? extends ETCS_Knoten>)newValue);
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE:
+				getETCSRichtungsanzeige().clear();
+				getETCSRichtungsanzeige().addAll((Collection<? extends ETCS_Richtungsanzeige>)newValue);
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL:
 				getETCSSignal().clear();
@@ -5202,6 +5448,10 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				getStrecke().clear();
 				getStrecke().addAll((Collection<? extends Strecke>)newValue);
 				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG:
+				getStreckeBremsweg().clear();
+				getStreckeBremsweg().addAll((Collection<? extends Strecke_Bremsweg>)newValue);
+				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT:
 				getStreckePunkt().clear();
 				getStreckePunkt().addAll((Collection<? extends Strecke_Punkt>)newValue);
@@ -5274,6 +5524,14 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				getWeichenlaufketteZuordnung().clear();
 				getWeichenlaufketteZuordnung().addAll((Collection<? extends Weichenlaufkette_Zuordnung>)newValue);
 				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE:
+				getZBSSchutzstrecke().clear();
+				getZBSSchutzstrecke().addAll((Collection<? extends ZBS_Schutzstrecke>)newValue);
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL:
+				getZBSSignal().clear();
+				getZBSSignal().addAll((Collection<? extends ZBS_Signal>)newValue);
+				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL:
 				getZL().clear();
 				getZL().addAll((Collection<? extends ZL>)newValue);
@@ -5305,6 +5563,10 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS:
 				getZLVBus().clear();
 				getZLVBus().addAll((Collection<? extends ZLV_Bus>)newValue);
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE:
+				getZLVBusBesondereAnlage().clear();
+				getZLVBusBesondereAnlage().addAll((Collection<? extends ZLV_Bus_Besondere_Anlage>)newValue);
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG:
 				getZLVBusUSZuordnung().clear();
@@ -5371,6 +5633,15 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ANHANG:
 				getAnhang().clear();
 				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE:
+				getATOSegmentProfile().clear();
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT:
+				getATOTimingPoint().clear();
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ:
+				getATOTSInstanz().clear();
+				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG:
 				getAussenelementansteuerung().clear();
 				return;
@@ -5425,8 +5696,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ZENTRALE:
 				getBedienZentrale().clear();
 				return;
-			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI:
-				getBinaerdatei().clear();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN:
+				getBinaerdaten().clear();
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE:
 				getBlockAnlage().clear();
@@ -5496,6 +5767,9 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN:
 				getETCSKnoten().clear();
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE:
+				getETCSRichtungsanzeige().clear();
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL:
 				getETCSSignal().clear();
@@ -5731,6 +6005,9 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE:
 				getStrecke().clear();
 				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG:
+				getStreckeBremsweg().clear();
+				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT:
 				getStreckePunkt().clear();
 				return;
@@ -5785,6 +6062,12 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE_ZUORDNUNG:
 				getWeichenlaufketteZuordnung().clear();
 				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE:
+				getZBSSchutzstrecke().clear();
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL:
+				getZBSSignal().clear();
+				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL:
 				getZL().clear();
 				return;
@@ -5808,6 +6091,9 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS:
 				getZLVBus().clear();
+				return;
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE:
+				getZLVBusBesondereAnlage().clear();
 				return;
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG:
 				getZLVBusUSZuordnung().clear();
@@ -5861,6 +6147,12 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ANHANG:
 				return anhang != null && !anhang.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE:
+				return aTOSegmentProfile != null && !aTOSegmentProfile.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT:
+				return aTOTimingPoint != null && !aTOTimingPoint.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ:
+				return aTOTSInstanz != null && !aTOTSInstanz.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG:
 				return aussenelementansteuerung != null && !aussenelementansteuerung.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ANLAGE:
@@ -5897,8 +6189,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return bedienStandort != null && !bedienStandort.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ZENTRALE:
 				return bedienZentrale != null && !bedienZentrale.isEmpty();
-			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI:
-				return binaerdatei != null && !binaerdatei.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN:
+				return binaerdaten != null && !binaerdaten.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE:
 				return blockAnlage != null && !blockAnlage.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ELEMENT:
@@ -5945,6 +6237,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return eTCSKante != null && !eTCSKante.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN:
 				return eTCSKnoten != null && !eTCSKnoten.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE:
+				return eTCSRichtungsanzeige != null && !eTCSRichtungsanzeige.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL:
 				return eTCSSignal != null && !eTCSSignal.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCSW_KR:
@@ -6101,6 +6395,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return stellelement != null && !stellelement.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE:
 				return strecke != null && !strecke.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG:
+				return streckeBremsweg != null && !streckeBremsweg.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT:
 				return streckePunkt != null && !streckePunkt.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__TECHNIK_STANDORT:
@@ -6137,6 +6433,10 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return weichenlaufkette != null && !weichenlaufkette.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE_ZUORDNUNG:
 				return weichenlaufketteZuordnung != null && !weichenlaufketteZuordnung.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE:
+				return zBSSchutzstrecke != null && !zBSSchutzstrecke.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL:
+				return zBSSignal != null && !zBSSignal.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL:
 				return zL != null && !zL.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLDLP_ABSCHNITT:
@@ -6153,6 +6453,8 @@ public class Container_AttributeGroupImpl extends MinimalEObjectImpl.Container i
 				return zLSignalgruppeZuordnung != null && !zLSignalgruppeZuordnung.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS:
 				return zLVBus != null && !zLVBus.isEmpty();
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE:
+				return zLVBusBesondereAnlage != null && !zLVBusBesondereAnlage.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG:
 				return zLVBusUSZuordnung != null && !zLVBusUSZuordnung.isEmpty();
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZN:

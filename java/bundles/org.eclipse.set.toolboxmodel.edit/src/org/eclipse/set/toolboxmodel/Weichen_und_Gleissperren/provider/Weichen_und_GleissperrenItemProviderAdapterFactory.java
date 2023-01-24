@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -98,6 +99,29 @@ public class Weichen_und_GleissperrenItemProviderAdapterFactory extends Weichen_
 		}
 
 		return auffahrortung_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Austausch_Antriebe_TypeClassItemProvider austausch_Antriebe_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAustausch_Antriebe_TypeClassAdapter() {
+		if (austausch_Antriebe_TypeClassItemProvider == null) {
+			austausch_Antriebe_TypeClassItemProvider = new Austausch_Antriebe_TypeClassItemProvider(this);
+		}
+
+		return austausch_Antriebe_TypeClassItemProvider;
 	}
 
 	/**
@@ -515,6 +539,29 @@ public class Weichen_und_GleissperrenItemProviderAdapterFactory extends Weichen_
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Kr_KrW_Seitenzuordnung_TypeClassItemProvider kr_KrW_Seitenzuordnung_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createKr_KrW_Seitenzuordnung_TypeClassAdapter() {
+		if (kr_KrW_Seitenzuordnung_TypeClassItemProvider == null) {
+			kr_KrW_Seitenzuordnung_TypeClassItemProvider = new Kr_KrW_Seitenzuordnung_TypeClassItemProvider(this);
+		}
+
+		return kr_KrW_Seitenzuordnung_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kreuzung_AttributeGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -581,6 +628,29 @@ public class Weichen_und_GleissperrenItemProviderAdapterFactory extends Weichen_
 		}
 
 		return schutzschiene_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Stammgleis_TypeClassItemProvider stammgleis_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStammgleis_TypeClassAdapter() {
+		if (stammgleis_TypeClassItemProvider == null) {
+			stammgleis_TypeClassItemProvider = new Stammgleis_TypeClassItemProvider(this);
+		}
+
+		return stammgleis_TypeClassItemProvider;
 	}
 
 	/**
@@ -1080,6 +1150,7 @@ public class Weichen_und_GleissperrenItemProviderAdapterFactory extends Weichen_
 	@Override
 	public void dispose() {
 		if (auffahrortung_TypeClassItemProvider != null) auffahrortung_TypeClassItemProvider.dispose();
+		if (austausch_Antriebe_TypeClassItemProvider != null) austausch_Antriebe_TypeClassItemProvider.dispose();
 		if (auswurfrichtung_TypeClassItemProvider != null) auswurfrichtung_TypeClassItemProvider.dispose();
 		if (besonderes_Fahrwegelement_TypeClassItemProvider != null) besonderes_Fahrwegelement_TypeClassItemProvider.dispose();
 		if (elektrischer_Antrieb_Anzahl_TypeClassItemProvider != null) elektrischer_Antrieb_Anzahl_TypeClassItemProvider.dispose();
@@ -1098,9 +1169,11 @@ public class Weichen_und_GleissperrenItemProviderAdapterFactory extends Weichen_
 		if (gZ_Freimeldung_R_AttributeGroupItemProvider != null) gZ_Freimeldung_R_AttributeGroupItemProvider.dispose();
 		if (herzstueck_Antriebe_TypeClassItemProvider != null) herzstueck_Antriebe_TypeClassItemProvider.dispose();
 		if (isolierfall_TypeClassItemProvider != null) isolierfall_TypeClassItemProvider.dispose();
+		if (kr_KrW_Seitenzuordnung_TypeClassItemProvider != null) kr_KrW_Seitenzuordnung_TypeClassItemProvider.dispose();
 		if (kreuzung_AttributeGroupItemProvider != null) kreuzung_AttributeGroupItemProvider.dispose();
 		if (kreuzungsgleis_TypeClassItemProvider != null) kreuzungsgleis_TypeClassItemProvider.dispose();
 		if (schutzschiene_TypeClassItemProvider != null) schutzschiene_TypeClassItemProvider.dispose();
+		if (stammgleis_TypeClassItemProvider != null) stammgleis_TypeClassItemProvider.dispose();
 		if (vorzugslage_Automatik_TypeClassItemProvider != null) vorzugslage_Automatik_TypeClassItemProvider.dispose();
 		if (w_Kr_AnlageItemProvider != null) w_Kr_AnlageItemProvider.dispose();
 		if (w_Kr_Anlage_Allg_AttributeGroupItemProvider != null) w_Kr_Anlage_Allg_AttributeGroupItemProvider.dispose();

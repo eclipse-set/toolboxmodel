@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.util;
 
@@ -16,8 +23,6 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeUtil;
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeValidator;
-
-import org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.util.BasisTypenValidator;
 
@@ -113,20 +118,24 @@ public class GeodatenValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
+			case GeodatenPackage.ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS:
+				return validateAnzeigegefuehrt_ES_Kategorie_TypeClass((Anzeigegefuehrt_ES_Kategorie_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.BEZEICHNUNG_STRECKE_TYPE_CLASS:
 				return validateBezeichnung_Strecke_TypeClass((Bezeichnung_Strecke_TypeClass)value, diagnostics, context);
+			case GeodatenPackage.BREMSWEG_TYPE_CLASS:
+				return validateBremsweg_TypeClass((Bremsweg_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.GEO_FORM_TYPE_CLASS:
 				return validateGEO_Form_TypeClass((GEO_Form_TypeClass)value, diagnostics, context);
+			case GeodatenPackage.GEO_KAD_TYPE_CLASS:
+				return validateGEO_KAD_TypeClass((GEO_KAD_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.GEO_KANTE:
 				return validateGEO_Kante((GEO_Kante)value, diagnostics, context);
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP:
 				return validateGEO_Kante_Allg_AttributeGroup((GEO_Kante_Allg_AttributeGroup)value, diagnostics, context);
 			case GeodatenPackage.GEO_KNOTEN:
 				return validateGEO_Knoten((GEO_Knoten)value, diagnostics, context);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS:
-				return validateGEO_KoordinatenSystem_LSys_TypeClass((GEO_KoordinatenSystem_LSys_TypeClass)value, diagnostics, context);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS:
-				return validateGEO_KoordinatenSystem_Sonstige_TypeClass((GEO_KoordinatenSystem_Sonstige_TypeClass)value, diagnostics, context);
+			case GeodatenPackage.GEO_KOORDINATENSYSTEM_TYPE_CLASS:
+				return validateGEO_Koordinatensystem_TypeClass((GEO_Koordinatensystem_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.GEO_LAENGE_TYPE_CLASS:
 				return validateGEO_Laenge_TypeClass((GEO_Laenge_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.GEO_PAD_TYPE_CLASS:
@@ -171,6 +180,8 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateHoehenpunkt_Hoehe_TypeClass((Hoehenpunkt_Hoehe_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.HSYSTEM_TYPE_CLASS:
 				return validateHSystem_TypeClass((HSystem_TypeClass)value, diagnostics, context);
+			case GeodatenPackage.KANTENNAME_TYPE_CLASS:
+				return validateKantenname_TypeClass((Kantenname_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.KNOTENNAME_TYPE_CLASS:
 				return validateKnotenname_TypeClass((Knotenname_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.NEIGUNG_TYPE_CLASS:
@@ -199,10 +210,14 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateStrecke((Strecke)value, diagnostics, context);
 			case GeodatenPackage.STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP:
 				return validateStrecke_Bezeichnung_AttributeGroup((Strecke_Bezeichnung_AttributeGroup)value, diagnostics, context);
+			case GeodatenPackage.STRECKE_BREMSWEG:
+				return validateStrecke_Bremsweg((Strecke_Bremsweg)value, diagnostics, context);
 			case GeodatenPackage.STRECKE_METER_TYPE_CLASS:
 				return validateStrecke_Meter_TypeClass((Strecke_Meter_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.STRECKE_PUNKT:
 				return validateStrecke_Punkt((Strecke_Punkt)value, diagnostics, context);
+			case GeodatenPackage.STRECKE_RICHTUNG_TYPE_CLASS:
+				return validateStrecke_Richtung_TypeClass((Strecke_Richtung_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.TB_ART_TYPE_CLASS:
 				return validateTB_Art_TypeClass((TB_Art_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.TB_BESCHREIBUNG_TYPE_CLASS:
@@ -227,6 +242,8 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateTP_Art_TypeClass((TP_Art_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.TP_BESCHREIBUNG_TYPE_CLASS:
 				return validateTP_Beschreibung_TypeClass((TP_Beschreibung_TypeClass)value, diagnostics, context);
+			case GeodatenPackage.TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP:
+				return validateTrasse_Kante_child_AttributeGroup((Trasse_Kante_child_AttributeGroup)value, diagnostics, context);
 			case GeodatenPackage.UEBERHOEHUNG:
 				return validateUeberhoehung((Ueberhoehung)value, diagnostics, context);
 			case GeodatenPackage.UEBERHOEHUNG_ALLG_ATTRIBUTE_GROUP:
@@ -245,10 +262,10 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateUeberhoehungslinie_Laenge_TypeClass((Ueberhoehungslinie_Laenge_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.VPROFIL_ART_TYPE_CLASS:
 				return validateV_Profil_Art_TypeClass((V_Profil_Art_TypeClass)value, diagnostics, context);
-			case GeodatenPackage.WIRKRICHTUNG_TYPE_CLASS:
-				return validateWirkrichtung_TypeClass((Wirkrichtung_TypeClass)value, diagnostics, context);
 			case GeodatenPackage.ENUMGEO_FORM:
 				return validateENUMGEOForm((ENUMGEOForm)value, diagnostics, context);
+			case GeodatenPackage.ENUMGEO_KOORDINATENSYSTEM:
+				return validateENUMGEOKoordinatensystem((ENUMGEOKoordinatensystem)value, diagnostics, context);
 			case GeodatenPackage.ENUM_HOEHENLINIE_FORM:
 				return validateENUMHoehenlinieForm((ENUMHoehenlinieForm)value, diagnostics, context);
 			case GeodatenPackage.ENUMH_SYSTEM:
@@ -257,6 +274,8 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateENUMOertlichkeitArt((ENUMOertlichkeitArt)value, diagnostics, context);
 			case GeodatenPackage.ENUM_PLAN_QUELLE:
 				return validateENUMPlanQuelle((ENUMPlanQuelle)value, diagnostics, context);
+			case GeodatenPackage.ENUM_STRECKE_RICHTUNG:
+				return validateENUMStreckeRichtung((ENUMStreckeRichtung)value, diagnostics, context);
 			case GeodatenPackage.ENUMTB_ART:
 				return validateENUMTBArt((ENUMTBArt)value, diagnostics, context);
 			case GeodatenPackage.ENUMTOP_ANSCHLUSS:
@@ -267,10 +286,16 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateENUMUeberhoehungslinieForm((ENUMUeberhoehungslinieForm)value, diagnostics, context);
 			case GeodatenPackage.ENUMV_PROFIL_ART:
 				return validateENUMVProfilArt((ENUMVProfilArt)value, diagnostics, context);
+			case GeodatenPackage.ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE:
+				return validateAnzeigegefuehrt_ES_Kategorie_Type((String)value, diagnostics, context);
 			case GeodatenPackage.BEZEICHNUNG_STRECKE_TYPE:
 				return validateBezeichnung_Strecke_Type((String)value, diagnostics, context);
+			case GeodatenPackage.ENUMERATION1:
+				return validateEnumeration1((String)value, diagnostics, context);
 			case GeodatenPackage.ENUMGEO_FORM_OBJECT:
 				return validateENUMGEOFormObject((ENUMGEOForm)value, diagnostics, context);
+			case GeodatenPackage.ENUMGEO_KOORDINATENSYSTEM_OBJECT:
+				return validateENUMGEOKoordinatensystemObject((ENUMGEOKoordinatensystem)value, diagnostics, context);
 			case GeodatenPackage.ENUM_HOEHENLINIE_FORM_OBJECT:
 				return validateENUMHoehenlinieFormObject((ENUMHoehenlinieForm)value, diagnostics, context);
 			case GeodatenPackage.ENUMH_SYSTEM_OBJECT:
@@ -279,6 +304,8 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateENUMOertlichkeitArtObject((ENUMOertlichkeitArt)value, diagnostics, context);
 			case GeodatenPackage.ENUM_PLAN_QUELLE_OBJECT:
 				return validateENUMPlanQuelleObject((ENUMPlanQuelle)value, diagnostics, context);
+			case GeodatenPackage.ENUM_STRECKE_RICHTUNG_OBJECT:
+				return validateENUMStreckeRichtungObject((ENUMStreckeRichtung)value, diagnostics, context);
 			case GeodatenPackage.ENUMTB_ART_OBJECT:
 				return validateENUMTBArtObject((ENUMTBArt)value, diagnostics, context);
 			case GeodatenPackage.ENUMTOP_ANSCHLUSS_OBJECT:
@@ -289,10 +316,8 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateENUMUeberhoehungslinieFormObject((ENUMUeberhoehungslinieForm)value, diagnostics, context);
 			case GeodatenPackage.ENUMV_PROFIL_ART_OBJECT:
 				return validateENUMVProfilArtObject((ENUMVProfilArt)value, diagnostics, context);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_LSYS_TYPE:
-				return validateGEO_KoordinatenSystem_LSys_Type((String)value, diagnostics, context);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE:
-				return validateGEO_KoordinatenSystem_Sonstige_Type((String)value, diagnostics, context);
+			case GeodatenPackage.GEO_KAD_TYPE:
+				return validateGEO_KAD_Type((String)value, diagnostics, context);
 			case GeodatenPackage.GEO_LAENGE_TYPE:
 				return validateGEO_Laenge_Type((BigDecimal)value, diagnostics, context);
 			case GeodatenPackage.GEO_PAD_TYPE:
@@ -315,6 +340,8 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateHoehenlinie_Laenge_Type((BigDecimal)value, diagnostics, context);
 			case GeodatenPackage.HOEHENPUNKT_HOEHE_TYPE:
 				return validateHoehenpunkt_Hoehe_Type((BigDecimal)value, diagnostics, context);
+			case GeodatenPackage.KANTENNAME_TYPE:
+				return validateKantenname_Type((String)value, diagnostics, context);
 			case GeodatenPackage.KNOTENNAME_TYPE:
 				return validateKnotenname_Type((String)value, diagnostics, context);
 			case GeodatenPackage.NEIGUNG_TYPE:
@@ -337,11 +364,18 @@ public class GeodatenValidator extends EObjectValidator {
 				return validateUeberhoehung_Hoehe_Type((BigDecimal)value, diagnostics, context);
 			case GeodatenPackage.UEBERHOEHUNGSLINIE_LAENGE_TYPE:
 				return validateUeberhoehungslinie_Laenge_Type((BigDecimal)value, diagnostics, context);
-			case GeodatenPackage.WIRKRICHTUNG_TYPE:
-				return validateWirkrichtung_Type((ENUMWirkrichtung)value, diagnostics, context);
 			default:
 				return true;
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAnzeigegefuehrt_ES_Kategorie_TypeClass(Anzeigegefuehrt_ES_Kategorie_TypeClass anzeigegefuehrt_ES_Kategorie_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(anzeigegefuehrt_ES_Kategorie_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -358,8 +392,26 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateBremsweg_TypeClass(Bremsweg_TypeClass bremsweg_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bremsweg_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateGEO_Form_TypeClass(GEO_Form_TypeClass geO_Form_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(geO_Form_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateGEO_KAD_TypeClass(GEO_KAD_TypeClass geO_KAD_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(geO_KAD_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -394,17 +446,8 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateGEO_KoordinatenSystem_LSys_TypeClass(GEO_KoordinatenSystem_LSys_TypeClass geO_KoordinatenSystem_LSys_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(geO_KoordinatenSystem_LSys_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateGEO_KoordinatenSystem_Sonstige_TypeClass(GEO_KoordinatenSystem_Sonstige_TypeClass geO_KoordinatenSystem_Sonstige_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(geO_KoordinatenSystem_Sonstige_TypeClass, diagnostics, context);
+	public boolean validateGEO_Koordinatensystem_TypeClass(GEO_Koordinatensystem_TypeClass geO_Koordinatensystem_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(geO_Koordinatensystem_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -610,6 +653,15 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateKantenname_TypeClass(Kantenname_TypeClass kantenname_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(kantenname_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateKnotenname_TypeClass(Knotenname_TypeClass knotenname_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(knotenname_TypeClass, diagnostics, context);
 	}
@@ -736,6 +788,15 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateStrecke_Bremsweg(Strecke_Bremsweg strecke_Bremsweg, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(strecke_Bremsweg, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateStrecke_Meter_TypeClass(Strecke_Meter_TypeClass strecke_Meter_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(strecke_Meter_TypeClass, diagnostics, context);
 	}
@@ -747,6 +808,15 @@ public class GeodatenValidator extends EObjectValidator {
 	 */
 	public boolean validateStrecke_Punkt(Strecke_Punkt strecke_Punkt, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(strecke_Punkt, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStrecke_Richtung_TypeClass(Strecke_Richtung_TypeClass strecke_Richtung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(strecke_Richtung_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -862,6 +932,15 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTrasse_Kante_child_AttributeGroup(Trasse_Kante_child_AttributeGroup trasse_Kante_child_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(trasse_Kante_child_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateUeberhoehung(Ueberhoehung ueberhoehung, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(ueberhoehung, diagnostics, context);
 	}
@@ -943,8 +1022,8 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateWirkrichtung_TypeClass(Wirkrichtung_TypeClass wirkrichtung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(wirkrichtung_TypeClass, diagnostics, context);
+	public boolean validateENUMGEOForm(ENUMGEOForm enumgeoForm, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
@@ -952,7 +1031,7 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMGEOForm(ENUMGEOForm enumgeoForm, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMGEOKoordinatensystem(ENUMGEOKoordinatensystem enumgeoKoordinatensystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -989,6 +1068,15 @@ public class GeodatenValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMPlanQuelle(ENUMPlanQuelle enumPlanQuelle, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMStreckeRichtung(ENUMStreckeRichtung enumStreckeRichtung, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1042,6 +1130,16 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateAnzeigegefuehrt_ES_Kategorie_Type(String anzeigegefuehrt_ES_Kategorie_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(anzeigegefuehrt_ES_Kategorie_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateBezeichnung_Strecke_Type(String bezeichnung_Strecke_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = validateBezeichnung_Strecke_Type_Pattern(bezeichnung_Strecke_Type, diagnostics, context);
 		return result;
@@ -1078,7 +1176,25 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateEnumeration1(String enumeration1, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateENUMGEOFormObject(ENUMGEOForm enumgeoFormObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMGEOKoordinatensystemObject(ENUMGEOKoordinatensystem enumgeoKoordinatensystemObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1115,6 +1231,15 @@ public class GeodatenValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMPlanQuelleObject(ENUMPlanQuelle enumPlanQuelleObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMStreckeRichtungObject(ENUMStreckeRichtung enumStreckeRichtungObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1168,44 +1293,8 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateGEO_KoordinatenSystem_LSys_Type(String geO_KoordinatenSystem_LSys_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateGEO_KoordinatenSystem_LSys_Type_Pattern(geO_KoordinatenSystem_LSys_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @see #validateGEO_KoordinatenSystem_LSys_Type_Pattern
-	 */
-	public static final  PatternMatcher [][] GEO_KOORDINATEN_SYSTEM_LSYS_TYPE__PATTERN__VALUES =
-		new PatternMatcher [][] {
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[C-F][A-C|R|S][0-9A-Z]")
-			},
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[a-zA-Z_0-9]{1,250}")
-			}
-		};
-
-	/**
-	 * Validates the Pattern constraint of '<em>GEO Koordinaten System LSys Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateGEO_KoordinatenSystem_LSys_Type_Pattern(String geO_KoordinatenSystem_LSys_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(GeodatenPackage.Literals.GEO_KOORDINATEN_SYSTEM_LSYS_TYPE, geO_KoordinatenSystem_LSys_Type, GEO_KOORDINATEN_SYSTEM_LSYS_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateGEO_KoordinatenSystem_Sonstige_Type(String geO_KoordinatenSystem_Sonstige_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = basisTypenValidator.validateZeichenkette_Type_Pattern(geO_KoordinatenSystem_Sonstige_Type, diagnostics, context);
+	public boolean validateGEO_KAD_Type(String geO_KAD_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(geO_KAD_Type, diagnostics, context);
 		return result;
 	}
 
@@ -1557,6 +1646,16 @@ public class GeodatenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateKantenname_Type(String kantenname_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(kantenname_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateKnotenname_Type(String knotenname_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = validateKnotenname_Type_Pattern(knotenname_Type, diagnostics, context);
 		return result;
@@ -1607,7 +1706,7 @@ public class GeodatenValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] NEIGUNG_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("-100\\.000|-([1-9][0-9]{0,1}\\.[0-9]{3})|(-0\\.[1-9][0-9]{2}|-0\\.0[1-9][0-9]|-0\\.0[0-9][1-9])|((0|[1-9][0-9]{0,1})\\.[0-9]{3})|100\\.000")
+				XMLTypeUtil.createPatternMatcher("0\\.000|([1-9][0-9]{0,1}\\.[0-9]{3})|(0\\.[1-9][0-9]{2}|0\\.0[1-9][0-9]|0\\.0[0-9][1-9])|((0|[1-9][0-9]{0,1})\\.[0-9]{3})|100\\.000")
 			}
 		};
 
@@ -1640,7 +1739,7 @@ public class GeodatenValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] OERTLICHKEIT_ABKUERZUNG_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[A-Z]{2,5}")
+				XMLTypeUtil.createPatternMatcher("[A-Z][A-Z0-9 ]{1,4}")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher(".{1,250}")
@@ -1768,7 +1867,8 @@ public class GeodatenValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTB_Beschreibung_Type(String tB_Beschreibung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = basisTypenValidator.validateText_Type_Pattern(tB_Beschreibung_Type, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1810,7 +1910,8 @@ public class GeodatenValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTP_Beschreibung_Type(String tP_Beschreibung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = basisTypenValidator.validateText_Type_Pattern(tP_Beschreibung_Type, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1832,7 +1933,7 @@ public class GeodatenValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] UEBERHOEHUNG_HOEHE_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("0\\.[01][0-9][0-9]|0\\.200")
+				XMLTypeUtil.createPatternMatcher("-?(0\\.[01][0-9][0-9]|0\\.200)")
 			}
 		};
 
@@ -1877,15 +1978,6 @@ public class GeodatenValidator extends EObjectValidator {
 	 */
 	public boolean validateUeberhoehungslinie_Laenge_Type_Pattern(BigDecimal ueberhoehungslinie_Laenge_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(GeodatenPackage.Literals.UEBERHOEHUNGSLINIE_LAENGE_TYPE, ueberhoehungslinie_Laenge_Type, UEBERHOEHUNGSLINIE_LAENGE_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateWirkrichtung_Type(ENUMWirkrichtung wirkrichtung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
 	}
 
 	/**

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -13,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getKantenname <em>Kantenname</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getTOPAnschlussA <em>TOP Anschluss A</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getTOPAnschlussB <em>TOP Anschluss B</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getTOPLaenge <em>TOP Laenge</em>}</li>
@@ -23,6 +31,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface TOP_Kante_Allg_AttributeGroup extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Kantenname</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Bezeichnung für die Kante. Die Bezeichnung wird beispielsweise bei Neutrassierungen (ASCIBAHN) übernommen um eine Verknüpfung der gelieferten Trassierungsdaten mit den an den LST-Fachplaner übegebenen PlanPro-Geodaten sicherzustellen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Kantenname</em>' containment reference.
+	 * @see #setKantenname(Kantenname_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getTOP_Kante_Allg_AttributeGroup_Kantenname()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Kantenname'"
+	 * @generated
+	 */
+	Kantenname_TypeClass getKantenname();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup#getKantenname <em>Kantenname</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Kantenname</em>' containment reference.
+	 * @see #getKantenname()
+	 * @generated
+	 */
+	void setKantenname(Kantenname_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>TOP Anschluss A</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

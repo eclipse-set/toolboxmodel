@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -13,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Fahrweg_Teil_Allg_AttributeGroup#getFWTeilNummer <em>FW Teil Nummer</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Fahrweg_Teil_Allg_AttributeGroup#getUmfahrstrasse <em>Umfahrstrasse</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Fahrweg_Teil_Allg_AttributeGroup#getZielIstFahrwegende <em>Ziel Ist Fahrwegende</em>}</li>
  * </ul>
@@ -22,6 +30,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface FT_Fahrweg_Teil_Allg_AttributeGroup extends EObject {
+	/**
+	 * Returns the value of the '<em><b>FW Teil Nummer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Nummerierung des Fahrwegteils, wenn mehrere Fahrwegteile mit gleichem Start-Element existieren. Das Datum wird für die Reihenfolge des Erscheinens in der Tabelle verwendet.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>FW Teil Nummer</em>' containment reference.
+	 * @see #setFWTeilNummer(FW_Teil_Nummer_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getFT_Fahrweg_Teil_Allg_AttributeGroup_FWTeilNummer()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='FW_Teil_Nummer'"
+	 * @generated
+	 */
+	FW_Teil_Nummer_TypeClass getFWTeilNummer();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Fahrweg_Teil_Allg_AttributeGroup#getFWTeilNummer <em>FW Teil Nummer</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>FW Teil Nummer</em>' containment reference.
+	 * @see #getFWTeilNummer()
+	 * @generated
+	 */
+	void setFWTeilNummer(FW_Teil_Nummer_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>Umfahrstrasse</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

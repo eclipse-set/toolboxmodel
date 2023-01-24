@@ -1,10 +1,19 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup;
+import org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,10 +25,11 @@ import org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGrou
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getAnzeigetext <em>Anzeigetext</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getEigenschaftenBinaerdatei <em>Eigenschaften Binaerdatei</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getEinzeldateiArt <em>Einzeldatei Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getIDBinaerdatei <em>ID Binaerdatei</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getKonfigurationskennung <em>Konfigurationskennung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getPruefmerkmaleBinaerdatei <em>Pruefmerkmale Binaerdatei</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getPruefmerkmaleProgKomponente <em>Pruefmerkmale Prog Komponente</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getVerwendung <em>Verwendung</em>}</li>
  * </ul>
  *
@@ -55,32 +65,6 @@ public interface Prog_Datei_Einzel_AttributeGroup extends EObject {
 	void setAnzeigetext(Anzeigetext_TypeClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Eigenschaften Binaerdatei</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Metadaten der Binaerdatei, die in das zu programmierende Gerät geladen wird bzw. die den Programmier- oder Prüfvorgang unterstützt.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Eigenschaften Binaerdatei</em>' containment reference.
-	 * @see #setEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getProg_Datei_Einzel_AttributeGroup_EigenschaftenBinaerdatei()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Eigenschaften_Binaerdatei'"
-	 * @generated
-	 */
-	Eigenschaften_Datei_AttributeGroup getEigenschaftenBinaerdatei();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getEigenschaftenBinaerdatei <em>Eigenschaften Binaerdatei</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eigenschaften Binaerdatei</em>' containment reference.
-	 * @see #getEigenschaftenBinaerdatei()
-	 * @generated
-	 */
-	void setEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup value);
-
-	/**
 	 * Returns the value of the '<em><b>Einzeldatei Art</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,18 +95,18 @@ public interface Prog_Datei_Einzel_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf die Binaerdatei, die in das zu programmierende Gerät geladen wird bzw. die den Programmier- oder Prüfvorgang unterstützt
+	 * Verweis auf die Binaerdatei, die in die zu programmierende Komponente geladen wird bzw. die den Programmier- oder Prüfvorgang unterstützt.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Binaerdatei</em>' reference.
 	 * @see #isSetIDBinaerdatei()
 	 * @see #unsetIDBinaerdatei()
-	 * @see #setIDBinaerdatei(Binaerdatei)
+	 * @see #setIDBinaerdatei(Binaerdaten)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getProg_Datei_Einzel_AttributeGroup_IDBinaerdatei()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='element' name='ID_Binaerdatei'"
 	 * @generated
 	 */
-	Binaerdatei getIDBinaerdatei();
+	Binaerdaten getIDBinaerdatei();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getIDBinaerdatei <em>ID Binaerdatei</em>}' reference.
@@ -134,7 +118,7 @@ public interface Prog_Datei_Einzel_AttributeGroup extends EObject {
 	 * @see #getIDBinaerdatei()
 	 * @generated
 	 */
-	void setIDBinaerdatei(Binaerdatei value);
+	void setIDBinaerdatei(Binaerdaten value);
 
 	/**
 	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getIDBinaerdatei <em>ID Binaerdatei</em>}' reference.
@@ -142,7 +126,7 @@ public interface Prog_Datei_Einzel_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetIDBinaerdatei()
 	 * @see #getIDBinaerdatei()
-	 * @see #setIDBinaerdatei(Binaerdatei)
+	 * @see #setIDBinaerdatei(Binaerdaten)
 	 * @generated
 	 */
 	void unsetIDBinaerdatei();
@@ -154,7 +138,7 @@ public interface Prog_Datei_Einzel_AttributeGroup extends EObject {
 	 * @return whether the value of the '<em>ID Binaerdatei</em>' reference is set.
 	 * @see #unsetIDBinaerdatei()
 	 * @see #getIDBinaerdatei()
-	 * @see #setIDBinaerdatei(Binaerdatei)
+	 * @see #setIDBinaerdatei(Binaerdaten)
 	 * @generated
 	 */
 	boolean isSetIDBinaerdatei();
@@ -184,6 +168,52 @@ public interface Prog_Datei_Einzel_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setKonfigurationskennung(Konfigurationskennung_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Pruefmerkmale Binaerdatei</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Prüfmerkmale der Binaerdatei, die in das zu programmierende Gerät geladen wird bzw. die den Programmier- oder Prüfvorgang unterstützt.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Pruefmerkmale Binaerdatei</em>' containment reference.
+	 * @see #setPruefmerkmaleBinaerdatei(Pruefmerkmale_Daten_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleBinaerdatei()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Pruefmerkmale_Binaerdatei'"
+	 * @generated
+	 */
+	Pruefmerkmale_Daten_AttributeGroup getPruefmerkmaleBinaerdatei();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup#getPruefmerkmaleBinaerdatei <em>Pruefmerkmale Binaerdatei</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pruefmerkmale Binaerdatei</em>' containment reference.
+	 * @see #getPruefmerkmaleBinaerdatei()
+	 * @generated
+	 */
+	void setPruefmerkmaleBinaerdatei(Pruefmerkmale_Daten_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>Pruefmerkmale Prog Komponente</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Prüfmerkmale für die aus der programmierten Komponente zurückgelesenen Daten. Bei Ladedateien müssen immer Prüfmerkmale angegeben werden. Bei Hilfsdateien kann die Angabe entfallen.
+	 * 
+	 * Die Angaben zu Datum und Version der Auslieferung müssen identisch sein mit den entsprechenden Angaben zur Programmierdatei.
+	 * 
+	 * Bei zweikanaligen Systemen kann eine Prüfung je Kanal erfolgen. In diesem Fall sind für jeden Kanal eigene Prüfmerkmale notwendig.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Pruefmerkmale Prog Komponente</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleProgKomponente()
+	 * @model containment="true" upper="2"
+	 *        extendedMetaData="kind='element' name='Pruefmerkmale_Prog_Komponente'"
+	 * @generated
+	 */
+	EList<Pruefmerkmale_Daten_AttributeGroup> getPruefmerkmaleProgKomponente();
 
 	/**
 	 * Returns the value of the '<em><b>Verwendung</b></em>' containment reference.

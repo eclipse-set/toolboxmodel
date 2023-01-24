@@ -37,7 +37,6 @@ public interface Planung_G_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Beinhaltet die zur Planung gehörende Betriebliche Aufgabenstellung (BAST), welche als *.pdf der Planung angehängt wird.
-	 *  
 	 * DB-Regelwerk
 	 * Bisher ohne eindeutige Abbildung.
 	 * <!-- end-model-doc -->
@@ -56,7 +55,6 @@ public interface Planung_G_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Datum des Abschlusses der letzten Einzelplanung der definierten Planungsgruppe.
 	 * Bis zum tatsächlichen Abschluss handelt es sich dabei um ein geplantes Datum, das iterativ nachzupflegen ist.
-	 * 
 	 * DB-Regelwerk
 	 * Bisher keine eindeutige Abbildung.
 	 * <!-- end-model-doc -->
@@ -84,9 +82,7 @@ public interface Planung_G_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe der zu verwendenden PlanPro-Modellversion 
-	 * (PlanPro-XSD). Ein XSD-Versionswechsel kann dabei nur zwischen zwei Planungsgruppen erfolgen.
-	 * 
+	 * Angabe der zu verwendenden PlanPro-Modellversion (PlanPro-XSD). Ein XSD-Versionswechsel kann dabei nur zwischen zwei Planungsgruppen erfolgen.
 	 * DB-Regelwerk
 	 * Bisher nicht abgebildet, da Neuerung durch PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->
@@ -115,10 +111,9 @@ public interface Planung_G_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Gibt an, welche besondere Art der Planungsgruppe vorliegt.
-	 *  
 	 * DB-Regelwerk
-	 * Bisher ohne eindeutige Abbildung. 
-	 * Meist Bestandteil Schriftfeldeintrag gemäß Ril 819.0103 der Kurzbezeichnung des Bauzustandes.
+	 * Bisher ohne eindeutige Abbildung.
+	 * Meist Bestandteil Schriftfeldeintrag gemäß Ril 886.0102 der Kurzbezeichnung des Bauzustandes.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Planung GArt Besonders</em>' containment reference.
 	 * @see #setPlanungGArtBesonders(Planung_G_Art_Besonders_TypeClass)
@@ -174,7 +169,7 @@ public interface Planung_G_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Organisationseinheit der DB, die für die Bestandsplanbestellung (und Sperrung) bei der Bestandsplan haltenden Stelle verantwortlich ist.
 	 * DB-Regelwerk
-	 * Schriftfeldeintrag gemäß Ril 819.0103, Feld 18 "Name des Auftraggebers" bzw. 26 "Genehmigungsvermerks des Auftraggebers".
+	 * Schriftfeldeintrag gemäß Ril 886.0102, Feld 18 "Name des Auftraggebers" bzw. 26 "Genehmigungsvermerks des Auftraggebers".
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Verantwortliche Stelle DB</em>' containment reference.
 	 * @see #setVerantwortlicheStelleDB(Verantwortliche_Stelle_DB_TypeClass)

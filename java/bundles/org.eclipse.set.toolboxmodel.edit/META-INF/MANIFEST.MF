@@ -5,10 +5,11 @@ Bundle-SymbolicName: org.eclipse.set.toolboxmodel.edit;singleton:=true
 Automatic-Module-Name: org.eclipse.set.toolboxmodel.edit
 Bundle-Version: 2.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin$Implementation
+Bundle-Activator: org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.set.toolboxmodel.Ansteuerung_Element.provider,
+Export-Package: org.eclipse.set.toolboxmodel.ATO.provider,
+ org.eclipse.set.toolboxmodel.Ansteuerung_Element.provider,
  org.eclipse.set.toolboxmodel.Bahnsteig.provider,
  org.eclipse.set.toolboxmodel.Bahnuebergang.provider,
  org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.provider,
@@ -20,8 +21,9 @@ Export-Package: org.eclipse.set.toolboxmodel.Ansteuerung_Element.provider,
  org.eclipse.set.toolboxmodel.Flankenschutz.provider,
  org.eclipse.set.toolboxmodel.Geodaten.provider,
  org.eclipse.set.toolboxmodel.Gleis.provider,
+ org.eclipse.set.toolboxmodel.Layoutinformationen.provider,
  org.eclipse.set.toolboxmodel.Medien_und_Trassen.provider,
- org.eclipse.set.toolboxmodel.Nahbedienbereich.provider,
+ org.eclipse.set.toolboxmodel.Nahbedienung.provider,
  org.eclipse.set.toolboxmodel.Ortung.provider,
  org.eclipse.set.toolboxmodel.PZB.provider,
  org.eclipse.set.toolboxmodel.PlanPro.provider,

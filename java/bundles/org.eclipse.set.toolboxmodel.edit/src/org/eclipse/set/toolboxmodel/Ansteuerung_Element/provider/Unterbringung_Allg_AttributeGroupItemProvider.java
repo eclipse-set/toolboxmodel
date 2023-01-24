@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementFacto
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup} object.
@@ -86,6 +87,7 @@ public class Unterbringung_Allg_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER);
+			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG);
 		}
@@ -141,6 +143,7 @@ public class Unterbringung_Allg_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Unterbringung_Allg_AttributeGroup.class)) {
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG:
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART:
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -166,6 +169,11 @@ public class Unterbringung_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER,
 				 Ansteuerung_ElementFactory.eINSTANCE.createHersteller_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG,
+				 Ansteuerung_ElementFactory.eINSTANCE.createTueranschlag_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

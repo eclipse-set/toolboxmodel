@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int AUFFAHRORTUNG_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -636,6 +612,52 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int AUFFAHRORTUNG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Austausch_Antriebe_TypeClassImpl <em>Austausch Antriebe Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Austausch_Antriebe_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getAustausch_Antriebe_TypeClass()
+	 * @generated
+	 */
+	int AUSTAUSCH_ANTRIEBE_TYPE_CLASS = 1;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUSTAUSCH_ANTRIEBE_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUSTAUSCH_ANTRIEBE_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Austausch Antriebe Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUSTAUSCH_ANTRIEBE_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Austausch Antriebe Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUSTAUSCH_ANTRIEBE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Auswurfrichtung_TypeClassImpl <em>Auswurfrichtung Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -643,10 +665,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getAuswurfrichtung_TypeClass()
 	 * @generated
 	 */
-	int AUSWURFRICHTUNG_TYPE_CLASS = 1;
+	int AUSWURFRICHTUNG_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -689,10 +711,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getBesonderes_Fahrwegelement_TypeClass()
 	 * @generated
 	 */
-	int BESONDERES_FAHRWEGELEMENT_TYPE_CLASS = 2;
+	int BESONDERES_FAHRWEGELEMENT_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -735,10 +757,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getElektrischer_Antrieb_Anzahl_TypeClass()
 	 * @generated
 	 */
-	int ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE_CLASS = 3;
+	int ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -781,10 +803,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getElektrischer_Antrieb_Lage_TypeClass()
 	 * @generated
 	 */
-	int ELEKTRISCHER_ANTRIEB_LAGE_TYPE_CLASS = 4;
+	int ELEKTRISCHER_ANTRIEB_LAGE_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -827,10 +849,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getElement_Lage_TypeClass()
 	 * @generated
 	 */
-	int ELEMENT_LAGE_TYPE_CLASS = 5;
+	int ELEMENT_LAGE_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -873,7 +895,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getEntgleisungsschuh_AttributeGroup()
 	 * @generated
 	 */
-	int ENTGLEISUNGSSCHUH_ATTRIBUTE_GROUP = 6;
+	int ENTGLEISUNGSSCHUH_ATTRIBUTE_GROUP = 7;
 
 	/**
 	 * The feature id for the '<em><b>Auswurfrichtung</b></em>' containment reference.
@@ -928,10 +950,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGeschwindigkeit_L_TypeClass()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_LTYPE_CLASS = 7;
+	int GESCHWINDIGKEIT_LTYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -974,10 +996,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGeschwindigkeit_R_TypeClass()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_RTYPE_CLASS = 8;
+	int GESCHWINDIGKEIT_RTYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1020,7 +1042,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGleis_Abschluss()
 	 * @generated
 	 */
-	int GLEIS_ABSCHLUSS = 9;
+	int GLEIS_ABSCHLUSS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1041,13 +1063,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GLEIS_ABSCHLUSS__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_ABSCHLUSS__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_ABSCHLUSS__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1111,10 +1142,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGleis_Abschluss_Art_TypeClass()
 	 * @generated
 	 */
-	int GLEIS_ABSCHLUSS_ART_TYPE_CLASS = 10;
+	int GLEIS_ABSCHLUSS_ART_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1157,10 +1188,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGleissperre_Betriebsart_TypeClass()
 	 * @generated
 	 */
-	int GLEISSPERRE_BETRIEBSART_TYPE_CLASS = 11;
+	int GLEISSPERRE_BETRIEBSART_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1203,7 +1234,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGleissperre_Element_AttributeGroup()
 	 * @generated
 	 */
-	int GLEISSPERRE_ELEMENT_ATTRIBUTE_GROUP = 12;
+	int GLEISSPERRE_ELEMENT_ATTRIBUTE_GROUP = 13;
 
 	/**
 	 * The feature id for the '<em><b>Gleissperre Betriebsart</b></em>' containment reference.
@@ -1249,10 +1280,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGleissperre_Vorzugslage_TypeClass()
 	 * @generated
 	 */
-	int GLEISSPERRE_VORZUGSLAGE_TYPE_CLASS = 13;
+	int GLEISSPERRE_VORZUGSLAGE_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1295,10 +1326,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGleissperrensignal_TypeClass()
 	 * @generated
 	 */
-	int GLEISSPERRENSIGNAL_TYPE_CLASS = 14;
+	int GLEISSPERRENSIGNAL_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1341,7 +1372,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGZ_Freimeldung_L_AttributeGroup()
 	 * @generated
 	 */
-	int GZ_FREIMELDUNG_LATTRIBUTE_GROUP = 15;
+	int GZ_FREIMELDUNG_LATTRIBUTE_GROUP = 16;
 
 	/**
 	 * The feature id for the '<em><b>Element Lage</b></em>' containment reference.
@@ -1387,7 +1418,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGZ_Freimeldung_R_AttributeGroup()
 	 * @generated
 	 */
-	int GZ_FREIMELDUNG_RATTRIBUTE_GROUP = 16;
+	int GZ_FREIMELDUNG_RATTRIBUTE_GROUP = 17;
 
 	/**
 	 * The feature id for the '<em><b>Element Lage</b></em>' containment reference.
@@ -1433,10 +1464,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getHerzstueck_Antriebe_TypeClass()
 	 * @generated
 	 */
-	int HERZSTUECK_ANTRIEBE_TYPE_CLASS = 17;
+	int HERZSTUECK_ANTRIEBE_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1479,10 +1510,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getIsolierfall_TypeClass()
 	 * @generated
 	 */
-	int ISOLIERFALL_TYPE_CLASS = 18;
+	int ISOLIERFALL_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1518,6 +1549,52 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int ISOLIERFALL_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Kr_KrW_Seitenzuordnung_TypeClassImpl <em>Kr Kr WSeitenzuordnung Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Kr_KrW_Seitenzuordnung_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getKr_KrW_Seitenzuordnung_TypeClass()
+	 * @generated
+	 */
+	int KR_KR_WSEITENZUORDNUNG_TYPE_CLASS = 20;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KR_KR_WSEITENZUORDNUNG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KR_KR_WSEITENZUORDNUNG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Kr Kr WSeitenzuordnung Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KR_KR_WSEITENZUORDNUNG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Kr Kr WSeitenzuordnung Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KR_KR_WSEITENZUORDNUNG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Kreuzung_AttributeGroupImpl <em>Kreuzung Attribute Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1525,7 +1602,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getKreuzung_AttributeGroup()
 	 * @generated
 	 */
-	int KREUZUNG_ATTRIBUTE_GROUP = 19;
+	int KREUZUNG_ATTRIBUTE_GROUP = 21;
 
 	/**
 	 * The feature id for the '<em><b>Elektrischer Antrieb Anzahl</b></em>' containment reference.
@@ -1589,10 +1666,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getKreuzungsgleis_TypeClass()
 	 * @generated
 	 */
-	int KREUZUNGSGLEIS_TYPE_CLASS = 20;
+	int KREUZUNGSGLEIS_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1635,10 +1712,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getSchutzschiene_TypeClass()
 	 * @generated
 	 */
-	int SCHUTZSCHIENE_TYPE_CLASS = 21;
+	int SCHUTZSCHIENE_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1674,6 +1751,52 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int SCHUTZSCHIENE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Stammgleis_TypeClassImpl <em>Stammgleis Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Stammgleis_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getStammgleis_TypeClass()
+	 * @generated
+	 */
+	int STAMMGLEIS_TYPE_CLASS = 24;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAMMGLEIS_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAMMGLEIS_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Stammgleis Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAMMGLEIS_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Stammgleis Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAMMGLEIS_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Vorzugslage_Automatik_TypeClassImpl <em>Vorzugslage Automatik Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1681,10 +1804,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getVorzugslage_Automatik_TypeClass()
 	 * @generated
 	 */
-	int VORZUGSLAGE_AUTOMATIK_TYPE_CLASS = 22;
+	int VORZUGSLAGE_AUTOMATIK_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1727,7 +1850,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Anlage()
 	 * @generated
 	 */
-	int WKR_ANLAGE = 23;
+	int WKR_ANLAGE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1748,13 +1871,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_ANLAGE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int WKR_ANLAGE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WKR_ANLAGE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1818,7 +1950,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Anlage_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int WKR_ANLAGE_ALLG_ATTRIBUTE_GROUP = 24;
+	int WKR_ANLAGE_ALLG_ATTRIBUTE_GROUP = 27;
 
 	/**
 	 * The feature id for the '<em><b>Isolierfall</b></em>' containment reference.
@@ -1873,10 +2005,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Art_TypeClass()
 	 * @generated
 	 */
-	int WKR_ART_TYPE_CLASS = 25;
+	int WKR_ART_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1919,10 +2051,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Grundform_TypeClass()
 	 * @generated
 	 */
-	int WKR_GRUNDFORM_TYPE_CLASS = 26;
+	int WKR_GRUNDFORM_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1965,7 +2097,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Gsp_Element()
 	 * @generated
 	 */
-	int WKR_GSP_ELEMENT = 27;
+	int WKR_GSP_ELEMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1986,13 +2118,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_GSP_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int WKR_GSP_ELEMENT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WKR_GSP_ELEMENT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2101,7 +2242,16 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Gsp_Element_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP = 28;
+	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP = 31;
+
+	/**
+	 * The feature id for the '<em><b>Kr Kr WSeitenzuordnung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG = 0;
 
 	/**
 	 * The feature id for the '<em><b>Vorzugslage Automatik</b></em>' containment reference.
@@ -2110,7 +2260,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK = 0;
+	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK = 1;
 
 	/**
 	 * The feature id for the '<em><b>WKr Gsp Stellart</b></em>' containment reference.
@@ -2119,7 +2269,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__WKR_GSP_STELLART = 1;
+	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__WKR_GSP_STELLART = 2;
 
 	/**
 	 * The number of structural features of the '<em>WKr Gsp Element Allg Attribute Group</em>' class.
@@ -2128,7 +2278,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
+	int WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>WKr Gsp Element Allg Attribute Group</em>' class.
@@ -2147,7 +2297,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Gsp_Komponente()
 	 * @generated
 	 */
-	int WKR_GSP_KOMPONENTE = 29;
+	int WKR_GSP_KOMPONENTE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2168,13 +2318,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_GSP_KOMPONENTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int WKR_GSP_KOMPONENTE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WKR_GSP_KOMPONENTE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2204,13 +2363,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_GSP_KOMPONENTE__PUNKT_OBJEKT_TOP_KANTE = BasisobjektePackage.PUNKT_OBJEKT__PUNKT_OBJEKT_TOP_KANTE;
 
 	/**
+	 * The feature id for the '<em><b>Austausch Antriebe</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>ID Regelzeichnung</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_KOMPONENTE__ID_REGELZEICHNUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 0;
+	int WKR_GSP_KOMPONENTE__ID_REGELZEICHNUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>IDW Kr Gsp Element</b></em>' reference.
@@ -2219,7 +2387,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_KOMPONENTE__IDW_KR_GSP_ELEMENT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 1;
+	int WKR_GSP_KOMPONENTE__IDW_KR_GSP_ELEMENT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Besonderes Fahrwegelement</b></em>' containment reference.
@@ -2228,7 +2396,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_KOMPONENTE__BESONDERES_FAHRWEGELEMENT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 2;
+	int WKR_GSP_KOMPONENTE__BESONDERES_FAHRWEGELEMENT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Entgleisungsschuh</b></em>' containment reference.
@@ -2237,7 +2405,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_KOMPONENTE__ENTGLEISUNGSSCHUH = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 3;
+	int WKR_GSP_KOMPONENTE__ENTGLEISUNGSSCHUH = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Kreuzung</b></em>' containment reference.
@@ -2246,7 +2414,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_KOMPONENTE__KREUZUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 4;
+	int WKR_GSP_KOMPONENTE__KREUZUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Zungenpaar</b></em>' containment reference.
@@ -2255,7 +2423,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_KOMPONENTE__ZUNGENPAAR = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 5;
+	int WKR_GSP_KOMPONENTE__ZUNGENPAAR = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>WKr Gsp Komponente</em>' class.
@@ -2264,7 +2432,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WKR_GSP_KOMPONENTE_FEATURE_COUNT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 6;
+	int WKR_GSP_KOMPONENTE_FEATURE_COUNT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>WKr Gsp Komponente</em>' class.
@@ -2283,10 +2451,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Gsp_Stellart_TypeClass()
 	 * @generated
 	 */
-	int WKR_GSP_STELLART_TYPE_CLASS = 30;
+	int WKR_GSP_STELLART_TYPE_CLASS = 33;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2329,10 +2497,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getWeiche_Betriebsart_TypeClass()
 	 * @generated
 	 */
-	int WEICHE_BETRIEBSART_TYPE_CLASS = 31;
+	int WEICHE_BETRIEBSART_TYPE_CLASS = 34;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2375,7 +2543,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getWeiche_Element_AttributeGroup()
 	 * @generated
 	 */
-	int WEICHE_ELEMENT_ATTRIBUTE_GROUP = 32;
+	int WEICHE_ELEMENT_ATTRIBUTE_GROUP = 35;
 
 	/**
 	 * The feature id for the '<em><b>Auffahrortung</b></em>' containment reference.
@@ -2466,10 +2634,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getWeiche_Vorzugslage_TypeClass()
 	 * @generated
 	 */
-	int WEICHE_VORZUGSLAGE_TYPE_CLASS = 33;
+	int WEICHE_VORZUGSLAGE_TYPE_CLASS = 36;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2512,7 +2680,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getWeichenlaufkette()
 	 * @generated
 	 */
-	int WEICHENLAUFKETTE = 34;
+	int WEICHENLAUFKETTE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2533,13 +2701,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WEICHENLAUFKETTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int WEICHENLAUFKETTE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEICHENLAUFKETTE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2585,7 +2762,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getWeichenlaufkette_Zuordnung()
 	 * @generated
 	 */
-	int WEICHENLAUFKETTE_ZUORDNUNG = 35;
+	int WEICHENLAUFKETTE_ZUORDNUNG = 38;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2606,13 +2783,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WEICHENLAUFKETTE_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int WEICHENLAUFKETTE_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEICHENLAUFKETTE_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2667,10 +2853,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getWeichensignal_TypeClass()
 	 * @generated
 	 */
-	int WEICHENSIGNAL_TYPE_CLASS = 36;
+	int WEICHENSIGNAL_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2713,7 +2899,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getZungenpaar_AttributeGroup()
 	 * @generated
 	 */
-	int ZUNGENPAAR_ATTRIBUTE_GROUP = 37;
+	int ZUNGENPAAR_ATTRIBUTE_GROUP = 40;
 
 	/**
 	 * The feature id for the '<em><b>Elektrischer Antrieb Anzahl</b></em>' containment reference.
@@ -2770,13 +2956,22 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS = 5;
 
 	/**
+	 * The feature id for the '<em><b>Stammgleis</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS = 6;
+
+	/**
 	 * The feature id for the '<em><b>Weichensignal</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL = 6;
+	int ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Zungenpruefkontakt Anzahl</b></em>' containment reference.
@@ -2785,7 +2980,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL = 7;
+	int ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL = 8;
 
 	/**
 	 * The number of structural features of the '<em>Zungenpaar Attribute Group</em>' class.
@@ -2794,7 +2989,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZUNGENPAAR_ATTRIBUTE_GROUP_FEATURE_COUNT = 8;
+	int ZUNGENPAAR_ATTRIBUTE_GROUP_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Zungenpaar Attribute Group</em>' class.
@@ -2813,10 +3008,10 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getZungenpruefkontakt_Anzahl_TypeClass()
 	 * @generated
 	 */
-	int ZUNGENPRUEFKONTAKT_ANZAHL_TYPE_CLASS = 38;
+	int ZUNGENPRUEFKONTAKT_ANZAHL_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2859,7 +3054,17 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMBesonderesFahrwegelement()
 	 * @generated
 	 */
-	int ENUM_BESONDERES_FAHRWEGELEMENT = 39;
+	int ENUM_BESONDERES_FAHRWEGELEMENT = 42;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage <em>ENUM Elektrischer Antrieb Lage</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMElektrischerAntriebLage()
+	 * @generated
+	 */
+	int ENUM_ELEKTRISCHER_ANTRIEB_LAGE = 43;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElementLage <em>ENUM Element Lage</em>}' enum.
@@ -2869,7 +3074,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMElementLage()
 	 * @generated
 	 */
-	int ENUM_ELEMENT_LAGE = 40;
+	int ENUM_ELEMENT_LAGE = 44;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMGleisAbschlussArt <em>ENUM Gleis Abschluss Art</em>}' enum.
@@ -2879,7 +3084,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleisAbschlussArt()
 	 * @generated
 	 */
-	int ENUM_GLEIS_ABSCHLUSS_ART = 41;
+	int ENUM_GLEIS_ABSCHLUSS_ART = 45;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMGleissperreBetriebsart <em>ENUM Gleissperre Betriebsart</em>}' enum.
@@ -2889,7 +3094,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleissperreBetriebsart()
 	 * @generated
 	 */
-	int ENUM_GLEISSPERRE_BETRIEBSART = 42;
+	int ENUM_GLEISSPERRE_BETRIEBSART = 46;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMGleissperrensignal <em>ENUM Gleissperrensignal</em>}' enum.
@@ -2899,7 +3104,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleissperrensignal()
 	 * @generated
 	 */
-	int ENUM_GLEISSPERRENSIGNAL = 43;
+	int ENUM_GLEISSPERRENSIGNAL = 47;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMGleissperreVorzugslage <em>ENUM Gleissperre Vorzugslage</em>}' enum.
@@ -2909,7 +3114,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleissperreVorzugslage()
 	 * @generated
 	 */
-	int ENUM_GLEISSPERRE_VORZUGSLAGE = 44;
+	int ENUM_GLEISSPERRE_VORZUGSLAGE = 48;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMWeicheBetriebsart <em>ENUM Weiche Betriebsart</em>}' enum.
@@ -2919,7 +3124,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWeicheBetriebsart()
 	 * @generated
 	 */
-	int ENUM_WEICHE_BETRIEBSART = 45;
+	int ENUM_WEICHE_BETRIEBSART = 49;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMWeichensignal <em>ENUM Weichensignal</em>}' enum.
@@ -2929,7 +3134,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWeichensignal()
 	 * @generated
 	 */
-	int ENUM_WEICHENSIGNAL = 46;
+	int ENUM_WEICHENSIGNAL = 50;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMWKrArt <em>ENUMW Kr Art</em>}' enum.
@@ -2939,7 +3144,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWKrArt()
 	 * @generated
 	 */
-	int ENUMW_KR_ART = 47;
+	int ENUMW_KR_ART = 51;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMWKrGspStellart <em>ENUMW Kr Gsp Stellart</em>}' enum.
@@ -2949,7 +3154,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWKrGspStellart()
 	 * @generated
 	 */
-	int ENUMW_KR_GSP_STELLART = 48;
+	int ENUMW_KR_GSP_STELLART = 52;
 
 	/**
 	 * The meta object id for the '<em>CAuswurfrichtung</em>' data type.
@@ -2959,7 +3164,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getCAuswurfrichtung()
 	 * @generated
 	 */
-	int CAUSWURFRICHTUNG = 49;
+	int CAUSWURFRICHTUNG = 53;
 
 	/**
 	 * The meta object id for the '<em>Elektrischer Antrieb Anzahl Type</em>' data type.
@@ -2969,17 +3174,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getElektrischer_Antrieb_Anzahl_Type()
 	 * @generated
 	 */
-	int ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE = 50;
-
-	/**
-	 * The meta object id for the '<em>Elektrischer Antrieb Lage Type</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
-	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getElektrischer_Antrieb_Lage_Type()
-	 * @generated
-	 */
-	int ELEKTRISCHER_ANTRIEB_LAGE_TYPE = 51;
+	int ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE = 54;
 
 	/**
 	 * The meta object id for the '<em>ENUM Besonderes Fahrwegelement Object</em>' data type.
@@ -2989,7 +3184,17 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMBesonderesFahrwegelementObject()
 	 * @generated
 	 */
-	int ENUM_BESONDERES_FAHRWEGELEMENT_OBJECT = 52;
+	int ENUM_BESONDERES_FAHRWEGELEMENT_OBJECT = 55;
+
+	/**
+	 * The meta object id for the '<em>ENUM Elektrischer Antrieb Lage Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMElektrischerAntriebLageObject()
+	 * @generated
+	 */
+	int ENUM_ELEKTRISCHER_ANTRIEB_LAGE_OBJECT = 56;
 
 	/**
 	 * The meta object id for the '<em>ENUM Element Lage Object</em>' data type.
@@ -2999,7 +3204,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMElementLageObject()
 	 * @generated
 	 */
-	int ENUM_ELEMENT_LAGE_OBJECT = 53;
+	int ENUM_ELEMENT_LAGE_OBJECT = 57;
 
 	/**
 	 * The meta object id for the '<em>ENUM Gleis Abschluss Art Object</em>' data type.
@@ -3009,7 +3214,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleisAbschlussArtObject()
 	 * @generated
 	 */
-	int ENUM_GLEIS_ABSCHLUSS_ART_OBJECT = 54;
+	int ENUM_GLEIS_ABSCHLUSS_ART_OBJECT = 58;
 
 	/**
 	 * The meta object id for the '<em>ENUM Gleissperre Betriebsart Object</em>' data type.
@@ -3019,7 +3224,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleissperreBetriebsartObject()
 	 * @generated
 	 */
-	int ENUM_GLEISSPERRE_BETRIEBSART_OBJECT = 55;
+	int ENUM_GLEISSPERRE_BETRIEBSART_OBJECT = 59;
 
 	/**
 	 * The meta object id for the '<em>ENUM Gleissperrensignal Object</em>' data type.
@@ -3029,7 +3234,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleissperrensignalObject()
 	 * @generated
 	 */
-	int ENUM_GLEISSPERRENSIGNAL_OBJECT = 56;
+	int ENUM_GLEISSPERRENSIGNAL_OBJECT = 60;
 
 	/**
 	 * The meta object id for the '<em>ENUM Gleissperre Vorzugslage Object</em>' data type.
@@ -3039,7 +3244,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMGleissperreVorzugslageObject()
 	 * @generated
 	 */
-	int ENUM_GLEISSPERRE_VORZUGSLAGE_OBJECT = 57;
+	int ENUM_GLEISSPERRE_VORZUGSLAGE_OBJECT = 61;
 
 	/**
 	 * The meta object id for the '<em>ENUM Weiche Betriebsart Object</em>' data type.
@@ -3049,7 +3254,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWeicheBetriebsartObject()
 	 * @generated
 	 */
-	int ENUM_WEICHE_BETRIEBSART_OBJECT = 58;
+	int ENUM_WEICHE_BETRIEBSART_OBJECT = 62;
 
 	/**
 	 * The meta object id for the '<em>ENUM Weichensignal Object</em>' data type.
@@ -3059,7 +3264,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWeichensignalObject()
 	 * @generated
 	 */
-	int ENUM_WEICHENSIGNAL_OBJECT = 59;
+	int ENUM_WEICHENSIGNAL_OBJECT = 63;
 
 	/**
 	 * The meta object id for the '<em>ENUMW Kr Art Object</em>' data type.
@@ -3069,7 +3274,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWKrArtObject()
 	 * @generated
 	 */
-	int ENUMW_KR_ART_OBJECT = 60;
+	int ENUMW_KR_ART_OBJECT = 64;
 
 	/**
 	 * The meta object id for the '<em>ENUMW Kr Gsp Stellart Object</em>' data type.
@@ -3079,7 +3284,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMWKrGspStellartObject()
 	 * @generated
 	 */
-	int ENUMW_KR_GSP_STELLART_OBJECT = 61;
+	int ENUMW_KR_GSP_STELLART_OBJECT = 65;
 
 	/**
 	 * The meta object id for the '<em>Geschwindigkeit LType</em>' data type.
@@ -3089,7 +3294,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGeschwindigkeit_L_Type()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_LTYPE = 62;
+	int GESCHWINDIGKEIT_LTYPE = 66;
 
 	/**
 	 * The meta object id for the '<em>Geschwindigkeit RType</em>' data type.
@@ -3099,7 +3304,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getGeschwindigkeit_R_Type()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_RTYPE = 63;
+	int GESCHWINDIGKEIT_RTYPE = 67;
 
 	/**
 	 * The meta object id for the '<em>Herzstueck Antriebe Type</em>' data type.
@@ -3109,7 +3314,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getHerzstueck_Antriebe_Type()
 	 * @generated
 	 */
-	int HERZSTUECK_ANTRIEBE_TYPE = 64;
+	int HERZSTUECK_ANTRIEBE_TYPE = 68;
 
 	/**
 	 * The meta object id for the '<em>Isolierfall Type</em>' data type.
@@ -3119,7 +3324,17 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getIsolierfall_Type()
 	 * @generated
 	 */
-	int ISOLIERFALL_TYPE = 65;
+	int ISOLIERFALL_TYPE = 69;
+
+	/**
+	 * The meta object id for the '<em>Kr Kr WSeitenzuordnung Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getKr_KrW_Seitenzuordnung_Type()
+	 * @generated
+	 */
+	int KR_KR_WSEITENZUORDNUNG_TYPE = 70;
 
 	/**
 	 * The meta object id for the '<em>Kreuzungsgleis Type</em>' data type.
@@ -3129,7 +3344,17 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getKreuzungsgleis_Type()
 	 * @generated
 	 */
-	int KREUZUNGSGLEIS_TYPE = 66;
+	int KREUZUNGSGLEIS_TYPE = 71;
+
+	/**
+	 * The meta object id for the '<em>Stammgleis Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getStammgleis_Type()
+	 * @generated
+	 */
+	int STAMMGLEIS_TYPE = 72;
 
 	/**
 	 * The meta object id for the '<em>WKr Grundform Type</em>' data type.
@@ -3139,7 +3364,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getW_Kr_Grundform_Type()
 	 * @generated
 	 */
-	int WKR_GRUNDFORM_TYPE = 67;
+	int WKR_GRUNDFORM_TYPE = 73;
 
 	/**
 	 * The meta object id for the '<em>Weiche Vorzugslage Type</em>' data type.
@@ -3149,7 +3374,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getWeiche_Vorzugslage_Type()
 	 * @generated
 	 */
-	int WEICHE_VORZUGSLAGE_TYPE = 68;
+	int WEICHE_VORZUGSLAGE_TYPE = 74;
 
 	/**
 	 * The meta object id for the '<em>Zungenpruefkontakt Anzahl Type</em>' data type.
@@ -3159,7 +3384,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getZungenpruefkontakt_Anzahl_Type()
 	 * @generated
 	 */
-	int ZUNGENPRUEFKONTAKT_ANZAHL_TYPE = 69;
+	int ZUNGENPRUEFKONTAKT_ANZAHL_TYPE = 75;
 
 
 	/**
@@ -3182,6 +3407,27 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAuffahrortung_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass <em>Austausch Antriebe Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Austausch Antriebe Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass
+	 * @generated
+	 */
+	EClass getAustausch_Antriebe_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass#getWert()
+	 * @see #getAustausch_Antriebe_TypeClass()
+	 * @generated
+	 */
+	EAttribute getAustausch_Antriebe_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Auswurfrichtung_TypeClass <em>Auswurfrichtung Type Class</em>}'.
@@ -3617,6 +3863,27 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	EAttribute getIsolierfall_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass <em>Kr Kr WSeitenzuordnung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kr Kr WSeitenzuordnung Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass
+	 * @generated
+	 */
+	EClass getKr_KrW_Seitenzuordnung_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass#getWert()
+	 * @see #getKr_KrW_Seitenzuordnung_TypeClass()
+	 * @generated
+	 */
+	EAttribute getKr_KrW_Seitenzuordnung_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kreuzung_AttributeGroup <em>Kreuzung Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3711,6 +3978,27 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSchutzschiene_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass <em>Stammgleis Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Stammgleis Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass
+	 * @generated
+	 */
+	EClass getStammgleis_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass#getWert()
+	 * @see #getStammgleis_TypeClass()
+	 * @generated
+	 */
+	EAttribute getStammgleis_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Vorzugslage_Automatik_TypeClass <em>Vorzugslage Automatik Type Class</em>}'.
@@ -3970,6 +4258,17 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	EClass getW_Kr_Gsp_Element_Allg_AttributeGroup();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element_Allg_AttributeGroup#getKrKrWSeitenzuordnung <em>Kr Kr WSeitenzuordnung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Kr Kr WSeitenzuordnung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element_Allg_AttributeGroup#getKrKrWSeitenzuordnung()
+	 * @see #getW_Kr_Gsp_Element_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getW_Kr_Gsp_Element_Allg_AttributeGroup_KrKrWSeitenzuordnung();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element_Allg_AttributeGroup#getVorzugslageAutomatik <em>Vorzugslage Automatik</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4000,6 +4299,17 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getW_Kr_Gsp_Komponente();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getAustauschAntriebe <em>Austausch Antriebe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Austausch Antriebe</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getAustauschAntriebe()
+	 * @see #getW_Kr_Gsp_Komponente()
+	 * @generated
+	 */
+	EReference getW_Kr_Gsp_Komponente_AustauschAntriebe();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getIDRegelzeichnung <em>ID Regelzeichnung</em>}'.
@@ -4368,6 +4678,17 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	EReference getZungenpaar_AttributeGroup_Kreuzungsgleis();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getStammgleis <em>Stammgleis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Stammgleis</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getStammgleis()
+	 * @see #getZungenpaar_AttributeGroup()
+	 * @generated
+	 */
+	EReference getZungenpaar_AttributeGroup_Stammgleis();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getWeichensignal <em>Weichensignal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4419,6 +4740,16 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getENUMBesonderesFahrwegelement();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage <em>ENUM Elektrischer Antrieb Lage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Elektrischer Antrieb Lage</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage
+	 * @generated
+	 */
+	EEnum getENUMElektrischerAntriebLage();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElementLage <em>ENUM Element Lage</em>}'.
@@ -4535,18 +4866,6 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	EDataType getElektrischer_Antrieb_Anzahl_Type();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts <em>Elektrischer Antrieb Lage Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Elektrischer Antrieb Lage Type</em>'.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
-	 * @model instanceClass="org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts"
-	 *        extendedMetaData="name='TElektrischer_Antrieb_Lage' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TLinksRechts'"
-	 * @generated
-	 */
-	EDataType getElektrischer_Antrieb_Lage_Type();
-
-	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMBesonderesFahrwegelement <em>ENUM Besonderes Fahrwegelement Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4557,6 +4876,18 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMBesonderesFahrwegelementObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage <em>ENUM Elektrischer Antrieb Lage Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Elektrischer Antrieb Lage Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage"
+	 *        extendedMetaData="name='ENUMElektrischer_Antrieb_Lage:Object' baseType='ENUMElektrischer_Antrieb_Lage'"
+	 * @generated
+	 */
+	EDataType getENUMElektrischerAntriebLageObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElementLage <em>ENUM Element Lage Object</em>}'.
@@ -4715,6 +5046,18 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	EDataType getIsolierfall_Type();
 
 	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts <em>Kr Kr WSeitenzuordnung Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Kr Kr WSeitenzuordnung Type</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts"
+	 *        extendedMetaData="name='TKr_KrW_Seitenzuordnung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TLinksRechts'"
+	 * @generated
+	 */
+	EDataType getKr_KrW_Seitenzuordnung_Type();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts <em>Kreuzungsgleis Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4725,6 +5068,18 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getKreuzungsgleis_Type();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts <em>Stammgleis Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Stammgleis Type</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts"
+	 *        extendedMetaData="name='TStammgleis' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TLinksRechts'"
+	 * @generated
+	 */
+	EDataType getStammgleis_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>WKr Grundform Type</em>}'.
@@ -4802,6 +5157,24 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute AUFFAHRORTUNG_TYPE_CLASS__WERT = eINSTANCE.getAuffahrortung_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Austausch_Antriebe_TypeClassImpl <em>Austausch Antriebe Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Austausch_Antriebe_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getAustausch_Antriebe_TypeClass()
+		 * @generated
+		 */
+		EClass AUSTAUSCH_ANTRIEBE_TYPE_CLASS = eINSTANCE.getAustausch_Antriebe_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUSTAUSCH_ANTRIEBE_TYPE_CLASS__WERT = eINSTANCE.getAustausch_Antriebe_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Auswurfrichtung_TypeClassImpl <em>Auswurfrichtung Type Class</em>}' class.
@@ -5168,6 +5541,24 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		EAttribute ISOLIERFALL_TYPE_CLASS__WERT = eINSTANCE.getIsolierfall_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Kr_KrW_Seitenzuordnung_TypeClassImpl <em>Kr Kr WSeitenzuordnung Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Kr_KrW_Seitenzuordnung_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getKr_KrW_Seitenzuordnung_TypeClass()
+		 * @generated
+		 */
+		EClass KR_KR_WSEITENZUORDNUNG_TYPE_CLASS = eINSTANCE.getKr_KrW_Seitenzuordnung_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KR_KR_WSEITENZUORDNUNG_TYPE_CLASS__WERT = eINSTANCE.getKr_KrW_Seitenzuordnung_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Kreuzung_AttributeGroupImpl <em>Kreuzung Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5244,6 +5635,24 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SCHUTZSCHIENE_TYPE_CLASS__WERT = eINSTANCE.getSchutzschiene_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Stammgleis_TypeClassImpl <em>Stammgleis Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Stammgleis_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getStammgleis_TypeClass()
+		 * @generated
+		 */
+		EClass STAMMGLEIS_TYPE_CLASS = eINSTANCE.getStammgleis_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STAMMGLEIS_TYPE_CLASS__WERT = eINSTANCE.getStammgleis_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Vorzugslage_Automatik_TypeClassImpl <em>Vorzugslage Automatik Type Class</em>}' class.
@@ -5452,6 +5861,14 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		EClass WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP = eINSTANCE.getW_Kr_Gsp_Element_Allg_AttributeGroup();
 
 		/**
+		 * The meta object literal for the '<em><b>Kr Kr WSeitenzuordnung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG = eINSTANCE.getW_Kr_Gsp_Element_Allg_AttributeGroup_KrKrWSeitenzuordnung();
+
+		/**
 		 * The meta object literal for the '<em><b>Vorzugslage Automatik</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5476,6 +5893,14 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		 * @generated
 		 */
 		EClass WKR_GSP_KOMPONENTE = eINSTANCE.getW_Kr_Gsp_Komponente();
+
+		/**
+		 * The meta object literal for the '<em><b>Austausch Antriebe</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE = eINSTANCE.getW_Kr_Gsp_Komponente_AustauschAntriebe();
 
 		/**
 		 * The meta object literal for the '<em><b>ID Regelzeichnung</b></em>' reference list feature.
@@ -5766,6 +6191,14 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		EReference ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS = eINSTANCE.getZungenpaar_AttributeGroup_Kreuzungsgleis();
 
 		/**
+		 * The meta object literal for the '<em><b>Stammgleis</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS = eINSTANCE.getZungenpaar_AttributeGroup_Stammgleis();
+
+		/**
 		 * The meta object literal for the '<em><b>Weichensignal</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5808,6 +6241,16 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ENUM_BESONDERES_FAHRWEGELEMENT = eINSTANCE.getENUMBesonderesFahrwegelement();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage <em>ENUM Elektrischer Antrieb Lage</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMElektrischerAntriebLage()
+		 * @generated
+		 */
+		EEnum ENUM_ELEKTRISCHER_ANTRIEB_LAGE = eINSTANCE.getENUMElektrischerAntriebLage();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElementLage <em>ENUM Element Lage</em>}' enum.
@@ -5920,16 +6363,6 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		EDataType ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE = eINSTANCE.getElektrischer_Antrieb_Anzahl_Type();
 
 		/**
-		 * The meta object literal for the '<em>Elektrischer Antrieb Lage Type</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
-		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getElektrischer_Antrieb_Lage_Type()
-		 * @generated
-		 */
-		EDataType ELEKTRISCHER_ANTRIEB_LAGE_TYPE = eINSTANCE.getElektrischer_Antrieb_Lage_Type();
-
-		/**
 		 * The meta object literal for the '<em>ENUM Besonderes Fahrwegelement Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5938,6 +6371,16 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_BESONDERES_FAHRWEGELEMENT_OBJECT = eINSTANCE.getENUMBesonderesFahrwegelementObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Elektrischer Antrieb Lage Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getENUMElektrischerAntriebLageObject()
+		 * @generated
+		 */
+		EDataType ENUM_ELEKTRISCHER_ANTRIEB_LAGE_OBJECT = eINSTANCE.getENUMElektrischerAntriebLageObject();
 
 		/**
 		 * The meta object literal for the '<em>ENUM Element Lage Object</em>' data type.
@@ -6070,6 +6513,16 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		EDataType ISOLIERFALL_TYPE = eINSTANCE.getIsolierfall_Type();
 
 		/**
+		 * The meta object literal for the '<em>Kr Kr WSeitenzuordnung Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getKr_KrW_Seitenzuordnung_Type()
+		 * @generated
+		 */
+		EDataType KR_KR_WSEITENZUORDNUNG_TYPE = eINSTANCE.getKr_KrW_Seitenzuordnung_Type();
+
+		/**
 		 * The meta object literal for the '<em>Kreuzungsgleis Type</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6078,6 +6531,16 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType KREUZUNGSGLEIS_TYPE = eINSTANCE.getKreuzungsgleis_Type();
+
+		/**
+		 * The meta object literal for the '<em>Stammgleis Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
+		 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Weichen_und_GleissperrenPackageImpl#getStammgleis_Type()
+		 * @generated
+		 */
+		EDataType STAMMGLEIS_TYPE = eINSTANCE.getStammgleis_Type();
 
 		/**
 		 * The meta object literal for the '<em>WKr Grundform Type</em>' data type.

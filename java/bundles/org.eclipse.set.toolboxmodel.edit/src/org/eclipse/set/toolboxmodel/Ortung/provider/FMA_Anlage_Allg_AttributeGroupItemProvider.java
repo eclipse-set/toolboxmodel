@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,11 +29,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
+
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ortung.OrtungFactory;
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
-
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage_Allg_AttributeGroup} object.

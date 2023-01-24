@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Verweise.util;
 
@@ -101,6 +108,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VerweisePackage.ID_ANHANG_BEARBEITUNGSVERMERK_TYPE_CLASS: {
+				ID_AnhangBearbeitungsvermerk_TypeClass iD_AnhangBearbeitungsvermerk_TypeClass = (ID_AnhangBearbeitungsvermerk_TypeClass)theEObject;
+				T result = caseID_AnhangBearbeitungsvermerk_TypeClass(iD_AnhangBearbeitungsvermerk_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_AnhangBearbeitungsvermerk_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_AnhangBearbeitungsvermerk_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VerweisePackage.ID_ANSCHLUSS_ELEMENT_TYPE_CLASS: {
 				ID_Anschluss_Element_TypeClass iD_Anschluss_Element_TypeClass = (ID_Anschluss_Element_TypeClass)theEObject;
 				T result = caseID_Anschluss_Element_TypeClass(iD_Anschluss_Element_TypeClass);
@@ -109,11 +124,35 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VerweisePackage.ID_ATO_TS_INSTANZ_OHNE_PROXY_TYPE_CLASS: {
+				ID_ATO_TS_Instanz_ohne_Proxy_TypeClass iD_ATO_TS_Instanz_ohne_Proxy_TypeClass = (ID_ATO_TS_Instanz_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_ATO_TS_Instanz_ohne_Proxy_TypeClass(iD_ATO_TS_Instanz_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_ATO_TS_Instanz_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_ATO_TS_Instanz_ohne_Proxy_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_ATO_TS_INSTANZ_TYPE_CLASS: {
+				ID_ATO_TS_Instanz_TypeClass iD_ATO_TS_Instanz_TypeClass = (ID_ATO_TS_Instanz_TypeClass)theEObject;
+				T result = caseID_ATO_TS_Instanz_TypeClass(iD_ATO_TS_Instanz_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_ATO_TS_Instanz_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_ATO_TS_Instanz_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VerweisePackage.ID_AUSGABE_FACHDATEN_OHNE_PROXY_TYPE_CLASS: {
 				ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClass = (ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass)theEObject;
 				T result = caseID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass(iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_AUSSENELEMENTANSTEUERUNG_OHNE_PROXY_TYPE_CLASS: {
+				ID_Aussenelementansteuerung_ohne_Proxy_TypeClass iD_Aussenelementansteuerung_ohne_Proxy_TypeClass = (ID_Aussenelementansteuerung_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_Aussenelementansteuerung_ohne_Proxy_TypeClass(iD_Aussenelementansteuerung_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Aussenelementansteuerung_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Aussenelementansteuerung_ohne_Proxy_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -173,14 +212,6 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VerweisePackage.ID_BEARBEITUNGSVERMERK_TYPE_CLASS: {
-				ID_Bearbeitungsvermerk_TypeClass iD_Bearbeitungsvermerk_TypeClass = (ID_Bearbeitungsvermerk_TypeClass)theEObject;
-				T result = caseID_Bearbeitungsvermerk_TypeClass(iD_Bearbeitungsvermerk_TypeClass);
-				if (result == null) result = caseZeiger_TypeClass(iD_Bearbeitungsvermerk_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Bearbeitungsvermerk_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case VerweisePackage.ID_BEDIEN_ANZEIGE_ELEMENT_TYPE_CLASS: {
 				ID_Bedien_Anzeige_Element_TypeClass iD_Bedien_Anzeige_Element_TypeClass = (ID_Bedien_Anzeige_Element_TypeClass)theEObject;
 				T result = caseID_Bedien_Anzeige_Element_TypeClass(iD_Bedien_Anzeige_Element_TypeClass);
@@ -229,6 +260,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VerweisePackage.ID_BEFESTIGUNG_BAUWERK_TYPE_CLASS: {
+				ID_Befestigung_Bauwerk_TypeClass iD_Befestigung_Bauwerk_TypeClass = (ID_Befestigung_Bauwerk_TypeClass)theEObject;
+				T result = caseID_Befestigung_Bauwerk_TypeClass(iD_Befestigung_Bauwerk_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Befestigung_Bauwerk_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Befestigung_Bauwerk_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VerweisePackage.ID_BEGINN_BEREICH_TYPE_CLASS: {
 				ID_Beginn_Bereich_TypeClass iD_Beginn_Bereich_TypeClass = (ID_Beginn_Bereich_TypeClass)theEObject;
 				T result = caseID_Beginn_Bereich_TypeClass(iD_Beginn_Bereich_TypeClass);
@@ -237,11 +276,19 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VerweisePackage.ID_BINAERDATEI_OHNE_PROXY_TYPE_CLASS: {
-				ID_Binaerdatei_ohne_Proxy_TypeClass iD_Binaerdatei_ohne_Proxy_TypeClass = (ID_Binaerdatei_ohne_Proxy_TypeClass)theEObject;
-				T result = caseID_Binaerdatei_ohne_Proxy_TypeClass(iD_Binaerdatei_ohne_Proxy_TypeClass);
-				if (result == null) result = caseZeiger_TypeClass(iD_Binaerdatei_ohne_Proxy_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Binaerdatei_ohne_Proxy_TypeClass);
+			case VerweisePackage.ID_BEZUGSPUNKT_POSITIONIERUNG_TYPE_CLASS: {
+				ID_Bezugspunkt_Positionierung_TypeClass iD_Bezugspunkt_Positionierung_TypeClass = (ID_Bezugspunkt_Positionierung_TypeClass)theEObject;
+				T result = caseID_Bezugspunkt_Positionierung_TypeClass(iD_Bezugspunkt_Positionierung_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Bezugspunkt_Positionierung_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Bezugspunkt_Positionierung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_BINAERDATEN_OHNE_PROXY_TYPE_CLASS: {
+				ID_Binaerdaten_ohne_Proxy_TypeClass iD_Binaerdaten_ohne_Proxy_TypeClass = (ID_Binaerdaten_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_Binaerdaten_ohne_Proxy_TypeClass(iD_Binaerdaten_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Binaerdaten_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Binaerdaten_ohne_Proxy_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -341,11 +388,11 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VerweisePackage.ID_DP_BEZUGSPUNKT_TYPE_CLASS: {
-				ID_DP_Bezugspunkt_TypeClass iD_DP_Bezugspunkt_TypeClass = (ID_DP_Bezugspunkt_TypeClass)theEObject;
-				T result = caseID_DP_Bezugspunkt_TypeClass(iD_DP_Bezugspunkt_TypeClass);
-				if (result == null) result = caseZeiger_TypeClass(iD_DP_Bezugspunkt_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_DP_Bezugspunkt_TypeClass);
+			case VerweisePackage.ID_DP_BEZUG_FUNKTIONAL_TYPE_CLASS: {
+				ID_DP_Bezug_Funktional_TypeClass iD_DP_Bezug_Funktional_TypeClass = (ID_DP_Bezug_Funktional_TypeClass)theEObject;
+				T result = caseID_DP_Bezug_Funktional_TypeClass(iD_DP_Bezug_Funktional_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_DP_Bezug_Funktional_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_DP_Bezug_Funktional_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -389,11 +436,11 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VerweisePackage.ID_ENERGIE_PRIMAER_TYPE_CLASS: {
-				ID_Energie_Primaer_TypeClass iD_Energie_Primaer_TypeClass = (ID_Energie_Primaer_TypeClass)theEObject;
-				T result = caseID_Energie_Primaer_TypeClass(iD_Energie_Primaer_TypeClass);
-				if (result == null) result = caseZeiger_TypeClass(iD_Energie_Primaer_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Energie_Primaer_TypeClass);
+			case VerweisePackage.ID_ENERGIE_TYPE_CLASS: {
+				ID_Energie_TypeClass iD_Energie_TypeClass = (ID_Energie_TypeClass)theEObject;
+				T result = caseID_Energie_TypeClass(iD_Energie_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Energie_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Energie_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -402,6 +449,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				T result = caseID_ESTW_Zentraleinheit_TypeClass(iD_ESTW_Zentraleinheit_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_ESTW_Zentraleinheit_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_ESTW_Zentraleinheit_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_ETCS_KANTE_TYPE_CLASS: {
+				ID_ETCS_Kante_TypeClass iD_ETCS_Kante_TypeClass = (ID_ETCS_Kante_TypeClass)theEObject;
+				T result = caseID_ETCS_Kante_TypeClass(iD_ETCS_Kante_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_ETCS_Kante_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_ETCS_Kante_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -426,6 +481,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				T result = caseID_EV_Modul_TypeClass(iD_EV_Modul_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_EV_Modul_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_EV_Modul_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_FACHTELEGRAMM_OHNE_PROXY_TYPE_CLASS: {
+				ID_Fachtelegramm_ohne_Proxy_TypeClass iD_Fachtelegramm_ohne_Proxy_TypeClass = (ID_Fachtelegramm_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_Fachtelegramm_ohne_Proxy_TypeClass(iD_Fachtelegramm_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Fachtelegramm_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Fachtelegramm_ohne_Proxy_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -501,11 +564,27 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VerweisePackage.ID_FSTR_DWEG_OHNE_PROXY_TYPE_CLASS: {
+				ID_Fstr_DWeg_ohne_Proxy_TypeClass iD_Fstr_DWeg_ohne_Proxy_TypeClass = (ID_Fstr_DWeg_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_Fstr_DWeg_ohne_Proxy_TypeClass(iD_Fstr_DWeg_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Fstr_DWeg_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Fstr_DWeg_ohne_Proxy_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VerweisePackage.ID_FSTR_DWEG_TYPE_CLASS: {
 				ID_Fstr_DWeg_TypeClass iD_Fstr_DWeg_TypeClass = (ID_Fstr_DWeg_TypeClass)theEObject;
 				T result = caseID_Fstr_DWeg_TypeClass(iD_Fstr_DWeg_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_Fstr_DWeg_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Fstr_DWeg_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_FSTR_FAHRWEG_OHNE_PROXY_TYPE_CLASS: {
+				ID_Fstr_Fahrweg_ohne_Proxy_TypeClass iD_Fstr_Fahrweg_ohne_Proxy_TypeClass = (ID_Fstr_Fahrweg_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_Fstr_Fahrweg_ohne_Proxy_TypeClass(iD_Fstr_Fahrweg_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Fstr_Fahrweg_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Fstr_Fahrweg_ohne_Proxy_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -549,6 +628,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VerweisePackage.ID_GEO_KANTE_TYPE_CLASS: {
+				ID_GEO_Kante_TypeClass iD_GEO_Kante_TypeClass = (ID_GEO_Kante_TypeClass)theEObject;
+				T result = caseID_GEO_Kante_TypeClass(iD_GEO_Kante_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_GEO_Kante_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_GEO_Kante_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VerweisePackage.ID_GEO_KNOTEN_TYPE_CLASS: {
 				ID_GEO_Knoten_TypeClass iD_GEO_Knoten_TypeClass = (ID_GEO_Knoten_TypeClass)theEObject;
 				T result = caseID_GEO_Knoten_TypeClass(iD_GEO_Knoten_TypeClass);
@@ -570,14 +657,6 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				T result = caseID_GEO_Punkt_TypeClass(iD_GEO_Punkt_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_GEO_Punkt_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_GEO_Punkt_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VerweisePackage.ID_GERAET_PROGRAMMIERT_TYPE_CLASS: {
-				ID_Geraet_Programmiert_TypeClass iD_Geraet_Programmiert_TypeClass = (ID_Geraet_Programmiert_TypeClass)theEObject;
-				T result = caseID_Geraet_Programmiert_TypeClass(iD_Geraet_Programmiert_TypeClass);
-				if (result == null) result = caseZeiger_TypeClass(iD_Geraet_Programmiert_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Geraet_Programmiert_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -645,6 +724,38 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VerweisePackage.ID_KOMPONENTE_PROGRAMMIERT_TYPE_CLASS: {
+				ID_Komponente_Programmiert_TypeClass iD_Komponente_Programmiert_TypeClass = (ID_Komponente_Programmiert_TypeClass)theEObject;
+				T result = caseID_Komponente_Programmiert_TypeClass(iD_Komponente_Programmiert_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Komponente_Programmiert_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Komponente_Programmiert_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_LAGEPLAN_BLATTSCHNITT_TYPE_CLASS: {
+				ID_Lageplan_Blattschnitt_TypeClass iD_Lageplan_Blattschnitt_TypeClass = (ID_Lageplan_Blattschnitt_TypeClass)theEObject;
+				T result = caseID_Lageplan_Blattschnitt_TypeClass(iD_Lageplan_Blattschnitt_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Lageplan_Blattschnitt_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Lageplan_Blattschnitt_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_LAGEPLAN_TYPE_CLASS: {
+				ID_Lageplan_TypeClass iD_Lageplan_TypeClass = (ID_Lageplan_TypeClass)theEObject;
+				T result = caseID_Lageplan_TypeClass(iD_Lageplan_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Lageplan_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Lageplan_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_LAGEPLAN_ZUSTAND_TYPE_CLASS: {
+				ID_Lageplan_Zustand_TypeClass iD_Lageplan_Zustand_TypeClass = (ID_Lageplan_Zustand_TypeClass)theEObject;
+				T result = caseID_Lageplan_Zustand_TypeClass(iD_Lageplan_Zustand_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Lageplan_Zustand_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Lageplan_Zustand_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VerweisePackage.ID_LEU_ANLAGE_OHNE_PROXY_TYPE_CLASS: {
 				ID_LEU_Anlage_ohne_Proxy_TypeClass iD_LEU_Anlage_ohne_Proxy_TypeClass = (ID_LEU_Anlage_ohne_Proxy_TypeClass)theEObject;
 				T result = caseID_LEU_Anlage_ohne_Proxy_TypeClass(iD_LEU_Anlage_ohne_Proxy_TypeClass);
@@ -661,11 +772,11 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VerweisePackage.ID_LEU_BEZUGSPUNKT_TYPE_CLASS: {
-				ID_LEU_Bezugspunkt_TypeClass iD_LEU_Bezugspunkt_TypeClass = (ID_LEU_Bezugspunkt_TypeClass)theEObject;
-				T result = caseID_LEU_Bezugspunkt_TypeClass(iD_LEU_Bezugspunkt_TypeClass);
-				if (result == null) result = caseZeiger_TypeClass(iD_LEU_Bezugspunkt_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_LEU_Bezugspunkt_TypeClass);
+			case VerweisePackage.ID_LEU_BEZUG_FUNKTIONAL_TYPE_CLASS: {
+				ID_LEU_Bezug_Funktional_TypeClass iD_LEU_Bezug_Funktional_TypeClass = (ID_LEU_Bezug_Funktional_TypeClass)theEObject;
+				T result = caseID_LEU_Bezug_Funktional_TypeClass(iD_LEU_Bezug_Funktional_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_LEU_Bezug_Funktional_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_LEU_Bezug_Funktional_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -690,6 +801,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				T result = caseID_Markante_Stelle_TypeClass(iD_Markante_Stelle_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_Markante_Stelle_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Markante_Stelle_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_MARKANTER_PUNKT_GLEIS_ABSCHLUSS_TYPE_CLASS: {
+				ID_Markanter_Punkt_Gleis_Abschluss_TypeClass iD_Markanter_Punkt_Gleis_Abschluss_TypeClass = (ID_Markanter_Punkt_Gleis_Abschluss_TypeClass)theEObject;
+				T result = caseID_Markanter_Punkt_Gleis_Abschluss_TypeClass(iD_Markanter_Punkt_Gleis_Abschluss_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Markanter_Punkt_Gleis_Abschluss_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Markanter_Punkt_Gleis_Abschluss_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -722,6 +841,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				T result = caseID_NB_Zone_TypeClass(iD_NB_Zone_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_NB_Zone_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_NB_Zone_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_OERTLICHKEIT_AUSGABE_TYPE_CLASS: {
+				ID_Oertlichkeit_Ausgabe_TypeClass iD_Oertlichkeit_Ausgabe_TypeClass = (ID_Oertlichkeit_Ausgabe_TypeClass)theEObject;
+				T result = caseID_Oertlichkeit_Ausgabe_TypeClass(iD_Oertlichkeit_Ausgabe_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Oertlichkeit_Ausgabe_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Oertlichkeit_Ausgabe_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -810,6 +937,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				T result = caseID_RBC_TypeClass(iD_RBC_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_RBC_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_RBC_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_REGELZEICHNUNG_OHNE_PROXY_TYPE_CLASS: {
+				ID_Regelzeichnung_ohne_Proxy_TypeClass iD_Regelzeichnung_ohne_Proxy_TypeClass = (ID_Regelzeichnung_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_Regelzeichnung_ohne_Proxy_TypeClass(iD_Regelzeichnung_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Regelzeichnung_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Regelzeichnung_ohne_Proxy_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -946,6 +1081,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				T result = caseID_Stellwerk_TypeClass(iD_Stellwerk_TypeClass);
 				if (result == null) result = caseZeiger_TypeClass(iD_Stellwerk_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Stellwerk_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VerweisePackage.ID_STRECKE_BREMSWEG_OHNE_PROXY_TYPE_CLASS: {
+				ID_Strecke_Bremsweg_ohne_Proxy_TypeClass iD_Strecke_Bremsweg_ohne_Proxy_TypeClass = (ID_Strecke_Bremsweg_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_Strecke_Bremsweg_ohne_Proxy_TypeClass(iD_Strecke_Bremsweg_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_Strecke_Bremsweg_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_Strecke_Bremsweg_ohne_Proxy_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1165,6 +1308,14 @@ public class VerweiseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VerweisePackage.ID_ZLV_BUS_OHNE_PROXY_TYPE_CLASS: {
+				ID_ZLV_Bus_ohne_Proxy_TypeClass iD_ZLV_Bus_ohne_Proxy_TypeClass = (ID_ZLV_Bus_ohne_Proxy_TypeClass)theEObject;
+				T result = caseID_ZLV_Bus_ohne_Proxy_TypeClass(iD_ZLV_Bus_ohne_Proxy_TypeClass);
+				if (result == null) result = caseZeiger_TypeClass(iD_ZLV_Bus_ohne_Proxy_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(iD_ZLV_Bus_ohne_Proxy_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VerweisePackage.ID_ZLV_BUS_TYPE_CLASS: {
 				ID_ZLV_Bus_TypeClass iD_ZLV_Bus_TypeClass = (ID_ZLV_Bus_TypeClass)theEObject;
 				T result = caseID_ZLV_Bus_TypeClass(iD_ZLV_Bus_TypeClass);
@@ -1302,6 +1453,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Anhang Bearbeitungsvermerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Anhang Bearbeitungsvermerk Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_AnhangBearbeitungsvermerk_TypeClass(ID_AnhangBearbeitungsvermerk_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ID Anschluss Element Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1317,6 +1483,36 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID ATO TS Instanz ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID ATO TS Instanz ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_ATO_TS_Instanz_ohne_Proxy_TypeClass(ID_ATO_TS_Instanz_ohne_Proxy_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID ATO TS Instanz Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID ATO TS Instanz Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_ATO_TS_Instanz_TypeClass(ID_ATO_TS_Instanz_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ID Ausgabe Fachdaten ohne Proxy Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1328,6 +1524,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass(ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Aussenelementansteuerung ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Aussenelementansteuerung ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Aussenelementansteuerung_ohne_Proxy_TypeClass(ID_Aussenelementansteuerung_ohne_Proxy_TypeClass object) {
 		return null;
 	}
 
@@ -1437,21 +1648,6 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ID Bearbeitungsvermerk Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ID Bearbeitungsvermerk Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseID_Bearbeitungsvermerk_TypeClass(ID_Bearbeitungsvermerk_TypeClass object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ID Bedien Anzeige Element Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1542,6 +1738,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Befestigung Bauwerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Befestigung Bauwerk Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Befestigung_Bauwerk_TypeClass(ID_Befestigung_Bauwerk_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ID Beginn Bereich Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1557,17 +1768,32 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ID Binaerdatei ohne Proxy Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ID Bezugspunkt Positionierung Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ID Binaerdatei ohne Proxy Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ID Bezugspunkt Positionierung Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseID_Binaerdatei_ohne_Proxy_TypeClass(ID_Binaerdatei_ohne_Proxy_TypeClass object) {
+	public T caseID_Bezugspunkt_Positionierung_TypeClass(ID_Bezugspunkt_Positionierung_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Binaerdaten ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Binaerdaten ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Binaerdaten_ohne_Proxy_TypeClass(ID_Binaerdaten_ohne_Proxy_TypeClass object) {
 		return null;
 	}
 
@@ -1752,17 +1978,17 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ID DP Bezugspunkt Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ID DP Bezug Funktional Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ID DP Bezugspunkt Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ID DP Bezug Funktional Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseID_DP_Bezugspunkt_TypeClass(ID_DP_Bezugspunkt_TypeClass object) {
+	public T caseID_DP_Bezug_Funktional_TypeClass(ID_DP_Bezug_Funktional_TypeClass object) {
 		return null;
 	}
 
@@ -1842,17 +2068,17 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ID Energie Primaer Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ID Energie Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ID Energie Primaer Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ID Energie Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseID_Energie_Primaer_TypeClass(ID_Energie_Primaer_TypeClass object) {
+	public T caseID_Energie_TypeClass(ID_Energie_TypeClass object) {
 		return null;
 	}
 
@@ -1868,6 +2094,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_ESTW_Zentraleinheit_TypeClass(ID_ESTW_Zentraleinheit_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID ETCS Kante Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID ETCS Kante Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_ETCS_Kante_TypeClass(ID_ETCS_Kante_TypeClass object) {
 		return null;
 	}
 
@@ -1913,6 +2154,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_EV_Modul_TypeClass(ID_EV_Modul_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Fachtelegramm ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Fachtelegramm ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Fachtelegramm_ohne_Proxy_TypeClass(ID_Fachtelegramm_ohne_Proxy_TypeClass object) {
 		return null;
 	}
 
@@ -2052,6 +2308,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Fstr DWeg ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Fstr DWeg ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Fstr_DWeg_ohne_Proxy_TypeClass(ID_Fstr_DWeg_ohne_Proxy_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ID Fstr DWeg Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2063,6 +2334,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_Fstr_DWeg_TypeClass(ID_Fstr_DWeg_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Fstr Fahrweg ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Fstr Fahrweg ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Fstr_Fahrweg_ohne_Proxy_TypeClass(ID_Fstr_Fahrweg_ohne_Proxy_TypeClass object) {
 		return null;
 	}
 
@@ -2142,6 +2428,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID GEO Kante Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID GEO Kante Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_GEO_Kante_TypeClass(ID_GEO_Kante_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ID GEO Knoten Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2183,21 +2484,6 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_GEO_Punkt_TypeClass(ID_GEO_Punkt_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ID Geraet Programmiert Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ID Geraet Programmiert Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseID_Geraet_Programmiert_TypeClass(ID_Geraet_Programmiert_TypeClass object) {
 		return null;
 	}
 
@@ -2322,6 +2608,66 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Komponente Programmiert Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Komponente Programmiert Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Komponente_Programmiert_TypeClass(ID_Komponente_Programmiert_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Lageplan Blattschnitt Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Lageplan Blattschnitt Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Lageplan_Blattschnitt_TypeClass(ID_Lageplan_Blattschnitt_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Lageplan Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Lageplan Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Lageplan_TypeClass(ID_Lageplan_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Lageplan Zustand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Lageplan Zustand Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Lageplan_Zustand_TypeClass(ID_Lageplan_Zustand_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ID LEU Anlage ohne Proxy Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2352,17 +2698,17 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ID LEU Bezugspunkt Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ID LEU Bezug Funktional Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ID LEU Bezugspunkt Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ID LEU Bezug Funktional Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseID_LEU_Bezugspunkt_TypeClass(ID_LEU_Bezugspunkt_TypeClass object) {
+	public T caseID_LEU_Bezug_Funktional_TypeClass(ID_LEU_Bezug_Funktional_TypeClass object) {
 		return null;
 	}
 
@@ -2408,6 +2754,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_Markante_Stelle_TypeClass(ID_Markante_Stelle_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Markanter Punkt Gleis Abschluss Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Markanter Punkt Gleis Abschluss Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Markanter_Punkt_Gleis_Abschluss_TypeClass(ID_Markanter_Punkt_Gleis_Abschluss_TypeClass object) {
 		return null;
 	}
 
@@ -2468,6 +2829,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_NB_Zone_TypeClass(ID_NB_Zone_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Oertlichkeit Ausgabe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Oertlichkeit Ausgabe Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Oertlichkeit_Ausgabe_TypeClass(ID_Oertlichkeit_Ausgabe_TypeClass object) {
 		return null;
 	}
 
@@ -2633,6 +3009,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_RBC_TypeClass(ID_RBC_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Regelzeichnung ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Regelzeichnung ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Regelzeichnung_ohne_Proxy_TypeClass(ID_Regelzeichnung_ohne_Proxy_TypeClass object) {
 		return null;
 	}
 
@@ -2888,6 +3279,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_Stellwerk_TypeClass(ID_Stellwerk_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID Strecke Bremsweg ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID Strecke Bremsweg ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_Strecke_Bremsweg_ohne_Proxy_TypeClass(ID_Strecke_Bremsweg_ohne_Proxy_TypeClass object) {
 		return null;
 	}
 
@@ -3293,6 +3699,21 @@ public class VerweiseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseID_ZL_TypeClass(ID_ZL_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ID ZLV Bus ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ID ZLV Bus ohne Proxy Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseID_ZLV_Bus_ohne_Proxy_TypeClass(ID_ZLV_Bus_ohne_Proxy_TypeClass object) {
 		return null;
 	}
 

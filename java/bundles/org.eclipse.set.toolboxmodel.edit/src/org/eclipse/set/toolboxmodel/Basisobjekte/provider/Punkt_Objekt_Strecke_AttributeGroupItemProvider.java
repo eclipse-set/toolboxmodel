@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -33,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup} object.
@@ -109,6 +110,7 @@ public class Punkt_Objekt_Strecke_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(BasisobjektePackage.Literals.PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__KM_MASSGEBEND);
 			childrenFeatures.add(BasisobjektePackage.Literals.PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__STRECKE_KM);
 		}
 		return childrenFeatures;
@@ -162,6 +164,7 @@ public class Punkt_Objekt_Strecke_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Punkt_Objekt_Strecke_AttributeGroup.class)) {
+			case BasisobjektePackage.PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__KM_MASSGEBEND:
 			case BasisobjektePackage.PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__STRECKE_KM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -181,6 +184,11 @@ public class Punkt_Objekt_Strecke_AttributeGroupItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasisobjektePackage.Literals.PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__KM_MASSGEBEND,
+				 BasisobjekteFactory.eINSTANCE.createKm_Massgebend_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

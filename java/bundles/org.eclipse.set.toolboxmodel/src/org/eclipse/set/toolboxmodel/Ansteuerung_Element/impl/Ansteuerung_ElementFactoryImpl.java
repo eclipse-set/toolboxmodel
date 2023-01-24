@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl;
 
@@ -70,9 +77,11 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 			case Ansteuerung_ElementPackage.BAUART_TYPE_CLASS: return createBauart_TypeClass();
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_AEA_TYPE_CLASS: return createBezeichnung_AEA_TypeClass();
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_ESTW_ZE_TYPE_CLASS: return createBezeichnung_ESTW_ZE_TypeClass();
+			case Ansteuerung_ElementPackage.BEZEICHNUNG_STELLWERK_TYPE_CLASS: return createBezeichnung_Stellwerk_TypeClass();
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_TSO_TYPE_CLASS: return createBezeichnung_TSO_TypeClass();
 			case Ansteuerung_ElementPackage.ENERGIEVERSORGUNG_ART_ERSATZ_TYPE_CLASS: return createEnergieversorgung_Art_Ersatz_TypeClass();
 			case Ansteuerung_ElementPackage.ENERGIEVERSORGUNG_ART_TYPE_CLASS: return createEnergieversorgung_Art_TypeClass();
+			case Ansteuerung_ElementPackage.ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP: return createESTW_ZE_Energieversorgung_AttributeGroup();
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT: return createESTW_Zentraleinheit();
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP: return createESTW_Zentraleinheit_Allg_AttributeGroup();
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_BEZEICHNUNG_ATTRIBUTE_GROUP: return createESTW_Zentraleinheit_Bezeichnung_AttributeGroup();
@@ -97,6 +106,7 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 			case Ansteuerung_ElementPackage.TSO_IP_AB_TEILSYSTEM_ATTRIBUTE_GROUP: return createTSO_IP_AB_Teilsystem_AttributeGroup();
 			case Ansteuerung_ElementPackage.TSO_IP_ADRESSBLOCK_ATTRIBUTE_GROUP: return createTSO_IP_Adressblock_AttributeGroup();
 			case Ansteuerung_ElementPackage.TSO_TEILSYSTEM_ART_TYPE_CLASS: return createTSO_Teilsystem_Art_TypeClass();
+			case Ansteuerung_ElementPackage.TUERANSCHLAG_TYPE_CLASS: return createTueranschlag_TypeClass();
 			case Ansteuerung_ElementPackage.UEBERTRAGUNGSWEG: return createUebertragungsweg();
 			case Ansteuerung_ElementPackage.UEBERTRAGUNGSWEG_ART_TYPE_CLASS: return createUebertragungsweg_Art_TypeClass();
 			case Ansteuerung_ElementPackage.UEBERTRAGUNGSWEG_TECHNIK_ATTRIBUTE_GROUP: return createUebertragungsweg_Technik_AttributeGroup();
@@ -104,6 +114,8 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP: return createUnterbringung_Allg_AttributeGroup();
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_ART_TYPE_CLASS: return createUnterbringung_Art_TypeClass();
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS: return createUnterbringung_Befestigung_TypeClass();
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS: return createUnterbringung_Polygonzug_TypeClass();
+			case Ansteuerung_ElementPackage.ZUSATZINFORMATION_STELLWERK_TYPE_CLASS: return createZusatzinformation_Stellwerk_TypeClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -133,6 +145,8 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return createENUMTechnikArtFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.ENUMTSO_TEILSYSTEM_ART:
 				return createENUMTSOTeilsystemArtFromString(eDataType, initialValue);
+			case Ansteuerung_ElementPackage.ENUM_TUERANSCHLAG:
+				return createENUMTueranschlagFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.ENUM_UEBERTRAGUNGSWEG_ART:
 				return createENUMUebertragungswegArtFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.ENUM_UNTERBRINGUNG_ART:
@@ -145,6 +159,8 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return createBezeichnung_AEA_TypeFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_ESTW_ZE_TYPE:
 				return createBezeichnung_ESTW_ZE_TypeFromString(eDataType, initialValue);
+			case Ansteuerung_ElementPackage.BEZEICHNUNG_STELLWERK_TYPE:
+				return createBezeichnung_Stellwerk_TypeFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_TSO_TYPE:
 				return createBezeichnung_TSO_TypeFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJECT:
@@ -163,6 +179,8 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return createENUMTechnikArtObjectFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.ENUMTSO_TEILSYSTEM_ART_OBJECT:
 				return createENUMTSOTeilsystemArtObjectFromString(eDataType, initialValue);
+			case Ansteuerung_ElementPackage.ENUM_TUERANSCHLAG_OBJECT:
+				return createENUMTueranschlagObjectFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.ENUM_UEBERTRAGUNGSWEG_ART_OBJECT:
 				return createENUMUebertragungswegArtObjectFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.ENUM_UNTERBRINGUNG_ART_OBJECT:
@@ -185,6 +203,10 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return createStandort_Beschreibung_TypeFromString(eDataType, initialValue);
 			case Ansteuerung_ElementPackage.TECHNIK_BESCHREIBUNG_TYPE:
 				return createTechnik_Beschreibung_TypeFromString(eDataType, initialValue);
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_POLYGONZUG_TYPE:
+				return createUnterbringung_Polygonzug_TypeFromString(eDataType, initialValue);
+			case Ansteuerung_ElementPackage.ZUSATZINFORMATION_STELLWERK_TYPE:
+				return createZusatzinformation_Stellwerk_TypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -214,6 +236,8 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return convertENUMTechnikArtToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.ENUMTSO_TEILSYSTEM_ART:
 				return convertENUMTSOTeilsystemArtToString(eDataType, instanceValue);
+			case Ansteuerung_ElementPackage.ENUM_TUERANSCHLAG:
+				return convertENUMTueranschlagToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.ENUM_UEBERTRAGUNGSWEG_ART:
 				return convertENUMUebertragungswegArtToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.ENUM_UNTERBRINGUNG_ART:
@@ -226,6 +250,8 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return convertBezeichnung_AEA_TypeToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_ESTW_ZE_TYPE:
 				return convertBezeichnung_ESTW_ZE_TypeToString(eDataType, instanceValue);
+			case Ansteuerung_ElementPackage.BEZEICHNUNG_STELLWERK_TYPE:
+				return convertBezeichnung_Stellwerk_TypeToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_TSO_TYPE:
 				return convertBezeichnung_TSO_TypeToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJECT:
@@ -244,6 +270,8 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return convertENUMTechnikArtObjectToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.ENUMTSO_TEILSYSTEM_ART_OBJECT:
 				return convertENUMTSOTeilsystemArtObjectToString(eDataType, instanceValue);
+			case Ansteuerung_ElementPackage.ENUM_TUERANSCHLAG_OBJECT:
+				return convertENUMTueranschlagObjectToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.ENUM_UEBERTRAGUNGSWEG_ART_OBJECT:
 				return convertENUMUebertragungswegArtObjectToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.ENUM_UNTERBRINGUNG_ART_OBJECT:
@@ -266,6 +294,10 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 				return convertStandort_Beschreibung_TypeToString(eDataType, instanceValue);
 			case Ansteuerung_ElementPackage.TECHNIK_BESCHREIBUNG_TYPE:
 				return convertTechnik_Beschreibung_TypeToString(eDataType, instanceValue);
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_POLYGONZUG_TYPE:
+				return convertUnterbringung_Polygonzug_TypeToString(eDataType, instanceValue);
+			case Ansteuerung_ElementPackage.ZUSATZINFORMATION_STELLWERK_TYPE:
+				return convertZusatzinformation_Stellwerk_TypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -387,6 +419,17 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public Bezeichnung_Stellwerk_TypeClass createBezeichnung_Stellwerk_TypeClass() {
+		Bezeichnung_Stellwerk_TypeClassImpl bezeichnung_Stellwerk_TypeClass = new Bezeichnung_Stellwerk_TypeClassImpl();
+		return bezeichnung_Stellwerk_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Bezeichnung_TSO_TypeClass createBezeichnung_TSO_TypeClass() {
 		Bezeichnung_TSO_TypeClassImpl bezeichnung_TSO_TypeClass = new Bezeichnung_TSO_TypeClassImpl();
 		return bezeichnung_TSO_TypeClass;
@@ -412,6 +455,17 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	public Energieversorgung_Art_TypeClass createEnergieversorgung_Art_TypeClass() {
 		Energieversorgung_Art_TypeClassImpl energieversorgung_Art_TypeClass = new Energieversorgung_Art_TypeClassImpl();
 		return energieversorgung_Art_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ESTW_ZE_Energieversorgung_AttributeGroup createESTW_ZE_Energieversorgung_AttributeGroup() {
+		ESTW_ZE_Energieversorgung_AttributeGroupImpl estW_ZE_Energieversorgung_AttributeGroup = new ESTW_ZE_Energieversorgung_AttributeGroupImpl();
+		return estW_ZE_Energieversorgung_AttributeGroup;
 	}
 
 	/**
@@ -684,6 +738,17 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public Tueranschlag_TypeClass createTueranschlag_TypeClass() {
+		Tueranschlag_TypeClassImpl tueranschlag_TypeClass = new Tueranschlag_TypeClassImpl();
+		return tueranschlag_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Uebertragungsweg createUebertragungsweg() {
 		UebertragungswegImpl uebertragungsweg = new UebertragungswegImpl();
 		return uebertragungsweg;
@@ -753,6 +818,28 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	public Unterbringung_Befestigung_TypeClass createUnterbringung_Befestigung_TypeClass() {
 		Unterbringung_Befestigung_TypeClassImpl unterbringung_Befestigung_TypeClass = new Unterbringung_Befestigung_TypeClassImpl();
 		return unterbringung_Befestigung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Unterbringung_Polygonzug_TypeClass createUnterbringung_Polygonzug_TypeClass() {
+		Unterbringung_Polygonzug_TypeClassImpl unterbringung_Polygonzug_TypeClass = new Unterbringung_Polygonzug_TypeClassImpl();
+		return unterbringung_Polygonzug_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Zusatzinformation_Stellwerk_TypeClass createZusatzinformation_Stellwerk_TypeClass() {
+		Zusatzinformation_Stellwerk_TypeClassImpl zusatzinformation_Stellwerk_TypeClass = new Zusatzinformation_Stellwerk_TypeClassImpl();
+		return zusatzinformation_Stellwerk_TypeClass;
 	}
 
 	/**
@@ -920,6 +1007,26 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMTueranschlag createENUMTueranschlagFromString(EDataType eDataType, String initialValue) {
+		ENUMTueranschlag result = ENUMTueranschlag.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMTueranschlagToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMUebertragungswegArt createENUMUebertragungswegArtFromString(EDataType eDataType, String initialValue) {
 		ENUMUebertragungswegArt result = ENUMUebertragungswegArt.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -1026,6 +1133,24 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	 * @generated
 	 */
 	public String convertBezeichnung_ESTW_ZE_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createBezeichnung_Stellwerk_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBezeichnung_Stellwerk_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
@@ -1189,6 +1314,24 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	 */
 	public String convertENUMTSOTeilsystemArtObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMTSOTeilsystemArtToString(Ansteuerung_ElementPackage.Literals.ENUMTSO_TEILSYSTEM_ART, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMTueranschlag createENUMTueranschlagObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMTueranschlagFromString(Ansteuerung_ElementPackage.Literals.ENUM_TUERANSCHLAG, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMTueranschlagObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMTueranschlagToString(Ansteuerung_ElementPackage.Literals.ENUM_TUERANSCHLAG, instanceValue);
 	}
 
 	/**
@@ -1386,6 +1529,42 @@ public class Ansteuerung_ElementFactoryImpl extends EFactoryImpl implements Anst
 	 * @generated
 	 */
 	public String convertTechnik_Beschreibung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createUnterbringung_Polygonzug_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.FREI_TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUnterbringung_Polygonzug_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.FREI_TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createZusatzinformation_Stellwerk_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertZusatzinformation_Stellwerk_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 

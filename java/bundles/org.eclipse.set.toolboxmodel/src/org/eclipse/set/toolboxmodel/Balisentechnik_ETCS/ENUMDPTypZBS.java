@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -149,14 +156,24 @@ public enum ENUMDPTypZBS implements Enumerator {
 	ENUMDP_TYP_ZBS_ZO(12, "ENUMDP_Typ_ZBS_ZO", "ZO"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ZBS ZRE</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ZBS ZRE 1</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ZBS_ZRE_VALUE
+	 * @see #ENUMDP_TYP_ZBS_ZRE_1_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ZBS_ZRE(13, "ENUMDP_Typ_ZBS_ZRE", "ZRE"),
+	ENUMDP_TYP_ZBS_ZRE_1(13, "ENUMDP_Typ_ZBS_ZRE_1", "ZRE_1"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ZBS ZRE 2</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ZBS_ZRE_2_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ZBS_ZRE_2(14, "ENUMDP_Typ_ZBS_ZRE_2", "ZRE_2"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZRH</b></em>' literal object.
@@ -166,7 +183,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ZBS_ZRH(14, "ENUMDP_Typ_ZBS_ZRH", "ZRH"),
+	ENUMDP_TYP_ZBS_ZRH(15, "ENUMDP_Typ_ZBS_ZRH", "ZRH"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZRHF</b></em>' literal object.
@@ -176,7 +193,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ZBS_ZRHF(15, "ENUMDP_Typ_ZBS_ZRHF", "ZRHF"),
+	ENUMDP_TYP_ZBS_ZRHF(16, "ENUMDP_Typ_ZBS_ZRHF", "ZRHF"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZR La</b></em>' literal object.
@@ -186,7 +203,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ZBS_ZR_LA(16, "ENUMDP_Typ_ZBS_ZRLa", "ZRLa"),
+	ENUMDP_TYP_ZBS_ZR_LA(17, "ENUMDP_Typ_ZBS_ZRLa", "ZRLa"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZRV</b></em>' literal object.
@@ -196,7 +213,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ZBS_ZRV(17, "ENUMDP_Typ_ZBS_ZRV", "ZRV"),
+	ENUMDP_TYP_ZBS_ZRV(18, "ENUMDP_Typ_ZBS_ZRV", "ZRV"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZU</b></em>' literal object.
@@ -206,7 +223,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ZBS_ZU(18, "ENUMDP_Typ_ZBS_ZU", "Z\u00dc"),
+	ENUMDP_TYP_ZBS_ZU(19, "ENUMDP_Typ_ZBS_ZU", "Z\u00dc"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZV</b></em>' literal object.
@@ -216,7 +233,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ZBS_ZV(19, "ENUMDP_Typ_ZBS_ZV", "ZV");
+	ENUMDP_TYP_ZBS_ZV(20, "ENUMDP_Typ_ZBS_ZV", "ZV");
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS RBE</b></em>' literal value.
@@ -362,15 +379,26 @@ public enum ENUMDPTypZBS implements Enumerator {
 	public static final int ENUMDP_TYP_ZBS_ZO_VALUE = 12;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ZBS ZRE</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ZBS ZRE 1</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ZBS_ZRE
-	 * @model name="ENUMDP_Typ_ZBS_ZRE" literal="ZRE"
+	 * @see #ENUMDP_TYP_ZBS_ZRE_1
+	 * @model name="ENUMDP_Typ_ZBS_ZRE_1" literal="ZRE_1"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ZBS_ZRE_VALUE = 13;
+	public static final int ENUMDP_TYP_ZBS_ZRE_1_VALUE = 13;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ZBS ZRE 2</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ZBS_ZRE_2
+	 * @model name="ENUMDP_Typ_ZBS_ZRE_2" literal="ZRE_2"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ZBS_ZRE_2_VALUE = 14;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZRH</b></em>' literal value.
@@ -381,7 +409,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ZBS_ZRH_VALUE = 14;
+	public static final int ENUMDP_TYP_ZBS_ZRH_VALUE = 15;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZRHF</b></em>' literal value.
@@ -392,7 +420,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ZBS_ZRHF_VALUE = 15;
+	public static final int ENUMDP_TYP_ZBS_ZRHF_VALUE = 16;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZR La</b></em>' literal value.
@@ -403,7 +431,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ZBS_ZR_LA_VALUE = 16;
+	public static final int ENUMDP_TYP_ZBS_ZR_LA_VALUE = 17;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZRV</b></em>' literal value.
@@ -414,7 +442,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ZBS_ZRV_VALUE = 17;
+	public static final int ENUMDP_TYP_ZBS_ZRV_VALUE = 18;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZU</b></em>' literal value.
@@ -425,7 +453,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ZBS_ZU_VALUE = 18;
+	public static final int ENUMDP_TYP_ZBS_ZU_VALUE = 19;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ZBS ZV</b></em>' literal value.
@@ -436,7 +464,7 @@ public enum ENUMDPTypZBS implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ZBS_ZV_VALUE = 19;
+	public static final int ENUMDP_TYP_ZBS_ZV_VALUE = 20;
 
 	/**
 	 * An array of all the '<em><b>ENUMDP Typ ZBS</b></em>' enumerators.
@@ -459,7 +487,8 @@ public enum ENUMDPTypZBS implements Enumerator {
 			ENUMDP_TYP_ZBS_ZLI_H,
 			ENUMDP_TYP_ZBS_ZLI_V,
 			ENUMDP_TYP_ZBS_ZO,
-			ENUMDP_TYP_ZBS_ZRE,
+			ENUMDP_TYP_ZBS_ZRE_1,
+			ENUMDP_TYP_ZBS_ZRE_2,
 			ENUMDP_TYP_ZBS_ZRH,
 			ENUMDP_TYP_ZBS_ZRHF,
 			ENUMDP_TYP_ZBS_ZR_LA,
@@ -535,7 +564,8 @@ public enum ENUMDPTypZBS implements Enumerator {
 			case ENUMDP_TYP_ZBS_ZLI_H_VALUE: return ENUMDP_TYP_ZBS_ZLI_H;
 			case ENUMDP_TYP_ZBS_ZLI_V_VALUE: return ENUMDP_TYP_ZBS_ZLI_V;
 			case ENUMDP_TYP_ZBS_ZO_VALUE: return ENUMDP_TYP_ZBS_ZO;
-			case ENUMDP_TYP_ZBS_ZRE_VALUE: return ENUMDP_TYP_ZBS_ZRE;
+			case ENUMDP_TYP_ZBS_ZRE_1_VALUE: return ENUMDP_TYP_ZBS_ZRE_1;
+			case ENUMDP_TYP_ZBS_ZRE_2_VALUE: return ENUMDP_TYP_ZBS_ZRE_2;
 			case ENUMDP_TYP_ZBS_ZRH_VALUE: return ENUMDP_TYP_ZBS_ZRH;
 			case ENUMDP_TYP_ZBS_ZRHF_VALUE: return ENUMDP_TYP_ZBS_ZRHF;
 			case ENUMDP_TYP_ZBS_ZR_LA_VALUE: return ENUMDP_TYP_ZBS_ZR_LA;

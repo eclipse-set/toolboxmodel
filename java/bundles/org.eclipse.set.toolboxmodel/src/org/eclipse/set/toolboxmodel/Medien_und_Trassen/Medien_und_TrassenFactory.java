@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen;
 
@@ -76,6 +83,15 @@ public interface Medien_und_TrassenFactory extends EFactory {
 	Bezeichnung_Kabel_Verteilpunkt_TypeClass createBezeichnung_Kabel_Verteilpunkt_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Induktionsschutz Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Induktionsschutz Type Class</em>'.
+	 * @generated
+	 */
+	Induktionsschutz_TypeClass createInduktionsschutz_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Kabel</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +126,15 @@ public interface Medien_und_TrassenFactory extends EFactory {
 	 * @generated
 	 */
 	Kabel_Bezeichnung_AttributeGroup createKabel_Bezeichnung_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>Kabel Element Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kabel Element Attribute Group</em>'.
+	 * @generated
+	 */
+	Kabel_Element_AttributeGroup createKabel_Element_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>Kabel Laenge Type Class</em>'.
@@ -155,6 +180,15 @@ public interface Medien_und_TrassenFactory extends EFactory {
 	 * @generated
 	 */
 	Kabel_Verteilpunkt_Bezeichnung_AttributeGroup createKabel_Verteilpunkt_Bezeichnung_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>Nagetierschutz Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Nagetierschutz Type Class</em>'.
+	 * @generated
+	 */
+	Nagetierschutz_TypeClass createNagetierschutz_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Trasse Kante</em>'.

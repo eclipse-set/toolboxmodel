@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -14,9 +21,12 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getAnordnungImDP <em>Anordnung Im DP</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getBaliseGeraetestand <em>Balise Geraetestand</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getBalisenhalter <em>Balisenhalter</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getFabrikat <em>Fabrikat</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getHersteller <em>Hersteller</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getHinweisBalisenbefestigung <em>Hinweis Balisenbefestigung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getMontageabweichung <em>Montageabweichung</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getBalise_Allg_AttributeGroup()
@@ -51,11 +61,63 @@ public interface Balise_Allg_AttributeGroup extends EObject {
 	void setAnordnungImDP(Anordnung_Im_DP_TypeClass value);
 
 	/**
+	 * Returns the value of the '<em><b>Balise Geraetestand</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gerätestand der Balise. Die Information ist im Zusammenhang mit der Typ-Angabe im Attribut "Fabrikat" zu interpretieren. Beispiel: 3, 12a.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Balise Geraetestand</em>' containment reference.
+	 * @see #setBaliseGeraetestand(Balise_Geraetestand_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getBalise_Allg_AttributeGroup_BaliseGeraetestand()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Balise_Geraetestand'"
+	 * @generated
+	 */
+	Balise_Geraetestand_TypeClass getBaliseGeraetestand();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getBaliseGeraetestand <em>Balise Geraetestand</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Balise Geraetestand</em>' containment reference.
+	 * @see #getBaliseGeraetestand()
+	 * @generated
+	 */
+	void setBaliseGeraetestand(Balise_Geraetestand_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Balisenhalter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Art des verwendeten Balisenhalters, z. B. Vortok. Die Erfassung erfolgt gegenwärtig auf der Baustelle (Rücklaufdatum).
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Balisenhalter</em>' containment reference.
+	 * @see #setBalisenhalter(Balisenhalter_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getBalise_Allg_AttributeGroup_Balisenhalter()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Balisenhalter'"
+	 * @generated
+	 */
+	Balisenhalter_TypeClass getBalisenhalter();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getBalisenhalter <em>Balisenhalter</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Balisenhalter</em>' containment reference.
+	 * @see #getBalisenhalter()
+	 * @generated
+	 */
+	void setBalisenhalter(Balisenhalter_TypeClass value);
+
+	/**
 	 * Returns the value of the '<em><b>Fabrikat</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Herstellerbezogene Bezeichnung bzw. Typ-Angabe einschließlich Gerätestand (Rücklaufdatum).
+	 * Herstellerbezogene Bezeichnung bzw. Typ-Angabe (Rücklaufdatum). Beispiel: S21 (Siemens).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fabrikat</em>' containment reference.
 	 * @see #setFabrikat(Fabrikat_TypeClass)
@@ -107,7 +169,7 @@ public interface Balise_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Hinweis auf Besonderheiten bei der Balisenbefestigung, z. B. Typ des Balisenträgers, Längsbefestigung.
+	 * Hinweis auf Besonderheiten bei der Balisenbefestigung, z. B. Längsbefestigung.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Hinweis Balisenbefestigung</em>' containment reference.
 	 * @see #setHinweisBalisenbefestigung(Hinweis_Balisenbefestigung_TypeClass)
@@ -127,5 +189,31 @@ public interface Balise_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setHinweisBalisenbefestigung(Hinweis_Balisenbefestigung_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Montageabweichung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Abweichung vom geplanten Standort der Balise bei der Montage im Rahmen der zulässigen Toleranz.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Montageabweichung</em>' containment reference.
+	 * @see #setMontageabweichung(Montageabweichung_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getBalise_Allg_AttributeGroup_Montageabweichung()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Montageabweichung'"
+	 * @generated
+	 */
+	Montageabweichung_TypeClass getMontageabweichung();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup#getMontageabweichung <em>Montageabweichung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Montageabweichung</em>' containment reference.
+	 * @see #getMontageabweichung()
+	 * @generated
+	 */
+	void setMontageabweichung(Montageabweichung_TypeClass value);
 
 } // Balise_Allg_AttributeGroup

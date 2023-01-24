@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenFactory;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup} object.
@@ -86,6 +87,7 @@ public class GEO_Kante_Allg_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM);
+			childrenFeatures.add(GeodatenPackage.Literals.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_B);
@@ -144,6 +146,7 @@ public class GEO_Kante_Allg_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(GEO_Kante_Allg_AttributeGroup.class)) {
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM:
+			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD:
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE:
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A:
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_B:
@@ -172,6 +175,11 @@ public class GEO_Kante_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(GeodatenPackage.Literals.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM,
 				 GeodatenFactory.eINSTANCE.createGEO_Form_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GeodatenPackage.Literals.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD,
+				 GeodatenFactory.eINSTANCE.createGEO_KAD_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,13 +1,20 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.BasisTypen.Bezeichnung_Element_AttributeGroup;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
+
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
 
 /**
@@ -16,7 +23,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Freimeldeabschnittsgrenze (Isolierstoß, elektrischer Stoß, Achszählpunkt). Die FMA_Komponente wird dem Punkt im Gleis zugeordnet, bis zu dem die Erkennung einer Belegung gemäß Anwendungsrichtlinien als gesichert gilt. Die zu den zugehörigen Gleisabschnitten gehörenden Bereichsobjekte Gleis Abschnitt müssen deshalb exakt an diesem Punktobjekt enden. Zur Ermittlung der seitlichen Lage einer FMA_Komponente siehe Modellierung Gleisfreimeldung. Eine FMA_Komponente kann nur an einer Seite mindestens einen Freimeldeabschnitt oder beidseitig jeweils mindestens einen Freimeldeabschnitt begrenzen. Bei überlappenden Freimeldeabschnittsgrenzen (z.B. am Übergang von FTGS- zu Achszähl- Gleisfreimeldeanlagen) ist jede Freimeldeabschnittsgrenze für sich als FMA_Komponente zu erfassen. Direkt auf Höhe, rechts und/oder links der Freimeldeabschnittsgrenze können sich technische Anlagen für die Gleisfreimeldung befinden, siehe dazu FMA Element. Das Befahren einer FMA_Komponente kann auch weitere Schaltvorgänge auslösen, siehe dazu Schaltmittel Zuordnung. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Achszählübersichtsplan; Freimeldetabelle; Achszähltabelle. 
+ * Freimeldeabschnittsgrenze (Isolierstoß, elektrischer Stoß, Achszählpunkt). Die FMA_Komponente wird dem Punkt im Gleis zugeordnet, bis zu dem die Erkennung einer Belegung gemäß Anwendungsrichtlinien als gesichert gilt. Die zu den zugehörigen Gleisabschnitten gehörenden Bereichsobjekte Gleis Abschnitt müssen deshalb exakt an diesem Punktobjekt enden. Zur Ermittlung der seitlichen Lage einer FMA_Komponente siehe Modellierung Gleisfreimeldung. Eine FMA_Komponente kann nur an einer Seite mindestens einen Freimeldeabschnitt oder beidseitig jeweils mindestens einen Freimeldeabschnitt begrenzen. Bei überlappenden Freimeldeabschnittsgrenzen (z.B. am Übergang von FTGS- zu Achszähl- Gleisfreimeldeanlagen) ist jede Freimeldeabschnittsgrenze für sich als FMA_Komponente zu erfassen. Direkt auf Höhe, rechts und/oder links der Freimeldeabschnittsgrenze können sich technische Anlagen für die Gleisfreimeldung befinden, siehe dazu FMA Element. Das Befahren einer FMA_Komponente kann auch weitere Schaltvorgänge auslösen, siehe dazu Schaltmittel Zuordnung. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Achszählübersichtsplan; Freimeldetabelle; Achszähltabelle.
  * <!-- end-model-doc -->
  *
  * <p>

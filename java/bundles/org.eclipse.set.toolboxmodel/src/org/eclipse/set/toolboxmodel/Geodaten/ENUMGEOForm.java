@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -19,34 +26,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMGEOForm implements Enumerator {
 	/**
-	 * The '<em><b>ENUMGEO Form Bloss einfach geschwungen</b></em>' literal object.
+	 * The '<em><b>ENUMGEO Form Bogen</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN_VALUE
+	 * @see #ENUMGEO_FORM_BOGEN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN(0, "ENUMGEO_Form_Bloss_einfach_geschwungen", "Bloss_einfach_geschwungen"),
-
-	/**
-	 * The '<em><b>ENUMGEO Form Km Sprung</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_KM_SPRUNG_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMGEO_FORM_KM_SPRUNG(1, "ENUMGEO_Form_Km_Sprung", "Km_Sprung"),
-
-	/**
-	 * The '<em><b>ENUMGEO Form sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMGEO_FORM_SONSTIGE(2, "ENUMGEO_Form_sonstige", "sonstige"),
+	ENUMGEO_FORM_BOGEN(0, "ENUMGEO_Form_Bogen", "Bogen"),
 
 	/**
 	 * The '<em><b>ENUMGEO Form Blosskurve</b></em>' literal object.
@@ -56,17 +43,17 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_BLOSSKURVE(3, "ENUMGEO_Form_Blosskurve", "Blosskurve"),
+	ENUMGEO_FORM_BLOSSKURVE(1, "ENUMGEO_Form_Blosskurve", "Blosskurve"),
 
 	/**
-	 * The '<em><b>ENUMGEO Form Bogen</b></em>' literal object.
+	 * The '<em><b>ENUMGEO Form Bloss einfach geschwungen</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_BOGEN_VALUE
+	 * @see #ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_BOGEN(4, "ENUMGEO_Form_Bogen", "Bogen"),
+	ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN(2, "ENUMGEO_Form_Bloss_einfach_geschwungen", "Bloss_einfach_geschwungen"),
 
 	/**
 	 * The '<em><b>ENUMGEO Form Gerade</b></em>' literal object.
@@ -76,7 +63,7 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_GERADE(5, "ENUMGEO_Form_Gerade", "Gerade"),
+	ENUMGEO_FORM_GERADE(3, "ENUMGEO_Form_Gerade", "Gerade"),
 
 	/**
 	 * The '<em><b>ENUMGEO Form Klothoide</b></em>' literal object.
@@ -86,17 +73,27 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_KLOTHOIDE(6, "ENUMGEO_Form_Klothoide", "Klothoide"),
+	ENUMGEO_FORM_KLOTHOIDE(4, "ENUMGEO_Form_Klothoide", "Klothoide"),
 
 	/**
-	 * The '<em><b>ENUMGEO Form Uebergangsbogen SForm</b></em>' literal object.
+	 * The '<em><b>ENUMGEO Form Km Sprung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM_VALUE
+	 * @see #ENUMGEO_FORM_KM_SPRUNG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM(7, "ENUMGEO_Form_Uebergangsbogen_S_Form", "Uebergangsbogen_S_Form"),
+	ENUMGEO_FORM_KM_SPRUNG(5, "ENUMGEO_Form_Km_Sprung", "Km_Sprung"),
+
+	/**
+	 * The '<em><b>ENUMGEO Form Polylinie</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMGEO_FORM_POLYLINIE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMGEO_FORM_POLYLINIE(6, "ENUMGEO_Form_Polylinie", "Polylinie"),
 
 	/**
 	 * The '<em><b>ENUMGEO Form Richtgerade Knick am Ende 200 gon</b></em>' literal object.
@@ -106,7 +103,17 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON(8, "ENUMGEO_Form_Richtgerade_Knick_am_Ende_200_gon", "Richtgerade_Knick_am_Ende_200_gon"),
+	ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON(7, "ENUMGEO_Form_Richtgerade_Knick_am_Ende_200_gon", "Richtgerade_Knick_am_Ende_200_gon"),
+
+	/**
+	 * The '<em><b>ENUMGEO Form sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMGEO_FORM_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMGEO_FORM_SONSTIGE(8, "ENUMGEO_Form_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUMGEO Form SForm einfach geschwungen</b></em>' literal object.
@@ -116,51 +123,17 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMGEO_FORM_SFORM_EINFACH_GESCHWUNGEN(9, "ENUMGEO_Form_S_Form_einfach_geschwungen", "S_Form_einfach_geschwungen");
+	ENUMGEO_FORM_SFORM_EINFACH_GESCHWUNGEN(9, "ENUMGEO_Form_S_Form_einfach_geschwungen", "S_Form_einfach_geschwungen"),
 
 	/**
-	 * The '<em><b>ENUMGEO Form Bloss einfach geschwungen</b></em>' literal value.
+	 * The '<em><b>ENUMGEO Form Uebergangsbogen SForm</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN
-	 * @model name="ENUMGEO_Form_Bloss_einfach_geschwungen" literal="Bloss_einfach_geschwungen"
+	 * @see #ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN_VALUE = 0;
-
-	/**
-	 * The '<em><b>ENUMGEO Form Km Sprung</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_KM_SPRUNG
-	 * @model name="ENUMGEO_Form_Km_Sprung" literal="Km_Sprung"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMGEO_FORM_KM_SPRUNG_VALUE = 1;
-
-	/**
-	 * The '<em><b>ENUMGEO Form sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_SONSTIGE
-	 * @model name="ENUMGEO_Form_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMGEO_FORM_SONSTIGE_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUMGEO Form Blosskurve</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_BLOSSKURVE
-	 * @model name="ENUMGEO_Form_Blosskurve" literal="Blosskurve"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMGEO_FORM_BLOSSKURVE_VALUE = 3;
+	ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM(10, "ENUMGEO_Form_Uebergangsbogen_S_Form", "Uebergangsbogen_S_Form");
 
 	/**
 	 * The '<em><b>ENUMGEO Form Bogen</b></em>' literal value.
@@ -171,7 +144,29 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMGEO_FORM_BOGEN_VALUE = 4;
+	public static final int ENUMGEO_FORM_BOGEN_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUMGEO Form Blosskurve</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMGEO_FORM_BLOSSKURVE
+	 * @model name="ENUMGEO_Form_Blosskurve" literal="Blosskurve"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMGEO_FORM_BLOSSKURVE_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUMGEO Form Bloss einfach geschwungen</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN
+	 * @model name="ENUMGEO_Form_Bloss_einfach_geschwungen" literal="Bloss_einfach_geschwungen"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMGEO Form Gerade</b></em>' literal value.
@@ -182,7 +177,7 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMGEO_FORM_GERADE_VALUE = 5;
+	public static final int ENUMGEO_FORM_GERADE_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMGEO Form Klothoide</b></em>' literal value.
@@ -193,18 +188,29 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMGEO_FORM_KLOTHOIDE_VALUE = 6;
+	public static final int ENUMGEO_FORM_KLOTHOIDE_VALUE = 4;
 
 	/**
-	 * The '<em><b>ENUMGEO Form Uebergangsbogen SForm</b></em>' literal value.
+	 * The '<em><b>ENUMGEO Form Km Sprung</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM
-	 * @model name="ENUMGEO_Form_Uebergangsbogen_S_Form" literal="Uebergangsbogen_S_Form"
+	 * @see #ENUMGEO_FORM_KM_SPRUNG
+	 * @model name="ENUMGEO_Form_Km_Sprung" literal="Km_Sprung"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM_VALUE = 7;
+	public static final int ENUMGEO_FORM_KM_SPRUNG_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUMGEO Form Polylinie</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMGEO_FORM_POLYLINIE
+	 * @model name="ENUMGEO_Form_Polylinie" literal="Polylinie"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMGEO_FORM_POLYLINIE_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUMGEO Form Richtgerade Knick am Ende 200 gon</b></em>' literal value.
@@ -215,7 +221,18 @@ public enum ENUMGEOForm implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON_VALUE = 8;
+	public static final int ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON_VALUE = 7;
+
+	/**
+	 * The '<em><b>ENUMGEO Form sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMGEO_FORM_SONSTIGE
+	 * @model name="ENUMGEO_Form_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMGEO_FORM_SONSTIGE_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUMGEO Form SForm einfach geschwungen</b></em>' literal value.
@@ -229,6 +246,17 @@ public enum ENUMGEOForm implements Enumerator {
 	public static final int ENUMGEO_FORM_SFORM_EINFACH_GESCHWUNGEN_VALUE = 9;
 
 	/**
+	 * The '<em><b>ENUMGEO Form Uebergangsbogen SForm</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM
+	 * @model name="ENUMGEO_Form_Uebergangsbogen_S_Form" literal="Uebergangsbogen_S_Form"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM_VALUE = 10;
+
+	/**
 	 * An array of all the '<em><b>ENUMGEO Form</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,16 +264,17 @@ public enum ENUMGEOForm implements Enumerator {
 	 */
 	private static final ENUMGEOForm[] VALUES_ARRAY =
 		new ENUMGEOForm[] {
-			ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN,
-			ENUMGEO_FORM_KM_SPRUNG,
-			ENUMGEO_FORM_SONSTIGE,
-			ENUMGEO_FORM_BLOSSKURVE,
 			ENUMGEO_FORM_BOGEN,
+			ENUMGEO_FORM_BLOSSKURVE,
+			ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN,
 			ENUMGEO_FORM_GERADE,
 			ENUMGEO_FORM_KLOTHOIDE,
-			ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM,
+			ENUMGEO_FORM_KM_SPRUNG,
+			ENUMGEO_FORM_POLYLINIE,
 			ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON,
+			ENUMGEO_FORM_SONSTIGE,
 			ENUMGEO_FORM_SFORM_EINFACH_GESCHWUNGEN,
+			ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM,
 		};
 
 	/**
@@ -302,16 +331,17 @@ public enum ENUMGEOForm implements Enumerator {
 	 */
 	public static ENUMGEOForm get(int value) {
 		switch (value) {
-			case ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN_VALUE: return ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN;
-			case ENUMGEO_FORM_KM_SPRUNG_VALUE: return ENUMGEO_FORM_KM_SPRUNG;
-			case ENUMGEO_FORM_SONSTIGE_VALUE: return ENUMGEO_FORM_SONSTIGE;
-			case ENUMGEO_FORM_BLOSSKURVE_VALUE: return ENUMGEO_FORM_BLOSSKURVE;
 			case ENUMGEO_FORM_BOGEN_VALUE: return ENUMGEO_FORM_BOGEN;
+			case ENUMGEO_FORM_BLOSSKURVE_VALUE: return ENUMGEO_FORM_BLOSSKURVE;
+			case ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN_VALUE: return ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN;
 			case ENUMGEO_FORM_GERADE_VALUE: return ENUMGEO_FORM_GERADE;
 			case ENUMGEO_FORM_KLOTHOIDE_VALUE: return ENUMGEO_FORM_KLOTHOIDE;
-			case ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM_VALUE: return ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM;
+			case ENUMGEO_FORM_KM_SPRUNG_VALUE: return ENUMGEO_FORM_KM_SPRUNG;
+			case ENUMGEO_FORM_POLYLINIE_VALUE: return ENUMGEO_FORM_POLYLINIE;
 			case ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON_VALUE: return ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON;
+			case ENUMGEO_FORM_SONSTIGE_VALUE: return ENUMGEO_FORM_SONSTIGE;
 			case ENUMGEO_FORM_SFORM_EINFACH_GESCHWUNGEN_VALUE: return ENUMGEO_FORM_SFORM_EINFACH_GESCHWUNGEN;
+			case ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM_VALUE: return ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM;
 			default: return null;
 		}
 	}

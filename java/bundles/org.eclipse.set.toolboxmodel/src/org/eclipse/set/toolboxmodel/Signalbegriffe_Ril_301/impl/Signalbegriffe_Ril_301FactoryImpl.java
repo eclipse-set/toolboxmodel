@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl;
 
@@ -63,6 +70,7 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 			case Signalbegriffe_Ril_301Package.BSVAUES: return createBSVAUES();
 			case Signalbegriffe_Ril_301Package.BSVRVA: return createBSVRVA();
 			case Signalbegriffe_Ril_301Package.BS_WDH: return createBSWdh();
+			case Signalbegriffe_Ril_301Package.BSZBS_BER: return createBSZBSBer();
 			case Signalbegriffe_Ril_301Package.BS_ZUSATZ: return createBSZusatz();
 			case Signalbegriffe_Ril_301Package.BUE00_LP: return createBue00Lp();
 			case Signalbegriffe_Ril_301Package.BUE01_LP: return createBue01Lp();
@@ -122,6 +130,7 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 			case Signalbegriffe_Ril_301Package.KS2: return createKs2();
 			case Signalbegriffe_Ril_301Package.LF1: return createLf1();
 			case Signalbegriffe_Ril_301Package.LF12: return createLf12();
+			case Signalbegriffe_Ril_301Package.LF1_WDH: return createLf1Wdh();
 			case Signalbegriffe_Ril_301Package.LF2: return createLf2();
 			case Signalbegriffe_Ril_301Package.LF3: return createLf3();
 			case Signalbegriffe_Ril_301Package.LF4_DS: return createLf4DS();
@@ -130,7 +139,6 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 			case Signalbegriffe_Ril_301Package.LF5_DV: return createLf5DV();
 			case Signalbegriffe_Ril_301Package.LF6: return createLf6();
 			case Signalbegriffe_Ril_301Package.LF7: return createLf7();
-			case Signalbegriffe_Ril_301Package.LF_PF: return createLfPf();
 			case Signalbegriffe_Ril_301Package.LF_PF_L: return createLfPfL();
 			case Signalbegriffe_Ril_301Package.LF_PF_R: return createLfPfR();
 			case Signalbegriffe_Ril_301Package.MS_GE_D: return createMsGeD();
@@ -160,14 +168,15 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 			case Signalbegriffe_Ril_301Package.NE6: return createNe6();
 			case Signalbegriffe_Ril_301Package.NE7A: return createNe7a();
 			case Signalbegriffe_Ril_301Package.NE7B: return createNe7b();
-			case Signalbegriffe_Ril_301Package.NISESHM: return createNISESHM();
 			case Signalbegriffe_Ril_301Package.OZ_AUTO_ET: return createOzAutoET();
 			case Signalbegriffe_Ril_301Package.OZ_AUTO_HET: return createOzAutoHET();
 			case Signalbegriffe_Ril_301Package.OZ_BK: return createOzBk();
 			case Signalbegriffe_Ril_301Package.OZ_ET: return createOzET();
 			case Signalbegriffe_Ril_301Package.OZ_FA: return createOzFa();
 			case Signalbegriffe_Ril_301Package.OZ_FAK: return createOzFak();
+			case Signalbegriffe_Ril_301Package.OZ_GSMR: return createOzGSMR();
 			case Signalbegriffe_Ril_301Package.OZ_HET: return createOzHET();
+			case Signalbegriffe_Ril_301Package.OZ_HM: return createOzHM();
 			case Signalbegriffe_Ril_301Package.OZ_ICE: return createOzICE();
 			case Signalbegriffe_Ril_301Package.OZ_LZB_BER: return createOzLZBBer();
 			case Signalbegriffe_Ril_301Package.OZ_OB_GRENZE: return createOzOBGrenze();
@@ -257,6 +266,12 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 				return createENUMSymbolLf1FromString(eDataType, initialValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF12:
 				return createENUMSymbolLf12FromString(eDataType, initialValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_WDH:
+				return createENUMSymbolLf1WdhFromString(eDataType, initialValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DS:
+				return createENUMSymbolLf4DSFromString(eDataType, initialValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DV:
+				return createENUMSymbolLf4DVFromString(eDataType, initialValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF6:
 				return createENUMSymbolLf6FromString(eDataType, initialValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF7:
@@ -275,6 +290,12 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 				return createENUMSymbolLf12ObjectFromString(eDataType, initialValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_OBJECT:
 				return createENUMSymbolLf1ObjectFromString(eDataType, initialValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_WDH_OBJECT:
+				return createENUMSymbolLf1WdhObjectFromString(eDataType, initialValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DS_OBJECT:
+				return createENUMSymbolLf4DSObjectFromString(eDataType, initialValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DV_OBJECT:
+				return createENUMSymbolLf4DVObjectFromString(eDataType, initialValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF6_OBJECT:
 				return createENUMSymbolLf6ObjectFromString(eDataType, initialValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF7_OBJECT:
@@ -306,6 +327,12 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 				return convertENUMSymbolLf1ToString(eDataType, instanceValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF12:
 				return convertENUMSymbolLf12ToString(eDataType, instanceValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_WDH:
+				return convertENUMSymbolLf1WdhToString(eDataType, instanceValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DS:
+				return convertENUMSymbolLf4DSToString(eDataType, instanceValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DV:
+				return convertENUMSymbolLf4DVToString(eDataType, instanceValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF6:
 				return convertENUMSymbolLf6ToString(eDataType, instanceValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF7:
@@ -324,6 +351,12 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 				return convertENUMSymbolLf12ObjectToString(eDataType, instanceValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_OBJECT:
 				return convertENUMSymbolLf1ObjectToString(eDataType, instanceValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_WDH_OBJECT:
+				return convertENUMSymbolLf1WdhObjectToString(eDataType, instanceValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DS_OBJECT:
+				return convertENUMSymbolLf4DSObjectToString(eDataType, instanceValue);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DV_OBJECT:
+				return convertENUMSymbolLf4DVObjectToString(eDataType, instanceValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF6_OBJECT:
 				return convertENUMSymbolLf6ObjectToString(eDataType, instanceValue);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF7_OBJECT:
@@ -374,6 +407,17 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 	public BSWdh createBSWdh() {
 		BSWdhImpl bsWdh = new BSWdhImpl();
 		return bsWdh;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BSZBSBer createBSZBSBer() {
+		BSZBSBerImpl bszbsBer = new BSZBSBerImpl();
+		return bszbsBer;
 	}
 
 	/**
@@ -1031,6 +1075,17 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 	 * @generated
 	 */
 	@Override
+	public Lf1Wdh createLf1Wdh() {
+		Lf1WdhImpl lf1Wdh = new Lf1WdhImpl();
+		return lf1Wdh;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Lf2 createLf2() {
 		Lf2Impl lf2 = new Lf2Impl();
 		return lf2;
@@ -1111,17 +1166,6 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 	public Lf7 createLf7() {
 		Lf7Impl lf7 = new Lf7Impl();
 		return lf7;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public LfPf createLfPf() {
-		LfPfImpl lfPf = new LfPfImpl();
-		return lfPf;
 	}
 
 	/**
@@ -1449,17 +1493,6 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 	 * @generated
 	 */
 	@Override
-	public NISESHM createNISESHM() {
-		NISESHMImpl niseshm = new NISESHMImpl();
-		return niseshm;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public OzAutoET createOzAutoET() {
 		OzAutoETImpl ozAutoET = new OzAutoETImpl();
 		return ozAutoET;
@@ -1526,9 +1559,31 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 	 * @generated
 	 */
 	@Override
+	public OzGSMR createOzGSMR() {
+		OzGSMRImpl ozGSMR = new OzGSMRImpl();
+		return ozGSMR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public OzHET createOzHET() {
 		OzHETImpl ozHET = new OzHETImpl();
 		return ozHET;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public OzHM createOzHM() {
+		OzHMImpl ozHM = new OzHMImpl();
+		return ozHM;
 	}
 
 	/**
@@ -2368,6 +2423,66 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMSymbolLf1Wdh createENUMSymbolLf1WdhFromString(EDataType eDataType, String initialValue) {
+		ENUMSymbolLf1Wdh result = ENUMSymbolLf1Wdh.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSymbolLf1WdhToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMSymbolLf4DS createENUMSymbolLf4DSFromString(EDataType eDataType, String initialValue) {
+		ENUMSymbolLf4DS result = ENUMSymbolLf4DS.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSymbolLf4DSToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMSymbolLf4DV createENUMSymbolLf4DVFromString(EDataType eDataType, String initialValue) {
+		ENUMSymbolLf4DV result = ENUMSymbolLf4DV.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSymbolLf4DVToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMSymbolLf6 createENUMSymbolLf6FromString(EDataType eDataType, String initialValue) {
 		ENUMSymbolLf6 result = ENUMSymbolLf6.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -2535,6 +2650,60 @@ public class Signalbegriffe_Ril_301FactoryImpl extends EFactoryImpl implements S
 	 */
 	public String convertENUMSymbolLf1ObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMSymbolLf1ToString(Signalbegriffe_Ril_301Package.eINSTANCE.getENUMSymbolLf1(), instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMSymbolLf1Wdh createENUMSymbolLf1WdhObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMSymbolLf1WdhFromString(Signalbegriffe_Ril_301Package.eINSTANCE.getENUMSymbolLf1Wdh(), initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSymbolLf1WdhObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMSymbolLf1WdhToString(Signalbegriffe_Ril_301Package.eINSTANCE.getENUMSymbolLf1Wdh(), instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMSymbolLf4DS createENUMSymbolLf4DSObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMSymbolLf4DSFromString(Signalbegriffe_Ril_301Package.eINSTANCE.getENUMSymbolLf4DS(), initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSymbolLf4DSObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMSymbolLf4DSToString(Signalbegriffe_Ril_301Package.eINSTANCE.getENUMSymbolLf4DS(), instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMSymbolLf4DV createENUMSymbolLf4DVObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMSymbolLf4DVFromString(Signalbegriffe_Ril_301Package.eINSTANCE.getENUMSymbolLf4DV(), initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMSymbolLf4DVObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMSymbolLf4DVToString(Signalbegriffe_Ril_301Package.eINSTANCE.getENUMSymbolLf4DV(), instanceValue);
 	}
 
 	/**

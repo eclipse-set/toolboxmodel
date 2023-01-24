@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -39,24 +46,24 @@ public enum ENUMBUEBauart implements Enumerator {
 	ENUMBUE_BAUART_BUE(1, "ENUMBUE_Bauart_Bue", "Bue"),
 
 	/**
-	 * The '<em><b>ENUMBUE Bauart ntg Reisendenuebergang</b></em>' literal object.
+	 * The '<em><b>ENUMBUE Bauart nt Resi</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMBUE_BAUART_NTG_REISENDENUEBERGANG_VALUE
+	 * @see #ENUMBUE_BAUART_NT_RESI_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_BAUART_NTG_REISENDENUEBERGANG(2, "ENUMBUE_Bauart_ntg_Reisendenuebergang", "ntg_Reisendenuebergang"),
+	ENUMBUE_BAUART_NT_RESI(2, "ENUMBUE_Bauart_ntResi", "ntResi"),
 
 	/**
-	 * The '<em><b>ENUMBUE Bauart Resi</b></em>' literal object.
+	 * The '<em><b>ENUMBUE Bauart tResi</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMBUE_BAUART_RESI_VALUE
+	 * @see #ENUMBUE_BAUART_TRESI_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_BAUART_RESI(3, "ENUMBUE_Bauart_Resi", "Resi");
+	ENUMBUE_BAUART_TRESI(3, "ENUMBUE_Bauart_tResi", "tResi");
 
 	/**
 	 * The '<em><b>ENUMBUE Bauart Bau Bue</b></em>' literal value.
@@ -81,26 +88,26 @@ public enum ENUMBUEBauart implements Enumerator {
 	public static final int ENUMBUE_BAUART_BUE_VALUE = 1;
 
 	/**
-	 * The '<em><b>ENUMBUE Bauart ntg Reisendenuebergang</b></em>' literal value.
+	 * The '<em><b>ENUMBUE Bauart nt Resi</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMBUE_BAUART_NTG_REISENDENUEBERGANG
-	 * @model name="ENUMBUE_Bauart_ntg_Reisendenuebergang" literal="ntg_Reisendenuebergang"
+	 * @see #ENUMBUE_BAUART_NT_RESI
+	 * @model name="ENUMBUE_Bauart_ntResi" literal="ntResi"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_BAUART_NTG_REISENDENUEBERGANG_VALUE = 2;
+	public static final int ENUMBUE_BAUART_NT_RESI_VALUE = 2;
 
 	/**
-	 * The '<em><b>ENUMBUE Bauart Resi</b></em>' literal value.
+	 * The '<em><b>ENUMBUE Bauart tResi</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMBUE_BAUART_RESI
-	 * @model name="ENUMBUE_Bauart_Resi" literal="Resi"
+	 * @see #ENUMBUE_BAUART_TRESI
+	 * @model name="ENUMBUE_Bauart_tResi" literal="tResi"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_BAUART_RESI_VALUE = 3;
+	public static final int ENUMBUE_BAUART_TRESI_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>ENUMBUE Bauart</b></em>' enumerators.
@@ -112,8 +119,8 @@ public enum ENUMBUEBauart implements Enumerator {
 		new ENUMBUEBauart[] {
 			ENUMBUE_BAUART_BAU_BUE,
 			ENUMBUE_BAUART_BUE,
-			ENUMBUE_BAUART_NTG_REISENDENUEBERGANG,
-			ENUMBUE_BAUART_RESI,
+			ENUMBUE_BAUART_NT_RESI,
+			ENUMBUE_BAUART_TRESI,
 		};
 
 	/**
@@ -172,8 +179,8 @@ public enum ENUMBUEBauart implements Enumerator {
 		switch (value) {
 			case ENUMBUE_BAUART_BAU_BUE_VALUE: return ENUMBUE_BAUART_BAU_BUE;
 			case ENUMBUE_BAUART_BUE_VALUE: return ENUMBUE_BAUART_BUE;
-			case ENUMBUE_BAUART_NTG_REISENDENUEBERGANG_VALUE: return ENUMBUE_BAUART_NTG_REISENDENUEBERGANG;
-			case ENUMBUE_BAUART_RESI_VALUE: return ENUMBUE_BAUART_RESI;
+			case ENUMBUE_BAUART_NT_RESI_VALUE: return ENUMBUE_BAUART_NT_RESI;
+			case ENUMBUE_BAUART_TRESI_VALUE: return ENUMBUE_BAUART_TRESI;
 			default: return null;
 		}
 	}

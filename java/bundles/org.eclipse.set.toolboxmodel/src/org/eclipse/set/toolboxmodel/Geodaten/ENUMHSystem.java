@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -19,6 +26,26 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMHSystem implements Enumerator {
 	/**
+	 * The '<em><b>ENUMH System DBRH 2003</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMH_SYSTEM_DBRH_2003_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMH_SYSTEM_DBRH_2003(0, "ENUMHSystem_DBRH_2003", "DBRH_2003"),
+
+	/**
+	 * The '<em><b>ENUMH System DBRH 2016</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMH_SYSTEM_DBRH_2016_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMH_SYSTEM_DBRH_2016(1, "ENUMHSystem_DBRH_2016", "DBRH_2016"),
+
+	/**
 	 * The '<em><b>ENUMH System DHHN 12</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +53,17 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMH_SYSTEM_DHHN_12(0, "ENUMHSystem_DHHN_12", "DHHN_12"),
+	ENUMH_SYSTEM_DHHN_12(2, "ENUMHSystem_DHHN_12", "DHHN_12"),
+
+	/**
+	 * The '<em><b>ENUMH System DHHN 2016</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMH_SYSTEM_DHHN_2016_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMH_SYSTEM_DHHN_2016(3, "ENUMHSystem_DHHN_2016", "DHHN_2016"),
 
 	/**
 	 * The '<em><b>ENUMH System DHHN 85</b></em>' literal object.
@@ -36,7 +73,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMH_SYSTEM_DHHN_85(1, "ENUMHSystem_DHHN_85", "DHHN_85"),
+	ENUMH_SYSTEM_DHHN_85(4, "ENUMHSystem_DHHN_85", "DHHN_85"),
 
 	/**
 	 * The '<em><b>ENUMH System DHHN 92</b></em>' literal object.
@@ -46,7 +83,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMH_SYSTEM_DHHN_92(2, "ENUMHSystem_DHHN_92", "DHHN_92"),
+	ENUMH_SYSTEM_DHHN_92(5, "ENUMHSystem_DHHN_92", "DHHN_92"),
 
 	/**
 	 * The '<em><b>ENUMH System HN 56</b></em>' literal object.
@@ -56,7 +93,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMH_SYSTEM_HN_56(3, "ENUMHSystem_HN_56", "HN_56"),
+	ENUMH_SYSTEM_HN_56(6, "ENUMHSystem_HN_56", "HN_56"),
 
 	/**
 	 * The '<em><b>ENUMH System HN 76</b></em>' literal object.
@@ -66,7 +103,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMH_SYSTEM_HN_76(4, "ENUMHSystem_HN_76", "HN_76"),
+	ENUMH_SYSTEM_HN_76(7, "ENUMHSystem_HN_76", "HN_76"),
 
 	/**
 	 * The '<em><b>ENUMH System sonstige</b></em>' literal object.
@@ -76,7 +113,29 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMH_SYSTEM_SONSTIGE(5, "ENUMHSystem_sonstige", "sonstige");
+	ENUMH_SYSTEM_SONSTIGE(8, "ENUMHSystem_sonstige", "sonstige");
+
+	/**
+	 * The '<em><b>ENUMH System DBRH 2003</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMH_SYSTEM_DBRH_2003
+	 * @model name="ENUMHSystem_DBRH_2003" literal="DBRH_2003"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMH_SYSTEM_DBRH_2003_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUMH System DBRH 2016</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMH_SYSTEM_DBRH_2016
+	 * @model name="ENUMHSystem_DBRH_2016" literal="DBRH_2016"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMH_SYSTEM_DBRH_2016_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUMH System DHHN 12</b></em>' literal value.
@@ -87,7 +146,18 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMH_SYSTEM_DHHN_12_VALUE = 0;
+	public static final int ENUMH_SYSTEM_DHHN_12_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUMH System DHHN 2016</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMH_SYSTEM_DHHN_2016
+	 * @model name="ENUMHSystem_DHHN_2016" literal="DHHN_2016"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMH_SYSTEM_DHHN_2016_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMH System DHHN 85</b></em>' literal value.
@@ -98,7 +168,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMH_SYSTEM_DHHN_85_VALUE = 1;
+	public static final int ENUMH_SYSTEM_DHHN_85_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUMH System DHHN 92</b></em>' literal value.
@@ -109,7 +179,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMH_SYSTEM_DHHN_92_VALUE = 2;
+	public static final int ENUMH_SYSTEM_DHHN_92_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUMH System HN 56</b></em>' literal value.
@@ -120,7 +190,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMH_SYSTEM_HN_56_VALUE = 3;
+	public static final int ENUMH_SYSTEM_HN_56_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUMH System HN 76</b></em>' literal value.
@@ -131,7 +201,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMH_SYSTEM_HN_76_VALUE = 4;
+	public static final int ENUMH_SYSTEM_HN_76_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUMH System sonstige</b></em>' literal value.
@@ -142,7 +212,7 @@ public enum ENUMHSystem implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMH_SYSTEM_SONSTIGE_VALUE = 5;
+	public static final int ENUMH_SYSTEM_SONSTIGE_VALUE = 8;
 
 	/**
 	 * An array of all the '<em><b>ENUMH System</b></em>' enumerators.
@@ -152,7 +222,10 @@ public enum ENUMHSystem implements Enumerator {
 	 */
 	private static final ENUMHSystem[] VALUES_ARRAY =
 		new ENUMHSystem[] {
+			ENUMH_SYSTEM_DBRH_2003,
+			ENUMH_SYSTEM_DBRH_2016,
 			ENUMH_SYSTEM_DHHN_12,
+			ENUMH_SYSTEM_DHHN_2016,
 			ENUMH_SYSTEM_DHHN_85,
 			ENUMH_SYSTEM_DHHN_92,
 			ENUMH_SYSTEM_HN_56,
@@ -214,7 +287,10 @@ public enum ENUMHSystem implements Enumerator {
 	 */
 	public static ENUMHSystem get(int value) {
 		switch (value) {
+			case ENUMH_SYSTEM_DBRH_2003_VALUE: return ENUMH_SYSTEM_DBRH_2003;
+			case ENUMH_SYSTEM_DBRH_2016_VALUE: return ENUMH_SYSTEM_DBRH_2016;
 			case ENUMH_SYSTEM_DHHN_12_VALUE: return ENUMH_SYSTEM_DHHN_12;
+			case ENUMH_SYSTEM_DHHN_2016_VALUE: return ENUMH_SYSTEM_DHHN_2016;
 			case ENUMH_SYSTEM_DHHN_85_VALUE: return ENUMH_SYSTEM_DHHN_85;
 			case ENUMH_SYSTEM_DHHN_92_VALUE: return ENUMH_SYSTEM_DHHN_92;
 			case ENUMH_SYSTEM_HN_56_VALUE: return ENUMH_SYSTEM_HN_56;

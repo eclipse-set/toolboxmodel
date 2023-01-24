@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -19,6 +26,36 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMTPArt implements Enumerator {
 	/**
+	 * The '<em><b>ENUMTP Art Bahnsteigmonitor</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_BAHNSTEIGMONITOR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTP_ART_BAHNSTEIGMONITOR(0, "ENUMTP_Art_Bahnsteigmonitor", "Bahnsteigmonitor"),
+
+	/**
+	 * The '<em><b>ENUMTP Art FBOA</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_FBOA_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTP_ART_FBOA(1, "ENUMTP_Art_FBOA", "FBOA"),
+
+	/**
+	 * The '<em><b>ENUMTP Art Bahnsteigspiegel</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_BAHNSTEIGSPIEGEL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTP_ART_BAHNSTEIGSPIEGEL(2, "ENUMTP_Art_Bahnsteigspiegel", "Bahnsteigspiegel"),
+
+	/**
 	 * The '<em><b>ENUMTP Art Gebaeude</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,17 +63,17 @@ public enum ENUMTPArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTP_ART_GEBAEUDE(0, "ENUMTP_Art_Gebaeude", "Gebaeude"),
+	ENUMTP_ART_GEBAEUDE(3, "ENUMTP_Art_Gebaeude", "Gebaeude"),
 
 	/**
-	 * The '<em><b>ENUMTP Art Mast</b></em>' literal object.
+	 * The '<em><b>ENUMTP Art HOA</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMTP_ART_MAST_VALUE
+	 * @see #ENUMTP_ART_HOA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTP_ART_MAST(1, "ENUMTP_Art_Mast", "Mast"),
+	ENUMTP_ART_HOA(4, "ENUMTP_Art_HOA", "HOA"),
 
 	/**
 	 * The '<em><b>ENUMTP Art sonstige</b></em>' literal object.
@@ -46,7 +83,60 @@ public enum ENUMTPArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTP_ART_SONSTIGE(2, "ENUMTP_Art_sonstige", "sonstige");
+	ENUMTP_ART_SONSTIGE(5, "ENUMTP_Art_sonstige", "sonstige"),
+
+	/**
+	 * The '<em><b>ENUMTP Art Mast</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_MAST_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTP_ART_MAST(6, "ENUMTP_Art_Mast", "Mast"),
+
+	/**
+	 * The '<em><b>ENUMTP Art Zughaltesensor</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_ZUGHALTESENSOR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTP_ART_ZUGHALTESENSOR(7, "ENUMTP_Art_Zughaltesensor", "Zughaltesensor");
+
+	/**
+	 * The '<em><b>ENUMTP Art Bahnsteigmonitor</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_BAHNSTEIGMONITOR
+	 * @model name="ENUMTP_Art_Bahnsteigmonitor" literal="Bahnsteigmonitor"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTP_ART_BAHNSTEIGMONITOR_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUMTP Art FBOA</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_FBOA
+	 * @model name="ENUMTP_Art_FBOA" literal="FBOA"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTP_ART_FBOA_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUMTP Art Bahnsteigspiegel</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_BAHNSTEIGSPIEGEL
+	 * @model name="ENUMTP_Art_Bahnsteigspiegel" literal="Bahnsteigspiegel"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTP_ART_BAHNSTEIGSPIEGEL_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMTP Art Gebaeude</b></em>' literal value.
@@ -57,18 +147,18 @@ public enum ENUMTPArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTP_ART_GEBAEUDE_VALUE = 0;
+	public static final int ENUMTP_ART_GEBAEUDE_VALUE = 3;
 
 	/**
-	 * The '<em><b>ENUMTP Art Mast</b></em>' literal value.
+	 * The '<em><b>ENUMTP Art HOA</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMTP_ART_MAST
-	 * @model name="ENUMTP_Art_Mast" literal="Mast"
+	 * @see #ENUMTP_ART_HOA
+	 * @model name="ENUMTP_Art_HOA" literal="HOA"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTP_ART_MAST_VALUE = 1;
+	public static final int ENUMTP_ART_HOA_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUMTP Art sonstige</b></em>' literal value.
@@ -79,7 +169,29 @@ public enum ENUMTPArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTP_ART_SONSTIGE_VALUE = 2;
+	public static final int ENUMTP_ART_SONSTIGE_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUMTP Art Mast</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_MAST
+	 * @model name="ENUMTP_Art_Mast" literal="Mast"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTP_ART_MAST_VALUE = 6;
+
+	/**
+	 * The '<em><b>ENUMTP Art Zughaltesensor</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTP_ART_ZUGHALTESENSOR
+	 * @model name="ENUMTP_Art_Zughaltesensor" literal="Zughaltesensor"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTP_ART_ZUGHALTESENSOR_VALUE = 7;
 
 	/**
 	 * An array of all the '<em><b>ENUMTP Art</b></em>' enumerators.
@@ -89,9 +201,14 @@ public enum ENUMTPArt implements Enumerator {
 	 */
 	private static final ENUMTPArt[] VALUES_ARRAY =
 		new ENUMTPArt[] {
+			ENUMTP_ART_BAHNSTEIGMONITOR,
+			ENUMTP_ART_FBOA,
+			ENUMTP_ART_BAHNSTEIGSPIEGEL,
 			ENUMTP_ART_GEBAEUDE,
-			ENUMTP_ART_MAST,
+			ENUMTP_ART_HOA,
 			ENUMTP_ART_SONSTIGE,
+			ENUMTP_ART_MAST,
+			ENUMTP_ART_ZUGHALTESENSOR,
 		};
 
 	/**
@@ -148,9 +265,14 @@ public enum ENUMTPArt implements Enumerator {
 	 */
 	public static ENUMTPArt get(int value) {
 		switch (value) {
+			case ENUMTP_ART_BAHNSTEIGMONITOR_VALUE: return ENUMTP_ART_BAHNSTEIGMONITOR;
+			case ENUMTP_ART_FBOA_VALUE: return ENUMTP_ART_FBOA;
+			case ENUMTP_ART_BAHNSTEIGSPIEGEL_VALUE: return ENUMTP_ART_BAHNSTEIGSPIEGEL;
 			case ENUMTP_ART_GEBAEUDE_VALUE: return ENUMTP_ART_GEBAEUDE;
-			case ENUMTP_ART_MAST_VALUE: return ENUMTP_ART_MAST;
+			case ENUMTP_ART_HOA_VALUE: return ENUMTP_ART_HOA;
 			case ENUMTP_ART_SONSTIGE_VALUE: return ENUMTP_ART_SONSTIGE;
+			case ENUMTP_ART_MAST_VALUE: return ENUMTP_ART_MAST;
+			case ENUMTP_ART_ZUGHALTESENSOR_VALUE: return ENUMTP_ART_ZUGHALTESENSOR;
 			default: return null;
 		}
 	}

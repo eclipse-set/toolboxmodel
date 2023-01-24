@@ -1,10 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -13,7 +19,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Zug- oder Rangierstraße. Jeder Zugstraße ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstraßen mit mehreren Durchrutschwegen, so werden dafür mehrere Zugstraßen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstraßen geplant. Der hiermit verknüpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstraße (Fstr_Art==ZB) über die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstraßen (Fstr_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der Länge Null entstehen, wenn die zweite Teilblockfahrstraße nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstraße. Fahrstraßen über eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstraßen (Fstr_Art==ZT/ZTU/RT/RTU) geplant. Kann die erste Teilfahrstraße mit mehreren weiteren Teilfahrstraßen fortgesetzt werden, so muss für jede geplante Kombination eine eigene Instanz der ersten Teilfahrstraße angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Die Verknüpfung zur zweiten Teilfahrstraße geschieht über Fstr_Zug_Rangier.ID Fstr Folgeabhaengigkeit. Eine Mittelweichenteilfahrstraße besitzt keinen Durchrutschweg. Eine explizite Verknüpfung von Mittelweichenteilfahrstraßen untereinander und mit der Zugstraße erfolgt nicht, da sich diese über die Topologie und insbesondere über Start und Ziel ergeben. Eine Rangierstraße besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstraße werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschließen. Gruppenausfahrten werden als Zugstraßen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstraße ist somit eindeutig erkennbar. DB-Regelwerk Zugstraßentabelle (eine Zeile), Rangierstraßentabelle (eine Zeile), Mittelweichenteilfahrstraßentabelle (eine Zeile). 
+ * Zug- oder Rangierstraße. Jeder Zugstraße ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstraßen mit mehreren Durchrutschwegen, so werden dafür mehrere Zugstraßen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstraßen geplant. Der hiermit verknüpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstraße (Fstr_Zug_Art==ZB) über die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstraßen (Fstr_Zug_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der Länge Null entstehen, wenn die zweite Teilblockfahrstraße nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstraße. Fahrstraßen über eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstraßen (Fstr_Zug_Art==ZT/ZTU; Fstr_Rangier_Art==RT/RTU) geplant. Kann die erste Teilfahrstraße mit mehreren weiteren Teilfahrstraßen fortgesetzt werden, so muss für jede geplante Kombination eine eigene Instanz der ersten Teilfahrstraße angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Eine Mittelweichenteilfahrstraße besitzt keinen Durchrutschweg. Eine explizite Verknüpfung von Mittelweichenteilfahrstraßen untereinander und mit der Zugstraße erfolgt nicht, da sich diese über die Topologie und insbesondere über Start und Ziel ergeben. Eine Rangierstraße besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstraße werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschließen. Gruppenausfahrten werden als Zugstraßen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstraße ist somit eindeutig erkennbar. DB-Regelwerk Zugstraßentabelle (eine Zeile), Rangierstraßentabelle (eine Zeile), Mittelweichenteilfahrstraßentabelle (eine Zeile).
  * <!-- end-model-doc -->
  *
  * <p>

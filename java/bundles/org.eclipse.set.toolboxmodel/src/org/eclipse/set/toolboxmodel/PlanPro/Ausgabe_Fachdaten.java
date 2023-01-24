@@ -38,7 +38,6 @@ public interface Ausgabe_Fachdaten extends Ur_Objekt {
 	 * Menge aller Fachdaten zur Beschreibung des Startzustands einer Ausgabe.
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro.
-	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>LST Zustand Start</em>' containment reference.
 	 * @see #setLSTZustandStart(LST_Zustand)
@@ -67,7 +66,6 @@ public interface Ausgabe_Fachdaten extends Ur_Objekt {
 	 * Menge aller Fachdaten zur Beschreibung des Zielzustands einer Ausgabe.
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro.
-	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>LST Zustand Ziel</em>' containment reference.
 	 * @see #setLSTZustandZiel(LST_Zustand)

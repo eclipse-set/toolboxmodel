@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl;
 
@@ -6,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -15,6 +21,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Beschreibung_Sonderanlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenPackage;
+import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass;
+
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
 
 /**
@@ -25,6 +33,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_Sonderanlage_AttributeGroupImpl#getSonderanlageLage <em>Sonderanlage Lage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_Sonderanlage_AttributeGroupImpl#getBeschreibungSonderanlage <em>Beschreibung Sonderanlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_Sonderanlage_AttributeGroupImpl#getIDSonderanlage <em>ID Sonderanlage</em>}</li>
  * </ul>
@@ -32,6 +41,16 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
  * @generated
  */
 public class Schloss_Sonderanlage_AttributeGroupImpl extends MinimalEObjectImpl.Container implements Schloss_Sonderanlage_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getSonderanlageLage() <em>Sonderanlage Lage</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSonderanlageLage()
+	 * @generated
+	 * @ordered
+	 */
+	protected Sonderanlage_Lage_TypeClass sonderanlageLage;
+
 	/**
 	 * The cached value of the '{@link #getBeschreibungSonderanlage() <em>Beschreibung Sonderanlage</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -78,6 +97,51 @@ public class Schloss_Sonderanlage_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	protected EClass eStaticClass() {
 		return SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Sonderanlage_Lage_TypeClass getSonderanlageLage() {
+		return sonderanlageLage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSonderanlageLage(Sonderanlage_Lage_TypeClass newSonderanlageLage, NotificationChain msgs) {
+		Sonderanlage_Lage_TypeClass oldSonderanlageLage = sonderanlageLage;
+		sonderanlageLage = newSonderanlageLage;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE, oldSonderanlageLage, newSonderanlageLage);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSonderanlageLage(Sonderanlage_Lage_TypeClass newSonderanlageLage) {
+		if (newSonderanlageLage != sonderanlageLage) {
+			NotificationChain msgs = null;
+			if (sonderanlageLage != null)
+				msgs = ((InternalEObject)sonderanlageLage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE, null, msgs);
+			if (newSonderanlageLage != null)
+				msgs = ((InternalEObject)newSonderanlageLage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE, null, msgs);
+			msgs = basicSetSonderanlageLage(newSonderanlageLage, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE, newSonderanlageLage, newSonderanlageLage));
 	}
 
 	/**
@@ -200,6 +264,8 @@ public class Schloss_Sonderanlage_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE:
+				return basicSetSonderanlageLage(null, msgs);
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE:
 				return basicSetBeschreibungSonderanlage(null, msgs);
 			default:
@@ -215,6 +281,8 @@ public class Schloss_Sonderanlage_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE:
+				return getSonderanlageLage();
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE:
 				return getBeschreibungSonderanlage();
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__ID_SONDERANLAGE:
@@ -233,6 +301,9 @@ public class Schloss_Sonderanlage_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE:
+				setSonderanlageLage((Sonderanlage_Lage_TypeClass)newValue);
+				return;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE:
 				setBeschreibungSonderanlage((Beschreibung_Sonderanlage_TypeClass)newValue);
 				return;
@@ -253,6 +324,9 @@ public class Schloss_Sonderanlage_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE:
+				setSonderanlageLage((Sonderanlage_Lage_TypeClass)null);
+				return;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE:
 				setBeschreibungSonderanlage((Beschreibung_Sonderanlage_TypeClass)null);
 				return;
@@ -273,6 +347,8 @@ public class Schloss_Sonderanlage_AttributeGroupImpl extends MinimalEObjectImpl.
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE:
+				return sonderanlageLage != null;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE:
 				return beschreibungSonderanlage != null;
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__ID_SONDERANLAGE:

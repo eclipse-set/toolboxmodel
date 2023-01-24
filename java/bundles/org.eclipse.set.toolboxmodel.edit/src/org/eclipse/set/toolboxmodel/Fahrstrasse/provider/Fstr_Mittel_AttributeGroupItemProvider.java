@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrasseFactory;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup} object.
@@ -85,6 +86,7 @@ public class Fstr_Mittel_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_ART);
 			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_VAUFWERTUNG);
 		}
 		return childrenFeatures;
@@ -138,6 +140,7 @@ public class Fstr_Mittel_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Fstr_Mittel_AttributeGroup.class)) {
+			case FahrstrassePackage.FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_ART:
 			case FahrstrassePackage.FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_VAUFWERTUNG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -157,6 +160,11 @@ public class Fstr_Mittel_AttributeGroupItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FahrstrassePackage.Literals.FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_ART,
+				 FahrstrasseFactory.eINSTANCE.createFstr_Mittel_Art_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

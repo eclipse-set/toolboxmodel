@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -19,6 +26,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMBUESicherungsart implements Enumerator {
 	/**
+	 * The '<em><b>ENUMBUE Sicherungsart A</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_A_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_A(0, "ENUMBUE_Sicherungsart_A", "A"),
+
+	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Aund Lf</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +43,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_AUND_LF(0, "ENUMBUE_Sicherungsart_A_und_Lf", "A_und_Lf"),
+	ENUMBUE_SICHERUNGSART_AUND_LF(1, "ENUMBUE_Sicherungsart_A_und_Lf", "A_und_Lf"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Aund Sprechverbindung</b></em>' literal object.
@@ -36,7 +53,27 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_AUND_SPRECHVERBINDUNG(1, "ENUMBUE_Sicherungsart_A_und_Sprechverbindung", "A_und_Sprechverbindung"),
+	ENUMBUE_SICHERUNGSART_AUND_SPRECHVERBINDUNG(2, "ENUMBUE_Sicherungsart_A_und_Sprechverbindung", "A_und_Sprechverbindung"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Anrufschranke und Sprechverbindung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_ANRUFSCHRANKE_UND_SPRECHVERBINDUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_ANRUFSCHRANKE_UND_SPRECHVERBINDUNG(3, "ENUMBUE_Sicherungsart_Anrufschranke_und_Sprechverbindung", "Anrufschranke_und_Sprechverbindung"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart bg BUe</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_BG_BUE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_BG_BUE(4, "ENUMBUE_Sicherungsart_bgBUe", "bgBUe"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz</b></em>' literal object.
@@ -46,7 +83,17 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_LZ(2, "ENUMBUE_Sicherungsart_Lz", "Lz"),
+	ENUMBUE_SICHERUNGSART_LZ(5, "ENUMBUE_Sicherungsart_Lz", "Lz"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Lz F</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_LZ_F_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_LZ_F(6, "ENUMBUE_Sicherungsart_LzF", "LzF"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz H</b></em>' literal object.
@@ -56,7 +103,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_LZ_H(3, "ENUMBUE_Sicherungsart_LzH", "LzH"),
+	ENUMBUE_SICHERUNGSART_LZ_H(7, "ENUMBUE_Sicherungsart_LzH", "LzH"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz H2F</b></em>' literal object.
@@ -66,7 +113,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_LZ_H2F(4, "ENUMBUE_Sicherungsart_LzH_2F", "LzH_2F"),
+	ENUMBUE_SICHERUNGSART_LZ_H2F(8, "ENUMBUE_Sicherungsart_LzH_2F", "LzH_2F"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz HF</b></em>' literal object.
@@ -76,7 +123,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_LZ_HF(5, "ENUMBUE_Sicherungsart_LzH_F", "LzH_F"),
+	ENUMBUE_SICHERUNGSART_LZ_HF(9, "ENUMBUE_Sicherungsart_LzH_F", "LzH_F"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz HH</b></em>' literal object.
@@ -86,7 +133,27 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_LZ_HH(6, "ENUMBUE_Sicherungsart_LzHH", "LzHH"),
+	ENUMBUE_SICHERUNGSART_LZ_HH(10, "ENUMBUE_Sicherungsart_LzHH", "LzHH"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Lz HH 2F</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_LZ_HH_2F_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_LZ_HH_2F(11, "ENUMBUE_Sicherungsart_LzHH_2F", "LzHH_2F"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Lz HH F</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_LZ_HH_F_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_LZ_HH_F(12, "ENUMBUE_Sicherungsart_LzHH_F", "LzHH_F"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz V</b></em>' literal object.
@@ -96,7 +163,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_LZ_V(7, "ENUMBUE_Sicherungsart_LzV", "LzV"),
+	ENUMBUE_SICHERUNGSART_LZ_V(13, "ENUMBUE_Sicherungsart_LzV", "LzV"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart P</b></em>' literal object.
@@ -106,7 +173,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_P(8, "ENUMBUE_Sicherungsart_P", "P"),
+	ENUMBUE_SICHERUNGSART_P(14, "ENUMBUE_Sicherungsart_P", "P"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Pund Lf</b></em>' literal object.
@@ -116,7 +183,17 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_PUND_LF(9, "ENUMBUE_Sicherungsart_P_und_Lf", "P_und_Lf"),
+	ENUMBUE_SICHERUNGSART_PUND_LF(15, "ENUMBUE_Sicherungsart_P_und_Lf", "P_und_Lf"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Pund U</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_PUND_U_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_PUND_U(16, "ENUMBUE_Sicherungsart_P_und_U", "P_und_U"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart schluesselabhaengig</b></em>' literal object.
@@ -126,7 +203,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_SCHLUESSELABHAENGIG(10, "ENUMBUE_Sicherungsart_schluesselabhaengig", "schluesselabhaengig"),
+	ENUMBUE_SICHERUNGSART_SCHLUESSELABHAENGIG(17, "ENUMBUE_Sicherungsart_schluesselabhaengig", "schluesselabhaengig"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart sonstige</b></em>' literal object.
@@ -136,7 +213,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_SONSTIGE(11, "ENUMBUE_Sicherungsart_sonstige", "sonstige"),
+	ENUMBUE_SICHERUNGSART_SONSTIGE(18, "ENUMBUE_Sicherungsart_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Ue</b></em>' literal object.
@@ -146,7 +223,17 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_UE(12, "ENUMBUE_Sicherungsart_Ue", "Ue"),
+	ENUMBUE_SICHERUNGSART_UE(19, "ENUMBUE_Sicherungsart_Ue", "Ue"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Ue und A</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_UE_UND_A_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_UE_UND_A(20, "ENUMBUE_Sicherungsart_Ue_und_A", "Ue_und_A"),
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Ue und P</b></em>' literal object.
@@ -156,7 +243,28 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_SICHERUNGSART_UE_UND_P(13, "ENUMBUE_Sicherungsart_Ue_und_P", "Ue_und_P");
+	ENUMBUE_SICHERUNGSART_UE_UND_P(21, "ENUMBUE_Sicherungsart_Ue_und_P", "Ue_und_P"),
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Ue und U</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_UE_UND_U_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_SICHERUNGSART_UE_UND_U(22, "ENUMBUE_Sicherungsart_Ue_und_U", "Ue_und_U");
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart A</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_A
+	 * @model name="ENUMBUE_Sicherungsart_A" literal="A"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_A_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Aund Lf</b></em>' literal value.
@@ -167,7 +275,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_AUND_LF_VALUE = 0;
+	public static final int ENUMBUE_SICHERUNGSART_AUND_LF_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Aund Sprechverbindung</b></em>' literal value.
@@ -178,7 +286,29 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_AUND_SPRECHVERBINDUNG_VALUE = 1;
+	public static final int ENUMBUE_SICHERUNGSART_AUND_SPRECHVERBINDUNG_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Anrufschranke und Sprechverbindung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_ANRUFSCHRANKE_UND_SPRECHVERBINDUNG
+	 * @model name="ENUMBUE_Sicherungsart_Anrufschranke_und_Sprechverbindung" literal="Anrufschranke_und_Sprechverbindung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_ANRUFSCHRANKE_UND_SPRECHVERBINDUNG_VALUE = 3;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart bg BUe</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_BG_BUE
+	 * @model name="ENUMBUE_Sicherungsart_bgBUe" literal="bgBUe"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_BG_BUE_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz</b></em>' literal value.
@@ -189,7 +319,18 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_LZ_VALUE = 2;
+	public static final int ENUMBUE_SICHERUNGSART_LZ_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Lz F</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_LZ_F
+	 * @model name="ENUMBUE_Sicherungsart_LzF" literal="LzF"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_LZ_F_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz H</b></em>' literal value.
@@ -200,7 +341,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_LZ_H_VALUE = 3;
+	public static final int ENUMBUE_SICHERUNGSART_LZ_H_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz H2F</b></em>' literal value.
@@ -211,7 +352,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_LZ_H2F_VALUE = 4;
+	public static final int ENUMBUE_SICHERUNGSART_LZ_H2F_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz HF</b></em>' literal value.
@@ -222,7 +363,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_LZ_HF_VALUE = 5;
+	public static final int ENUMBUE_SICHERUNGSART_LZ_HF_VALUE = 9;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz HH</b></em>' literal value.
@@ -233,7 +374,29 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_LZ_HH_VALUE = 6;
+	public static final int ENUMBUE_SICHERUNGSART_LZ_HH_VALUE = 10;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Lz HH 2F</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_LZ_HH_2F
+	 * @model name="ENUMBUE_Sicherungsart_LzHH_2F" literal="LzHH_2F"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_LZ_HH_2F_VALUE = 11;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Lz HH F</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_LZ_HH_F
+	 * @model name="ENUMBUE_Sicherungsart_LzHH_F" literal="LzHH_F"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_LZ_HH_F_VALUE = 12;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Lz V</b></em>' literal value.
@@ -244,7 +407,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_LZ_V_VALUE = 7;
+	public static final int ENUMBUE_SICHERUNGSART_LZ_V_VALUE = 13;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart P</b></em>' literal value.
@@ -255,7 +418,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_P_VALUE = 8;
+	public static final int ENUMBUE_SICHERUNGSART_P_VALUE = 14;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Pund Lf</b></em>' literal value.
@@ -266,7 +429,18 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_PUND_LF_VALUE = 9;
+	public static final int ENUMBUE_SICHERUNGSART_PUND_LF_VALUE = 15;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Pund U</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_PUND_U
+	 * @model name="ENUMBUE_Sicherungsart_P_und_U" literal="P_und_U"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_PUND_U_VALUE = 16;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart schluesselabhaengig</b></em>' literal value.
@@ -277,7 +451,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_SCHLUESSELABHAENGIG_VALUE = 10;
+	public static final int ENUMBUE_SICHERUNGSART_SCHLUESSELABHAENGIG_VALUE = 17;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart sonstige</b></em>' literal value.
@@ -288,7 +462,7 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_SONSTIGE_VALUE = 11;
+	public static final int ENUMBUE_SICHERUNGSART_SONSTIGE_VALUE = 18;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Ue</b></em>' literal value.
@@ -299,7 +473,18 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_UE_VALUE = 12;
+	public static final int ENUMBUE_SICHERUNGSART_UE_VALUE = 19;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Ue und A</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_UE_UND_A
+	 * @model name="ENUMBUE_Sicherungsart_Ue_und_A" literal="Ue_und_A"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_UE_UND_A_VALUE = 20;
 
 	/**
 	 * The '<em><b>ENUMBUE Sicherungsart Ue und P</b></em>' literal value.
@@ -310,7 +495,18 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_SICHERUNGSART_UE_UND_P_VALUE = 13;
+	public static final int ENUMBUE_SICHERUNGSART_UE_UND_P_VALUE = 21;
+
+	/**
+	 * The '<em><b>ENUMBUE Sicherungsart Ue und U</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_SICHERUNGSART_UE_UND_U
+	 * @model name="ENUMBUE_Sicherungsart_Ue_und_U" literal="Ue_und_U"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_SICHERUNGSART_UE_UND_U_VALUE = 22;
 
 	/**
 	 * An array of all the '<em><b>ENUMBUE Sicherungsart</b></em>' enumerators.
@@ -320,20 +516,29 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 */
 	private static final ENUMBUESicherungsart[] VALUES_ARRAY =
 		new ENUMBUESicherungsart[] {
+			ENUMBUE_SICHERUNGSART_A,
 			ENUMBUE_SICHERUNGSART_AUND_LF,
 			ENUMBUE_SICHERUNGSART_AUND_SPRECHVERBINDUNG,
+			ENUMBUE_SICHERUNGSART_ANRUFSCHRANKE_UND_SPRECHVERBINDUNG,
+			ENUMBUE_SICHERUNGSART_BG_BUE,
 			ENUMBUE_SICHERUNGSART_LZ,
+			ENUMBUE_SICHERUNGSART_LZ_F,
 			ENUMBUE_SICHERUNGSART_LZ_H,
 			ENUMBUE_SICHERUNGSART_LZ_H2F,
 			ENUMBUE_SICHERUNGSART_LZ_HF,
 			ENUMBUE_SICHERUNGSART_LZ_HH,
+			ENUMBUE_SICHERUNGSART_LZ_HH_2F,
+			ENUMBUE_SICHERUNGSART_LZ_HH_F,
 			ENUMBUE_SICHERUNGSART_LZ_V,
 			ENUMBUE_SICHERUNGSART_P,
 			ENUMBUE_SICHERUNGSART_PUND_LF,
+			ENUMBUE_SICHERUNGSART_PUND_U,
 			ENUMBUE_SICHERUNGSART_SCHLUESSELABHAENGIG,
 			ENUMBUE_SICHERUNGSART_SONSTIGE,
 			ENUMBUE_SICHERUNGSART_UE,
+			ENUMBUE_SICHERUNGSART_UE_UND_A,
 			ENUMBUE_SICHERUNGSART_UE_UND_P,
+			ENUMBUE_SICHERUNGSART_UE_UND_U,
 		};
 
 	/**
@@ -390,20 +595,29 @@ public enum ENUMBUESicherungsart implements Enumerator {
 	 */
 	public static ENUMBUESicherungsart get(int value) {
 		switch (value) {
+			case ENUMBUE_SICHERUNGSART_A_VALUE: return ENUMBUE_SICHERUNGSART_A;
 			case ENUMBUE_SICHERUNGSART_AUND_LF_VALUE: return ENUMBUE_SICHERUNGSART_AUND_LF;
 			case ENUMBUE_SICHERUNGSART_AUND_SPRECHVERBINDUNG_VALUE: return ENUMBUE_SICHERUNGSART_AUND_SPRECHVERBINDUNG;
+			case ENUMBUE_SICHERUNGSART_ANRUFSCHRANKE_UND_SPRECHVERBINDUNG_VALUE: return ENUMBUE_SICHERUNGSART_ANRUFSCHRANKE_UND_SPRECHVERBINDUNG;
+			case ENUMBUE_SICHERUNGSART_BG_BUE_VALUE: return ENUMBUE_SICHERUNGSART_BG_BUE;
 			case ENUMBUE_SICHERUNGSART_LZ_VALUE: return ENUMBUE_SICHERUNGSART_LZ;
+			case ENUMBUE_SICHERUNGSART_LZ_F_VALUE: return ENUMBUE_SICHERUNGSART_LZ_F;
 			case ENUMBUE_SICHERUNGSART_LZ_H_VALUE: return ENUMBUE_SICHERUNGSART_LZ_H;
 			case ENUMBUE_SICHERUNGSART_LZ_H2F_VALUE: return ENUMBUE_SICHERUNGSART_LZ_H2F;
 			case ENUMBUE_SICHERUNGSART_LZ_HF_VALUE: return ENUMBUE_SICHERUNGSART_LZ_HF;
 			case ENUMBUE_SICHERUNGSART_LZ_HH_VALUE: return ENUMBUE_SICHERUNGSART_LZ_HH;
+			case ENUMBUE_SICHERUNGSART_LZ_HH_2F_VALUE: return ENUMBUE_SICHERUNGSART_LZ_HH_2F;
+			case ENUMBUE_SICHERUNGSART_LZ_HH_F_VALUE: return ENUMBUE_SICHERUNGSART_LZ_HH_F;
 			case ENUMBUE_SICHERUNGSART_LZ_V_VALUE: return ENUMBUE_SICHERUNGSART_LZ_V;
 			case ENUMBUE_SICHERUNGSART_P_VALUE: return ENUMBUE_SICHERUNGSART_P;
 			case ENUMBUE_SICHERUNGSART_PUND_LF_VALUE: return ENUMBUE_SICHERUNGSART_PUND_LF;
+			case ENUMBUE_SICHERUNGSART_PUND_U_VALUE: return ENUMBUE_SICHERUNGSART_PUND_U;
 			case ENUMBUE_SICHERUNGSART_SCHLUESSELABHAENGIG_VALUE: return ENUMBUE_SICHERUNGSART_SCHLUESSELABHAENGIG;
 			case ENUMBUE_SICHERUNGSART_SONSTIGE_VALUE: return ENUMBUE_SICHERUNGSART_SONSTIGE;
 			case ENUMBUE_SICHERUNGSART_UE_VALUE: return ENUMBUE_SICHERUNGSART_UE;
+			case ENUMBUE_SICHERUNGSART_UE_UND_A_VALUE: return ENUMBUE_SICHERUNGSART_UE_UND_A;
 			case ENUMBUE_SICHERUNGSART_UE_UND_P_VALUE: return ENUMBUE_SICHERUNGSART_UE_UND_P;
+			case ENUMBUE_SICHERUNGSART_UE_UND_U_VALUE: return ENUMBUE_SICHERUNGSART_UE_UND_U;
 			default: return null;
 		}
 	}

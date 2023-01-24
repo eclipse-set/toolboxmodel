@@ -1,12 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen.util;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -118,12 +123,14 @@ public class BasisTypenValidator extends EObjectValidator {
 				return validateBezeichnung_Tabelle_TypeClass((Bezeichnung_Tabelle_TypeClass)value, diagnostics, context);
 			case BasisTypenPackage.DATUM_AUSLIEFERUNG_TYPE_CLASS:
 				return validateDatum_Auslieferung_TypeClass((Datum_Auslieferung_TypeClass)value, diagnostics, context);
-			case BasisTypenPackage.EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP:
-				return validateEigenschaften_Datei_AttributeGroup((Eigenschaften_Datei_AttributeGroup)value, diagnostics, context);
+			case BasisTypenPackage.ID_BEARBEITUNGSVERMERK_TYPE_CLASS:
+				return validateID_Bearbeitungsvermerk_TypeClass((ID_Bearbeitungsvermerk_TypeClass)value, diagnostics, context);
 			case BasisTypenPackage.KENNZAHL_TYPE_CLASS:
 				return validateKennzahl_TypeClass((Kennzahl_TypeClass)value, diagnostics, context);
 			case BasisTypenPackage.OERTLICHER_ELEMENTNAME_TYPE_CLASS:
 				return validateOertlicher_Elementname_TypeClass((Oertlicher_Elementname_TypeClass)value, diagnostics, context);
+			case BasisTypenPackage.PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP:
+				return validatePruefmerkmale_Daten_AttributeGroup((Pruefmerkmale_Daten_AttributeGroup)value, diagnostics, context);
 			case BasisTypenPackage.PRUEFSUMME_ART_TYPE_CLASS:
 				return validatePruefsumme_Art_TypeClass((Pruefsumme_Art_TypeClass)value, diagnostics, context);
 			case BasisTypenPackage.PRUEFSUMME_TYPE_CLASS:
@@ -183,7 +190,7 @@ public class BasisTypenValidator extends EObjectValidator {
 			case BasisTypenPackage.ENUM_WIRKRICHTUNG_OBJECT:
 				return validateENUMWirkrichtungObject((ENUMWirkrichtung)value, diagnostics, context);
 			case BasisTypenPackage.FAHRSTROM_TYPE:
-				return validateFahrstrom_Type((List<?>)value, diagnostics, context);
+				return validateFahrstrom_Type((ENUMFahrstrom)value, diagnostics, context);
 			case BasisTypenPackage.FREI_TEXT_TYPE:
 				return validateFreiText_Type((String)value, diagnostics, context);
 			case BasisTypenPackage.GESCHWINDIGKEIT_TYPE:
@@ -204,8 +211,6 @@ public class BasisTypenValidator extends EObjectValidator {
 				return validateObjektname_Type((String)value, diagnostics, context);
 			case BasisTypenPackage.OERTLICHER_ELEMENTNAME_TYPE:
 				return validateOertlicher_Elementname_Type((String)value, diagnostics, context);
-			case BasisTypenPackage.PRUEFSUMME_TYPE:
-				return validatePruefsumme_Type((String)value, diagnostics, context);
 			case BasisTypenPackage.REGIONALBEREICH_TYPE:
 				return validateRegionalbereich_Type((ENUMRegionalbereich)value, diagnostics, context);
 			case BasisTypenPackage.SEKUNDE_TYPE:
@@ -291,8 +296,8 @@ public class BasisTypenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEigenschaften_Datei_AttributeGroup(Eigenschaften_Datei_AttributeGroup eigenschaften_Datei_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(eigenschaften_Datei_AttributeGroup, diagnostics, context);
+	public boolean validateID_Bearbeitungsvermerk_TypeClass(ID_Bearbeitungsvermerk_TypeClass iD_Bearbeitungsvermerk_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(iD_Bearbeitungsvermerk_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -311,6 +316,15 @@ public class BasisTypenValidator extends EObjectValidator {
 	 */
 	public boolean validateOertlicher_Elementname_TypeClass(Oertlicher_Elementname_TypeClass oertlicher_Elementname_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(oertlicher_Elementname_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePruefmerkmale_Daten_AttributeGroup(Pruefmerkmale_Daten_AttributeGroup pruefmerkmale_Daten_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(pruefmerkmale_Daten_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -714,30 +728,8 @@ public class BasisTypenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateFahrstrom_Type(List<?> fahrstrom_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateFahrstrom_Type_ItemType(fahrstrom_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * Validates the ItemType constraint of '<em>Fahrstrom Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFahrstrom_Type_ItemType(List<?> fahrstrom_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = true;
-		for (Iterator<?> i = fahrstrom_Type.iterator(); i.hasNext() && (result || diagnostics != null); ) {
-			Object item = i.next();
-			if (BasisTypenPackage.Literals.ENUM_FAHRSTROM.isInstance(item)) {
-				result &= validateENUMFahrstrom((ENUMFahrstrom)item, diagnostics, context);
-			}
-			else {
-				result = false;
-				reportDataValueTypeViolation(BasisTypenPackage.Literals.ENUM_FAHRSTROM, item, diagnostics, context);
-			}
-		}
-		return result;
+	public boolean validateFahrstrom_Type(ENUMFahrstrom fahrstrom_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
@@ -956,16 +948,6 @@ public class BasisTypenValidator extends EObjectValidator {
 	 */
 	public boolean validateOertlicher_Elementname_Type_Pattern(String oertlicher_Elementname_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(BasisTypenPackage.Literals.OERTLICHER_ELEMENTNAME_TYPE, oertlicher_Elementname_Type, OERTLICHER_ELEMENTNAME_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePruefsumme_Type(String pruefsumme_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateText_Type_Pattern(pruefsumme_Type, diagnostics, context);
-		return result;
 	}
 
 	/**

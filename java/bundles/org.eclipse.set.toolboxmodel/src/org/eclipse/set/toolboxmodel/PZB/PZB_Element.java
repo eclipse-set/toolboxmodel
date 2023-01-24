@@ -1,10 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stellelement;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
 
 /**
@@ -38,7 +45,7 @@ public interface PZB_Element extends Punkt_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf das Objekt PZB_Element_Zuordnung, zur Angabe des zugehörigen Signals. 
+	 * Verweis auf das Objekt PZB_Element_Zuordnung zur Angabe des Bezugspunkts bzw. der Bezugspunkte und ggf. bestehender Fahrstraßen-Abhängigkeiten.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDPZB Element Zuordnung</em>' reference.
 	 * @see #isSetIDPZBElementZuordnung()

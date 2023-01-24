@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -13,9 +20,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getAnzeigegefuehrtESKategorie <em>Anzeigegefuehrt ES Kategorie</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getVProfilArt <em>VProfil Art</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getWirkrichtung <em>Wirkrichtung</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGeschwindigkeitsprofil_Allg_AttributeGroup()
@@ -23,6 +30,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Geschwindigkeitsprofil_Allg_AttributeGroup extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Anzeigegefuehrt ES Kategorie</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Kategorie für Geschwindigkeitsprofile der Art "anzeigefeführt ES", z. B. Gültigkeit für Reise- oder Güterzüge.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Anzeigegefuehrt ES Kategorie</em>' containment reference.
+	 * @see #setAnzeigegefuehrtESKategorie(Anzeigegefuehrt_ES_Kategorie_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGeschwindigkeitsprofil_Allg_AttributeGroup_AnzeigegefuehrtESKategorie()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Anzeigegefuehrt_ES_Kategorie'"
+	 * @generated
+	 */
+	Anzeigegefuehrt_ES_Kategorie_TypeClass getAnzeigegefuehrtESKategorie();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getAnzeigegefuehrtESKategorie <em>Anzeigegefuehrt ES Kategorie</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Anzeigegefuehrt ES Kategorie</em>' containment reference.
+	 * @see #getAnzeigegefuehrtESKategorie()
+	 * @generated
+	 */
+	void setAnzeigegefuehrtESKategorie(Anzeigegefuehrt_ES_Kategorie_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>Geschwindigkeit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -74,31 +107,5 @@ public interface Geschwindigkeitsprofil_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setVProfilArt(V_Profil_Art_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Wirkrichtung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * (Fahrt-)Richtung, in die ein verortetes Objekt wirkt. Die Angabe "in", "gegen" bzw. "beide" bezieht sich auf die Topologierichtung der TOP Kante. Weitere Erläuterungen zu den verwendeten Richtungsbegriffen siehe Modellierung Richtung. Zur vererbungsspezifischen Befüllung siehe Modellierung Basisobjekte. DB-Regelwerk Darstellung im sicherungstechnischen Lageplan
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Wirkrichtung</em>' containment reference.
-	 * @see #setWirkrichtung(Wirkrichtung_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGeschwindigkeitsprofil_Allg_AttributeGroup_Wirkrichtung()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Wirkrichtung'"
-	 * @generated
-	 */
-	Wirkrichtung_TypeClass getWirkrichtung();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup#getWirkrichtung <em>Wirkrichtung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wirkrichtung</em>' containment reference.
-	 * @see #getWirkrichtung()
-	 * @generated
-	 */
-	void setWirkrichtung(Wirkrichtung_TypeClass value);
 
 } // Geschwindigkeitsprofil_Allg_AttributeGroup

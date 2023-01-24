@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung.impl;
 
@@ -14,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.set.toolboxmodel.Zuglenkung.Annaeherungsgeschwindigkeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Zuglenkung.DWeg_Prio_TypeClass;
 import org.eclipse.set.toolboxmodel.Zuglenkung.FUEM_Auswertung_TypeClass;
+import org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Zuglenkung.Sichtzeit_Vorsignal_TypeClass;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage;
@@ -28,6 +36,7 @@ import org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZL_Fstr_Allg_AttributeGroupImpl#getAnnaeherungsgeschwindigkeit <em>Annaeherungsgeschwindigkeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZL_Fstr_Allg_AttributeGroupImpl#getDWegPrio <em>DWeg Prio</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZL_Fstr_Allg_AttributeGroupImpl#getFstrBildezeit <em>Fstr Bildezeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZL_Fstr_Allg_AttributeGroupImpl#getFUEMAuswertung <em>FUEM Auswertung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZL_Fstr_Allg_AttributeGroupImpl#getSichtzeitVorsignal <em>Sichtzeit Vorsignal</em>}</li>
  * </ul>
@@ -54,6 +63,16 @@ public class ZL_Fstr_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected DWeg_Prio_TypeClass dWegPrio;
+
+	/**
+	 * The cached value of the '{@link #getFstrBildezeit() <em>Fstr Bildezeit</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFstrBildezeit()
+	 * @generated
+	 * @ordered
+	 */
+	protected Fstr_Bildezeit_TypeClass fstrBildezeit;
 
 	/**
 	 * The cached value of the '{@link #getFUEMAuswertung() <em>FUEM Auswertung</em>}' containment reference.
@@ -190,6 +209,51 @@ public class ZL_Fstr_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	@Override
+	public Fstr_Bildezeit_TypeClass getFstrBildezeit() {
+		return fstrBildezeit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFstrBildezeit(Fstr_Bildezeit_TypeClass newFstrBildezeit, NotificationChain msgs) {
+		Fstr_Bildezeit_TypeClass oldFstrBildezeit = fstrBildezeit;
+		fstrBildezeit = newFstrBildezeit;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, oldFstrBildezeit, newFstrBildezeit);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFstrBildezeit(Fstr_Bildezeit_TypeClass newFstrBildezeit) {
+		if (newFstrBildezeit != fstrBildezeit) {
+			NotificationChain msgs = null;
+			if (fstrBildezeit != null)
+				msgs = ((InternalEObject)fstrBildezeit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, null, msgs);
+			if (newFstrBildezeit != null)
+				msgs = ((InternalEObject)newFstrBildezeit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, null, msgs);
+			msgs = basicSetFstrBildezeit(newFstrBildezeit, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, newFstrBildezeit, newFstrBildezeit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public FUEM_Auswertung_TypeClass getFUEMAuswertung() {
 		return fUEMAuswertung;
 	}
@@ -286,6 +350,8 @@ public class ZL_Fstr_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 				return basicSetAnnaeherungsgeschwindigkeit(null, msgs);
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO:
 				return basicSetDWegPrio(null, msgs);
+			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
+				return basicSetFstrBildezeit(null, msgs);
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG:
 				return basicSetFUEMAuswertung(null, msgs);
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__SICHTZEIT_VORSIGNAL:
@@ -307,6 +373,8 @@ public class ZL_Fstr_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 				return getAnnaeherungsgeschwindigkeit();
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO:
 				return getDWegPrio();
+			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
+				return getFstrBildezeit();
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG:
 				return getFUEMAuswertung();
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__SICHTZEIT_VORSIGNAL:
@@ -329,6 +397,9 @@ public class ZL_Fstr_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 				return;
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO:
 				setDWegPrio((DWeg_Prio_TypeClass)newValue);
+				return;
+			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
+				setFstrBildezeit((Fstr_Bildezeit_TypeClass)newValue);
 				return;
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG:
 				setFUEMAuswertung((FUEM_Auswertung_TypeClass)newValue);
@@ -356,6 +427,9 @@ public class ZL_Fstr_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO:
 				setDWegPrio((DWeg_Prio_TypeClass)null);
 				return;
+			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
+				setFstrBildezeit((Fstr_Bildezeit_TypeClass)null);
+				return;
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG:
 				setFUEMAuswertung((FUEM_Auswertung_TypeClass)null);
 				return;
@@ -380,6 +454,8 @@ public class ZL_Fstr_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 				return annaeherungsgeschwindigkeit != null;
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO:
 				return dWegPrio != null;
+			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
+				return fstrBildezeit != null;
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG:
 				return fUEMAuswertung != null;
 			case ZuglenkungPackage.ZL_FSTR_ALLG_ATTRIBUTE_GROUP__SICHTZEIT_VORSIGNAL:

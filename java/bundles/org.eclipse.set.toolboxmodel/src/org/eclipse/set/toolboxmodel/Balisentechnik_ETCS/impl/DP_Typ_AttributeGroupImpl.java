@@ -1,15 +1,29 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_Art_TypeClass;
@@ -62,14 +76,14 @@ public class DP_Typ_AttributeGroupImpl extends MinimalEObjectImpl.Container impl
 	protected DP_Typ_GESG_AttributeGroup dPTypGESG;
 
 	/**
-	 * The cached value of the '{@link #getDPTypGETCS() <em>DP Typ GETCS</em>}' containment reference.
+	 * The cached value of the '{@link #getDPTypGETCS() <em>DP Typ GETCS</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDPTypGETCS()
 	 * @generated
 	 * @ordered
 	 */
-	protected DP_Typ_GETCS_AttributeGroup dPTypGETCS;
+	protected EList<DP_Typ_GETCS_AttributeGroup> dPTypGETCS;
 
 	/**
 	 * The cached value of the '{@link #getDPTypGGNT() <em>DP Typ GGNT</em>}' containment reference.
@@ -226,43 +240,11 @@ public class DP_Typ_AttributeGroupImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	@Override
-	public DP_Typ_GETCS_AttributeGroup getDPTypGETCS() {
+	public EList<DP_Typ_GETCS_AttributeGroup> getDPTypGETCS() {
+		if (dPTypGETCS == null) {
+			dPTypGETCS = new EObjectContainmentEList<DP_Typ_GETCS_AttributeGroup>(DP_Typ_GETCS_AttributeGroup.class, this, Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS);
+		}
 		return dPTypGETCS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDPTypGETCS(DP_Typ_GETCS_AttributeGroup newDPTypGETCS, NotificationChain msgs) {
-		DP_Typ_GETCS_AttributeGroup oldDPTypGETCS = dPTypGETCS;
-		dPTypGETCS = newDPTypGETCS;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS, oldDPTypGETCS, newDPTypGETCS);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDPTypGETCS(DP_Typ_GETCS_AttributeGroup newDPTypGETCS) {
-		if (newDPTypGETCS != dPTypGETCS) {
-			NotificationChain msgs = null;
-			if (dPTypGETCS != null)
-				msgs = ((InternalEObject)dPTypGETCS).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS, null, msgs);
-			if (newDPTypGETCS != null)
-				msgs = ((InternalEObject)newDPTypGETCS).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS, null, msgs);
-			msgs = basicSetDPTypGETCS(newDPTypGETCS, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS, newDPTypGETCS, newDPTypGETCS));
 	}
 
 	/**
@@ -458,7 +440,7 @@ public class DP_Typ_AttributeGroupImpl extends MinimalEObjectImpl.Container impl
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GESG:
 				return basicSetDPTypGESG(null, msgs);
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS:
-				return basicSetDPTypGETCS(null, msgs);
+				return ((InternalEList<?>)getDPTypGETCS()).basicRemove(otherEnd, msgs);
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GGNT:
 				return basicSetDPTypGGNT(null, msgs);
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GSONST:
@@ -504,6 +486,7 @@ public class DP_Typ_AttributeGroupImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -514,7 +497,8 @@ public class DP_Typ_AttributeGroupImpl extends MinimalEObjectImpl.Container impl
 				setDPTypGESG((DP_Typ_GESG_AttributeGroup)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS:
-				setDPTypGETCS((DP_Typ_GETCS_AttributeGroup)newValue);
+				getDPTypGETCS().clear();
+				getDPTypGETCS().addAll((Collection<? extends DP_Typ_GETCS_AttributeGroup>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GGNT:
 				setDPTypGGNT((DP_Typ_GGNT_AttributeGroup)newValue);
@@ -549,7 +533,7 @@ public class DP_Typ_AttributeGroupImpl extends MinimalEObjectImpl.Container impl
 				setDPTypGESG((DP_Typ_GESG_AttributeGroup)null);
 				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS:
-				setDPTypGETCS((DP_Typ_GETCS_AttributeGroup)null);
+				getDPTypGETCS().clear();
 				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GGNT:
 				setDPTypGGNT((DP_Typ_GGNT_AttributeGroup)null);
@@ -582,7 +566,7 @@ public class DP_Typ_AttributeGroupImpl extends MinimalEObjectImpl.Container impl
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GESG:
 				return dPTypGESG != null;
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GETCS:
-				return dPTypGETCS != null;
+				return dPTypGETCS != null && !dPTypGETCS.isEmpty();
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GGNT:
 				return dPTypGGNT != null;
 			case Balisentechnik_ETCSPackage.DP_TYP_ATTRIBUTE_GROUP__DP_TYP_GSONST:

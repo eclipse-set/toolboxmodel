@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis.impl;
 
@@ -13,7 +20,9 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -32,6 +41,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPacka
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balisentechnik_ETCSPackageImpl;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
+import org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl;
 
@@ -80,18 +90,18 @@ import org.eclipse.set.toolboxmodel.Gleis.Gleis_Schaltgruppe;
 import org.eclipse.set.toolboxmodel.Gleis.Gleisart_TypeClass;
 import org.eclipse.set.toolboxmodel.Gleis.Konstruktion_TypeClass;
 import org.eclipse.set.toolboxmodel.Gleis.Lichtraumprofil_TypeClass;
-import org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass;
-import org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass;
-import org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass;
-import org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -116,9 +126,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -256,34 +268,6 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass nutzung_Gueterzug_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass nutzung_Rangier_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass nutzung_Reisezug_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass nutzung_SBahn_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum enumBaubereichArtEEnum = null;
 
 	/**
@@ -347,6 +331,13 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType fahrstrom_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType geschwindigkeit_TypeEDataType = null;
 
 	/**
@@ -396,34 +387,35 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		XMLTypePackage.eINSTANCE.eClass();
-
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -440,8 +432,8 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -459,16 +451,18 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 
 		// Create package meta-data objects
 		theGleisPackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -476,23 +470,25 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGleisPackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -500,7 +496,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -845,86 +841,6 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getNutzung_Gueterzug_TypeClass() {
-		return nutzung_Gueterzug_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNutzung_Gueterzug_TypeClass_Wert() {
-		return (EAttribute)nutzung_Gueterzug_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getNutzung_Rangier_TypeClass() {
-		return nutzung_Rangier_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNutzung_Rangier_TypeClass_Wert() {
-		return (EAttribute)nutzung_Rangier_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getNutzung_Reisezug_TypeClass() {
-		return nutzung_Reisezug_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNutzung_Reisezug_TypeClass_Wert() {
-		return (EAttribute)nutzung_Reisezug_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getNutzung_SBahn_TypeClass() {
-		return nutzung_SBahn_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNutzung_SBahn_TypeClass_Wert() {
-		return (EAttribute)nutzung_SBahn_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getENUMBaubereichArt() {
 		return enumBaubereichArtEEnum;
 	}
@@ -1015,6 +931,16 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getFahrstrom_Type() {
+		return fahrstrom_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getGeschwindigkeit_Type() {
 		return geschwindigkeit_TypeEDataType;
 	}
@@ -1095,18 +1021,6 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		lichtraumprofil_TypeClassEClass = createEClass(LICHTRAUMPROFIL_TYPE_CLASS);
 		createEAttribute(lichtraumprofil_TypeClassEClass, LICHTRAUMPROFIL_TYPE_CLASS__WERT);
 
-		nutzung_Gueterzug_TypeClassEClass = createEClass(NUTZUNG_GUETERZUG_TYPE_CLASS);
-		createEAttribute(nutzung_Gueterzug_TypeClassEClass, NUTZUNG_GUETERZUG_TYPE_CLASS__WERT);
-
-		nutzung_Rangier_TypeClassEClass = createEClass(NUTZUNG_RANGIER_TYPE_CLASS);
-		createEAttribute(nutzung_Rangier_TypeClassEClass, NUTZUNG_RANGIER_TYPE_CLASS__WERT);
-
-		nutzung_Reisezug_TypeClassEClass = createEClass(NUTZUNG_REISEZUG_TYPE_CLASS);
-		createEAttribute(nutzung_Reisezug_TypeClassEClass, NUTZUNG_REISEZUG_TYPE_CLASS__WERT);
-
-		nutzung_SBahn_TypeClassEClass = createEClass(NUTZUNG_SBAHN_TYPE_CLASS);
-		createEAttribute(nutzung_SBahn_TypeClassEClass, NUTZUNG_SBAHN_TYPE_CLASS__WERT);
-
 		// Create enums
 		enumBaubereichArtEEnum = createEEnum(ENUM_BAUBEREICH_ART);
 		enumGleisartEEnum = createEEnum(ENUM_GLEISART);
@@ -1119,6 +1033,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		enumGleisartObjectEDataType = createEDataType(ENUM_GLEISART_OBJECT);
 		enumKonstruktionObjectEDataType = createEDataType(ENUM_KONSTRUKTION_OBJECT);
 		enumLichtraumprofilObjectEDataType = createEDataType(ENUM_LICHTRAUMPROFIL_OBJECT);
+		fahrstrom_TypeEDataType = createEDataType(FAHRSTROM_TYPE);
 		geschwindigkeit_TypeEDataType = createEDataType(GESCHWINDIGKEIT_TYPE);
 	}
 
@@ -1148,7 +1063,6 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		// Obtain other dependent packages
 		BasisTypenPackage theBasisTypenPackage = (BasisTypenPackage)EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisobjektePackage theBasisobjektePackage = (BasisobjektePackage)EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
-		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1169,10 +1083,6 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		gleisart_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		konstruktion_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		lichtraumprofil_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		nutzung_Gueterzug_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		nutzung_Rangier_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		nutzung_Reisezug_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		nutzung_SBahn_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(baubereich_Art_TypeClassEClass, Baubereich_Art_TypeClass.class, "Baubereich_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1182,7 +1092,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		initEAttribute(getBez_Gleis_Bezeichnung_TypeClass_Wert(), this.getBez_Gleis_Bezeichnung_Type(), "wert", null, 1, 1, Bez_Gleis_Bezeichnung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fahrstrom_TypeClassEClass, Fahrstrom_TypeClass.class, "Fahrstrom_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFahrstrom_TypeClass_Wert(), theBasisTypenPackage.getFahrstrom_Type(), "wert", null, 1, 1, Fahrstrom_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFahrstrom_TypeClass_Wert(), this.getFahrstrom_Type(), "wert", null, 1, 1, Fahrstrom_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geschwindigkeit_TypeClassEClass, Geschwindigkeit_TypeClass.class, "Geschwindigkeit_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGeschwindigkeit_TypeClass_Wert(), this.getGeschwindigkeit_Type(), "wert", null, 1, 1, Geschwindigkeit_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1222,18 +1132,6 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		initEClass(lichtraumprofil_TypeClassEClass, Lichtraumprofil_TypeClass.class, "Lichtraumprofil_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLichtraumprofil_TypeClass_Wert(), this.getENUMLichtraumprofilObject(), "wert", null, 1, 1, Lichtraumprofil_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(nutzung_Gueterzug_TypeClassEClass, Nutzung_Gueterzug_TypeClass.class, "Nutzung_Gueterzug_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNutzung_Gueterzug_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Nutzung_Gueterzug_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(nutzung_Rangier_TypeClassEClass, Nutzung_Rangier_TypeClass.class, "Nutzung_Rangier_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNutzung_Rangier_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Nutzung_Rangier_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(nutzung_Reisezug_TypeClassEClass, Nutzung_Reisezug_TypeClass.class, "Nutzung_Reisezug_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNutzung_Reisezug_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Nutzung_Reisezug_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(nutzung_SBahn_TypeClassEClass, Nutzung_SBahn_TypeClass.class, "Nutzung_SBahn_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNutzung_SBahn_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Nutzung_SBahn_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		// Initialize enums and add enum literals
 		initEEnum(enumBaubereichArtEEnum, ENUMBaubereichArt.class, "ENUMBaubereichArt");
 		addEEnumLiteral(enumBaubereichArtEEnum, ENUMBaubereichArt.ENUM_BAUBEREICH_ART_AUSGEBAUT);
@@ -1257,10 +1155,10 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 
 		initEEnum(enumLichtraumprofilEEnum, ENUMLichtraumprofil.class, "ENUMLichtraumprofil");
 		addEEnumLiteral(enumLichtraumprofilEEnum, ENUMLichtraumprofil.ENUM_LICHTRAUMPROFIL_1SMDR);
+		addEEnumLiteral(enumLichtraumprofilEEnum, ENUMLichtraumprofil.ENUM_LICHTRAUMPROFIL_GC);
 		addEEnumLiteral(enumLichtraumprofilEEnum, ENUMLichtraumprofil.ENUM_LICHTRAUMPROFIL_SBAHN_80003);
 		addEEnumLiteral(enumLichtraumprofilEEnum, ENUMLichtraumprofil.ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN);
 		addEEnumLiteral(enumLichtraumprofilEEnum, ENUMLichtraumprofil.ENUM_LICHTRAUMPROFIL_SONSTIGE);
-		addEEnumLiteral(enumLichtraumprofilEEnum, ENUMLichtraumprofil.ENUM_LICHTRAUMPROFIL_GC);
 
 		// Initialize data types
 		initEDataType(bez_Gleis_Bezeichnung_TypeEDataType, String.class, "Bez_Gleis_Bezeichnung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1268,6 +1166,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		initEDataType(enumGleisartObjectEDataType, ENUMGleisart.class, "ENUMGleisartObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumKonstruktionObjectEDataType, ENUMKonstruktion.class, "ENUMKonstruktionObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumLichtraumprofilObjectEDataType, ENUMLichtraumprofil.class, "ENUMLichtraumprofilObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(fahrstrom_TypeEDataType, ENUMFahrstrom.class, "Fahrstrom_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(geschwindigkeit_TypeEDataType, BigInteger.class, "Geschwindigkeit_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
@@ -1294,7 +1193,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (gleis_AbschnittEClass,
@@ -1318,7 +1217,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		  (gleis_ArtEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Klassifizierung des Gleises aus betrieblicher Sicht. Es erfolgt die Unterscheidung in Haupt- und Nebengleise in einem Bahnhof, sowie die Abgrenzung von Strecken und Anschlussgleisen. "
+			   "documentation", "Klassifizierung des Gleises aus betrieblicher Sicht. Es erfolgt die Unterscheidung in Haupt- und Nebengleise in einem Bahnhof, sowie die Abgrenzung von Strecken und Anschlussgleisen."
 		   });
 		addAnnotation
 		  (getGleis_Art_Gleisart(),
@@ -1330,7 +1229,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		  (gleis_BaubereichEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der w\u00e4hrend einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten. "
+			   "documentation", "Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der w\u00e4hrend einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten."
 		   });
 		addAnnotation
 		  (getGleis_Baubereich_BaubereichArt(),
@@ -1342,7 +1241,7 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		  (gleis_BezeichnungEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Tr\u00e4ger der betrieblichen Bezeichnung eines Gleises. Ein Gleis erh\u00e4lt dann eine Bezeichnung, wenn es f\u00fcr die betriebliche Nutzung ben\u00f6tigt wird. Topologische Knoten (z. B. Weichen) unterbrechen nicht die Gleisbezeichnung. F\u00fcr die durchgehenden Hauptgleise in einem Bahnhof wird das Bereichsobjekt f\u00fcr das Gleis in der Regel von einem Einfahrsignal bis zum Einfahrsignal der Gegenrichtung modelliert. Wenn das Gleis hinsichtlich der betrieblichen Bezeichnung geteilt ist (z.B. Gleis 1 und Gleis 21) sind getrennte Bereichsobjekte f\u00fcr diese Gleise anzulegen. Weitere Bezeichnungen von Bahnhofsgleisen werden in der Regel zwischen topologischen Knoten gebildet, wobei auch weitere Knoten enthalten sein k\u00f6nnen. Gleise, die aus betrieblicher Sicht keine Bezeichnung ben\u00f6tigen (z. B. Gleisverbindungen), erhalten keine Gleisbezeichnung. Streckengleise werden in der Regel zwischen den Bahnhofsgrenzen (ggf. auch andere Zugmeldestellen) durchgehend bezeichnet. Die Klammersetzung der Bezeichung von Streckengleisen ist Bestandteil der Bezeichung das Steckengleises."
+			   "documentation", "Tr\u00e4ger der betrieblichen Bezeichnung eines Gleises. Ein Gleis erh\u00e4lt dann eine Bezeichnung, wenn es f\u00fcr die betriebliche Nutzung ben\u00f6tigt wird. Topologische Knoten (z. B. Weichen) unterbrechen nicht die Gleisbezeichnung. F\u00fcr die durchgehenden Hauptgleise in einem Bahnhof wird das Bereichsobjekt f\u00fcr das Gleis in der Regel von einem Einfahrsignal bis zum Einfahrsignal der Gegenrichtung modelliert. Wenn das Gleis hinsichtlich der betrieblichen Bezeichnung geteilt ist (z.B. Gleis 1 und Gleis 21) sind getrennte Bereichsobjekte f\u00fcr diese Gleise anzulegen. Weitere Bezeichnungen von Bahnhofsgleisen werden in der Regel zwischen topologischen Knoten gebildet, wobei auch weitere Knoten enthalten sein k\u00f6nnen. Gleise, die aus betrieblicher Sicht keine Bezeichnung ben\u00f6tigen (z. B. Gleisverbindungen), erhalten keine Gleisbezeichnung. Streckengleise werden in der Regel zwischen den Bahnhofsgrenzen (ggf. auch andere Zugmeldestellen) durchgehend bezeichnet. Die Klammersetzung der Bezeichnung von Streckengleisen ist Bestandteil der Bezeichnung das Steckengleises."
 		   });
 		addAnnotation
 		  (getGleis_Bezeichnung_Bezeichnung(),
@@ -1494,6 +1393,13 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		   new String[] {
 			   "name", "ENUMLichtraumprofil:Object",
 			   "baseType", "ENUMLichtraumprofil"
+		   });
+		addAnnotation
+		  (fahrstrom_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TFahrstrom",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TFahrstrom"
 		   });
 		addAnnotation
 		  (fahrstrom_TypeClassEClass,
@@ -1698,62 +1604,6 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 			   "kind", "element",
 			   "name", "Wert"
 		   });
-		addAnnotation
-		  (nutzung_Gueterzug_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCNutzung_Gueterzug",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getNutzung_Gueterzug_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
-		  (nutzung_Rangier_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCNutzung_Rangier",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getNutzung_Rangier_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
-		  (nutzung_Reisezug_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCNutzung_Reisezug",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getNutzung_Reisezug_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
-		  (nutzung_SBahn_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCNutzung_SBahn",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getNutzung_SBahn_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
 	}
 
 	/**
@@ -1768,43 +1618,43 @@ public class GleisPackageImpl extends EPackageImpl implements GleisPackage {
 		  (gleis_AbschnittEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (gleis_ArtEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (gleis_BaubereichEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (gleis_BezeichnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (gleis_FahrbahnEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (gleis_LichtraumEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (gleis_SchaltgruppeEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getGleis_Schaltgruppe_Fahrstrom(),

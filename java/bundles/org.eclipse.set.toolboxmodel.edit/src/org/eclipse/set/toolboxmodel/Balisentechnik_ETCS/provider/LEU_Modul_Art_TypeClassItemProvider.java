@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -23,12 +24,12 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ENUMLEUModulArt;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ENUMLEUArt;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Art_TypeClass;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.provider.BasisAttribut_AttributeGroupItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Art_TypeClass} object.
@@ -104,7 +105,7 @@ public class LEU_Modul_Art_TypeClassItemProvider extends BasisAttribut_Attribute
 	 */
 	@Override
 	public String getText(Object object) {
-		ENUMLEUModulArt labelValue = ((LEU_Modul_Art_TypeClass)object).getWert();
+		ENUMLEUArt labelValue = ((LEU_Modul_Art_TypeClass)object).getWert();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_LEU_Modul_Art_TypeClass_type") :

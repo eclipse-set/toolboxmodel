@@ -1,10 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -25,7 +31,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getIDFachtelegramm <em>ID Fachtelegramm</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getLinkDistanz <em>Link Distanz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getZielDPAusrichtung <em>Ziel DP Ausrichtung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getGNTMerkmale <em>GNT Merkmale</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getAnwendungESG <em>Anwendung ESG</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getAnwendungGNT <em>Anwendung GNT</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getZBSMerkmale <em>ZBS Merkmale</em>}</li>
  * </ul>
  *
@@ -39,7 +46,7 @@ public interface Datenpunkt_Link extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Datenpunkt, von dem das Linking ausgeht (Start).
+	 * Datenpunkt, von dem das Linking ausgeht (Start). Sofern der Datenpunkt nur über ID_DP_Link_Start referenziert wird, erhält er die Kennung "A" (Anfang des Linkings). Bei Referenzierung über ID_DP_Link_Start wie auch ID_DP_Link_Ziel handelt es sich um einen Unterwegs-DP (Kennung "U").
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDDP Link Start</em>' reference.
 	 * @see #isSetIDDPLinkStart()
@@ -92,7 +99,7 @@ public interface Datenpunkt_Link extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Ziel-Datenpunkt des betreffenden Linkings.
+	 * Ziel-Datenpunkt des betreffenden Linkings. Sofern der Datenpunkt nur über ID_DP_Link_Ziel referenziert wird, erhält er die Kennung "E" (Ende des Linkings). Bei Referenzierung über ID_DP_Link_Start wie auch ID_DP_Link_Ziel handelt es sich um einen Unterwegs-DP (Kennung "U").
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDDP Link Ziel</em>' reference.
 	 * @see #isSetIDDPLinkZiel()
@@ -146,7 +153,7 @@ public interface Datenpunkt_Link extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe aller Fachtelegramme, denen die Linking-Information zugeordnet wird.
+	 * Angabe aller Fachtelegramme, denen die Linking-Information zugeordnet wird. Die Angabe bezieht sich auf den Start-Datenpunkt des ersten Linkings. Dies ist der Datenpunkt, in dem die Linking-Informationen übertragen werden.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Fachtelegramm</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_Link_IDFachtelegramm()
@@ -188,12 +195,12 @@ public interface Datenpunkt_Link extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Durch das Linking festgelegte Ausrichtung des Ziel-Datenpunkts in Bezug auf die Fahrtrichtung des auswertenden Zuges.
+	 * Durch das Linking festgelegte Ausrichtung des Ziel-Datenpunkts in Bezug auf die Fahrtrichtung des auswertenden Zuges. Bei ESG entfällt die Angabe.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ziel DP Ausrichtung</em>' containment reference.
 	 * @see #setZielDPAusrichtung(Ziel_DP_Ausrichtung_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_Link_ZielDPAusrichtung()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Ziel_DP_Ausrichtung'"
 	 * @generated
 	 */
@@ -210,27 +217,56 @@ public interface Datenpunkt_Link extends Basis_Objekt {
 	void setZielDPAusrichtung(Ziel_DP_Ausrichtung_TypeClass value);
 
 	/**
-	 * Returns the value of the '<em><b>GNT Merkmale</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Anwendung ESG</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>GNT Merkmale</em>' containment reference.
-	 * @see #setGNTMerkmale(GNT_Merkmale_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_Link_GNTMerkmale()
+	 * <!-- begin-model-doc -->
+	 * Das Linking wird für das Anwendungssystem ESG definiert ("true"). Der Wert "false" wird nicht verwendet.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Anwendung ESG</em>' containment reference.
+	 * @see #setAnwendungESG(Anwendung_ESG_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_Link_AnwendungESG()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='GNT_Merkmale'"
+	 *        extendedMetaData="kind='element' name='Anwendung_ESG'"
 	 * @generated
 	 */
-	GNT_Merkmale_AttributeGroup getGNTMerkmale();
+	Anwendung_ESG_TypeClass getAnwendungESG();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getGNTMerkmale <em>GNT Merkmale</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getAnwendungESG <em>Anwendung ESG</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>GNT Merkmale</em>' containment reference.
-	 * @see #getGNTMerkmale()
+	 * @param value the new value of the '<em>Anwendung ESG</em>' containment reference.
+	 * @see #getAnwendungESG()
 	 * @generated
 	 */
-	void setGNTMerkmale(GNT_Merkmale_AttributeGroup value);
+	void setAnwendungESG(Anwendung_ESG_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Anwendung GNT</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Das Linking wird für das Anwendungssystem GNT definiert ("true"). Der Wert "false" wird nicht verwendet.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Anwendung GNT</em>' containment reference.
+	 * @see #setAnwendungGNT(Anwendung_GNT_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_Link_AnwendungGNT()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Anwendung_GNT'"
+	 * @generated
+	 */
+	Anwendung_GNT_TypeClass getAnwendungGNT();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link#getAnwendungGNT <em>Anwendung GNT</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Anwendung GNT</em>' containment reference.
+	 * @see #getAnwendungGNT()
+	 * @generated
+	 */
+	void setAnwendungGNT(Anwendung_GNT_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>ZBS Merkmale</b></em>' containment reference.

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsBedienung="http://www.plan-pro.org/modell/Bedienung/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Bedienung/1.9.0.2">
+           xmlns:nsBedienung="http://www.plan-pro.org/modell/Bedienung/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Bedienung/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,11 +26,11 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
 	  <xs:complexType name="TCAnbindung_IB2">
 		    <xs:complexContent>
@@ -220,6 +218,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl ESTW-ZE|Bedienung Fdl BZ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -278,6 +277,8 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:simpleType name="ENUMSchalter">
 		    <xs:restriction base="xs:string">
+			      <xs:enumeration value="Gefahrschalter"/>
+			      <xs:enumeration value="Nothaltschalter"/>
 			      <xs:enumeration value="Schalter_ein_aus"/>
 			      <xs:enumeration value="Schluesselschalter_DB_21"/>
 			      <xs:enumeration value="Schluesselschalter_Vierkant"/>
@@ -317,6 +318,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl ESTW-ZE</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -528,6 +530,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl BZ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -810,9 +813,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:enumeration value="Bediensaeule"/>
 			      <xs:enumeration value="Bedientablett"/>
 			      <xs:enumeration value="Bedientafel"/>
+			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="Stellpult"/>
 			      <xs:enumeration value="Stelltisch"/>
-			      <xs:enumeration value="sonstige"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:simpleType name="TOberflaeche_Zustaendigkeit">
@@ -823,17 +826,17 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:choice minOccurs="1" maxOccurs="1">
 				        <xs:element name="Melder" type="nsBedienung:TCMelder" minOccurs="0" maxOccurs="1">
 					          <xs:annotation>
-                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Art des Melders für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Melder an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahbedienbereichen und Bahnübergängen werden die Melder im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. </xs:documentation>
+                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Art des Melders für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Melder an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahstellbereichen und Bahnübergängen werden die Melder im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. </xs:documentation>
                </xs:annotation>
 				        </xs:element>
 				        <xs:element name="Schalter" type="nsBedienung:TCSchalter" minOccurs="0" maxOccurs="1">
 					          <xs:annotation>
-                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Art des Schalters für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Schalter an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahbedienbereichen und Bahnübergängen werden die Schalter im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. </xs:documentation>
+                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Art des Schalters für eine örtliche Bedieneinrichtung. Anwendungsbeispiele: Schalter an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Für Bedieneinrichtungen von Nahstellbereichen und Bahnübergängen werden die Schalter im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. </xs:documentation>
                </xs:annotation>
 				        </xs:element>
 				        <xs:element name="Taste" type="nsBedienung:TCTaste" minOccurs="0" maxOccurs="1">
 					          <xs:annotation>
-                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Art der Taste für eine örtliche Bedieneinrichtung, außer solchen mit BÜ- und NB-Funktionen. Für Bedieneinrichtungen von Bahnübergängen und Nahbedienbereichen werden die Tasten im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Anwendungsbeispiele: Tasten an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. </xs:documentation>
+                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Art der Taste für eine örtliche Bedieneinrichtung, außer solchen mit BÜ- und NB-Funktionen. Für Bedieneinrichtungen von Bahnübergängen und Nahstellbereichen werden die Tasten im Objekt BUE Bedien Anzeige Element bzw. NB Bedien Anzeige Element geplant. Anwendungsbeispiele: Tasten an Abfertigungssäulen, Zustimmungseinrichtungen für den Zugleitbetrieb, Bedieneinrichtungen von (temporär) örtlich bedienten stellwerksgesteuerten Stellelementen. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. </xs:documentation>
                </xs:annotation>
 				        </xs:element>
 			      </xs:choice>
@@ -841,10 +844,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:complexType name="CBedien_Anzeige_Element">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zuordnung von Stellelementen zu einer örtlichen Bedieneinrichtung und Abbildung von Meldern, Tasten und Schaltern einer örtlichen Bedieneinrichtung. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zuordnung von Stellelementen zu einer örtlichen Bedieneinrichtung und Abbildung von Meldern, Tasten und Schaltern einer örtlichen Bedieneinrichtung.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -979,6 +983,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl ESTW-ZE</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1019,6 +1024,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl BZ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1046,6 +1052,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl ESTW-ZE</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1078,10 +1085,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:complexType name="CBedien_Einrichtung_Oertlich">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Abbildung einer örtlichen Bedieneinrichtung (Stelltafel, Bedienpult etc.) als physisches Element der Außenanlage. Bedienbare Elemente, die nicht von einer ESTW-Bedienoberfläche bedient werden, sind durch eine entsprechende Bedieneinrichtung umstellbar. Weiterhin sind in der Bedieneinrichtung Tasten für die Kommunikation zwischen özF und Bediener untergebracht. Im Objekt Bedien_Einrichtung_Oertlich wird die physische Ausbildung der Bedieneinrichtung abgebildet. Die dazugehörigen Melder, Schalter und Taster sind im Objekt Bedien Anzeige Element modelliert. Die logischen Funktionen einer Bedieneinrichtung für Nahbedienbereiche und Bahnübergänge befinden sich in den Objekten „BUE Bedien Anzeige Element“ oder „NB Bedien Anzeige Element“. Die Bedien_Einrichtung_Oertlich kommt zur Anwendung bei: Nahbedienbereichen Bahnübergängen (HET, UT, etc.) Gefahrschaltern (Berliner S-Bahn) (noch nicht abschließend modelliert) Schlüsselschaltern- und Tastern (Zustimmung, Gleisfreimeldung, Zugschlussmeldung, etc.) ZP 10/9 –Bediensäulen örtliche Abgabe von Zugschlussmeldungen und Bedieneinrichtungen an Schnittstellen zum Zugleitbetrieb. Bedieneinrichtungen von elektrisch ortsgestellten Weichen (EOW) werden mit diesem Objekt nicht modelliert. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Abbildung einer örtlichen Bedieneinrichtung (Stelltafel, Bedienpult etc.) als physisches Element der Außenanlage. Bedienbare Elemente, die nicht von einer ESTW-Bedienoberfläche bedient werden, sind durch eine entsprechende Bedieneinrichtung umstellbar. Weiterhin sind in der Bedieneinrichtung Tasten für die Kommunikation zwischen özF und Bediener untergebracht. Im Objekt Bedien_Einrichtung_Oertlich wird die physische Ausbildung der Bedieneinrichtung abgebildet. Die dazugehörigen Melder, Schalter und Taster sind im Objekt Bedien Anzeige Element modelliert. Die logischen Funktionen einer Bedieneinrichtung für Nahstellbereiche und Bahnübergänge befinden sich in den Objekten „BUE Bedien Anzeige Element“ oder „NB Bedien Anzeige Element“. Die Bedien_Einrichtung_Oertlich kommt zur Anwendung bei: Nahstellbereichen, Bahnübergängen (HET, UT, etc.), Schlüsselschaltern- und Tastern (Zustimmung, Gleisfreimeldung, Zugschlussmeldung, etc.), ZP 10/9-Bediensäulen, örtlicher Abgabe von Zugschlussmeldungen und Bedieneinrichtungen an Schnittstellen zum Zugleitbetrieb. Bedieneinrichtungen von elektrisch ortsgestellten Weichen (EOW) werden mit diesem Objekt nicht modelliert.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1212,6 +1220,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl BZ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1281,10 +1290,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:complexType name="CBedien_Oberflaeche_Bild">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zusammenfassung der Eigenschaften, die sich jeweils nur auf ein Bild der Bedienoberfläche beziehen. Eigenschaften, die alle Bilder betreffen, sind unter Bedien Oberflaeche eingebunden. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zusammenfassung der Eigenschaften, die sich jeweils nur auf ein Bild der Bedienoberfläche beziehen. Eigenschaften, die alle Bilder betreffen, sind unter Bedien Oberflaeche eingebunden.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl ESTW-ZE</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1318,6 +1328,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>Bedienung Fdl BZ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1440,7 +1451,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bezeichnung der Betriebsstellenbezeichner und somit der Ausfahrziele, die vom Nutzer vorzugeben ist. Da eine ESTW Zentraleinheit mehrere Örtlichkeiten bedienen kann (siehe Kennzahl), ist es möglich, dass eine Kennzahl unterschiedliche Betriebsstellen als Ausfahrziele anfahren kann. Daher muss hier der Betriebsstellenbezeichner extra erfasst werden. DB-Regelwerk 819.0603 Anhang 3 </xs:documentation>
                <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
                   <ppi:WorkflowInformation>
-                     <ppi:Patternbeschreibung> [2] Die Bezeichner für die Ausfahrziele (Betriebsstellenbezeichner) bestehen in der Regel aus den ersten beiden Buchstaben des Namens der nächsten Betriebsstelle. Sie sind so zu wählen, dass sie im Steuerbezirk einer BZ eindeutig sind. Dazu kann es notwendig sein, dass für den 2. Buchstaben ein anderer gewählt werden muss. Diese Vorgabe ist im PT 1 BZ niedergelegt und somit Planungsdatum des LST-Datenmodells. Auf der Bedienoberfläche werden duch den Hersteller entsprechend des gültigen Regelwerks folgende Ergänzungen vorgenommen: Eine Ziffer ist nur bei parallel geführten Gleisen/Strecken zwischen benachbarten Betriebsstellen (Bf, Abzw, Awanst) zu vergeben. Bei parallel geführten Strecken mit 3 Gleisen sind nur dann alle Gleise mittels Ziffern zu nummerieren, wenn die signaltechnische Ausrüstung aller Gleise gleich ist und alle Gleise gleichberechtigt betrieblich genutzt werden können. Bei parallel geführten Strecken mit mehr als 3 Gleisen sind alle Gleise mittels Ziffern zu bezeichnen. Bei 2 x zweigleisiger Streckenführung kann zusätzlich zur Nummerierung eine Gegengleiskennung mit „G“ sinnvoll sein. Bei 2 x zweigleisiger Streckenführung mit spezifischerNutzung, wie z.B. durch Fernbahn bzw. S-Bahn, kann es sinnvoll sein, die Ausfahrzielbezeichnungen für eine oder beide Strecken an Stelle der fortlaufenden Ziffer mit einem Buchstaben, wie z.B. „F“ bzw. „S“, zu bezeichnen. Diese Ergänzungen sind nicht Bestandteile des LST-Datenmodells. \r\n</ppi:Patternbeschreibung>
+                     <ppi:Patternbeschreibung> [2] Die Bezeichner für die Ausfahrziele (Betriebsstellenbezeichner) bestehen in der Regel aus den ersten beiden Buchstaben des Namens der nächsten Betriebsstelle. Sie sind so zu wählen, dass sie im Steuerbezirk einer BZ eindeutig sind. Dazu kann es notwendig sein, dass für den 2. Buchstaben ein anderer gewählt werden muss. Diese Vorgabe ist im PT 1 BZ niedergelegt und somit Planungsdatum des LST-Datenmodells. Auf der Bedienoberfläche werden duch den Hersteller entsprechend des gültigen Regelwerks folgende Ergänzungen vorgenommen: Eine Ziffer ist nur bei parallel geführten Gleisen/Strecken zwischen benachbarten Betriebsstellen (Bf, Abzw, Awanst) zu vergeben. Bei parallel geführten Strecken mit 3 Gleisen sind nur dann alle Gleise mittels Ziffern zu nummerieren, wenn die signaltechnische Ausrüstung aller Gleise gleich ist und alle Gleise gleichberechtigt betrieblich genutzt werden können. Bei parallel geführten Strecken mit mehr als 3 Gleisen sind alle Gleise mittels Ziffern zu bezeichnen. Bei 2 x zweigleisiger Streckenführung kann zusätzlich zur Nummerierung eine Gegengleiskennung mit „G“ sinnvoll sein. Bei 2 x zweigleisiger Streckenführung mit spezifischerNutzung, wie z.B. durch Fernbahn bzw. S-Bahn, kann es sinnvoll sein, die Ausfahrzielbezeichnungen für eine oder beide Strecken an Stelle der fortlaufenden Ziffer mit einem Buchstaben, wie z.B. „F“ bzw. „S“, zu bezeichnen. Diese Ergänzungen sind nicht Bestandteile des LST-Datenmodells.</ppi:Patternbeschreibung>
                      <ppi:Patternbeschreibung_Abweichend>[2] zwei Groß oder Kleinbuchstaben ohne Umlaute</ppi:Patternbeschreibung_Abweichend>
                   </ppi:WorkflowInformation>
                </xs:appinfo>
@@ -1478,7 +1489,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:enumeration value="Umstelltaste"/>
 			      <xs:enumeration value="Weichenauffahrtaste"/>
 			      <xs:enumeration value="Zieltaste"/>
+			      <xs:enumeration value="Zugfertigmeldetaste"/>
 			      <xs:enumeration value="Zugschlussmeldung"/>
+			      <xs:enumeration value="Zustimmungsanforderung"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 </xs:schema>

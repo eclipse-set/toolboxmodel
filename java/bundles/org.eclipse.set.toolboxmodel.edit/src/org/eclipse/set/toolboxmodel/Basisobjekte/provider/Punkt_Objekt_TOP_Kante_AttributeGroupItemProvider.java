@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -33,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup} object.
@@ -70,9 +71,32 @@ public class Punkt_Objekt_TOP_Kante_AttributeGroupItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIDGEOPunktBerechnetPropertyDescriptor(object);
 			addIDTOPKantePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the IDGEO Punkt Berechnet feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDGEOPunktBerechnetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Punkt_Objekt_TOP_Kante_AttributeGroup_iDGEOPunktBerechnet_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Punkt_Objekt_TOP_Kante_AttributeGroup_iDGEOPunktBerechnet_feature", "_UI_Punkt_Objekt_TOP_Kante_AttributeGroup_type"),
+				 BasisobjektePackage.Literals.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

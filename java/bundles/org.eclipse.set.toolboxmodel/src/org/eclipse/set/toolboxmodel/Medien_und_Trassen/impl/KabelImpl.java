@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl;
 
@@ -10,16 +17,20 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Bezeichnung_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante;
 
@@ -34,6 +45,7 @@ import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante;
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.KabelImpl#getBezeichnung <em>Bezeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.KabelImpl#getIDTrasseKante <em>ID Trasse Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.KabelImpl#getKabelAllg <em>Kabel Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.KabelImpl#getKabelElement <em>Kabel Element</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +80,16 @@ public class KabelImpl extends Basis_ObjektImpl implements Kabel {
 	 * @ordered
 	 */
 	protected Kabel_Allg_AttributeGroup kabelAllg;
+
+	/**
+	 * The cached value of the '{@link #getKabelElement() <em>Kabel Element</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKabelElement()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Kabel_Element_AttributeGroup> kabelElement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,12 +219,27 @@ public class KabelImpl extends Basis_ObjektImpl implements Kabel {
 	 * @generated
 	 */
 	@Override
+	public EList<Kabel_Element_AttributeGroup> getKabelElement() {
+		if (kabelElement == null) {
+			kabelElement = new EObjectContainmentEList<Kabel_Element_AttributeGroup>(Kabel_Element_AttributeGroup.class, this, Medien_und_TrassenPackage.KABEL__KABEL_ELEMENT);
+		}
+		return kabelElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Medien_und_TrassenPackage.KABEL__BEZEICHNUNG:
 				return basicSetBezeichnung(null, msgs);
 			case Medien_und_TrassenPackage.KABEL__KABEL_ALLG:
 				return basicSetKabelAllg(null, msgs);
+			case Medien_und_TrassenPackage.KABEL__KABEL_ELEMENT:
+				return ((InternalEList<?>)getKabelElement()).basicRemove(otherEnd, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -222,6 +259,8 @@ public class KabelImpl extends Basis_ObjektImpl implements Kabel {
 				return getIDTrasseKante();
 			case Medien_und_TrassenPackage.KABEL__KABEL_ALLG:
 				return getKabelAllg();
+			case Medien_und_TrassenPackage.KABEL__KABEL_ELEMENT:
+				return getKabelElement();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -246,6 +285,10 @@ public class KabelImpl extends Basis_ObjektImpl implements Kabel {
 			case Medien_und_TrassenPackage.KABEL__KABEL_ALLG:
 				setKabelAllg((Kabel_Allg_AttributeGroup)newValue);
 				return;
+			case Medien_und_TrassenPackage.KABEL__KABEL_ELEMENT:
+				getKabelElement().clear();
+				getKabelElement().addAll((Collection<? extends Kabel_Element_AttributeGroup>)newValue);
+				return;
 			default:
 				super.eSet(featureID, newValue);
 				return;
@@ -269,6 +312,9 @@ public class KabelImpl extends Basis_ObjektImpl implements Kabel {
 			case Medien_und_TrassenPackage.KABEL__KABEL_ALLG:
 				setKabelAllg((Kabel_Allg_AttributeGroup)null);
 				return;
+			case Medien_und_TrassenPackage.KABEL__KABEL_ELEMENT:
+				getKabelElement().clear();
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -289,6 +335,8 @@ public class KabelImpl extends Basis_ObjektImpl implements Kabel {
 				return iDTrasseKante != null && !iDTrasseKante.isEmpty();
 			case Medien_und_TrassenPackage.KABEL__KABEL_ALLG:
 				return kabelAllg != null;
+			case Medien_und_TrassenPackage.KABEL__KABEL_ELEMENT:
+				return kabelElement != null && !kabelElement.isEmpty();
 			default:
 				return super.eIsSet(featureID);
 		}

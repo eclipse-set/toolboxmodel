@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -239,29 +240,6 @@ public class BasisobjekteItemProviderAdapterFactory extends BasisobjekteAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Bearbeitungsvermerk_Kennung_TypeClassItemProvider bearbeitungsvermerk_Kennung_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBearbeitungsvermerk_Kennung_TypeClassAdapter() {
-		if (bearbeitungsvermerk_Kennung_TypeClassItemProvider == null) {
-			bearbeitungsvermerk_Kennung_TypeClassItemProvider = new Bearbeitungsvermerk_Kennung_TypeClassItemProvider(this);
-		}
-
-		return bearbeitungsvermerk_Kennung_TypeClassItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Rolle_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -423,6 +401,52 @@ public class BasisobjekteItemProviderAdapterFactory extends BasisobjekteAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BV_Darstellung_In_Plan_TypeClassItemProvider bV_Darstellung_In_Plan_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBV_Darstellung_In_Plan_TypeClassAdapter() {
+		if (bV_Darstellung_In_Plan_TypeClassItemProvider == null) {
+			bV_Darstellung_In_Plan_TypeClassItemProvider = new BV_Darstellung_In_Plan_TypeClassItemProvider(this);
+		}
+
+		return bV_Darstellung_In_Plan_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BV_Kategorie_TypeClassItemProvider bV_Kategorie_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBV_Kategorie_TypeClassAdapter() {
+		if (bV_Kategorie_TypeClassItemProvider == null) {
+			bV_Kategorie_TypeClassItemProvider = new BV_Kategorie_TypeClassItemProvider(this);
+		}
+
+		return bV_Kategorie_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Basisobjekte.Dateiname_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -466,29 +490,6 @@ public class BasisobjekteItemProviderAdapterFactory extends BasisobjekteAdapterF
 		}
 
 		return dateityp_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Daten_TypeClassItemProvider daten_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDaten_TypeClassAdapter() {
-		if (daten_TypeClassItemProvider == null) {
-			daten_TypeClassItemProvider = new Daten_TypeClassItemProvider(this);
-		}
-
-		return daten_TypeClassItemProvider;
 	}
 
 	/**
@@ -558,6 +559,29 @@ public class BasisobjekteItemProviderAdapterFactory extends BasisobjekteAdapterF
 		}
 
 		return identitaet_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Km_Massgebend_TypeClassItemProvider km_Massgebend_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createKm_Massgebend_TypeClassAdapter() {
+		if (km_Massgebend_TypeClassItemProvider == null) {
+			km_Massgebend_TypeClassItemProvider = new Km_Massgebend_TypeClassItemProvider(this);
+		}
+
+		return km_Massgebend_TypeClassItemProvider;
 	}
 
 	/**
@@ -1224,7 +1248,6 @@ public class BasisobjekteItemProviderAdapterFactory extends BasisobjekteAdapterF
 		if (basis_Objekt_Allg_AttributeGroupItemProvider != null) basis_Objekt_Allg_AttributeGroupItemProvider.dispose();
 		if (bearbeitungsvermerkItemProvider != null) bearbeitungsvermerkItemProvider.dispose();
 		if (bearbeitungsvermerk_Allg_AttributeGroupItemProvider != null) bearbeitungsvermerk_Allg_AttributeGroupItemProvider.dispose();
-		if (bearbeitungsvermerk_Kennung_TypeClassItemProvider != null) bearbeitungsvermerk_Kennung_TypeClassItemProvider.dispose();
 		if (bearbeitungsvermerk_Rolle_TypeClassItemProvider != null) bearbeitungsvermerk_Rolle_TypeClassItemProvider.dispose();
 		if (begrenzung_A_TypeClassItemProvider != null) begrenzung_A_TypeClassItemProvider.dispose();
 		if (begrenzung_B_TypeClassItemProvider != null) begrenzung_B_TypeClassItemProvider.dispose();
@@ -1232,12 +1255,14 @@ public class BasisobjekteItemProviderAdapterFactory extends BasisobjekteAdapterF
 		if (beschreibung_TypeClassItemProvider != null) beschreibung_TypeClassItemProvider.dispose();
 		if (bestandsrelevanz_TypeClassItemProvider != null) bestandsrelevanz_TypeClassItemProvider.dispose();
 		if (bestandsschutz_TypeClassItemProvider != null) bestandsschutz_TypeClassItemProvider.dispose();
+		if (bV_Darstellung_In_Plan_TypeClassItemProvider != null) bV_Darstellung_In_Plan_TypeClassItemProvider.dispose();
+		if (bV_Kategorie_TypeClassItemProvider != null) bV_Kategorie_TypeClassItemProvider.dispose();
 		if (dateiname_TypeClassItemProvider != null) dateiname_TypeClassItemProvider.dispose();
 		if (dateityp_TypeClassItemProvider != null) dateityp_TypeClassItemProvider.dispose();
-		if (daten_TypeClassItemProvider != null) daten_TypeClassItemProvider.dispose();
 		if (datum_Regelwerk_TypeClassItemProvider != null) datum_Regelwerk_TypeClassItemProvider.dispose();
 		if (dB_GDI_Referenz_TypeClassItemProvider != null) dB_GDI_Referenz_TypeClassItemProvider.dispose();
 		if (identitaet_TypeClassItemProvider != null) identitaet_TypeClassItemProvider.dispose();
+		if (km_Massgebend_TypeClassItemProvider != null) km_Massgebend_TypeClassItemProvider.dispose();
 		if (kommentar_TypeClassItemProvider != null) kommentar_TypeClassItemProvider.dispose();
 		if (kurztext_TypeClassItemProvider != null) kurztext_TypeClassItemProvider.dispose();
 		if (lieferobjektItemProvider != null) lieferobjektItemProvider.dispose();

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -54,7 +61,7 @@ public interface BUE_Einschaltung extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe der Funktionsüberwachung, die der Ermittlung der Einschaltung zugrunde liegt. Es wird zwischen folgenden Funktionsüberwachungen unterschieden: Hp: Der BÜ ist durch Hauptsignal(e) gedeckt. Die Fahrtstellung erfolgt erst, wenn der BÜ geschlossen ist. Fü: Der BÜ wird zugbewirkt eingeschaltet, die Überwachung erfolgt durch einen Fahrdienstleiter im Stellwerk. Dieser kann im Störungsfall eingreifen. Üs: Der BÜ wird zugbewirkt eingeschaltet und vom Triebfahrzeugführer überwacht. Der Zustand des BÜ wird diesem durch Überwachungssignale angezeigt. Es gibt keine Verbindung zum Stellwerk. Kombinationen der Funtkionsüberwachungen sind möglich. Die ENUM-Werte "Fue", "Ues" und "UesOE" sollen künftig entfernt und daher nicht mehr verwendet werden. DB-Regelwerk 815.0032 1 (1) und (2) 819.1203 3 
+	 * Angabe der Funktionsüberwachung, die der Ermittlung der Einschaltung zugrunde liegt. Es wird zwischen folgenden Funktionsüberwachungen unterschieden: Hp: Der BÜ ist durch Hauptsignal(e) gedeckt. Die Fahrtstellung erfolgt erst, wenn der BÜ geschlossen ist. Fü: Der BÜ wird zugbewirkt eingeschaltet, die Überwachung erfolgt durch einen Fahrdienstleiter im Stellwerk. Dieser kann im Störungsfall eingreifen. Üs: Der BÜ wird zugbewirkt eingeschaltet und vom Triebfahrzeugführer überwacht. Der Zustand des BÜ wird diesem durch Überwachungssignale angezeigt. Es gibt keine Verbindung zum Stellwerk. Kombinationen der Funtkionsüberwachungen sind möglich. DB-Regelwerk 815.0032 1 (1) und (2) 819.1203 3 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>BUE Funktionsueberwachung</em>' containment reference.
 	 * @see #setBUEFunktionsueberwachung(BUE_Funktionsueberwachung_TypeClass)

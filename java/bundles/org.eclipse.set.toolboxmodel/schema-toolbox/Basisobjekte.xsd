@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
             xmlns:func="localhost/function"
+            xmlns:nsATO="http://www.plan-pro.org/modell/ATO/toolbox"
             xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
             xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
             xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -13,8 +14,9 @@
             xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
             xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
             xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsLayoutinformationen="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
             xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
-            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsNahbedienung="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
             xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
             xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
             xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -33,6 +35,8 @@
             targetNamespace="http://www.plan-pro.org/modell/Basisobjekte/toolbox">
    <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
                schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/ATO/toolbox"
+               schemaLocation="ATO.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
                schemaLocation="Bahnsteig.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -53,10 +57,12 @@
                schemaLocation="Geodaten.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
                schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+               schemaLocation="Layoutinformationen.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
                schemaLocation="Medien_und_Trassen.xsd"/>
-   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+               schemaLocation="Nahbedienung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
                schemaLocation="Ortung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -90,9 +96,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -107,6 +111,20 @@ XML Schema for PlanPro interface.</xs:documentation>
    <xs:simpleType ecore:name="Kommentar_Type" name="TKommentar">
       <xs:restriction base="nsBasisTypen:TFreiText"/>
    </xs:simpleType>
+   <xs:complexType ecore:name="LO_Datum_Herstellung_TypeClass"
+                    name="TCLO_Datum_Herstellung">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="xs:date"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType ecore:name="Kommentar_TypeClass" name="TCKommentar">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -120,12 +138,16 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Bestandsschutz_TypeClass" name="TCBestandsschutz">
+   <xs:simpleType ecore:name="LO_Seriennummer_Type" name="TLO_Seriennummer">
+      <xs:restriction base="nsBasisTypen:TText"/>
+   </xs:simpleType>
+   <xs:complexType ecore:name="BV_Darstellung_In_Plan_TypeClass"
+                    name="TCBV_Darstellung_In_Plan">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="xs:boolean"
+                            type="nsBasisobjekte:ENUMBV_Darstellung_In_Plan"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -133,9 +155,6 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:simpleType ecore:name="LO_Seriennummer_Type" name="TLO_Seriennummer">
-      <xs:restriction base="nsBasisTypen:TText"/>
-   </xs:simpleType>
    <xs:complexType ecore:name="Seitliche_Lage_TypeClass" name="TCSeitliche_Lage">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -177,20 +196,6 @@ XML Schema for PlanPro interface.</xs:documentation>
                      <xs:documentation>Attributgruppe zur Verortung eines Objektes an der Topologie. Die vererbungsspezifische Befüllung der zugehörigen Attribute wird auf der Seite Modellierung Basisobjekte beschrieben. Durch die mögliche Mehrfacheinbindung der Attributgruppe ist es möglich, ein Objekt (z. B. Grenzzeichen) mehreren topologischen Kanten zuzuordnen. DB-Regelwerk Darstellung im sicherungstechnischen Lageplan</xs:documentation>
                   </xs:annotation>
                </xs:element>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType ecore:name="Bearbeitungsvermerk_Kennung_TypeClass"
-                    name="TCBearbeitungsvermerk_Kennung">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBasisobjekte:TBearbeitungsvermerk_Kennung"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -251,6 +256,19 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:enumeration ecore:name="ENUMBestandsrelevanz_nein" value="nein"/>
       </xs:restriction>
    </xs:simpleType>
+   <xs:complexType ecore:name="Km_Massgebend_TypeClass" name="TCKm_Massgebend">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="xs:boolean"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType ecore:name="LO_Material_AttributeGroup" name="CLO_Material">
       <xs:sequence>
          <xs:element name="LO_Ausgabestand"
@@ -304,12 +322,16 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
+   <xs:simpleType ecore:name="BV_Kategorie_Type" name="TBV_Kategorie">
+      <xs:restriction base="nsBasisTypen:TText"/>
+   </xs:simpleType>
    <xs:complexType ecore:name="Proxy_Objekt" name="CProxy_Objekt">
       <xs:annotation>
-         <xs:documentation>Hilfsobjekt zur Sättigung von Verweisen an der äußeren Grenze des Betrachtungsbereichs einer Einzelplanung. Die Validierung einer XML-Datei ist nur gesamthaft möglich. Somit müssen Planungs- und Betrachtungsbereich gleichermaßen valide sein. An der äußeren Grenze des Betrachtungsbereichs sind jedoch u. U. nicht mehr alle Zielobjekte von Verweisen vorhanden, da der Betrachtungsbereich nicht beliebig ausgeweitet werden kann und soll. Unter der Maßgabe einer validen XML besteht jedoch ein Zwang zur Sättigung von Verweisen. Das Proxy_Objekt schafft diesbezüglich eine Lösung für alle Objekte des LST-Datenmodells. In den Bestandsdaten der LST-Datenbank dürfen keine Proxyobjekte vorhanden sein. </xs:documentation>
+         <xs:documentation>Hilfsobjekt zur Sättigung von Verweisen an der äußeren Grenze des Betrachtungsbereichs einer Einzelplanung. Die Validierung einer XML-Datei ist nur gesamthaft möglich. Somit müssen Planungs- und Betrachtungsbereich gleichermaßen valide sein. An der äußeren Grenze des Betrachtungsbereichs sind jedoch u. U. nicht mehr alle Zielobjekte von Verweisen vorhanden, da der Betrachtungsbereich nicht beliebig ausgeweitet werden kann und soll. Unter der Maßgabe einer validen XML besteht jedoch ein Zwang zur Sättigung von Verweisen. Das Proxy_Objekt schafft diesbezüglich eine Lösung für alle Objekte des LST-Datenmodells. In den Bestandsdaten der LST-Datenbank dürfen keine Proxyobjekte vorhanden sein.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|BÜ|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -343,7 +365,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
                       minOccurs="0"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Besonderer Zustand eines Objekts im Planungsbereich. Ist dieses Attribut nicht vorhanden, so ist das LST-Objekt „in Betrieb“. Die verwendeten ENUM-Werte haben folgende Bedeutung: abgedeckt: Objekt, das im Knoten-Kanten-Modell verortet bleibt, technisch weiterhin in Betrieb bleibt, jedoch seine betriebliche Funktion zeitweilig nicht mehr erfüllt (anderweitig außer_Betrieb gesetzt, z. B. abgedeckte Signale [außer_Betrieb mit besonderer Maßnahme] oder Signale am Baugleis [außer_Betrieb ohne besondere Maßnahme]). ausser_Betrieb: Objekt, das im Knoten-Kanten-Modell verortet bleibt, aber seine betriebliche Funktion zeitweilig nicht mehr erfüllt und auch technisch außer Betrieb gesetzt ist. ausser_Betrieb_vorbereitend: Objekt, das im Knoten-Kanten-Modell erstmalig neu verortet wird, aber seine betriebliche Funktion zeitweilig noch nicht erfüllt und auch technisch noch nicht in Betrieb gesetzt ist, jedoch zu einem späteren Zeitpunkt (z. B. nachfolgender Bauzustand) in Betrieb gesetzt werden soll. sonstige: Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Bisher keine eindeutige Abbildung, besonderer Objektzustand meist Fußnoteneintrag in Planungsunterlagen.</xs:documentation>
+               <xs:documentation>Besonderer Zustand eines Objekts im Planungsbereich. Ist dieses Attribut nicht vorhanden, so ist das Objekt am geplanten/vorgesehenen Standort und angesteuert. "Nicht gültig" sind gemäß Betra als nicht gültig erklärte Signale im Baugleis [gem. Ril 819.1701 (11)]. "Ungültig" sind betrieblich außer Betrieb befindliche Signale, die mit einem Ungültigkeitskreuz [gem. Ril 819.1701 (10)] versehen sind. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Bisher keine eindeutige Abbildung, besonderer Objektzustand meist Fußnoteneintrag in Planungsunterlagen.</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:choice minOccurs="1" maxOccurs="1">
@@ -352,7 +374,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
                          minOccurs="1"
                          maxOccurs="1">
                <xs:annotation>
-                  <xs:documentation>Datum des letzten Planungsstandes eines Objekts, Hinweis auf den Regelwerksstand zum Planungszeitpunkt. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Anhand des Regelwerksstandes lassen sich die jeweils gültigen Stände der verwendeten Regelwerke herleiten (wichtig für Bestandsschutz). Abweichungen werden auf Objektebene (Basis Objekt) über das Attribut ID Anhang Regelwerk Besonders beigefügt. Im Rahmen der Erstellung einer Planung_Einzel werden alle neuen und geänderten Objekte standardmäßig mit dem zentral einzugebenden Wert des Attributs „Datum Regelwerksstand“ der Planung_Einzel befüllt. Durch die Befüllung dürfen bereits vorhandene Angaben „ID_Anhang_Regelwerk_Besonders“ nicht überschrieben werden. Bei Abweichungen kann der LST-Fachplaner objekt- oder objektgruppenbezogen „ID_Anhang_Regelwerk_Besonders“ füllen. DB-Regelwerk Bisher ohne eindeutige Abbildung im Schriftfeld gemäß Ril 819.0103. </xs:documentation>
+                  <xs:documentation>Datum des letzten Planungsstandes eines Objekts, Hinweis auf den Regelwerksstand zum Planungszeitpunkt. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Anhand des Regelwerksstandes lassen sich die jeweils gültigen Stände der verwendeten Regelwerke herleiten (wichtig für Bestandsschutz). Abweichungen werden auf Objektebene (Basis Objekt) über das Attribut ID Anhang Regelwerk Besonders beigefügt. Im Rahmen der Erstellung einer Planung_Einzel werden alle neuen und geänderten Objekte standardmäßig mit dem zentral einzugebenden Wert des Attributs „Datum Regelwerksstand“ der Planung_Einzel befüllt. Durch die Befüllung dürfen bereits vorhandene Angaben „ID_Anhang_Regelwerk_Besonders“ nicht überschrieben werden. Bei Abweichungen kann der LST-Fachplaner objekt- oder objektgruppenbezogen „ID_Anhang_Regelwerk_Besonders“ füllen. DB-Regelwerk Bisher ohne eindeutige Abbildung im Schriftfeld gemäß Ril 886.0102. </xs:documentation>
                </xs:annotation>
             </xs:element>
             <xs:element name="ID_Anhang_Regelwerk_Besonders"
@@ -362,7 +384,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
                          minOccurs="1"
                          maxOccurs="1">
                <xs:annotation>
-                  <xs:documentation>Für das Objekt abweichend geltendes Regelwerk. Verweis auf einen Anhang, aus dem der besondere Regelwerksstand eines LST-Objektes hervorgeht. Dieser gilt abweichend von dem für die Planung_Einzel festgelegten Datum Regelwerksstand. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Im Schriftfeld gemäß Ril 819.0103 dient Feld 30 "Zusätzliche Vermerke" üblicherweise zur Angabe von Regelwerksabweichungen. DB-Regelwerk Bisher eine eindeutige Abbildung als Schriftfeldeintrag gemäß Ril 819.0103. Meist Angabe im Erläuterungsbericht. </xs:documentation>
+                  <xs:documentation>Für das Objekt abweichend geltendes Regelwerk. Verweis auf einen Anhang, aus dem der besondere Regelwerksstand eines LST-Objektes hervorgeht. Dieser gilt abweichend von dem für die Planung_Einzel festgelegten Datum Regelwerksstand. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Im Schriftfeld gemäß Ril 886.0102 dient Feld 30 "Zusätzliche Vermerke" üblicherweise zur Angabe von Regelwerksabweichungen. DB-Regelwerk Bisher eine eindeutige Abbildung als Schriftfeldeintrag gemäß Ril 886.0102. Meist Angabe im Erläuterungsbericht. </xs:documentation>
                </xs:annotation>
             </xs:element>
          </xs:choice>
@@ -397,19 +419,6 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
    <xs:simpleType ecore:name="LO_Ausgabestand_Type" name="TLO_Ausgabestand">
       <xs:restriction base="nsBasisTypen:TText"/>
    </xs:simpleType>
-   <xs:complexType ecore:name="LO_Firmensachnummer_TypeClass" name="TCLO_Firmensachnummer">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBasisobjekte:TLO_Firmensachnummer"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Strecke_Km_TypeClass" name="TCStrecke_Km">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -437,35 +446,9 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="LO_EMA_Nr_TypeClass" name="TCLO_EMA_Nr">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBasisobjekte:TLO_EMA_Nr"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:simpleType ecore:name="LO_Firmensachnummer_Type" name="TLO_Firmensachnummer">
       <xs:restriction base="nsBasisTypen:TText"/>
    </xs:simpleType>
-   <xs:complexType ecore:name="Daten_TypeClass" name="TCDaten">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="xs:base64Binary"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Datum_Regelwerk_TypeClass" name="TCDatum_Regelwerk">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -485,6 +468,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|BÜ|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -499,6 +483,124 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:simpleType name="ENUMBV_Darstellung_In_Plan">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Anlagentabelle_Transition"
+                          value="Anlagentabelle Transition"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Balisenprüfprotokoll"
+                          value="Balisenprüfprotokoll"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Bedieneinrichtungstabelle_BU"
+                          value="Bedieneinrichtungstabelle BÜ"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Bedieneinrichtungstabelle_Stw"
+                          value="Bedieneinrichtungstabelle Stw"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_BU_Abhängigkeitstabelle"
+                          value="BÜ-Abhängigkeitstabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_BU_Kabellage__und_Ubersichtsplan"
+                          value="BÜ-Kabellage- und Übersichtsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_BU_Kabelübersichtsplan"
+                          value="BÜ-Kabelübersichtsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_BU_Lageplan_ntg"
+                          value="BÜ-Lageplan ntg"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Deadlock_Tabelle"
+                          value="Deadlock-Tabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Durchrutschweg__und_Gefahrpunkttabelle"
+                          value="Durchrutschweg- und Gefahrpunkttabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Elementansteuertabelle"
+                          value="Elementansteuertabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ESG_Datenpunkttabelle_1"
+                          value="ESG-Datenpunkttabelle 1"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ESG_Datenpunkttabelle_2"
+                          value="ESG-Datenpunkttabelle 2"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ESG_Datenpunkttabelle_3"
+                          value="ESG-Datenpunkttabelle 3"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ETCS_Melde__und_Kommandoanschaltung_Signale__Muka_Signale_"
+                          value="ETCS Melde- und Kommandoanschaltung Signale (Muka Signale)"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ETCS_Melde__und_Kommandoanschaltung_Weichen__Muka_Weichen_"
+                          value="ETCS Melde- und Kommandoanschaltung Weichen (Muka Weichen)"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ETCS_Datenpunkttabelle"
+                          value="ETCS-Datenpunkttabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Flankenschutztabelle"
+                          value="Flankenschutztabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Freimeldetabelle"
+                          value="Freimeldetabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_GFR_Plan" value="GFR-Plan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Gleisfreimeldeplan_für_Gleisstromkreise"
+                          value="Gleisfreimeldeplan für Gleisstromkreise"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Gleismagnettabelle"
+                          value="Gleismagnettabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Gleisschaltmitteltabelle"
+                          value="Gleisschaltmitteltabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Inselgleistabelle"
+                          value="Inselgleistabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Kabellageplan"
+                          value="Kabellageplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Kabelübersichtsplan"
+                          value="Kabelübersichtsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_LEU_Tabelle" value="LEU-Tabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Meldedrucktabelle"
+                          value="Meldedrucktabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Nahbedienungstabelle"
+                          value="Nahbedienungstabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Rangierstraßentabelle"
+                          value="Rangierstraßentabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Schlosstabelle"
+                          value="Schlosstabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Sicherungstechnischer_Kreuzungsplan"
+                          value="Sicherungstechnischer Kreuzungsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Sicherungstechnischer_Lageplan"
+                          value="Sicherungstechnischer Lageplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Sicherungstechnischer_Ubersichtsplan"
+                          value="Sicherungstechnischer Übersichtsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Sicherungstechnischer_Ubersichtsplan_BU"
+                          value="Sicherungstechnischer Übersichtsplan BÜ"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Signal__und_Schutzstreckentabelle"
+                          value="Signal- und Schutzstreckentabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Signaltabelle"
+                          value="Signaltabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_sonstige" value="sonstige"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Stammkabelübersichtsplan"
+                          value="Stammkabelübersichtsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Statische_Streckeneigenschaften"
+                          value="Statische Streckeneigenschaften"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Streckenblocktabelle"
+                          value="Streckenblocktabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Tabelle_der_aneinandergereihten_Fahrstraßen"
+                          value="Tabelle der aneinandergereihten Fahrstraßen"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Tabelle_der_ATO_Segment_Profiles"
+                          value="Tabelle der ATO Segment Profiles"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Tabelle_der_ATO_Timing_Points"
+                          value="Tabelle der ATO Timing Points"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Tabelle_der_ATO_TS_Instanzen"
+                          value="Tabelle der ATO-TS Instanzen"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Tabelle_der_Ein__und_Ausstiege"
+                          value="Tabelle der Ein- und Ausstiege"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Tabelle_der_Technik__und_Bedienstandorte"
+                          value="Tabelle der Technik- und Bedienstandorte"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Ubertragungswegtabelle"
+                          value="Übertragungswegtabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Weichenlaufkettentabelle"
+                          value="Weichenlaufkettentabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Weichentabelle"
+                          value="Weichentabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ZBS_Datenpunkttabelle_1"
+                          value="ZBS-Datenpunkttabelle 1"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ZBS_Datenpunkttabelle_2"
+                          value="ZBS-Datenpunkttabelle 2"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ZBS_Datenpunkttabelle_3"
+                          value="ZBS-Datenpunkttabelle 3"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ZL_Anstoßtabelle"
+                          value="ZL-Anstoßtabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ZLV_Bus_Ubersichtsplan"
+                          value="ZLV-Bus-Übersichtsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ZN_Tabelle" value="ZN-Tabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_ZN_Ubersichtsplan"
+                          value="ZN-Übersichtsplan"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Zugstraßentabelle"
+                          value="Zugstraßentabelle"/>
+         <xs:enumeration ecore:name="ENUMBV_Darstellung_In_Plan_Zwieschutzweichentabelle"
+                          value="Zwieschutzweichentabelle"/>
+      </xs:restriction>
+   </xs:simpleType>
    <xs:complexType ecore:name="Bereich_Objekt_Teilbereich_AttributeGroup"
                     name="CBereich_Objekt_Teilbereich">
       <xs:sequence>
@@ -548,9 +650,27 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
+   <xs:complexType ecore:name="Identitaet_TypeClass" name="TCIdentitaet">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBasisobjekte:TIdentitaet"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:simpleType name="ENUMLST_Objekt_Art">
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Anhang" value="Anhang"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ATO_Segment_Profile"
+                          value="ATO_Segment_Profile"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ATO_Timing_Point"
+                          value="ATO_Timing_Point"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ATO_TS_Instanz" value="ATO_TS_Instanz"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Aussenelementansteuerung"
                           value="Aussenelementansteuerung"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Bahnsteig_Anlage"
@@ -579,8 +699,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Bedien_Platz" value="Bedien_Platz"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Bedien_Standort" value="Bedien_Standort"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Bedien_Zentrale" value="Bedien_Zentrale"/>
-         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Bereichsgrenze" value="Bereichsgrenze"/>
-         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Binaerdatei" value="Binaerdatei"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Binaerdaten" value="Binaerdaten"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Block_Anlage" value="Block_Anlage"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Block_Element" value="Block_Element"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Block_Strecke" value="Block_Strecke"/>
@@ -617,6 +736,8 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
                           value="ESTW_Zentraleinheit"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ETCS_Kante" value="ETCS_Kante"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ETCS_Knoten" value="ETCS_Knoten"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ETCS_Richtungsanzeige"
+                          value="ETCS_Richtungsanzeige"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ETCS_Signal" value="ETCS_Signal"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ETCS_W_Kr" value="ETCS_W_Kr"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_EV_Modul" value="EV_Modul"/>
@@ -669,6 +790,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Gleis_Lichtraum" value="Gleis_Lichtraum"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Gleis_Schaltgruppe"
                           value="Gleis_Schaltgruppe"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Hoehenlinie" value="Hoehenlinie"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Hoehenpunkt" value="Hoehenpunkt"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Kabel" value="Kabel"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Kabel_Verteilpunkt"
@@ -677,6 +799,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_LEU_Modul" value="LEU_Modul"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_LEU_Schaltkasten"
                           value="LEU_Schaltkasten"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Lieferobjekt" value="Lieferobjekt"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Luft_Telegramm" value="Luft_Telegramm"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Markanter_Punkt" value="Markanter_Punkt"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_NB" value="NB"/>
@@ -712,6 +835,8 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Signal" value="Signal"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Signal_Befestigung"
                           value="Signal_Befestigung"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Signal_Fank_Zuordnung"
+                          value="Signal_Fank_Zuordnung"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Signal_Rahmen" value="Signal_Rahmen"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Signal_Signalbegriff"
                           value="Signal_Signalbegriff"/>
@@ -719,6 +844,8 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Stell_Bereich" value="Stell_Bereich"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Stellelement" value="Stellelement"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Strecke" value="Strecke"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Strecke_Bremsweg"
+                          value="Strecke_Bremsweg"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Strecke_Punkt" value="Strecke_Punkt"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Technik_Standort"
                           value="Technik_Standort"/>
@@ -728,7 +855,11 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
                           value="Technischer_Punkt"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_TOP_Kante" value="TOP_Kante"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_TOP_Knoten" value="TOP_Knoten"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Trasse_Kante" value="Trasse_Kante"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Trasse_Knoten" value="Trasse_Knoten"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Ueberhoehung" value="Ueberhoehung"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Ueberhoehungslinie"
+                          value="Ueberhoehungslinie"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Uebertragungsweg"
                           value="Uebertragungsweg"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Unterbringung" value="Unterbringung"/>
@@ -742,6 +873,9 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
                           value="Weichenlaufkette"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_Weichenlaufkette_Zuordnung"
                           value="Weichenlaufkette_Zuordnung"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZBS_Schutzstrecke"
+                          value="ZBS_Schutzstrecke"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZBS_Signal" value="ZBS_Signal"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZL" value="ZL"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZL_DLP_Abschnitt"
                           value="ZL_DLP_Abschnitt"/>
@@ -752,6 +886,8 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZL_Signalgruppe_Zuordnung"
                           value="ZL_Signalgruppe_Zuordnung"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZLV_Bus" value="ZLV_Bus"/>
+         <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZLV_Bus_Besondere_Anlage"
+                          value="ZLV_Bus_Besondere_Anlage"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZLV_Bus_US_Zuordnung"
                           value="ZLV_Bus_US_Zuordnung"/>
          <xs:enumeration ecore:name="ENUMLST_Objekt_Art_ZN" value="ZN"/>
@@ -798,6 +934,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
    </xs:complexType>
    <xs:simpleType name="ENUMRolle">
       <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMRolle_GEO_Planer" value="GEO_Planer"/>
          <xs:enumeration ecore:name="ENUMRolle_GIS_Daten" value="GIS_Daten"/>
          <xs:enumeration ecore:name="ENUMRolle_LST_Fachplaner" value="LST_Fachplaner"/>
          <xs:enumeration ecore:name="ENUMRolle_sonstige" value="sonstige"/>
@@ -806,6 +943,19 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
    <xs:simpleType ecore:name="Strecke_Km_Type" name="TStrecke_Km">
       <xs:restriction base="nsBasisTypen:TKilometrierung"/>
    </xs:simpleType>
+   <xs:complexType ecore:name="Bestandsschutz_TypeClass" name="TCBestandsschutz">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="xs:boolean"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType ecore:name="Anhang_Art_TypeClass" name="TCAnhang_Art">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -821,12 +971,19 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
    </xs:complexType>
    <xs:simpleType name="ENUMObjektzustand_Besonders">
       <xs:restriction base="xs:string">
-         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_abgedeckt" value="abgedeckt"/>
-         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_ausser_Betrieb"
-                          value="ausser_Betrieb"/>
-         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_ausser_Betrieb_vorbereitend"
-                          value="ausser_Betrieb_vorbereitend"/>
+         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_am_Standort_angesteuert_nicht_gueltig"
+                          value="am_Standort_angesteuert_nicht_gueltig"/>
+         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_am_Standort_angesteuert_ungueltig_abgedeckt"
+                          value="am_Standort_angesteuert_ungueltig_abgedeckt"/>
+         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_am_Standort_nicht_angesteuert_ungueltig"
+                          value="am_Standort_nicht_angesteuert_ungueltig"/>
+         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_am_Standort_nicht_angesteuert_vorbereitend"
+                          value="am_Standort_nicht_angesteuert_vorbereitend"/>
          <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_sonstige" value="sonstige"/>
+         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_standortfern_angesteuert_ungueltig"
+                          value="standortfern_angesteuert_ungueltig"/>
+         <xs:enumeration ecore:name="ENUMObjektzustand_Besonders_standortfern_nicht_angesteuert_ungueltig"
+                          value="standortfern_nicht_angesteuert_ungueltig"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="Seitlicher_Abstand_TypeClass" name="TCSeitlicher_Abstand">
@@ -848,6 +1005,7 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|BÜ|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -856,11 +1014,22 @@ Für LO ohne EMA-Nummer ist "ohne EMA-Nummer" anzugeben.</xs:documentation>
             <xs:sequence>
                <xs:element name="Beschreibung"
                             type="nsBasisobjekte:TCBeschreibung"
-                            minOccurs="1"
+                            minOccurs="0"
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Verbale Beschreibung des LO. 
-Die Angabe soll als Beschreibung des Technischen Platzes in SAP R/3 Netz übernommen werden. Die Bereitstellung der Bildungsvorschrift erfolgt gesondert.</xs:documentation>
+Die Angabe soll als Beschreibung des Technischen Platzes in SAP R/3 Netz übernommen werden.
+Die Bereitstellung der Bildungsvorschrift erfolgt gesondert.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ID_GEO_Punkt"
+                            type="xs:anyURI"
+                            ecore:reference="nsGeodaten:CGEO_Punkt"
+                            nillable="true"
+                            minOccurs="0"
+                            maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:documentation>Verweis auf einen GEO_Punkt zur Topologie-unabhängigen Lokalisierung des Lieferobjekts. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="ID_LO_Einbau"
@@ -877,7 +1046,7 @@ Der Verweis ist prinzipiell auf alle Objekttypen möglich einschließlich des LO
                </xs:element>
                <xs:element name="LO_Ersatz"
                             type="nsBasisobjekte:TCLO_Ersatz"
-                            minOccurs="1"
+                            minOccurs="0"
                             maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation>Angabe, ob es sich um eine Ersatzteil (true) oder ein eingebautes und genutztes Teil handelt (false).</xs:documentation>
@@ -885,7 +1054,7 @@ Der Verweis ist prinzipiell auf alle Objekttypen möglich einschließlich des LO
                </xs:element>
                <xs:element name="LO_Material"
                             type="nsBasisobjekte:CLO_Material"
-                            minOccurs="1"
+                            minOccurs="0"
                             maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
@@ -894,12 +1063,26 @@ Der Verweis ist prinzipiell auf alle Objekttypen möglich einschließlich des LO
    <xs:simpleType ecore:name="LO_EMA_Nr_Type" name="TLO_EMA_Nr">
       <xs:restriction base="nsBasisTypen:TText"/>
    </xs:simpleType>
+   <xs:complexType ecore:name="LO_Seriennummer_TypeClass" name="TCLO_Seriennummer">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBasisobjekte:TLO_Seriennummer"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType ecore:name="Bearbeitungsvermerk" name="CBearbeitungsvermerk">
       <xs:annotation>
          <xs:documentation>Anhang in Form von Datei oder Text zu einem Objekt oder Attribut. Jeder zugelassene Projektbeteiligte kann zu einem Objekt oder Attribut einen Bearbeitungsvermerk anfügen, sofern er die entsprechend notwendige Berechtigung besitzt. Dies gilt für fachliche wie organisatorische Objekte und Attribute. Für ENUM-Attribute ist bei Auswahl des Werts "sonstige" zwingend ein Bearbeitungsvermerk anzufügen. Eine Dokumentenbeigabe ist dabei optional. Zu einem Objekt oder Attribut können mehrere Bearbeitungsvermerke erstellt werden. Der Bearbeitungsvermerk enthält vorläufig eine GUID zur Identifikation des Bearbeiters sowie eine GUID für die Signatur. Im Attribut „Bearbeitungsvermerk Rolle“ kann die fachliche Rolle des Bearbeiters abgelegt werden. Kommentare des Bearbeiters werden als Freitext im Attribut „Kommentar“ hinterlegt. Der Bearbeitungsvermerk kann einen Anhang aufnehmen. Um mehrere Anhänge zu einem Objekt zuzuordnen, müssen mehrere Bearbeitungsvermerke erstellt werden.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|BÜ|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -950,12 +1133,12 @@ Der Verweis ist prinzipiell auf alle Objekttypen möglich einschließlich des LO
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="LO_Seriennummer_TypeClass" name="TCLO_Seriennummer">
+   <xs:complexType ecore:name="LO_Ersatz_TypeClass" name="TCLO_Ersatz">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="nsBasisobjekte:TLO_Seriennummer"
+                            type="xs:boolean"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -974,6 +1157,14 @@ Der Verweis ist prinzipiell auf alle Objekttypen möglich einschließlich des LO
                       maxOccurs="1">
             <xs:annotation>
                <xs:documentation>Zuordnung eines Punktobjektes zu einer Streckennummer.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="Km_Massgebend"
+                      type="nsBasisobjekte:TCKm_Massgebend"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Kennzeichnung der maßgebenden Kilometrierung ("true") bei Referenz zu mehreren Strecken.</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Strecke_Km"
@@ -1005,14 +1196,6 @@ Der Verweis ist prinzipiell auf alle Objekttypen möglich einschließlich des LO
    <xs:complexType ecore:name="Bearbeitungsvermerk_Allg_AttributeGroup"
                     name="CBearbeitungsvermerk_Allg">
       <xs:sequence>
-         <xs:element name="Bearbeitungsvermerk_Kennung"
-                      type="nsBasisobjekte:TCBearbeitungsvermerk_Kennung"
-                      minOccurs="0"
-                      maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>Kennzeichnung, dass der Bearbeitungsvermerk für den Bestand (Bestandsdaten, Bestandspläne) relevant ist und deswegen über das Planungsprojekt hinweg abzuspeichern ist. Heute: Angaben im Erläuterungsbericht. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Alle bestandsrelevanten Bearbeitungsvermerke sollten vor Erstellung der Bestandsdaten nochmal durch den LST-Fachplaner geprüft werden, da diese sich durch Einzelplanungen erübrigt haben könnten. Nicht bestandsrelevante Bearbeitungsvermerke werden automatisch bei Erstellung der Bestandsdaten im Planungswerkzeug gelöscht. DB-Regelwerk Bisher ohne eindeutige Darstellung.</xs:documentation>
-            </xs:annotation>
-         </xs:element>
          <xs:element name="Bearbeitungsvermerk_Rolle"
                       type="nsBasisobjekte:TCBearbeitungsvermerk_Rolle"
                       minOccurs="1"
@@ -1027,15 +1210,27 @@ Der Verweis ist prinzipiell auf alle Objekttypen möglich einschließlich des LO
                       maxOccurs="1">
             <xs:annotation>
                <xs:documentation>Relevanz eines Bearbeitungsvermerks für die Übernahme in den Bestand (Bestandsdaten bzw. Bestandspläne).
-
 nein - Nur gültig innerhalb einer Planungsgruppe. Der BV ist vor Erstellen der Bestandsdaten einer Planungsgruppe zu löschen.
-
 Bestandsdaten - Gültig innerhalb eines Planungsprojekts bis vor Erstellen einer Bestandsdokumentation, d. h. der BV kann in den Bestandsdaten enthalten bleiben, ist jedoch vor Erstellen einer Bestandsdokumentation zu löschen.
-
 Bestandsdokumentation - Gültig innerhalb eines Planungsprojekts bis vor Erstellen der letzten Bestandsdokumentation, d. h. der BV kann über mehrere Planungsgruppen hinaus enthalten bleiben, ist jedoch vor Projektabschluss zu löschen.
-
 dauerhaft - Gültig über das Gesamtprojekt hinaus auch nach Erstellen der letzten Bestandsdokumentation.
 Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  geändert/gelöscht werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="BV_Darstellung_In_Plan"
+                      type="nsBasisobjekte:TCBV_Darstellung_In_Plan"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xs:annotation>
+               <xs:documentation>Angabe des Plans, in dem der Bearbeitungsvermerk dargestellt werden soll.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="BV_Kategorie"
+                      type="nsBasisobjekte:TCBV_Kategorie"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Kategorisierung des Bearbeitungsvermerks zur Sortierung und Filterung (z. B. zur Ablage von Zusatzinformationen für besondere Anwendungsfälle)</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Kommentar"
@@ -1069,12 +1264,12 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          </xs:element>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType ecore:name="LO_Ausgabestand_TypeClass" name="TCLO_Ausgabestand">
+   <xs:complexType ecore:name="LO_EMA_Nr_TypeClass" name="TCLO_EMA_Nr">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="nsBasisobjekte:TLO_Ausgabestand"
+                            type="nsBasisobjekte:TLO_EMA_Nr"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -1125,28 +1320,11 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          </xs:element>
       </xs:sequence>
    </xs:complexType>
-   <xs:simpleType ecore:name="Bearbeitungsvermerk_Kennung_Type"
-                   name="TBearbeitungsvermerk_Kennung">
-      <xs:restriction base="nsBasisTypen:TZeichenkette"/>
-   </xs:simpleType>
    <xs:simpleType ecore:name="Seitlicher_Abstand_Type" name="TSeitlicher_Abstand">
       <xs:restriction base="nsBasisTypen:TMeter">
          <xs:pattern value="(-?[1-9][0-9]{0,4}\.[0-9]{3})|(-?0\.[89][0-9]{2})|0.000"/>
       </xs:restriction>
    </xs:simpleType>
-   <xs:complexType ecore:name="Beschreibung_TypeClass" name="TCBeschreibung">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBasisobjekte:TBeschreibung"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Dateiname_TypeClass" name="TCDateiname">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -1173,16 +1351,12 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:simpleType ecore:name="Identitaet_Type" name="TIdentitaet">
-      <xs:restriction base="nsBasisTypen:TGUID"/>
-   </xs:simpleType>
-   <xs:complexType ecore:name="LO_Datum_Herstellung_TypeClass"
-                    name="TCLO_Datum_Herstellung">
+   <xs:complexType ecore:name="LO_Ausgabestand_TypeClass" name="TCLO_Ausgabestand">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="xs:date"
+                            type="nsBasisobjekte:TLO_Ausgabestand"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -1190,12 +1364,15 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Bestandsrelevanz_TypeClass" name="TCBestandsrelevanz">
+   <xs:simpleType ecore:name="Identitaet_Type" name="TIdentitaet">
+      <xs:restriction base="nsBasisTypen:TGUID"/>
+   </xs:simpleType>
+   <xs:complexType ecore:name="LO_Firmensachnummer_TypeClass" name="TCLO_Firmensachnummer">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="nsBasisobjekte:ENUMBestandsrelevanz"
+                            type="nsBasisobjekte:TLO_Firmensachnummer"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -1240,12 +1417,12 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="LO_Ersatz_TypeClass" name="TCLO_Ersatz">
+   <xs:complexType ecore:name="Bestandsrelevanz_TypeClass" name="TCBestandsrelevanz">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="xs:boolean"
+                            type="nsBasisobjekte:ENUMBestandsrelevanz"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -1273,6 +1450,16 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
                      <Patternbeschreibung>[0.000..99999.999]</Patternbeschreibung>
                   </WorkflowInformation>
                </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ID_GEO_Punkt_Berechnet"
+                      type="xs:anyURI"
+                      ecore:reference="nsGeodaten:CGEO_Punkt"
+                      nillable="true"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xs:annotation>
+               <xs:documentation>Verweis auf einen GEO_Punkt zur Angabe von berechneten Objekt-Koordinaten. Diese werden auf Basis der Soll-Gleislage und der im Punktobjekt vorgegebenen Abstände ermittelt und sind für Bau und Abnahme maßgebend. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig.</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="ID_TOP_Kante"
@@ -1347,14 +1534,6 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
                <xs:documentation>Format des Anhangs. Nur die im ENUM dargestellten Dateiarten können einer Planung angehangen werden. Andere Dateiarten sind aus Gründen der Nachprüfbarkeit und der Transparenz nicht zulässig. </xs:documentation>
             </xs:annotation>
          </xs:element>
-         <xs:element name="Daten"
-                      type="nsBasisobjekte:TCDaten"
-                      minOccurs="0"
-                      maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>Im base64-Format codierter Inhalt der Ursprungsdatei des Anhangs.</xs:documentation>
-            </xs:annotation>
-         </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType ecore:name="Bereich_Objekt" name="CBereich_Objekt" abstract="true">
@@ -1394,32 +1573,27 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
                             minOccurs="1"
                             maxOccurs="1"/>
                <xs:element name="ID_Bearbeitungsvermerk"
-                            type="xs:anyURI"
-                            ecore:reference="nsBasisobjekte:CBearbeitungsvermerk"
-                            nillable="true"
+                            type="nsBasisTypen:TCID_Bearbeitungsvermerk"
                             minOccurs="0"
                             maxOccurs="unbounded">
                   <xs:annotation>
                      <xs:documentation>Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet. </xs:documentation>
                   </xs:annotation>
                </xs:element>
+               <xs:element name="ID_Oertlichkeit_Ausgabe"
+                            type="xs:anyURI"
+                            ecore:reference="nsGeodaten:COertlichkeit"
+                            nillable="true"
+                            minOccurs="0"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Verweis auf die Oertlichkeit (Betriebsstelle), der das Element zugeordnet wird. Die Angabe ist beispielsweise relevant für die Erzeugung der Ausgabeformate (Lagepläne, Tabellen).</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
                <xs:element name="Objektreferenzen"
                             type="nsBasisobjekte:CObjektreferenzen"
                             minOccurs="0"
                             maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType ecore:name="Identitaet_TypeClass" name="TCIdentitaet">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsBasisobjekte:TIdentitaet"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -1463,15 +1637,6 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          <xs:enumeration ecore:name="ENUMAnhang_Art_DWS" value="DWS"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Erlaeuterungsbericht"
                           value="Erlaeuterungsbericht"/>
-         <xs:enumeration ecore:name="ENUMAnhang_Art_Planverzeichnis" value="Planverzeichnis"/>
-         <xs:enumeration ecore:name="ENUMAnhang_Art_Pruefbericht" value="Pruefbericht"/>
-         <xs:enumeration ecore:name="ENUMAnhang_Art_Regelwerksstand_Besonders"
-                          value="Regelwerksstand_Besonders"/>
-         <xs:enumeration ecore:name="ENUMAnhang_Art_VzG" value="VzG"/>
-         <xs:enumeration ecore:name="ENUMAnhang_Art_ZN_Raumplan_Bedienraum"
-                          value="ZN_Raumplan_Bedienraum"/>
-         <xs:enumeration ecore:name="ENUMAnhang_Art_ZN_Raumplan_Rechnerraum"
-                          value="ZN_Raumplan_Rechnerraum"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_GEO" value="GEO"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_INA" value="INA"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Moebelaufstellplan_Aufriss"
@@ -1479,10 +1644,14 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          <xs:enumeration ecore:name="ENUMAnhang_Art_Moebelaufstellplan_Grundriss"
                           value="Moebelaufstellplan_Grundriss"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Monitoraufteilung" value="Monitoraufteilung"/>
+         <xs:enumeration ecore:name="ENUMAnhang_Art_Planverzeichnis" value="Planverzeichnis"/>
+         <xs:enumeration ecore:name="ENUMAnhang_Art_Pruefbericht" value="Pruefbericht"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Raumplan_Bedienraeume"
                           value="Raumplan_Bedienraeume"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Raumplan_Rechnerraeume"
                           value="Raumplan_Rechnerraeume"/>
+         <xs:enumeration ecore:name="ENUMAnhang_Art_Regelwerksstand_Besonders"
+                          value="Regelwerksstand_Besonders"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Richtungssinn" value="Richtungssinn"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_sonstige" value="sonstige"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Steuerbezirksuebersicht"
@@ -1490,7 +1659,12 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          <xs:enumeration ecore:name="ENUMAnhang_Art_UiG" value="UiG"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Vorgabe" value="Vorgabe"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_Vorgabe_GBT" value="Vorgabe_GBT"/>
+         <xs:enumeration ecore:name="ENUMAnhang_Art_VzG" value="VzG"/>
          <xs:enumeration ecore:name="ENUMAnhang_Art_ZiE" value="ZiE"/>
+         <xs:enumeration ecore:name="ENUMAnhang_Art_ZN_Raumplan_Bedienraum"
+                          value="ZN_Raumplan_Bedienraum"/>
+         <xs:enumeration ecore:name="ENUMAnhang_Art_ZN_Raumplan_Rechnerraum"
+                          value="ZN_Raumplan_Rechnerraum"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType ecore:name="Technischer_Platz_Type" name="TTechnischer_Platz">
@@ -1507,9 +1681,35 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge�
          <xs:enumeration ecore:name="ENUMDateityp_tif" value="tif"/>
       </xs:restriction>
    </xs:simpleType>
+   <xs:complexType ecore:name="Beschreibung_TypeClass" name="TCBeschreibung">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBasisobjekte:TBeschreibung"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:simpleType ecore:name="Begrenzung_A_Type" name="TBegrenzung_A">
       <xs:restriction base="nsBasisTypen:TMeter">
          <xs:pattern value="(0|[1-9][0-9]{0,4})\.[0-9]{3}"/>
       </xs:restriction>
    </xs:simpleType>
+   <xs:complexType ecore:name="BV_Kategorie_TypeClass" name="TCBV_Kategorie">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsBasisobjekte:TBV_Kategorie"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
 </xs:schema>

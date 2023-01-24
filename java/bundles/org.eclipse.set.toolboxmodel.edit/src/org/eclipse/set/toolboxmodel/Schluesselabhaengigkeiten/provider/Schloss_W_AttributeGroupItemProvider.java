@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenFactory;
@@ -110,7 +111,7 @@ public class Schloss_W_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART);
-			childrenFeatures.add(SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK);
+			childrenFeatures.add(SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT);
 			childrenFeatures.add(SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE);
 			childrenFeatures.add(SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_WATTRIBUTE_GROUP__WLAGE);
 		}
@@ -166,7 +167,7 @@ public class Schloss_W_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Schloss_W_AttributeGroup.class)) {
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART:
-			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK:
+			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT:
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE:
 			case SchluesselabhaengigkeitenPackage.SCHLOSS_WATTRIBUTE_GROUP__WLAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -195,8 +196,8 @@ public class Schloss_W_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK,
-				 SchluesselabhaengigkeitenFactory.eINSTANCE.createVerschluss_Herzstueck_TypeClass()));
+				(SchluesselabhaengigkeitenPackage.Literals.SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT,
+				 SchluesselabhaengigkeitenFactory.eINSTANCE.createVerschluss_Ort_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

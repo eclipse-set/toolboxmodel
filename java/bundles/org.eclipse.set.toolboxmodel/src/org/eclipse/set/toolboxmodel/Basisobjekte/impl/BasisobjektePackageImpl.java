@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.impl;
 
@@ -15,6 +22,10 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -42,13 +53,14 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Abstand_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass;
+import org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Rolle_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Begrenzung_A_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Begrenzung_B_TypeClass;
@@ -60,15 +72,16 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Bestandsschutz_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.DB_GDI_Referenz_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Dateiname_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Dateityp_TypeClass;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Datum_Regelwerk_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.ENUMAnhangArt;
+import org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan;
 import org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBestandsrelevanz;
 import org.eclipse.set.toolboxmodel.Basisobjekte.ENUMDateityp;
 import org.eclipse.set.toolboxmodel.Basisobjekte.ENUMLSTObjektArt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.ENUMObjektzustandBesonders;
 import org.eclipse.set.toolboxmodel.Basisobjekte.ENUMRolle;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Identitaet_TypeClass;
+import org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Kommentar_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Kurztext_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.LO_Ausgabestand_TypeClass;
@@ -122,13 +135,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -153,9 +170,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -244,13 +263,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass bearbeitungsvermerk_Kennung_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass bearbeitungsvermerk_Rolle_TypeClassEClass = null;
 
 	/**
@@ -307,6 +319,20 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass bV_Darstellung_In_Plan_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass bV_Kategorie_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass dateiname_TypeClassEClass = null;
 
 	/**
@@ -315,13 +341,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	private EClass dateityp_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass daten_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -343,6 +362,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	private EClass identitaet_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass km_Massgebend_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -545,6 +571,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum enumbvDarstellungInPlanEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum enumDateitypEEnum = null;
 
 	/**
@@ -580,13 +613,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType bearbeitungsvermerk_Kennung_TypeEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EDataType begrenzung_A_TypeEDataType = null;
 
 	/**
@@ -608,6 +634,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType bV_Kategorie_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType dB_GDI_Referenz_TypeEDataType = null;
 
 	/**
@@ -623,6 +656,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	private EDataType enumBestandsrelevanzObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumbvDarstellungInPlanObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -794,30 +834,34 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -834,8 +878,8 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -853,16 +897,18 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 
 		// Create package meta-data objects
 		theBasisobjektePackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -870,23 +916,25 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBasisobjektePackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -894,7 +942,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -1009,16 +1057,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getAnhang_Allg_AttributeGroup_Daten() {
-		return (EReference)anhang_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getAnhang_Art_TypeClass() {
 		return anhang_Art_TypeClassEClass;
 	}
@@ -1069,8 +1107,18 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getBasis_Objekt_Objektreferenzen() {
+	public EReference getBasis_Objekt_IDOertlichkeitAusgabe() {
 		return (EReference)basis_ObjektEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBasis_Objekt_Objektreferenzen() {
+		return (EReference)basis_ObjektEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1169,7 +1217,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkKennung() {
+	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkRolle() {
 		return (EReference)bearbeitungsvermerk_Allg_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1179,7 +1227,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkRolle() {
+	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_Bestandsrelevanz() {
 		return (EReference)bearbeitungsvermerk_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1189,7 +1237,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_Bestandsrelevanz() {
+	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_BVDarstellungInPlan() {
 		return (EReference)bearbeitungsvermerk_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1199,7 +1247,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_Kommentar() {
+	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_BVKategorie() {
 		return (EReference)bearbeitungsvermerk_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1209,7 +1257,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_Kurztext() {
+	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_Kommentar() {
 		return (EReference)bearbeitungsvermerk_Allg_AttributeGroupEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1219,7 +1267,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_ZeitBearbeitungsvermerk() {
+	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_Kurztext() {
 		return (EReference)bearbeitungsvermerk_Allg_AttributeGroupEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1229,18 +1277,8 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EClass getBearbeitungsvermerk_Kennung_TypeClass() {
-		return bearbeitungsvermerk_Kennung_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getBearbeitungsvermerk_Kennung_TypeClass_Wert() {
-		return (EAttribute)bearbeitungsvermerk_Kennung_TypeClassEClass.getEStructuralFeatures().get(0);
+	public EReference getBearbeitungsvermerk_Allg_AttributeGroup_ZeitBearbeitungsvermerk() {
+		return (EReference)bearbeitungsvermerk_Allg_AttributeGroupEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1439,6 +1477,46 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
+	public EClass getBV_Darstellung_In_Plan_TypeClass() {
+		return bV_Darstellung_In_Plan_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBV_Darstellung_In_Plan_TypeClass_Wert() {
+		return (EAttribute)bV_Darstellung_In_Plan_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBV_Kategorie_TypeClass() {
+		return bV_Kategorie_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBV_Kategorie_TypeClass_Wert() {
+		return (EAttribute)bV_Kategorie_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDateiname_TypeClass() {
 		return dateiname_TypeClassEClass;
 	}
@@ -1471,26 +1549,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	@Override
 	public EAttribute getDateityp_TypeClass_Wert() {
 		return (EAttribute)dateityp_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDaten_TypeClass() {
-		return daten_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDaten_TypeClass_Wert() {
-		return (EAttribute)daten_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1559,6 +1617,26 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
+	public EClass getKm_Massgebend_TypeClass() {
+		return km_Massgebend_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getKm_Massgebend_TypeClass_Wert() {
+		return (EAttribute)km_Massgebend_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getKommentar_TypeClass() {
 		return kommentar_TypeClassEClass;
 	}
@@ -1619,7 +1697,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getLieferobjekt_IDLOEinbau() {
+	public EReference getLieferobjekt_IDGEOPunkt() {
 		return (EReference)lieferobjektEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1629,7 +1707,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getLieferobjekt_LOErsatz() {
+	public EReference getLieferobjekt_IDLOEinbau() {
 		return (EReference)lieferobjektEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1639,8 +1717,18 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getLieferobjekt_LOMaterial() {
+	public EReference getLieferobjekt_LOErsatz() {
 		return (EReference)lieferobjektEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLieferobjekt_LOMaterial() {
+		return (EReference)lieferobjektEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1999,8 +2087,18 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getPunkt_Objekt_Strecke_AttributeGroup_StreckeKm() {
+	public EReference getPunkt_Objekt_Strecke_AttributeGroup_KmMassgebend() {
 		return (EReference)punkt_Objekt_Strecke_AttributeGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPunkt_Objekt_Strecke_AttributeGroup_StreckeKm() {
+		return (EReference)punkt_Objekt_Strecke_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2029,7 +2127,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_IDTOPKante() {
+	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_IDGEOPunktBerechnet() {
 		return (EReference)punkt_Objekt_TOP_Kante_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2039,7 +2137,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_Wirkrichtung() {
+	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_IDTOPKante() {
 		return (EReference)punkt_Objekt_TOP_Kante_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2049,7 +2147,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_SeitlicheLage() {
+	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_Wirkrichtung() {
 		return (EReference)punkt_Objekt_TOP_Kante_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2059,8 +2157,18 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_SeitlicherAbstand() {
+	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_SeitlicheLage() {
 		return (EReference)punkt_Objekt_TOP_Kante_AttributeGroupEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_SeitlicherAbstand() {
+		return (EReference)punkt_Objekt_TOP_Kante_AttributeGroupEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2249,6 +2357,16 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
+	public EEnum getENUMBVDarstellungInPlan() {
+		return enumbvDarstellungInPlanEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getENUMDateityp() {
 		return enumDateitypEEnum;
 	}
@@ -2299,16 +2417,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public EDataType getBearbeitungsvermerk_Kennung_Type() {
-		return bearbeitungsvermerk_Kennung_TypeEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EDataType getBegrenzung_A_Type() {
 		return begrenzung_A_TypeEDataType;
 	}
@@ -2339,6 +2447,16 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
+	public EDataType getBV_Kategorie_Type() {
+		return bV_Kategorie_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getDB_GDI_Referenz_Type() {
 		return dB_GDI_Referenz_TypeEDataType;
 	}
@@ -2361,6 +2479,16 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 	@Override
 	public EDataType getENUMBestandsrelevanzObject() {
 		return enumBestandsrelevanzObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMBVDarstellungInPlanObject() {
+		return enumbvDarstellungInPlanObjectEDataType;
 	}
 
 	/**
@@ -2572,7 +2700,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		createEReference(anhang_Allg_AttributeGroupEClass, ANHANG_ALLG_ATTRIBUTE_GROUP__ANHANG_ART);
 		createEReference(anhang_Allg_AttributeGroupEClass, ANHANG_ALLG_ATTRIBUTE_GROUP__DATEINAME);
 		createEReference(anhang_Allg_AttributeGroupEClass, ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP);
-		createEReference(anhang_Allg_AttributeGroupEClass, ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN);
 
 		anhang_Art_TypeClassEClass = createEClass(ANHANG_ART_TYPE_CLASS);
 		createEAttribute(anhang_Art_TypeClassEClass, ANHANG_ART_TYPE_CLASS__WERT);
@@ -2580,6 +2707,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		basis_ObjektEClass = createEClass(BASIS_OBJEKT);
 		createEReference(basis_ObjektEClass, BASIS_OBJEKT__BASIS_OBJEKT_ALLG);
 		createEReference(basis_ObjektEClass, BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK);
+		createEReference(basis_ObjektEClass, BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE);
 		createEReference(basis_ObjektEClass, BASIS_OBJEKT__OBJEKTREFERENZEN);
 
 		basis_Objekt_Allg_AttributeGroupEClass = createEClass(BASIS_OBJEKT_ALLG_ATTRIBUTE_GROUP);
@@ -2593,15 +2721,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		createEReference(bearbeitungsvermerkEClass, BEARBEITUNGSVERMERK__ID_ANHANG);
 
 		bearbeitungsvermerk_Allg_AttributeGroupEClass = createEClass(BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP);
-		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG);
 		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE);
 		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ);
+		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN);
+		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE);
 		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR);
 		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT);
 		createEReference(bearbeitungsvermerk_Allg_AttributeGroupEClass, BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__ZEIT_BEARBEITUNGSVERMERK);
-
-		bearbeitungsvermerk_Kennung_TypeClassEClass = createEClass(BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS);
-		createEAttribute(bearbeitungsvermerk_Kennung_TypeClassEClass, BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS__WERT);
 
 		bearbeitungsvermerk_Rolle_TypeClassEClass = createEClass(BEARBEITUNGSVERMERK_ROLLE_TYPE_CLASS);
 		createEAttribute(bearbeitungsvermerk_Rolle_TypeClassEClass, BEARBEITUNGSVERMERK_ROLLE_TYPE_CLASS__WERT);
@@ -2630,14 +2756,17 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		bestandsschutz_TypeClassEClass = createEClass(BESTANDSSCHUTZ_TYPE_CLASS);
 		createEAttribute(bestandsschutz_TypeClassEClass, BESTANDSSCHUTZ_TYPE_CLASS__WERT);
 
+		bV_Darstellung_In_Plan_TypeClassEClass = createEClass(BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS);
+		createEAttribute(bV_Darstellung_In_Plan_TypeClassEClass, BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS__WERT);
+
+		bV_Kategorie_TypeClassEClass = createEClass(BV_KATEGORIE_TYPE_CLASS);
+		createEAttribute(bV_Kategorie_TypeClassEClass, BV_KATEGORIE_TYPE_CLASS__WERT);
+
 		dateiname_TypeClassEClass = createEClass(DATEINAME_TYPE_CLASS);
 		createEAttribute(dateiname_TypeClassEClass, DATEINAME_TYPE_CLASS__WERT);
 
 		dateityp_TypeClassEClass = createEClass(DATEITYP_TYPE_CLASS);
 		createEAttribute(dateityp_TypeClassEClass, DATEITYP_TYPE_CLASS__WERT);
-
-		daten_TypeClassEClass = createEClass(DATEN_TYPE_CLASS);
-		createEAttribute(daten_TypeClassEClass, DATEN_TYPE_CLASS__WERT);
 
 		datum_Regelwerk_TypeClassEClass = createEClass(DATUM_REGELWERK_TYPE_CLASS);
 		createEAttribute(datum_Regelwerk_TypeClassEClass, DATUM_REGELWERK_TYPE_CLASS__WERT);
@@ -2648,6 +2777,9 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		identitaet_TypeClassEClass = createEClass(IDENTITAET_TYPE_CLASS);
 		createEAttribute(identitaet_TypeClassEClass, IDENTITAET_TYPE_CLASS__WERT);
 
+		km_Massgebend_TypeClassEClass = createEClass(KM_MASSGEBEND_TYPE_CLASS);
+		createEAttribute(km_Massgebend_TypeClassEClass, KM_MASSGEBEND_TYPE_CLASS__WERT);
+
 		kommentar_TypeClassEClass = createEClass(KOMMENTAR_TYPE_CLASS);
 		createEAttribute(kommentar_TypeClassEClass, KOMMENTAR_TYPE_CLASS__WERT);
 
@@ -2656,6 +2788,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 
 		lieferobjektEClass = createEClass(LIEFEROBJEKT);
 		createEReference(lieferobjektEClass, LIEFEROBJEKT__BESCHREIBUNG);
+		createEReference(lieferobjektEClass, LIEFEROBJEKT__IDGEO_PUNKT);
 		createEReference(lieferobjektEClass, LIEFEROBJEKT__IDLO_EINBAU);
 		createEReference(lieferobjektEClass, LIEFEROBJEKT__LO_ERSATZ);
 		createEReference(lieferobjektEClass, LIEFEROBJEKT__LO_MATERIAL);
@@ -2708,10 +2841,12 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 
 		punkt_Objekt_Strecke_AttributeGroupEClass = createEClass(PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP);
 		createEReference(punkt_Objekt_Strecke_AttributeGroupEClass, PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__ID_STRECKE);
+		createEReference(punkt_Objekt_Strecke_AttributeGroupEClass, PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__KM_MASSGEBEND);
 		createEReference(punkt_Objekt_Strecke_AttributeGroupEClass, PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__STRECKE_KM);
 
 		punkt_Objekt_TOP_Kante_AttributeGroupEClass = createEClass(PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP);
 		createEReference(punkt_Objekt_TOP_Kante_AttributeGroupEClass, PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND);
+		createEReference(punkt_Objekt_TOP_Kante_AttributeGroupEClass, PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET);
 		createEReference(punkt_Objekt_TOP_Kante_AttributeGroupEClass, PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDTOP_KANTE);
 		createEReference(punkt_Objekt_TOP_Kante_AttributeGroupEClass, PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__WIRKRICHTUNG);
 		createEReference(punkt_Objekt_TOP_Kante_AttributeGroupEClass, PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__SEITLICHE_LAGE);
@@ -2744,6 +2879,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		// Create enums
 		enumAnhangArtEEnum = createEEnum(ENUM_ANHANG_ART);
 		enumBestandsrelevanzEEnum = createEEnum(ENUM_BESTANDSRELEVANZ);
+		enumbvDarstellungInPlanEEnum = createEEnum(ENUMBV_DARSTELLUNG_IN_PLAN);
 		enumDateitypEEnum = createEEnum(ENUM_DATEITYP);
 		enumlstObjektArtEEnum = createEEnum(ENUMLST_OBJEKT_ART);
 		enumObjektzustandBesondersEEnum = createEEnum(ENUM_OBJEKTZUSTAND_BESONDERS);
@@ -2751,13 +2887,14 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 
 		// Create data types
 		abstand_TypeEDataType = createEDataType(ABSTAND_TYPE);
-		bearbeitungsvermerk_Kennung_TypeEDataType = createEDataType(BEARBEITUNGSVERMERK_KENNUNG_TYPE);
 		begrenzung_A_TypeEDataType = createEDataType(BEGRENZUNG_ATYPE);
 		begrenzung_B_TypeEDataType = createEDataType(BEGRENZUNG_BTYPE);
 		beschreibung_TypeEDataType = createEDataType(BESCHREIBUNG_TYPE);
+		bV_Kategorie_TypeEDataType = createEDataType(BV_KATEGORIE_TYPE);
 		dB_GDI_Referenz_TypeEDataType = createEDataType(DB_GDI_REFERENZ_TYPE);
 		enumAnhangArtObjectEDataType = createEDataType(ENUM_ANHANG_ART_OBJECT);
 		enumBestandsrelevanzObjectEDataType = createEDataType(ENUM_BESTANDSRELEVANZ_OBJECT);
+		enumbvDarstellungInPlanObjectEDataType = createEDataType(ENUMBV_DARSTELLUNG_IN_PLAN_OBJECT);
 		enumDateitypObjectEDataType = createEDataType(ENUM_DATEITYP_OBJECT);
 		enumlstObjektArtObjectEDataType = createEDataType(ENUMLST_OBJEKT_ART_OBJECT);
 		enumObjektzustandBesondersObjectEDataType = createEDataType(ENUM_OBJEKTZUSTAND_BESONDERS_OBJECT);
@@ -2815,7 +2952,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		anhang_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		basis_ObjektEClass.getESuperTypes().add(this.getUr_Objekt());
 		bearbeitungsvermerkEClass.getESuperTypes().add(this.getUr_Objekt());
-		bearbeitungsvermerk_Kennung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bearbeitungsvermerk_Rolle_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		begrenzung_A_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		begrenzung_B_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -2823,12 +2959,14 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		beschreibung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bestandsrelevanz_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bestandsschutz_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		bV_Darstellung_In_Plan_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		bV_Kategorie_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		dateiname_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		dateityp_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		daten_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		datum_Regelwerk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		dB_GDI_Referenz_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		identitaet_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		km_Massgebend_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		kommentar_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		kurztext_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		lieferobjektEClass.getESuperTypes().add(this.getBasis_Objekt());
@@ -2862,14 +3000,14 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		initEReference(getAnhang_Allg_AttributeGroup_AnhangArt(), this.getAnhang_Art_TypeClass(), null, "anhangArt", null, 1, 1, Anhang_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnhang_Allg_AttributeGroup_Dateiname(), this.getDateiname_TypeClass(), null, "dateiname", null, 1, 1, Anhang_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnhang_Allg_AttributeGroup_Dateityp(), this.getDateityp_TypeClass(), null, "dateityp", null, 1, 1, Anhang_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAnhang_Allg_AttributeGroup_Daten(), this.getDaten_TypeClass(), null, "daten", null, 0, 1, Anhang_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(anhang_Art_TypeClassEClass, Anhang_Art_TypeClass.class, "Anhang_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnhang_Art_TypeClass_Wert(), this.getENUMAnhangArtObject(), "wert", null, 1, 1, Anhang_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(basis_ObjektEClass, Basis_Objekt.class, "Basis_Objekt", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBasis_Objekt_BasisObjektAllg(), this.getBasis_Objekt_Allg_AttributeGroup(), null, "basisObjektAllg", null, 1, 1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBasis_Objekt_IDBearbeitungsvermerk(), this.getBearbeitungsvermerk(), null, "iDBearbeitungsvermerk", null, 0, -1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBasis_Objekt_IDBearbeitungsvermerk(), theBasisTypenPackage.getID_Bearbeitungsvermerk_TypeClass(), null, "iDBearbeitungsvermerk", null, 0, -1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBasis_Objekt_IDOertlichkeitAusgabe(), theGeodatenPackage.getOertlichkeit(), null, "iDOertlichkeitAusgabe", null, 0, 1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBasis_Objekt_Objektreferenzen(), this.getObjektreferenzen_AttributeGroup(), null, "objektreferenzen", null, 0, 1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(basis_Objekt_Allg_AttributeGroupEClass, Basis_Objekt_Allg_AttributeGroup.class, "Basis_Objekt_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2883,15 +3021,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		initEReference(getBearbeitungsvermerk_IDAnhang(), this.getAnhang(), null, "iDAnhang", null, 0, -1, Bearbeitungsvermerk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bearbeitungsvermerk_Allg_AttributeGroupEClass, Bearbeitungsvermerk_Allg_AttributeGroup.class, "Bearbeitungsvermerk_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkKennung(), this.getBearbeitungsvermerk_Kennung_TypeClass(), null, "bearbeitungsvermerkKennung", null, 0, 1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkRolle(), this.getBearbeitungsvermerk_Rolle_TypeClass(), null, "bearbeitungsvermerkRolle", null, 1, 1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_Bestandsrelevanz(), this.getBestandsrelevanz_TypeClass(), null, "bestandsrelevanz", null, 0, 1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_BVDarstellungInPlan(), this.getBV_Darstellung_In_Plan_TypeClass(), null, "bVDarstellungInPlan", null, 0, -1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_BVKategorie(), this.getBV_Kategorie_TypeClass(), null, "bVKategorie", null, 0, 1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_Kommentar(), this.getKommentar_TypeClass(), null, "kommentar", null, 1, 1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_Kurztext(), this.getKurztext_TypeClass(), null, "kurztext", null, 0, 1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBearbeitungsvermerk_Allg_AttributeGroup_ZeitBearbeitungsvermerk(), this.getZeit_Bearbeitungsvermerk_TypeClass(), null, "zeitBearbeitungsvermerk", null, 1, 1, Bearbeitungsvermerk_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(bearbeitungsvermerk_Kennung_TypeClassEClass, Bearbeitungsvermerk_Kennung_TypeClass.class, "Bearbeitungsvermerk_Kennung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBearbeitungsvermerk_Kennung_TypeClass_Wert(), this.getBearbeitungsvermerk_Kennung_Type(), "wert", null, 1, 1, Bearbeitungsvermerk_Kennung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bearbeitungsvermerk_Rolle_TypeClassEClass, Bearbeitungsvermerk_Rolle_TypeClass.class, "Bearbeitungsvermerk_Rolle_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBearbeitungsvermerk_Rolle_TypeClass_Wert(), this.getENUMRolleObject(), "wert", null, 1, 1, Bearbeitungsvermerk_Rolle_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2920,14 +3056,17 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		initEClass(bestandsschutz_TypeClassEClass, Bestandsschutz_TypeClass.class, "Bestandsschutz_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBestandsschutz_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Bestandsschutz_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(bV_Darstellung_In_Plan_TypeClassEClass, BV_Darstellung_In_Plan_TypeClass.class, "BV_Darstellung_In_Plan_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBV_Darstellung_In_Plan_TypeClass_Wert(), this.getENUMBVDarstellungInPlanObject(), "wert", null, 1, 1, BV_Darstellung_In_Plan_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(bV_Kategorie_TypeClassEClass, BV_Kategorie_TypeClass.class, "BV_Kategorie_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBV_Kategorie_TypeClass_Wert(), this.getBV_Kategorie_Type(), "wert", null, 1, 1, BV_Kategorie_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(dateiname_TypeClassEClass, Dateiname_TypeClass.class, "Dateiname_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDateiname_TypeClass_Wert(), theBasisTypenPackage.getDateiname_Type(), "wert", null, 1, 1, Dateiname_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dateityp_TypeClassEClass, Dateityp_TypeClass.class, "Dateityp_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDateityp_TypeClass_Wert(), this.getENUMDateitypObject(), "wert", null, 1, 1, Dateityp_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(daten_TypeClassEClass, Daten_TypeClass.class, "Daten_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDaten_TypeClass_Wert(), theXMLTypePackage.getBase64Binary(), "wert", null, 1, 1, Daten_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(datum_Regelwerk_TypeClassEClass, Datum_Regelwerk_TypeClass.class, "Datum_Regelwerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDatum_Regelwerk_TypeClass_Wert(), theXMLTypePackage.getDate(), "wert", null, 1, 1, Datum_Regelwerk_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2938,6 +3077,9 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		initEClass(identitaet_TypeClassEClass, Identitaet_TypeClass.class, "Identitaet_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentitaet_TypeClass_Wert(), this.getIdentitaet_Type(), "wert", null, 1, 1, Identitaet_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(km_Massgebend_TypeClassEClass, Km_Massgebend_TypeClass.class, "Km_Massgebend_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKm_Massgebend_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Km_Massgebend_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(kommentar_TypeClassEClass, Kommentar_TypeClass.class, "Kommentar_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKommentar_TypeClass_Wert(), this.getKommentar_Type(), "wert", null, 1, 1, Kommentar_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2945,10 +3087,11 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		initEAttribute(getKurztext_TypeClass_Wert(), this.getKurztext_Type(), "wert", null, 1, 1, Kurztext_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lieferobjektEClass, Lieferobjekt.class, "Lieferobjekt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLieferobjekt_Beschreibung(), this.getBeschreibung_TypeClass(), null, "beschreibung", null, 1, 1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLieferobjekt_Beschreibung(), this.getBeschreibung_TypeClass(), null, "beschreibung", null, 0, 1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLieferobjekt_IDGEOPunkt(), theGeodatenPackage.getGEO_Punkt(), null, "iDGEOPunkt", null, 0, -1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLieferobjekt_IDLOEinbau(), this.getBasis_Objekt(), null, "iDLOEinbau", null, 1, -1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLieferobjekt_LOErsatz(), this.getLO_Ersatz_TypeClass(), null, "lOErsatz", null, 1, 1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLieferobjekt_LOMaterial(), this.getLO_Material_AttributeGroup(), null, "lOMaterial", null, 1, 1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLieferobjekt_LOErsatz(), this.getLO_Ersatz_TypeClass(), null, "lOErsatz", null, 0, 1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLieferobjekt_LOMaterial(), this.getLO_Material_AttributeGroup(), null, "lOMaterial", null, 0, 1, Lieferobjekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lO_Ausgabestand_TypeClassEClass, LO_Ausgabestand_TypeClass.class, "LO_Ausgabestand_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLO_Ausgabestand_TypeClass_Wert(), this.getLO_Ausgabestand_Type(), "wert", null, 1, 1, LO_Ausgabestand_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2998,10 +3141,12 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 
 		initEClass(punkt_Objekt_Strecke_AttributeGroupEClass, Punkt_Objekt_Strecke_AttributeGroup.class, "Punkt_Objekt_Strecke_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPunkt_Objekt_Strecke_AttributeGroup_IDStrecke(), theGeodatenPackage.getStrecke(), null, "iDStrecke", null, 1, 1, Punkt_Objekt_Strecke_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPunkt_Objekt_Strecke_AttributeGroup_KmMassgebend(), this.getKm_Massgebend_TypeClass(), null, "kmMassgebend", null, 0, 1, Punkt_Objekt_Strecke_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPunkt_Objekt_Strecke_AttributeGroup_StreckeKm(), this.getStrecke_Km_TypeClass(), null, "streckeKm", null, 1, 1, Punkt_Objekt_Strecke_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(punkt_Objekt_TOP_Kante_AttributeGroupEClass, Punkt_Objekt_TOP_Kante_AttributeGroup.class, "Punkt_Objekt_TOP_Kante_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPunkt_Objekt_TOP_Kante_AttributeGroup_Abstand(), this.getAbstand_TypeClass(), null, "abstand", null, 1, 1, Punkt_Objekt_TOP_Kante_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPunkt_Objekt_TOP_Kante_AttributeGroup_IDGEOPunktBerechnet(), theGeodatenPackage.getGEO_Punkt(), null, "iDGEOPunktBerechnet", null, 0, -1, Punkt_Objekt_TOP_Kante_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPunkt_Objekt_TOP_Kante_AttributeGroup_IDTOPKante(), theGeodatenPackage.getTOP_Kante(), null, "iDTOPKante", null, 1, 1, Punkt_Objekt_TOP_Kante_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPunkt_Objekt_TOP_Kante_AttributeGroup_Wirkrichtung(), this.getWirkrichtung_TypeClass(), null, "wirkrichtung", null, 0, 1, Punkt_Objekt_TOP_Kante_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPunkt_Objekt_TOP_Kante_AttributeGroup_SeitlicheLage(), this.getSeitliche_Lage_TypeClass(), null, "seitlicheLage", null, 0, 1, Punkt_Objekt_TOP_Kante_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3048,32 +3193,93 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_UEBERTRAGUNGSWEGEPLAN);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_DWS);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_ERLAEUTERUNGSBERICHT);
-		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_PLANVERZEICHNIS);
-		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_PRUEFBERICHT);
-		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_REGELWERKSSTAND_BESONDERS);
-		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_VZ_G);
-		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_ZN_RAUMPLAN_BEDIENRAUM);
-		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_ZN_RAUMPLAN_RECHNERRAUM);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_GEO);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_INA);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_MOEBELAUFSTELLPLAN_AUFRISS);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_MOEBELAUFSTELLPLAN_GRUNDRISS);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_MONITORAUFTEILUNG);
+		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_PLANVERZEICHNIS);
+		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_PRUEFBERICHT);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_RAUMPLAN_BEDIENRAEUME);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_RAUMPLAN_RECHNERRAEUME);
+		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_REGELWERKSSTAND_BESONDERS);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_RICHTUNGSSINN);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_SONSTIGE);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_STEUERBEZIRKSUEBERSICHT);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_UI_G);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_VORGABE);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_VORGABE_GBT);
+		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_VZ_G);
 		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_ZI_E);
+		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_ZN_RAUMPLAN_BEDIENRAUM);
+		addEEnumLiteral(enumAnhangArtEEnum, ENUMAnhangArt.ENUM_ANHANG_ART_ZN_RAUMPLAN_RECHNERRAUM);
 
 		initEEnum(enumBestandsrelevanzEEnum, ENUMBestandsrelevanz.class, "ENUMBestandsrelevanz");
 		addEEnumLiteral(enumBestandsrelevanzEEnum, ENUMBestandsrelevanz.ENUM_BESTANDSRELEVANZ_BESTANDSDATEN);
 		addEEnumLiteral(enumBestandsrelevanzEEnum, ENUMBestandsrelevanz.ENUM_BESTANDSRELEVANZ_BESTANDSDOKUMENTATION);
 		addEEnumLiteral(enumBestandsrelevanzEEnum, ENUMBestandsrelevanz.ENUM_BESTANDSRELEVANZ_DAUERHAFT);
 		addEEnumLiteral(enumBestandsrelevanzEEnum, ENUMBestandsrelevanz.ENUM_BESTANDSRELEVANZ_NEIN);
+
+		initEEnum(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.class, "ENUMBVDarstellungInPlan");
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ANLAGENTABELLE_TRANSITION);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_BALISENPRÜFPROTOKOLL);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_BEDIENEINRICHTUNGSTABELLE_BU);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_BEDIENEINRICHTUNGSTABELLE_STW);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_BU_ABHÄNGIGKEITSTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_BU_KABELLAGE_UND_UBERSICHTSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_BU_KABELÜBERSICHTSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_BU_LAGEPLAN_NTG);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_DEADLOCK_TABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_DURCHRUTSCHWEG_UND_GEFAHRPUNKTTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ELEMENTANSTEUERTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ESG_DATENPUNKTTABELLE_1);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ESG_DATENPUNKTTABELLE_2);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ESG_DATENPUNKTTABELLE_3);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ETCS_MELDE_UND_KOMMANDOANSCHALTUNG_SIGNALE_MUKA_SIGNALE_);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ETCS_MELDE_UND_KOMMANDOANSCHALTUNG_WEICHEN_MUKA_WEICHEN_);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ETCS_DATENPUNKTTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_FLANKENSCHUTZTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_FREIMELDETABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_GFR_PLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_GLEISFREIMELDEPLAN_FÜR_GLEISSTROMKREISE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_GLEISMAGNETTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_GLEISSCHALTMITTELTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_INSELGLEISTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_KABELLAGEPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_KABELÜBERSICHTSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_LEU_TABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_MELDEDRUCKTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_NAHBEDIENUNGSTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_RANGIERSTRASSENTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SCHLOSSTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SICHERUNGSTECHNISCHER_KREUZUNGSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SICHERUNGSTECHNISCHER_LAGEPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SICHERUNGSTECHNISCHER_UBERSICHTSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SICHERUNGSTECHNISCHER_UBERSICHTSPLAN_BU);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SIGNAL_UND_SCHUTZSTRECKENTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SIGNALTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_SONSTIGE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_STAMMKABELÜBERSICHTSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_STATISCHE_STRECKENEIGENSCHAFTEN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_STRECKENBLOCKTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_TABELLE_DER_ANEINANDERGEREIHTEN_FAHRSTRASSEN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_TABELLE_DER_ATO_SEGMENT_PROFILES);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_TABELLE_DER_ATO_TIMING_POINTS);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_TABELLE_DER_ATO_TS_INSTANZEN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_TABELLE_DER_EIN_UND_AUSSTIEGE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_TABELLE_DER_TECHNIK_UND_BEDIENSTANDORTE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_UBERTRAGUNGSWEGTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_WEICHENLAUFKETTENTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_WEICHENTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZBS_DATENPUNKTTABELLE_1);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZBS_DATENPUNKTTABELLE_2);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZBS_DATENPUNKTTABELLE_3);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZL_ANSTOSSTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZLV_BUS_UBERSICHTSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZN_TABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZN_UBERSICHTSPLAN);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZUGSTRASSENTABELLE);
+		addEEnumLiteral(enumbvDarstellungInPlanEEnum, ENUMBVDarstellungInPlan.ENUMBV_DARSTELLUNG_IN_PLAN_ZWIESCHUTZWEICHENTABELLE);
 
 		initEEnum(enumDateitypEEnum, ENUMDateityp.class, "ENUMDateityp");
 		addEEnumLiteral(enumDateitypEEnum, ENUMDateityp.ENUM_DATEITYP_JPG);
@@ -3084,6 +3290,9 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 
 		initEEnum(enumlstObjektArtEEnum, ENUMLSTObjektArt.class, "ENUMLSTObjektArt");
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ANHANG);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ATO_SEGMENT_PROFILE);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ATO_TIMING_POINT);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ATO_TS_INSTANZ);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_AUSSENELEMENTANSTEUERUNG);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BAHNSTEIG_ANLAGE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BAHNSTEIG_DACH);
@@ -3102,8 +3311,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BEDIEN_PLATZ);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BEDIEN_STANDORT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BEDIEN_ZENTRALE);
-		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BEREICHSGRENZE);
-		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BINAERDATEI);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BINAERDATEN);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BLOCK_ANLAGE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BLOCK_ELEMENT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_BLOCK_STRECKE);
@@ -3127,6 +3335,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ESTW_ZENTRALEINHEIT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ETCS_KANTE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ETCS_KNOTEN);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ETCS_RICHTUNGSANZEIGE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ETCS_SIGNAL);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ETCS_WKR);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_EV_MODUL);
@@ -3165,12 +3374,14 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_GLEIS_FAHRBAHN);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_GLEIS_LICHTRAUM);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_GLEIS_SCHALTGRUPPE);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_HOEHENLINIE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_HOEHENPUNKT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_KABEL);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_KABEL_VERTEILPUNKT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_LEU_ANLAGE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_LEU_MODUL);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_LEU_SCHALTKASTEN);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_LIEFEROBJEKT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_LUFT_TELEGRAMM);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_MARKANTER_PUNKT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_NB);
@@ -3195,19 +3406,24 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_SCHRANKENANTRIEB);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_SIGNAL);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_SIGNAL_BEFESTIGUNG);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_SIGNAL_FANK_ZUORDNUNG);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_SIGNAL_RAHMEN);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_SIGNAL_SIGNALBEGRIFF);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_SONSTIGER_PUNKT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_STELL_BEREICH);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_STELLELEMENT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_STRECKE);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_STRECKE_BREMSWEG);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_STRECKE_PUNKT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_TECHNIK_STANDORT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_TECHNISCHER_BEREICH);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_TECHNISCHER_PUNKT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_TOP_KANTE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_TOP_KNOTEN);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_TRASSE_KANTE);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_TRASSE_KNOTEN);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_UEBERHOEHUNG);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_UEBERHOEHUNGSLINIE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_UEBERTRAGUNGSWEG);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_UNTERBRINGUNG);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_VERKEHRSZEICHEN);
@@ -3216,6 +3432,8 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_WKR_GSP_KOMPONENTE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_WEICHENLAUFKETTE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_WEICHENLAUFKETTE_ZUORDNUNG);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZBS_SCHUTZSTRECKE);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZBS_SIGNAL);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZL);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZL_DLP_ABSCHNITT);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZL_DLP_FSTR);
@@ -3224,6 +3442,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZL_SIGNALGRUPPE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZL_SIGNALGRUPPE_ZUORDNUNG);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZLV_BUS);
+		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZLV_BUS_BESONDERE_ANLAGE);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZLV_BUS_US_ZUORDNUNG);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZN);
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZN_AKUSTIK);
@@ -3238,25 +3457,30 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		addEEnumLiteral(enumlstObjektArtEEnum, ENUMLSTObjektArt.ENUMLST_OBJEKT_ART_ZUGEINWIRKUNG);
 
 		initEEnum(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.class, "ENUMObjektzustandBesonders");
-		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT);
-		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB);
-		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND);
+		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG);
+		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT);
+		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG);
+		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND);
 		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE);
+		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG);
+		addEEnumLiteral(enumObjektzustandBesondersEEnum, ENUMObjektzustandBesonders.ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG);
 
 		initEEnum(enumRolleEEnum, ENUMRolle.class, "ENUMRolle");
+		addEEnumLiteral(enumRolleEEnum, ENUMRolle.ENUM_ROLLE_GEO_PLANER);
 		addEEnumLiteral(enumRolleEEnum, ENUMRolle.ENUM_ROLLE_GIS_DATEN);
 		addEEnumLiteral(enumRolleEEnum, ENUMRolle.ENUM_ROLLE_LST_FACHPLANER);
 		addEEnumLiteral(enumRolleEEnum, ENUMRolle.ENUM_ROLLE_SONSTIGE);
 
 		// Initialize data types
 		initEDataType(abstand_TypeEDataType, BigDecimal.class, "Abstand_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(bearbeitungsvermerk_Kennung_TypeEDataType, String.class, "Bearbeitungsvermerk_Kennung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(begrenzung_A_TypeEDataType, BigDecimal.class, "Begrenzung_A_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(begrenzung_B_TypeEDataType, BigDecimal.class, "Begrenzung_B_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(beschreibung_TypeEDataType, String.class, "Beschreibung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(bV_Kategorie_TypeEDataType, String.class, "BV_Kategorie_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(dB_GDI_Referenz_TypeEDataType, String.class, "DB_GDI_Referenz_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumAnhangArtObjectEDataType, ENUMAnhangArt.class, "ENUMAnhangArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumBestandsrelevanzObjectEDataType, ENUMBestandsrelevanz.class, "ENUMBestandsrelevanzObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumbvDarstellungInPlanObjectEDataType, ENUMBVDarstellungInPlan.class, "ENUMBVDarstellungInPlanObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumDateitypObjectEDataType, ENUMDateityp.class, "ENUMDateitypObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumlstObjektArtObjectEDataType, ENUMLSTObjektArt.class, "ENUMLSTObjektArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumObjektzustandBesondersObjectEDataType, ENUMObjektzustandBesonders.class, "ENUMObjektzustandBesondersObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -3299,7 +3523,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (anhangEClass,
@@ -3326,12 +3550,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "documentation", "Format des Anhangs. Nur die im ENUM dargestellten Dateiarten k\u00f6nnen einer Planung angehangen werden. Andere Dateiarten sind aus Gr\u00fcnden der Nachpr\u00fcfbarkeit und der Transparenz nicht zul\u00e4ssig. "
 		   });
 		addAnnotation
-		  (getAnhang_Allg_AttributeGroup_Daten(),
-		   source,
-		   new String[] {
-			   "documentation", "Im base64-Format codierter Inhalt der Ursprungsdatei des Anhangs."
-		   });
-		addAnnotation
 		  (basis_ObjektEClass,
 		   source,
 		   new String[] {
@@ -3344,6 +3562,12 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "documentation", "Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird \u00fcber einen Bearbeitungsvermerk zugeordnet. "
 		   });
 		addAnnotation
+		  (getBasis_Objekt_IDOertlichkeitAusgabe(),
+		   source,
+		   new String[] {
+			   "documentation", "Verweis auf die Oertlichkeit (Betriebsstelle), der das Element zugeordnet wird. Die Angabe ist beispielsweise relevant f\u00fcr die Erzeugung der Ausgabeformate (Lagepl\u00e4ne, Tabellen)."
+		   });
+		addAnnotation
 		  (getBasis_Objekt_Allg_AttributeGroup_Bestandsschutz(),
 		   source,
 		   new String[] {
@@ -3353,19 +3577,19 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (getBasis_Objekt_Allg_AttributeGroup_ObjektzustandBesonders(),
 		   source,
 		   new String[] {
-			   "documentation", "Besonderer Zustand eines Objekts im Planungsbereich. Ist dieses Attribut nicht vorhanden, so ist das LST-Objekt \u201ein Betrieb\u201c. Die verwendeten ENUM-Werte haben folgende Bedeutung: abgedeckt: Objekt, das im Knoten-Kanten-Modell verortet bleibt, technisch weiterhin in Betrieb bleibt, jedoch seine betriebliche Funktion zeitweilig nicht mehr erf\u00fcllt (anderweitig au\u00dfer_Betrieb gesetzt, z. B. abgedeckte Signale [au\u00dfer_Betrieb mit besonderer Ma\u00dfnahme] oder Signale am Baugleis [au\u00dfer_Betrieb ohne besondere Ma\u00dfnahme]). ausser_Betrieb: Objekt, das im Knoten-Kanten-Modell verortet bleibt, aber seine betriebliche Funktion zeitweilig nicht mehr erf\u00fcllt und auch technisch au\u00dfer Betrieb gesetzt ist. ausser_Betrieb_vorbereitend: Objekt, das im Knoten-Kanten-Modell erstmalig neu verortet wird, aber seine betriebliche Funktion zeitweilig noch nicht erf\u00fcllt und auch technisch noch nicht in Betrieb gesetzt ist, jedoch zu einem sp\u00e4teren Zeitpunkt (z. B. nachfolgender Bauzustand) in Betrieb gesetzt werden soll. sonstige: Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. DB-Regelwerk Bisher keine eindeutige Abbildung, besonderer Objektzustand meist Fu\u00dfnoteneintrag in Planungsunterlagen."
+			   "documentation", "Besonderer Zustand eines Objekts im Planungsbereich. Ist dieses Attribut nicht vorhanden, so ist das Objekt am geplanten/vorgesehenen Standort und angesteuert. \"Nicht g\u00fcltig\" sind gem\u00e4\u00df Betra als nicht g\u00fcltig erkl\u00e4rte Signale im Baugleis [gem. Ril 819.1701 (11)]. \"Ung\u00fcltig\" sind betrieblich au\u00dfer Betrieb befindliche Signale, die mit einem Ung\u00fcltigkeitskreuz [gem. Ril 819.1701 (10)] versehen sind. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. DB-Regelwerk Bisher keine eindeutige Abbildung, besonderer Objektzustand meist Fu\u00dfnoteneintrag in Planungsunterlagen."
 		   });
 		addAnnotation
 		  (getBasis_Objekt_Allg_AttributeGroup_DatumRegelwerk(),
 		   source,
 		   new String[] {
-			   "documentation", "Datum des letzten Planungsstandes eines Objekts, Hinweis auf den Regelwerksstand zum Planungszeitpunkt. Erg\u00e4nzende Beschreibung zum Umgang im PlanPro-Planungsprozess Anhand des Regelwerksstandes lassen sich die jeweils g\u00fcltigen St\u00e4nde der verwendeten Regelwerke herleiten (wichtig f\u00fcr Bestandsschutz). Abweichungen werden auf Objektebene (Basis Objekt) \u00fcber das Attribut ID Anhang Regelwerk Besonders beigef\u00fcgt. Im Rahmen der Erstellung einer Planung_Einzel werden alle neuen und ge\u00e4nderten Objekte standardm\u00e4\u00dfig mit dem zentral einzugebenden Wert des Attributs \u201eDatum Regelwerksstand\u201c der Planung_Einzel bef\u00fcllt. Durch die Bef\u00fcllung d\u00fcrfen bereits vorhandene Angaben \u201eID_Anhang_Regelwerk_Besonders\u201c nicht \u00fcberschrieben werden. Bei Abweichungen kann der LST-Fachplaner objekt- oder objektgruppenbezogen \u201eID_Anhang_Regelwerk_Besonders\u201c f\u00fcllen. DB-Regelwerk Bisher ohne eindeutige Abbildung im Schriftfeld gem\u00e4\u00df Ril 819.0103. "
+			   "documentation", "Datum des letzten Planungsstandes eines Objekts, Hinweis auf den Regelwerksstand zum Planungszeitpunkt. Erg\u00e4nzende Beschreibung zum Umgang im PlanPro-Planungsprozess Anhand des Regelwerksstandes lassen sich die jeweils g\u00fcltigen St\u00e4nde der verwendeten Regelwerke herleiten (wichtig f\u00fcr Bestandsschutz). Abweichungen werden auf Objektebene (Basis Objekt) \u00fcber das Attribut ID Anhang Regelwerk Besonders beigef\u00fcgt. Im Rahmen der Erstellung einer Planung_Einzel werden alle neuen und ge\u00e4nderten Objekte standardm\u00e4\u00dfig mit dem zentral einzugebenden Wert des Attributs \u201eDatum Regelwerksstand\u201c der Planung_Einzel bef\u00fcllt. Durch die Bef\u00fcllung d\u00fcrfen bereits vorhandene Angaben \u201eID_Anhang_Regelwerk_Besonders\u201c nicht \u00fcberschrieben werden. Bei Abweichungen kann der LST-Fachplaner objekt- oder objektgruppenbezogen \u201eID_Anhang_Regelwerk_Besonders\u201c f\u00fcllen. DB-Regelwerk Bisher ohne eindeutige Abbildung im Schriftfeld gem\u00e4\u00df Ril 886.0102. "
 		   });
 		addAnnotation
 		  (getBasis_Objekt_Allg_AttributeGroup_IDAnhangRegelwerkBesonders(),
 		   source,
 		   new String[] {
-			   "documentation", "F\u00fcr das Objekt abweichend geltendes Regelwerk. Verweis auf einen Anhang, aus dem der besondere Regelwerksstand eines LST-Objektes hervorgeht. Dieser gilt abweichend von dem f\u00fcr die Planung_Einzel festgelegten Datum Regelwerksstand. Erg\u00e4nzende Beschreibung zum Umgang im PlanPro-Planungsprozess Im Schriftfeld gem\u00e4\u00df Ril 819.0103 dient Feld 30 \"Zus\u00e4tzliche Vermerke\" \u00fcblicherweise zur Angabe von Regelwerksabweichungen. DB-Regelwerk Bisher eine eindeutige Abbildung als Schriftfeldeintrag gem\u00e4\u00df Ril 819.0103. Meist Angabe im Erl\u00e4uterungsbericht. "
+			   "documentation", "F\u00fcr das Objekt abweichend geltendes Regelwerk. Verweis auf einen Anhang, aus dem der besondere Regelwerksstand eines LST-Objektes hervorgeht. Dieser gilt abweichend von dem f\u00fcr die Planung_Einzel festgelegten Datum Regelwerksstand. Erg\u00e4nzende Beschreibung zum Umgang im PlanPro-Planungsprozess Im Schriftfeld gem\u00e4\u00df Ril 886.0102 dient Feld 30 \"Zus\u00e4tzliche Vermerke\" \u00fcblicherweise zur Angabe von Regelwerksabweichungen. DB-Regelwerk Bisher eine eindeutige Abbildung als Schriftfeldeintrag gem\u00e4\u00df Ril 886.0102. Meist Angabe im Erl\u00e4uterungsbericht. "
 		   });
 		addAnnotation
 		  (bearbeitungsvermerkEClass,
@@ -3380,12 +3604,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "documentation", "Verweis auf den durch diesen Bearbeitungsvermerk referenzierten Anhang."
 		   });
 		addAnnotation
-		  (getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkKennung(),
-		   source,
-		   new String[] {
-			   "documentation", "Kennzeichnung, dass der Bearbeitungsvermerk f\u00fcr den Bestand (Bestandsdaten, Bestandspl\u00e4ne) relevant ist und deswegen \u00fcber das Planungsprojekt hinweg abzuspeichern ist. Heute: Angaben im Erl\u00e4uterungsbericht. Erg\u00e4nzende Beschreibung zum Umgang im PlanPro-Planungsprozess Alle bestandsrelevanten Bearbeitungsvermerke sollten vor Erstellung der Bestandsdaten nochmal durch den LST-Fachplaner gepr\u00fcft werden, da diese sich durch Einzelplanungen er\u00fcbrigt haben k\u00f6nnten. Nicht bestandsrelevante Bearbeitungsvermerke werden automatisch bei Erstellung der Bestandsdaten im Planungswerkzeug gel\u00f6scht. DB-Regelwerk Bisher ohne eindeutige Darstellung."
-		   });
-		addAnnotation
 		  (getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkRolle(),
 		   source,
 		   new String[] {
@@ -3395,7 +3613,19 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (getBearbeitungsvermerk_Allg_AttributeGroup_Bestandsrelevanz(),
 		   source,
 		   new String[] {
-			   "documentation", "Relevanz eines Bearbeitungsvermerks f\u00fcr die \u00dcbernahme in den Bestand (Bestandsdaten bzw. Bestandspl\u00e4ne).\n\nnein - Nur g\u00fcltig innerhalb einer Planungsgruppe. Der BV ist vor Erstellen der Bestandsdaten einer Planungsgruppe zu l\u00f6schen.\n\nBestandsdaten - G\u00fcltig innerhalb eines Planungsprojekts bis vor Erstellen einer Bestandsdokumentation, d. h. der BV kann in den Bestandsdaten enthalten bleiben, ist jedoch vor Erstellen einer Bestandsdokumentation zu l\u00f6schen.\n\nBestandsdokumentation - G\u00fcltig innerhalb eines Planungsprojekts bis vor Erstellen der letzten Bestandsdokumentation, d. h. der BV kann \u00fcber mehrere Planungsgruppen hinaus enthalten bleiben, ist jedoch vor Projektabschluss zu l\u00f6schen.\n\ndauerhaft - G\u00fcltig \u00fcber das Gesamtprojekt hinaus auch nach Erstellen der letzten Bestandsdokumentation.\nDer BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge\u00e4ndert/gel\u00f6scht werden."
+			   "documentation", "Relevanz eines Bearbeitungsvermerks f\u00fcr die \u00dcbernahme in den Bestand (Bestandsdaten bzw. Bestandspl\u00e4ne).\nnein - Nur g\u00fcltig innerhalb einer Planungsgruppe. Der BV ist vor Erstellen der Bestandsdaten einer Planungsgruppe zu l\u00f6schen.\nBestandsdaten - G\u00fcltig innerhalb eines Planungsprojekts bis vor Erstellen einer Bestandsdokumentation, d. h. der BV kann in den Bestandsdaten enthalten bleiben, ist jedoch vor Erstellen einer Bestandsdokumentation zu l\u00f6schen.\nBestandsdokumentation - G\u00fcltig innerhalb eines Planungsprojekts bis vor Erstellen der letzten Bestandsdokumentation, d. h. der BV kann \u00fcber mehrere Planungsgruppen hinaus enthalten bleiben, ist jedoch vor Projektabschluss zu l\u00f6schen.\ndauerhaft - G\u00fcltig \u00fcber das Gesamtprojekt hinaus auch nach Erstellen der letzten Bestandsdokumentation.\nDer BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  ge\u00e4ndert/gel\u00f6scht werden."
+		   });
+		addAnnotation
+		  (getBearbeitungsvermerk_Allg_AttributeGroup_BVDarstellungInPlan(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe des Plans, in dem der Bearbeitungsvermerk dargestellt werden soll."
+		   });
+		addAnnotation
+		  (getBearbeitungsvermerk_Allg_AttributeGroup_BVKategorie(),
+		   source,
+		   new String[] {
+			   "documentation", "Kategorisierung des Bearbeitungsvermerks zur Sortierung und Filterung (z. B. zur Ablage von Zusatzinformationen f\u00fcr besondere Anwendungsf\u00e4lle)"
 		   });
 		addAnnotation
 		  (getBearbeitungsvermerk_Allg_AttributeGroup_Kommentar(),
@@ -3455,7 +3685,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (getLieferobjekt_Beschreibung(),
 		   source,
 		   new String[] {
-			   "documentation", "Verbale Beschreibung des LO. \nDie Angabe soll als Beschreibung des Technischen Platzes in SAP R/3 Netz \u00fcbernommen werden. Die Bereitstellung der Bildungsvorschrift erfolgt gesondert."
+			   "documentation", "Verbale Beschreibung des LO. \nDie Angabe soll als Beschreibung des Technischen Platzes in SAP R/3 Netz \u00fcbernommen werden.\nDie Bereitstellung der Bildungsvorschrift erfolgt gesondert."
+		   });
+		addAnnotation
+		  (getLieferobjekt_IDGEOPunkt(),
+		   source,
+		   new String[] {
+			   "documentation", "Verweis auf einen GEO_Punkt zur Topologie-unabh\u00e4ngigen Lokalisierung des Lieferobjekts. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig."
 		   });
 		addAnnotation
 		  (getLieferobjekt_IDLOEinbau(),
@@ -3521,7 +3757,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (proxy_ObjektEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Hilfsobjekt zur S\u00e4ttigung von Verweisen an der \u00e4u\u00dferen Grenze des Betrachtungsbereichs einer Einzelplanung. Die Validierung einer XML-Datei ist nur gesamthaft m\u00f6glich. Somit m\u00fcssen Planungs- und Betrachtungsbereich gleicherma\u00dfen valide sein. An der \u00e4u\u00dferen Grenze des Betrachtungsbereichs sind jedoch u. U. nicht mehr alle Zielobjekte von Verweisen vorhanden, da der Betrachtungsbereich nicht beliebig ausgeweitet werden kann und soll. Unter der Ma\u00dfgabe einer validen XML besteht jedoch ein Zwang zur S\u00e4ttigung von Verweisen. Das Proxy_Objekt schafft diesbez\u00fcglich eine L\u00f6sung f\u00fcr alle Objekte des LST-Datenmodells. In den Bestandsdaten der LST-Datenbank d\u00fcrfen keine Proxyobjekte vorhanden sein. "
+			   "documentation", "Hilfsobjekt zur S\u00e4ttigung von Verweisen an der \u00e4u\u00dferen Grenze des Betrachtungsbereichs einer Einzelplanung. Die Validierung einer XML-Datei ist nur gesamthaft m\u00f6glich. Somit m\u00fcssen Planungs- und Betrachtungsbereich gleicherma\u00dfen valide sein. An der \u00e4u\u00dferen Grenze des Betrachtungsbereichs sind jedoch u. U. nicht mehr alle Zielobjekte von Verweisen vorhanden, da der Betrachtungsbereich nicht beliebig ausgeweitet werden kann und soll. Unter der Ma\u00dfgabe einer validen XML besteht jedoch ein Zwang zur S\u00e4ttigung von Verweisen. Das Proxy_Objekt schafft diesbez\u00fcglich eine L\u00f6sung f\u00fcr alle Objekte des LST-Datenmodells. In den Bestandsdaten der LST-Datenbank d\u00fcrfen keine Proxyobjekte vorhanden sein."
 		   });
 		addAnnotation
 		  (getProxy_Objekt_LSTObjektArt(),
@@ -3554,6 +3790,12 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "documentation", "Zuordnung eines Punktobjektes zu einer Streckennummer."
 		   });
 		addAnnotation
+		  (getPunkt_Objekt_Strecke_AttributeGroup_KmMassgebend(),
+		   source,
+		   new String[] {
+			   "documentation", "Kennzeichnung der ma\u00dfgebenden Kilometrierung (\"true\") bei Referenz zu mehreren Strecken."
+		   });
+		addAnnotation
 		  (getPunkt_Objekt_Strecke_AttributeGroup_StreckeKm(),
 		   source,
 		   new String[] {
@@ -3564,6 +3806,12 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   source,
 		   new String[] {
 			   "documentation", "Abstand des Objekts vom Knoten A bezogen auf TOP_Kante in Metern. DB-Regelwerk Darstellung im sicherungstechnischen Lageplan"
+		   });
+		addAnnotation
+		  (getPunkt_Objekt_TOP_Kante_AttributeGroup_IDGEOPunktBerechnet(),
+		   source,
+		   new String[] {
+			   "documentation", "Verweis auf einen GEO_Punkt zur Angabe von berechneten Objekt-Koordinaten. Diese werden auf Basis der Soll-Gleislage und der im Punktobjekt vorgegebenen Abst\u00e4nde ermittelt und sind f\u00fcr Bau und Abnahme ma\u00dfgebend. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig."
 		   });
 		addAnnotation
 		  (getPunkt_Objekt_TOP_Kante_AttributeGroup_IDTOPKante(),
@@ -3676,13 +3924,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "name", "Dateityp"
 		   });
 		addAnnotation
-		  (getAnhang_Allg_AttributeGroup_Daten(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Daten"
-		   });
-		addAnnotation
 		  (anhang_Art_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -3716,6 +3957,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   new String[] {
 			   "kind", "element",
 			   "name", "ID_Bearbeitungsvermerk"
+		   });
+		addAnnotation
+		  (getBasis_Objekt_IDOertlichkeitAusgabe(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_Oertlichkeit_Ausgabe"
 		   });
 		addAnnotation
 		  (getBasis_Objekt_Objektreferenzen(),
@@ -3788,13 +4036,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkKennung(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Bearbeitungsvermerk_Kennung"
-		   });
-		addAnnotation
 		  (getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkRolle(),
 		   source,
 		   new String[] {
@@ -3807,6 +4048,20 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   new String[] {
 			   "kind", "element",
 			   "name", "Bestandsrelevanz"
+		   });
+		addAnnotation
+		  (getBearbeitungsvermerk_Allg_AttributeGroup_BVDarstellungInPlan(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "BV_Darstellung_In_Plan"
+		   });
+		addAnnotation
+		  (getBearbeitungsvermerk_Allg_AttributeGroup_BVKategorie(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "BV_Kategorie"
 		   });
 		addAnnotation
 		  (getBearbeitungsvermerk_Allg_AttributeGroup_Kommentar(),
@@ -3828,27 +4083,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   new String[] {
 			   "kind", "element",
 			   "name", "Zeit_Bearbeitungsvermerk"
-		   });
-		addAnnotation
-		  (bearbeitungsvermerk_Kennung_TypeEDataType,
-		   source,
-		   new String[] {
-			   "name", "TBearbeitungsvermerk_Kennung",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TZeichenkette"
-		   });
-		addAnnotation
-		  (bearbeitungsvermerk_Kennung_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCBearbeitungsvermerk_Kennung",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getBearbeitungsvermerk_Kennung_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
 		   });
 		addAnnotation
 		  (bearbeitungsvermerk_Rolle_TypeClassEClass,
@@ -4007,6 +4241,41 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (bV_Darstellung_In_Plan_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCBV_Darstellung_In_Plan",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getBV_Darstellung_In_Plan_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (bV_Kategorie_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TBV_Kategorie",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
+		   });
+		addAnnotation
+		  (bV_Kategorie_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCBV_Kategorie",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getBV_Kategorie_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (dateiname_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -4029,20 +4298,6 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   });
 		addAnnotation
 		  (getDateityp_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
-		  (daten_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCDaten",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getDaten_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -4109,6 +4364,19 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   new String[] {
 			   "name", "ENUMBestandsrelevanz:Object",
 			   "baseType", "ENUMBestandsrelevanz"
+		   });
+		addAnnotation
+		  (enumbvDarstellungInPlanEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMBV_Darstellung_In_Plan"
+		   });
+		addAnnotation
+		  (enumbvDarstellungInPlanObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMBV_Darstellung_In_Plan:Object",
+			   "baseType", "ENUMBV_Darstellung_In_Plan"
 		   });
 		addAnnotation
 		  (enumDateitypEEnum,
@@ -4184,6 +4452,20 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (km_Massgebend_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCKm_Massgebend",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getKm_Massgebend_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (kommentar_TypeEDataType,
 		   source,
 		   new String[] {
@@ -4239,6 +4521,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   new String[] {
 			   "kind", "element",
 			   "name", "Beschreibung"
+		   });
+		addAnnotation
+		  (getLieferobjekt_IDGEOPunkt(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_GEO_Punkt"
 		   });
 		addAnnotation
 		  (getLieferobjekt_IDLOEinbau(),
@@ -4542,6 +4831,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 			   "name", "ID_Strecke"
 		   });
 		addAnnotation
+		  (getPunkt_Objekt_Strecke_AttributeGroup_KmMassgebend(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Km_Massgebend"
+		   });
+		addAnnotation
 		  (getPunkt_Objekt_Strecke_AttributeGroup_StreckeKm(),
 		   source,
 		   new String[] {
@@ -4561,6 +4857,13 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		   new String[] {
 			   "kind", "element",
 			   "name", "Abstand"
+		   });
+		addAnnotation
+		  (getPunkt_Objekt_TOP_Kante_AttributeGroup_IDGEOPunktBerechnet(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_GEO_Punkt_Berechnet"
 		   });
 		addAnnotation
 		  (getPunkt_Objekt_TOP_Kante_AttributeGroup_IDTOPKante(),
@@ -4753,7 +5056,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (anhangEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|B\u00dc|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (basis_ObjektEClass,
@@ -4765,7 +5068,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (bearbeitungsvermerkEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|B\u00dc|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getBearbeitungsvermerk_Allg_AttributeGroup_Kurztext(),
@@ -4795,7 +5098,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (lieferobjektEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|B\u00dc|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getObjektreferenzen_AttributeGroup_DBGDIReferenz(),
@@ -4813,7 +5116,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 		  (proxy_ObjektEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ATO|Bedienung ETCS|Bedienung Fdl BZ|Bedienung Fdl ESTW-ZE|B\u00dc|ESTW|ETCS|Geo|sonstige|ZL|ZLV-Bus|ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (punkt_ObjektEClass,

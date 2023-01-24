@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -10,7 +17,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Örtliche Höhe des Bezugspunkts gemäß des Höhensystems. Liegt der Höhenpunkt innerhalb des zugehörigen Gleises, wird dieser mit einem Seitlichen Abstand im Punkt_Objekt von 0.000 angegeben und gibt die Höhe des Gleises in Meter gemäß Höhensystem an. Wird eine seitlicher Abstand ungleich 0.000 angegeben, so handelt es sich um einen sonstigen Höhenpunkt, der nicht die Höhenlage des Gleises angibt. Ein Höhenpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten.
+ * Örtliche Höhe des Bezugspunkts in Metern gemäß Höhensystem. Liegt der Höhenpunkt innerhalb des zugehörigen Gleises, entfällt die Angabe eines seitlichen Abstands bzw. einer seitlichen Lage. Wird ein seitlicher Abstand ungleich 0.000 angegeben, so handelt es sich um einen sonstigen Höhenpunkt, der nicht die Höhenlage des Gleises angibt. Ein Höhenpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten.
  * <!-- end-model-doc -->
  *
  * <p>

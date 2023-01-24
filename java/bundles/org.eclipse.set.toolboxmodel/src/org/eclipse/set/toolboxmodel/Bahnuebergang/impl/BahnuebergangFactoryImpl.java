@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.impl;
 
@@ -141,6 +148,7 @@ public class BahnuebergangFactoryImpl extends EFactoryImpl implements Bahnueberg
 			case BahnuebergangPackage.GFR_TYP_TYPE_CLASS: return createGFR_Typ_TypeClass();
 			case BahnuebergangPackage.GITTERBEHANG_TYPE_CLASS: return createGitterbehang_TypeClass();
 			case BahnuebergangPackage.GLEIS_AM_BUE_TYPE_CLASS: return createGleis_Am_Bue_TypeClass();
+			case BahnuebergangPackage.HALTEZEIT_TYPE_CLASS: return createHaltezeit_TypeClass();
 			case BahnuebergangPackage.HERSTELLER_TYPE_CLASS: return createHersteller_TypeClass();
 			case BahnuebergangPackage.HP_ERSATZSTECKER_TYPE_CLASS: return createHp_Ersatzstecker_TypeClass();
 			case BahnuebergangPackage.KLASSIFIZIERUNG_TYPE_CLASS: return createKlassifizierung_TypeClass();
@@ -332,6 +340,8 @@ public class BahnuebergangFactoryImpl extends EFactoryImpl implements Bahnueberg
 				return createGFR_Typ_TypeFromString(eDataType, initialValue);
 			case BahnuebergangPackage.GLEIS_AM_BUE_TYPE:
 				return createGleis_Am_Bue_TypeFromString(eDataType, initialValue);
+			case BahnuebergangPackage.HALTEZEIT_TYPE:
+				return createHaltezeit_TypeFromString(eDataType, initialValue);
 			case BahnuebergangPackage.KONTRASTBLENDE_TYPE:
 				return createKontrastblende_TypeFromString(eDataType, initialValue);
 			case BahnuebergangPackage.KONTRASTBLENDE_TYPE_OBJECT:
@@ -541,6 +551,8 @@ public class BahnuebergangFactoryImpl extends EFactoryImpl implements Bahnueberg
 				return convertGFR_Typ_TypeToString(eDataType, instanceValue);
 			case BahnuebergangPackage.GLEIS_AM_BUE_TYPE:
 				return convertGleis_Am_Bue_TypeToString(eDataType, instanceValue);
+			case BahnuebergangPackage.HALTEZEIT_TYPE:
+				return convertHaltezeit_TypeToString(eDataType, instanceValue);
 			case BahnuebergangPackage.KONTRASTBLENDE_TYPE:
 				return convertKontrastblende_TypeToString(eDataType, instanceValue);
 			case BahnuebergangPackage.KONTRASTBLENDE_TYPE_OBJECT:
@@ -1412,6 +1424,17 @@ public class BahnuebergangFactoryImpl extends EFactoryImpl implements Bahnueberg
 	public Gleis_Am_Bue_TypeClass createGleis_Am_Bue_TypeClass() {
 		Gleis_Am_Bue_TypeClassImpl gleis_Am_Bue_TypeClass = new Gleis_Am_Bue_TypeClassImpl();
 		return gleis_Am_Bue_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Haltezeit_TypeClass createHaltezeit_TypeClass() {
+		Haltezeit_TypeClassImpl haltezeit_TypeClass = new Haltezeit_TypeClassImpl();
+		return haltezeit_TypeClass;
 	}
 
 	/**
@@ -3177,6 +3200,24 @@ public class BahnuebergangFactoryImpl extends EFactoryImpl implements Bahnueberg
 	 */
 	public String convertGleis_Am_Bue_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createHaltezeit_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.SEKUNDE_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertHaltezeit_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.SEKUNDE_TYPE, instanceValue);
 	}
 
 	/**

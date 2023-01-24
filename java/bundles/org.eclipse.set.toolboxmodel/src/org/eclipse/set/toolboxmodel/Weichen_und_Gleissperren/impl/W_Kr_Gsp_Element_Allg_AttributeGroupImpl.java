@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl;
 
@@ -11,6 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Vorzugslage_Automatik_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Stellart_TypeClass;
@@ -24,6 +32,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_Gleissp
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.W_Kr_Gsp_Element_Allg_AttributeGroupImpl#getKrKrWSeitenzuordnung <em>Kr Kr WSeitenzuordnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.W_Kr_Gsp_Element_Allg_AttributeGroupImpl#getVorzugslageAutomatik <em>Vorzugslage Automatik</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.W_Kr_Gsp_Element_Allg_AttributeGroupImpl#getWKrGspStellart <em>WKr Gsp Stellart</em>}</li>
  * </ul>
@@ -31,6 +40,16 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_Gleissp
  * @generated
  */
 public class W_Kr_Gsp_Element_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements W_Kr_Gsp_Element_Allg_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getKrKrWSeitenzuordnung() <em>Kr Kr WSeitenzuordnung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKrKrWSeitenzuordnung()
+	 * @generated
+	 * @ordered
+	 */
+	protected Kr_KrW_Seitenzuordnung_TypeClass krKrWSeitenzuordnung;
+
 	/**
 	 * The cached value of the '{@link #getVorzugslageAutomatik() <em>Vorzugslage Automatik</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -68,6 +87,51 @@ public class W_Kr_Gsp_Element_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	protected EClass eStaticClass() {
 		return Weichen_und_GleissperrenPackage.Literals.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Kr_KrW_Seitenzuordnung_TypeClass getKrKrWSeitenzuordnung() {
+		return krKrWSeitenzuordnung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetKrKrWSeitenzuordnung(Kr_KrW_Seitenzuordnung_TypeClass newKrKrWSeitenzuordnung, NotificationChain msgs) {
+		Kr_KrW_Seitenzuordnung_TypeClass oldKrKrWSeitenzuordnung = krKrWSeitenzuordnung;
+		krKrWSeitenzuordnung = newKrKrWSeitenzuordnung;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG, oldKrKrWSeitenzuordnung, newKrKrWSeitenzuordnung);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setKrKrWSeitenzuordnung(Kr_KrW_Seitenzuordnung_TypeClass newKrKrWSeitenzuordnung) {
+		if (newKrKrWSeitenzuordnung != krKrWSeitenzuordnung) {
+			NotificationChain msgs = null;
+			if (krKrWSeitenzuordnung != null)
+				msgs = ((InternalEObject)krKrWSeitenzuordnung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG, null, msgs);
+			if (newKrKrWSeitenzuordnung != null)
+				msgs = ((InternalEObject)newKrKrWSeitenzuordnung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG, null, msgs);
+			msgs = basicSetKrKrWSeitenzuordnung(newKrKrWSeitenzuordnung, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG, newKrKrWSeitenzuordnung, newKrKrWSeitenzuordnung));
 	}
 
 	/**
@@ -168,6 +232,8 @@ public class W_Kr_Gsp_Element_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG:
+				return basicSetKrKrWSeitenzuordnung(null, msgs);
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK:
 				return basicSetVorzugslageAutomatik(null, msgs);
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__WKR_GSP_STELLART:
@@ -185,6 +251,8 @@ public class W_Kr_Gsp_Element_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG:
+				return getKrKrWSeitenzuordnung();
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK:
 				return getVorzugslageAutomatik();
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__WKR_GSP_STELLART:
@@ -202,6 +270,9 @@ public class W_Kr_Gsp_Element_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG:
+				setKrKrWSeitenzuordnung((Kr_KrW_Seitenzuordnung_TypeClass)newValue);
+				return;
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK:
 				setVorzugslageAutomatik((Vorzugslage_Automatik_TypeClass)newValue);
 				return;
@@ -222,6 +293,9 @@ public class W_Kr_Gsp_Element_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG:
+				setKrKrWSeitenzuordnung((Kr_KrW_Seitenzuordnung_TypeClass)null);
+				return;
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK:
 				setVorzugslageAutomatik((Vorzugslage_Automatik_TypeClass)null);
 				return;
@@ -242,6 +316,8 @@ public class W_Kr_Gsp_Element_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG:
+				return krKrWSeitenzuordnung != null;
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK:
 				return vorzugslageAutomatik != null;
 			case Weichen_und_GleissperrenPackage.WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__WKR_GSP_STELLART:

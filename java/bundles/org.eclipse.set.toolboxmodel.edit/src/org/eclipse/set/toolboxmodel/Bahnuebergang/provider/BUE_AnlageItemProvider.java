@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -31,7 +32,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenFactory;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Punkt_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage} object.
@@ -61,9 +62,32 @@ public class BUE_AnlageItemProvider extends Punkt_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIDAEABUEAnschaltungPropertyDescriptor(object);
 			addIDBUESchnittstellePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the IDAEABUE Anschaltung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDAEABUEAnschaltungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BUE_Anlage_iDAEABUEAnschaltung_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BUE_Anlage_iDAEABUEAnschaltung_feature", "_UI_BUE_Anlage_type"),
+				 BahnuebergangPackage.eINSTANCE.getBUE_Anlage_IDAEABUEAnschaltung(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

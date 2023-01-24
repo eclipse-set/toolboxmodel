@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -17,6 +24,10 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl;
@@ -34,7 +45,6 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPacka
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balisentechnik_ETCSPackageImpl;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
-import org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl;
 
@@ -58,23 +68,27 @@ import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage;
 
 import org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Bezeichnung_Strecke_TypeClass;
+import org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOForm;
+import org.eclipse.set.toolboxmodel.Geodaten.ENUMGEOKoordinatensystem;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMHSystem;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMHoehenlinieForm;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMOertlichkeitArt;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMPlanQuelle;
+import org.eclipse.set.toolboxmodel.Geodaten.ENUMStreckeRichtung;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMTBArt;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMTOPAnschluss;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMTPArt;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMUeberhoehungslinieForm;
 import org.eclipse.set.toolboxmodel.Geodaten.ENUMVProfilArt;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Form_TypeClass;
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Knoten;
-import org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass;
-import org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass;
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Laenge_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_PAD_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
@@ -99,6 +113,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Hoehenpunkt;
 import org.eclipse.set.toolboxmodel.Geodaten.Hoehenpunkt_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.Hoehenpunkt_Datum_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Hoehenpunkt_Hoehe_TypeClass;
+import org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Knotenname_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Neigung_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
@@ -113,8 +128,10 @@ import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit_Langname_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Plan_Quelle_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bezeichnung_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Meter_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.TB_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.TB_Beschreibung_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Anschluss_A_TypeClass;
@@ -127,6 +144,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.TP_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.TP_Beschreibung_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Technischer_Bereich;
 import org.eclipse.set.toolboxmodel.Geodaten.Technischer_Punkt;
+import org.eclipse.set.toolboxmodel.Geodaten.Trasse_Kante_child_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehung;
 import org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehung_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehung_Datum_TypeClass;
@@ -136,7 +154,6 @@ import org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehungslinie_Allg_AttributeGr
 import org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehungslinie_Form_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehungslinie_Laenge_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.V_Profil_Art_TypeClass;
-import org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass;
 
 import org.eclipse.set.toolboxmodel.Geodaten.util.GeodatenValidator;
 
@@ -144,13 +161,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -175,9 +196,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -210,6 +233,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass anzeigegefuehrt_ES_Kategorie_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass bezeichnung_Strecke_TypeClassEClass = null;
 
 	/**
@@ -217,7 +247,21 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass bremsweg_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass geO_Form_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass geO_KAD_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -245,14 +289,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass geO_KoordinatenSystem_LSys_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass geO_KoordinatenSystem_Sonstige_TypeClassEClass = null;
+	private EClass geO_Koordinatensystem_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -413,6 +450,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass kantenname_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass knotenname_TypeClassEClass = null;
 
 	/**
@@ -511,6 +555,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass strecke_BremswegEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass strecke_Meter_TypeClassEClass = null;
 
 	/**
@@ -519,6 +570,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	private EClass strecke_PunktEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strecke_Richtung_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -609,6 +667,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass trasse_Kante_child_AttributeGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass ueberhoehungEClass = null;
 
 	/**
@@ -672,14 +737,14 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass wirkrichtung_TypeClassEClass = null;
+	private EEnum enumgeoFormEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum enumgeoFormEEnum = null;
+	private EEnum enumgeoKoordinatensystemEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -708,6 +773,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	private EEnum enumPlanQuelleEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum enumStreckeRichtungEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -749,6 +821,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType anzeigegefuehrt_ES_Kategorie_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType bezeichnung_Strecke_TypeEDataType = null;
 
 	/**
@@ -756,7 +835,21 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType enumeration1EDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType enumgeoFormObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumgeoKoordinatensystemObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -785,6 +878,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	private EDataType enumPlanQuelleObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumStreckeRichtungObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -826,14 +926,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType geO_KoordinatenSystem_LSys_TypeEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType geO_KoordinatenSystem_Sonstige_TypeEDataType = null;
+	private EDataType geO_KAD_TypeEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -917,6 +1010,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType kantenname_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType knotenname_TypeEDataType = null;
 
 	/**
@@ -990,13 +1090,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	private EDataType ueberhoehungslinie_Laenge_TypeEDataType = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType wirkrichtung_TypeEDataType = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1047,30 +1140,34 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
 		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -1087,8 +1184,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -1106,16 +1203,18 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 
 		// Create package meta-data objects
 		theGeodatenPackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
+		theATOPackage.createPackageContents();
 		theAnsteuerung_ElementPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -1123,23 +1222,25 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGeodatenPackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
 		theAnsteuerung_ElementPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -1147,7 +1248,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -1182,6 +1283,26 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAnzeigegefuehrt_ES_Kategorie_TypeClass() {
+		return anzeigegefuehrt_ES_Kategorie_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAnzeigegefuehrt_ES_Kategorie_TypeClass_Wert() {
+		return (EAttribute)anzeigegefuehrt_ES_Kategorie_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getBezeichnung_Strecke_TypeClass() {
 		return bezeichnung_Strecke_TypeClassEClass;
 	}
@@ -1202,6 +1323,26 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getBremsweg_TypeClass() {
+		return bremsweg_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBremsweg_TypeClass_Wert() {
+		return (EAttribute)bremsweg_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getGEO_Form_TypeClass() {
 		return geO_Form_TypeClassEClass;
 	}
@@ -1214,6 +1355,26 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	@Override
 	public EAttribute getGEO_Form_TypeClass_Wert() {
 		return (EAttribute)geO_Form_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getGEO_KAD_TypeClass() {
+		return geO_KAD_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getGEO_KAD_TypeClass_Wert() {
+		return (EAttribute)geO_KAD_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1292,7 +1453,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Kante_Allg_AttributeGroup_GEOLaenge() {
+	public EReference getGEO_Kante_Allg_AttributeGroup_GEOKAD() {
 		return (EReference)geO_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1302,7 +1463,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Kante_Allg_AttributeGroup_GEORadiusA() {
+	public EReference getGEO_Kante_Allg_AttributeGroup_GEOLaenge() {
 		return (EReference)geO_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1312,7 +1473,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Kante_Allg_AttributeGroup_GEORadiusB() {
+	public EReference getGEO_Kante_Allg_AttributeGroup_GEORadiusA() {
 		return (EReference)geO_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1322,7 +1483,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Kante_Allg_AttributeGroup_GEORichtungswinkel() {
+	public EReference getGEO_Kante_Allg_AttributeGroup_GEORadiusB() {
 		return (EReference)geO_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1332,8 +1493,18 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Kante_Allg_AttributeGroup_PlanQuelle() {
+	public EReference getGEO_Kante_Allg_AttributeGroup_GEORichtungswinkel() {
 		return (EReference)geO_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getGEO_Kante_Allg_AttributeGroup_PlanQuelle() {
+		return (EReference)geO_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1362,8 +1533,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getGEO_KoordinatenSystem_LSys_TypeClass() {
-		return geO_KoordinatenSystem_LSys_TypeClassEClass;
+	public EClass getGEO_Koordinatensystem_TypeClass() {
+		return geO_Koordinatensystem_TypeClassEClass;
 	}
 
 	/**
@@ -1372,28 +1543,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGEO_KoordinatenSystem_LSys_TypeClass_Wert() {
-		return (EAttribute)geO_KoordinatenSystem_LSys_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getGEO_KoordinatenSystem_Sonstige_TypeClass() {
-		return geO_KoordinatenSystem_Sonstige_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getGEO_KoordinatenSystem_Sonstige_TypeClass_Wert() {
-		return (EAttribute)geO_KoordinatenSystem_Sonstige_TypeClassEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGEO_Koordinatensystem_TypeClass_Wert() {
+		return (EAttribute)geO_Koordinatensystem_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1462,8 +1613,18 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Punkt_IDGEOKnoten() {
+	public EReference getGEO_Punkt_IDGEOKante() {
 		return (EReference)geO_PunktEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getGEO_Punkt_IDGEOKnoten() {
+		return (EReference)geO_PunktEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1482,7 +1643,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Punkt_Allg_AttributeGroup_GKX() {
+	public EReference getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatensystem() {
 		return (EReference)geO_Punkt_Allg_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1492,7 +1653,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Punkt_Allg_AttributeGroup_GKY() {
+	public EReference getGEO_Punkt_Allg_AttributeGroup_GKX() {
 		return (EReference)geO_Punkt_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1502,7 +1663,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Punkt_Allg_AttributeGroup_GKZ() {
+	public EReference getGEO_Punkt_Allg_AttributeGroup_GKY() {
 		return (EReference)geO_Punkt_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1512,7 +1673,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Punkt_Allg_AttributeGroup_PlanQuelle() {
+	public EReference getGEO_Punkt_Allg_AttributeGroup_GKZ() {
 		return (EReference)geO_Punkt_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1522,18 +1683,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys() {
+	public EReference getGEO_Punkt_Allg_AttributeGroup_PlanQuelle() {
 		return (EReference)geO_Punkt_Allg_AttributeGroupEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemSonstige() {
-		return (EReference)geO_Punkt_Allg_AttributeGroupEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1652,7 +1803,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_Geschwindigkeit() {
+	public EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_AnzeigegefuehrtESKategorie() {
 		return (EReference)geschwindigkeitsprofil_Allg_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1662,7 +1813,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_VProfilArt() {
+	public EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_Geschwindigkeit() {
 		return (EReference)geschwindigkeitsprofil_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1672,7 +1823,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_Wirkrichtung() {
+	public EReference getGeschwindigkeitsprofil_Allg_AttributeGroup_VProfilArt() {
 		return (EReference)geschwindigkeitsprofil_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2012,6 +2163,26 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getKantenname_TypeClass() {
+		return kantenname_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getKantenname_TypeClass_Wert() {
+		return (EAttribute)kantenname_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getKnotenname_TypeClass() {
 		return knotenname_TypeClassEClass;
 	}
@@ -2082,7 +2253,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getOertlichkeit_IDStreckePunkt() {
+	public EReference getOertlichkeit_IDOertlichkeitAwanstBedient() {
 		return (EReference)oertlichkeitEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2092,8 +2263,18 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getOertlichkeit_OertlichkeitAllg() {
+	public EReference getOertlichkeit_IDStreckePunkt() {
 		return (EReference)oertlichkeitEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getOertlichkeit_OertlichkeitAllg() {
+		return (EReference)oertlichkeitEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2362,6 +2543,36 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getStrecke_Bremsweg() {
+		return strecke_BremswegEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStrecke_Bremsweg_Bremsweg() {
+		return (EReference)strecke_BremswegEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStrecke_Bremsweg_StreckeRichtung() {
+		return (EReference)strecke_BremswegEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getStrecke_Meter_TypeClass() {
 		return strecke_Meter_TypeClassEClass;
 	}
@@ -2414,6 +2625,26 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	@Override
 	public EReference getStrecke_Punkt_StreckeMeter() {
 		return (EReference)strecke_PunktEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getStrecke_Richtung_TypeClass() {
+		return strecke_Richtung_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStrecke_Richtung_TypeClass_Wert() {
+		return (EAttribute)strecke_Richtung_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2612,7 +2843,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getTOP_Kante_Allg_AttributeGroup_TOPAnschlussA() {
+	public EReference getTOP_Kante_Allg_AttributeGroup_Kantenname() {
 		return (EReference)toP_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2622,7 +2853,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getTOP_Kante_Allg_AttributeGroup_TOPAnschlussB() {
+	public EReference getTOP_Kante_Allg_AttributeGroup_TOPAnschlussA() {
 		return (EReference)toP_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2632,8 +2863,18 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getTOP_Kante_Allg_AttributeGroup_TOPLaenge() {
+	public EReference getTOP_Kante_Allg_AttributeGroup_TOPAnschlussB() {
 		return (EReference)toP_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTOP_Kante_Allg_AttributeGroup_TOPLaenge() {
+		return (EReference)toP_Kante_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2724,6 +2965,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	@Override
 	public EAttribute getTP_Beschreibung_TypeClass_Wert() {
 		return (EAttribute)tP_Beschreibung_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTrasse_Kante_child_AttributeGroup() {
+		return trasse_Kante_child_AttributeGroupEClass;
 	}
 
 	/**
@@ -2982,28 +3233,18 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getWirkrichtung_TypeClass() {
-		return wirkrichtung_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getWirkrichtung_TypeClass_Wert() {
-		return (EAttribute)wirkrichtung_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getENUMGEOForm() {
 		return enumgeoFormEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMGEOKoordinatensystem() {
+		return enumgeoKoordinatensystemEEnum;
 	}
 
 	/**
@@ -3044,6 +3285,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	@Override
 	public EEnum getENUMPlanQuelle() {
 		return enumPlanQuelleEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMStreckeRichtung() {
+		return enumStreckeRichtungEEnum;
 	}
 
 	/**
@@ -3102,6 +3353,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
+	public EDataType getAnzeigegefuehrt_ES_Kategorie_Type() {
+		return anzeigegefuehrt_ES_Kategorie_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getBezeichnung_Strecke_Type() {
 		return bezeichnung_Strecke_TypeEDataType;
 	}
@@ -3112,8 +3373,28 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
+	public EDataType getEnumeration1() {
+		return enumeration1EDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getENUMGEOFormObject() {
 		return enumgeoFormObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMGEOKoordinatensystemObject() {
+		return enumgeoKoordinatensystemObjectEDataType;
 	}
 
 	/**
@@ -3154,6 +3435,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	@Override
 	public EDataType getENUMPlanQuelleObject() {
 		return enumPlanQuelleObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMStreckeRichtungObject() {
+		return enumStreckeRichtungObjectEDataType;
 	}
 
 	/**
@@ -3212,18 +3503,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EDataType getGEO_KoordinatenSystem_LSys_Type() {
-		return geO_KoordinatenSystem_LSys_TypeEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EDataType getGEO_KoordinatenSystem_Sonstige_Type() {
-		return geO_KoordinatenSystem_Sonstige_TypeEDataType;
+	public EDataType getGEO_KAD_Type() {
+		return geO_KAD_TypeEDataType;
 	}
 
 	/**
@@ -3342,6 +3623,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
+	public EDataType getKantenname_Type() {
+		return kantenname_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getKnotenname_Type() {
 		return knotenname_TypeEDataType;
 	}
@@ -3452,16 +3743,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	 * @generated
 	 */
 	@Override
-	public EDataType getWirkrichtung_Type() {
-		return wirkrichtung_TypeEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public GeodatenFactory getGeodatenFactory() {
 		return (GeodatenFactory)getEFactoryInstance();
 	}
@@ -3485,11 +3766,20 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		isCreated = true;
 
 		// Create classes and their features
+		anzeigegefuehrt_ES_Kategorie_TypeClassEClass = createEClass(ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS);
+		createEAttribute(anzeigegefuehrt_ES_Kategorie_TypeClassEClass, ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS__WERT);
+
 		bezeichnung_Strecke_TypeClassEClass = createEClass(BEZEICHNUNG_STRECKE_TYPE_CLASS);
 		createEAttribute(bezeichnung_Strecke_TypeClassEClass, BEZEICHNUNG_STRECKE_TYPE_CLASS__WERT);
 
+		bremsweg_TypeClassEClass = createEClass(BREMSWEG_TYPE_CLASS);
+		createEAttribute(bremsweg_TypeClassEClass, BREMSWEG_TYPE_CLASS__WERT);
+
 		geO_Form_TypeClassEClass = createEClass(GEO_FORM_TYPE_CLASS);
 		createEAttribute(geO_Form_TypeClassEClass, GEO_FORM_TYPE_CLASS__WERT);
+
+		geO_KAD_TypeClassEClass = createEClass(GEO_KAD_TYPE_CLASS);
+		createEAttribute(geO_KAD_TypeClassEClass, GEO_KAD_TYPE_CLASS__WERT);
 
 		geO_KanteEClass = createEClass(GEO_KANTE);
 		createEReference(geO_KanteEClass, GEO_KANTE__GEO_KANTE_ALLG);
@@ -3499,6 +3789,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 
 		geO_Kante_Allg_AttributeGroupEClass = createEClass(GEO_KANTE_ALLG_ATTRIBUTE_GROUP);
 		createEReference(geO_Kante_Allg_AttributeGroupEClass, GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM);
+		createEReference(geO_Kante_Allg_AttributeGroupEClass, GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD);
 		createEReference(geO_Kante_Allg_AttributeGroupEClass, GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE);
 		createEReference(geO_Kante_Allg_AttributeGroupEClass, GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A);
 		createEReference(geO_Kante_Allg_AttributeGroupEClass, GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_B);
@@ -3508,11 +3799,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		geO_KnotenEClass = createEClass(GEO_KNOTEN);
 		createEReference(geO_KnotenEClass, GEO_KNOTEN__GEOPAD);
 
-		geO_KoordinatenSystem_LSys_TypeClassEClass = createEClass(GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS);
-		createEAttribute(geO_KoordinatenSystem_LSys_TypeClassEClass, GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS__WERT);
-
-		geO_KoordinatenSystem_Sonstige_TypeClassEClass = createEClass(GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS);
-		createEAttribute(geO_KoordinatenSystem_Sonstige_TypeClassEClass, GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS__WERT);
+		geO_Koordinatensystem_TypeClassEClass = createEClass(GEO_KOORDINATENSYSTEM_TYPE_CLASS);
+		createEAttribute(geO_Koordinatensystem_TypeClassEClass, GEO_KOORDINATENSYSTEM_TYPE_CLASS__WERT);
 
 		geO_Laenge_TypeClassEClass = createEClass(GEO_LAENGE_TYPE_CLASS);
 		createEAttribute(geO_Laenge_TypeClassEClass, GEO_LAENGE_TYPE_CLASS__WERT);
@@ -3522,15 +3810,15 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 
 		geO_PunktEClass = createEClass(GEO_PUNKT);
 		createEReference(geO_PunktEClass, GEO_PUNKT__GEO_PUNKT_ALLG);
+		createEReference(geO_PunktEClass, GEO_PUNKT__IDGEO_KANTE);
 		createEReference(geO_PunktEClass, GEO_PUNKT__IDGEO_KNOTEN);
 
 		geO_Punkt_Allg_AttributeGroupEClass = createEClass(GEO_PUNKT_ALLG_ATTRIBUTE_GROUP);
+		createEReference(geO_Punkt_Allg_AttributeGroupEClass, GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM);
 		createEReference(geO_Punkt_Allg_AttributeGroupEClass, GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX);
 		createEReference(geO_Punkt_Allg_AttributeGroupEClass, GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY);
 		createEReference(geO_Punkt_Allg_AttributeGroupEClass, GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKZ);
 		createEReference(geO_Punkt_Allg_AttributeGroupEClass, GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE);
-		createEReference(geO_Punkt_Allg_AttributeGroupEClass, GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS);
-		createEReference(geO_Punkt_Allg_AttributeGroupEClass, GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE);
 
 		geO_Radius_A_TypeClassEClass = createEClass(GEO_RADIUS_ATYPE_CLASS);
 		createEAttribute(geO_Radius_A_TypeClassEClass, GEO_RADIUS_ATYPE_CLASS__WERT);
@@ -3548,9 +3836,9 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		createEReference(geschwindigkeitsprofilEClass, GESCHWINDIGKEITSPROFIL__GESCHWINDIGKEITSPROFIL_ALLG);
 
 		geschwindigkeitsprofil_Allg_AttributeGroupEClass = createEClass(GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP);
+		createEReference(geschwindigkeitsprofil_Allg_AttributeGroupEClass, GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE);
 		createEReference(geschwindigkeitsprofil_Allg_AttributeGroupEClass, GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT);
 		createEReference(geschwindigkeitsprofil_Allg_AttributeGroupEClass, GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART);
-		createEReference(geschwindigkeitsprofil_Allg_AttributeGroupEClass, GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG);
 
 		gK_X_TypeClassEClass = createEClass(GK_XTYPE_CLASS);
 		createEAttribute(gK_X_TypeClassEClass, GK_XTYPE_CLASS__WERT);
@@ -3597,6 +3885,9 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		hSystem_TypeClassEClass = createEClass(HSYSTEM_TYPE_CLASS);
 		createEAttribute(hSystem_TypeClassEClass, HSYSTEM_TYPE_CLASS__WERT);
 
+		kantenname_TypeClassEClass = createEClass(KANTENNAME_TYPE_CLASS);
+		createEAttribute(kantenname_TypeClassEClass, KANTENNAME_TYPE_CLASS__WERT);
+
 		knotenname_TypeClassEClass = createEClass(KNOTENNAME_TYPE_CLASS);
 		createEAttribute(knotenname_TypeClassEClass, KNOTENNAME_TYPE_CLASS__WERT);
 
@@ -3606,6 +3897,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		oertlichkeitEClass = createEClass(OERTLICHKEIT);
 		createEReference(oertlichkeitEClass, OERTLICHKEIT__BEZEICHNUNG);
 		createEReference(oertlichkeitEClass, OERTLICHKEIT__ID_OERTLICHKEIT);
+		createEReference(oertlichkeitEClass, OERTLICHKEIT__ID_OERTLICHKEIT_AWANST_BEDIENT);
 		createEReference(oertlichkeitEClass, OERTLICHKEIT__ID_STRECKE_PUNKT);
 		createEReference(oertlichkeitEClass, OERTLICHKEIT__OERTLICHKEIT_ALLG);
 
@@ -3646,6 +3938,10 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		strecke_Bezeichnung_AttributeGroupEClass = createEClass(STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP);
 		createEReference(strecke_Bezeichnung_AttributeGroupEClass, STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP__BEZEICHNUNG_STRECKE);
 
+		strecke_BremswegEClass = createEClass(STRECKE_BREMSWEG);
+		createEReference(strecke_BremswegEClass, STRECKE_BREMSWEG__BREMSWEG);
+		createEReference(strecke_BremswegEClass, STRECKE_BREMSWEG__STRECKE_RICHTUNG);
+
 		strecke_Meter_TypeClassEClass = createEClass(STRECKE_METER_TYPE_CLASS);
 		createEAttribute(strecke_Meter_TypeClassEClass, STRECKE_METER_TYPE_CLASS__WERT);
 
@@ -3653,6 +3949,9 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		createEReference(strecke_PunktEClass, STRECKE_PUNKT__IDGEO_KNOTEN);
 		createEReference(strecke_PunktEClass, STRECKE_PUNKT__ID_STRECKE);
 		createEReference(strecke_PunktEClass, STRECKE_PUNKT__STRECKE_METER);
+
+		strecke_Richtung_TypeClassEClass = createEClass(STRECKE_RICHTUNG_TYPE_CLASS);
+		createEAttribute(strecke_Richtung_TypeClassEClass, STRECKE_RICHTUNG_TYPE_CLASS__WERT);
 
 		tB_Art_TypeClassEClass = createEClass(TB_ART_TYPE_CLASS);
 		createEAttribute(tB_Art_TypeClassEClass, TB_ART_TYPE_CLASS__WERT);
@@ -3680,6 +3979,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		createEReference(toP_KanteEClass, TOP_KANTE__TOP_KANTE_ALLG);
 
 		toP_Kante_Allg_AttributeGroupEClass = createEClass(TOP_KANTE_ALLG_ATTRIBUTE_GROUP);
+		createEReference(toP_Kante_Allg_AttributeGroupEClass, TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME);
 		createEReference(toP_Kante_Allg_AttributeGroupEClass, TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A);
 		createEReference(toP_Kante_Allg_AttributeGroupEClass, TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B);
 		createEReference(toP_Kante_Allg_AttributeGroupEClass, TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_LAENGE);
@@ -3696,6 +3996,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 
 		tP_Beschreibung_TypeClassEClass = createEClass(TP_BESCHREIBUNG_TYPE_CLASS);
 		createEAttribute(tP_Beschreibung_TypeClassEClass, TP_BESCHREIBUNG_TYPE_CLASS__WERT);
+
+		trasse_Kante_child_AttributeGroupEClass = createEClass(TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP);
 
 		ueberhoehungEClass = createEClass(UEBERHOEHUNG);
 		createEReference(ueberhoehungEClass, UEBERHOEHUNG__UEBERHOEHUNG_ALLG);
@@ -3731,15 +4033,14 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		v_Profil_Art_TypeClassEClass = createEClass(VPROFIL_ART_TYPE_CLASS);
 		createEAttribute(v_Profil_Art_TypeClassEClass, VPROFIL_ART_TYPE_CLASS__WERT);
 
-		wirkrichtung_TypeClassEClass = createEClass(WIRKRICHTUNG_TYPE_CLASS);
-		createEAttribute(wirkrichtung_TypeClassEClass, WIRKRICHTUNG_TYPE_CLASS__WERT);
-
 		// Create enums
 		enumgeoFormEEnum = createEEnum(ENUMGEO_FORM);
+		enumgeoKoordinatensystemEEnum = createEEnum(ENUMGEO_KOORDINATENSYSTEM);
 		enumHoehenlinieFormEEnum = createEEnum(ENUM_HOEHENLINIE_FORM);
 		enumhSystemEEnum = createEEnum(ENUMH_SYSTEM);
 		enumOertlichkeitArtEEnum = createEEnum(ENUM_OERTLICHKEIT_ART);
 		enumPlanQuelleEEnum = createEEnum(ENUM_PLAN_QUELLE);
+		enumStreckeRichtungEEnum = createEEnum(ENUM_STRECKE_RICHTUNG);
 		enumtbArtEEnum = createEEnum(ENUMTB_ART);
 		enumtopAnschlussEEnum = createEEnum(ENUMTOP_ANSCHLUSS);
 		enumtpArtEEnum = createEEnum(ENUMTP_ART);
@@ -3747,19 +4048,22 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		enumvProfilArtEEnum = createEEnum(ENUMV_PROFIL_ART);
 
 		// Create data types
+		anzeigegefuehrt_ES_Kategorie_TypeEDataType = createEDataType(ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE);
 		bezeichnung_Strecke_TypeEDataType = createEDataType(BEZEICHNUNG_STRECKE_TYPE);
+		enumeration1EDataType = createEDataType(ENUMERATION1);
 		enumgeoFormObjectEDataType = createEDataType(ENUMGEO_FORM_OBJECT);
+		enumgeoKoordinatensystemObjectEDataType = createEDataType(ENUMGEO_KOORDINATENSYSTEM_OBJECT);
 		enumHoehenlinieFormObjectEDataType = createEDataType(ENUM_HOEHENLINIE_FORM_OBJECT);
 		enumhSystemObjectEDataType = createEDataType(ENUMH_SYSTEM_OBJECT);
 		enumOertlichkeitArtObjectEDataType = createEDataType(ENUM_OERTLICHKEIT_ART_OBJECT);
 		enumPlanQuelleObjectEDataType = createEDataType(ENUM_PLAN_QUELLE_OBJECT);
+		enumStreckeRichtungObjectEDataType = createEDataType(ENUM_STRECKE_RICHTUNG_OBJECT);
 		enumtbArtObjectEDataType = createEDataType(ENUMTB_ART_OBJECT);
 		enumtopAnschlussObjectEDataType = createEDataType(ENUMTOP_ANSCHLUSS_OBJECT);
 		enumtpArtObjectEDataType = createEDataType(ENUMTP_ART_OBJECT);
 		enumUeberhoehungslinieFormObjectEDataType = createEDataType(ENUM_UEBERHOEHUNGSLINIE_FORM_OBJECT);
 		enumvProfilArtObjectEDataType = createEDataType(ENUMV_PROFIL_ART_OBJECT);
-		geO_KoordinatenSystem_LSys_TypeEDataType = createEDataType(GEO_KOORDINATEN_SYSTEM_LSYS_TYPE);
-		geO_KoordinatenSystem_Sonstige_TypeEDataType = createEDataType(GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE);
+		geO_KAD_TypeEDataType = createEDataType(GEO_KAD_TYPE);
 		geO_Laenge_TypeEDataType = createEDataType(GEO_LAENGE_TYPE);
 		geO_PAD_TypeEDataType = createEDataType(GEO_PAD_TYPE);
 		geO_Radius_A_TypeEDataType = createEDataType(GEO_RADIUS_ATYPE);
@@ -3771,6 +4075,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		gK_Z_TypeEDataType = createEDataType(GK_ZTYPE);
 		hoehenlinie_Laenge_TypeEDataType = createEDataType(HOEHENLINIE_LAENGE_TYPE);
 		hoehenpunkt_Hoehe_TypeEDataType = createEDataType(HOEHENPUNKT_HOEHE_TYPE);
+		kantenname_TypeEDataType = createEDataType(KANTENNAME_TYPE);
 		knotenname_TypeEDataType = createEDataType(KNOTENNAME_TYPE);
 		neigung_TypeEDataType = createEDataType(NEIGUNG_TYPE);
 		oertlichkeit_Abkuerzung_TypeEDataType = createEDataType(OERTLICHKEIT_ABKUERZUNG_TYPE);
@@ -3782,7 +4087,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		tP_Beschreibung_TypeEDataType = createEDataType(TP_BESCHREIBUNG_TYPE);
 		ueberhoehung_Hoehe_TypeEDataType = createEDataType(UEBERHOEHUNG_HOEHE_TYPE);
 		ueberhoehungslinie_Laenge_TypeEDataType = createEDataType(UEBERHOEHUNGSLINIE_LAENGE_TYPE);
-		wirkrichtung_TypeEDataType = createEDataType(WIRKRICHTUNG_TYPE);
 	}
 
 	/**
@@ -3812,18 +4116,21 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		BasisTypenPackage theBasisTypenPackage = (BasisTypenPackage)EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisobjektePackage theBasisobjektePackage = (BasisobjektePackage)EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
+		Medien_und_TrassenPackage theMedien_und_TrassenPackage = (Medien_und_TrassenPackage)EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		anzeigegefuehrt_ES_Kategorie_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bezeichnung_Strecke_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		bremsweg_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		geO_Form_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		geO_KAD_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		geO_KanteEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		geO_KnotenEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
-		geO_KoordinatenSystem_LSys_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		geO_KoordinatenSystem_Sonstige_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		geO_Koordinatensystem_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		geO_Laenge_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		geO_PAD_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		geO_PunktEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
@@ -3842,6 +4149,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		hoehenpunkt_Datum_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		hoehenpunkt_Hoehe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		hSystem_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		kantenname_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		knotenname_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		neigung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		oertlichkeitEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
@@ -3853,8 +4161,10 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		oertlichkeit_Langname_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		plan_Quelle_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		streckeEClass.getESuperTypes().add(theBasisobjektePackage.getBereich_Objekt());
+		strecke_BremswegEClass.getESuperTypes().add(theBasisobjektePackage.getBereich_Objekt());
 		strecke_Meter_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		strecke_PunktEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
+		strecke_Richtung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		tB_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		tB_Beschreibung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		technischer_BereichEClass.getESuperTypes().add(theBasisobjektePackage.getBereich_Objekt());
@@ -3866,6 +4176,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		toP_Laenge_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		tP_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		tP_Beschreibung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		trasse_Kante_child_AttributeGroupEClass.getESuperTypes().add(theMedien_und_TrassenPackage.getTrasse_Kante());
 		ueberhoehungEClass.getESuperTypes().add(theBasisobjektePackage.getPunkt_Objekt());
 		ueberhoehung_Datum_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		ueberhoehung_Hoehe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -3873,14 +4184,22 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		ueberhoehungslinie_Form_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		ueberhoehungslinie_Laenge_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		v_Profil_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		wirkrichtung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(anzeigegefuehrt_ES_Kategorie_TypeClassEClass, Anzeigegefuehrt_ES_Kategorie_TypeClass.class, "Anzeigegefuehrt_ES_Kategorie_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAnzeigegefuehrt_ES_Kategorie_TypeClass_Wert(), this.getAnzeigegefuehrt_ES_Kategorie_Type(), "wert", null, 1, 1, Anzeigegefuehrt_ES_Kategorie_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(bezeichnung_Strecke_TypeClassEClass, Bezeichnung_Strecke_TypeClass.class, "Bezeichnung_Strecke_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBezeichnung_Strecke_TypeClass_Wert(), this.getBezeichnung_Strecke_Type(), "wert", null, 1, 1, Bezeichnung_Strecke_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(bremsweg_TypeClassEClass, Bremsweg_TypeClass.class, "Bremsweg_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBremsweg_TypeClass_Wert(), theBasisTypenPackage.getBremsweg_Type(), "wert", null, 1, 1, Bremsweg_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(geO_Form_TypeClassEClass, GEO_Form_TypeClass.class, "GEO_Form_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGEO_Form_TypeClass_Wert(), this.getENUMGEOFormObject(), "wert", null, 1, 1, GEO_Form_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(geO_KAD_TypeClassEClass, GEO_KAD_TypeClass.class, "GEO_KAD_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGEO_KAD_TypeClass_Wert(), this.getGEO_KAD_Type(), "wert", null, 1, 1, GEO_KAD_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geO_KanteEClass, GEO_Kante.class, "GEO_Kante", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGEO_Kante_GEOKanteAllg(), this.getGEO_Kante_Allg_AttributeGroup(), null, "gEOKanteAllg", null, 1, 1, GEO_Kante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3889,7 +4208,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEReference(getGEO_Kante_IDGEOKnotenB(), this.getGEO_Knoten(), null, "iDGEOKnotenB", null, 1, 1, GEO_Kante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geO_Kante_Allg_AttributeGroupEClass, GEO_Kante_Allg_AttributeGroup.class, "GEO_Kante_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGEO_Kante_Allg_AttributeGroup_GEOForm(), this.getGEO_Form_TypeClass(), null, "gEOForm", null, 0, 1, GEO_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGEO_Kante_Allg_AttributeGroup_GEOForm(), this.getGEO_Form_TypeClass(), null, "gEOForm", null, 1, 1, GEO_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGEO_Kante_Allg_AttributeGroup_GEOKAD(), this.getGEO_KAD_TypeClass(), null, "gEOKAD", null, 0, 1, GEO_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Kante_Allg_AttributeGroup_GEOLaenge(), this.getGEO_Laenge_TypeClass(), null, "gEOLaenge", null, 1, 1, GEO_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Kante_Allg_AttributeGroup_GEORadiusA(), this.getGEO_Radius_A_TypeClass(), null, "gEORadiusA", null, 0, 1, GEO_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Kante_Allg_AttributeGroup_GEORadiusB(), this.getGEO_Radius_B_TypeClass(), null, "gEORadiusB", null, 0, 1, GEO_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3899,11 +4219,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEClass(geO_KnotenEClass, GEO_Knoten.class, "GEO_Knoten", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGEO_Knoten_GEOPAD(), this.getGEO_PAD_TypeClass(), null, "gEOPAD", null, 0, 1, GEO_Knoten.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(geO_KoordinatenSystem_LSys_TypeClassEClass, GEO_KoordinatenSystem_LSys_TypeClass.class, "GEO_KoordinatenSystem_LSys_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGEO_KoordinatenSystem_LSys_TypeClass_Wert(), this.getGEO_KoordinatenSystem_LSys_Type(), "wert", null, 1, 1, GEO_KoordinatenSystem_LSys_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(geO_KoordinatenSystem_Sonstige_TypeClassEClass, GEO_KoordinatenSystem_Sonstige_TypeClass.class, "GEO_KoordinatenSystem_Sonstige_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGEO_KoordinatenSystem_Sonstige_TypeClass_Wert(), this.getGEO_KoordinatenSystem_Sonstige_Type(), "wert", null, 1, 1, GEO_KoordinatenSystem_Sonstige_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(geO_Koordinatensystem_TypeClassEClass, GEO_Koordinatensystem_TypeClass.class, "GEO_Koordinatensystem_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGEO_Koordinatensystem_TypeClass_Wert(), this.getENUMGEOKoordinatensystemObject(), "wert", null, 1, 1, GEO_Koordinatensystem_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geO_Laenge_TypeClassEClass, GEO_Laenge_TypeClass.class, "GEO_Laenge_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGEO_Laenge_TypeClass_Wert(), this.getGEO_Laenge_Type(), "wert", null, 1, 1, GEO_Laenge_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3913,15 +4230,15 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 
 		initEClass(geO_PunktEClass, GEO_Punkt.class, "GEO_Punkt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGEO_Punkt_GEOPunktAllg(), this.getGEO_Punkt_Allg_AttributeGroup(), null, "gEOPunktAllg", null, 1, 1, GEO_Punkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGEO_Punkt_IDGEOKante(), this.getGEO_Kante(), null, "iDGEOKante", null, 0, 1, GEO_Punkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Punkt_IDGEOKnoten(), this.getGEO_Knoten(), null, "iDGEOKnoten", null, 0, 1, GEO_Punkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geO_Punkt_Allg_AttributeGroupEClass, GEO_Punkt_Allg_AttributeGroup.class, "GEO_Punkt_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatensystem(), this.getGEO_Koordinatensystem_TypeClass(), null, "gEOKoordinatensystem", null, 1, 1, GEO_Punkt_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Punkt_Allg_AttributeGroup_GKX(), this.getGK_X_TypeClass(), null, "gKX", null, 1, 1, GEO_Punkt_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Punkt_Allg_AttributeGroup_GKY(), this.getGK_Y_TypeClass(), null, "gKY", null, 1, 1, GEO_Punkt_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Punkt_Allg_AttributeGroup_GKZ(), this.getGK_Z_TypeClass(), null, "gKZ", null, 0, 1, GEO_Punkt_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGEO_Punkt_Allg_AttributeGroup_PlanQuelle(), this.getPlan_Quelle_TypeClass(), null, "planQuelle", null, 1, 1, GEO_Punkt_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys(), this.getGEO_KoordinatenSystem_LSys_TypeClass(), null, "gEOKoordinatenSystemLSys", null, 0, 1, GEO_Punkt_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemSonstige(), this.getGEO_KoordinatenSystem_Sonstige_TypeClass(), null, "gEOKoordinatenSystemSonstige", null, 0, 1, GEO_Punkt_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geO_Radius_A_TypeClassEClass, GEO_Radius_A_TypeClass.class, "GEO_Radius_A_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGEO_Radius_A_TypeClass_Wert(), this.getGEO_Radius_A_Type(), "wert", null, 1, 1, GEO_Radius_A_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3939,9 +4256,9 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEReference(getGeschwindigkeitsprofil_GeschwindigkeitsprofilAllg(), this.getGeschwindigkeitsprofil_Allg_AttributeGroup(), null, "geschwindigkeitsprofilAllg", null, 1, 1, Geschwindigkeitsprofil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geschwindigkeitsprofil_Allg_AttributeGroupEClass, Geschwindigkeitsprofil_Allg_AttributeGroup.class, "Geschwindigkeitsprofil_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeschwindigkeitsprofil_Allg_AttributeGroup_AnzeigegefuehrtESKategorie(), this.getAnzeigegefuehrt_ES_Kategorie_TypeClass(), null, "anzeigegefuehrtESKategorie", null, 0, 1, Geschwindigkeitsprofil_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeschwindigkeitsprofil_Allg_AttributeGroup_Geschwindigkeit(), this.getGeschwindigkeit_TypeClass(), null, "geschwindigkeit", null, 1, 1, Geschwindigkeitsprofil_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeschwindigkeitsprofil_Allg_AttributeGroup_VProfilArt(), this.getV_Profil_Art_TypeClass(), null, "vProfilArt", null, 1, 1, Geschwindigkeitsprofil_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeschwindigkeitsprofil_Allg_AttributeGroup_Wirkrichtung(), this.getWirkrichtung_TypeClass(), null, "wirkrichtung", null, 1, 1, Geschwindigkeitsprofil_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gK_X_TypeClassEClass, GK_X_TypeClass.class, "GK_X_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGK_X_TypeClass_Wert(), this.getGK_X_Type(), "wert", null, 1, 1, GK_X_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3988,6 +4305,9 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEClass(hSystem_TypeClassEClass, HSystem_TypeClass.class, "HSystem_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHSystem_TypeClass_Wert(), this.getENUMHSystemObject(), "wert", null, 1, 1, HSystem_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(kantenname_TypeClassEClass, Kantenname_TypeClass.class, "Kantenname_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKantenname_TypeClass_Wert(), this.getKantenname_Type(), "wert", null, 1, 1, Kantenname_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(knotenname_TypeClassEClass, Knotenname_TypeClass.class, "Knotenname_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKnotenname_TypeClass_Wert(), this.getKnotenname_Type(), "wert", null, 1, 1, Knotenname_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3997,6 +4317,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEClass(oertlichkeitEClass, Oertlichkeit.class, "Oertlichkeit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOertlichkeit_Bezeichnung(), this.getOertlichkeit_Bezeichnung_AttributeGroup(), null, "bezeichnung", null, 1, 1, Oertlichkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOertlichkeit_IDOertlichkeit(), this.getOertlichkeit(), null, "iDOertlichkeit", null, 0, 1, Oertlichkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOertlichkeit_IDOertlichkeitAwanstBedient(), this.getOertlichkeit(), null, "iDOertlichkeitAwanstBedient", null, 0, 1, Oertlichkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOertlichkeit_IDStreckePunkt(), this.getStrecke_Punkt(), null, "iDStreckePunkt", null, 0, -1, Oertlichkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOertlichkeit_OertlichkeitAllg(), this.getOertlichkeit_Allg_AttributeGroup(), null, "oertlichkeitAllg", null, 1, 1, Oertlichkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4037,6 +4358,10 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEClass(strecke_Bezeichnung_AttributeGroupEClass, Strecke_Bezeichnung_AttributeGroup.class, "Strecke_Bezeichnung_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStrecke_Bezeichnung_AttributeGroup_BezeichnungStrecke(), this.getBezeichnung_Strecke_TypeClass(), null, "bezeichnungStrecke", null, 1, 1, Strecke_Bezeichnung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(strecke_BremswegEClass, Strecke_Bremsweg.class, "Strecke_Bremsweg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStrecke_Bremsweg_Bremsweg(), this.getBremsweg_TypeClass(), null, "bremsweg", null, 1, 1, Strecke_Bremsweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStrecke_Bremsweg_StreckeRichtung(), this.getStrecke_Richtung_TypeClass(), null, "streckeRichtung", null, 1, 1, Strecke_Bremsweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(strecke_Meter_TypeClassEClass, Strecke_Meter_TypeClass.class, "Strecke_Meter_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStrecke_Meter_TypeClass_Wert(), this.getStrecke_Meter_Type(), "wert", null, 1, 1, Strecke_Meter_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4044,6 +4369,9 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEReference(getStrecke_Punkt_IDGEOKnoten(), this.getGEO_Knoten(), null, "iDGEOKnoten", null, 0, 1, Strecke_Punkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStrecke_Punkt_IDStrecke(), this.getStrecke(), null, "iDStrecke", null, 1, 1, Strecke_Punkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStrecke_Punkt_StreckeMeter(), this.getStrecke_Meter_TypeClass(), null, "streckeMeter", null, 1, 1, Strecke_Punkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(strecke_Richtung_TypeClassEClass, Strecke_Richtung_TypeClass.class, "Strecke_Richtung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStrecke_Richtung_TypeClass_Wert(), this.getENUMStreckeRichtungObject(), "wert", null, 1, 1, Strecke_Richtung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tB_Art_TypeClassEClass, TB_Art_TypeClass.class, "TB_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTB_Art_TypeClass_Wert(), this.getENUMTBArtObject(), "wert", null, 1, 1, TB_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4071,6 +4399,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEReference(getTOP_Kante_TOPKanteAllg(), this.getTOP_Kante_Allg_AttributeGroup(), null, "tOPKanteAllg", null, 1, 1, TOP_Kante.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toP_Kante_Allg_AttributeGroupEClass, TOP_Kante_Allg_AttributeGroup.class, "TOP_Kante_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTOP_Kante_Allg_AttributeGroup_Kantenname(), this.getKantenname_TypeClass(), null, "kantenname", null, 0, 1, TOP_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTOP_Kante_Allg_AttributeGroup_TOPAnschlussA(), this.getTOP_Anschluss_A_TypeClass(), null, "tOPAnschlussA", null, 1, 1, TOP_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTOP_Kante_Allg_AttributeGroup_TOPAnschlussB(), this.getTOP_Anschluss_B_TypeClass(), null, "tOPAnschlussB", null, 1, 1, TOP_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTOP_Kante_Allg_AttributeGroup_TOPLaenge(), this.getTOP_Laenge_TypeClass(), null, "tOPLaenge", null, 1, 1, TOP_Kante_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4087,6 +4416,8 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 
 		initEClass(tP_Beschreibung_TypeClassEClass, TP_Beschreibung_TypeClass.class, "TP_Beschreibung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTP_Beschreibung_TypeClass_Wert(), this.getTP_Beschreibung_Type(), "wert", null, 1, 1, TP_Beschreibung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(trasse_Kante_child_AttributeGroupEClass, Trasse_Kante_child_AttributeGroup.class, "Trasse_Kante_child_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(ueberhoehungEClass, Ueberhoehung.class, "Ueberhoehung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUeberhoehung_UeberhoehungAllg(), this.getUeberhoehung_Allg_AttributeGroup(), null, "ueberhoehungAllg", null, 1, 1, Ueberhoehung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4122,21 +4453,26 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEClass(v_Profil_Art_TypeClassEClass, V_Profil_Art_TypeClass.class, "V_Profil_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getV_Profil_Art_TypeClass_Wert(), this.getENUMVProfilArtObject(), "wert", null, 1, 1, V_Profil_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(wirkrichtung_TypeClassEClass, Wirkrichtung_TypeClass.class, "Wirkrichtung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getWirkrichtung_TypeClass_Wert(), this.getWirkrichtung_Type(), "wert", null, 1, 1, Wirkrichtung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		// Initialize enums and add enum literals
 		initEEnum(enumgeoFormEEnum, ENUMGEOForm.class, "ENUMGEOForm");
-		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN);
-		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_KM_SPRUNG);
-		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_SONSTIGE);
-		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_BLOSSKURVE);
 		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_BOGEN);
+		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_BLOSSKURVE);
+		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_BLOSS_EINFACH_GESCHWUNGEN);
 		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_GERADE);
 		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_KLOTHOIDE);
-		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM);
+		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_KM_SPRUNG);
+		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_POLYLINIE);
 		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_RICHTGERADE_KNICK_AM_ENDE_200_GON);
+		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_SONSTIGE);
 		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_SFORM_EINFACH_GESCHWUNGEN);
+		addEEnumLiteral(enumgeoFormEEnum, ENUMGEOForm.ENUMGEO_FORM_UEBERGANGSBOGEN_SFORM);
+
+		initEEnum(enumgeoKoordinatensystemEEnum, ENUMGEOKoordinatensystem.class, "ENUMGEOKoordinatensystem");
+		addEEnumLiteral(enumgeoKoordinatensystemEEnum, ENUMGEOKoordinatensystem.ENUMGEO_KOORDINATENSYSTEM_CR0);
+		addEEnumLiteral(enumgeoKoordinatensystemEEnum, ENUMGEOKoordinatensystem.ENUMGEO_KOORDINATENSYSTEM_DR0);
+		addEEnumLiteral(enumgeoKoordinatensystemEEnum, ENUMGEOKoordinatensystem.ENUMGEO_KOORDINATENSYSTEM_ER0);
+		addEEnumLiteral(enumgeoKoordinatensystemEEnum, ENUMGEOKoordinatensystem.ENUMGEO_KOORDINATENSYSTEM_FR0);
+		addEEnumLiteral(enumgeoKoordinatensystemEEnum, ENUMGEOKoordinatensystem.ENUMGEO_KOORDINATENSYSTEM_SONSTIGE);
 
 		initEEnum(enumHoehenlinieFormEEnum, ENUMHoehenlinieForm.class, "ENUMHoehenlinieForm");
 		addEEnumLiteral(enumHoehenlinieFormEEnum, ENUMHoehenlinieForm.ENUM_HOEHENLINIE_FORM_GERADE);
@@ -4144,7 +4480,10 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		addEEnumLiteral(enumHoehenlinieFormEEnum, ENUMHoehenlinieForm.ENUM_HOEHENLINIE_FORM_WEICHENABZWEIG);
 
 		initEEnum(enumhSystemEEnum, ENUMHSystem.class, "ENUMHSystem");
+		addEEnumLiteral(enumhSystemEEnum, ENUMHSystem.ENUMH_SYSTEM_DBRH_2003);
+		addEEnumLiteral(enumhSystemEEnum, ENUMHSystem.ENUMH_SYSTEM_DBRH_2016);
 		addEEnumLiteral(enumhSystemEEnum, ENUMHSystem.ENUMH_SYSTEM_DHHN_12);
+		addEEnumLiteral(enumhSystemEEnum, ENUMHSystem.ENUMH_SYSTEM_DHHN_2016);
 		addEEnumLiteral(enumhSystemEEnum, ENUMHSystem.ENUMH_SYSTEM_DHHN_85);
 		addEEnumLiteral(enumhSystemEEnum, ENUMHSystem.ENUMH_SYSTEM_DHHN_92);
 		addEEnumLiteral(enumhSystemEEnum, ENUMHSystem.ENUMH_SYSTEM_HN_56);
@@ -4155,12 +4494,20 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_ABZW);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_ABZW_ANST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_ABZW_AWANST);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_ANST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_ANST_BK);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_AWANST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_AWANST_BK);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BF);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BF_ABZW);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BFT);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BFT_ABZW);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BK);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BSO);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BZ);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_DKST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_GP);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_HP);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_HP_ABZW);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_HP_ABZW_ANST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_HP_ABZW_AWANST);
@@ -4193,7 +4540,9 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_NE_UST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_PD_GR);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_RB_GR);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_SBK);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_SONSTIGE);
+		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_STRW);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_UST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_UST_ANST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_UST_AWANST);
@@ -4210,51 +4559,63 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_VP_HP_AWANST);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_VP_LGR);
 		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_VP_RB_GR);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_ANST);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_AWANST);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BF);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BFT);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BK);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_BZ);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_DKST);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_HP);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_SBK);
-		addEEnumLiteral(enumOertlichkeitArtEEnum, ENUMOertlichkeitArt.ENUM_OERTLICHKEIT_ART_STRW);
 
 		initEEnum(enumPlanQuelleEEnum, ENUMPlanQuelle.class, "ENUMPlanQuelle");
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_ERSATZTRASSIERUNG);
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_GIS);
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_GND);
+		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_GND_AUTOKORR);
+		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_GND_MANKORR);
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_IVL);
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_IVMG);
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_KOPIE);
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_NEUTRASSIERUNG);
+		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_PLANUNG);
+		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_PT_2);
 		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_SONSTIGE);
-		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_GND_AUTOKORR);
-		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_GND_MANKORR);
+		addEEnumLiteral(enumPlanQuelleEEnum, ENUMPlanQuelle.ENUM_PLAN_QUELLE_VERMESSUNG);
+
+		initEEnum(enumStreckeRichtungEEnum, ENUMStreckeRichtung.class, "ENUMStreckeRichtung");
+		addEEnumLiteral(enumStreckeRichtungEEnum, ENUMStreckeRichtung.ENUM_STRECKE_RICHTUNG_A);
+		addEEnumLiteral(enumStreckeRichtungEEnum, ENUMStreckeRichtung.ENUM_STRECKE_RICHTUNG_B);
+		addEEnumLiteral(enumStreckeRichtungEEnum, ENUMStreckeRichtung.ENUM_STRECKE_RICHTUNG_SONSTIGE);
 
 		initEEnum(enumtbArtEEnum, ENUMTBArt.class, "ENUMTBArt");
-		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_BRUECKE);
+		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_BAHNSTEIG_UNGENUTZT);
+		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_PERSONENUNTERFUEHRUNG);
+		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_BAHNSTEIGABSENKUNG);
 		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_DURCHLASS);
+		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN);
+		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN);
+		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_EISENBAHNUEBERFUEHRUNG);
 		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_SCHUTZWAND_LINKS);
 		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_SCHUTZWAND_RECHTS);
 		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_SONSTIGE);
 		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_TUNNEL);
+		addEEnumLiteral(enumtbArtEEnum, ENUMTBArt.ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN);
 
 		initEEnum(enumtopAnschlussEEnum, ENUMTOPAnschluss.class, "ENUMTOPAnschluss");
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_ENDE);
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_ENDE_BESTDIG);
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_LINKS);
+		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_MERIDIANSPRUNG);
+		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_RB_GRENZE);
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_RECHTS);
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_SCHNITT);
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_SONSTIGE);
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_SPITZE);
+		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_STRECKENWECHSEL);
 		addEEnumLiteral(enumtopAnschlussEEnum, ENUMTOPAnschluss.ENUMTOP_ANSCHLUSS_VERBINDUNG);
 
 		initEEnum(enumtpArtEEnum, ENUMTPArt.class, "ENUMTPArt");
+		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_BAHNSTEIGMONITOR);
+		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_FBOA);
+		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_BAHNSTEIGSPIEGEL);
 		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_GEBAEUDE);
-		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_MAST);
+		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_HOA);
 		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_SONSTIGE);
+		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_MAST);
+		addEEnumLiteral(enumtpArtEEnum, ENUMTPArt.ENUMTP_ART_ZUGHALTESENSOR);
 
 		initEEnum(enumUeberhoehungslinieFormEEnum, ENUMUeberhoehungslinieForm.class, "ENUMUeberhoehungslinieForm");
 		addEEnumLiteral(enumUeberhoehungslinieFormEEnum, ENUMUeberhoehungslinieForm.ENUM_UEBERHOEHUNGSLINIE_FORM_GLEICHBLEIBEND);
@@ -4266,25 +4627,29 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 
 		initEEnum(enumvProfilArtEEnum, ENUMVProfilArt.class, "ENUMVProfilArt");
 		addEEnumLiteral(enumvProfilArtEEnum, ENUMVProfilArt.ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT);
+		addEEnumLiteral(enumvProfilArtEEnum, ENUMVProfilArt.ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES);
 		addEEnumLiteral(enumvProfilArtEEnum, ENUMVProfilArt.ENUMV_PROFIL_ART_SIGNALGEFÜHRT);
 		addEEnumLiteral(enumvProfilArtEEnum, ENUMVProfilArt.ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES);
 		addEEnumLiteral(enumvProfilArtEEnum, ENUMVProfilArt.ENUMV_PROFIL_ART_SONSTIGE);
 		addEEnumLiteral(enumvProfilArtEEnum, ENUMVProfilArt.ENUMV_PROFIL_ART_WINDABHÄNGIG);
 
 		// Initialize data types
+		initEDataType(anzeigegefuehrt_ES_Kategorie_TypeEDataType, String.class, "Anzeigegefuehrt_ES_Kategorie_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(bezeichnung_Strecke_TypeEDataType, String.class, "Bezeichnung_Strecke_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumeration1EDataType, String.class, "Enumeration1", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumgeoFormObjectEDataType, ENUMGEOForm.class, "ENUMGEOFormObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumgeoKoordinatensystemObjectEDataType, ENUMGEOKoordinatensystem.class, "ENUMGEOKoordinatensystemObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumHoehenlinieFormObjectEDataType, ENUMHoehenlinieForm.class, "ENUMHoehenlinieFormObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumhSystemObjectEDataType, ENUMHSystem.class, "ENUMHSystemObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumOertlichkeitArtObjectEDataType, ENUMOertlichkeitArt.class, "ENUMOertlichkeitArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumPlanQuelleObjectEDataType, ENUMPlanQuelle.class, "ENUMPlanQuelleObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumStreckeRichtungObjectEDataType, ENUMStreckeRichtung.class, "ENUMStreckeRichtungObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumtbArtObjectEDataType, ENUMTBArt.class, "ENUMTBArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumtopAnschlussObjectEDataType, ENUMTOPAnschluss.class, "ENUMTOPAnschlussObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumtpArtObjectEDataType, ENUMTPArt.class, "ENUMTPArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumUeberhoehungslinieFormObjectEDataType, ENUMUeberhoehungslinieForm.class, "ENUMUeberhoehungslinieFormObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumvProfilArtObjectEDataType, ENUMVProfilArt.class, "ENUMVProfilArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(geO_KoordinatenSystem_LSys_TypeEDataType, String.class, "GEO_KoordinatenSystem_LSys_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(geO_KoordinatenSystem_Sonstige_TypeEDataType, String.class, "GEO_KoordinatenSystem_Sonstige_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(geO_KAD_TypeEDataType, String.class, "GEO_KAD_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(geO_Laenge_TypeEDataType, BigDecimal.class, "GEO_Laenge_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(geO_PAD_TypeEDataType, String.class, "GEO_PAD_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(geO_Radius_A_TypeEDataType, BigDecimal.class, "GEO_Radius_A_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -4296,6 +4661,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEDataType(gK_Z_TypeEDataType, BigDecimal.class, "GK_Z_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(hoehenlinie_Laenge_TypeEDataType, BigDecimal.class, "Hoehenlinie_Laenge_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(hoehenpunkt_Hoehe_TypeEDataType, BigDecimal.class, "Hoehenpunkt_Hoehe_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(kantenname_TypeEDataType, String.class, "Kantenname_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(knotenname_TypeEDataType, String.class, "Knotenname_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(neigung_TypeEDataType, BigDecimal.class, "Neigung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(oertlichkeit_Abkuerzung_TypeEDataType, String.class, "Oertlichkeit_Abkuerzung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -4307,7 +4673,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		initEDataType(tP_Beschreibung_TypeEDataType, String.class, "TP_Beschreibung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(ueberhoehung_Hoehe_TypeEDataType, BigDecimal.class, "Ueberhoehung_Hoehe_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(ueberhoehungslinie_Laenge_TypeEDataType, BigDecimal.class, "Ueberhoehungslinie_Laenge_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(wirkrichtung_TypeEDataType, ENUMWirkrichtung.class, "Wirkrichtung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -4333,7 +4698,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (enumHoehenlinieFormEEnum,
@@ -4378,6 +4743,12 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "documentation", "Beschreibung der geometrischen Form der Gleis-Kante. In Abh\u00e4ngigkeit von der Geo_Form werden die Attribute GEO Radius A und GEO Radius B mit entsprechenden Werten bef\u00fcllt oder bleiben LEER. Beispiel: GEO_Form: Gerade GEO_Radius_A = LEER GEO_Radius_B = LEER GEO_Form: BOGEN GEO_Radius_A = Radius GEO_Radius_B = LEER "
 		   });
 		addAnnotation
+		  (getGEO_Kante_Allg_AttributeGroup_GEOKAD(),
+		   source,
+		   new String[] {
+			   "documentation", "Bezeichnung der topografischen Kantenadresse. Aktuell ist eine Verwendung bei der \u00dcbernahme von Trassierungsdaten (ASCIBAHN) vorgesehen."
+		   });
+		addAnnotation
 		  (getGEO_Kante_Allg_AttributeGroup_GEOLaenge(),
 		   source,
 		   new String[] {
@@ -4399,7 +4770,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getGEO_Kante_Allg_AttributeGroup_GEORichtungswinkel(),
 		   source,
 		   new String[] {
-			   "documentation", "Parameter f\u00fcr eine GEO Kante, der dem Bezugswinkel (Tangente) am Anfang einer GEO_Kante dsarstellt. Das Attribut GEO_Richtungswinkel enth\u00e4lt den Richtungswinkel der Geo-Kante am Anfang in [gon]. Es gilt nachfolgende Zuordnung der Richtung: Nord = 0,0 gon Ost = 100,0 gon S\u00fcd = 200,0 gon West = 300,0 gon originale negative Werte werden durch Addition von 400.0 gon normalisiert. "
+			   "documentation", "Parameter f\u00fcr eine GEO Kante, der den Bezugswinkel (Tangente) am Anfang einer GEO_Kante darstellt. Das Attribut GEO_Richtungswinkel enth\u00e4lt den Richtungswinkel der Geo-Kante am Anfang in [gon]. Es gilt nachfolgende Zuordnung der Richtung: Nord = 0,0 gon Ost = 100,0 gon S\u00fcd = 200,0 gon West = 300,0 gon originale negative Werte werden durch Addition von 400.0 gon normalisiert. "
 		   });
 		addAnnotation
 		  (getGEO_Kante_Allg_AttributeGroup_PlanQuelle(),
@@ -4426,10 +4797,22 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "documentation", "Topographischer Punkt im Koordinatensystem zur eindeutige Zuordnung im realen Gel\u00e4nde. Alle Objekte, die einen entsprechenden Bezug erfordern, werden \u00fcber andere Objekte (z.B Verortung an der Topologie) oder auch direkt auf dieses Objekt abgebildet."
 		   });
 		addAnnotation
+		  (getGEO_Punkt_IDGEOKante(),
+		   source,
+		   new String[] {
+			   "documentation", "Verweis auf eine GEO_Kante, wenn der GEO_Punkt als St\u00fctzpunkt einer Polylinie fungiert. Eine Polylinie kann durch bis zu 999\nGEO_Punkte beschrieben werden. Es ist jedoch auch zul\u00e4ssig, eine virtuelle Polylinie ohne GEO_Punkte\ndarzustellen."
+		   });
+		addAnnotation
 		  (getGEO_Punkt_IDGEOKnoten(),
 		   source,
 		   new String[] {
 			   "documentation", "ID des GEO_Knoten, auf den dieser GEO Punkt verweist. Einem GEO Knoten k\u00f6nnen \u00fcber diesen Verweis mehrere GEO_Punkte zugewiesen werden. Das ist erforderlich, wenn ein GEO_Knoten in unterschiedlichen Koordinatensystemen zugeordnet ist. "
+		   });
+		addAnnotation
+		  (getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatensystem(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe der topographischen Koordinaten des Geo-Punkts, in der Regel in LSys-Koordinaten. Neben den eigentlichen Koordinaten (x, y, z) wird auch das konkrete Koordinatensystem in der Bezeichnung dargestellt. Bei \u00fcbergreifenden Koordinaten in Grenzbereichen, die nicht mit LSys darstellbar sind, ist der Wert \"sonstige\" zu verwenden und das Koordinatensystem mittels Bearbeitungsvermerk anzugeben. Folgende Wertigkeiten (3 Zeichen) liefert das Attribut LSys (s. a. Spezifikation Gleisnetzdaten der DB): 1. Zeichen: C Meridianstreifen 6\u00b0 \u00f6stliche L\u00e4nge; D Meridianstreifen 9\u00b0 \u00f6stliche L\u00e4nge; E Meridianstreifen 12\u00b0 \u00f6stliche L\u00e4nge; F Meridianstreifen 15\u00b0 \u00f6stliche L\u00e4nge. 2. Zeichen: A System RD/83 - Bessel-Ellipsoid, Datumspunkt Rauenberg (westliche Bundesl\u00e4nder, Sachsen); B System PD/83 - Bessel-Ellipsoid, Datumspunkt Potsdam (Th\u00fcringen); C System 42/83 - Krassowski-Ellipsoid, Datumspunkt Pulkowo (Brandenburg, Mecklenburg, Sachsen-Anhalt); R DB-Referenzsystem (Kartesische Koordinaten); S System Soldner - Netz 88, Datumspunkt M\u00fcggelberg (Berlin). 3. Zeichen: 0 DB-GIS Bezugsystem; A..9 Sonstige kartesische Koordinaten."
 		   });
 		addAnnotation
 		  (getGEO_Punkt_Allg_AttributeGroup_GKX(),
@@ -4456,22 +4839,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "documentation", "Quelle der Geo-Kante, des Geo-Knotens, des H\u00f6henpunkts, der H\u00f6henlinie, der \u00dcberh\u00f6hung bzw. der \u00dcberh\u00f6hungslinie. Bei Auswahl von \u201esonstige\u201c ist zwingend ein Bearbeitungsvermerk anzugeben. "
 		   });
 		addAnnotation
-		  (getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys(),
-		   source,
-		   new String[] {
-			   "documentation", "Angabe der topographischen Koordinaten des Geo-Punkts in LSys-Koordinaten. Die Darstellung von topographischen Koordinaten erfolgt f\u00fcrGeo-Punkte in der Regel in LSys-Koordinaten. Neben den eigentlichen Koordinaten (x, y, z) wird auch das konkrete Koordinatensystem in der Bezeichnung dargestellt. Bei \u00fcbergreifenden Koordinaten in Grenzbereichen, die nicht mit LSys darstellbar sind, ist das Koordinatensystem sonstige zu verwenden. Folgende Wertigkeiten (3 Zeichen) liefert das Attribut LSys(s. a. Spezifikation Gleisnetzdaten der DB): 1. Zeichen: C Meridianstreifen 6\u00b0 \u00f6stliche L\u00e4nge; D Meridianstreifen 9\u00b0 \u00f6stliche L\u00e4nge; E Meridianstreifen 12\u00b0 \u00f6stliche L\u00e4nge; F Meridianstreifen 15\u00b0 \u00f6stliche L\u00e4nge. 2. Zeichen: A System RD/83 - Bessel-Ellipsoid, Datumspunkt Rauenberg (westliche Bundesl\u00e4nder, Sachsen); B System PD/83 - Bessel-Ellipsoid, Datumspunkt Potsdam (Th\u00fcringen); C System 42/83 - Krassowski-Ellipsoid, Datumspunkt Pulkowo (Brandenburg, Mecklenburg, Sachsen-Anhalt); R DB-Referenzsystem (Kartesische Koordinaten); S System Soldner - Netz 88, Datumspunkt M\u00fcggelberg (Berlin). 3. Zeichen: 0 DB-GIS Bezugsystem; A..9 Sonstige kartesische Koordinaten. "
-		   });
-		addAnnotation
-		  (getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemSonstige(),
-		   source,
-		   new String[] {
-			   "documentation", "Sonstiges Geo-Koordinatensystem. Das Attribut ist nur dann zu verwenden, wenn das verwendete Koordinatensystem f\u00fcr den GEO Punkt nicht den LSys-Koordinaten entspricht."
-		   });
-		addAnnotation
 		  (geschwindigkeitsprofilEClass,
 		   source,
 		   new String[] {
 			   "documentation", "Zul\u00e4ssige Geschwindigkeit der Strecke, bei ETCS auch au\u00dferhalb der durchgehenden Hauptgleise. Das Geschwindigkeitsprofil wird zusammengesetzt aus Bereichen mit konstanten Geschwindigkeiten. Es kann in unterschiedlichen Arten (z. B. NeiTec, ETCS) ausgepr\u00e4gt sein. F\u00fcr jede Art wird ein separates Geschwindigkeitsprofil angelegt. \"Geschwindigkeitsband\" ist ein Synonym f\u00fcr Geschwindigkeitsprofil. Unabh\u00e4ngig vom Geschwindigkeitsprofil k\u00f6nnen in Elementen (Weiche, Gleisabschnitt) eigene Geschwindigkeiten hinterlegt sein. Je nach Anwendung wird \u00fcber die G\u00fcltigkeit der in den Elementen hinterlegten Geschwindigkeit oder der des Geschwindigkeitsprofils entschieden."
+		   });
+		addAnnotation
+		  (getGeschwindigkeitsprofil_Allg_AttributeGroup_AnzeigegefuehrtESKategorie(),
+		   source,
+		   new String[] {
+			   "documentation", "Kategorie f\u00fcr Geschwindigkeitsprofile der Art \"anzeigefef\u00fchrt ES\", z. B. G\u00fcltigkeit f\u00fcr Reise- oder G\u00fcterz\u00fcge."
 		   });
 		addAnnotation
 		  (getGeschwindigkeitsprofil_Allg_AttributeGroup_Geschwindigkeit(),
@@ -4484,12 +4861,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   source,
 		   new String[] {
 			   "documentation", "Art des Geschwindigkeitsprofils."
-		   });
-		addAnnotation
-		  (getGeschwindigkeitsprofil_Allg_AttributeGroup_Wirkrichtung(),
-		   source,
-		   new String[] {
-			   "documentation", "(Fahrt-)Richtung, in die ein verortetes Objekt wirkt. Die Angabe \"in\", \"gegen\" bzw. \"beide\" bezieht sich auf die Topologierichtung der TOP Kante. Weitere Erl\u00e4uterungen zu den verwendeten Richtungsbegriffen siehe Modellierung Richtung. Zur vererbungsspezifischen Bef\u00fcllung siehe Modellierung Basisobjekte. DB-Regelwerk Darstellung im sicherungstechnischen Lageplan"
 		   });
 		addAnnotation
 		  (hoehenlinieEClass,
@@ -4531,7 +4902,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (hoehenpunktEClass,
 		   source,
 		   new String[] {
-			   "documentation", "\u00d6rtliche H\u00f6he des Bezugspunkts gem\u00e4\u00df des H\u00f6hensystems. Liegt der H\u00f6henpunkt innerhalb des zugeh\u00f6rigen Gleises, wird dieser mit einem Seitlichen Abstand im Punkt_Objekt von 0.000 angegeben und gibt die H\u00f6he des Gleises in Meter gem\u00e4\u00df H\u00f6hensystem an. Wird eine seitlicher Abstand ungleich 0.000 angegeben, so handelt es sich um einen sonstigen H\u00f6henpunkt, der nicht die H\u00f6henlage des Gleises angibt. Ein H\u00f6henpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten."
+			   "documentation", "\u00d6rtliche H\u00f6he des Bezugspunkts in Metern gem\u00e4\u00df H\u00f6hensystem. Liegt der H\u00f6henpunkt innerhalb des zugeh\u00f6rigen Gleises, entf\u00e4llt die Angabe eines seitlichen Abstands bzw. einer seitlichen Lage. Wird ein seitlicher Abstand ungleich 0.000 angegeben, so handelt es sich um einen sonstigen H\u00f6henpunkt, der nicht die H\u00f6henlage des Gleises angibt. Ein H\u00f6henpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten."
 		   });
 		addAnnotation
 		  (getHoehenpunkt_Allg_AttributeGroup_GEOPAD(),
@@ -4543,7 +4914,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getHoehenpunkt_Allg_AttributeGroup_HoehenpunktDatum(),
 		   source,
 		   new String[] {
-			   "documentation", "Aufnahmedatum der H\u00f6henwerte des Hoehenpunktes. GND: Punktdatum; Ivl und Ivmg: Datum der letzten Bearbeitung; Kopie: Datum aus kopierter H\u00f6he; Neutrassierung: Freigabedatum; sonstige: Datum der letzten Bearbeitung. "
+			   "documentation", "Aufnahmedatum der H\u00f6henwerte des Hoehenpunktes. GND: Punktdatum; Ivl und Ivmg: Datum der letzten Bearbeitung; Kopie: Datum aus kopierter H\u00f6he; Neutrassierung: Freigabedatum; sonstige: Datum der letzten Bearbeitung.\nDie Information wird zuk\u00fcnftig \u00fcber das Attribut Datum_Regelwerk abgebildet. Das Attribut soll daher langfristig entfallen."
 		   });
 		addAnnotation
 		  (getHoehenpunkt_Allg_AttributeGroup_HoehenpunktHoehe(),
@@ -4561,7 +4932,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getHoehenpunkt_Allg_AttributeGroup_Neigung(),
 		   source,
 		   new String[] {
-			   "documentation", "Neigung des Gleises bzw. der Hoehenlinie am Ort des Hoehenpunkts. Die Angabe ist nur bei geradem Neigungsverlauf sinnvoll."
+			   "documentation", "Neigung des Gleises bzw. der Hoehenlinie am Ort des Hoehenpunkts. Die Art der Neigung (Steigung/Gef\u00e4lle) muss durch Auswertung der Wirkrichtung ermittelt werden. Die Angabe ist nur bei Vorhandensein einer H\u00f6henlinie sinnvoll."
 		   });
 		addAnnotation
 		  (getHoehenpunkt_Allg_AttributeGroup_PlanQuelle(),
@@ -4582,10 +4953,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "documentation", "Verweis zur (betrieblichen) Zuordnung von Bahnhofsteilen zu Bahnh\u00f6fen und von Betriebsstellen untereinander. "
 		   });
 		addAnnotation
+		  (getOertlichkeit_IDOertlichkeitAwanstBedient(),
+		   source,
+		   new String[] {
+			   "documentation", "Bei Awanst: Angabe der \u00d6rtlichkeit, von der die Awanst bedient wird."
+		   });
+		addAnnotation
 		  (getOertlichkeit_IDStreckePunkt(),
 		   source,
 		   new String[] {
-			   "documentation", "Verweis auf einen Streckenpunkt zur Lokalisierung der \u00d6rtlichkeiten im Netz. Die Information wird f\u00fcr die Erstellung der Ausgabeformate ben\u00f6tigt. "
+			   "documentation", "Verweis auf einen bzw. mehrere Streckenpunkt(e) zur Lokalisierung der \u00d6rtlichkeit im Netz. Die Information wird f\u00fcr die Erstellung der Ausgabeformate ben\u00f6tigt."
 		   });
 		addAnnotation
 		  (getOertlichkeit_Allg_AttributeGroup_OertlichkeitArt(),
@@ -4642,6 +5019,24 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "documentation", "Streckenbezeichnung der DB AG. Streckenbezeichnungen sind i. d. R vierstellig. Ist aber z. B. der Verlauf der beiden Gleise einer zweigleisigen Strecke so unterschiedlich, dass eine getrennte Kilometrierung notwendig ist, wird der vierstelligen Bezeichnung noch eine Kennung (-1) angeh\u00e4ngt. Beispiel: Stecke 6240 ist zweigleisig. Bedingt durch einen anderen Verlauf der linken und rechten Gleislage, bekommt z. B. das linke Gleis eine andere Kilometrierung. Strecke 6240 (Rechts); Strecke 6240-1 (Links). DB-Regelwerk 885.6002A03"
 		   });
 		addAnnotation
+		  (strecke_BremswegEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Bremswegabstand der Strecke als Eingangsgr\u00f6\u00dfe f\u00fcr die LST-Planung. Die Vorgabe erfolgt in der BAst."
+		   });
+		addAnnotation
+		  (getStrecke_Bremsweg_Bremsweg(),
+		   source,
+		   new String[] {
+			   "documentation", "Bremsweg als Grundlage f\u00fcr die Dimesionierung der zugeh\u00f6rigen Strecke. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen."
+		   });
+		addAnnotation
+		  (getStrecke_Bremsweg_StreckeRichtung(),
+		   source,
+		   new String[] {
+			   "documentation", "Richtung der Strecke, f\u00fcr die der Bremsweg vorgegeben ist. Die Richtung wird topologisch \u00fcber das Attribut Richtungsbezug (Bereich_Objekt) abgetragen."
+		   });
+		addAnnotation
 		  (strecke_PunktEClass,
 		   source,
 		   new String[] {
@@ -4651,7 +5046,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getStrecke_Punkt_IDGEOKnoten(),
 		   source,
 		   new String[] {
-			   "documentation", "ID des GEO_Knoten, auf den der Strecke_Punkt verweist. Der Verweis ist nur zu bef\u00fcllen, wenn auch eine Streckenlinie mit GEO-Daten vorhanden ist. "
+			   "documentation", "ID des GEO_Knoten, auf den der Strecke_Punkt verweist. Der Verweis ist nur zu bef\u00fcllen, wenn auch eine Streckenlinie mit GEO-Daten vorhanden ist. F\u00fcr jeden GEO_Knoten der Streckenachse wird dabei ein Strecke_Punkt erstellt."
 		   });
 		addAnnotation
 		  (getStrecke_Punkt_IDStrecke(),
@@ -4675,7 +5070,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getTechnischer_Bereich_TBArt(),
 		   source,
 		   new String[] {
-			   "documentation", "Art des technischen Bereichs. Anhand der in der Planung entstehenden Erfahrungen wird die ENUM-Liste erweitert. "
+			   "documentation", "Art des technischen Bereichs. Anhand der in der Planung entstehenden Erfahrungen wird die ENUM-Liste erweitert. \nSchutzwand: bauliches Element in unmittelbarer N\u00e4he des Gleises, das bei der Platzierung von Elementen zu ber\u00fccksichtigen ist (z. B. St\u00fctzmauer, Schallschutzwand)."
 		   });
 		addAnnotation
 		  (getTechnischer_Bereich_TBBeschreibung(),
@@ -4720,6 +5115,12 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "documentation", "Verweis auf den TOP Knoten am Ende der Kante. Ende der laufenden L\u00e4nge, d. h. laufende L\u00e4nge = TOP Laenge."
 		   });
 		addAnnotation
+		  (getTOP_Kante_Allg_AttributeGroup_Kantenname(),
+		   source,
+		   new String[] {
+			   "documentation", "Bezeichnung f\u00fcr die Kante. Die Bezeichnung wird beispielsweise bei Neutrassierungen (ASCIBAHN) \u00fcbernommen um eine Verkn\u00fcpfung der gelieferten Trassierungsdaten mit den an den LST-Fachplaner \u00fcbegebenen PlanPro-Geodaten sicherzustellen."
+		   });
+		addAnnotation
 		  (getTOP_Kante_Allg_AttributeGroup_TOPAnschlussA(),
 		   source,
 		   new String[] {
@@ -4741,7 +5142,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (toP_KnotenEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Knoten des topologischen Knoten-Kanten-Modells. Der TOP_Knoten verweist auf einen GEO_Knoten. Die Anzahl der an den TOP_Knoten anschlie\u00dfenden topologischen Kanten ist je nach Art des TOP_Knoten unterschiedlich und muss mit der Anzahl der an den zugeh\u00f6rigen GEO Knoten anschlie\u00dfenden GEO_Kanten \u00fcbereinstimmen: eine TOP-Kante: Gleisende, Digitalisierungsende, Betrachtungsende; drei TOP-Kanten: verzweigendes Fahrwegelement (siehe Modellierung Weichen). Weitere F\u00e4lle mit 0..2 anschlie\u00dfenden TOP-Kanten treten am Verbindungsknoten auf (siehe entsprechende Beschreibung). (E) Das die Attributgruppe Art Besonders zum Entfall vorgesehen ist, wird nach der Version 1.8.0 auch die Attributgruppe TOP_Knoten_Allg aufgel\u00f6st. "
+			   "documentation", "Knoten des topologischen Knoten-Kanten-Modells. Der TOP_Knoten verweist auf einen GEO_Knoten. Die Anzahl der an den TOP_Knoten anschlie\u00dfenden topologischen Kanten ist je nach Art des TOP_Knoten unterschiedlich und muss mit der Anzahl der an den zugeh\u00f6rigen GEO Knoten anschlie\u00dfenden GEO_Kanten \u00fcbereinstimmen: eine TOP-Kante: Gleisende, Digitalisierungsende, Betrachtungsende; drei TOP-Kanten: verzweigendes Fahrwegelement (siehe Modellierung Weichen). Weitere F\u00e4lle mit 0..2 anschlie\u00dfenden TOP-Kanten treten am Verbindungsknoten auf (siehe entsprechende Beschreibung). Im Fall eines Meridiansprungs werden zwei TOP_Knoten angelegt, die mit einer TOP_Kante der L\u00e4nge Null verbunden werden. an die beiden TOP_Knoten schlie\u00dfen also genau zwei TOP_Kanten an."
 		   });
 		addAnnotation
 		  (getTOP_Knoten_IDGEOKnoten(),
@@ -4759,7 +5160,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (ueberhoehungEClass,
 		   source,
 		   new String[] {
-			   "documentation", "\u00d6rtlicher H\u00f6henunterschied beider Schienen eines Gleises in Querrichtung. Die \u00dcberh\u00f6hung ist eine Querneigung eines Gleises in einem Bogen an einem Punkt im Gleis. Durch die seitliche Lage (als Attribut des Punkt_Objektes - links oder rechts) wird die h\u00f6here Seite der beiden Schienen beschrieben. Ein H\u00f6henpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten."
+			   "documentation", "\u00d6rtlicher H\u00f6henunterschied beider Schienen eines Gleises in Querrichtung. Die \u00dcberh\u00f6hung ist eine Querneigung eines Gleises in einem Bogen an einem Punkt im Gleis. Es wird immer die bogen\u00e4u\u00dfere Schiene \u00fcberh\u00f6ht. Ein H\u00f6henpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten."
 		   });
 		addAnnotation
 		  (getUeberhoehung_Allg_AttributeGroup_GEOPAD(),
@@ -4777,7 +5178,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getUeberhoehung_Allg_AttributeGroup_UeberhoehungDatum(),
 		   source,
 		   new String[] {
-			   "documentation", "Aufnahmedatum der Koordinaten der \u00dcberh\u00f6hung. GND: Punktdatum; Ivl und Ivmg: Datum der letzten Bearbeitung; Kopie: Datum aus kopierter H\u00f6he; Neutrassierung: Freigabedatum; sonstige: Datum der letzten Bearbeitung. "
+			   "documentation", "Aufnahmedatum der Koordinaten der \u00dcberh\u00f6hung. GND: Punktdatum; Ivl und Ivmg: Datum der letzten Bearbeitung; Kopie: Datum aus kopierter H\u00f6he; Neutrassierung: Freigabedatum; sonstige: Datum der letzten Bearbeitung.  Die Information wird zuk\u00fcnftig \u00fcber das Attribut Datum_Regelwerk abgebildet. Das Attribut soll daher langfristig entfallen."
 		   });
 		addAnnotation
 		  (getUeberhoehung_Allg_AttributeGroup_UeberhoehungHoehe(),
@@ -4832,6 +5233,27 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 	protected void createExtendedMetaDataAnnotations() {
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
+		  (anzeigegefuehrt_ES_Kategorie_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TAnzeigegefuehrt_ES_Kategorie",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
+		   });
+		addAnnotation
+		  (anzeigegefuehrt_ES_Kategorie_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCAnzeigegefuehrt_ES_Kategorie",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getAnzeigegefuehrt_ES_Kategorie_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (bezeichnung_Strecke_TypeEDataType,
 		   source,
 		   new String[] {
@@ -4854,6 +5276,27 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (bremsweg_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCBremsweg",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getBremsweg_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (enumeration1EDataType,
+		   source,
+		   new String[] {
+			   "name", "Enumeration1",
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#string"
+		   });
+		addAnnotation
 		  (enumgeoFormEEnum,
 		   source,
 		   new String[] {
@@ -4865,6 +5308,19 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "name", "ENUMGEO_Form:Object",
 			   "baseType", "ENUMGEO_Form"
+		   });
+		addAnnotation
+		  (enumgeoKoordinatensystemEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMGEO_Koordinatensystem"
+		   });
+		addAnnotation
+		  (enumgeoKoordinatensystemObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMGEO_Koordinatensystem:Object",
+			   "baseType", "ENUMGEO_Koordinatensystem"
 		   });
 		addAnnotation
 		  (enumHoehenlinieFormEEnum,
@@ -4917,6 +5373,19 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "name", "ENUMPlan_Quelle:Object",
 			   "baseType", "ENUMPlan_Quelle"
+		   });
+		addAnnotation
+		  (enumStreckeRichtungEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMStrecke_Richtung"
+		   });
+		addAnnotation
+		  (enumStreckeRichtungObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMStrecke_Richtung:Object",
+			   "baseType", "ENUMStrecke_Richtung"
 		   });
 		addAnnotation
 		  (enumtbArtEEnum,
@@ -4998,6 +5467,27 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (geO_KAD_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TGEO_KAD",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
+		   });
+		addAnnotation
+		  (geO_KAD_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCGEO_KAD",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getGEO_KAD_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (geO_KanteEClass,
 		   source,
 		   new String[] {
@@ -5045,6 +5535,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "kind", "element",
 			   "name", "GEO_Form"
+		   });
+		addAnnotation
+		  (getGEO_Kante_Allg_AttributeGroup_GEOKAD(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "GEO_KAD"
 		   });
 		addAnnotation
 		  (getGEO_Kante_Allg_AttributeGroup_GEOLaenge(),
@@ -5096,43 +5593,14 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "GEO_PAD"
 		   });
 		addAnnotation
-		  (geO_KoordinatenSystem_LSys_TypeEDataType,
+		  (geO_Koordinatensystem_TypeClassEClass,
 		   source,
 		   new String[] {
-			   "name", "TGEO_KoordinatenSystem_LSys",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TZeichenkette",
-			   "pattern", "[C-F][A-C|R|S][0-9A-Z]"
-		   });
-		addAnnotation
-		  (geO_KoordinatenSystem_LSys_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCGEO_KoordinatenSystem_LSys",
+			   "name", "TCGEO_Koordinatensystem",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (getGEO_KoordinatenSystem_LSys_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
-		  (geO_KoordinatenSystem_Sonstige_TypeEDataType,
-		   source,
-		   new String[] {
-			   "name", "TGEO_KoordinatenSystem_Sonstige",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TZeichenkette"
-		   });
-		addAnnotation
-		  (geO_KoordinatenSystem_Sonstige_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCGEO_KoordinatenSystem_Sonstige",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getGEO_KoordinatenSystem_Sonstige_TypeClass_Wert(),
+		  (getGEO_Koordinatensystem_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -5197,6 +5665,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "GEO_Punkt_Allg"
 		   });
 		addAnnotation
+		  (getGEO_Punkt_IDGEOKante(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_GEO_Kante"
+		   });
+		addAnnotation
 		  (getGEO_Punkt_IDGEOKnoten(),
 		   source,
 		   new String[] {
@@ -5209,6 +5684,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "name", "CGEO_Punkt_Allg",
 			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatensystem(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "GEO_Koordinatensystem"
 		   });
 		addAnnotation
 		  (getGEO_Punkt_Allg_AttributeGroup_GKX(),
@@ -5237,20 +5719,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "kind", "element",
 			   "name", "Plan_Quelle"
-		   });
-		addAnnotation
-		  (getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "GEO_KoordinatenSystem_LSys"
-		   });
-		addAnnotation
-		  (getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemSonstige(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "GEO_KoordinatenSystem_Sonstige"
 		   });
 		addAnnotation
 		  (geO_Radius_A_TypeEDataType,
@@ -5361,6 +5829,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (getGeschwindigkeitsprofil_Allg_AttributeGroup_AnzeigegefuehrtESKategorie(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Anzeigegefuehrt_ES_Kategorie"
+		   });
+		addAnnotation
 		  (getGeschwindigkeitsprofil_Allg_AttributeGroup_Geschwindigkeit(),
 		   source,
 		   new String[] {
@@ -5373,13 +5848,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "kind", "element",
 			   "name", "V_Profil_Art"
-		   });
-		addAnnotation
-		  (getGeschwindigkeitsprofil_Allg_AttributeGroup_Wirkrichtung(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wirkrichtung"
 		   });
 		addAnnotation
 		  (gK_X_TypeEDataType,
@@ -5653,6 +6121,27 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (kantenname_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TKantenname",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
+		   });
+		addAnnotation
+		  (kantenname_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCKantenname",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getKantenname_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (knotenname_TypeEDataType,
 		   source,
 		   new String[] {
@@ -5680,7 +6169,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "name", "TNeigung",
 			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#decimal",
-			   "pattern", "-100\\.000|-([1-9][0-9]{0,1}\\.[0-9]{3})|(-0\\.[1-9][0-9]{2}|-0\\.0[1-9][0-9]|-0\\.0[0-9][1-9])|((0|[1-9][0-9]{0,1})\\.[0-9]{3})|100\\.000"
+			   "pattern", "0\\.000|([1-9][0-9]{0,1}\\.[0-9]{3})|(0\\.[1-9][0-9]{2}|0\\.0[1-9][0-9]|0\\.0[0-9][1-9])|((0|[1-9][0-9]{0,1})\\.[0-9]{3})|100\\.000"
 		   });
 		addAnnotation
 		  (neigung_TypeClassEClass,
@@ -5718,6 +6207,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "ID_Oertlichkeit"
 		   });
 		addAnnotation
+		  (getOertlichkeit_IDOertlichkeitAwanstBedient(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_Oertlichkeit_Awanst_Bedient"
+		   });
+		addAnnotation
 		  (getOertlichkeit_IDStreckePunkt(),
 		   source,
 		   new String[] {
@@ -5737,7 +6233,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "name", "TOertlichkeit_Abkuerzung",
 			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText",
-			   "pattern", "[A-Z]{2,5}"
+			   "pattern", "[A-Z][A-Z0-9%20]{1,4}"
 		   });
 		addAnnotation
 		  (oertlichkeit_Abkuerzung_TypeClassEClass,
@@ -5938,6 +6434,27 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "Bezeichnung_Strecke"
 		   });
 		addAnnotation
+		  (strecke_BremswegEClass,
+		   source,
+		   new String[] {
+			   "name", "CStrecke_Bremsweg",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getStrecke_Bremsweg_Bremsweg(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Bremsweg"
+		   });
+		addAnnotation
+		  (getStrecke_Bremsweg_StreckeRichtung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Strecke_Richtung"
+		   });
+		addAnnotation
 		  (strecke_Meter_TypeEDataType,
 		   source,
 		   new String[] {
@@ -5988,6 +6505,20 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "name", "Strecke_Meter"
 		   });
 		addAnnotation
+		  (strecke_Richtung_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCStrecke_Richtung",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getStrecke_Richtung_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (tB_Art_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -6006,7 +6537,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   source,
 		   new String[] {
 			   "name", "TTB_Beschreibung",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TFreiText"
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
 		   });
 		addAnnotation
 		  (tB_Beschreibung_TypeClassEClass,
@@ -6128,6 +6659,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (getTOP_Kante_Allg_AttributeGroup_Kantenname(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Kantenname"
+		   });
+		addAnnotation
 		  (getTOP_Kante_Allg_AttributeGroup_TOPAnschlussA(),
 		   source,
 		   new String[] {
@@ -6210,7 +6748,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   source,
 		   new String[] {
 			   "name", "TTP_Beschreibung",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TFreiText"
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
 		   });
 		addAnnotation
 		  (tP_Beschreibung_TypeClassEClass,
@@ -6225,6 +6763,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "kind", "element",
 			   "name", "Wert"
+		   });
+		addAnnotation
+		  (trasse_Kante_child_AttributeGroupEClass,
+		   source,
+		   new String[] {
+			   "name", "CTrasse_Kante_child",
+			   "kind", "elementOnly"
 		   });
 		addAnnotation
 		  (ueberhoehungEClass,
@@ -6295,7 +6840,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		   new String[] {
 			   "name", "TUeberhoehung_Hoehe",
 			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TMeter",
-			   "pattern", "0\\.[01][0-9][0-9]|0\\.200"
+			   "pattern", "-?(0\\.[01][0-9][0-9]|0\\.200)"
 		   });
 		addAnnotation
 		  (ueberhoehung_Hoehe_TypeClassEClass,
@@ -6417,27 +6962,6 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "kind", "element",
 			   "name", "Wert"
 		   });
-		addAnnotation
-		  (wirkrichtung_TypeEDataType,
-		   source,
-		   new String[] {
-			   "name", "TWirkrichtung",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TWirkrichtung"
-		   });
-		addAnnotation
-		  (wirkrichtung_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCWirkrichtung",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getWirkrichtung_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
 	}
 
 	/**
@@ -6452,7 +6976,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (geO_KanteEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getGEO_Kante_Allg_AttributeGroup_GEOLaenge(),
@@ -6488,7 +7012,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (geO_KnotenEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getGEO_Knoten_GEOPAD(),
@@ -6500,7 +7024,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (geO_PunktEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getGEO_Punkt_Allg_AttributeGroup_GKX(),
@@ -6527,22 +7051,16 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>GND</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
-		  (getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                       \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                            \r\n    <Patternbeschreibung> [3]; Eine Zeichenkette mit 3 Zeichen, wobei das erste Zeichen ein Buchstabe [C..F], das zweite Zeichen ein Buchstabe [A..C|R|S] und das dritte Zeichen eine Ziffer [0..9] oder ein Buchstabe [A..Z] sein muss. </Patternbeschreibung>\r\n                         \r\n  </WorkflowInformation>\r\n                    \r\n"
-		   });
-		addAnnotation
 		  (geschwindigkeitsprofilEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (hoehenlinieEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getHoehenlinie_Allg_AttributeGroup_HoehenlinieLaenge(),
@@ -6560,7 +7078,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (hoehenpunktEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getHoehenpunkt_Allg_AttributeGroup_GEOPAD(),
@@ -6578,7 +7096,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getHoehenpunkt_Allg_AttributeGroup_Neigung(),
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>[-100.000..100.000]</Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>[0.000..100.000]</Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (getHoehenpunkt_Allg_AttributeGroup_PlanQuelle(),
@@ -6590,13 +7108,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (oertlichkeitEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getOertlichkeit_Bezeichnung_AttributeGroup_OertlichkeitAbkuerzung(),
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [2..5] Im Regelfall sollen nur 4 Zeichen genutzt werden. Es sind nur Gro\u00dfbuchstaben, Zahlen und Leerzeichen zul\u00e4ssig. Umlaute, f\u00fchrende Zahlen sowie f\u00fchrende Leerzeichen sind nicht zul\u00e4ssig. Die Aufeinanderfolge von 3 oder 4 gleichen Buchstaben ist unzul\u00e4ssig. F\u00fcr die Kennzeichnung des Ortes stehen maximal 3 Zeichen zur Verf\u00fcgung. Das 1. Zeichen ist das Gebietskennzeichen. Die 2.-4. Zeichen bilden die Ortsabk\u00fcrzung. Das 5. Zeichen ist ein Unterscheidungszeichen innerhalb des Ortes. Nicht belegte Zeichen (3. und 4. Zeichen) werden durch Leerzeichen aufgef\u00fcllt. Abk\u00fcrzungen f\u00fcr Selbstblocksignale werden aus dem Gebietskennzeichen und der Nummer des Sbk gebildet. *Die Nummer ist rechtsb\u00fcndig zu schreiben (auff\u00fcllen mit Leerzeichen). Bei gleichen Nummern in einem Gebiet k\u00f6nnen vor oder nach der Nummer beliebige Unterscheidungszeichen eingef\u00fcgt werden. Bei der \u00dcberarbeitung der Modellierung und der k\u00fcnftigen Patternbeschreibung ist die Technische Mitteilung TM 2011-264 I.NVT 3, g\u00fcltig ab 05.08.2011 (siehe oben) zu beachten. Leerzeichen werden k\u00fcnftig durch \\\"X\\\" ersetzt. Die neue Abk\u00fcrzung mit der ersetzten Form muss jedoch im Datenb\u00fcro beantragt werden. </Patternbeschreibung>\r\n                         \r\n    <Patternbeschreibung_Abweichend>[2..5] Gro\u00dfbuchstaben ohne Umlaute</Patternbeschreibung_Abweichend>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [2..5] Gro\u00dfbuchstaben, Zahlen und Leerzeichen ohne Umlaute, f\u00fchrende Zahlen sowie f\u00fchrende Leerzeichen</Patternbeschreibung>\r\n                         \r\n    <Patternbeschreibung_Abweichend>[2..5] Gro\u00dfbuchstaben ohne Umlaute</Patternbeschreibung_Abweichend>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (getOertlichkeit_Bezeichnung_AttributeGroup_OertlichkeitKurzname(),
@@ -6614,7 +7132,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (streckeEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getStrecke_Bezeichnung_AttributeGroup_BezeichnungStrecke(),
@@ -6623,10 +7141,22 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>  [4..6]; Die ersten vier Zeichen sind verpflichtend und bestehen aus Ziffern [0..9]. Zur zus\u00e4tzlichen Kennung bei stark auseinander triftenden Kilometierungsachsen einer zweigleisigen Strecke wird ein [-] als f\u00fcnftes Zeichen und ein alphanumerisches Zeichen [A..Z|a..z|0..9] als sechstes Zeichen verwendet. </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
+		  (strecke_BremswegEClass,
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+		   });
+		addAnnotation
+		  (getStrecke_Bremsweg_Bremsweg(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                          \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                               \r\n    <ProposedValue>1000</ProposedValue>\r\n                            \r\n  </WorkflowInformation>\r\n                       \r\n"
+		   });
+		addAnnotation
 		  (strecke_PunktEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getStrecke_Punkt_StreckeMeter(),
@@ -6638,19 +7168,19 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (technischer_BereichEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW|ETCS|Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (technischer_PunktEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW|ETCS|Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (toP_KanteEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getTOP_Kante_Allg_AttributeGroup_TOPLaenge(),
@@ -6662,7 +7192,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (toP_KnotenEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getTOP_Knoten_Knotenname(),
@@ -6674,7 +7204,7 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (ueberhoehungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getUeberhoehung_Allg_AttributeGroup_GEOPAD(),
@@ -6686,13 +7216,13 @@ public class GeodatenPackageImpl extends EPackageImpl implements GeodatenPackage
 		  (getUeberhoehung_Allg_AttributeGroup_UeberhoehungHoehe(),
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>[0.000..0.200]</Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>[-0.200..0.200]</Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (ueberhoehungslinieEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Geo</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getUeberhoehungslinie_Allg_AttributeGroup_PlanQuelle(),

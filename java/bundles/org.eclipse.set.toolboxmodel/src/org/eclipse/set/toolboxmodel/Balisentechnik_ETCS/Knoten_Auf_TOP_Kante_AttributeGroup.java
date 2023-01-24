@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -31,7 +38,7 @@ public interface Knoten_Auf_TOP_Kante_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Besondere Art des ETCS-Knotens bei Verortung auf einer TOP-Kante.
+	 * Besondere Art des ETCS-Knotens bei Verortung auf einer TOP-Kante. Für die Knotenart "Streckenende" ist derzeit kein konkreter Anwendungsfall bekannt. Der Wert wird aber zur Erhaltung der Modellflexibilität vorerst beibehalten.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ETCS Knoten Art Sonstige</em>' containment reference.
 	 * @see #setETCSKnotenArtSonstige(ETCS_Knoten_Art_Sonstige_TypeClass)

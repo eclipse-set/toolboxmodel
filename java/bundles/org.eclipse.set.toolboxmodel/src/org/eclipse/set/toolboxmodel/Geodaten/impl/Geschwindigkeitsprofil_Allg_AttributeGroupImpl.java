@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -11,11 +18,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
 import org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.V_Profil_Art_TypeClass;
-import org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,14 +32,24 @@ import org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Geschwindigkeitsprofil_Allg_AttributeGroupImpl#getAnzeigegefuehrtESKategorie <em>Anzeigegefuehrt ES Kategorie</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Geschwindigkeitsprofil_Allg_AttributeGroupImpl#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Geschwindigkeitsprofil_Allg_AttributeGroupImpl#getVProfilArt <em>VProfil Art</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.Geschwindigkeitsprofil_Allg_AttributeGroupImpl#getWirkrichtung <em>Wirkrichtung</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements Geschwindigkeitsprofil_Allg_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getAnzeigegefuehrtESKategorie() <em>Anzeigegefuehrt ES Kategorie</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnzeigegefuehrtESKategorie()
+	 * @generated
+	 * @ordered
+	 */
+	protected Anzeigegefuehrt_ES_Kategorie_TypeClass anzeigegefuehrtESKategorie;
+
 	/**
 	 * The cached value of the '{@link #getGeschwindigkeit() <em>Geschwindigkeit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -54,16 +71,6 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObje
 	protected V_Profil_Art_TypeClass vProfilArt;
 
 	/**
-	 * The cached value of the '{@link #getWirkrichtung() <em>Wirkrichtung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWirkrichtung()
-	 * @generated
-	 * @ordered
-	 */
-	protected Wirkrichtung_TypeClass wirkrichtung;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -80,6 +87,51 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObje
 	@Override
 	protected EClass eStaticClass() {
 		return GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Anzeigegefuehrt_ES_Kategorie_TypeClass getAnzeigegefuehrtESKategorie() {
+		return anzeigegefuehrtESKategorie;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAnzeigegefuehrtESKategorie(Anzeigegefuehrt_ES_Kategorie_TypeClass newAnzeigegefuehrtESKategorie, NotificationChain msgs) {
+		Anzeigegefuehrt_ES_Kategorie_TypeClass oldAnzeigegefuehrtESKategorie = anzeigegefuehrtESKategorie;
+		anzeigegefuehrtESKategorie = newAnzeigegefuehrtESKategorie;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE, oldAnzeigegefuehrtESKategorie, newAnzeigegefuehrtESKategorie);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAnzeigegefuehrtESKategorie(Anzeigegefuehrt_ES_Kategorie_TypeClass newAnzeigegefuehrtESKategorie) {
+		if (newAnzeigegefuehrtESKategorie != anzeigegefuehrtESKategorie) {
+			NotificationChain msgs = null;
+			if (anzeigegefuehrtESKategorie != null)
+				msgs = ((InternalEObject)anzeigegefuehrtESKategorie).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE, null, msgs);
+			if (newAnzeigegefuehrtESKategorie != null)
+				msgs = ((InternalEObject)newAnzeigegefuehrtESKategorie).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE, null, msgs);
+			msgs = basicSetAnzeigegefuehrtESKategorie(newAnzeigegefuehrtESKategorie, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE, newAnzeigegefuehrtESKategorie, newAnzeigegefuehrtESKategorie));
 	}
 
 	/**
@@ -178,59 +230,14 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObje
 	 * @generated
 	 */
 	@Override
-	public Wirkrichtung_TypeClass getWirkrichtung() {
-		return wirkrichtung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetWirkrichtung(Wirkrichtung_TypeClass newWirkrichtung, NotificationChain msgs) {
-		Wirkrichtung_TypeClass oldWirkrichtung = wirkrichtung;
-		wirkrichtung = newWirkrichtung;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG, oldWirkrichtung, newWirkrichtung);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setWirkrichtung(Wirkrichtung_TypeClass newWirkrichtung) {
-		if (newWirkrichtung != wirkrichtung) {
-			NotificationChain msgs = null;
-			if (wirkrichtung != null)
-				msgs = ((InternalEObject)wirkrichtung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG, null, msgs);
-			if (newWirkrichtung != null)
-				msgs = ((InternalEObject)newWirkrichtung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG, null, msgs);
-			msgs = basicSetWirkrichtung(newWirkrichtung, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG, newWirkrichtung, newWirkrichtung));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE:
+				return basicSetAnzeigegefuehrtESKategorie(null, msgs);
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT:
 				return basicSetGeschwindigkeit(null, msgs);
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART:
 				return basicSetVProfilArt(null, msgs);
-			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG:
-				return basicSetWirkrichtung(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -244,12 +251,12 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObje
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE:
+				return getAnzeigegefuehrtESKategorie();
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT:
 				return getGeschwindigkeit();
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART:
 				return getVProfilArt();
-			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG:
-				return getWirkrichtung();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -263,14 +270,14 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObje
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE:
+				setAnzeigegefuehrtESKategorie((Anzeigegefuehrt_ES_Kategorie_TypeClass)newValue);
+				return;
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT:
 				setGeschwindigkeit((Geschwindigkeit_TypeClass)newValue);
 				return;
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART:
 				setVProfilArt((V_Profil_Art_TypeClass)newValue);
-				return;
-			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG:
-				setWirkrichtung((Wirkrichtung_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -286,14 +293,14 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObje
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE:
+				setAnzeigegefuehrtESKategorie((Anzeigegefuehrt_ES_Kategorie_TypeClass)null);
+				return;
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT:
 				setGeschwindigkeit((Geschwindigkeit_TypeClass)null);
 				return;
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART:
 				setVProfilArt((V_Profil_Art_TypeClass)null);
-				return;
-			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG:
-				setWirkrichtung((Wirkrichtung_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -309,12 +316,12 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupImpl extends MinimalEObje
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE:
+				return anzeigegefuehrtESKategorie != null;
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT:
 				return geschwindigkeit != null;
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART:
 				return vProfilArt != null;
-			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG:
-				return wirkrichtung != null;
 			default:
 				return super.eIsSet(featureID);
 		}

@@ -10,9 +10,14 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Angabe und Zuordnung von Daten, die für eine Einzelplanung innerhalb einer definierten Planungsgruppe gelten. 
- * 
- * Die Attribute des Objekts Planung_Einzel werden zum Teil während der Erstellung der beauftragten Planung befüllt. Mit der Weiterschaltung des jeweiligen Planungsstatus können im Rahmen nachfolgender Prozessschritte (z. B. Planprüfung) weitere Attribute befüllt werden.
+ * Ermöglicht die globale Angabe und Zuordnung von Daten, die für alle Einzelplanungen einer Planungsgruppe gleichermaßen gelten. Dabei können in organisatorische und inhaltliche Angaben unterschieden werden.
+ * Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess
+ * Die ~ muss vor Beginn der Erstellung nachfolgender Einzelplanungen festgelegt sein.
+ * Enthält Informationen zur Bezeichnung der Planungsgruppe, zum gesperrten Planungsbereich und zum notwendigen Betrachtungsbereich.
+ * Beim Anlegen der ~ erfolgt keine Festlegung der Anzahl der Einzelplanungen. Der erste Bauzustand ist entweder eine Neuplanung oder baut auf einer Bestandsdokumentationbzw. Bestandsdatenauf. Alle weiteren Bauzustände bauen auf der neutralisierten Bezugsplanung des jeweiligen Vorgängers auf.
+ * Eine Planungsgruppe durchläuft definierte Status. Spätestens vor Abschluss einer ~ (sowie nach jeder Revision/Rev_letzte_Planung_E) werden neue Bestandsdaten erstellt.
+ * DB-Regelwerk
+ * Bisher nicht abgebildet.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -38,13 +43,11 @@ public interface Planung_Gruppe extends Ur_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Abkürzung der führenden Örtlichkeit als Bestandteil der Plannummer (gemäß Ril 819.0103) und des Dateinamens.
-	 * 
+	 * Abkürzung der führenden Örtlichkeit als Bestandteil der Plannummer (gemäß Ril 886.0102) und des Dateinamens.
 	 * Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess
 	 * Festzulegen durch Projektleiter oder LST-Fachplaner.
-	 * 
 	 * DB-Regelwerk
-	 * Bestandteil der Plannummer gemäß Ril 819.0103
+	 * Bestandteil der Plannummer gemäß Ril 886.0102
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fuehrende Oertlichkeit</em>' containment reference.
 	 * @see #setFuehrendeOertlichkeit(Fuehrende_Oertlichkeit_TypeClass)

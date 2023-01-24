@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.GeodatenFactory;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup} object.
@@ -85,6 +86,7 @@ public class TOP_Kante_Allg_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(GeodatenPackage.Literals.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME);
 			childrenFeatures.add(GeodatenPackage.Literals.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A);
 			childrenFeatures.add(GeodatenPackage.Literals.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B);
 			childrenFeatures.add(GeodatenPackage.Literals.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_LAENGE);
@@ -140,6 +142,7 @@ public class TOP_Kante_Allg_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TOP_Kante_Allg_AttributeGroup.class)) {
+			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME:
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A:
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B:
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_LAENGE:
@@ -161,6 +164,11 @@ public class TOP_Kante_Allg_AttributeGroupItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GeodatenPackage.Literals.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME,
+				 GeodatenFactory.eINSTANCE.createKantenname_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

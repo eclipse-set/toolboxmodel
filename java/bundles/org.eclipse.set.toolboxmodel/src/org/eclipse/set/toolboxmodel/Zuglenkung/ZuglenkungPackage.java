@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface ZuglenkungPackage extends EPackage {
 	int ANNAEHERUNGSGESCHWINDIGKEIT_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface ZuglenkungPackage extends EPackage {
 	int ANZAHL_WIEDERHOL_ZL_ANSTOESSE_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface ZuglenkungPackage extends EPackage {
 	int DEADLOCKPRUEFUNG_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface ZuglenkungPackage extends EPackage {
 	int DWEG_PRIO_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +760,7 @@ public interface ZuglenkungPackage extends EPackage {
 	int EINSTELLKONTROLLZEIT_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -820,6 +796,52 @@ public interface ZuglenkungPackage extends EPackage {
 	int EINSTELLKONTROLLZEIT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.Fstr_Bildezeit_TypeClassImpl <em>Fstr Bildezeit Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.Fstr_Bildezeit_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getFstr_Bildezeit_TypeClass()
+	 * @generated
+	 */
+	int FSTR_BILDEZEIT_TYPE_CLASS = 5;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_BILDEZEIT_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_BILDEZEIT_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Fstr Bildezeit Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_BILDEZEIT_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Fstr Bildezeit Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_BILDEZEIT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.FUEM_Auswertung_TypeClassImpl <em>FUEM Auswertung Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -827,10 +849,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getFUEM_Auswertung_TypeClass()
 	 * @generated
 	 */
-	int FUEM_AUSWERTUNG_TYPE_CLASS = 5;
+	int FUEM_AUSWERTUNG_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -873,10 +895,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getGK_TypeClass()
 	 * @generated
 	 */
-	int GK_TYPE_CLASS = 6;
+	int GK_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -919,10 +941,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getGKZSS_TypeClass()
 	 * @generated
 	 */
-	int GKZSS_TYPE_CLASS = 7;
+	int GKZSS_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -965,10 +987,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getLenkabbruchzeit_TypeClass()
 	 * @generated
 	 */
-	int LENKABBRUCHZEIT_TYPE_CLASS = 8;
+	int LENKABBRUCHZEIT_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1011,10 +1033,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getLenkziffernstellen_TypeClass()
 	 * @generated
 	 */
-	int LENKZIFFERNSTELLEN_TYPE_CLASS = 9;
+	int LENKZIFFERNSTELLEN_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1057,10 +1079,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getPersonal_Reaktionszeit_TypeClass()
 	 * @generated
 	 */
-	int PERSONAL_REAKTIONSZEIT_TYPE_CLASS = 10;
+	int PERSONAL_REAKTIONSZEIT_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1103,10 +1125,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getSichtzeit_Vorsignal_TypeClass()
 	 * @generated
 	 */
-	int SICHTZEIT_VORSIGNAL_TYPE_CLASS = 11;
+	int SICHTZEIT_VORSIGNAL_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1149,10 +1171,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getSignalgruppe_Bezeichner_TypeClass()
 	 * @generated
 	 */
-	int SIGNALGRUPPE_BEZEICHNER_TYPE_CLASS = 12;
+	int SIGNALGRUPPE_BEZEICHNER_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1195,10 +1217,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getTv_GK_TypeClass()
 	 * @generated
 	 */
-	int TV_GK_TYPE_CLASS = 13;
+	int TV_GK_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1241,10 +1263,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getVmax_Annaeherung_TypeClass()
 	 * @generated
 	 */
-	int VMAX_ANNAEHERUNG_TYPE_CLASS = 14;
+	int VMAX_ANNAEHERUNG_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1287,7 +1309,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL()
 	 * @generated
 	 */
-	int ZL = 15;
+	int ZL = 16;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1308,13 +1330,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ZL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1387,7 +1418,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int ZL_ALLG_ATTRIBUTE_GROUP = 16;
+	int ZL_ALLG_ATTRIBUTE_GROUP = 17;
 
 	/**
 	 * The feature id for the '<em><b>Anzahl Wiederhol ZL Anstoesse</b></em>' containment reference.
@@ -1460,7 +1491,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_DLP_Abschnitt()
 	 * @generated
 	 */
-	int ZL_DLP_ABSCHNITT = 17;
+	int ZL_DLP_ABSCHNITT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1481,13 +1512,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_DLP_ABSCHNITT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ZL_DLP_ABSCHNITT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_DLP_ABSCHNITT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1499,7 +1539,7 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_DLP_ABSCHNITT__OBJEKTREFERENZEN = BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN;
 
 	/**
-	 * The feature id for the '<em><b>ID Gleis Abschnitt</b></em>' reference.
+	 * The feature id for the '<em><b>ID Gleis Abschnitt</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1542,7 +1582,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_DLP_Fstr()
 	 * @generated
 	 */
-	int ZL_DLP_FSTR = 18;
+	int ZL_DLP_FSTR = 19;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1563,13 +1603,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_DLP_FSTR__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ZL_DLP_FSTR__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_DLP_FSTR__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1615,7 +1664,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Fstr()
 	 * @generated
 	 */
-	int ZL_FSTR = 19;
+	int ZL_FSTR = 20;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1636,13 +1685,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_FSTR__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ZL_FSTR__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_FSTR__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1715,7 +1773,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Fstr_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP = 20;
+	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP = 21;
 
 	/**
 	 * The feature id for the '<em><b>Annaeherungsgeschwindigkeit</b></em>' containment reference.
@@ -1736,13 +1794,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO = 1;
 
 	/**
+	 * The feature id for the '<em><b>Fstr Bildezeit</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT = 2;
+
+	/**
 	 * The feature id for the '<em><b>FUEM Auswertung</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG = 2;
+	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FUEM_AUSWERTUNG = 3;
 
 	/**
 	 * The feature id for the '<em><b>Sichtzeit Vorsignal</b></em>' containment reference.
@@ -1751,7 +1818,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP__SICHTZEIT_VORSIGNAL = 3;
+	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP__SICHTZEIT_VORSIGNAL = 4;
 
 	/**
 	 * The number of structural features of the '<em>ZL Fstr Allg Attribute Group</em>' class.
@@ -1760,7 +1827,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
+	int ZL_FSTR_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>ZL Fstr Allg Attribute Group</em>' class.
@@ -1779,7 +1846,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Fstr_Anstoss()
 	 * @generated
 	 */
-	int ZL_FSTR_ANSTOSS = 21;
+	int ZL_FSTR_ANSTOSS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1800,13 +1867,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_FSTR_ANSTOSS__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ZL_FSTR_ANSTOSS__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_FSTR_ANSTOSS__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1818,22 +1894,13 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_FSTR_ANSTOSS__OBJEKTREFERENZEN = BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN;
 
 	/**
-	 * The feature id for the '<em><b>ID Einschaltpunkt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ZL_FSTR_ANSTOSS__ID_EINSCHALTPUNKT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>ID Vorsignal</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZL_FSTR_ANSTOSS__ID_VORSIGNAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
+	int ZL_FSTR_ANSTOSS__ID_VORSIGNAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>IDZL Fstr</b></em>' reference.
@@ -1842,16 +1909,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZL_FSTR_ANSTOSS__IDZL_FSTR = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>IDZN Anzeigefeld Anstoss</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ZL_FSTR_ANSTOSS__IDZN_ANZEIGEFELD_ANSTOSS = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int ZL_FSTR_ANSTOSS__IDZL_FSTR = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>ZL Fstr Anstoss Allg</b></em>' containment reference.
@@ -1860,7 +1918,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZL_FSTR_ANSTOSS__ZL_FSTR_ANSTOSS_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int ZL_FSTR_ANSTOSS__ZL_FSTR_ANSTOSS_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>ZL Fstr Anstoss GK</b></em>' containment reference list.
@@ -1869,7 +1927,25 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZL_FSTR_ANSTOSS__ZL_FSTR_ANSTOSS_GK = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
+	int ZL_FSTR_ANSTOSS__ZL_FSTR_ANSTOSS_GK = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>ID Einschaltpunkt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_FSTR_ANSTOSS__ID_EINSCHALTPUNKT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>IDZN Anzeigefeld Anstoss</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_FSTR_ANSTOSS__IDZN_ANZEIGEFELD_ANSTOSS = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>ZL Fstr Anstoss</em>' class.
@@ -1897,7 +1973,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Fstr_Anstoss_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int ZL_FSTR_ANSTOSS_ALLG_ATTRIBUTE_GROUP = 22;
+	int ZL_FSTR_ANSTOSS_ALLG_ATTRIBUTE_GROUP = 23;
 
 	/**
 	 * The feature id for the '<em><b>GKZSS</b></em>' containment reference.
@@ -1952,7 +2028,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Fstr_Anstoss_GK_AttributeGroup()
 	 * @generated
 	 */
-	int ZL_FSTR_ANSTOSS_GK_ATTRIBUTE_GROUP = 23;
+	int ZL_FSTR_ANSTOSS_GK_ATTRIBUTE_GROUP = 24;
 
 	/**
 	 * The feature id for the '<em><b>GK</b></em>' containment reference.
@@ -1998,10 +2074,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Fstr_Zuschlag_TypeClass()
 	 * @generated
 	 */
-	int ZL_FSTR_ZUSCHLAG_TYPE_CLASS = 24;
+	int ZL_FSTR_ZUSCHLAG_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2044,7 +2120,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Signalgruppe()
 	 * @generated
 	 */
-	int ZL_SIGNALGRUPPE = 25;
+	int ZL_SIGNALGRUPPE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2065,13 +2141,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_SIGNALGRUPPE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ZL_SIGNALGRUPPE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_SIGNALGRUPPE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2126,7 +2211,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Signalgruppe_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int ZL_SIGNALGRUPPE_ALLG_ATTRIBUTE_GROUP = 26;
+	int ZL_SIGNALGRUPPE_ALLG_ATTRIBUTE_GROUP = 27;
 
 	/**
 	 * The feature id for the '<em><b>Signalgruppe Bezeichner</b></em>' containment reference.
@@ -2163,7 +2248,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Signalgruppe_Zuordnung()
 	 * @generated
 	 */
-	int ZL_SIGNALGRUPPE_ZUORDNUNG = 27;
+	int ZL_SIGNALGRUPPE_ZUORDNUNG = 28;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2184,13 +2269,22 @@ public interface ZuglenkungPackage extends EPackage {
 	int ZL_SIGNALGRUPPE_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ZL_SIGNALGRUPPE_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZL_SIGNALGRUPPE_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2245,7 +2339,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_ZN_AttributeGroup()
 	 * @generated
 	 */
-	int ZL_ZN_ATTRIBUTE_GROUP = 28;
+	int ZL_ZN_ATTRIBUTE_GROUP = 29;
 
 	/**
 	 * The feature id for the '<em><b>Lenkziffernstellen</b></em>' containment reference.
@@ -2291,10 +2385,10 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZN_Stellen_TypeClass()
 	 * @generated
 	 */
-	int ZN_STELLEN_TYPE_CLASS = 29;
+	int ZN_STELLEN_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2337,7 +2431,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getENUMLenkziffernstellen()
 	 * @generated
 	 */
-	int ENUM_LENKZIFFERNSTELLEN = 30;
+	int ENUM_LENKZIFFERNSTELLEN = 31;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ENUMZNStellen <em>ENUMZN Stellen</em>}' enum.
@@ -2347,7 +2441,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getENUMZNStellen()
 	 * @generated
 	 */
-	int ENUMZN_STELLEN = 31;
+	int ENUMZN_STELLEN = 32;
 
 	/**
 	 * The meta object id for the '<em>Annaeherungsgeschwindigkeit Type</em>' data type.
@@ -2357,7 +2451,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getAnnaeherungsgeschwindigkeit_Type()
 	 * @generated
 	 */
-	int ANNAEHERUNGSGESCHWINDIGKEIT_TYPE = 32;
+	int ANNAEHERUNGSGESCHWINDIGKEIT_TYPE = 33;
 
 	/**
 	 * The meta object id for the '<em>Anzahl Wiederhol ZL Anstoesse Type</em>' data type.
@@ -2367,7 +2461,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getAnzahl_Wiederhol_ZL_Anstoesse_Type()
 	 * @generated
 	 */
-	int ANZAHL_WIEDERHOL_ZL_ANSTOESSE_TYPE = 33;
+	int ANZAHL_WIEDERHOL_ZL_ANSTOESSE_TYPE = 34;
 
 	/**
 	 * The meta object id for the '<em>DWeg Prio Type</em>' data type.
@@ -2377,7 +2471,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getDWeg_Prio_Type()
 	 * @generated
 	 */
-	int DWEG_PRIO_TYPE = 34;
+	int DWEG_PRIO_TYPE = 35;
 
 	/**
 	 * The meta object id for the '<em>Einstellkontrollzeit Type</em>' data type.
@@ -2387,7 +2481,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getEinstellkontrollzeit_Type()
 	 * @generated
 	 */
-	int EINSTELLKONTROLLZEIT_TYPE = 35;
+	int EINSTELLKONTROLLZEIT_TYPE = 36;
 
 	/**
 	 * The meta object id for the '<em>ENUM Lenkziffernstellen Object</em>' data type.
@@ -2397,7 +2491,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getENUMLenkziffernstellenObject()
 	 * @generated
 	 */
-	int ENUM_LENKZIFFERNSTELLEN_OBJECT = 36;
+	int ENUM_LENKZIFFERNSTELLEN_OBJECT = 37;
 
 	/**
 	 * The meta object id for the '<em>ENUMZN Stellen Object</em>' data type.
@@ -2407,7 +2501,17 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getENUMZNStellenObject()
 	 * @generated
 	 */
-	int ENUMZN_STELLEN_OBJECT = 37;
+	int ENUMZN_STELLEN_OBJECT = 38;
+
+	/**
+	 * The meta object id for the '<em>Fstr Bildezeit Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.math.BigDecimal
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getFstr_Bildezeit_Type()
+	 * @generated
+	 */
+	int FSTR_BILDEZEIT_TYPE = 39;
 
 	/**
 	 * The meta object id for the '<em>GK Type</em>' data type.
@@ -2417,7 +2521,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getGK_Type()
 	 * @generated
 	 */
-	int GK_TYPE = 38;
+	int GK_TYPE = 40;
 
 	/**
 	 * The meta object id for the '<em>Lenkabbruchzeit Type</em>' data type.
@@ -2427,7 +2531,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getLenkabbruchzeit_Type()
 	 * @generated
 	 */
-	int LENKABBRUCHZEIT_TYPE = 39;
+	int LENKABBRUCHZEIT_TYPE = 41;
 
 	/**
 	 * The meta object id for the '<em>Personal Reaktionszeit Type</em>' data type.
@@ -2437,7 +2541,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getPersonal_Reaktionszeit_Type()
 	 * @generated
 	 */
-	int PERSONAL_REAKTIONSZEIT_TYPE = 40;
+	int PERSONAL_REAKTIONSZEIT_TYPE = 42;
 
 	/**
 	 * The meta object id for the '<em>Sichtzeit Vorsignal Type</em>' data type.
@@ -2447,7 +2551,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getSichtzeit_Vorsignal_Type()
 	 * @generated
 	 */
-	int SICHTZEIT_VORSIGNAL_TYPE = 41;
+	int SICHTZEIT_VORSIGNAL_TYPE = 43;
 
 	/**
 	 * The meta object id for the '<em>Signalgruppe Bezeichner Type</em>' data type.
@@ -2457,7 +2561,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getSignalgruppe_Bezeichner_Type()
 	 * @generated
 	 */
-	int SIGNALGRUPPE_BEZEICHNER_TYPE = 42;
+	int SIGNALGRUPPE_BEZEICHNER_TYPE = 44;
 
 	/**
 	 * The meta object id for the '<em>Tv GK Type</em>' data type.
@@ -2467,7 +2571,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getTv_GK_Type()
 	 * @generated
 	 */
-	int TV_GK_TYPE = 43;
+	int TV_GK_TYPE = 45;
 
 	/**
 	 * The meta object id for the '<em>Vmax Annaeherung Type</em>' data type.
@@ -2477,7 +2581,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getVmax_Annaeherung_Type()
 	 * @generated
 	 */
-	int VMAX_ANNAEHERUNG_TYPE = 44;
+	int VMAX_ANNAEHERUNG_TYPE = 46;
 
 	/**
 	 * The meta object id for the '<em>ZL Fstr Zuschlag Type</em>' data type.
@@ -2487,7 +2591,7 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getZL_Fstr_Zuschlag_Type()
 	 * @generated
 	 */
-	int ZL_FSTR_ZUSCHLAG_TYPE = 45;
+	int ZL_FSTR_ZUSCHLAG_TYPE = 47;
 
 
 	/**
@@ -2594,6 +2698,27 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEinstellkontrollzeit_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass <em>Fstr Bildezeit Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fstr Bildezeit Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass
+	 * @generated
+	 */
+	EClass getFstr_Bildezeit_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass#getWert()
+	 * @see #getFstr_Bildezeit_TypeClass()
+	 * @generated
+	 */
+	EAttribute getFstr_Bildezeit_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Zuglenkung.FUEM_Auswertung_TypeClass <em>FUEM Auswertung Type Class</em>}'.
@@ -2935,10 +3060,10 @@ public interface ZuglenkungPackage extends EPackage {
 	EClass getZL_DLP_Abschnitt();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Abschnitt#getIDGleisAbschnitt <em>ID Gleis Abschnitt</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Abschnitt#getIDGleisAbschnitt <em>ID Gleis Abschnitt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>ID Gleis Abschnitt</em>'.
+	 * @return the meta object for the reference list '<em>ID Gleis Abschnitt</em>'.
 	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Abschnitt#getIDGleisAbschnitt()
 	 * @see #getZL_DLP_Abschnitt()
 	 * @generated
@@ -3064,6 +3189,17 @@ public interface ZuglenkungPackage extends EPackage {
 	EReference getZL_Fstr_Allg_AttributeGroup_DWegPrio();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getFstrBildezeit <em>Fstr Bildezeit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fstr Bildezeit</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getFstrBildezeit()
+	 * @see #getZL_Fstr_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getZL_Fstr_Allg_AttributeGroup_FstrBildezeit();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getFUEMAuswertung <em>FUEM Auswertung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3096,17 +3232,6 @@ public interface ZuglenkungPackage extends EPackage {
 	EClass getZL_Fstr_Anstoss();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>ID Einschaltpunkt</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt()
-	 * @see #getZL_Fstr_Anstoss()
-	 * @generated
-	 */
-	EReference getZL_Fstr_Anstoss_IDEinschaltpunkt();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDVorsignal <em>ID Vorsignal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3129,17 +3254,6 @@ public interface ZuglenkungPackage extends EPackage {
 	EReference getZL_Fstr_Anstoss_IDZLFstr();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDZNAnzeigefeldAnstoss <em>IDZN Anzeigefeld Anstoss</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>IDZN Anzeigefeld Anstoss</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDZNAnzeigefeldAnstoss()
-	 * @see #getZL_Fstr_Anstoss()
-	 * @generated
-	 */
-	EReference getZL_Fstr_Anstoss_IDZNAnzeigefeldAnstoss();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getZLFstrAnstossAllg <em>ZL Fstr Anstoss Allg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3160,6 +3274,28 @@ public interface ZuglenkungPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getZL_Fstr_Anstoss_ZLFstrAnstossGK();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Einschaltpunkt</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt()
+	 * @see #getZL_Fstr_Anstoss()
+	 * @generated
+	 */
+	EReference getZL_Fstr_Anstoss_IDEinschaltpunkt();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDZNAnzeigefeldAnstoss <em>IDZN Anzeigefeld Anstoss</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>IDZN Anzeigefeld Anstoss</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDZNAnzeigefeldAnstoss()
+	 * @see #getZL_Fstr_Anstoss()
+	 * @generated
+	 */
+	EReference getZL_Fstr_Anstoss_IDZNAnzeigefeldAnstoss();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss_Allg_AttributeGroup <em>ZL Fstr Anstoss Allg Attribute Group</em>}'.
@@ -3488,6 +3624,18 @@ public interface ZuglenkungPackage extends EPackage {
 	EDataType getENUMZNStellenObject();
 
 	/**
+	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>Fstr Bildezeit Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Fstr Bildezeit Type</em>'.
+	 * @see java.math.BigDecimal
+	 * @model instanceClass="java.math.BigDecimal"
+	 *        extendedMetaData="name='TFstr_Bildezeit' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TSekunde' pattern='0|[1-9][0-9]{0,1}|[1-8][0-9]{2}|900'"
+	 * @generated
+	 */
+	EDataType getFstr_Bildezeit_Type();
+
+	/**
 	 * Returns the meta object for data type '{@link java.math.BigInteger <em>GK Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3695,6 +3843,24 @@ public interface ZuglenkungPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EINSTELLKONTROLLZEIT_TYPE_CLASS__WERT = eINSTANCE.getEinstellkontrollzeit_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.Fstr_Bildezeit_TypeClassImpl <em>Fstr Bildezeit Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.Fstr_Bildezeit_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getFstr_Bildezeit_TypeClass()
+		 * @generated
+		 */
+		EClass FSTR_BILDEZEIT_TYPE_CLASS = eINSTANCE.getFstr_Bildezeit_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FSTR_BILDEZEIT_TYPE_CLASS__WERT = eINSTANCE.getFstr_Bildezeit_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.FUEM_Auswertung_TypeClassImpl <em>FUEM Auswertung Type Class</em>}' class.
@@ -3979,7 +4145,7 @@ public interface ZuglenkungPackage extends EPackage {
 		EClass ZL_DLP_ABSCHNITT = eINSTANCE.getZL_DLP_Abschnitt();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Gleis Abschnitt</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>ID Gleis Abschnitt</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4081,6 +4247,14 @@ public interface ZuglenkungPackage extends EPackage {
 		EReference ZL_FSTR_ALLG_ATTRIBUTE_GROUP__DWEG_PRIO = eINSTANCE.getZL_Fstr_Allg_AttributeGroup_DWegPrio();
 
 		/**
+		 * The meta object literal for the '<em><b>Fstr Bildezeit</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ZL_FSTR_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT = eINSTANCE.getZL_Fstr_Allg_AttributeGroup_FstrBildezeit();
+
+		/**
 		 * The meta object literal for the '<em><b>FUEM Auswertung</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4107,14 +4281,6 @@ public interface ZuglenkungPackage extends EPackage {
 		EClass ZL_FSTR_ANSTOSS = eINSTANCE.getZL_Fstr_Anstoss();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Einschaltpunkt</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ZL_FSTR_ANSTOSS__ID_EINSCHALTPUNKT = eINSTANCE.getZL_Fstr_Anstoss_IDEinschaltpunkt();
-
-		/**
 		 * The meta object literal for the '<em><b>ID Vorsignal</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4131,14 +4297,6 @@ public interface ZuglenkungPackage extends EPackage {
 		EReference ZL_FSTR_ANSTOSS__IDZL_FSTR = eINSTANCE.getZL_Fstr_Anstoss_IDZLFstr();
 
 		/**
-		 * The meta object literal for the '<em><b>IDZN Anzeigefeld Anstoss</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ZL_FSTR_ANSTOSS__IDZN_ANZEIGEFELD_ANSTOSS = eINSTANCE.getZL_Fstr_Anstoss_IDZNAnzeigefeldAnstoss();
-
-		/**
 		 * The meta object literal for the '<em><b>ZL Fstr Anstoss Allg</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4153,6 +4311,22 @@ public interface ZuglenkungPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ZL_FSTR_ANSTOSS__ZL_FSTR_ANSTOSS_GK = eINSTANCE.getZL_Fstr_Anstoss_ZLFstrAnstossGK();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Einschaltpunkt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ZL_FSTR_ANSTOSS__ID_EINSCHALTPUNKT = eINSTANCE.getZL_Fstr_Anstoss_IDEinschaltpunkt();
+
+		/**
+		 * The meta object literal for the '<em><b>IDZN Anzeigefeld Anstoss</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ZL_FSTR_ANSTOSS__IDZN_ANZEIGEFELD_ANSTOSS = eINSTANCE.getZL_Fstr_Anstoss_IDZNAnzeigefeldAnstoss();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZL_Fstr_Anstoss_Allg_AttributeGroupImpl <em>ZL Fstr Anstoss Allg Attribute Group</em>}' class.
@@ -4425,6 +4599,16 @@ public interface ZuglenkungPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUMZN_STELLEN_OBJECT = eINSTANCE.getENUMZNStellenObject();
+
+		/**
+		 * The meta object literal for the '<em>Fstr Bildezeit Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.math.BigDecimal
+		 * @see org.eclipse.set.toolboxmodel.Zuglenkung.impl.ZuglenkungPackageImpl#getFstr_Bildezeit_Type()
+		 * @generated
+		 */
+		EDataType FSTR_BILDEZEIT_TYPE = eINSTANCE.getFstr_Bildezeit_Type();
 
 		/**
 		 * The meta object literal for the '<em>GK Type</em>' data type.

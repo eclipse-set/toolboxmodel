@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -19,6 +26,36 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	/**
+	 * The '<em><b>ENUMBUE Funktionsueberwachung FS Ue B</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_B_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_B(0, "ENUMBUE_Funktionsueberwachung_FSUe_B", "FSUe_B"),
+
+	/**
+	 * The '<em><b>ENUMBUE Funktionsueberwachung FS Ue E</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_E_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_E(1, "ENUMBUE_Funktionsueberwachung_FSUe_E", "FSUe_E"),
+
+	/**
+	 * The '<em><b>ENUMBUE Funktionsueberwachung FS Ue S</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_S_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_S(2, "ENUMBUE_Funktionsueberwachung_FSUe_S", "FSUe_S"),
+
+	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Fü</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +63,7 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_FUNKTIONSUEBERWACHUNG_FÜ(0, "ENUMBUE_Funktionsueberwachung_Fü", "F\u00fc"),
+	ENUMBUE_FUNKTIONSUEBERWACHUNG_FÜ(3, "ENUMBUE_Funktionsueberwachung_Fü", "F\u00fc"),
 
 	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Hp</b></em>' literal object.
@@ -36,7 +73,7 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_FUNKTIONSUEBERWACHUNG_HP(1, "ENUMBUE_Funktionsueberwachung_Hp", "Hp"),
+	ENUMBUE_FUNKTIONSUEBERWACHUNG_HP(4, "ENUMBUE_Funktionsueberwachung_Hp", "Hp"),
 
 	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Us</b></em>' literal object.
@@ -46,7 +83,7 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_FUNKTIONSUEBERWACHUNG_US(2, "ENUMBUE_Funktionsueberwachung_Us", "\u00dcs"),
+	ENUMBUE_FUNKTIONSUEBERWACHUNG_US(5, "ENUMBUE_Funktionsueberwachung_Us", "\u00dcs"),
 
 	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Us OE</b></em>' literal object.
@@ -56,7 +93,40 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_FUNKTIONSUEBERWACHUNG_US_OE(3, "ENUMBUE_Funktionsueberwachung_UsOE", "\u00dcsOE");
+	ENUMBUE_FUNKTIONSUEBERWACHUNG_US_OE(6, "ENUMBUE_Funktionsueberwachung_UsOE", "\u00dcsOE");
+
+	/**
+	 * The '<em><b>ENUMBUE Funktionsueberwachung FS Ue B</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_B
+	 * @model name="ENUMBUE_Funktionsueberwachung_FSUe_B" literal="FSUe_B"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_B_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUMBUE Funktionsueberwachung FS Ue E</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_E
+	 * @model name="ENUMBUE_Funktionsueberwachung_FSUe_E" literal="FSUe_E"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_E_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUMBUE Funktionsueberwachung FS Ue S</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_S
+	 * @model name="ENUMBUE_Funktionsueberwachung_FSUe_S" literal="FSUe_S"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_S_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Fü</b></em>' literal value.
@@ -67,7 +137,7 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_FÜ_VALUE = 0;
+	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_FÜ_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Hp</b></em>' literal value.
@@ -78,7 +148,7 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_HP_VALUE = 1;
+	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_HP_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Us</b></em>' literal value.
@@ -89,7 +159,7 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_US_VALUE = 2;
+	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_US_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUMBUE Funktionsueberwachung Us OE</b></em>' literal value.
@@ -100,7 +170,7 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_US_OE_VALUE = 3;
+	public static final int ENUMBUE_FUNKTIONSUEBERWACHUNG_US_OE_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>ENUMBUE Funktionsueberwachung</b></em>' enumerators.
@@ -110,6 +180,9 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 */
 	private static final ENUMBUEFunktionsueberwachung[] VALUES_ARRAY =
 		new ENUMBUEFunktionsueberwachung[] {
+			ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_B,
+			ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_E,
+			ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_S,
 			ENUMBUE_FUNKTIONSUEBERWACHUNG_FÜ,
 			ENUMBUE_FUNKTIONSUEBERWACHUNG_HP,
 			ENUMBUE_FUNKTIONSUEBERWACHUNG_US,
@@ -170,6 +243,9 @@ public enum ENUMBUEFunktionsueberwachung implements Enumerator {
 	 */
 	public static ENUMBUEFunktionsueberwachung get(int value) {
 		switch (value) {
+			case ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_B_VALUE: return ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_B;
+			case ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_E_VALUE: return ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_E;
+			case ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_S_VALUE: return ENUMBUE_FUNKTIONSUEBERWACHUNG_FS_UE_S;
 			case ENUMBUE_FUNKTIONSUEBERWACHUNG_FÜ_VALUE: return ENUMBUE_FUNKTIONSUEBERWACHUNG_FÜ;
 			case ENUMBUE_FUNKTIONSUEBERWACHUNG_HP_VALUE: return ENUMBUE_FUNKTIONSUEBERWACHUNG_HP;
 			case ENUMBUE_FUNKTIONSUEBERWACHUNG_US_VALUE: return ENUMBUE_FUNKTIONSUEBERWACHUNG_US;

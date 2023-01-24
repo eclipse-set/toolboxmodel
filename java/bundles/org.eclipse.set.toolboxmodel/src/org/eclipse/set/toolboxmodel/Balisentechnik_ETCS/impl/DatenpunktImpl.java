@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,7 +17,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -20,17 +26,18 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_ETCS_Adresse_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Telegramm_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Telegramm_ESG_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Allg_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Einmesspunkt_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Steuernde_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_ObjektImpl;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,10 +48,10 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getDatenpunktAllg <em>Datenpunkt Allg</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getDPBezugBetrieblich <em>DP Bezug Betrieblich</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getDatenpunktEinmesspunkt <em>Datenpunkt Einmesspunkt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getDPBezugFunktional <em>DP Bezug Funktional</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getDPETCSAdresse <em>DPETCS Adresse</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getDPTyp <em>DP Typ</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getIDEinmesspunkt <em>ID Einmesspunkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getIDRBC <em>IDRBC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getLEUSteuernde <em>LEU Steuernde</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DatenpunktImpl#getDPTelegramm <em>DP Telegramm</em>}</li>
@@ -65,14 +72,24 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 	protected Datenpunkt_Allg_AttributeGroup datenpunktAllg;
 
 	/**
-	 * The cached value of the '{@link #getDPBezugBetrieblich() <em>DP Bezug Betrieblich</em>}' containment reference.
+	 * The cached value of the '{@link #getDatenpunktEinmesspunkt() <em>Datenpunkt Einmesspunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDPBezugBetrieblich()
+	 * @see #getDatenpunktEinmesspunkt()
 	 * @generated
 	 * @ordered
 	 */
-	protected DP_Bezug_Betrieblich_AttributeGroup dPBezugBetrieblich;
+	protected Datenpunkt_Einmesspunkt_AttributeGroup datenpunktEinmesspunkt;
+
+	/**
+	 * The cached value of the '{@link #getDPBezugFunktional() <em>DP Bezug Funktional</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDPBezugFunktional()
+	 * @generated
+	 * @ordered
+	 */
+	protected DP_Bezug_Funktional_AttributeGroup dPBezugFunktional;
 
 	/**
 	 * The cached value of the '{@link #getDPETCSAdresse() <em>DPETCS Adresse</em>}' containment reference.
@@ -93,25 +110,6 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 	 * @ordered
 	 */
 	protected EList<DP_Typ_AttributeGroup> dPTyp;
-
-	/**
-	 * The cached value of the '{@link #getIDEinmesspunkt() <em>ID Einmesspunkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIDEinmesspunkt()
-	 * @generated
-	 * @ordered
-	 */
-	protected Markanter_Punkt iDEinmesspunkt;
-
-	/**
-	 * This is true if the ID Einmesspunkt reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDEinmesspunktESet;
 
 	/**
 	 * The cached value of the '{@link #getIDRBC() <em>IDRBC</em>}' reference list.
@@ -223,8 +221,8 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 	 * @generated
 	 */
 	@Override
-	public DP_Bezug_Betrieblich_AttributeGroup getDPBezugBetrieblich() {
-		return dPBezugBetrieblich;
+	public Datenpunkt_Einmesspunkt_AttributeGroup getDatenpunktEinmesspunkt() {
+		return datenpunktEinmesspunkt;
 	}
 
 	/**
@@ -232,11 +230,11 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDPBezugBetrieblich(DP_Bezug_Betrieblich_AttributeGroup newDPBezugBetrieblich, NotificationChain msgs) {
-		DP_Bezug_Betrieblich_AttributeGroup oldDPBezugBetrieblich = dPBezugBetrieblich;
-		dPBezugBetrieblich = newDPBezugBetrieblich;
+	public NotificationChain basicSetDatenpunktEinmesspunkt(Datenpunkt_Einmesspunkt_AttributeGroup newDatenpunktEinmesspunkt, NotificationChain msgs) {
+		Datenpunkt_Einmesspunkt_AttributeGroup oldDatenpunktEinmesspunkt = datenpunktEinmesspunkt;
+		datenpunktEinmesspunkt = newDatenpunktEinmesspunkt;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH, oldDPBezugBetrieblich, newDPBezugBetrieblich);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT, oldDatenpunktEinmesspunkt, newDatenpunktEinmesspunkt);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -248,18 +246,63 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 	 * @generated
 	 */
 	@Override
-	public void setDPBezugBetrieblich(DP_Bezug_Betrieblich_AttributeGroup newDPBezugBetrieblich) {
-		if (newDPBezugBetrieblich != dPBezugBetrieblich) {
+	public void setDatenpunktEinmesspunkt(Datenpunkt_Einmesspunkt_AttributeGroup newDatenpunktEinmesspunkt) {
+		if (newDatenpunktEinmesspunkt != datenpunktEinmesspunkt) {
 			NotificationChain msgs = null;
-			if (dPBezugBetrieblich != null)
-				msgs = ((InternalEObject)dPBezugBetrieblich).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH, null, msgs);
-			if (newDPBezugBetrieblich != null)
-				msgs = ((InternalEObject)newDPBezugBetrieblich).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH, null, msgs);
-			msgs = basicSetDPBezugBetrieblich(newDPBezugBetrieblich, msgs);
+			if (datenpunktEinmesspunkt != null)
+				msgs = ((InternalEObject)datenpunktEinmesspunkt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT, null, msgs);
+			if (newDatenpunktEinmesspunkt != null)
+				msgs = ((InternalEObject)newDatenpunktEinmesspunkt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT, null, msgs);
+			msgs = basicSetDatenpunktEinmesspunkt(newDatenpunktEinmesspunkt, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH, newDPBezugBetrieblich, newDPBezugBetrieblich));
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT, newDatenpunktEinmesspunkt, newDatenpunktEinmesspunkt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DP_Bezug_Funktional_AttributeGroup getDPBezugFunktional() {
+		return dPBezugFunktional;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDPBezugFunktional(DP_Bezug_Funktional_AttributeGroup newDPBezugFunktional, NotificationChain msgs) {
+		DP_Bezug_Funktional_AttributeGroup oldDPBezugFunktional = dPBezugFunktional;
+		dPBezugFunktional = newDPBezugFunktional;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL, oldDPBezugFunktional, newDPBezugFunktional);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDPBezugFunktional(DP_Bezug_Funktional_AttributeGroup newDPBezugFunktional) {
+		if (newDPBezugFunktional != dPBezugFunktional) {
+			NotificationChain msgs = null;
+			if (dPBezugFunktional != null)
+				msgs = ((InternalEObject)dPBezugFunktional).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL, null, msgs);
+			if (newDPBezugFunktional != null)
+				msgs = ((InternalEObject)newDPBezugFunktional).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL, null, msgs);
+			msgs = basicSetDPBezugFunktional(newDPBezugFunktional, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL, newDPBezugFunktional, newDPBezugFunktional));
 	}
 
 	/**
@@ -318,73 +361,6 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 			dPTyp = new EObjectContainmentEList<DP_Typ_AttributeGroup>(DP_Typ_AttributeGroup.class, this, Balisentechnik_ETCSPackage.DATENPUNKT__DP_TYP);
 		}
 		return dPTyp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Markanter_Punkt getIDEinmesspunkt() {
-		if (iDEinmesspunkt != null && iDEinmesspunkt.eIsProxy()) {
-			InternalEObject oldIDEinmesspunkt = (InternalEObject)iDEinmesspunkt;
-			iDEinmesspunkt = (Markanter_Punkt)eResolveProxy(oldIDEinmesspunkt);
-			if (iDEinmesspunkt != oldIDEinmesspunkt) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.DATENPUNKT__ID_EINMESSPUNKT, oldIDEinmesspunkt, iDEinmesspunkt));
-			}
-		}
-		return iDEinmesspunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Markanter_Punkt basicGetIDEinmesspunkt() {
-		return iDEinmesspunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDEinmesspunkt(Markanter_Punkt newIDEinmesspunkt) {
-		Markanter_Punkt oldIDEinmesspunkt = iDEinmesspunkt;
-		iDEinmesspunkt = newIDEinmesspunkt;
-		boolean oldIDEinmesspunktESet = iDEinmesspunktESet;
-		iDEinmesspunktESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DATENPUNKT__ID_EINMESSPUNKT, oldIDEinmesspunkt, iDEinmesspunkt, !oldIDEinmesspunktESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDEinmesspunkt() {
-		Markanter_Punkt oldIDEinmesspunkt = iDEinmesspunkt;
-		boolean oldIDEinmesspunktESet = iDEinmesspunktESet;
-		iDEinmesspunkt = null;
-		iDEinmesspunktESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.DATENPUNKT__ID_EINMESSPUNKT, oldIDEinmesspunkt, null, oldIDEinmesspunktESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDEinmesspunkt() {
-		return iDEinmesspunktESet;
 	}
 
 	/**
@@ -481,8 +457,10 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_ALLG:
 				return basicSetDatenpunktAllg(null, msgs);
-			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH:
-				return basicSetDPBezugBetrieblich(null, msgs);
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT:
+				return basicSetDatenpunktEinmesspunkt(null, msgs);
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL:
+				return basicSetDPBezugFunktional(null, msgs);
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DPETCS_ADRESSE:
 				return basicSetDPETCSAdresse(null, msgs);
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_TYP:
@@ -508,15 +486,14 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_ALLG:
 				return getDatenpunktAllg();
-			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH:
-				return getDPBezugBetrieblich();
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT:
+				return getDatenpunktEinmesspunkt();
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL:
+				return getDPBezugFunktional();
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DPETCS_ADRESSE:
 				return getDPETCSAdresse();
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_TYP:
 				return getDPTyp();
-			case Balisentechnik_ETCSPackage.DATENPUNKT__ID_EINMESSPUNKT:
-				if (resolve) return getIDEinmesspunkt();
-				return basicGetIDEinmesspunkt();
 			case Balisentechnik_ETCSPackage.DATENPUNKT__IDRBC:
 				return getIDRBC();
 			case Balisentechnik_ETCSPackage.DATENPUNKT__LEU_STEUERNDE:
@@ -542,8 +519,11 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_ALLG:
 				setDatenpunktAllg((Datenpunkt_Allg_AttributeGroup)newValue);
 				return;
-			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH:
-				setDPBezugBetrieblich((DP_Bezug_Betrieblich_AttributeGroup)newValue);
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT:
+				setDatenpunktEinmesspunkt((Datenpunkt_Einmesspunkt_AttributeGroup)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL:
+				setDPBezugFunktional((DP_Bezug_Funktional_AttributeGroup)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DPETCS_ADRESSE:
 				setDPETCSAdresse((DP_ETCS_Adresse_AttributeGroup)newValue);
@@ -551,9 +531,6 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_TYP:
 				getDPTyp().clear();
 				getDPTyp().addAll((Collection<? extends DP_Typ_AttributeGroup>)newValue);
-				return;
-			case Balisentechnik_ETCSPackage.DATENPUNKT__ID_EINMESSPUNKT:
-				setIDEinmesspunkt((Markanter_Punkt)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.DATENPUNKT__IDRBC:
 				getIDRBC().clear();
@@ -587,17 +564,17 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_ALLG:
 				setDatenpunktAllg((Datenpunkt_Allg_AttributeGroup)null);
 				return;
-			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH:
-				setDPBezugBetrieblich((DP_Bezug_Betrieblich_AttributeGroup)null);
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT:
+				setDatenpunktEinmesspunkt((Datenpunkt_Einmesspunkt_AttributeGroup)null);
+				return;
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL:
+				setDPBezugFunktional((DP_Bezug_Funktional_AttributeGroup)null);
 				return;
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DPETCS_ADRESSE:
 				setDPETCSAdresse((DP_ETCS_Adresse_AttributeGroup)null);
 				return;
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_TYP:
 				getDPTyp().clear();
-				return;
-			case Balisentechnik_ETCSPackage.DATENPUNKT__ID_EINMESSPUNKT:
-				unsetIDEinmesspunkt();
 				return;
 			case Balisentechnik_ETCSPackage.DATENPUNKT__IDRBC:
 				getIDRBC().clear();
@@ -627,14 +604,14 @@ public class DatenpunktImpl extends Punkt_ObjektImpl implements Datenpunkt {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_ALLG:
 				return datenpunktAllg != null;
-			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH:
-				return dPBezugBetrieblich != null;
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT:
+				return datenpunktEinmesspunkt != null;
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL:
+				return dPBezugFunktional != null;
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DPETCS_ADRESSE:
 				return dPETCSAdresse != null;
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_TYP:
 				return dPTyp != null && !dPTyp.isEmpty();
-			case Balisentechnik_ETCSPackage.DATENPUNKT__ID_EINMESSPUNKT:
-				return isSetIDEinmesspunkt();
 			case Balisentechnik_ETCSPackage.DATENPUNKT__IDRBC:
 				return iDRBC != null && !iDRBC.isEmpty();
 			case Balisentechnik_ETCSPackage.DATENPUNKT__LEU_STEUERNDE:

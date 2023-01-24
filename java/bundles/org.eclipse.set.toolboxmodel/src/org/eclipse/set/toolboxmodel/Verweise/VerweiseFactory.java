@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Verweise;
 
@@ -58,6 +65,15 @@ public interface VerweiseFactory extends EFactory {
 	ID_Anhang_TypeClass createID_Anhang_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ID Anhang Bearbeitungsvermerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Anhang Bearbeitungsvermerk Type Class</em>'.
+	 * @generated
+	 */
+	ID_AnhangBearbeitungsvermerk_TypeClass createID_AnhangBearbeitungsvermerk_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ID Anschluss Element Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +83,24 @@ public interface VerweiseFactory extends EFactory {
 	ID_Anschluss_Element_TypeClass createID_Anschluss_Element_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ID ATO TS Instanz ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID ATO TS Instanz ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_ATO_TS_Instanz_ohne_Proxy_TypeClass createID_ATO_TS_Instanz_ohne_Proxy_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID ATO TS Instanz Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID ATO TS Instanz Type Class</em>'.
+	 * @generated
+	 */
+	ID_ATO_TS_Instanz_TypeClass createID_ATO_TS_Instanz_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ID Ausgabe Fachdaten ohne Proxy Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +108,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass createID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Aussenelementansteuerung ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Aussenelementansteuerung ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_Aussenelementansteuerung_ohne_Proxy_TypeClass createID_Aussenelementansteuerung_ohne_Proxy_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Aussenelementansteuerung Type Class</em>'.
@@ -139,15 +182,6 @@ public interface VerweiseFactory extends EFactory {
 	ID_Basis_Objekt_TypeClass createID_Basis_Objekt_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>ID Bearbeitungsvermerk Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ID Bearbeitungsvermerk Type Class</em>'.
-	 * @generated
-	 */
-	ID_Bearbeitungsvermerk_TypeClass createID_Bearbeitungsvermerk_TypeClass();
-
-	/**
 	 * Returns a new object of class '<em>ID Bedien Anzeige Element Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,6 +236,15 @@ public interface VerweiseFactory extends EFactory {
 	ID_Bedien_Zentrale_TypeClass createID_Bedien_Zentrale_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ID Befestigung Bauwerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Befestigung Bauwerk Type Class</em>'.
+	 * @generated
+	 */
+	ID_Befestigung_Bauwerk_TypeClass createID_Befestigung_Bauwerk_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ID Beginn Bereich Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -211,13 +254,22 @@ public interface VerweiseFactory extends EFactory {
 	ID_Beginn_Bereich_TypeClass createID_Beginn_Bereich_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>ID Binaerdatei ohne Proxy Type Class</em>'.
+	 * Returns a new object of class '<em>ID Bezugspunkt Positionierung Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ID Binaerdatei ohne Proxy Type Class</em>'.
+	 * @return a new object of class '<em>ID Bezugspunkt Positionierung Type Class</em>'.
 	 * @generated
 	 */
-	ID_Binaerdatei_ohne_Proxy_TypeClass createID_Binaerdatei_ohne_Proxy_TypeClass();
+	ID_Bezugspunkt_Positionierung_TypeClass createID_Bezugspunkt_Positionierung_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Binaerdaten ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Binaerdaten ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_Binaerdaten_ohne_Proxy_TypeClass createID_Binaerdaten_ohne_Proxy_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Block Anlage Type Class</em>'.
@@ -328,13 +380,13 @@ public interface VerweiseFactory extends EFactory {
 	ID_Datenpunkt_TypeClass createID_Datenpunkt_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>ID DP Bezugspunkt Type Class</em>'.
+	 * Returns a new object of class '<em>ID DP Bezug Funktional Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ID DP Bezugspunkt Type Class</em>'.
+	 * @return a new object of class '<em>ID DP Bezug Funktional Type Class</em>'.
 	 * @generated
 	 */
-	ID_DP_Bezugspunkt_TypeClass createID_DP_Bezugspunkt_TypeClass();
+	ID_DP_Bezug_Funktional_TypeClass createID_DP_Bezug_Funktional_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Einschaltpunkt Type Class</em>'.
@@ -382,13 +434,13 @@ public interface VerweiseFactory extends EFactory {
 	ID_Energie_Eingang_TypeClass createID_Energie_Eingang_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>ID Energie Primaer Type Class</em>'.
+	 * Returns a new object of class '<em>ID Energie Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ID Energie Primaer Type Class</em>'.
+	 * @return a new object of class '<em>ID Energie Type Class</em>'.
 	 * @generated
 	 */
-	ID_Energie_Primaer_TypeClass createID_Energie_Primaer_TypeClass();
+	ID_Energie_TypeClass createID_Energie_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID ESTW Zentraleinheit Type Class</em>'.
@@ -398,6 +450,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_ESTW_Zentraleinheit_TypeClass createID_ESTW_Zentraleinheit_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID ETCS Kante Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID ETCS Kante Type Class</em>'.
+	 * @generated
+	 */
+	ID_ETCS_Kante_TypeClass createID_ETCS_Kante_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID ETCS Knoten ohne Proxy Type Class</em>'.
@@ -425,6 +486,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_EV_Modul_TypeClass createID_EV_Modul_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Fachtelegramm ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Fachtelegramm ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_Fachtelegramm_ohne_Proxy_TypeClass createID_Fachtelegramm_ohne_Proxy_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Fachtelegramm Type Class</em>'.
@@ -508,6 +578,15 @@ public interface VerweiseFactory extends EFactory {
 	ID_Fstr_Ausschluss_Besonders_TypeClass createID_Fstr_Ausschluss_Besonders_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ID Fstr DWeg ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Fstr DWeg ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_Fstr_DWeg_ohne_Proxy_TypeClass createID_Fstr_DWeg_ohne_Proxy_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ID Fstr DWeg Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,6 +594,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_Fstr_DWeg_TypeClass createID_Fstr_DWeg_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Fstr Fahrweg ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Fstr Fahrweg ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_Fstr_Fahrweg_ohne_Proxy_TypeClass createID_Fstr_Fahrweg_ohne_Proxy_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Fstr Fahrweg Type Class</em>'.
@@ -562,6 +650,15 @@ public interface VerweiseFactory extends EFactory {
 	ID_GEO_Art_TypeClass createID_GEO_Art_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ID GEO Kante Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID GEO Kante Type Class</em>'.
+	 * @generated
+	 */
+	ID_GEO_Kante_TypeClass createID_GEO_Kante_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ID GEO Knoten Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -587,15 +684,6 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_GEO_Punkt_TypeClass createID_GEO_Punkt_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>ID Geraet Programmiert Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ID Geraet Programmiert Type Class</em>'.
-	 * @generated
-	 */
-	ID_Geraet_Programmiert_TypeClass createID_Geraet_Programmiert_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID GFR Anlage ohne Proxy Type Class</em>'.
@@ -670,6 +758,42 @@ public interface VerweiseFactory extends EFactory {
 	ID_Information_Primaer_TypeClass createID_Information_Primaer_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ID Komponente Programmiert Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Komponente Programmiert Type Class</em>'.
+	 * @generated
+	 */
+	ID_Komponente_Programmiert_TypeClass createID_Komponente_Programmiert_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Lageplan Blattschnitt Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Lageplan Blattschnitt Type Class</em>'.
+	 * @generated
+	 */
+	ID_Lageplan_Blattschnitt_TypeClass createID_Lageplan_Blattschnitt_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Lageplan Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Lageplan Type Class</em>'.
+	 * @generated
+	 */
+	ID_Lageplan_TypeClass createID_Lageplan_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Lageplan Zustand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Lageplan Zustand Type Class</em>'.
+	 * @generated
+	 */
+	ID_Lageplan_Zustand_TypeClass createID_Lageplan_Zustand_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ID LEU Anlage ohne Proxy Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -688,13 +812,13 @@ public interface VerweiseFactory extends EFactory {
 	ID_LEU_Anlage_TypeClass createID_LEU_Anlage_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>ID LEU Bezugspunkt Type Class</em>'.
+	 * Returns a new object of class '<em>ID LEU Bezug Funktional Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ID LEU Bezugspunkt Type Class</em>'.
+	 * @return a new object of class '<em>ID LEU Bezug Funktional Type Class</em>'.
 	 * @generated
 	 */
-	ID_LEU_Bezugspunkt_TypeClass createID_LEU_Bezugspunkt_TypeClass();
+	ID_LEU_Bezug_Funktional_TypeClass createID_LEU_Bezug_Funktional_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID LEU Schaltkasten ohne Proxy Type Class</em>'.
@@ -722,6 +846,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_Markante_Stelle_TypeClass createID_Markante_Stelle_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Markanter Punkt Gleis Abschluss Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Markanter Punkt Gleis Abschluss Type Class</em>'.
+	 * @generated
+	 */
+	ID_Markanter_Punkt_Gleis_Abschluss_TypeClass createID_Markanter_Punkt_Gleis_Abschluss_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Markanter Punkt Type Class</em>'.
@@ -758,6 +891,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_NB_Zone_TypeClass createID_NB_Zone_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Oertlichkeit Ausgabe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Oertlichkeit Ausgabe Type Class</em>'.
+	 * @generated
+	 */
+	ID_Oertlichkeit_Ausgabe_TypeClass createID_Oertlichkeit_Ausgabe_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Oertlichkeit Proxy Type Class</em>'.
@@ -857,6 +999,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_RBC_TypeClass createID_RBC_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Regelzeichnung ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Regelzeichnung ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_Regelzeichnung_ohne_Proxy_TypeClass createID_Regelzeichnung_ohne_Proxy_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Regelzeichnung Type Class</em>'.
@@ -1010,6 +1161,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_Stellwerk_TypeClass createID_Stellwerk_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID Strecke Bremsweg ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID Strecke Bremsweg ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_Strecke_Bremsweg_ohne_Proxy_TypeClass createID_Strecke_Bremsweg_ohne_Proxy_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID Strecke Punkt Type Class</em>'.
@@ -1253,6 +1413,15 @@ public interface VerweiseFactory extends EFactory {
 	 * @generated
 	 */
 	ID_ZL_TypeClass createID_ZL_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>ID ZLV Bus ohne Proxy Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ID ZLV Bus ohne Proxy Type Class</em>'.
+	 * @generated
+	 */
+	ID_ZLV_Bus_ohne_Proxy_TypeClass createID_ZLV_Bus_ohne_Proxy_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ID ZLV Bus Type Class</em>'.

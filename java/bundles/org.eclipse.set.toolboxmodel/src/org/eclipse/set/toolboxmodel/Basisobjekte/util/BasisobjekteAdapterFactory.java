@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.util;
 
@@ -102,10 +109,6 @@ public class BasisobjekteAdapterFactory extends AdapterFactoryImpl {
 				return createBearbeitungsvermerk_Allg_AttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseBearbeitungsvermerk_Kennung_TypeClass(Bearbeitungsvermerk_Kennung_TypeClass object) {
-				return createBearbeitungsvermerk_Kennung_TypeClassAdapter();
-			}
-			@Override
 			public Adapter caseBearbeitungsvermerk_Rolle_TypeClass(Bearbeitungsvermerk_Rolle_TypeClass object) {
 				return createBearbeitungsvermerk_Rolle_TypeClassAdapter();
 			}
@@ -138,16 +141,20 @@ public class BasisobjekteAdapterFactory extends AdapterFactoryImpl {
 				return createBestandsschutz_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseBV_Darstellung_In_Plan_TypeClass(BV_Darstellung_In_Plan_TypeClass object) {
+				return createBV_Darstellung_In_Plan_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseBV_Kategorie_TypeClass(BV_Kategorie_TypeClass object) {
+				return createBV_Kategorie_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseDateiname_TypeClass(Dateiname_TypeClass object) {
 				return createDateiname_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseDateityp_TypeClass(Dateityp_TypeClass object) {
 				return createDateityp_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseDaten_TypeClass(Daten_TypeClass object) {
-				return createDaten_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseDatum_Regelwerk_TypeClass(Datum_Regelwerk_TypeClass object) {
@@ -160,6 +167,10 @@ public class BasisobjekteAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIdentitaet_TypeClass(Identitaet_TypeClass object) {
 				return createIdentitaet_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseKm_Massgebend_TypeClass(Km_Massgebend_TypeClass object) {
+				return createKm_Massgebend_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseKommentar_TypeClass(Kommentar_TypeClass object) {
@@ -402,20 +413,6 @@ public class BasisobjekteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass <em>Bearbeitungsvermerk Kennung Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass
-	 * @generated
-	 */
-	public Adapter createBearbeitungsvermerk_Kennung_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Rolle_TypeClass <em>Bearbeitungsvermerk Rolle Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -528,6 +525,34 @@ public class BasisobjekteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass <em>BV Darstellung In Plan Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass
+	 * @generated
+	 */
+	public Adapter createBV_Darstellung_In_Plan_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass <em>BV Kategorie Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass
+	 * @generated
+	 */
+	public Adapter createBV_Kategorie_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Dateiname_TypeClass <em>Dateiname Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -552,20 +577,6 @@ public class BasisobjekteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDateityp_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass <em>Daten Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass
-	 * @generated
-	 */
-	public Adapter createDaten_TypeClassAdapter() {
 		return null;
 	}
 
@@ -608,6 +619,20 @@ public class BasisobjekteAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIdentitaet_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass <em>Km Massgebend Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass
+	 * @generated
+	 */
+	public Adapter createKm_Massgebend_TypeClassAdapter() {
 		return null;
 	}
 

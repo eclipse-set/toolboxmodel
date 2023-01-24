@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block.util;
 
@@ -134,8 +141,6 @@ public class BlockValidator extends EObjectValidator {
 				return validateBlock_Strecke_Allg_AttributeGroup((Block_Strecke_Allg_AttributeGroup)value, diagnostics, context);
 			case BlockPackage.BREMSWEG_TYPE_CLASS:
 				return validateBremsweg_TypeClass((Bremsweg_TypeClass)value, diagnostics, context);
-			case BlockPackage.ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS:
-				return validateEntwurfsgeschwindigkeit_TypeClass((Entwurfsgeschwindigkeit_TypeClass)value, diagnostics, context);
 			case BlockPackage.ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS:
 				return validateErlaubnis_Staendig_Vorhanden_TypeClass((Erlaubnis_Staendig_Vorhanden_TypeClass)value, diagnostics, context);
 			case BlockPackage.ERLAUBNISABGABESPEICHERUNG_TYPE_CLASS:
@@ -150,8 +155,10 @@ public class BlockValidator extends EObjectValidator {
 				return validateSchutzuebertrager_TypeClass((Schutzuebertrager_TypeClass)value, diagnostics, context);
 			case BlockPackage.STRECKE_ART_TYPE_CLASS:
 				return validateStrecke_Art_TypeClass((Strecke_Art_TypeClass)value, diagnostics, context);
-			case BlockPackage.TRAKTION_ART_TYPE_CLASS:
-				return validateTraktion_Art_TypeClass((Traktion_Art_TypeClass)value, diagnostics, context);
+			case BlockPackage.STRECKENGESCHWINDIGKEIT_TYPE_CLASS:
+				return validateStreckengeschwindigkeit_TypeClass((Streckengeschwindigkeit_TypeClass)value, diagnostics, context);
+			case BlockPackage.TRAKTION_ART_ELEKTRISCH_TYPE_CLASS:
+				return validateTraktion_Art_Elektrisch_TypeClass((Traktion_Art_Elektrisch_TypeClass)value, diagnostics, context);
 			case BlockPackage.VORBLOCKWECKER_TYPE_CLASS:
 				return validateVorblockwecker_TypeClass((Vorblockwecker_TypeClass)value, diagnostics, context);
 			case BlockPackage.ZUGBEEINFLUSSUNG_ART_TYPE_CLASS:
@@ -166,8 +173,6 @@ public class BlockValidator extends EObjectValidator {
 				return validateENUMSchaltung((ENUMSchaltung)value, diagnostics, context);
 			case BlockPackage.ENUM_STRECKE_ART:
 				return validateENUMStreckeArt((ENUMStreckeArt)value, diagnostics, context);
-			case BlockPackage.ENTWURFSGESCHWINDIGKEIT_TYPE:
-				return validateEntwurfsgeschwindigkeit_Type((BigInteger)value, diagnostics, context);
 			case BlockPackage.ENUM_BETRIEBSFUEHRUNG_OBJECT:
 				return validateENUMBetriebsfuehrungObject((ENUMBetriebsfuehrung)value, diagnostics, context);
 			case BlockPackage.ENUM_BLOCK_BAUFORM_OBJECT:
@@ -176,6 +181,8 @@ public class BlockValidator extends EObjectValidator {
 				return validateENUMSchaltungObject((ENUMSchaltung)value, diagnostics, context);
 			case BlockPackage.ENUM_STRECKE_ART_OBJECT:
 				return validateENUMStreckeArtObject((ENUMStreckeArt)value, diagnostics, context);
+			case BlockPackage.STRECKENGESCHWINDIGKEIT_TYPE:
+				return validateStreckengeschwindigkeit_Type((BigInteger)value, diagnostics, context);
 			case BlockPackage.ZUSATZINFORMATION_TYPE:
 				return validateZusatzinformation_Type((String)value, diagnostics, context);
 			default:
@@ -296,15 +303,6 @@ public class BlockValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEntwurfsgeschwindigkeit_TypeClass(Entwurfsgeschwindigkeit_TypeClass entwurfsgeschwindigkeit_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(entwurfsgeschwindigkeit_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateErlaubnis_Staendig_Vorhanden_TypeClass(Erlaubnis_Staendig_Vorhanden_TypeClass erlaubnis_Staendig_Vorhanden_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(erlaubnis_Staendig_Vorhanden_TypeClass, diagnostics, context);
 	}
@@ -368,8 +366,17 @@ public class BlockValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateTraktion_Art_TypeClass(Traktion_Art_TypeClass traktion_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(traktion_Art_TypeClass, diagnostics, context);
+	public boolean validateStreckengeschwindigkeit_TypeClass(Streckengeschwindigkeit_TypeClass streckengeschwindigkeit_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(streckengeschwindigkeit_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTraktion_Art_Elektrisch_TypeClass(Traktion_Art_Elektrisch_TypeClass traktion_Art_Elektrisch_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(traktion_Art_Elektrisch_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -440,16 +447,6 @@ public class BlockValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEntwurfsgeschwindigkeit_Type(BigInteger entwurfsgeschwindigkeit_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = basisTypenValidator.validateGeschwindigkeit_Type_Pattern(entwurfsgeschwindigkeit_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateENUMBetriebsfuehrungObject(ENUMBetriebsfuehrung enumBetriebsfuehrungObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -479,6 +476,16 @@ public class BlockValidator extends EObjectValidator {
 	 */
 	public boolean validateENUMStreckeArtObject(ENUMStreckeArt enumStreckeArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStreckengeschwindigkeit_Type(BigInteger streckengeschwindigkeit_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateGeschwindigkeit_Type_Pattern(streckengeschwindigkeit_Type, diagnostics, context);
+		return result;
 	}
 
 	/**

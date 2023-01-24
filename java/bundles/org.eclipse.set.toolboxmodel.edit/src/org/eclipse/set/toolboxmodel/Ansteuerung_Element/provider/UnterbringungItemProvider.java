@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -31,7 +32,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung} object.
@@ -104,6 +105,7 @@ public class UnterbringungItemProvider extends Basis_ObjektItemProvider {
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG__UNTERBRINGUNG_ALLG);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG__PUNKT_OBJEKT_TOP_KANTE);
 			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG__STANDORT_BESCHREIBUNG);
+			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG__UNTERBRINGUNG_POLYGONZUG);
 		}
 		return childrenFeatures;
 	}
@@ -160,6 +162,7 @@ public class UnterbringungItemProvider extends Basis_ObjektItemProvider {
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG__UNTERBRINGUNG_ALLG:
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG__PUNKT_OBJEKT_TOP_KANTE:
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG__STANDORT_BESCHREIBUNG:
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG__UNTERBRINGUNG_POLYGONZUG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -198,6 +201,11 @@ public class UnterbringungItemProvider extends Basis_ObjektItemProvider {
 			(createChildParameter
 				(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG__STANDORT_BESCHREIBUNG,
 				 Ansteuerung_ElementFactory.eINSTANCE.createStandort_Beschreibung_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Ansteuerung_ElementPackage.Literals.UNTERBRINGUNG__UNTERBRINGUNG_POLYGONZUG,
+				 Ansteuerung_ElementFactory.eINSTANCE.createUnterbringung_Polygonzug_TypeClass()));
 	}
 
 	/**

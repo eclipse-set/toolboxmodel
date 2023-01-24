@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -590,23 +566,23 @@ public interface FahrstrassePackage extends EPackage {
 	FahrstrassePackage eINSTANCE = org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgeis_TypeClassImpl <em>Aufloesung Ssp Zielgeis Type Class</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgleis_TypeClassImpl <em>Aufloesung Ssp Zielgleis Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgeis_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getAufloesung_Ssp_Zielgeis_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgleis_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getAufloesung_Ssp_Zielgleis_TypeClass()
 	 * @generated
 	 */
-	int AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS = 0;
+	int AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+	int AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
 
 	/**
 	 * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -615,25 +591,25 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+	int AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Aufloesung Ssp Zielgeis Type Class</em>' class.
+	 * The number of structural features of the '<em>Aufloesung Ssp Zielgleis Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+	int AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Aufloesung Ssp Zielgeis Type Class</em>' class.
+	 * The number of operations of the '<em>Aufloesung Ssp Zielgleis Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+	int AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Verzoegerung_TypeClassImpl <em>Aufloesung Verzoegerung Type Class</em>}' class.
@@ -646,7 +622,7 @@ public interface FahrstrassePackage extends EPackage {
 	int AUFLOESUNG_VERZOEGERUNG_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface FahrstrassePackage extends EPackage {
 	int AUTOMATISCHE_EINSTELLUNG_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface FahrstrassePackage extends EPackage {
 	int BEZEICHNUNG_FSTR_DWEG_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +760,7 @@ public interface FahrstrassePackage extends EPackage {
 	int BEZEICHNUNG_MARKANTER_PUNKT_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -830,7 +806,7 @@ public interface FahrstrassePackage extends EPackage {
 	int DWEG_REIHENFOLGE_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -876,7 +852,7 @@ public interface FahrstrassePackage extends EPackage {
 	int DWEG_VAUFWERTUNG_VERZICHT_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -922,7 +898,7 @@ public interface FahrstrassePackage extends EPackage {
 	int DWEG_VTYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -968,7 +944,7 @@ public interface FahrstrassePackage extends EPackage {
 	int DWEG_VORZUG_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1014,7 +990,7 @@ public interface FahrstrassePackage extends EPackage {
 	int ELEMENT_VERSCHLUSS_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1060,7 +1036,7 @@ public interface FahrstrassePackage extends EPackage {
 	int FBEDIENUNG_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1124,13 +1100,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ABHAENGIGKEIT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_ABHAENGIGKEIT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ABHAENGIGKEIT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1197,13 +1182,13 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP = 12;
 
 	/**
-	 * The feature id for the '<em><b>Aufloesung Ssp Zielgeis</b></em>' containment reference.
+	 * The feature id for the '<em><b>Aufloesung Ssp Zielgleis</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS = 0;
+	int FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS = 0;
 
 	/**
 	 * The feature id for the '<em><b>ID Schluesselsperre</b></em>' reference.
@@ -1261,13 +1246,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ANEINANDER__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_ANEINANDER__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ANEINANDER__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1316,7 +1310,7 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ANEINANDER_BEDIENSTRING_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1380,13 +1374,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ANEINANDER_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_ANEINANDER_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ANEINANDER_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1434,52 +1437,6 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ANEINANDER_ZUORDNUNG_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Art_TypeClassImpl <em>Fstr Art Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Art_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Art_TypeClass()
-	 * @generated
-	 */
-	int FSTR_ART_TYPE_CLASS = 16;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_ART_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_ART_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Fstr Art Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_ART_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Fstr Art Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Bedienstring_TypeClassImpl <em>Fstr Bedienstring Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1487,10 +1444,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Bedienstring_TypeClass()
 	 * @generated
 	 */
-	int FSTR_BEDIENSTRING_TYPE_CLASS = 17;
+	int FSTR_BEDIENSTRING_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1526,52 +1483,6 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_BEDIENSTRING_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Bildezeit_TypeClassImpl <em>Fstr Bildezeit Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Bildezeit_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Bildezeit_TypeClass()
-	 * @generated
-	 */
-	int FSTR_BILDEZEIT_TYPE_CLASS = 18;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_BILDEZEIT_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_BILDEZEIT_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Fstr Bildezeit Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_BILDEZEIT_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Fstr Bildezeit Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_BILDEZEIT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWegImpl <em>Fstr DWeg</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1579,7 +1490,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg()
 	 * @generated
 	 */
-	int FSTR_DWEG = 19;
+	int FSTR_DWEG = 17;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1600,13 +1511,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_DWEG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_DWEG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_DWEG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1697,7 +1617,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_DWEG_ALLG_ATTRIBUTE_GROUP = 20;
+	int FSTR_DWEG_ALLG_ATTRIBUTE_GROUP = 18;
 
 	/**
 	 * The feature id for the '<em><b>Laenge Soll</b></em>' containment reference.
@@ -1743,7 +1663,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_DWEG_BEZEICHNUNG_ATTRIBUTE_GROUP = 21;
+	int FSTR_DWEG_BEZEICHNUNG_ATTRIBUTE_GROUP = 19;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung Fstr DWeg</b></em>' containment reference.
@@ -1780,7 +1700,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_Spezifisch_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_DWEG_SPEZIFISCH_ATTRIBUTE_GROUP = 22;
+	int FSTR_DWEG_SPEZIFISCH_ATTRIBUTE_GROUP = 20;
 
 	/**
 	 * The feature id for the '<em><b>Aufloesung Verzoegerung</b></em>' containment reference.
@@ -1853,7 +1773,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_W_Kr()
 	 * @generated
 	 */
-	int FSTR_DWEG_WKR = 23;
+	int FSTR_DWEG_WKR = 21;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1874,13 +1794,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_DWEG_WKR__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_DWEG_WKR__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_DWEG_WKR__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1937,126 +1866,6 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_DWEG_WKR_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_AttributeGroupImpl <em>Fstr DWeg WKr Allg Attribute Group</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_AttributeGroupImpl
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_W_Kr_Allg_AttributeGroup()
-	 * @generated
-	 */
-	int FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP = 24;
-
-	/**
-	 * The feature id for the '<em><b>Fstr DWeg WKr</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP__FSTR_DWEG_WKR = 0;
-
-	/**
-	 * The number of structural features of the '<em>Fstr DWeg WKr Allg Attribute Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Fstr DWeg WKr Allg Attribute Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_child_AttributeGroupImpl <em>Fstr DWeg WKr Allg child Attribute Group</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_child_AttributeGroupImpl
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_W_Kr_Allg_child_AttributeGroup()
-	 * @generated
-	 */
-	int FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP = 25;
-
-	/**
-	 * The feature id for the '<em><b>Fstr DWeg WKr</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP__FSTR_DWEG_WKR = FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP__FSTR_DWEG_WKR;
-
-	/**
-	 * The number of structural features of the '<em>Fstr DWeg WKr Allg child Attribute Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP_FEATURE_COUNT = FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Fstr DWeg WKr Allg child Attribute Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP_OPERATION_COUNT = FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_TypeClassImpl <em>Fstr DWeg WKr Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_W_Kr_TypeClass()
-	 * @generated
-	 */
-	int FSTR_DWEG_WKR_TYPE_CLASS = 26;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Fstr DWeg WKr Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Fstr DWeg WKr Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_DWEG_WKR_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_FahrwegImpl <em>Fstr Fahrweg</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2064,7 +1873,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Fahrweg()
 	 * @generated
 	 */
-	int FSTR_FAHRWEG = 27;
+	int FSTR_FAHRWEG = 22;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2085,13 +1894,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_FAHRWEG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_FAHRWEG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_FAHRWEG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2139,13 +1957,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_FAHRWEG__ID_ZIEL = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Start Signal Charakter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_FAHRWEG__START_SIGNAL_CHARAKTER = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Fstr Fahrweg</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_FAHRWEG_FEATURE_COUNT = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 3;
+	int FSTR_FAHRWEG_FEATURE_COUNT = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Fstr Fahrweg</em>' class.
@@ -2157,6 +1984,52 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_FAHRWEG_OPERATION_COUNT = BasisobjektePackage.BEREICH_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Mittel_Art_TypeClassImpl <em>Fstr Mittel Art Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Mittel_Art_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Mittel_Art_TypeClass()
+	 * @generated
+	 */
+	int FSTR_MITTEL_ART_TYPE_CLASS = 23;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_MITTEL_ART_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_MITTEL_ART_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Fstr Mittel Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_MITTEL_ART_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Fstr Mittel Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_MITTEL_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Mittel_AttributeGroupImpl <em>Fstr Mittel Attribute Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2164,7 +2037,16 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Mittel_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_MITTEL_ATTRIBUTE_GROUP = 28;
+	int FSTR_MITTEL_ATTRIBUTE_GROUP = 24;
+
+	/**
+	 * The feature id for the '<em><b>Fstr Mittel Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_ART = 0;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Mittel VAufwertung</b></em>' containment reference.
@@ -2173,7 +2055,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_VAUFWERTUNG = 0;
+	int FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_VAUFWERTUNG = 1;
 
 	/**
 	 * The number of structural features of the '<em>Fstr Mittel Attribute Group</em>' class.
@@ -2182,7 +2064,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_MITTEL_ATTRIBUTE_GROUP_FEATURE_COUNT = 1;
+	int FSTR_MITTEL_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Fstr Mittel Attribute Group</em>' class.
@@ -2201,10 +2083,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Mittel_V_Aufwertung_TypeClass()
 	 * @generated
 	 */
-	int FSTR_MITTEL_VAUFWERTUNG_TYPE_CLASS = 29;
+	int FSTR_MITTEL_VAUFWERTUNG_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2247,7 +2129,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Nichthaltfall()
 	 * @generated
 	 */
-	int FSTR_NICHTHALTFALL = 30;
+	int FSTR_NICHTHALTFALL = 26;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2268,13 +2150,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_NICHTHALTFALL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_NICHTHALTFALL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_NICHTHALTFALL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2322,6 +2213,52 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_NICHTHALTFALL_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_Art_TypeClassImpl <em>Fstr Rangier Art Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_Art_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Rangier_Art_TypeClass()
+	 * @generated
+	 */
+	int FSTR_RANGIER_ART_TYPE_CLASS = 27;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_RANGIER_ART_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_RANGIER_ART_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Fstr Rangier Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_RANGIER_ART_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Fstr Rangier Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_RANGIER_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_AttributeGroupImpl <em>Fstr Rangier Attribute Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2329,7 +2266,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Rangier_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_RANGIER_ATTRIBUTE_GROUP = 31;
+	int FSTR_RANGIER_ATTRIBUTE_GROUP = 28;
 
 	/**
 	 * The feature id for the '<em><b>Automatische Einstellung</b></em>' containment reference.
@@ -2341,13 +2278,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG = 0;
 
 	/**
+	 * The feature id for the '<em><b>Fstr Rangier Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART = 1;
+
+	/**
 	 * The feature id for the '<em><b>IDFMA Anlage Rangier Frei</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI = 1;
+	int FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI = 2;
 
 	/**
 	 * The feature id for the '<em><b>Rangier Gegenfahrtausschluss</b></em>' containment reference.
@@ -2356,7 +2302,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS = 2;
+	int FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Fstr Rangier Attribute Group</em>' class.
@@ -2365,7 +2311,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_RANGIER_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
+	int FSTR_RANGIER_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Fstr Rangier Attribute Group</em>' class.
@@ -2384,7 +2330,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Rangier_Fla_Zuordnung()
 	 * @generated
 	 */
-	int FSTR_RANGIER_FLA_ZUORDNUNG = 32;
+	int FSTR_RANGIER_FLA_ZUORDNUNG = 29;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2405,13 +2351,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_RANGIER_FLA_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_RANGIER_FLA_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_RANGIER_FLA_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2466,10 +2421,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Reihenfolge_TypeClass()
 	 * @generated
 	 */
-	int FSTR_REIHENFOLGE_TYPE_CLASS = 33;
+	int FSTR_REIHENFOLGE_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2512,7 +2467,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Signalisierung()
 	 * @generated
 	 */
-	int FSTR_SIGNALISIERUNG = 34;
+	int FSTR_SIGNALISIERUNG = 31;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2533,13 +2488,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_SIGNALISIERUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_SIGNALISIERUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_SIGNALISIERUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2603,7 +2567,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Umfahrpunkt()
 	 * @generated
 	 */
-	int FSTR_UMFAHRPUNKT = 35;
+	int FSTR_UMFAHRPUNKT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2624,13 +2588,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_UMFAHRPUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_UMFAHRPUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_UMFAHRPUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2685,10 +2658,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_V_Hg_TypeClass()
 	 * @generated
 	 */
-	int FSTR_VHG_TYPE_CLASS = 36;
+	int FSTR_VHG_TYPE_CLASS = 33;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2731,10 +2704,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_V_TypeClass()
 	 * @generated
 	 */
-	int FSTR_VTYPE_CLASS = 37;
+	int FSTR_VTYPE_CLASS = 34;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2777,10 +2750,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Vsigabstand_Verkuerzt_TypeClass()
 	 * @generated
 	 */
-	int FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS = 38;
+	int FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS = 35;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2816,6 +2789,52 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Art_TypeClassImpl <em>Fstr Zug Art Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Art_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Zug_Art_TypeClass()
+	 * @generated
+	 */
+	int FSTR_ZUG_ART_TYPE_CLASS = 36;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ZUG_ART_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ZUG_ART_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Fstr Zug Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ZUG_ART_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Fstr Zug Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ZUG_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl <em>Fstr Zug Attribute Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2823,7 +2842,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Zug_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_ZUG_ATTRIBUTE_GROUP = 39;
+	int FSTR_ZUG_ATTRIBUTE_GROUP = 37;
 
 	/**
 	 * The feature id for the '<em><b>Automatische Einstellung</b></em>' containment reference.
@@ -2844,13 +2863,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Fstr Zug Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART = 2;
+
+	/**
 	 * The feature id for the '<em><b>Fstr Zug DWeg</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG = 2;
+	int FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG = 3;
 
 	/**
 	 * The feature id for the '<em><b>IDBUE Einschaltung</b></em>' reference list.
@@ -2859,7 +2887,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_ATTRIBUTE_GROUP__IDBUE_EINSCHALTUNG = 3;
+	int FSTR_ZUG_ATTRIBUTE_GROUP__IDBUE_EINSCHALTUNG = 4;
 
 	/**
 	 * The feature id for the '<em><b>ID Signal Gruppenausfahrt</b></em>' reference.
@@ -2868,7 +2896,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_ATTRIBUTE_GROUP__ID_SIGNAL_GRUPPENAUSFAHRT = 4;
+	int FSTR_ZUG_ATTRIBUTE_GROUP__ID_SIGNAL_GRUPPENAUSFAHRT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Fstr Zug Attribute Group</em>' class.
@@ -2877,7 +2905,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
+	int FSTR_ZUG_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Fstr Zug Attribute Group</em>' class.
@@ -2896,7 +2924,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Zug_DWeg_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_ZUG_DWEG_ATTRIBUTE_GROUP = 40;
+	int FSTR_ZUG_DWEG_ATTRIBUTE_GROUP = 38;
 
 	/**
 	 * The feature id for the '<em><b>DWeg Vorzug</b></em>' containment reference.
@@ -2942,7 +2970,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Zug_Rangier()
 	 * @generated
 	 */
-	int FSTR_ZUG_RANGIER = 41;
+	int FSTR_ZUG_RANGIER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2963,13 +2991,22 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ZUG_RANGIER__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int FSTR_ZUG_RANGIER__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSTR_ZUG_RANGIER__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3060,7 +3097,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Zug_Rangier_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP = 42;
+	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP = 40;
 
 	/**
 	 * The feature id for the '<em><b>FBedienung</b></em>' containment reference.
@@ -3072,31 +3109,13 @@ public interface FahrstrassePackage extends EPackage {
 	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG = 0;
 
 	/**
-	 * The feature id for the '<em><b>Fstr Art</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART = 1;
-
-	/**
 	 * The feature id for the '<em><b>Fstr Bedienstring</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING = 2;
-
-	/**
-	 * The feature id for the '<em><b>Fstr Bildezeit</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT = 3;
+	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING = 1;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Reihenfolge</b></em>' containment reference.
@@ -3105,7 +3124,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE = 4;
+	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Fstr V</b></em>' containment reference.
@@ -3114,7 +3133,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V = 5;
+	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V = 3;
 
 	/**
 	 * The number of structural features of the '<em>Fstr Zug Rangier Allg Attribute Group</em>' class.
@@ -3123,7 +3142,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
+	int FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Fstr Zug Rangier Allg Attribute Group</em>' class.
@@ -3142,10 +3161,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getLaenge_Soll_TypeClass()
 	 * @generated
 	 */
-	int LAENGE_SOLL_TYPE_CLASS = 43;
+	int LAENGE_SOLL_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3188,7 +3207,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getMarkanter_Punkt()
 	 * @generated
 	 */
-	int MARKANTER_PUNKT = 44;
+	int MARKANTER_PUNKT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3209,13 +3228,22 @@ public interface FahrstrassePackage extends EPackage {
 	int MARKANTER_PUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int MARKANTER_PUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKANTER_PUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3279,7 +3307,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getMarkanter_Punkt_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int MARKANTER_PUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP = 45;
+	int MARKANTER_PUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP = 43;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung Markanter Punkt</b></em>' containment reference.
@@ -3316,10 +3344,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getMassgebende_Neigung_TypeClass()
 	 * @generated
 	 */
-	int MASSGEBENDE_NEIGUNG_TYPE_CLASS = 46;
+	int MASSGEBENDE_NEIGUNG_TYPE_CLASS = 44;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3362,10 +3390,10 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getRangier_Gegenfahrtausschluss_TypeClass()
 	 * @generated
 	 */
-	int RANGIER_GEGENFAHRTAUSSCHLUSS_TYPE_CLASS = 47;
+	int RANGIER_GEGENFAHRTAUSSCHLUSS_TYPE_CLASS = 45;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3408,7 +3436,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getSonstiger_Punkt()
 	 * @generated
 	 */
-	int SONSTIGER_PUNKT = 48;
+	int SONSTIGER_PUNKT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -3429,13 +3457,22 @@ public interface FahrstrassePackage extends EPackage {
 	int SONSTIGER_PUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SONSTIGER_PUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SONSTIGER_PUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3492,6 +3529,52 @@ public interface FahrstrassePackage extends EPackage {
 	int SONSTIGER_PUNKT_OPERATION_COUNT = BasisobjektePackage.PUNKT_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Start_Signal_Charakter_TypeClassImpl <em>Start Signal Charakter Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Start_Signal_Charakter_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getStart_Signal_Charakter_TypeClass()
+	 * @generated
+	 */
+	int START_SIGNAL_CHARAKTER_TYPE_CLASS = 47;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_SIGNAL_CHARAKTER_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_SIGNAL_CHARAKTER_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Start Signal Charakter Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_SIGNAL_CHARAKTER_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Start Signal Charakter Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_SIGNAL_CHARAKTER_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMAufloesungSspZielgleis <em>ENUM Aufloesung Ssp Zielgleis</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3499,7 +3582,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMAufloesungSspZielgleis()
 	 * @generated
 	 */
-	int ENUM_AUFLOESUNG_SSP_ZIELGLEIS = 49;
+	int ENUM_AUFLOESUNG_SSP_ZIELGLEIS = 48;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMAutomatischeEinstellung <em>ENUM Automatische Einstellung</em>}' enum.
@@ -3509,17 +3592,37 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMAutomatischeEinstellung()
 	 * @generated
 	 */
-	int ENUM_AUTOMATISCHE_EINSTELLUNG = 50;
+	int ENUM_AUTOMATISCHE_EINSTELLUNG = 49;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt <em>ENUM Fstr Art</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt <em>ENUM Fstr Mittel Art</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrArt()
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrMittelArt()
 	 * @generated
 	 */
-	int ENUM_FSTR_ART = 51;
+	int ENUM_FSTR_MITTEL_ART = 50;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt <em>ENUM Fstr Rangier Art</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrRangierArt()
+	 * @generated
+	 */
+	int ENUM_FSTR_RANGIER_ART = 51;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt <em>ENUM Fstr Zug Art</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrZugArt()
+	 * @generated
+	 */
+	int ENUM_FSTR_ZUG_ART = 52;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMRangierGegenfahrtausschluss <em>ENUM Rangier Gegenfahrtausschluss</em>}' enum.
@@ -3529,7 +3632,17 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMRangierGegenfahrtausschluss()
 	 * @generated
 	 */
-	int ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS = 52;
+	int ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS = 53;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter <em>ENUM Start Signal Charakter</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMStartSignalCharakter()
+	 * @generated
+	 */
+	int ENUM_START_SIGNAL_CHARAKTER = 54;
 
 	/**
 	 * The meta object id for the '<em>Aufloesung Verzoegerung Type</em>' data type.
@@ -3539,7 +3652,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getAufloesung_Verzoegerung_Type()
 	 * @generated
 	 */
-	int AUFLOESUNG_VERZOEGERUNG_TYPE = 53;
+	int AUFLOESUNG_VERZOEGERUNG_TYPE = 55;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Fstr DWeg Type</em>' data type.
@@ -3549,7 +3662,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getBezeichnung_Fstr_DWeg_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_FSTR_DWEG_TYPE = 54;
+	int BEZEICHNUNG_FSTR_DWEG_TYPE = 56;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Markanter Punkt Type</em>' data type.
@@ -3559,7 +3672,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getBezeichnung_Markanter_Punkt_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_MARKANTER_PUNKT_TYPE = 55;
+	int BEZEICHNUNG_MARKANTER_PUNKT_TYPE = 57;
 
 	/**
 	 * The meta object id for the '<em>DWeg Reihenfolge Type</em>' data type.
@@ -3569,7 +3682,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getDWeg_Reihenfolge_Type()
 	 * @generated
 	 */
-	int DWEG_REIHENFOLGE_TYPE = 56;
+	int DWEG_REIHENFOLGE_TYPE = 58;
 
 	/**
 	 * The meta object id for the '<em>DWeg VType</em>' data type.
@@ -3579,7 +3692,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getDWeg_V_Type()
 	 * @generated
 	 */
-	int DWEG_VTYPE = 57;
+	int DWEG_VTYPE = 59;
 
 	/**
 	 * The meta object id for the '<em>ENUM Aufloesung Ssp Zielgleis Object</em>' data type.
@@ -3589,7 +3702,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMAufloesungSspZielgleisObject()
 	 * @generated
 	 */
-	int ENUM_AUFLOESUNG_SSP_ZIELGLEIS_OBJECT = 58;
+	int ENUM_AUFLOESUNG_SSP_ZIELGLEIS_OBJECT = 60;
 
 	/**
 	 * The meta object id for the '<em>ENUM Automatische Einstellung Object</em>' data type.
@@ -3599,17 +3712,37 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMAutomatischeEinstellungObject()
 	 * @generated
 	 */
-	int ENUM_AUTOMATISCHE_EINSTELLUNG_OBJECT = 59;
+	int ENUM_AUTOMATISCHE_EINSTELLUNG_OBJECT = 61;
 
 	/**
-	 * The meta object id for the '<em>ENUM Fstr Art Object</em>' data type.
+	 * The meta object id for the '<em>ENUM Fstr Mittel Art Object</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrArtObject()
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrMittelArtObject()
 	 * @generated
 	 */
-	int ENUM_FSTR_ART_OBJECT = 60;
+	int ENUM_FSTR_MITTEL_ART_OBJECT = 62;
+
+	/**
+	 * The meta object id for the '<em>ENUM Fstr Rangier Art Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrRangierArtObject()
+	 * @generated
+	 */
+	int ENUM_FSTR_RANGIER_ART_OBJECT = 63;
+
+	/**
+	 * The meta object id for the '<em>ENUM Fstr Zug Art Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrZugArtObject()
+	 * @generated
+	 */
+	int ENUM_FSTR_ZUG_ART_OBJECT = 64;
 
 	/**
 	 * The meta object id for the '<em>ENUM Rangier Gegenfahrtausschluss Object</em>' data type.
@@ -3619,7 +3752,17 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMRangierGegenfahrtausschlussObject()
 	 * @generated
 	 */
-	int ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_OBJECT = 61;
+	int ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_OBJECT = 65;
+
+	/**
+	 * The meta object id for the '<em>ENUM Start Signal Charakter Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMStartSignalCharakterObject()
+	 * @generated
+	 */
+	int ENUM_START_SIGNAL_CHARAKTER_OBJECT = 66;
 
 	/**
 	 * The meta object id for the '<em>Fstr Aneinander Bedienstring Type</em>' data type.
@@ -3629,7 +3772,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Aneinander_Bedienstring_Type()
 	 * @generated
 	 */
-	int FSTR_ANEINANDER_BEDIENSTRING_TYPE = 62;
+	int FSTR_ANEINANDER_BEDIENSTRING_TYPE = 67;
 
 	/**
 	 * The meta object id for the '<em>Fstr Bedienstring Type</em>' data type.
@@ -3639,17 +3782,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Bedienstring_Type()
 	 * @generated
 	 */
-	int FSTR_BEDIENSTRING_TYPE = 63;
-
-	/**
-	 * The meta object id for the '<em>Fstr Bildezeit Type</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.math.BigDecimal
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Bildezeit_Type()
-	 * @generated
-	 */
-	int FSTR_BILDEZEIT_TYPE = 64;
+	int FSTR_BEDIENSTRING_TYPE = 68;
 
 	/**
 	 * The meta object id for the '<em>Fstr Reihenfolge Type</em>' data type.
@@ -3659,7 +3792,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Reihenfolge_Type()
 	 * @generated
 	 */
-	int FSTR_REIHENFOLGE_TYPE = 65;
+	int FSTR_REIHENFOLGE_TYPE = 69;
 
 	/**
 	 * The meta object id for the '<em>Fstr VHg Type</em>' data type.
@@ -3669,7 +3802,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_V_Hg_Type()
 	 * @generated
 	 */
-	int FSTR_VHG_TYPE = 66;
+	int FSTR_VHG_TYPE = 70;
 
 	/**
 	 * The meta object id for the '<em>Fstr VType</em>' data type.
@@ -3679,7 +3812,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_V_Type()
 	 * @generated
 	 */
-	int FSTR_VTYPE = 67;
+	int FSTR_VTYPE = 71;
 
 	/**
 	 * The meta object id for the '<em>Laenge Soll Type</em>' data type.
@@ -3689,7 +3822,7 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getLaenge_Soll_Type()
 	 * @generated
 	 */
-	int LAENGE_SOLL_TYPE = 68;
+	int LAENGE_SOLL_TYPE = 72;
 
 	/**
 	 * The meta object id for the '<em>Massgebende Neigung Type</em>' data type.
@@ -3699,29 +3832,29 @@ public interface FahrstrassePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getMassgebende_Neigung_Type()
 	 * @generated
 	 */
-	int MASSGEBENDE_NEIGUNG_TYPE = 69;
+	int MASSGEBENDE_NEIGUNG_TYPE = 73;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass <em>Aufloesung Ssp Zielgeis Type Class</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass <em>Aufloesung Ssp Zielgleis Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Aufloesung Ssp Zielgeis Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass
+	 * @return the meta object for class '<em>Aufloesung Ssp Zielgleis Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass
 	 * @generated
 	 */
-	EClass getAufloesung_Ssp_Zielgeis_TypeClass();
+	EClass getAufloesung_Ssp_Zielgleis_TypeClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass#getWert <em>Wert</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass#getWert <em>Wert</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass#getWert()
-	 * @see #getAufloesung_Ssp_Zielgeis_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass#getWert()
+	 * @see #getAufloesung_Ssp_Zielgleis_TypeClass()
 	 * @generated
 	 */
-	EAttribute getAufloesung_Ssp_Zielgeis_TypeClass_Wert();
+	EAttribute getAufloesung_Ssp_Zielgleis_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Verzoegerung_TypeClass <em>Aufloesung Verzoegerung Type Class</em>}'.
@@ -3987,15 +4120,15 @@ public interface FahrstrassePackage extends EPackage {
 	EClass getFstr_Abhaengigkeit_Ssp_AttributeGroup();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup#getAufloesungSspZielgeis <em>Aufloesung Ssp Zielgeis</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup#getAufloesungSspZielgleis <em>Aufloesung Ssp Zielgleis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Aufloesung Ssp Zielgeis</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup#getAufloesungSspZielgeis()
+	 * @return the meta object for the containment reference '<em>Aufloesung Ssp Zielgleis</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup#getAufloesungSspZielgleis()
 	 * @see #getFstr_Abhaengigkeit_Ssp_AttributeGroup()
 	 * @generated
 	 */
-	EReference getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgeis();
+	EReference getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgleis();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup#getIDSchluesselsperre <em>ID Schluesselsperre</em>}'.
@@ -4083,27 +4216,6 @@ public interface FahrstrassePackage extends EPackage {
 	EReference getFstr_Aneinander_Zuordnung_IDFstrZugRangier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass <em>Fstr Art Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fstr Art Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass
-	 * @generated
-	 */
-	EClass getFstr_Art_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass#getWert()
-	 * @see #getFstr_Art_TypeClass()
-	 * @generated
-	 */
-	EAttribute getFstr_Art_TypeClass_Wert();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bedienstring_TypeClass <em>Fstr Bedienstring Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4123,27 +4235,6 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFstr_Bedienstring_TypeClass_Wert();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass <em>Fstr Bildezeit Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fstr Bildezeit Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass
-	 * @generated
-	 */
-	EClass getFstr_Bildezeit_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass#getWert()
-	 * @see #getFstr_Bildezeit_TypeClass()
-	 * @generated
-	 */
-	EAttribute getFstr_Bildezeit_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg <em>Fstr DWeg</em>}'.
@@ -4383,58 +4474,6 @@ public interface FahrstrassePackage extends EPackage {
 	EReference getFstr_DWeg_W_Kr_IDWKrGspElement();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup <em>Fstr DWeg WKr Allg Attribute Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fstr DWeg WKr Allg Attribute Group</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup
-	 * @generated
-	 */
-	EClass getFstr_DWeg_W_Kr_Allg_AttributeGroup();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup#getFstrDWegWKr <em>Fstr DWeg WKr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Fstr DWeg WKr</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup#getFstrDWegWKr()
-	 * @see #getFstr_DWeg_W_Kr_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getFstr_DWeg_W_Kr_Allg_AttributeGroup_FstrDWegWKr();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_child_AttributeGroup <em>Fstr DWeg WKr Allg child Attribute Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fstr DWeg WKr Allg child Attribute Group</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_child_AttributeGroup
-	 * @generated
-	 */
-	EClass getFstr_DWeg_W_Kr_Allg_child_AttributeGroup();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass <em>Fstr DWeg WKr Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fstr DWeg WKr Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass
-	 * @generated
-	 */
-	EClass getFstr_DWeg_W_Kr_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass#getWert()
-	 * @see #getFstr_DWeg_W_Kr_TypeClass()
-	 * @generated
-	 */
-	EAttribute getFstr_DWeg_W_Kr_TypeClass_Wert();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg <em>Fstr Fahrweg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4478,6 +4517,38 @@ public interface FahrstrassePackage extends EPackage {
 	EReference getFstr_Fahrweg_IDZiel();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg#getStartSignalCharakter <em>Start Signal Charakter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Start Signal Charakter</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg#getStartSignalCharakter()
+	 * @see #getFstr_Fahrweg()
+	 * @generated
+	 */
+	EReference getFstr_Fahrweg_StartSignalCharakter();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass <em>Fstr Mittel Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fstr Mittel Art Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass
+	 * @generated
+	 */
+	EClass getFstr_Mittel_Art_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass#getWert()
+	 * @see #getFstr_Mittel_Art_TypeClass()
+	 * @generated
+	 */
+	EAttribute getFstr_Mittel_Art_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup <em>Fstr Mittel Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4486,6 +4557,17 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFstr_Mittel_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup#getFstrMittelArt <em>Fstr Mittel Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fstr Mittel Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup#getFstrMittelArt()
+	 * @see #getFstr_Mittel_AttributeGroup()
+	 * @generated
+	 */
+	EReference getFstr_Mittel_AttributeGroup_FstrMittelArt();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup#getFstrMittelVAufwertung <em>Fstr Mittel VAufwertung</em>}'.
@@ -4552,6 +4634,27 @@ public interface FahrstrassePackage extends EPackage {
 	EReference getFstr_Nichthaltfall_IDFstrFahrweg();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass <em>Fstr Rangier Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fstr Rangier Art Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass
+	 * @generated
+	 */
+	EClass getFstr_Rangier_Art_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass#getWert()
+	 * @see #getFstr_Rangier_Art_TypeClass()
+	 * @generated
+	 */
+	EAttribute getFstr_Rangier_Art_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup <em>Fstr Rangier Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4571,6 +4674,17 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFstr_Rangier_AttributeGroup_AutomatischeEinstellung();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getFstrRangierArt <em>Fstr Rangier Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fstr Rangier Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getFstrRangierArt()
+	 * @see #getFstr_Rangier_AttributeGroup()
+	 * @generated
+	 */
+	EReference getFstr_Rangier_AttributeGroup_FstrRangierArt();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getIDFMAAnlageRangierFrei <em>IDFMA Anlage Rangier Frei</em>}'.
@@ -4786,6 +4900,27 @@ public interface FahrstrassePackage extends EPackage {
 	EAttribute getFstr_Vsigabstand_Verkuerzt_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass <em>Fstr Zug Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fstr Zug Art Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass
+	 * @generated
+	 */
+	EClass getFstr_Zug_Art_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass#getWert()
+	 * @see #getFstr_Zug_Art_TypeClass()
+	 * @generated
+	 */
+	EAttribute getFstr_Zug_Art_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup <em>Fstr Zug Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4816,6 +4951,17 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFstr_Zug_AttributeGroup_FstrVsigabstandVerkuerzt();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getFstrZugArt <em>Fstr Zug Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fstr Zug Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getFstrZugArt()
+	 * @see #getFstr_Zug_AttributeGroup()
+	 * @generated
+	 */
+	EReference getFstr_Zug_AttributeGroup_FstrZugArt();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getFstrZugDWeg <em>Fstr Zug DWeg</em>}'.
@@ -4980,17 +5126,6 @@ public interface FahrstrassePackage extends EPackage {
 	EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FBedienung();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrArt <em>Fstr Art</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Fstr Art</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrArt()
-	 * @see #getFstr_Zug_Rangier_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrBedienstring <em>Fstr Bedienstring</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5000,17 +5135,6 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrBildezeit <em>Fstr Bildezeit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Fstr Bildezeit</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrBildezeit()
-	 * @see #getFstr_Zug_Rangier_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup#getFstrReihenfolge <em>Fstr Reihenfolge</em>}'.
@@ -5183,6 +5307,27 @@ public interface FahrstrassePackage extends EPackage {
 	EReference getSonstiger_Punkt_IDBeginnBereich();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass <em>Start Signal Charakter Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Start Signal Charakter Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass
+	 * @generated
+	 */
+	EClass getStart_Signal_Charakter_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass#getWert()
+	 * @see #getStart_Signal_Charakter_TypeClass()
+	 * @generated
+	 */
+	EAttribute getStart_Signal_Charakter_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMAufloesungSspZielgleis <em>ENUM Aufloesung Ssp Zielgleis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5203,14 +5348,34 @@ public interface FahrstrassePackage extends EPackage {
 	EEnum getENUMAutomatischeEinstellung();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt <em>ENUM Fstr Art</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt <em>ENUM Fstr Mittel Art</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>ENUM Fstr Art</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt
+	 * @return the meta object for enum '<em>ENUM Fstr Mittel Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt
 	 * @generated
 	 */
-	EEnum getENUMFstrArt();
+	EEnum getENUMFstrMittelArt();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt <em>ENUM Fstr Rangier Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Fstr Rangier Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt
+	 * @generated
+	 */
+	EEnum getENUMFstrRangierArt();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt <em>ENUM Fstr Zug Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Fstr Zug Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt
+	 * @generated
+	 */
+	EEnum getENUMFstrZugArt();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMRangierGegenfahrtausschluss <em>ENUM Rangier Gegenfahrtausschluss</em>}'.
@@ -5221,6 +5386,16 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getENUMRangierGegenfahrtausschluss();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter <em>ENUM Start Signal Charakter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Start Signal Charakter</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter
+	 * @generated
+	 */
+	EEnum getENUMStartSignalCharakter();
 
 	/**
 	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>Aufloesung Verzoegerung Type</em>}'.
@@ -5307,16 +5482,40 @@ public interface FahrstrassePackage extends EPackage {
 	EDataType getENUMAutomatischeEinstellungObject();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt <em>ENUM Fstr Art Object</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt <em>ENUM Fstr Mittel Art Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>ENUM Fstr Art Object</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt
-	 * @model instanceClass="org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt"
-	 *        extendedMetaData="name='ENUMFstr_Art:Object' baseType='ENUMFstr_Art'"
+	 * @return the meta object for data type '<em>ENUM Fstr Mittel Art Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt"
+	 *        extendedMetaData="name='ENUMFstr_Mittel_Art:Object' baseType='ENUMFstr_Mittel_Art'"
 	 * @generated
 	 */
-	EDataType getENUMFstrArtObject();
+	EDataType getENUMFstrMittelArtObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt <em>ENUM Fstr Rangier Art Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Fstr Rangier Art Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt"
+	 *        extendedMetaData="name='ENUMFstr_Rangier_Art:Object' baseType='ENUMFstr_Rangier_Art'"
+	 * @generated
+	 */
+	EDataType getENUMFstrRangierArtObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt <em>ENUM Fstr Zug Art Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Fstr Zug Art Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt"
+	 *        extendedMetaData="name='ENUMFstr_Zug_Art:Object' baseType='ENUMFstr_Zug_Art'"
+	 * @generated
+	 */
+	EDataType getENUMFstrZugArtObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMRangierGegenfahrtausschluss <em>ENUM Rangier Gegenfahrtausschluss Object</em>}'.
@@ -5329,6 +5528,18 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMRangierGegenfahrtausschlussObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter <em>ENUM Start Signal Charakter Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Start Signal Charakter Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter"
+	 *        extendedMetaData="name='ENUMStart_Signal_Charakter:Object' baseType='ENUMStart_Signal_Charakter'"
+	 * @generated
+	 */
+	EDataType getENUMStartSignalCharakterObject();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Fstr Aneinander Bedienstring Type</em>}'.
@@ -5353,18 +5564,6 @@ public interface FahrstrassePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getFstr_Bedienstring_Type();
-
-	/**
-	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>Fstr Bildezeit Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Fstr Bildezeit Type</em>'.
-	 * @see java.math.BigDecimal
-	 * @model instanceClass="java.math.BigDecimal"
-	 *        extendedMetaData="name='TFstr_Bildezeit' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TSekunde' pattern='0|[1-9][0-9]{0,1}|[1-8][0-9]{2}|900'"
-	 * @generated
-	 */
-	EDataType getFstr_Bildezeit_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.math.BigInteger <em>Fstr Reihenfolge Type</em>}'.
@@ -5450,14 +5649,14 @@ public interface FahrstrassePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgeis_TypeClassImpl <em>Aufloesung Ssp Zielgeis Type Class</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgleis_TypeClassImpl <em>Aufloesung Ssp Zielgleis Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgeis_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getAufloesung_Ssp_Zielgeis_TypeClass()
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Ssp_Zielgleis_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getAufloesung_Ssp_Zielgleis_TypeClass()
 		 * @generated
 		 */
-		EClass AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS = eINSTANCE.getAufloesung_Ssp_Zielgeis_TypeClass();
+		EClass AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS = eINSTANCE.getAufloesung_Ssp_Zielgleis_TypeClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
@@ -5465,7 +5664,7 @@ public interface FahrstrassePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS__WERT = eINSTANCE.getAufloesung_Ssp_Zielgeis_TypeClass_Wert();
+		EAttribute AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS__WERT = eINSTANCE.getAufloesung_Ssp_Zielgleis_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Aufloesung_Verzoegerung_TypeClassImpl <em>Aufloesung Verzoegerung Type Class</em>}' class.
@@ -5692,12 +5891,12 @@ public interface FahrstrassePackage extends EPackage {
 		EClass FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP = eINSTANCE.getFstr_Abhaengigkeit_Ssp_AttributeGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Aufloesung Ssp Zielgeis</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Aufloesung Ssp Zielgleis</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS = eINSTANCE.getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgeis();
+		EReference FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS = eINSTANCE.getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgleis();
 
 		/**
 		 * The meta object literal for the '<em><b>ID Schluesselsperre</b></em>' reference feature.
@@ -5770,24 +5969,6 @@ public interface FahrstrassePackage extends EPackage {
 		EReference FSTR_ANEINANDER_ZUORDNUNG__ID_FSTR_ZUG_RANGIER = eINSTANCE.getFstr_Aneinander_Zuordnung_IDFstrZugRangier();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Art_TypeClassImpl <em>Fstr Art Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Art_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Art_TypeClass()
-		 * @generated
-		 */
-		EClass FSTR_ART_TYPE_CLASS = eINSTANCE.getFstr_Art_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FSTR_ART_TYPE_CLASS__WERT = eINSTANCE.getFstr_Art_TypeClass_Wert();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Bedienstring_TypeClassImpl <em>Fstr Bedienstring Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5804,24 +5985,6 @@ public interface FahrstrassePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FSTR_BEDIENSTRING_TYPE_CLASS__WERT = eINSTANCE.getFstr_Bedienstring_TypeClass_Wert();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Bildezeit_TypeClassImpl <em>Fstr Bildezeit Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Bildezeit_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Bildezeit_TypeClass()
-		 * @generated
-		 */
-		EClass FSTR_BILDEZEIT_TYPE_CLASS = eINSTANCE.getFstr_Bildezeit_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FSTR_BILDEZEIT_TYPE_CLASS__WERT = eINSTANCE.getFstr_Bildezeit_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWegImpl <em>Fstr DWeg</em>}' class.
@@ -6010,52 +6173,6 @@ public interface FahrstrassePackage extends EPackage {
 		EReference FSTR_DWEG_WKR__IDW_KR_GSP_ELEMENT = eINSTANCE.getFstr_DWeg_W_Kr_IDWKrGspElement();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_AttributeGroupImpl <em>Fstr DWeg WKr Allg Attribute Group</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_AttributeGroupImpl
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_W_Kr_Allg_AttributeGroup()
-		 * @generated
-		 */
-		EClass FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP = eINSTANCE.getFstr_DWeg_W_Kr_Allg_AttributeGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Fstr DWeg WKr</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP__FSTR_DWEG_WKR = eINSTANCE.getFstr_DWeg_W_Kr_Allg_AttributeGroup_FstrDWegWKr();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_child_AttributeGroupImpl <em>Fstr DWeg WKr Allg child Attribute Group</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_Allg_child_AttributeGroupImpl
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_W_Kr_Allg_child_AttributeGroup()
-		 * @generated
-		 */
-		EClass FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP = eINSTANCE.getFstr_DWeg_W_Kr_Allg_child_AttributeGroup();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_TypeClassImpl <em>Fstr DWeg WKr Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_DWeg_W_Kr_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_DWeg_W_Kr_TypeClass()
-		 * @generated
-		 */
-		EClass FSTR_DWEG_WKR_TYPE_CLASS = eINSTANCE.getFstr_DWeg_W_Kr_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FSTR_DWEG_WKR_TYPE_CLASS__WERT = eINSTANCE.getFstr_DWeg_W_Kr_TypeClass_Wert();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_FahrwegImpl <em>Fstr Fahrweg</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6090,6 +6207,32 @@ public interface FahrstrassePackage extends EPackage {
 		EReference FSTR_FAHRWEG__ID_ZIEL = eINSTANCE.getFstr_Fahrweg_IDZiel();
 
 		/**
+		 * The meta object literal for the '<em><b>Start Signal Charakter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSTR_FAHRWEG__START_SIGNAL_CHARAKTER = eINSTANCE.getFstr_Fahrweg_StartSignalCharakter();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Mittel_Art_TypeClassImpl <em>Fstr Mittel Art Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Mittel_Art_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Mittel_Art_TypeClass()
+		 * @generated
+		 */
+		EClass FSTR_MITTEL_ART_TYPE_CLASS = eINSTANCE.getFstr_Mittel_Art_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FSTR_MITTEL_ART_TYPE_CLASS__WERT = eINSTANCE.getFstr_Mittel_Art_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Mittel_AttributeGroupImpl <em>Fstr Mittel Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6098,6 +6241,14 @@ public interface FahrstrassePackage extends EPackage {
 		 * @generated
 		 */
 		EClass FSTR_MITTEL_ATTRIBUTE_GROUP = eINSTANCE.getFstr_Mittel_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Fstr Mittel Art</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_ART = eINSTANCE.getFstr_Mittel_AttributeGroup_FstrMittelArt();
 
 		/**
 		 * The meta object literal for the '<em><b>Fstr Mittel VAufwertung</b></em>' containment reference feature.
@@ -6152,6 +6303,24 @@ public interface FahrstrassePackage extends EPackage {
 		EReference FSTR_NICHTHALTFALL__ID_FSTR_FAHRWEG = eINSTANCE.getFstr_Nichthaltfall_IDFstrFahrweg();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_Art_TypeClassImpl <em>Fstr Rangier Art Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_Art_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Rangier_Art_TypeClass()
+		 * @generated
+		 */
+		EClass FSTR_RANGIER_ART_TYPE_CLASS = eINSTANCE.getFstr_Rangier_Art_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FSTR_RANGIER_ART_TYPE_CLASS__WERT = eINSTANCE.getFstr_Rangier_Art_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Rangier_AttributeGroupImpl <em>Fstr Rangier Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6168,6 +6337,14 @@ public interface FahrstrassePackage extends EPackage {
 		 * @generated
 		 */
 		EReference FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG = eINSTANCE.getFstr_Rangier_AttributeGroup_AutomatischeEinstellung();
+
+		/**
+		 * The meta object literal for the '<em><b>Fstr Rangier Art</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART = eINSTANCE.getFstr_Rangier_AttributeGroup_FstrRangierArt();
 
 		/**
 		 * The meta object literal for the '<em><b>IDFMA Anlage Rangier Frei</b></em>' reference list feature.
@@ -6344,6 +6521,24 @@ public interface FahrstrassePackage extends EPackage {
 		EAttribute FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS__WERT = eINSTANCE.getFstr_Vsigabstand_Verkuerzt_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Art_TypeClassImpl <em>Fstr Zug Art Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Art_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Zug_Art_TypeClass()
+		 * @generated
+		 */
+		EClass FSTR_ZUG_ART_TYPE_CLASS = eINSTANCE.getFstr_Zug_Art_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FSTR_ZUG_ART_TYPE_CLASS__WERT = eINSTANCE.getFstr_Zug_Art_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl <em>Fstr Zug Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6368,6 +6563,14 @@ public interface FahrstrassePackage extends EPackage {
 		 * @generated
 		 */
 		EReference FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT = eINSTANCE.getFstr_Zug_AttributeGroup_FstrVsigabstandVerkuerzt();
+
+		/**
+		 * The meta object literal for the '<em><b>Fstr Zug Art</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART = eINSTANCE.getFstr_Zug_AttributeGroup_FstrZugArt();
 
 		/**
 		 * The meta object literal for the '<em><b>Fstr Zug DWeg</b></em>' containment reference feature.
@@ -6496,28 +6699,12 @@ public interface FahrstrassePackage extends EPackage {
 		EReference FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG = eINSTANCE.getFstr_Zug_Rangier_Allg_AttributeGroup_FBedienung();
 
 		/**
-		 * The meta object literal for the '<em><b>Fstr Art</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART = eINSTANCE.getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt();
-
-		/**
 		 * The meta object literal for the '<em><b>Fstr Bedienstring</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING = eINSTANCE.getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring();
-
-		/**
-		 * The meta object literal for the '<em><b>Fstr Bildezeit</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT = eINSTANCE.getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit();
 
 		/**
 		 * The meta object literal for the '<em><b>Fstr Reihenfolge</b></em>' containment reference feature.
@@ -6660,6 +6847,24 @@ public interface FahrstrassePackage extends EPackage {
 		EReference SONSTIGER_PUNKT__ID_BEGINN_BEREICH = eINSTANCE.getSonstiger_Punkt_IDBeginnBereich();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Start_Signal_Charakter_TypeClassImpl <em>Start Signal Charakter Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Start_Signal_Charakter_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getStart_Signal_Charakter_TypeClass()
+		 * @generated
+		 */
+		EClass START_SIGNAL_CHARAKTER_TYPE_CLASS = eINSTANCE.getStart_Signal_Charakter_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute START_SIGNAL_CHARAKTER_TYPE_CLASS__WERT = eINSTANCE.getStart_Signal_Charakter_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMAufloesungSspZielgleis <em>ENUM Aufloesung Ssp Zielgleis</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6680,14 +6885,34 @@ public interface FahrstrassePackage extends EPackage {
 		EEnum ENUM_AUTOMATISCHE_EINSTELLUNG = eINSTANCE.getENUMAutomatischeEinstellung();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt <em>ENUM Fstr Art</em>}' enum.
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt <em>ENUM Fstr Mittel Art</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrArt()
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrMittelArt()
 		 * @generated
 		 */
-		EEnum ENUM_FSTR_ART = eINSTANCE.getENUMFstrArt();
+		EEnum ENUM_FSTR_MITTEL_ART = eINSTANCE.getENUMFstrMittelArt();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt <em>ENUM Fstr Rangier Art</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrRangierArt()
+		 * @generated
+		 */
+		EEnum ENUM_FSTR_RANGIER_ART = eINSTANCE.getENUMFstrRangierArt();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt <em>ENUM Fstr Zug Art</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrZugArt()
+		 * @generated
+		 */
+		EEnum ENUM_FSTR_ZUG_ART = eINSTANCE.getENUMFstrZugArt();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMRangierGegenfahrtausschluss <em>ENUM Rangier Gegenfahrtausschluss</em>}' enum.
@@ -6698,6 +6923,16 @@ public interface FahrstrassePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS = eINSTANCE.getENUMRangierGegenfahrtausschluss();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter <em>ENUM Start Signal Charakter</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMStartSignalCharakter()
+		 * @generated
+		 */
+		EEnum ENUM_START_SIGNAL_CHARAKTER = eINSTANCE.getENUMStartSignalCharakter();
 
 		/**
 		 * The meta object literal for the '<em>Aufloesung Verzoegerung Type</em>' data type.
@@ -6770,14 +7005,34 @@ public interface FahrstrassePackage extends EPackage {
 		EDataType ENUM_AUTOMATISCHE_EINSTELLUNG_OBJECT = eINSTANCE.getENUMAutomatischeEinstellungObject();
 
 		/**
-		 * The meta object literal for the '<em>ENUM Fstr Art Object</em>' data type.
+		 * The meta object literal for the '<em>ENUM Fstr Mittel Art Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrArtObject()
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrMittelArtObject()
 		 * @generated
 		 */
-		EDataType ENUM_FSTR_ART_OBJECT = eINSTANCE.getENUMFstrArtObject();
+		EDataType ENUM_FSTR_MITTEL_ART_OBJECT = eINSTANCE.getENUMFstrMittelArtObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Fstr Rangier Art Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrRangierArtObject()
+		 * @generated
+		 */
+		EDataType ENUM_FSTR_RANGIER_ART_OBJECT = eINSTANCE.getENUMFstrRangierArtObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Fstr Zug Art Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMFstrZugArtObject()
+		 * @generated
+		 */
+		EDataType ENUM_FSTR_ZUG_ART_OBJECT = eINSTANCE.getENUMFstrZugArtObject();
 
 		/**
 		 * The meta object literal for the '<em>ENUM Rangier Gegenfahrtausschluss Object</em>' data type.
@@ -6788,6 +7043,16 @@ public interface FahrstrassePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_OBJECT = eINSTANCE.getENUMRangierGegenfahrtausschlussObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Start Signal Charakter Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter
+		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getENUMStartSignalCharakterObject()
+		 * @generated
+		 */
+		EDataType ENUM_START_SIGNAL_CHARAKTER_OBJECT = eINSTANCE.getENUMStartSignalCharakterObject();
 
 		/**
 		 * The meta object literal for the '<em>Fstr Aneinander Bedienstring Type</em>' data type.
@@ -6808,16 +7073,6 @@ public interface FahrstrassePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType FSTR_BEDIENSTRING_TYPE = eINSTANCE.getFstr_Bedienstring_Type();
-
-		/**
-		 * The meta object literal for the '<em>Fstr Bildezeit Type</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.math.BigDecimal
-		 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.impl.FahrstrassePackageImpl#getFstr_Bildezeit_Type()
-		 * @generated
-		 */
-		EDataType FSTR_BILDEZEIT_TYPE = eINSTANCE.getFstr_Bildezeit_Type();
 
 		/**
 		 * The meta object literal for the '<em>Fstr Reihenfolge Type</em>' data type.

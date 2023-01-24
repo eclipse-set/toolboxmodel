@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.impl;
 
@@ -10,7 +17,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -18,10 +24,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan_Koordinaten_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
 /**
@@ -34,6 +43,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_KreuzungsplanImpl#getBUEKreuzungsplanKoordinaten <em>BUE Kreuzungsplan Koordinaten</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_KreuzungsplanImpl#getIDAnhangKreuzungsplan <em>ID Anhang Kreuzungsplan</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_KreuzungsplanImpl#getIDBUEAnlage <em>IDBUE Anlage</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,6 +77,25 @@ public class BUE_KreuzungsplanImpl extends Basis_ObjektImpl implements BUE_Kreuz
 	 * @ordered
 	 */
 	protected boolean iDAnhangKreuzungsplanESet;
+
+	/**
+	 * The cached value of the '{@link #getIDBUEAnlage() <em>IDBUE Anlage</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDBUEAnlage()
+	 * @generated
+	 * @ordered
+	 */
+	protected BUE_Anlage iDBUEAnlage;
+
+	/**
+	 * This is true if the IDBUE Anlage reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDBUEAnlageESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,6 +202,73 @@ public class BUE_KreuzungsplanImpl extends Basis_ObjektImpl implements BUE_Kreuz
 	 * @generated
 	 */
 	@Override
+	public BUE_Anlage getIDBUEAnlage() {
+		if (iDBUEAnlage != null && iDBUEAnlage.eIsProxy()) {
+			InternalEObject oldIDBUEAnlage = (InternalEObject)iDBUEAnlage;
+			iDBUEAnlage = (BUE_Anlage)eResolveProxy(oldIDBUEAnlage);
+			if (iDBUEAnlage != oldIDBUEAnlage) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BahnuebergangPackage.BUE_KREUZUNGSPLAN__IDBUE_ANLAGE, oldIDBUEAnlage, iDBUEAnlage));
+			}
+		}
+		return iDBUEAnlage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BUE_Anlage basicGetIDBUEAnlage() {
+		return iDBUEAnlage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDBUEAnlage(BUE_Anlage newIDBUEAnlage) {
+		BUE_Anlage oldIDBUEAnlage = iDBUEAnlage;
+		iDBUEAnlage = newIDBUEAnlage;
+		boolean oldIDBUEAnlageESet = iDBUEAnlageESet;
+		iDBUEAnlageESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BahnuebergangPackage.BUE_KREUZUNGSPLAN__IDBUE_ANLAGE, oldIDBUEAnlage, iDBUEAnlage, !oldIDBUEAnlageESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDBUEAnlage() {
+		BUE_Anlage oldIDBUEAnlage = iDBUEAnlage;
+		boolean oldIDBUEAnlageESet = iDBUEAnlageESet;
+		iDBUEAnlage = null;
+		iDBUEAnlageESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, BahnuebergangPackage.BUE_KREUZUNGSPLAN__IDBUE_ANLAGE, oldIDBUEAnlage, null, oldIDBUEAnlageESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDBUEAnlage() {
+		return iDBUEAnlageESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__BUE_KREUZUNGSPLAN_KOORDINATEN:
@@ -195,6 +291,9 @@ public class BUE_KreuzungsplanImpl extends Basis_ObjektImpl implements BUE_Kreuz
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__ID_ANHANG_KREUZUNGSPLAN:
 				if (resolve) return getIDAnhangKreuzungsplan();
 				return basicGetIDAnhangKreuzungsplan();
+			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__IDBUE_ANLAGE:
+				if (resolve) return getIDBUEAnlage();
+				return basicGetIDBUEAnlage();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -216,6 +315,9 @@ public class BUE_KreuzungsplanImpl extends Basis_ObjektImpl implements BUE_Kreuz
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__ID_ANHANG_KREUZUNGSPLAN:
 				setIDAnhangKreuzungsplan((Anhang)newValue);
 				return;
+			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__IDBUE_ANLAGE:
+				setIDBUEAnlage((BUE_Anlage)newValue);
+				return;
 			default:
 				super.eSet(featureID, newValue);
 				return;
@@ -236,6 +338,9 @@ public class BUE_KreuzungsplanImpl extends Basis_ObjektImpl implements BUE_Kreuz
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__ID_ANHANG_KREUZUNGSPLAN:
 				unsetIDAnhangKreuzungsplan();
 				return;
+			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__IDBUE_ANLAGE:
+				unsetIDBUEAnlage();
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -254,6 +359,8 @@ public class BUE_KreuzungsplanImpl extends Basis_ObjektImpl implements BUE_Kreuz
 				return bUEKreuzungsplanKoordinaten != null && !bUEKreuzungsplanKoordinaten.isEmpty();
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__ID_ANHANG_KREUZUNGSPLAN:
 				return isSetIDAnhangKreuzungsplan();
+			case BahnuebergangPackage.BUE_KREUZUNGSPLAN__IDBUE_ANLAGE:
+				return isSetIDBUEAnlage();
 			default:
 				return super.eIsSet(featureID);
 		}

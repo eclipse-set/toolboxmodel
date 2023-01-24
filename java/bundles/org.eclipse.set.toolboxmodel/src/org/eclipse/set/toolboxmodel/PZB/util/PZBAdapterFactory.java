@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB.util;
 
@@ -94,8 +101,16 @@ public class PZBAdapterFactory extends AdapterFactoryImpl {
 				return createGUE_Messstrecke_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseINA_Gefahrstelle_AttributeGroup(INA_Gefahrstelle_AttributeGroup object) {
+				return createINA_Gefahrstelle_AttributeGroupAdapter();
+			}
+			@Override
 			public Adapter caseMessfehler_TypeClass(Messfehler_TypeClass object) {
 				return createMessfehler_TypeClassAdapter();
+			}
+			@Override
+			public Adapter casePrioritaet_Gefahrstelle_TypeClass(Prioritaet_Gefahrstelle_TypeClass object) {
+				return createPrioritaet_Gefahrstelle_TypeClassAdapter();
 			}
 			@Override
 			public Adapter casePruefgeschwindigkeit_TypeClass(Pruefgeschwindigkeit_TypeClass object) {
@@ -130,6 +145,14 @@ public class PZBAdapterFactory extends AdapterFactoryImpl {
 				return createPZB_Element_ZuordnungAdapter();
 			}
 			@Override
+			public Adapter casePZB_Element_Zuordnung_BP_AttributeGroup(PZB_Element_Zuordnung_BP_AttributeGroup object) {
+				return createPZB_Element_Zuordnung_BP_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter casePZB_Element_Zuordnung_Fstr_AttributeGroup(PZB_Element_Zuordnung_Fstr_AttributeGroup object) {
+				return createPZB_Element_Zuordnung_Fstr_AttributeGroupAdapter();
+			}
+			@Override
 			public Adapter casePZB_Element_Zuordnung_INA_AttributeGroup(PZB_Element_Zuordnung_INA_AttributeGroup object) {
 				return createPZB_Element_Zuordnung_INA_AttributeGroupAdapter();
 			}
@@ -140,6 +163,10 @@ public class PZBAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePZB_Zuordnung_Signal(PZB_Zuordnung_Signal object) {
 				return createPZB_Zuordnung_SignalAdapter();
+			}
+			@Override
+			public Adapter caseWirksamkeit_Fstr_TypeClass(Wirksamkeit_Fstr_TypeClass object) {
+				return createWirksamkeit_Fstr_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseWirksamkeit_TypeClass(Wirksamkeit_TypeClass object) {
@@ -252,6 +279,20 @@ public class PZBAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup <em>INA Gefahrstelle Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createINA_Gefahrstelle_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PZB.Messfehler_TypeClass <em>Messfehler Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -262,6 +303,20 @@ public class PZBAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMessfehler_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass <em>Prioritaet Gefahrstelle Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass
+	 * @generated
+	 */
+	public Adapter createPrioritaet_Gefahrstelle_TypeClassAdapter() {
 		return null;
 	}
 
@@ -378,6 +433,34 @@ public class PZBAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup <em>PZB Element Zuordnung BP Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createPZB_Element_Zuordnung_BP_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup <em>PZB Element Zuordnung Fstr Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createPZB_Element_Zuordnung_Fstr_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup <em>PZB Element Zuordnung INA Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -416,6 +499,20 @@ public class PZBAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPZB_Zuordnung_SignalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass <em>Wirksamkeit Fstr Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass
+	 * @generated
+	 */
+	public Adapter createWirksamkeit_Fstr_TypeClassAdapter() {
 		return null;
 	}
 

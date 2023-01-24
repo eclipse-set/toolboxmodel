@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis.util;
 
@@ -187,34 +194,6 @@ public class GleisSwitch<T> extends Switch<T> {
 				Lichtraumprofil_TypeClass lichtraumprofil_TypeClass = (Lichtraumprofil_TypeClass)theEObject;
 				T result = caseLichtraumprofil_TypeClass(lichtraumprofil_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(lichtraumprofil_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GleisPackage.NUTZUNG_GUETERZUG_TYPE_CLASS: {
-				Nutzung_Gueterzug_TypeClass nutzung_Gueterzug_TypeClass = (Nutzung_Gueterzug_TypeClass)theEObject;
-				T result = caseNutzung_Gueterzug_TypeClass(nutzung_Gueterzug_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(nutzung_Gueterzug_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GleisPackage.NUTZUNG_RANGIER_TYPE_CLASS: {
-				Nutzung_Rangier_TypeClass nutzung_Rangier_TypeClass = (Nutzung_Rangier_TypeClass)theEObject;
-				T result = caseNutzung_Rangier_TypeClass(nutzung_Rangier_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(nutzung_Rangier_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GleisPackage.NUTZUNG_REISEZUG_TYPE_CLASS: {
-				Nutzung_Reisezug_TypeClass nutzung_Reisezug_TypeClass = (Nutzung_Reisezug_TypeClass)theEObject;
-				T result = caseNutzung_Reisezug_TypeClass(nutzung_Reisezug_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(nutzung_Reisezug_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GleisPackage.NUTZUNG_SBAHN_TYPE_CLASS: {
-				Nutzung_SBahn_TypeClass nutzung_SBahn_TypeClass = (Nutzung_SBahn_TypeClass)theEObject;
-				T result = caseNutzung_SBahn_TypeClass(nutzung_SBahn_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(nutzung_SBahn_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -444,66 +423,6 @@ public class GleisSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLichtraumprofil_TypeClass(Lichtraumprofil_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Nutzung Gueterzug Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Nutzung Gueterzug Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNutzung_Gueterzug_TypeClass(Nutzung_Gueterzug_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Nutzung Rangier Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Nutzung Rangier Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNutzung_Rangier_TypeClass(Nutzung_Rangier_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Nutzung Reisezug Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Nutzung Reisezug Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNutzung_Reisezug_TypeClass(Nutzung_Reisezug_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Nutzung SBahn Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Nutzung SBahn Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNutzung_SBahn_TypeClass(Nutzung_SBahn_TypeClass object) {
 		return null;
 	}
 

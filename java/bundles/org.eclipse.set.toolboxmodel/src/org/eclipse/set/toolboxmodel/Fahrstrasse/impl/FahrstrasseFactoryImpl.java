@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.impl;
 
@@ -66,7 +73,7 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case FahrstrassePackage.AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS: return createAufloesung_Ssp_Zielgeis_TypeClass();
+			case FahrstrassePackage.AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS: return createAufloesung_Ssp_Zielgleis_TypeClass();
 			case FahrstrassePackage.AUFLOESUNG_VERZOEGERUNG_TYPE_CLASS: return createAufloesung_Verzoegerung_TypeClass();
 			case FahrstrassePackage.AUTOMATISCHE_EINSTELLUNG_TYPE_CLASS: return createAutomatische_Einstellung_TypeClass();
 			case FahrstrassePackage.BEZEICHNUNG_FSTR_DWEG_TYPE_CLASS: return createBezeichnung_Fstr_DWeg_TypeClass();
@@ -82,21 +89,18 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 			case FahrstrassePackage.FSTR_ANEINANDER: return createFstr_Aneinander();
 			case FahrstrassePackage.FSTR_ANEINANDER_BEDIENSTRING_TYPE_CLASS: return createFstr_Aneinander_Bedienstring_TypeClass();
 			case FahrstrassePackage.FSTR_ANEINANDER_ZUORDNUNG: return createFstr_Aneinander_Zuordnung();
-			case FahrstrassePackage.FSTR_ART_TYPE_CLASS: return createFstr_Art_TypeClass();
 			case FahrstrassePackage.FSTR_BEDIENSTRING_TYPE_CLASS: return createFstr_Bedienstring_TypeClass();
-			case FahrstrassePackage.FSTR_BILDEZEIT_TYPE_CLASS: return createFstr_Bildezeit_TypeClass();
 			case FahrstrassePackage.FSTR_DWEG: return createFstr_DWeg();
 			case FahrstrassePackage.FSTR_DWEG_ALLG_ATTRIBUTE_GROUP: return createFstr_DWeg_Allg_AttributeGroup();
 			case FahrstrassePackage.FSTR_DWEG_BEZEICHNUNG_ATTRIBUTE_GROUP: return createFstr_DWeg_Bezeichnung_AttributeGroup();
 			case FahrstrassePackage.FSTR_DWEG_SPEZIFISCH_ATTRIBUTE_GROUP: return createFstr_DWeg_Spezifisch_AttributeGroup();
 			case FahrstrassePackage.FSTR_DWEG_WKR: return createFstr_DWeg_W_Kr();
-			case FahrstrassePackage.FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP: return createFstr_DWeg_W_Kr_Allg_AttributeGroup();
-			case FahrstrassePackage.FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP: return createFstr_DWeg_W_Kr_Allg_child_AttributeGroup();
-			case FahrstrassePackage.FSTR_DWEG_WKR_TYPE_CLASS: return createFstr_DWeg_W_Kr_TypeClass();
 			case FahrstrassePackage.FSTR_FAHRWEG: return createFstr_Fahrweg();
+			case FahrstrassePackage.FSTR_MITTEL_ART_TYPE_CLASS: return createFstr_Mittel_Art_TypeClass();
 			case FahrstrassePackage.FSTR_MITTEL_ATTRIBUTE_GROUP: return createFstr_Mittel_AttributeGroup();
 			case FahrstrassePackage.FSTR_MITTEL_VAUFWERTUNG_TYPE_CLASS: return createFstr_Mittel_V_Aufwertung_TypeClass();
 			case FahrstrassePackage.FSTR_NICHTHALTFALL: return createFstr_Nichthaltfall();
+			case FahrstrassePackage.FSTR_RANGIER_ART_TYPE_CLASS: return createFstr_Rangier_Art_TypeClass();
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP: return createFstr_Rangier_AttributeGroup();
 			case FahrstrassePackage.FSTR_RANGIER_FLA_ZUORDNUNG: return createFstr_Rangier_Fla_Zuordnung();
 			case FahrstrassePackage.FSTR_REIHENFOLGE_TYPE_CLASS: return createFstr_Reihenfolge_TypeClass();
@@ -105,6 +109,7 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 			case FahrstrassePackage.FSTR_VHG_TYPE_CLASS: return createFstr_V_Hg_TypeClass();
 			case FahrstrassePackage.FSTR_VTYPE_CLASS: return createFstr_V_TypeClass();
 			case FahrstrassePackage.FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS: return createFstr_Vsigabstand_Verkuerzt_TypeClass();
+			case FahrstrassePackage.FSTR_ZUG_ART_TYPE_CLASS: return createFstr_Zug_Art_TypeClass();
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP: return createFstr_Zug_AttributeGroup();
 			case FahrstrassePackage.FSTR_ZUG_DWEG_ATTRIBUTE_GROUP: return createFstr_Zug_DWeg_AttributeGroup();
 			case FahrstrassePackage.FSTR_ZUG_RANGIER: return createFstr_Zug_Rangier();
@@ -115,6 +120,7 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 			case FahrstrassePackage.MASSGEBENDE_NEIGUNG_TYPE_CLASS: return createMassgebende_Neigung_TypeClass();
 			case FahrstrassePackage.RANGIER_GEGENFAHRTAUSSCHLUSS_TYPE_CLASS: return createRangier_Gegenfahrtausschluss_TypeClass();
 			case FahrstrassePackage.SONSTIGER_PUNKT: return createSonstiger_Punkt();
+			case FahrstrassePackage.START_SIGNAL_CHARAKTER_TYPE_CLASS: return createStart_Signal_Charakter_TypeClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -132,10 +138,16 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 				return createENUMAufloesungSspZielgleisFromString(eDataType, initialValue);
 			case FahrstrassePackage.ENUM_AUTOMATISCHE_EINSTELLUNG:
 				return createENUMAutomatischeEinstellungFromString(eDataType, initialValue);
-			case FahrstrassePackage.ENUM_FSTR_ART:
-				return createENUMFstrArtFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_FSTR_MITTEL_ART:
+				return createENUMFstrMittelArtFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_FSTR_RANGIER_ART:
+				return createENUMFstrRangierArtFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_FSTR_ZUG_ART:
+				return createENUMFstrZugArtFromString(eDataType, initialValue);
 			case FahrstrassePackage.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS:
 				return createENUMRangierGegenfahrtausschlussFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_START_SIGNAL_CHARAKTER:
+				return createENUMStartSignalCharakterFromString(eDataType, initialValue);
 			case FahrstrassePackage.AUFLOESUNG_VERZOEGERUNG_TYPE:
 				return createAufloesung_Verzoegerung_TypeFromString(eDataType, initialValue);
 			case FahrstrassePackage.BEZEICHNUNG_FSTR_DWEG_TYPE:
@@ -150,16 +162,20 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 				return createENUMAufloesungSspZielgleisObjectFromString(eDataType, initialValue);
 			case FahrstrassePackage.ENUM_AUTOMATISCHE_EINSTELLUNG_OBJECT:
 				return createENUMAutomatischeEinstellungObjectFromString(eDataType, initialValue);
-			case FahrstrassePackage.ENUM_FSTR_ART_OBJECT:
-				return createENUMFstrArtObjectFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_FSTR_MITTEL_ART_OBJECT:
+				return createENUMFstrMittelArtObjectFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_FSTR_RANGIER_ART_OBJECT:
+				return createENUMFstrRangierArtObjectFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_FSTR_ZUG_ART_OBJECT:
+				return createENUMFstrZugArtObjectFromString(eDataType, initialValue);
 			case FahrstrassePackage.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_OBJECT:
 				return createENUMRangierGegenfahrtausschlussObjectFromString(eDataType, initialValue);
+			case FahrstrassePackage.ENUM_START_SIGNAL_CHARAKTER_OBJECT:
+				return createENUMStartSignalCharakterObjectFromString(eDataType, initialValue);
 			case FahrstrassePackage.FSTR_ANEINANDER_BEDIENSTRING_TYPE:
 				return createFstr_Aneinander_Bedienstring_TypeFromString(eDataType, initialValue);
 			case FahrstrassePackage.FSTR_BEDIENSTRING_TYPE:
 				return createFstr_Bedienstring_TypeFromString(eDataType, initialValue);
-			case FahrstrassePackage.FSTR_BILDEZEIT_TYPE:
-				return createFstr_Bildezeit_TypeFromString(eDataType, initialValue);
 			case FahrstrassePackage.FSTR_REIHENFOLGE_TYPE:
 				return createFstr_Reihenfolge_TypeFromString(eDataType, initialValue);
 			case FahrstrassePackage.FSTR_VHG_TYPE:
@@ -187,10 +203,16 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 				return convertENUMAufloesungSspZielgleisToString(eDataType, instanceValue);
 			case FahrstrassePackage.ENUM_AUTOMATISCHE_EINSTELLUNG:
 				return convertENUMAutomatischeEinstellungToString(eDataType, instanceValue);
-			case FahrstrassePackage.ENUM_FSTR_ART:
-				return convertENUMFstrArtToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_FSTR_MITTEL_ART:
+				return convertENUMFstrMittelArtToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_FSTR_RANGIER_ART:
+				return convertENUMFstrRangierArtToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_FSTR_ZUG_ART:
+				return convertENUMFstrZugArtToString(eDataType, instanceValue);
 			case FahrstrassePackage.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS:
 				return convertENUMRangierGegenfahrtausschlussToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_START_SIGNAL_CHARAKTER:
+				return convertENUMStartSignalCharakterToString(eDataType, instanceValue);
 			case FahrstrassePackage.AUFLOESUNG_VERZOEGERUNG_TYPE:
 				return convertAufloesung_Verzoegerung_TypeToString(eDataType, instanceValue);
 			case FahrstrassePackage.BEZEICHNUNG_FSTR_DWEG_TYPE:
@@ -205,16 +227,20 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 				return convertENUMAufloesungSspZielgleisObjectToString(eDataType, instanceValue);
 			case FahrstrassePackage.ENUM_AUTOMATISCHE_EINSTELLUNG_OBJECT:
 				return convertENUMAutomatischeEinstellungObjectToString(eDataType, instanceValue);
-			case FahrstrassePackage.ENUM_FSTR_ART_OBJECT:
-				return convertENUMFstrArtObjectToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_FSTR_MITTEL_ART_OBJECT:
+				return convertENUMFstrMittelArtObjectToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_FSTR_RANGIER_ART_OBJECT:
+				return convertENUMFstrRangierArtObjectToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_FSTR_ZUG_ART_OBJECT:
+				return convertENUMFstrZugArtObjectToString(eDataType, instanceValue);
 			case FahrstrassePackage.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_OBJECT:
 				return convertENUMRangierGegenfahrtausschlussObjectToString(eDataType, instanceValue);
+			case FahrstrassePackage.ENUM_START_SIGNAL_CHARAKTER_OBJECT:
+				return convertENUMStartSignalCharakterObjectToString(eDataType, instanceValue);
 			case FahrstrassePackage.FSTR_ANEINANDER_BEDIENSTRING_TYPE:
 				return convertFstr_Aneinander_Bedienstring_TypeToString(eDataType, instanceValue);
 			case FahrstrassePackage.FSTR_BEDIENSTRING_TYPE:
 				return convertFstr_Bedienstring_TypeToString(eDataType, instanceValue);
-			case FahrstrassePackage.FSTR_BILDEZEIT_TYPE:
-				return convertFstr_Bildezeit_TypeToString(eDataType, instanceValue);
 			case FahrstrassePackage.FSTR_REIHENFOLGE_TYPE:
 				return convertFstr_Reihenfolge_TypeToString(eDataType, instanceValue);
 			case FahrstrassePackage.FSTR_VHG_TYPE:
@@ -236,9 +262,9 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * @generated
 	 */
 	@Override
-	public Aufloesung_Ssp_Zielgeis_TypeClass createAufloesung_Ssp_Zielgeis_TypeClass() {
-		Aufloesung_Ssp_Zielgeis_TypeClassImpl aufloesung_Ssp_Zielgeis_TypeClass = new Aufloesung_Ssp_Zielgeis_TypeClassImpl();
-		return aufloesung_Ssp_Zielgeis_TypeClass;
+	public Aufloesung_Ssp_Zielgleis_TypeClass createAufloesung_Ssp_Zielgleis_TypeClass() {
+		Aufloesung_Ssp_Zielgleis_TypeClassImpl aufloesung_Ssp_Zielgleis_TypeClass = new Aufloesung_Ssp_Zielgleis_TypeClassImpl();
+		return aufloesung_Ssp_Zielgleis_TypeClass;
 	}
 
 	/**
@@ -412,31 +438,9 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * @generated
 	 */
 	@Override
-	public Fstr_Art_TypeClass createFstr_Art_TypeClass() {
-		Fstr_Art_TypeClassImpl fstr_Art_TypeClass = new Fstr_Art_TypeClassImpl();
-		return fstr_Art_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Fstr_Bedienstring_TypeClass createFstr_Bedienstring_TypeClass() {
 		Fstr_Bedienstring_TypeClassImpl fstr_Bedienstring_TypeClass = new Fstr_Bedienstring_TypeClassImpl();
 		return fstr_Bedienstring_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Fstr_Bildezeit_TypeClass createFstr_Bildezeit_TypeClass() {
-		Fstr_Bildezeit_TypeClassImpl fstr_Bildezeit_TypeClass = new Fstr_Bildezeit_TypeClassImpl();
-		return fstr_Bildezeit_TypeClass;
 	}
 
 	/**
@@ -500,42 +504,20 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * @generated
 	 */
 	@Override
-	public Fstr_DWeg_W_Kr_Allg_AttributeGroup createFstr_DWeg_W_Kr_Allg_AttributeGroup() {
-		Fstr_DWeg_W_Kr_Allg_AttributeGroupImpl fstr_DWeg_W_Kr_Allg_AttributeGroup = new Fstr_DWeg_W_Kr_Allg_AttributeGroupImpl();
-		return fstr_DWeg_W_Kr_Allg_AttributeGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Fstr_DWeg_W_Kr_Allg_child_AttributeGroup createFstr_DWeg_W_Kr_Allg_child_AttributeGroup() {
-		Fstr_DWeg_W_Kr_Allg_child_AttributeGroupImpl fstr_DWeg_W_Kr_Allg_child_AttributeGroup = new Fstr_DWeg_W_Kr_Allg_child_AttributeGroupImpl();
-		return fstr_DWeg_W_Kr_Allg_child_AttributeGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Fstr_DWeg_W_Kr_TypeClass createFstr_DWeg_W_Kr_TypeClass() {
-		Fstr_DWeg_W_Kr_TypeClassImpl fstr_DWeg_W_Kr_TypeClass = new Fstr_DWeg_W_Kr_TypeClassImpl();
-		return fstr_DWeg_W_Kr_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Fstr_Fahrweg createFstr_Fahrweg() {
 		Fstr_FahrwegImpl fstr_Fahrweg = new Fstr_FahrwegImpl();
 		return fstr_Fahrweg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Fstr_Mittel_Art_TypeClass createFstr_Mittel_Art_TypeClass() {
+		Fstr_Mittel_Art_TypeClassImpl fstr_Mittel_Art_TypeClass = new Fstr_Mittel_Art_TypeClassImpl();
+		return fstr_Mittel_Art_TypeClass;
 	}
 
 	/**
@@ -569,6 +551,17 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	public Fstr_Nichthaltfall createFstr_Nichthaltfall() {
 		Fstr_NichthaltfallImpl fstr_Nichthaltfall = new Fstr_NichthaltfallImpl();
 		return fstr_Nichthaltfall;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Fstr_Rangier_Art_TypeClass createFstr_Rangier_Art_TypeClass() {
+		Fstr_Rangier_Art_TypeClassImpl fstr_Rangier_Art_TypeClass = new Fstr_Rangier_Art_TypeClassImpl();
+		return fstr_Rangier_Art_TypeClass;
 	}
 
 	/**
@@ -657,6 +650,17 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	public Fstr_Vsigabstand_Verkuerzt_TypeClass createFstr_Vsigabstand_Verkuerzt_TypeClass() {
 		Fstr_Vsigabstand_Verkuerzt_TypeClassImpl fstr_Vsigabstand_Verkuerzt_TypeClass = new Fstr_Vsigabstand_Verkuerzt_TypeClassImpl();
 		return fstr_Vsigabstand_Verkuerzt_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Fstr_Zug_Art_TypeClass createFstr_Zug_Art_TypeClass() {
+		Fstr_Zug_Art_TypeClassImpl fstr_Zug_Art_TypeClass = new Fstr_Zug_Art_TypeClassImpl();
+		return fstr_Zug_Art_TypeClass;
 	}
 
 	/**
@@ -774,6 +778,17 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public Start_Signal_Charakter_TypeClass createStart_Signal_Charakter_TypeClass() {
+		Start_Signal_Charakter_TypeClassImpl start_Signal_Charakter_TypeClass = new Start_Signal_Charakter_TypeClassImpl();
+		return start_Signal_Charakter_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMAufloesungSspZielgleis createENUMAufloesungSspZielgleisFromString(EDataType eDataType, String initialValue) {
 		ENUMAufloesungSspZielgleis result = ENUMAufloesungSspZielgleis.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -814,8 +829,8 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ENUMFstrArt createENUMFstrArtFromString(EDataType eDataType, String initialValue) {
-		ENUMFstrArt result = ENUMFstrArt.get(initialValue);
+	public ENUMFstrMittelArt createENUMFstrMittelArtFromString(EDataType eDataType, String initialValue) {
+		ENUMFstrMittelArt result = ENUMFstrMittelArt.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -825,7 +840,47 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertENUMFstrArtToString(EDataType eDataType, Object instanceValue) {
+	public String convertENUMFstrMittelArtToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMFstrRangierArt createENUMFstrRangierArtFromString(EDataType eDataType, String initialValue) {
+		ENUMFstrRangierArt result = ENUMFstrRangierArt.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFstrRangierArtToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMFstrZugArt createENUMFstrZugArtFromString(EDataType eDataType, String initialValue) {
+		ENUMFstrZugArt result = ENUMFstrZugArt.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFstrZugArtToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -846,6 +901,26 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * @generated
 	 */
 	public String convertENUMRangierGegenfahrtausschlussToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMStartSignalCharakter createENUMStartSignalCharakterFromString(EDataType eDataType, String initialValue) {
+		ENUMStartSignalCharakter result = ENUMStartSignalCharakter.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMStartSignalCharakterToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -980,8 +1055,8 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ENUMFstrArt createENUMFstrArtObjectFromString(EDataType eDataType, String initialValue) {
-		return createENUMFstrArtFromString(FahrstrassePackage.Literals.ENUM_FSTR_ART, initialValue);
+	public ENUMFstrMittelArt createENUMFstrMittelArtObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMFstrMittelArtFromString(FahrstrassePackage.Literals.ENUM_FSTR_MITTEL_ART, initialValue);
 	}
 
 	/**
@@ -989,8 +1064,44 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertENUMFstrArtObjectToString(EDataType eDataType, Object instanceValue) {
-		return convertENUMFstrArtToString(FahrstrassePackage.Literals.ENUM_FSTR_ART, instanceValue);
+	public String convertENUMFstrMittelArtObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMFstrMittelArtToString(FahrstrassePackage.Literals.ENUM_FSTR_MITTEL_ART, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMFstrRangierArt createENUMFstrRangierArtObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMFstrRangierArtFromString(FahrstrassePackage.Literals.ENUM_FSTR_RANGIER_ART, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFstrRangierArtObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMFstrRangierArtToString(FahrstrassePackage.Literals.ENUM_FSTR_RANGIER_ART, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMFstrZugArt createENUMFstrZugArtObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMFstrZugArtFromString(FahrstrassePackage.Literals.ENUM_FSTR_ZUG_ART, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMFstrZugArtObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMFstrZugArtToString(FahrstrassePackage.Literals.ENUM_FSTR_ZUG_ART, instanceValue);
 	}
 
 	/**
@@ -1009,6 +1120,24 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 */
 	public String convertENUMRangierGegenfahrtausschlussObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMRangierGegenfahrtausschlussToString(FahrstrassePackage.Literals.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMStartSignalCharakter createENUMStartSignalCharakterObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMStartSignalCharakterFromString(FahrstrassePackage.Literals.ENUM_START_SIGNAL_CHARAKTER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMStartSignalCharakterObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMStartSignalCharakterToString(FahrstrassePackage.Literals.ENUM_START_SIGNAL_CHARAKTER, instanceValue);
 	}
 
 	/**
@@ -1045,24 +1174,6 @@ public class FahrstrasseFactoryImpl extends EFactoryImpl implements FahrstrasseF
 	 */
 	public String convertFstr_Bedienstring_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BigDecimal createFstr_Bildezeit_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.SEKUNDE_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertFstr_Bildezeit_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.SEKUNDE_TYPE, instanceValue);
 	}
 
 	/**

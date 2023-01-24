@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.util;
 
@@ -361,6 +368,10 @@ public class BahnuebergangAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGleis_Am_Bue_TypeClass(Gleis_Am_Bue_TypeClass object) {
 				return createGleis_Am_Bue_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseHaltezeit_TypeClass(Haltezeit_TypeClass object) {
+				return createHaltezeit_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseHersteller_TypeClass(Hersteller_TypeClass object) {
@@ -1639,6 +1650,20 @@ public class BahnuebergangAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGleis_Am_Bue_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass <em>Haltezeit Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass
+	 * @generated
+	 */
+	public Adapter createHaltezeit_TypeClassAdapter() {
 		return null;
 	}
 

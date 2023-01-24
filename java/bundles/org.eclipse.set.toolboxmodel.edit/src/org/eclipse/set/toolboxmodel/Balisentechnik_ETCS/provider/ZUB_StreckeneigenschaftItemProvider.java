@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Streckeneigenschaft;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Bereich_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Streckeneigenschaft} object.
@@ -169,7 +170,7 @@ public class ZUB_StreckeneigenschaftItemProvider extends Bereich_ObjektItemProvi
 		newChildDescriptors.add
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Streckeneigenschaft_Metallteil(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createMetallteil_TypeClass()));
+				 Balisentechnik_ETCSFactory.eINSTANCE.createMetallteil_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter

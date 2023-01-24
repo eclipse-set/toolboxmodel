@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -15,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getEinschaltverzErrechnet <em>Einschaltverz Errechnet</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getEinschaltverzGewaehlt <em>Einschaltverz Gewaehlt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getHaltezeit <em>Haltezeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getKurzzugschaltung <em>Kurzzugschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getSignalverzErrechnet <em>Signalverz Errechnet</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getSignalverzGewaehlt <em>Signalverz Gewaehlt</em>}</li>
@@ -77,6 +85,32 @@ public interface BUE_Einschaltung_Hp_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setEinschaltverzGewaehlt(Einschaltverz_Gewaehlt_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Haltezeit</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Haltezeit der haltenden Züge am Haltepunkt in der Einschaltstrecke inklusive der Brems- und Anfahrbeschleunigung (tZH)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Haltezeit</em>' containment reference.
+	 * @see #setHaltezeit(Haltezeit_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage#getBUE_Einschaltung_Hp_AttributeGroup_Haltezeit()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Haltezeit'"
+	 * @generated
+	 */
+	Haltezeit_TypeClass getHaltezeit();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getHaltezeit <em>Haltezeit</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Haltezeit</em>' containment reference.
+	 * @see #getHaltezeit()
+	 * @generated
+	 */
+	void setHaltezeit(Haltezeit_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Kurzzugschaltung</b></em>' containment reference.

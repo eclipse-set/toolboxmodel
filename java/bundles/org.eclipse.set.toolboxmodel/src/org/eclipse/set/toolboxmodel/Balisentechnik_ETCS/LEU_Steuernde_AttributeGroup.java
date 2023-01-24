@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -84,13 +91,12 @@ public interface LEU_Steuernde_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Planerisch vergebene Nummer des genutzten LEU-Ausgangs für die Ansteuerung der Balisen des Datenpunkts. 
-	 * Bei Verwendung in Datenpunkt: Angabe des für diesen DP genutzen LEU-Ausgangs im Sinne einer Referenz. Mehrere Ausgänge werden bei DP mit mehreren gesteuerten Balisen benötigt.
-	 * Bei Verwendung in LEU_Anlage: Definition des LEU-Ausgangs für die entsprechendes LEU-Anlage. Die Port-Nr. muss in Bezug auf die LEU-Anlage eindeutig sein.
+	 * Bei Verwendung in Datenpunkt: Angabe des für diesen DP genutzen LEU-Ausgangs im Sinne einer Referenz. Mehrere Ausgänge werden bei DP mit mehreren gesteuerten Balisen benötigt. Die auf diesem Wege für eine LEU-Anlage definierten Port-Nummern müssen für die LEU-Anlage eindeutig sein. Das Attribut wird für den PT 1 ESG nicht genutzt.
 	 * Bei Verwendung in LEU_Modul: Zuordnung des LEU-Ausgangs zu einem LEU-Modul. Weiterhin wird dem LEU-Ausgang vom Hersteller eine Portnummer zugeordnet.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>LEU Ausgang Nr</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Steuernde_AttributeGroup_LEUAusgangNr()
-	 * @model containment="true" required="true" upper="16"
+	 * @model containment="true" upper="16"
 	 *        extendedMetaData="kind='element' name='LEU_Ausgang_Nr'"
 	 * @generated
 	 */

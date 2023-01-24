@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Bahnsteig/1.9.0.2">
+           xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Bahnsteig/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,11 +26,11 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
 	  <xs:complexType name="TCBahnsteig_Zugang_Art">
 		    <xs:complexContent>
@@ -113,6 +111,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -156,12 +155,12 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="ENUMBahnsteig_Zugang_Art">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="Aufzug"/>
-			      <xs:enumeration value="Bahnhofsgebäude"/>
-			      <xs:enumeration value="sonstige"/>
-			      <xs:enumeration value="Weg"/>
+			      <xs:enumeration value="Empfangsgebäude"/>
 			      <xs:enumeration value="Rampe"/>
+			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="Treppe"/>
-			      <xs:enumeration value="Resi"/>
+			      <xs:enumeration value="tResi"/>
+			      <xs:enumeration value="Weg"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:complexType name="CBahnsteig_Anlage_Bezeichnung">
@@ -178,10 +177,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:complexType name="CBahnsteig_Kante">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Parallel zum Gleis verlaufende Kante eines Bahnsteigs, die für den Fahrgastwechsel nutzbar ist. Für die LST-Planung sind Beginn und Ende der genutzten Bahnsteigkante z. B. für die Zugbeeinflussung (PZB 90) sowie die Festlegung von Signalstandorten und Gefahrpunkten maßgebend. Die Baulänge der Bahnsteigkante wird im Datenmodell durch die Länge des Bereichsobjekts Bahnsteig_Kante abgebildet. Eventuell daran anschließende Tiefbauobjekte (auch stillgelegte Bahnsteigbereiche) können als Ingenieurbauwerke (momentan noch nicht modelliert) abgebildet werden. DB-Regelwerk Darstellung einer Doppellinie im sicherungstechnischen Lageplan</xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Parallel zum Gleis verlaufende Kante eines Bahnsteigs, die für den Fahrgastwechsel nutzbar ist (Nettobaulänge). Für die LST-Planung sind Beginn und Ende z. B. für die Zugbeeinflussung (PZB 90) sowie die Festlegung von Signalstandorten und Gefahrpunkten maßgebend. Die Nettobaulänge der Bahnsteigkante wird im Datenmodell durch die Länge des Bereichsobjekts Bahnsteig_Kante abgebildet. Eventuell daran anschließende Tiefbauobjekte (auch stillgelegte Bahnsteigbereiche) können als Ingenieurbauwerke (Technischer_Bereich) abgebildet werden. DB-Regelwerk Darstellung einer Doppellinie im sicherungstechnischen Lageplan, Ril 413.0507</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -235,6 +235,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -273,6 +274,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>

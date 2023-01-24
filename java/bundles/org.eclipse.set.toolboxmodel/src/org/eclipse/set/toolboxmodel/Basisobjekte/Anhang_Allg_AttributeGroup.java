@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
@@ -16,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup#getAnhangArt <em>Anhang Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup#getDateiname <em>Dateiname</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup#getDateityp <em>Dateityp</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup#getDaten <em>Daten</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getAnhang_Allg_AttributeGroup()
@@ -101,31 +107,5 @@ public interface Anhang_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setDateityp(Dateityp_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Daten</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Im base64-Format codierter Inhalt der Ursprungsdatei des Anhangs.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Daten</em>' containment reference.
-	 * @see #setDaten(Daten_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getAnhang_Allg_AttributeGroup_Daten()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Daten'"
-	 * @generated
-	 */
-	Daten_TypeClass getDaten();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup#getDaten <em>Daten</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Daten</em>' containment reference.
-	 * @see #getDaten()
-	 * @generated
-	 */
-	void setDaten(Daten_TypeClass value);
 
 } // Anhang_Allg_AttributeGroup

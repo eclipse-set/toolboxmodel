@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.impl;
 
@@ -6,10 +13,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
 
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage_Allg_AttributeGroup;
@@ -30,6 +38,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_ObjektImpl;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_AnlageImpl#getBezeichnung <em>Bezeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_AnlageImpl#getBUEAnlageAllg <em>BUE Anlage Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_AnlageImpl#getIDAEABUEAnschaltung <em>IDAEABUE Anschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BUE_AnlageImpl#getIDBUESchnittstelle <em>IDBUE Schnittstelle</em>}</li>
  * </ul>
  *
@@ -55,6 +64,25 @@ public class BUE_AnlageImpl extends Punkt_ObjektImpl implements BUE_Anlage {
 	 * @ordered
 	 */
 	protected BUE_Anlage_Allg_AttributeGroup bUEAnlageAllg;
+
+	/**
+	 * The cached value of the '{@link #getIDAEABUEAnschaltung() <em>IDAEABUE Anschaltung</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDAEABUEAnschaltung()
+	 * @generated
+	 * @ordered
+	 */
+	protected Aussenelementansteuerung iDAEABUEAnschaltung;
+
+	/**
+	 * This is true if the IDAEABUE Anschaltung reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDAEABUEAnschaltungESet;
 
 	/**
 	 * The cached value of the '{@link #getIDBUESchnittstelle() <em>IDBUE Schnittstelle</em>}' reference.
@@ -190,6 +218,73 @@ public class BUE_AnlageImpl extends Punkt_ObjektImpl implements BUE_Anlage {
 	 * @generated
 	 */
 	@Override
+	public Aussenelementansteuerung getIDAEABUEAnschaltung() {
+		if (iDAEABUEAnschaltung != null && iDAEABUEAnschaltung.eIsProxy()) {
+			InternalEObject oldIDAEABUEAnschaltung = (InternalEObject)iDAEABUEAnschaltung;
+			iDAEABUEAnschaltung = (Aussenelementansteuerung)eResolveProxy(oldIDAEABUEAnschaltung);
+			if (iDAEABUEAnschaltung != oldIDAEABUEAnschaltung) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BahnuebergangPackage.BUE_ANLAGE__IDAEABUE_ANSCHALTUNG, oldIDAEABUEAnschaltung, iDAEABUEAnschaltung));
+			}
+		}
+		return iDAEABUEAnschaltung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Aussenelementansteuerung basicGetIDAEABUEAnschaltung() {
+		return iDAEABUEAnschaltung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDAEABUEAnschaltung(Aussenelementansteuerung newIDAEABUEAnschaltung) {
+		Aussenelementansteuerung oldIDAEABUEAnschaltung = iDAEABUEAnschaltung;
+		iDAEABUEAnschaltung = newIDAEABUEAnschaltung;
+		boolean oldIDAEABUEAnschaltungESet = iDAEABUEAnschaltungESet;
+		iDAEABUEAnschaltungESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BahnuebergangPackage.BUE_ANLAGE__IDAEABUE_ANSCHALTUNG, oldIDAEABUEAnschaltung, iDAEABUEAnschaltung, !oldIDAEABUEAnschaltungESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDAEABUEAnschaltung() {
+		Aussenelementansteuerung oldIDAEABUEAnschaltung = iDAEABUEAnschaltung;
+		boolean oldIDAEABUEAnschaltungESet = iDAEABUEAnschaltungESet;
+		iDAEABUEAnschaltung = null;
+		iDAEABUEAnschaltungESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, BahnuebergangPackage.BUE_ANLAGE__IDAEABUE_ANSCHALTUNG, oldIDAEABUEAnschaltung, null, oldIDAEABUEAnschaltungESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDAEABUEAnschaltung() {
+		return iDAEABUEAnschaltungESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public BUE_Schnittstelle getIDBUESchnittstelle() {
 		if (iDBUESchnittstelle != null && iDBUESchnittstelle.eIsProxy()) {
 			InternalEObject oldIDBUESchnittstelle = (InternalEObject)iDBUESchnittstelle;
@@ -280,6 +375,9 @@ public class BUE_AnlageImpl extends Punkt_ObjektImpl implements BUE_Anlage {
 				return getBezeichnung();
 			case BahnuebergangPackage.BUE_ANLAGE__BUE_ANLAGE_ALLG:
 				return getBUEAnlageAllg();
+			case BahnuebergangPackage.BUE_ANLAGE__IDAEABUE_ANSCHALTUNG:
+				if (resolve) return getIDAEABUEAnschaltung();
+				return basicGetIDAEABUEAnschaltung();
 			case BahnuebergangPackage.BUE_ANLAGE__IDBUE_SCHNITTSTELLE:
 				if (resolve) return getIDBUESchnittstelle();
 				return basicGetIDBUESchnittstelle();
@@ -301,6 +399,9 @@ public class BUE_AnlageImpl extends Punkt_ObjektImpl implements BUE_Anlage {
 				return;
 			case BahnuebergangPackage.BUE_ANLAGE__BUE_ANLAGE_ALLG:
 				setBUEAnlageAllg((BUE_Anlage_Allg_AttributeGroup)newValue);
+				return;
+			case BahnuebergangPackage.BUE_ANLAGE__IDAEABUE_ANSCHALTUNG:
+				setIDAEABUEAnschaltung((Aussenelementansteuerung)newValue);
 				return;
 			case BahnuebergangPackage.BUE_ANLAGE__IDBUE_SCHNITTSTELLE:
 				setIDBUESchnittstelle((BUE_Schnittstelle)newValue);
@@ -325,6 +426,9 @@ public class BUE_AnlageImpl extends Punkt_ObjektImpl implements BUE_Anlage {
 			case BahnuebergangPackage.BUE_ANLAGE__BUE_ANLAGE_ALLG:
 				setBUEAnlageAllg((BUE_Anlage_Allg_AttributeGroup)null);
 				return;
+			case BahnuebergangPackage.BUE_ANLAGE__IDAEABUE_ANSCHALTUNG:
+				unsetIDAEABUEAnschaltung();
+				return;
 			case BahnuebergangPackage.BUE_ANLAGE__IDBUE_SCHNITTSTELLE:
 				unsetIDBUESchnittstelle();
 				return;
@@ -346,6 +450,8 @@ public class BUE_AnlageImpl extends Punkt_ObjektImpl implements BUE_Anlage {
 				return bezeichnung != null;
 			case BahnuebergangPackage.BUE_ANLAGE__BUE_ANLAGE_ALLG:
 				return bUEAnlageAllg != null;
+			case BahnuebergangPackage.BUE_ANLAGE__IDAEABUE_ANSCHALTUNG:
+				return isSetIDAEABUEAnschaltung();
 			case BahnuebergangPackage.BUE_ANLAGE__IDBUE_SCHNITTSTELLE:
 				return isSetIDBUESchnittstelle();
 			default:

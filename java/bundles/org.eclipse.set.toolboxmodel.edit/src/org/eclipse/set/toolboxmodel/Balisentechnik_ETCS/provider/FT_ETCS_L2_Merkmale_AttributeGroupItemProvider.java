@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ETCS_L2_Merkmale_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ETCS_L2_Merkmale_AttributeGroup} object.
@@ -86,6 +87,10 @@ public class FT_ETCS_L2_Merkmale_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_FTETCSL2Typ());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCKennung());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCNIDC());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCSetzen());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCTimer());
 		}
 		return childrenFeatures;
 	}
@@ -139,6 +144,10 @@ public class FT_ETCS_L2_Merkmale_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(FT_ETCS_L2_Merkmale_AttributeGroup.class)) {
 			case Balisentechnik_ETCSPackage.FT_ETCS_L2_MERKMALE_ATTRIBUTE_GROUP__FTETCSL2_TYP:
+			case Balisentechnik_ETCSPackage.FT_ETCS_L2_MERKMALE_ATTRIBUTE_GROUP__VBC_KENNUNG:
+			case Balisentechnik_ETCSPackage.FT_ETCS_L2_MERKMALE_ATTRIBUTE_GROUP__VBCNIDC:
+			case Balisentechnik_ETCSPackage.FT_ETCS_L2_MERKMALE_ATTRIBUTE_GROUP__VBC_SETZEN:
+			case Balisentechnik_ETCSPackage.FT_ETCS_L2_MERKMALE_ATTRIBUTE_GROUP__VBC_TIMER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -162,6 +171,26 @@ public class FT_ETCS_L2_Merkmale_AttributeGroupItemProvider
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_FTETCSL2Typ(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createFT_ETCS_L2_Typ_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCKennung(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createVBC_Kennung_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCNIDC(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createVBC_NID_C_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCSetzen(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createVBC_Setzen_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ETCS_L2_Merkmale_AttributeGroup_VBCTimer(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createVBC_Timer_TypeClass()));
 	}
 
 	/**

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -22,6 +29,15 @@ public interface GeodatenFactory extends EFactory {
 	GeodatenFactory eINSTANCE = org.eclipse.set.toolboxmodel.Geodaten.impl.GeodatenFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Anzeigegefuehrt ES Kategorie Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Anzeigegefuehrt ES Kategorie Type Class</em>'.
+	 * @generated
+	 */
+	Anzeigegefuehrt_ES_Kategorie_TypeClass createAnzeigegefuehrt_ES_Kategorie_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Bezeichnung Strecke Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -31,6 +47,15 @@ public interface GeodatenFactory extends EFactory {
 	Bezeichnung_Strecke_TypeClass createBezeichnung_Strecke_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Bremsweg Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bremsweg Type Class</em>'.
+	 * @generated
+	 */
+	Bremsweg_TypeClass createBremsweg_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>GEO Form Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,6 +63,15 @@ public interface GeodatenFactory extends EFactory {
 	 * @generated
 	 */
 	GEO_Form_TypeClass createGEO_Form_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>GEO KAD Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GEO KAD Type Class</em>'.
+	 * @generated
+	 */
+	GEO_KAD_TypeClass createGEO_KAD_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>GEO Kante</em>'.
@@ -67,22 +101,13 @@ public interface GeodatenFactory extends EFactory {
 	GEO_Knoten createGEO_Knoten();
 
 	/**
-	 * Returns a new object of class '<em>GEO Koordinaten System LSys Type Class</em>'.
+	 * Returns a new object of class '<em>GEO Koordinatensystem Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GEO Koordinaten System LSys Type Class</em>'.
+	 * @return a new object of class '<em>GEO Koordinatensystem Type Class</em>'.
 	 * @generated
 	 */
-	GEO_KoordinatenSystem_LSys_TypeClass createGEO_KoordinatenSystem_LSys_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>GEO Koordinaten System Sonstige Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GEO Koordinaten System Sonstige Type Class</em>'.
-	 * @generated
-	 */
-	GEO_KoordinatenSystem_Sonstige_TypeClass createGEO_KoordinatenSystem_Sonstige_TypeClass();
+	GEO_Koordinatensystem_TypeClass createGEO_Koordinatensystem_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>GEO Laenge Type Class</em>'.
@@ -283,6 +308,15 @@ public interface GeodatenFactory extends EFactory {
 	HSystem_TypeClass createHSystem_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Kantenname Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kantenname Type Class</em>'.
+	 * @generated
+	 */
+	Kantenname_TypeClass createKantenname_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Knotenname Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -409,6 +443,15 @@ public interface GeodatenFactory extends EFactory {
 	Strecke_Bezeichnung_AttributeGroup createStrecke_Bezeichnung_AttributeGroup();
 
 	/**
+	 * Returns a new object of class '<em>Strecke Bremsweg</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Strecke Bremsweg</em>'.
+	 * @generated
+	 */
+	Strecke_Bremsweg createStrecke_Bremsweg();
+
+	/**
 	 * Returns a new object of class '<em>Strecke Meter Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -425,6 +468,15 @@ public interface GeodatenFactory extends EFactory {
 	 * @generated
 	 */
 	Strecke_Punkt createStrecke_Punkt();
+
+	/**
+	 * Returns a new object of class '<em>Strecke Richtung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Strecke Richtung Type Class</em>'.
+	 * @generated
+	 */
+	Strecke_Richtung_TypeClass createStrecke_Richtung_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>TB Art Type Class</em>'.
@@ -535,6 +587,15 @@ public interface GeodatenFactory extends EFactory {
 	TP_Beschreibung_TypeClass createTP_Beschreibung_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Trasse Kante child Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trasse Kante child Attribute Group</em>'.
+	 * @generated
+	 */
+	Trasse_Kante_child_AttributeGroup createTrasse_Kante_child_AttributeGroup();
+
+	/**
 	 * Returns a new object of class '<em>Ueberhoehung</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -614,15 +675,6 @@ public interface GeodatenFactory extends EFactory {
 	 * @generated
 	 */
 	V_Profil_Art_TypeClass createV_Profil_Art_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>Wirkrichtung Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wirkrichtung Type Class</em>'.
-	 * @generated
-	 */
-	Wirkrichtung_TypeClass createWirkrichtung_TypeClass();
 
 	/**
 	 * Returns the package supported by this factory.

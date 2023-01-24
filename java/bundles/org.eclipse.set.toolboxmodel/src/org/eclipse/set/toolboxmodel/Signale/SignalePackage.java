@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface SignalePackage extends EPackage {
 	int ANSCHALTDAUER_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface SignalePackage extends EPackage {
 	int AUTO_EINSTELLUNG_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface SignalePackage extends EPackage {
 	int BEFESTIGUNG_ART_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface SignalePackage extends EPackage {
 	int BELEUCHTET_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +760,7 @@ public interface SignalePackage extends EPackage {
 	int BESETZTE_AUSFAHRT_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -830,7 +806,7 @@ public interface SignalePackage extends EPackage {
 	int DA_MANUELL_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -876,7 +852,7 @@ public interface SignalePackage extends EPackage {
 	int DUNKELSCHALTUNG_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -922,7 +898,7 @@ public interface SignalePackage extends EPackage {
 	int DURCHFAHRT_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -968,7 +944,7 @@ public interface SignalePackage extends EPackage {
 	int FIKTIVES_SIGNAL_FUNKTION_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1004,6 +980,98 @@ public interface SignalePackage extends EPackage {
 	int FIKTIVES_SIGNAL_FUNKTION_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Fundament_Art_TypeClassImpl <em>Fundament Art Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.Fundament_Art_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getFundament_Art_TypeClass()
+	 * @generated
+	 */
+	int FUNDAMENT_ART_TYPE_CLASS = 9;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNDAMENT_ART_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNDAMENT_ART_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Fundament Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNDAMENT_ART_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Fundament Art Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNDAMENT_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Funktion_Ohne_Signal_TypeClassImpl <em>Funktion Ohne Signal Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.Funktion_Ohne_Signal_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getFunktion_Ohne_Signal_TypeClass()
+	 * @generated
+	 */
+	int FUNKTION_OHNE_SIGNAL_TYPE_CLASS = 10;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNKTION_OHNE_SIGNAL_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNKTION_OHNE_SIGNAL_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Funktion Ohne Signal Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNKTION_OHNE_SIGNAL_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Funktion Ohne Signal Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNKTION_OHNE_SIGNAL_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Gegengleis_TypeClassImpl <em>Gegengleis Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1011,10 +1079,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getGegengleis_TypeClass()
 	 * @generated
 	 */
-	int GEGENGLEIS_TYPE_CLASS = 9;
+	int GEGENGLEIS_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1057,10 +1125,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getGeltungsbereich_TypeClass()
 	 * @generated
 	 */
-	int GELTUNGSBEREICH_TYPE_CLASS = 10;
+	int GELTUNGSBEREICH_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1103,10 +1171,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getGeschaltet_TypeClass()
 	 * @generated
 	 */
-	int GESCHALTET_TYPE_CLASS = 11;
+	int GESCHALTET_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1149,10 +1217,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getHoehe_Fundamentoberkante_TypeClass()
 	 * @generated
 	 */
-	int HOEHE_FUNDAMENTOBERKANTE_TYPE_CLASS = 12;
+	int HOEHE_FUNDAMENTOBERKANTE_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1195,10 +1263,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getObere_Lichtpunkthoehe_TypeClass()
 	 * @generated
 	 */
-	int OBERE_LICHTPUNKTHOEHE_TYPE_CLASS = 13;
+	int OBERE_LICHTPUNKTHOEHE_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1241,10 +1309,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getPZB_Schutzstrecke_Soll_TypeClass()
 	 * @generated
 	 */
-	int PZB_SCHUTZSTRECKE_SOLL_TYPE_CLASS = 14;
+	int PZB_SCHUTZSTRECKE_SOLL_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1287,10 +1355,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRahmen_Art_TypeClass()
 	 * @generated
 	 */
-	int RAHMEN_ART_TYPE_CLASS = 15;
+	int RAHMEN_ART_TYPE_CLASS = 17;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1326,6 +1394,52 @@ public interface SignalePackage extends EPackage {
 	int RAHMEN_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Rahmen_Hoehe_TypeClassImpl <em>Rahmen Hoehe Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.Rahmen_Hoehe_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRahmen_Hoehe_TypeClass()
+	 * @generated
+	 */
+	int RAHMEN_HOEHE_TYPE_CLASS = 18;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAHMEN_HOEHE_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAHMEN_HOEHE_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Rahmen Hoehe Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAHMEN_HOEHE_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Rahmen Hoehe Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAHMEN_HOEHE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Rangierstrasse_Restaufloesung_TypeClassImpl <em>Rangierstrasse Restaufloesung Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1333,10 +1447,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRangierstrasse_Restaufloesung_TypeClass()
 	 * @generated
 	 */
-	int RANGIERSTRASSE_RESTAUFLOESUNG_TYPE_CLASS = 16;
+	int RANGIERSTRASSE_RESTAUFLOESUNG_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1379,10 +1493,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRichtpunkt_TypeClass()
 	 * @generated
 	 */
-	int RICHTPUNKT_TYPE_CLASS = 17;
+	int RICHTPUNKT_TYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1425,10 +1539,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRichtpunktentfernung_TypeClass()
 	 * @generated
 	 */
-	int RICHTPUNKTENTFERNUNG_TYPE_CLASS = 18;
+	int RICHTPUNKTENTFERNUNG_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1471,7 +1585,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal()
 	 * @generated
 	 */
-	int SIGNAL = 19;
+	int SIGNAL = 22;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1492,13 +1606,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SIGNAL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1616,10 +1739,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Art_TypeClass()
 	 * @generated
 	 */
-	int SIGNAL_ART_TYPE_CLASS = 20;
+	int SIGNAL_ART_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1662,7 +1785,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Befestigung()
 	 * @generated
 	 */
-	int SIGNAL_BEFESTIGUNG = 21;
+	int SIGNAL_BEFESTIGUNG = 24;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1683,13 +1806,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_BEFESTIGUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SIGNAL_BEFESTIGUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_BEFESTIGUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1728,13 +1860,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Regelzeichnung Vsig Tafel</b></em>' reference.
+	 * The feature id for the '<em><b>Signal Befestigung Allg</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 1;
+	int SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>ID Befestigung Bauwerk</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>ID Signal Befestigung</b></em>' reference.
@@ -1743,16 +1884,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Signal Befestigung Allg</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 3;
+	int SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Signal Befestigung</em>' class.
@@ -1780,7 +1912,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Befestigung_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP = 22;
+	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP = 25;
 
 	/**
 	 * The feature id for the '<em><b>Befestigung Art</b></em>' containment reference.
@@ -1792,13 +1924,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART = 0;
 
 	/**
+	 * The feature id for the '<em><b>Fundament Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART = 1;
+
+	/**
 	 * The feature id for the '<em><b>Hoehe Fundamentoberkante</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE = 1;
+	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Obere Lichtpunkthoehe</b></em>' containment reference.
@@ -1807,7 +1948,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE = 2;
+	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Signal Befestigung Allg Attribute Group</em>' class.
@@ -1816,7 +1957,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
+	int SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Signal Befestigung Allg Attribute Group</em>' class.
@@ -1835,10 +1976,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Befestigungsart_TypeClass()
 	 * @generated
 	 */
-	int SIGNAL_BEFESTIGUNGSART_TYPE_CLASS = 23;
+	int SIGNAL_BEFESTIGUNGSART_TYPE_CLASS = 26;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1881,7 +2022,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Fank_Zuordnung()
 	 * @generated
 	 */
-	int SIGNAL_FANK_ZUORDNUNG = 24;
+	int SIGNAL_FANK_ZUORDNUNG = 27;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1902,13 +2043,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_FANK_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SIGNAL_FANK_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_FANK_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1963,7 +2113,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Fiktiv_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_FIKTIV_ATTRIBUTE_GROUP = 25;
+	int SIGNAL_FIKTIV_ATTRIBUTE_GROUP = 28;
 
 	/**
 	 * The feature id for the '<em><b>Auto Einstellung</b></em>' containment reference.
@@ -2009,7 +2159,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Fstr_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_FSTR_ATTRIBUTE_GROUP = 26;
+	int SIGNAL_FSTR_ATTRIBUTE_GROUP = 29;
 
 	/**
 	 * The feature id for the '<em><b>Besetzte Ausfahrt</b></em>' containment reference.
@@ -2082,7 +2232,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Fstr_Aus_Inselgleis_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_FSTR_AUS_INSELGLEIS_ATTRIBUTE_GROUP = 27;
+	int SIGNAL_FSTR_AUS_INSELGLEIS_ATTRIBUTE_GROUP = 30;
 
 	/**
 	 * The feature id for the '<em><b>ID Ra Fahrt Gleichzeitig Verbot</b></em>' reference list.
@@ -2128,7 +2278,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Fstr_S_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_FSTR_SATTRIBUTE_GROUP = 28;
+	int SIGNAL_FSTR_SATTRIBUTE_GROUP = 31;
 
 	/**
 	 * The feature id for the '<em><b>Gegengleis</b></em>' containment reference.
@@ -2183,10 +2333,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Funktion_TypeClass()
 	 * @generated
 	 */
-	int SIGNAL_FUNKTION_TYPE_CLASS = 29;
+	int SIGNAL_FUNKTION_TYPE_CLASS = 32;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2229,7 +2379,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Rahmen()
 	 * @generated
 	 */
-	int SIGNAL_RAHMEN = 30;
+	int SIGNAL_RAHMEN = 33;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2250,13 +2400,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_RAHMEN__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SIGNAL_RAHMEN__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_RAHMEN__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2268,13 +2427,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_RAHMEN__OBJEKTREFERENZEN = BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN;
 
 	/**
+	 * The feature id for the '<em><b>ID Regelzeichnung</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_RAHMEN__ID_REGELZEICHNUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>ID Signal</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_RAHMEN__ID_SIGNAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
+	int SIGNAL_RAHMEN__ID_SIGNAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>ID Signal Befestigung</b></em>' reference.
@@ -2283,7 +2451,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_RAHMEN__ID_SIGNAL_BEFESTIGUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
+	int SIGNAL_RAHMEN__ID_SIGNAL_BEFESTIGUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>ID Signal Nachordnung</b></em>' reference.
@@ -2292,7 +2460,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_RAHMEN__ID_SIGNAL_NACHORDNUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+	int SIGNAL_RAHMEN__ID_SIGNAL_NACHORDNUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Rahmen Art</b></em>' containment reference.
@@ -2301,7 +2469,16 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_RAHMEN__RAHMEN_ART = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int SIGNAL_RAHMEN__RAHMEN_ART = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Rahmen Hoehe</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_RAHMEN__RAHMEN_HOEHE = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Signal Rahmen</em>' class.
@@ -2310,7 +2487,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_RAHMEN_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int SIGNAL_RAHMEN_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Signal Rahmen</em>' class.
@@ -2329,7 +2506,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Real_Aktiv_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP = 31;
+	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP = 34;
 
 	/**
 	 * The feature id for the '<em><b>Auto Einstellung</b></em>' containment reference.
@@ -2350,49 +2527,13 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__ID_STELLELEMENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Signal Funktion</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNAL_FUNKTION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Signalsicht Erreichbar</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR = 3;
-
-	/**
-	 * The feature id for the '<em><b>Signalsicht Mindest</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST = 4;
-
-	/**
-	 * The feature id for the '<em><b>Signalsicht Soll</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL = 5;
-
-	/**
 	 * The feature id for the '<em><b>Sonstige Zulaessige Anordnung</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SONSTIGE_ZULAESSIGE_ANORDNUNG = 6;
+	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SONSTIGE_ZULAESSIGE_ANORDNUNG = 2;
 
 	/**
 	 * The feature id for the '<em><b>Tunnelsignal</b></em>' containment reference.
@@ -2401,7 +2542,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__TUNNELSIGNAL = 7;
+	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__TUNNELSIGNAL = 3;
 
 	/**
 	 * The number of structural features of the '<em>Signal Real Aktiv Attribute Group</em>' class.
@@ -2410,7 +2551,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP_FEATURE_COUNT = 8;
+	int SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Signal Real Aktiv Attribute Group</em>' class.
@@ -2429,16 +2570,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Real_Aktiv_Schirm_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP = 32;
-
-	/**
-	 * The feature id for the '<em><b>Dunkelschaltung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG = 0;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP = 35;
 
 	/**
 	 * The feature id for the '<em><b>Richtpunkt</b></em>' containment reference.
@@ -2447,7 +2579,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT = 1;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Richtpunktentfernung</b></em>' containment reference.
@@ -2456,7 +2588,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG = 2;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG = 1;
 
 	/**
 	 * The feature id for the '<em><b>Signal Art</b></em>' containment reference.
@@ -2465,7 +2597,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__SIGNAL_ART = 3;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__SIGNAL_ART = 2;
 
 	/**
 	 * The feature id for the '<em><b>Signalsystem</b></em>' containment reference.
@@ -2474,7 +2606,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__SIGNALSYSTEM = 4;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__SIGNALSYSTEM = 3;
 
 	/**
 	 * The feature id for the '<em><b>Streuscheibe Art</b></em>' containment reference.
@@ -2483,7 +2615,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__STREUSCHEIBE_ART = 5;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__STREUSCHEIBE_ART = 4;
 
 	/**
 	 * The feature id for the '<em><b>Streuscheibe Betriebsstellung</b></em>' containment reference.
@@ -2492,7 +2624,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__STREUSCHEIBE_BETRIEBSSTELLUNG = 6;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__STREUSCHEIBE_BETRIEBSSTELLUNG = 5;
 
 	/**
 	 * The number of structural features of the '<em>Signal Real Aktiv Schirm Attribute Group</em>' class.
@@ -2501,7 +2633,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP_FEATURE_COUNT = 7;
+	int SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Signal Real Aktiv Schirm Attribute Group</em>' class.
@@ -2520,7 +2652,25 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Real_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_REAL_ATTRIBUTE_GROUP = 33;
+	int SIGNAL_REAL_ATTRIBUTE_GROUP = 36;
+
+	/**
+	 * The feature id for the '<em><b>Dunkelschaltung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__DUNKELSCHALTUNG = 0;
+
+	/**
+	 * The feature id for the '<em><b>Funktion Ohne Signal</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__FUNKTION_OHNE_SIGNAL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Geltungsbereich</b></em>' containment reference.
@@ -2529,7 +2679,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_ATTRIBUTE_GROUP__GELTUNGSBEREICH = 0;
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__GELTUNGSBEREICH = 2;
 
 	/**
 	 * The feature id for the '<em><b>Signal Befestigungsart</b></em>' containment reference.
@@ -2538,7 +2688,16 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNGSART = 1;
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNGSART = 3;
+
+	/**
+	 * The feature id for the '<em><b>Signal Funktion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_FUNKTION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Signal Real Aktiv</b></em>' containment reference.
@@ -2547,7 +2706,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV = 2;
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV = 5;
 
 	/**
 	 * The feature id for the '<em><b>Signal Real Aktiv Schirm</b></em>' containment reference.
@@ -2556,7 +2715,34 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV_SCHIRM = 3;
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV_SCHIRM = 6;
+
+	/**
+	 * The feature id for the '<em><b>Signalsicht Erreichbar</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR = 7;
+
+	/**
+	 * The feature id for the '<em><b>Signalsicht Mindest</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST = 8;
+
+	/**
+	 * The feature id for the '<em><b>Signalsicht Soll</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL = 9;
 
 	/**
 	 * The number of structural features of the '<em>Signal Real Attribute Group</em>' class.
@@ -2565,7 +2751,7 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_REAL_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
+	int SIGNAL_REAL_ATTRIBUTE_GROUP_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Signal Real Attribute Group</em>' class.
@@ -2584,7 +2770,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Signalbegriff()
 	 * @generated
 	 */
-	int SIGNAL_SIGNALBEGRIFF = 34;
+	int SIGNAL_SIGNALBEGRIFF = 37;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2605,13 +2791,22 @@ public interface SignalePackage extends EPackage {
 	int SIGNAL_SIGNALBEGRIFF__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SIGNAL_SIGNALBEGRIFF__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_SIGNALBEGRIFF__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2675,7 +2870,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignal_Signalbegriff_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int SIGNAL_SIGNALBEGRIFF_ALLG_ATTRIBUTE_GROUP = 35;
+	int SIGNAL_SIGNALBEGRIFF_ALLG_ATTRIBUTE_GROUP = 38;
 
 	/**
 	 * The feature id for the '<em><b>Anschaltdauer</b></em>' containment reference.
@@ -2739,10 +2934,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignalsicht_Erreichbar_TypeClass()
 	 * @generated
 	 */
-	int SIGNALSICHT_ERREICHBAR_TYPE_CLASS = 36;
+	int SIGNALSICHT_ERREICHBAR_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2785,10 +2980,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignalsicht_Mindest_TypeClass()
 	 * @generated
 	 */
-	int SIGNALSICHT_MINDEST_TYPE_CLASS = 37;
+	int SIGNALSICHT_MINDEST_TYPE_CLASS = 40;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2831,10 +3026,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignalsicht_Soll_TypeClass()
 	 * @generated
 	 */
-	int SIGNALSICHT_SOLL_TYPE_CLASS = 38;
+	int SIGNALSICHT_SOLL_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2877,10 +3072,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignalsystem_TypeClass()
 	 * @generated
 	 */
-	int SIGNALSYSTEM_TYPE_CLASS = 39;
+	int SIGNALSYSTEM_TYPE_CLASS = 42;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2923,10 +3118,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSonstige_Zulaessige_Anordnung_TypeClass()
 	 * @generated
 	 */
-	int SONSTIGE_ZULAESSIGE_ANORDNUNG_TYPE_CLASS = 40;
+	int SONSTIGE_ZULAESSIGE_ANORDNUNG_TYPE_CLASS = 43;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2969,10 +3164,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getStreuscheibe_Art_TypeClass()
 	 * @generated
 	 */
-	int STREUSCHEIBE_ART_TYPE_CLASS = 41;
+	int STREUSCHEIBE_ART_TYPE_CLASS = 44;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3015,10 +3210,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getStreuscheibe_Betriebsstellung_TypeClass()
 	 * @generated
 	 */
-	int STREUSCHEIBE_BETRIEBSSTELLUNG_TYPE_CLASS = 42;
+	int STREUSCHEIBE_BETRIEBSSTELLUNG_TYPE_CLASS = 45;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3061,10 +3256,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getTunnelsignal_TypeClass()
 	 * @generated
 	 */
-	int TUNNELSIGNAL_TYPE_CLASS = 43;
+	int TUNNELSIGNAL_TYPE_CLASS = 46;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3107,10 +3302,10 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getZs2_Ueberwacht_TypeClass()
 	 * @generated
 	 */
-	int ZS2_UEBERWACHT_TYPE_CLASS = 44;
+	int ZS2_UEBERWACHT_TYPE_CLASS = 47;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3153,7 +3348,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMAnschaltdauer()
 	 * @generated
 	 */
-	int ENUM_ANSCHALTDAUER = 45;
+	int ENUM_ANSCHALTDAUER = 48;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMAutoEinstellung <em>ENUM Auto Einstellung</em>}' enum.
@@ -3163,7 +3358,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMAutoEinstellung()
 	 * @generated
 	 */
-	int ENUM_AUTO_EINSTELLUNG = 46;
+	int ENUM_AUTO_EINSTELLUNG = 49;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMBefestigungArt <em>ENUM Befestigung Art</em>}' enum.
@@ -3173,7 +3368,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMBefestigungArt()
 	 * @generated
 	 */
-	int ENUM_BEFESTIGUNG_ART = 47;
+	int ENUM_BEFESTIGUNG_ART = 50;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMBeleuchtet <em>ENUM Beleuchtet</em>}' enum.
@@ -3183,7 +3378,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMBeleuchtet()
 	 * @generated
 	 */
-	int ENUM_BELEUCHTET = 48;
+	int ENUM_BELEUCHTET = 51;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMDurchfahrt <em>ENUM Durchfahrt</em>}' enum.
@@ -3193,7 +3388,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMDurchfahrt()
 	 * @generated
 	 */
-	int ENUM_DURCHFAHRT = 49;
+	int ENUM_DURCHFAHRT = 52;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFiktivesSignalFunktion <em>ENUM Fiktives Signal Funktion</em>}' enum.
@@ -3203,7 +3398,27 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFiktivesSignalFunktion()
 	 * @generated
 	 */
-	int ENUM_FIKTIVES_SIGNAL_FUNKTION = 50;
+	int ENUM_FIKTIVES_SIGNAL_FUNKTION = 53;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt <em>ENUM Fundament Art</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFundamentArt()
+	 * @generated
+	 */
+	int ENUM_FUNDAMENT_ART = 54;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal <em>ENUM Funktion Ohne Signal</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFunktionOhneSignal()
+	 * @generated
+	 */
+	int ENUM_FUNKTION_OHNE_SIGNAL = 55;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMGeltungsbereich <em>ENUM Geltungsbereich</em>}' enum.
@@ -3213,7 +3428,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMGeltungsbereich()
 	 * @generated
 	 */
-	int ENUM_GELTUNGSBEREICH = 51;
+	int ENUM_GELTUNGSBEREICH = 56;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMRahmenArt <em>ENUM Rahmen Art</em>}' enum.
@@ -3223,7 +3438,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMRahmenArt()
 	 * @generated
 	 */
-	int ENUM_RAHMEN_ART = 52;
+	int ENUM_RAHMEN_ART = 57;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMSignalArt <em>ENUM Signal Art</em>}' enum.
@@ -3233,7 +3448,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalArt()
 	 * @generated
 	 */
-	int ENUM_SIGNAL_ART = 53;
+	int ENUM_SIGNAL_ART = 58;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMSignalBefestigungsart <em>ENUM Signal Befestigungsart</em>}' enum.
@@ -3243,7 +3458,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalBefestigungsart()
 	 * @generated
 	 */
-	int ENUM_SIGNAL_BEFESTIGUNGSART = 54;
+	int ENUM_SIGNAL_BEFESTIGUNGSART = 59;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMSignalFunktion <em>ENUM Signal Funktion</em>}' enum.
@@ -3253,7 +3468,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalFunktion()
 	 * @generated
 	 */
-	int ENUM_SIGNAL_FUNKTION = 55;
+	int ENUM_SIGNAL_FUNKTION = 60;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMSignalsystem <em>ENUM Signalsystem</em>}' enum.
@@ -3263,7 +3478,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalsystem()
 	 * @generated
 	 */
-	int ENUM_SIGNALSYSTEM = 56;
+	int ENUM_SIGNALSYSTEM = 61;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMSonstigeZulaessigeAnordnung <em>ENUM Sonstige Zulaessige Anordnung</em>}' enum.
@@ -3273,7 +3488,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSonstigeZulaessigeAnordnung()
 	 * @generated
 	 */
-	int ENUM_SONSTIGE_ZULAESSIGE_ANORDNUNG = 57;
+	int ENUM_SONSTIGE_ZULAESSIGE_ANORDNUNG = 62;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMStreuscheibeArt <em>ENUM Streuscheibe Art</em>}' enum.
@@ -3283,7 +3498,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMStreuscheibeArt()
 	 * @generated
 	 */
-	int ENUM_STREUSCHEIBE_ART = 58;
+	int ENUM_STREUSCHEIBE_ART = 63;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMStreuscheibeBetriebsstellung <em>ENUM Streuscheibe Betriebsstellung</em>}' enum.
@@ -3293,7 +3508,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMStreuscheibeBetriebsstellung()
 	 * @generated
 	 */
-	int ENUM_STREUSCHEIBE_BETRIEBSSTELLUNG = 59;
+	int ENUM_STREUSCHEIBE_BETRIEBSSTELLUNG = 64;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMTunnelsignal <em>ENUM Tunnelsignal</em>}' enum.
@@ -3303,7 +3518,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMTunnelsignal()
 	 * @generated
 	 */
-	int ENUM_TUNNELSIGNAL = 60;
+	int ENUM_TUNNELSIGNAL = 65;
 
 	/**
 	 * The meta object id for the '<em>ENUM Anschaltdauer Object</em>' data type.
@@ -3313,7 +3528,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMAnschaltdauerObject()
 	 * @generated
 	 */
-	int ENUM_ANSCHALTDAUER_OBJECT = 61;
+	int ENUM_ANSCHALTDAUER_OBJECT = 66;
 
 	/**
 	 * The meta object id for the '<em>ENUM Auto Einstellung Object</em>' data type.
@@ -3323,7 +3538,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMAutoEinstellungObject()
 	 * @generated
 	 */
-	int ENUM_AUTO_EINSTELLUNG_OBJECT = 62;
+	int ENUM_AUTO_EINSTELLUNG_OBJECT = 67;
 
 	/**
 	 * The meta object id for the '<em>ENUM Befestigung Art Object</em>' data type.
@@ -3333,7 +3548,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMBefestigungArtObject()
 	 * @generated
 	 */
-	int ENUM_BEFESTIGUNG_ART_OBJECT = 63;
+	int ENUM_BEFESTIGUNG_ART_OBJECT = 68;
 
 	/**
 	 * The meta object id for the '<em>ENUM Beleuchtet Object</em>' data type.
@@ -3343,7 +3558,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMBeleuchtetObject()
 	 * @generated
 	 */
-	int ENUM_BELEUCHTET_OBJECT = 64;
+	int ENUM_BELEUCHTET_OBJECT = 69;
 
 	/**
 	 * The meta object id for the '<em>ENUM Durchfahrt Object</em>' data type.
@@ -3353,7 +3568,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMDurchfahrtObject()
 	 * @generated
 	 */
-	int ENUM_DURCHFAHRT_OBJECT = 65;
+	int ENUM_DURCHFAHRT_OBJECT = 70;
 
 	/**
 	 * The meta object id for the '<em>ENUM Fiktives Signal Funktion Object</em>' data type.
@@ -3363,7 +3578,27 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFiktivesSignalFunktionObject()
 	 * @generated
 	 */
-	int ENUM_FIKTIVES_SIGNAL_FUNKTION_OBJECT = 66;
+	int ENUM_FIKTIVES_SIGNAL_FUNKTION_OBJECT = 71;
+
+	/**
+	 * The meta object id for the '<em>ENUM Fundament Art Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFundamentArtObject()
+	 * @generated
+	 */
+	int ENUM_FUNDAMENT_ART_OBJECT = 72;
+
+	/**
+	 * The meta object id for the '<em>ENUM Funktion Ohne Signal Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFunktionOhneSignalObject()
+	 * @generated
+	 */
+	int ENUM_FUNKTION_OHNE_SIGNAL_OBJECT = 73;
 
 	/**
 	 * The meta object id for the '<em>ENUM Geltungsbereich Object</em>' data type.
@@ -3373,7 +3608,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMGeltungsbereichObject()
 	 * @generated
 	 */
-	int ENUM_GELTUNGSBEREICH_OBJECT = 67;
+	int ENUM_GELTUNGSBEREICH_OBJECT = 74;
 
 	/**
 	 * The meta object id for the '<em>ENUM Rahmen Art Object</em>' data type.
@@ -3383,7 +3618,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMRahmenArtObject()
 	 * @generated
 	 */
-	int ENUM_RAHMEN_ART_OBJECT = 68;
+	int ENUM_RAHMEN_ART_OBJECT = 75;
 
 	/**
 	 * The meta object id for the '<em>ENUM Signal Art Object</em>' data type.
@@ -3393,7 +3628,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalArtObject()
 	 * @generated
 	 */
-	int ENUM_SIGNAL_ART_OBJECT = 69;
+	int ENUM_SIGNAL_ART_OBJECT = 76;
 
 	/**
 	 * The meta object id for the '<em>ENUM Signal Befestigungsart Object</em>' data type.
@@ -3403,7 +3638,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalBefestigungsartObject()
 	 * @generated
 	 */
-	int ENUM_SIGNAL_BEFESTIGUNGSART_OBJECT = 70;
+	int ENUM_SIGNAL_BEFESTIGUNGSART_OBJECT = 77;
 
 	/**
 	 * The meta object id for the '<em>ENUM Signal Funktion Object</em>' data type.
@@ -3413,7 +3648,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalFunktionObject()
 	 * @generated
 	 */
-	int ENUM_SIGNAL_FUNKTION_OBJECT = 71;
+	int ENUM_SIGNAL_FUNKTION_OBJECT = 78;
 
 	/**
 	 * The meta object id for the '<em>ENUM Signalsystem Object</em>' data type.
@@ -3423,7 +3658,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSignalsystemObject()
 	 * @generated
 	 */
-	int ENUM_SIGNALSYSTEM_OBJECT = 72;
+	int ENUM_SIGNALSYSTEM_OBJECT = 79;
 
 	/**
 	 * The meta object id for the '<em>ENUM Sonstige Zulaessige Anordnung Object</em>' data type.
@@ -3433,7 +3668,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMSonstigeZulaessigeAnordnungObject()
 	 * @generated
 	 */
-	int ENUM_SONSTIGE_ZULAESSIGE_ANORDNUNG_OBJECT = 73;
+	int ENUM_SONSTIGE_ZULAESSIGE_ANORDNUNG_OBJECT = 80;
 
 	/**
 	 * The meta object id for the '<em>ENUM Streuscheibe Art Object</em>' data type.
@@ -3443,7 +3678,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMStreuscheibeArtObject()
 	 * @generated
 	 */
-	int ENUM_STREUSCHEIBE_ART_OBJECT = 74;
+	int ENUM_STREUSCHEIBE_ART_OBJECT = 81;
 
 	/**
 	 * The meta object id for the '<em>ENUM Streuscheibe Betriebsstellung Object</em>' data type.
@@ -3453,7 +3688,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMStreuscheibeBetriebsstellungObject()
 	 * @generated
 	 */
-	int ENUM_STREUSCHEIBE_BETRIEBSSTELLUNG_OBJECT = 75;
+	int ENUM_STREUSCHEIBE_BETRIEBSSTELLUNG_OBJECT = 82;
 
 	/**
 	 * The meta object id for the '<em>ENUM Tunnelsignal Object</em>' data type.
@@ -3463,7 +3698,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMTunnelsignalObject()
 	 * @generated
 	 */
-	int ENUM_TUNNELSIGNAL_OBJECT = 76;
+	int ENUM_TUNNELSIGNAL_OBJECT = 83;
 
 	/**
 	 * The meta object id for the '<em>Hoehe Fundamentoberkante Type</em>' data type.
@@ -3473,7 +3708,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getHoehe_Fundamentoberkante_Type()
 	 * @generated
 	 */
-	int HOEHE_FUNDAMENTOBERKANTE_TYPE = 77;
+	int HOEHE_FUNDAMENTOBERKANTE_TYPE = 84;
 
 	/**
 	 * The meta object id for the '<em>Obere Lichtpunkthoehe Type</em>' data type.
@@ -3483,7 +3718,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getObere_Lichtpunkthoehe_Type()
 	 * @generated
 	 */
-	int OBERE_LICHTPUNKTHOEHE_TYPE = 78;
+	int OBERE_LICHTPUNKTHOEHE_TYPE = 85;
 
 	/**
 	 * The meta object id for the '<em>PZB Schutzstrecke Soll Type</em>' data type.
@@ -3493,7 +3728,17 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getPZB_Schutzstrecke_Soll_Type()
 	 * @generated
 	 */
-	int PZB_SCHUTZSTRECKE_SOLL_TYPE = 79;
+	int PZB_SCHUTZSTRECKE_SOLL_TYPE = 86;
+
+	/**
+	 * The meta object id for the '<em>Rahmen Hoehe Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.math.BigDecimal
+	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRahmen_Hoehe_Type()
+	 * @generated
+	 */
+	int RAHMEN_HOEHE_TYPE = 87;
 
 	/**
 	 * The meta object id for the '<em>Richtpunkt Type</em>' data type.
@@ -3503,7 +3748,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRichtpunkt_Type()
 	 * @generated
 	 */
-	int RICHTPUNKT_TYPE = 80;
+	int RICHTPUNKT_TYPE = 88;
 
 	/**
 	 * The meta object id for the '<em>Richtpunktentfernung Type</em>' data type.
@@ -3513,7 +3758,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRichtpunktentfernung_Type()
 	 * @generated
 	 */
-	int RICHTPUNKTENTFERNUNG_TYPE = 81;
+	int RICHTPUNKTENTFERNUNG_TYPE = 89;
 
 	/**
 	 * The meta object id for the '<em>Signalsicht Erreichbar Type</em>' data type.
@@ -3523,7 +3768,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignalsicht_Erreichbar_Type()
 	 * @generated
 	 */
-	int SIGNALSICHT_ERREICHBAR_TYPE = 82;
+	int SIGNALSICHT_ERREICHBAR_TYPE = 90;
 
 	/**
 	 * The meta object id for the '<em>Signalsicht Mindest Type</em>' data type.
@@ -3533,7 +3778,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignalsicht_Mindest_Type()
 	 * @generated
 	 */
-	int SIGNALSICHT_MINDEST_TYPE = 83;
+	int SIGNALSICHT_MINDEST_TYPE = 91;
 
 	/**
 	 * The meta object id for the '<em>Signalsicht Soll Type</em>' data type.
@@ -3543,7 +3788,7 @@ public interface SignalePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getSignalsicht_Soll_Type()
 	 * @generated
 	 */
-	int SIGNALSICHT_SOLL_TYPE = 84;
+	int SIGNALSICHT_SOLL_TYPE = 92;
 
 
 	/**
@@ -3736,6 +3981,48 @@ public interface SignalePackage extends EPackage {
 	EAttribute getFiktives_Signal_Funktion_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass <em>Fundament Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fundament Art Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass
+	 * @generated
+	 */
+	EClass getFundament_Art_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass#getWert()
+	 * @see #getFundament_Art_TypeClass()
+	 * @generated
+	 */
+	EAttribute getFundament_Art_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass <em>Funktion Ohne Signal Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Funktion Ohne Signal Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass
+	 * @generated
+	 */
+	EClass getFunktion_Ohne_Signal_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass#getWert()
+	 * @see #getFunktion_Ohne_Signal_TypeClass()
+	 * @generated
+	 */
+	EAttribute getFunktion_Ohne_Signal_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Gegengleis_TypeClass <em>Gegengleis Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3881,6 +4168,27 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRahmen_Art_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass <em>Rahmen Hoehe Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rahmen Hoehe Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass
+	 * @generated
+	 */
+	EClass getRahmen_Hoehe_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass#getWert()
+	 * @see #getRahmen_Hoehe_TypeClass()
+	 * @generated
+	 */
+	EAttribute getRahmen_Hoehe_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Rangierstrasse_Restaufloesung_TypeClass <em>Rangierstrasse Restaufloesung Type Class</em>}'.
@@ -4075,15 +4383,26 @@ public interface SignalePackage extends EPackage {
 	EReference getSignal_Befestigung_IDRegelzeichnung();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDRegelzeichnungVsigTafel <em>ID Regelzeichnung Vsig Tafel</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getSignalBefestigungAllg <em>Signal Befestigung Allg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>ID Regelzeichnung Vsig Tafel</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDRegelzeichnungVsigTafel()
+	 * @return the meta object for the containment reference '<em>Signal Befestigung Allg</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getSignalBefestigungAllg()
 	 * @see #getSignal_Befestigung()
 	 * @generated
 	 */
-	EReference getSignal_Befestigung_IDRegelzeichnungVsigTafel();
+	EReference getSignal_Befestigung_SignalBefestigungAllg();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDBefestigungBauwerk <em>ID Befestigung Bauwerk</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Befestigung Bauwerk</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDBefestigungBauwerk()
+	 * @see #getSignal_Befestigung()
+	 * @generated
+	 */
+	EReference getSignal_Befestigung_IDBefestigungBauwerk();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDSignalBefestigung <em>ID Signal Befestigung</em>}'.
@@ -4095,17 +4414,6 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSignal_Befestigung_IDSignalBefestigung();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getSignalBefestigungAllg <em>Signal Befestigung Allg</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Signal Befestigung Allg</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getSignalBefestigungAllg()
-	 * @see #getSignal_Befestigung()
-	 * @generated
-	 */
-	EReference getSignal_Befestigung_SignalBefestigungAllg();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup <em>Signal Befestigung Allg Attribute Group</em>}'.
@@ -4127,6 +4435,17 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSignal_Befestigung_Allg_AttributeGroup_BefestigungArt();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getFundamentArt <em>Fundament Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fundament Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getFundamentArt()
+	 * @see #getSignal_Befestigung_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSignal_Befestigung_Allg_AttributeGroup_FundamentArt();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup#getHoeheFundamentoberkante <em>Hoehe Fundamentoberkante</em>}'.
@@ -4407,6 +4726,17 @@ public interface SignalePackage extends EPackage {
 	EClass getSignal_Rahmen();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDRegelzeichnung <em>ID Regelzeichnung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Regelzeichnung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDRegelzeichnung()
+	 * @see #getSignal_Rahmen()
+	 * @generated
+	 */
+	EReference getSignal_Rahmen_IDRegelzeichnung();
+
+	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDSignal <em>ID Signal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4451,6 +4781,17 @@ public interface SignalePackage extends EPackage {
 	EReference getSignal_Rahmen_RahmenArt();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getRahmenHoehe <em>Rahmen Hoehe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Rahmen Hoehe</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getRahmenHoehe()
+	 * @see #getSignal_Rahmen()
+	 * @generated
+	 */
+	EReference getSignal_Rahmen_RahmenHoehe();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup <em>Signal Real Aktiv Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4483,50 +4824,6 @@ public interface SignalePackage extends EPackage {
 	EReference getSignal_Real_Aktiv_AttributeGroup_IDStellelement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalFunktion <em>Signal Funktion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Signal Funktion</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalFunktion()
-	 * @see #getSignal_Real_Aktiv_AttributeGroup()
-	 * @generated
-	 */
-	EReference getSignal_Real_Aktiv_AttributeGroup_SignalFunktion();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalsichtErreichbar <em>Signalsicht Erreichbar</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Signalsicht Erreichbar</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalsichtErreichbar()
-	 * @see #getSignal_Real_Aktiv_AttributeGroup()
-	 * @generated
-	 */
-	EReference getSignal_Real_Aktiv_AttributeGroup_SignalsichtErreichbar();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalsichtMindest <em>Signalsicht Mindest</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Signalsicht Mindest</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalsichtMindest()
-	 * @see #getSignal_Real_Aktiv_AttributeGroup()
-	 * @generated
-	 */
-	EReference getSignal_Real_Aktiv_AttributeGroup_SignalsichtMindest();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalsichtSoll <em>Signalsicht Soll</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Signalsicht Soll</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSignalsichtSoll()
-	 * @see #getSignal_Real_Aktiv_AttributeGroup()
-	 * @generated
-	 */
-	EReference getSignal_Real_Aktiv_AttributeGroup_SignalsichtSoll();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_AttributeGroup#getSonstigeZulaessigeAnordnung <em>Sonstige Zulaessige Anordnung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4557,17 +4854,6 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSignal_Real_Aktiv_Schirm_AttributeGroup();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getDunkelschaltung <em>Dunkelschaltung</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Dunkelschaltung</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getDunkelschaltung()
-	 * @see #getSignal_Real_Aktiv_Schirm_AttributeGroup()
-	 * @generated
-	 */
-	EReference getSignal_Real_Aktiv_Schirm_AttributeGroup_Dunkelschaltung();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_Aktiv_Schirm_AttributeGroup#getRichtpunkt <em>Richtpunkt</em>}'.
@@ -4646,6 +4932,28 @@ public interface SignalePackage extends EPackage {
 	EClass getSignal_Real_AttributeGroup();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getDunkelschaltung <em>Dunkelschaltung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Dunkelschaltung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getDunkelschaltung()
+	 * @see #getSignal_Real_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSignal_Real_AttributeGroup_Dunkelschaltung();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getFunktionOhneSignal <em>Funktion Ohne Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Funktion Ohne Signal</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getFunktionOhneSignal()
+	 * @see #getSignal_Real_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSignal_Real_AttributeGroup_FunktionOhneSignal();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getGeltungsbereich <em>Geltungsbereich</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4668,6 +4976,17 @@ public interface SignalePackage extends EPackage {
 	EReference getSignal_Real_AttributeGroup_SignalBefestigungsart();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalFunktion <em>Signal Funktion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Signal Funktion</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalFunktion()
+	 * @see #getSignal_Real_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSignal_Real_AttributeGroup_SignalFunktion();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalRealAktiv <em>Signal Real Aktiv</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4688,6 +5007,39 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSignal_Real_AttributeGroup_SignalRealAktivSchirm();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalsichtErreichbar <em>Signalsicht Erreichbar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Signalsicht Erreichbar</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalsichtErreichbar()
+	 * @see #getSignal_Real_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSignal_Real_AttributeGroup_SignalsichtErreichbar();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalsichtMindest <em>Signalsicht Mindest</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Signalsicht Mindest</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalsichtMindest()
+	 * @see #getSignal_Real_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSignal_Real_AttributeGroup_SignalsichtMindest();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalsichtSoll <em>Signalsicht Soll</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Signalsicht Soll</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup#getSignalsichtSoll()
+	 * @see #getSignal_Real_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSignal_Real_AttributeGroup_SignalsichtSoll();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Signalbegriff <em>Signal Signalbegriff</em>}'.
@@ -5036,6 +5388,26 @@ public interface SignalePackage extends EPackage {
 	EEnum getENUMFiktivesSignalFunktion();
 
 	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt <em>ENUM Fundament Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Fundament Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt
+	 * @generated
+	 */
+	EEnum getENUMFundamentArt();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal <em>ENUM Funktion Ohne Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Funktion Ohne Signal</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal
+	 * @generated
+	 */
+	EEnum getENUMFunktionOhneSignal();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Signale.ENUMGeltungsbereich <em>ENUM Geltungsbereich</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5208,6 +5580,30 @@ public interface SignalePackage extends EPackage {
 	EDataType getENUMFiktivesSignalFunktionObject();
 
 	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt <em>ENUM Fundament Art Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Fundament Art Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt"
+	 *        extendedMetaData="name='ENUMFundament_Art:Object' baseType='ENUMFundament_Art'"
+	 * @generated
+	 */
+	EDataType getENUMFundamentArtObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal <em>ENUM Funktion Ohne Signal Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Funktion Ohne Signal Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal"
+	 *        extendedMetaData="name='ENUMFunktion_Ohne_Signal:Object' baseType='ENUMFunktion_Ohne_Signal'"
+	 * @generated
+	 */
+	EDataType getENUMFunktionOhneSignalObject();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Signale.ENUMGeltungsbereich <em>ENUM Geltungsbereich Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5362,6 +5758,18 @@ public interface SignalePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getPZB_Schutzstrecke_Soll_Type();
+
+	/**
+	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>Rahmen Hoehe Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Rahmen Hoehe Type</em>'.
+	 * @see java.math.BigDecimal
+	 * @model instanceClass="java.math.BigDecimal"
+	 *        extendedMetaData="name='TRahmen_Hoehe' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TMeter'"
+	 * @generated
+	 */
+	EDataType getRahmen_Hoehe_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Richtpunkt Type</em>}'.
@@ -5609,6 +6017,42 @@ public interface SignalePackage extends EPackage {
 		EAttribute FIKTIVES_SIGNAL_FUNKTION_TYPE_CLASS__WERT = eINSTANCE.getFiktives_Signal_Funktion_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Fundament_Art_TypeClassImpl <em>Fundament Art Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.Fundament_Art_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getFundament_Art_TypeClass()
+		 * @generated
+		 */
+		EClass FUNDAMENT_ART_TYPE_CLASS = eINSTANCE.getFundament_Art_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNDAMENT_ART_TYPE_CLASS__WERT = eINSTANCE.getFundament_Art_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Funktion_Ohne_Signal_TypeClassImpl <em>Funktion Ohne Signal Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.Funktion_Ohne_Signal_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getFunktion_Ohne_Signal_TypeClass()
+		 * @generated
+		 */
+		EClass FUNKTION_OHNE_SIGNAL_TYPE_CLASS = eINSTANCE.getFunktion_Ohne_Signal_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNKTION_OHNE_SIGNAL_TYPE_CLASS__WERT = eINSTANCE.getFunktion_Ohne_Signal_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Gegengleis_TypeClassImpl <em>Gegengleis Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5733,6 +6177,24 @@ public interface SignalePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RAHMEN_ART_TYPE_CLASS__WERT = eINSTANCE.getRahmen_Art_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Rahmen_Hoehe_TypeClassImpl <em>Rahmen Hoehe Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.Rahmen_Hoehe_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRahmen_Hoehe_TypeClass()
+		 * @generated
+		 */
+		EClass RAHMEN_HOEHE_TYPE_CLASS = eINSTANCE.getRahmen_Hoehe_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RAHMEN_HOEHE_TYPE_CLASS__WERT = eINSTANCE.getRahmen_Hoehe_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Rangierstrasse_Restaufloesung_TypeClassImpl <em>Rangierstrasse Restaufloesung Type Class</em>}' class.
@@ -5891,12 +6353,20 @@ public interface SignalePackage extends EPackage {
 		EReference SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG = eINSTANCE.getSignal_Befestigung_IDRegelzeichnung();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Regelzeichnung Vsig Tafel</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Signal Befestigung Allg</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL = eINSTANCE.getSignal_Befestigung_IDRegelzeichnungVsigTafel();
+		EReference SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG = eINSTANCE.getSignal_Befestigung_SignalBefestigungAllg();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Befestigung Bauwerk</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK = eINSTANCE.getSignal_Befestigung_IDBefestigungBauwerk();
 
 		/**
 		 * The meta object literal for the '<em><b>ID Signal Befestigung</b></em>' reference feature.
@@ -5905,14 +6375,6 @@ public interface SignalePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG = eINSTANCE.getSignal_Befestigung_IDSignalBefestigung();
-
-		/**
-		 * The meta object literal for the '<em><b>Signal Befestigung Allg</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG = eINSTANCE.getSignal_Befestigung_SignalBefestigungAllg();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Befestigung_Allg_AttributeGroupImpl <em>Signal Befestigung Allg Attribute Group</em>}' class.
@@ -5931,6 +6393,14 @@ public interface SignalePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART = eINSTANCE.getSignal_Befestigung_Allg_AttributeGroup_BefestigungArt();
+
+		/**
+		 * The meta object literal for the '<em><b>Fundament Art</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART = eINSTANCE.getSignal_Befestigung_Allg_AttributeGroup_FundamentArt();
 
 		/**
 		 * The meta object literal for the '<em><b>Hoehe Fundamentoberkante</b></em>' containment reference feature.
@@ -6157,6 +6627,14 @@ public interface SignalePackage extends EPackage {
 		EClass SIGNAL_RAHMEN = eINSTANCE.getSignal_Rahmen();
 
 		/**
+		 * The meta object literal for the '<em><b>ID Regelzeichnung</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_RAHMEN__ID_REGELZEICHNUNG = eINSTANCE.getSignal_Rahmen_IDRegelzeichnung();
+
+		/**
 		 * The meta object literal for the '<em><b>ID Signal</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6189,6 +6667,14 @@ public interface SignalePackage extends EPackage {
 		EReference SIGNAL_RAHMEN__RAHMEN_ART = eINSTANCE.getSignal_Rahmen_RahmenArt();
 
 		/**
+		 * The meta object literal for the '<em><b>Rahmen Hoehe</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_RAHMEN__RAHMEN_HOEHE = eINSTANCE.getSignal_Rahmen_RahmenHoehe();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Real_Aktiv_AttributeGroupImpl <em>Signal Real Aktiv Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6215,38 +6701,6 @@ public interface SignalePackage extends EPackage {
 		EReference SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__ID_STELLELEMENT = eINSTANCE.getSignal_Real_Aktiv_AttributeGroup_IDStellelement();
 
 		/**
-		 * The meta object literal for the '<em><b>Signal Funktion</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNAL_FUNKTION = eINSTANCE.getSignal_Real_Aktiv_AttributeGroup_SignalFunktion();
-
-		/**
-		 * The meta object literal for the '<em><b>Signalsicht Erreichbar</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR = eINSTANCE.getSignal_Real_Aktiv_AttributeGroup_SignalsichtErreichbar();
-
-		/**
-		 * The meta object literal for the '<em><b>Signalsicht Mindest</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST = eINSTANCE.getSignal_Real_Aktiv_AttributeGroup_SignalsichtMindest();
-
-		/**
-		 * The meta object literal for the '<em><b>Signalsicht Soll</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_REAL_AKTIV_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL = eINSTANCE.getSignal_Real_Aktiv_AttributeGroup_SignalsichtSoll();
-
-		/**
 		 * The meta object literal for the '<em><b>Sonstige Zulaessige Anordnung</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6271,14 +6725,6 @@ public interface SignalePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP = eINSTANCE.getSignal_Real_Aktiv_Schirm_AttributeGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Dunkelschaltung</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG = eINSTANCE.getSignal_Real_Aktiv_Schirm_AttributeGroup_Dunkelschaltung();
 
 		/**
 		 * The meta object literal for the '<em><b>Richtpunkt</b></em>' containment reference feature.
@@ -6339,6 +6785,22 @@ public interface SignalePackage extends EPackage {
 		EClass SIGNAL_REAL_ATTRIBUTE_GROUP = eINSTANCE.getSignal_Real_AttributeGroup();
 
 		/**
+		 * The meta object literal for the '<em><b>Dunkelschaltung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__DUNKELSCHALTUNG = eINSTANCE.getSignal_Real_AttributeGroup_Dunkelschaltung();
+
+		/**
+		 * The meta object literal for the '<em><b>Funktion Ohne Signal</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__FUNKTION_OHNE_SIGNAL = eINSTANCE.getSignal_Real_AttributeGroup_FunktionOhneSignal();
+
+		/**
 		 * The meta object literal for the '<em><b>Geltungsbereich</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6355,6 +6817,14 @@ public interface SignalePackage extends EPackage {
 		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNGSART = eINSTANCE.getSignal_Real_AttributeGroup_SignalBefestigungsart();
 
 		/**
+		 * The meta object literal for the '<em><b>Signal Funktion</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_FUNKTION = eINSTANCE.getSignal_Real_AttributeGroup_SignalFunktion();
+
+		/**
 		 * The meta object literal for the '<em><b>Signal Real Aktiv</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6369,6 +6839,30 @@ public interface SignalePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV_SCHIRM = eINSTANCE.getSignal_Real_AttributeGroup_SignalRealAktivSchirm();
+
+		/**
+		 * The meta object literal for the '<em><b>Signalsicht Erreichbar</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR = eINSTANCE.getSignal_Real_AttributeGroup_SignalsichtErreichbar();
+
+		/**
+		 * The meta object literal for the '<em><b>Signalsicht Mindest</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST = eINSTANCE.getSignal_Real_AttributeGroup_SignalsichtMindest();
+
+		/**
+		 * The meta object literal for the '<em><b>Signalsicht Soll</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL = eINSTANCE.getSignal_Real_AttributeGroup_SignalsichtSoll();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_SignalbegriffImpl <em>Signal Signalbegriff</em>}' class.
@@ -6669,6 +7163,26 @@ public interface SignalePackage extends EPackage {
 		EEnum ENUM_FIKTIVES_SIGNAL_FUNKTION = eINSTANCE.getENUMFiktivesSignalFunktion();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt <em>ENUM Fundament Art</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFundamentArt()
+		 * @generated
+		 */
+		EEnum ENUM_FUNDAMENT_ART = eINSTANCE.getENUMFundamentArt();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal <em>ENUM Funktion Ohne Signal</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFunktionOhneSignal()
+		 * @generated
+		 */
+		EEnum ENUM_FUNKTION_OHNE_SIGNAL = eINSTANCE.getENUMFunktionOhneSignal();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Signale.ENUMGeltungsbereich <em>ENUM Geltungsbereich</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6829,6 +7343,26 @@ public interface SignalePackage extends EPackage {
 		EDataType ENUM_FIKTIVES_SIGNAL_FUNKTION_OBJECT = eINSTANCE.getENUMFiktivesSignalFunktionObject();
 
 		/**
+		 * The meta object literal for the '<em>ENUM Fundament Art Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFundamentArt
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFundamentArtObject()
+		 * @generated
+		 */
+		EDataType ENUM_FUNDAMENT_ART_OBJECT = eINSTANCE.getENUMFundamentArtObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Funktion Ohne Signal Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Signale.ENUMFunktionOhneSignal
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getENUMFunktionOhneSignalObject()
+		 * @generated
+		 */
+		EDataType ENUM_FUNKTION_OHNE_SIGNAL_OBJECT = eINSTANCE.getENUMFunktionOhneSignalObject();
+
+		/**
 		 * The meta object literal for the '<em>ENUM Geltungsbereich Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6957,6 +7491,16 @@ public interface SignalePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType PZB_SCHUTZSTRECKE_SOLL_TYPE = eINSTANCE.getPZB_Schutzstrecke_Soll_Type();
+
+		/**
+		 * The meta object literal for the '<em>Rahmen Hoehe Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.math.BigDecimal
+		 * @see org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl#getRahmen_Hoehe_Type()
+		 * @generated
+		 */
+		EDataType RAHMEN_HOEHE_TYPE = eINSTANCE.getRahmen_Hoehe_Type();
 
 		/**
 		 * The meta object literal for the '<em>Richtpunkt Type</em>' data type.

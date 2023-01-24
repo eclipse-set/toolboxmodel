@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
             xmlns:func="localhost/function"
+            xmlns:nsATO="http://www.plan-pro.org/modell/ATO/toolbox"
             xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
             xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
             xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -13,8 +14,9 @@
             xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
             xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
             xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsLayoutinformationen="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
             xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
-            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsNahbedienung="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
             xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
             xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
             xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -33,6 +35,8 @@
             targetNamespace="http://www.plan-pro.org/modell/Gleis/toolbox">
    <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
                schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/ATO/toolbox"
+               schemaLocation="ATO.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
                schemaLocation="Bahnsteig.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -53,10 +57,12 @@
                schemaLocation="Flankenschutz.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Geodaten/toolbox"
                schemaLocation="Geodaten.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+               schemaLocation="Layoutinformationen.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
                schemaLocation="Medien_und_Trassen.xsd"/>
-   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+               schemaLocation="Nahbedienung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
                schemaLocation="Ortung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -90,9 +96,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -104,19 +108,9 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
    </xs:annotation>
-   <xs:complexType ecore:name="Nutzung_Reisezug_TypeClass" name="TCNutzung_Reisezug">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="xs:boolean"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
+   <xs:simpleType ecore:name="Fahrstrom_Type" name="TFahrstrom">
+      <xs:restriction base="nsBasisTypen:TFahrstrom"/>
+   </xs:simpleType>
    <xs:simpleType name="ENUMGleisart">
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMGleisart_Anschlussgleis" value="Anschlussgleis"/>
@@ -156,7 +150,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="nsBasisTypen:TFahrstrom"
+                            type="nsGleis:TFahrstrom"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -166,10 +160,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Gleis_Art" name="CGleis_Art">
       <xs:annotation>
-         <xs:documentation>Klassifizierung des Gleises aus betrieblicher Sicht. Es erfolgt die Unterscheidung in Haupt- und Nebengleise in einem Bahnhof, sowie die Abgrenzung von Strecken und Anschlussgleisen. </xs:documentation>
+         <xs:documentation>Klassifizierung des Gleises aus betrieblicher Sicht. Es erfolgt die Unterscheidung in Haupt- und Nebengleise in einem Bahnhof, sowie die Abgrenzung von Strecken und Anschlussgleisen.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -217,25 +212,13 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType ecore:name="Nutzung_Gueterzug_TypeClass" name="TCNutzung_Gueterzug">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="xs:boolean"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Gleis_Fahrbahn" name="CGleis_Fahrbahn">
       <xs:annotation>
          <xs:documentation>Bereich, in dem eine besondere Fahrbahnkonstruktion vorhanden ist, die für die Leit- und Sicherungstechnik relevant ist (z. B. Feste Fahrbahn). </xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -254,6 +237,20 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:complexType ecore:name="Bez_Gleis_Bezeichnung_TypeClass"
+                    name="TCBez_Gleis_Bezeichnung">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsGleis:TBez_Gleis_Bezeichnung"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:simpleType name="ENUMBaubereich_Art">
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMBaubereich_Art_ausgebaut" value="ausgebaut"/>
@@ -262,32 +259,6 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:enumeration ecore:name="ENUMBaubereich_Art_sonstige" value="sonstige"/>
       </xs:restriction>
    </xs:simpleType>
-   <xs:complexType ecore:name="Nutzung_Rangier_TypeClass" name="TCNutzung_Rangier">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="xs:boolean"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType ecore:name="Nutzung_SBahn_TypeClass" name="TCNutzung_SBahn">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="xs:boolean"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Konstruktion_TypeClass" name="TCKonstruktion">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -319,10 +290,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:simpleType>
    <xs:complexType ecore:name="Gleis_Bezeichnung" name="CGleis_Bezeichnung">
       <xs:annotation>
-         <xs:documentation>Träger der betrieblichen Bezeichnung eines Gleises. Ein Gleis erhält dann eine Bezeichnung, wenn es für die betriebliche Nutzung benötigt wird. Topologische Knoten (z. B. Weichen) unterbrechen nicht die Gleisbezeichnung. Für die durchgehenden Hauptgleise in einem Bahnhof wird das Bereichsobjekt für das Gleis in der Regel von einem Einfahrsignal bis zum Einfahrsignal der Gegenrichtung modelliert. Wenn das Gleis hinsichtlich der betrieblichen Bezeichnung geteilt ist (z.B. Gleis 1 und Gleis 21) sind getrennte Bereichsobjekte für diese Gleise anzulegen. Weitere Bezeichnungen von Bahnhofsgleisen werden in der Regel zwischen topologischen Knoten gebildet, wobei auch weitere Knoten enthalten sein können. Gleise, die aus betrieblicher Sicht keine Bezeichnung benötigen (z. B. Gleisverbindungen), erhalten keine Gleisbezeichnung. Streckengleise werden in der Regel zwischen den Bahnhofsgrenzen (ggf. auch andere Zugmeldestellen) durchgehend bezeichnet. Die Klammersetzung der Bezeichung von Streckengleisen ist Bestandteil der Bezeichung das Steckengleises.</xs:documentation>
+         <xs:documentation>Träger der betrieblichen Bezeichnung eines Gleises. Ein Gleis erhält dann eine Bezeichnung, wenn es für die betriebliche Nutzung benötigt wird. Topologische Knoten (z. B. Weichen) unterbrechen nicht die Gleisbezeichnung. Für die durchgehenden Hauptgleise in einem Bahnhof wird das Bereichsobjekt für das Gleis in der Regel von einem Einfahrsignal bis zum Einfahrsignal der Gegenrichtung modelliert. Wenn das Gleis hinsichtlich der betrieblichen Bezeichnung geteilt ist (z.B. Gleis 1 und Gleis 21) sind getrennte Bereichsobjekte für diese Gleise anzulegen. Weitere Bezeichnungen von Bahnhofsgleisen werden in der Regel zwischen topologischen Knoten gebildet, wobei auch weitere Knoten enthalten sein können. Gleise, die aus betrieblicher Sicht keine Bezeichnung benötigen (z. B. Gleisverbindungen), erhalten keine Gleisbezeichnung. Streckengleise werden in der Regel zwischen den Bahnhofsgrenzen (ggf. auch andere Zugmeldestellen) durchgehend bezeichnet. Die Klammersetzung der Bezeichnung von Streckengleisen ist Bestandteil der Bezeichnung das Steckengleises.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -347,6 +319,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -375,10 +348,11 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Gleis_Baubereich" name="CGleis_Baubereich">
       <xs:annotation>
-         <xs:documentation>Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der während einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten. </xs:documentation>
+         <xs:documentation>Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der während einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -400,10 +374,10 @@ XML Schema for PlanPro interface.</xs:documentation>
    <xs:simpleType name="ENUMLichtraumprofil">
       <xs:restriction base="xs:string">
          <xs:enumeration ecore:name="ENUMLichtraumprofil_1SMDR" value="1SMDR"/>
+         <xs:enumeration ecore:name="ENUMLichtraumprofil_GC" value="GC"/>
          <xs:enumeration ecore:name="ENUMLichtraumprofil_SBahn_80003" value="SBahn_80003"/>
          <xs:enumeration ecore:name="ENUMLichtraumprofil_SBahn_Berlin" value="SBahn_Berlin"/>
          <xs:enumeration ecore:name="ENUMLichtraumprofil_sonstige" value="sonstige"/>
-         <xs:enumeration ecore:name="ENUMLichtraumprofil_GC" value="GC"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType ecore:name="Gleis_Schaltgruppe" name="CGleis_Schaltgruppe">
@@ -412,6 +386,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -456,26 +431,13 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Bez_Gleis_Bezeichnung_TypeClass"
-                    name="TCBez_Gleis_Bezeichnung">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsGleis:TBez_Gleis_Bezeichnung"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Gleis_Lichtraum" name="CGleis_Lichtraum">
       <xs:annotation>
          <xs:documentation>Bereich, in dem besondere Lichtraumbedingungen vorhanden sind. Es werden nur die Bereiche angegeben, in denen von der EBO abweichende und LST-relevante Lichtraumbedingungen vorhanden oder zu beachten sind. </xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>

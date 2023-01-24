@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsZuglenkung="http://www.plan-pro.org/modell/Zuglenkung/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Zuglenkung/1.9.0.2">
+           xmlns:nsZuglenkung="http://www.plan-pro.org/modell/Zuglenkung/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Zuglenkung/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,11 +26,11 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
 	  <xs:complexType name="TCFUEM_Auswertung">
 		    <xs:complexContent>
@@ -45,10 +43,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:complexType name="CZL">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Anlage zur automatischen Einstellung von Fahrstraßen aufgrund von Zuglaufinformationen. Die Zuglenkung ist eine Anlage, die der Unterstützung des Betriebsablaufes dient. Aufgabe der Zuglenkung ist es, auf der Basis von Zuglaufinformationen und zugbezogenen Vorgaben für die Benutzung von Strecken- und Bahnhofsgleisen ohne unmittelbare Mitwirkung des Bedieners Stellkommandos an das zuständige Stellwerk auszugeben, ihre Ausführung zu überwachen und sich aus Meldungen des Stellwerkes ergebenden Handlungsbedarf an den Bediener weiterzugeben. Zuglaufinformationen erhält die Zuglenkung von der Zuglaufverfolgung (ZLV), die vorgesehene Benutzung der Strecken- und Bahnhofsgleise sowie Wartebedingungen einschließlich besonderer Bedingungen für die Regelung der Reihenfolge der Züge aus einem sogenannten Lenkplan, der in Form einer Gleisbenutzungstabelle (GBT) darstellbar ist. Alle Signale und Fahrstraßen, die mit der Zuglenkung behandelt werden, werden in dem Objekt Zuglenkung_Element aufgenommen und bekommen dort zusätzliche Eigenschaften für die Nutzung in der ZL. Angaben zur Verwendung der Signale und zugehörigen Gleisabschnitte für die Lenkplanerstellung erfolgen in der Gleisbenutzungstabelle. DB-Regelwerk 819.0732 Gleisbenutzungstabelle Weitere Angaben finden sich im Lastenheft, das dem LST-Fachplaner nicht zur Verfügung steht.</xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Anlage zur automatischen Einstellung von Fahrstraßen aufgrund von Zuglaufinformationen. Die Zuglenkung ist eine Anlage, die der Unterstützung des Betriebsablaufes dient. Aufgabe der Zuglenkung ist es, auf der Basis von Zuglaufinformationen und zugbezogenen Vorgaben für die Benutzung von Strecken- und Bahnhofsgleisen ohne unmittelbare Mitwirkung des Bedieners Stellkommandos an das zuständige Stellwerk auszugeben, ihre Ausführung zu überwachen und sich aus Meldungen des Stellwerkes ergebenden Handlungsbedarf an den Bediener weiterzugeben. Zuglaufinformationen erhält die Zuglenkung von der Zuglaufverfolgung (ZLV), die vorgesehene Benutzung der Strecken- und Bahnhofsgleise sowie Wartebedingungen einschließlich besonderer Bedingungen für die Regelung der Reihenfolge der Züge aus einem sogenannten Lenkplan, der in Form einer Gleisbenutzungstabelle (GBT) darstellbar ist. DB-Regelwerk 819.0732 Gleisbenutzungstabelle Weitere Angaben finden sich im Lastenheft, das dem LST-Fachplaner nicht zur Verfügung steht.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ZL</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -162,6 +161,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ZL</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -352,6 +352,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ZL</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -359,7 +360,7 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:extension base="nsBasisobjekte:CBasis_Objekt">
 				        <xs:sequence>
 					          <xs:element name="ID_Fstr_Zug_Rangier" type="nsVerweise:TCID_Fstr_Zug_Rangier"
-                           minOccurs="0"
+                           minOccurs="1"
                            maxOccurs="1">
 						            <xs:annotation>
                      <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verlinkung, zu welcher Fahrstraße die ZL-Fahrstraße gehört. </xs:documentation>
@@ -423,18 +424,13 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ZL</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisobjekte:CBasis_Objekt">
 				        <xs:sequence>
-					          <xs:element name="ID_Einschaltpunkt" type="nsVerweise:TCID_Einschaltpunkt" minOccurs="0"
-                           maxOccurs="1">
-						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf ein Schaltmittel, welches als Anstoß für die ZL-Fahrstraße ausgewertet wird. Der Standort bzw. die Stationierung geht in die Berechnung einer Verzögerungszeit ein. Das Attribut ist optional, da nicht für jede ZL-Fahrstraße ein Schaltmittel ausgewählt werden kann (z. B. an Stellbereichsgrenzen). In dem Fall ist ein ZN_Anzeigefeld als Anstoßkriterium festzulegen. Einer von beiden Verweisen (ID_Einschaltpunkt oder ID ZN Anzeigefeld Anstoss) muss immer gefüllt sein.</xs:documentation>
-                  </xs:annotation>
-					          </xs:element>
 					          <xs:element name="ID_Vorsignal" type="nsVerweise:TCID_Signal" minOccurs="0" maxOccurs="1">
 						            <xs:annotation>
                      <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Standort der Vorsignalisierung des zu lenkenden Hauptsignals. Die Angabe ist notwendig für die Ermittlung des Sichtpunkts bei vorgegebener Sichtzeit. Es wird aus dem Objekt der Standort (km, Stationierung) benötigt. Der Verweis kann entfallen, wenn der Zug erst am zu lenkenden Hauptsignal startet oder das Startsignal ein LZB-Blockkennzeichen ist.</xs:documentation>
@@ -445,18 +441,26 @@ XML Schema for PlanPro interface.</xs:documentation>
                      <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verlinkung, zu welcher ZL_Fstr dieser Anstoß gehört. </xs:documentation>
                   </xs:annotation>
 					          </xs:element>
-					          <xs:element name="ID_ZN_Anzeigefeld_Anstoss" type="nsVerweise:TCID_ZN_Anzeigefeld_Anstoss"
-                           minOccurs="0"
-                           maxOccurs="1">
-						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf das ZN Anzeigefeld, aus dem der Anstoß der ZL ausgelöst wird. Das Attribut ist optional, falls für einen ZL-Anstoß kein geeignetes ZN-Anzeigefeld zur Verfügung steht. In dem Fall ist ein Schaltmittel als Anstoßkriterium festzulegen. Einer von beiden Verweisen (ID Einschaltpunkt oder ID_ZN_Anzeigefeld_Anstoss) muss immer gefüllt sein.</xs:documentation>
-                  </xs:annotation>
-					          </xs:element>
 					          <xs:element name="ZL_Fstr_Anstoss_Allg" type="nsZuglenkung:CZL_Fstr_Anstoss_Allg"
                            minOccurs="1"
                            maxOccurs="1"/>
 					          <xs:element name="ZL_Fstr_Anstoss_GK" type="nsZuglenkung:CZL_Fstr_Anstoss_GK" minOccurs="0"
                            maxOccurs="unbounded"/>
+					          <xs:choice minOccurs="1" maxOccurs="1">
+						            <xs:element name="ID_Einschaltpunkt" type="nsVerweise:TCID_Einschaltpunkt" minOccurs="1"
+                              maxOccurs="1">
+							              <xs:annotation>
+                        <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf ein Schaltmittel, welches als Anstoß für die ZL-Fahrstraße ausgewertet wird. Der Standort bzw. die Stationierung geht in die Berechnung einer Verzögerungszeit ein. Das Attribut ist optional, da nicht für jede ZL-Fahrstraße ein Schaltmittel ausgewählt werden kann (z. B. an Stellbereichsgrenzen). In dem Fall ist ein ZN_Anzeigefeld als Anstoßkriterium festzulegen. Einer von beiden Verweisen (ID_Einschaltpunkt oder ID ZN Anzeigefeld Anstoss) muss immer gefüllt sein.</xs:documentation>
+                     </xs:annotation>
+						            </xs:element>
+						            <xs:element name="ID_ZN_Anzeigefeld_Anstoss" type="nsVerweise:TCID_ZN_Anzeigefeld_Anstoss"
+                              minOccurs="1"
+                              maxOccurs="1">
+							              <xs:annotation>
+                        <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf das ZN Anzeigefeld, aus dem der Anstoß der ZL ausgelöst wird. Das Attribut ist optional, falls für einen ZL-Anstoß kein geeignetes ZN-Anzeigefeld zur Verfügung steht. In dem Fall ist ein Schaltmittel als Anstoßkriterium festzulegen. Einer von beiden Verweisen (ID Einschaltpunkt oder ID_ZN_Anzeigefeld_Anstoss) muss immer gefüllt sein.</xs:documentation>
+                     </xs:annotation>
+						            </xs:element>
+					          </xs:choice>
 				        </xs:sequence>
 			      </xs:extension>
 		    </xs:complexContent>
@@ -464,6 +468,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="TAnzahl_Wiederhol_ZL_Anstoesse">
 		    <xs:restriction base="xs:integer">
 			      <xs:pattern value="[1-9]|10"/>
+		    </xs:restriction>
+	  </xs:simpleType>
+	  <xs:simpleType name="TFstr_Bildezeit">
+		    <xs:restriction base="nsBasisTypen:TSekunde">
+			      <xs:pattern value="0|[1-9][0-9]{0,1}|[1-8][0-9]{2}|900"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:simpleType name="TVmax_Annaeherung">
@@ -490,6 +499,17 @@ XML Schema for PlanPro interface.</xs:documentation>
                <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
                   <ppi:WorkflowInformation>
                      <ppi:Patternbeschreibung>[0..4]</ppi:Patternbeschreibung>
+                  </ppi:WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:element name="Fstr_Bildezeit" type="nsZuglenkung:TCFstr_Bildezeit" minOccurs="1"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Für die Ermittlung des rechtzeitigen Fahrstraßenanstoßes notwendige Fahrstraßenbildezeit. DB-Regelwerk Ril 819.0732</xs:documentation>
+               <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
+                  <ppi:WorkflowInformation>
+                     <ppi:Patternbeschreibung> [0..900] </ppi:Patternbeschreibung>
                   </ppi:WorkflowInformation>
                </xs:appinfo>
             </xs:annotation>
@@ -527,6 +547,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ZL</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -534,9 +555,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:extension base="nsBasisobjekte:CBasis_Objekt">
 				        <xs:sequence>
 					          <xs:element name="ID_Gleis_Abschnitt" type="nsVerweise:TCID_Gleis_Abschnitt" minOccurs="1"
-                           maxOccurs="1">
+                           maxOccurs="unbounded">
 						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, welcher Freimeldeabschnitt geprüft werden muss.</xs:documentation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, welche Freimeldeabschnitte geprüft werden müssen.</xs:documentation>
                   </xs:annotation>
 					          </xs:element>
 					          <xs:element name="ID_ZL_DLP_Fstr" type="nsVerweise:TCID_ZL_DLP_Fstr" minOccurs="1"
@@ -555,6 +576,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ZL</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -647,6 +669,16 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:element>
 		    </xs:sequence>
 	  </xs:complexType>
+	  <xs:complexType name="TCFstr_Bildezeit">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsZuglenkung:TFstr_Bildezeit" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCSichtzeit_Vorsignal">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -664,6 +696,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ZL</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>

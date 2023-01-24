@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeG
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangFactory;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup} object.
@@ -87,6 +88,7 @@ public class BUE_Einschaltung_Hp_AttributeGroupItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_EinschaltverzErrechnet());
 			childrenFeatures.add(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_EinschaltverzGewaehlt());
+			childrenFeatures.add(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_Haltezeit());
 			childrenFeatures.add(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_Kurzzugschaltung());
 			childrenFeatures.add(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_SignalverzErrechnet());
 			childrenFeatures.add(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_SignalverzGewaehlt());
@@ -145,6 +147,7 @@ public class BUE_Einschaltung_Hp_AttributeGroupItemProvider
 		switch (notification.getFeatureID(BUE_Einschaltung_Hp_AttributeGroup.class)) {
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_ERRECHNET:
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT:
+			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT:
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG:
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_ERRECHNET:
 			case BahnuebergangPackage.BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_GEWAEHLT:
@@ -177,6 +180,11 @@ public class BUE_Einschaltung_Hp_AttributeGroupItemProvider
 			(createChildParameter
 				(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_EinschaltverzGewaehlt(),
 				 BahnuebergangFactory.eINSTANCE.createEinschaltverz_Gewaehlt_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BahnuebergangPackage.eINSTANCE.getBUE_Einschaltung_Hp_AttributeGroup_Haltezeit(),
+				 BahnuebergangFactory.eINSTANCE.createHaltezeit_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

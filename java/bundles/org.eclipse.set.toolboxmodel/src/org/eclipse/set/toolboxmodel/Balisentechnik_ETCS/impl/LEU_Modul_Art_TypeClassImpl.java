@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -9,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ENUMLEUModulArt;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ENUMLEUArt;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Art_TypeClass;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisAttribut_AttributeGroupImpl;
@@ -36,7 +43,7 @@ public class LEU_Modul_Art_TypeClassImpl extends BasisAttribut_AttributeGroupImp
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ENUMLEUModulArt WERT_EDEFAULT = null;
+	protected static final ENUMLEUArt WERT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
@@ -46,7 +53,7 @@ public class LEU_Modul_Art_TypeClassImpl extends BasisAttribut_AttributeGroupImp
 	 * @generated
 	 * @ordered
 	 */
-	protected ENUMLEUModulArt wert = WERT_EDEFAULT;
+	protected ENUMLEUArt wert = WERT_EDEFAULT;
 
 	/**
 	 * This is true if the Wert attribute has been set.
@@ -82,7 +89,7 @@ public class LEU_Modul_Art_TypeClassImpl extends BasisAttribut_AttributeGroupImp
 	 * @generated
 	 */
 	@Override
-	public ENUMLEUModulArt getWert() {
+	public ENUMLEUArt getWert() {
 		return wert;
 	}
 
@@ -92,8 +99,8 @@ public class LEU_Modul_Art_TypeClassImpl extends BasisAttribut_AttributeGroupImp
 	 * @generated
 	 */
 	@Override
-	public void setWert(ENUMLEUModulArt newWert) {
-		ENUMLEUModulArt oldWert = wert;
+	public void setWert(ENUMLEUArt newWert) {
+		ENUMLEUArt oldWert = wert;
 		wert = newWert;
 		boolean oldWertESet = wertESet;
 		wertESet = true;
@@ -108,7 +115,7 @@ public class LEU_Modul_Art_TypeClassImpl extends BasisAttribut_AttributeGroupImp
 	 */
 	@Override
 	public void unsetWert() {
-		ENUMLEUModulArt oldWert = wert;
+		ENUMLEUArt oldWert = wert;
 		boolean oldWertESet = wertESet;
 		wert = WERT_EDEFAULT;
 		wertESet = false;
@@ -150,7 +157,7 @@ public class LEU_Modul_Art_TypeClassImpl extends BasisAttribut_AttributeGroupImp
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ART_TYPE_CLASS__WERT:
-				setWert((ENUMLEUModulArt)newValue);
+				setWert((ENUMLEUArt)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);

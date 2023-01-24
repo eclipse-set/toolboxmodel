@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -116,7 +123,37 @@ public enum ENUMFiktivesSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_STRECKE(9, "ENUMFiktives_Signal_Funktion_Zug_Ziel_Strecke", "Zug_Ziel_Strecke");
+	ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_STRECKE(9, "ENUMFiktives_Signal_Funktion_Zug_Ziel_Strecke", "Zug_Ziel_Strecke"),
+
+	/**
+	 * The '<em><b>ENUM Fiktives Signal Funktion Vsig virtuell</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL(10, "ENUMFiktives_Signal_Funktion_Vsig_virtuell", "Vsig_virtuell"),
+
+	/**
+	 * The '<em><b>ENUM Fiktives Signal Funktion Zug Start Ziel Bk</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK(11, "ENUMFiktives_Signal_Funktion_Zug_Start_Ziel_Bk", "Zug_Start_Ziel_Bk"),
+
+	/**
+	 * The '<em><b>ENUM Fiktives Signal Funktion Zug Start Ziel Ne 14</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14(12, "ENUMFiktives_Signal_Funktion_Zug_Start_Ziel_Ne_14", "Zug_Start_Ziel_Ne_14");
 
 	/**
 	 * The '<em><b>ENUM Fiktives Signal Funktion FAP Start</b></em>' literal value.
@@ -229,6 +266,39 @@ public enum ENUMFiktivesSignalFunktion implements Enumerator {
 	public static final int ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_STRECKE_VALUE = 9;
 
 	/**
+	 * The '<em><b>ENUM Fiktives Signal Funktion Vsig virtuell</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL
+	 * @model name="ENUMFiktives_Signal_Funktion_Vsig_virtuell" literal="Vsig_virtuell"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL_VALUE = 10;
+
+	/**
+	 * The '<em><b>ENUM Fiktives Signal Funktion Zug Start Ziel Bk</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK
+	 * @model name="ENUMFiktives_Signal_Funktion_Zug_Start_Ziel_Bk" literal="Zug_Start_Ziel_Bk"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK_VALUE = 11;
+
+	/**
+	 * The '<em><b>ENUM Fiktives Signal Funktion Zug Start Ziel Ne 14</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14
+	 * @model name="ENUMFiktives_Signal_Funktion_Zug_Start_Ziel_Ne_14" literal="Zug_Start_Ziel_Ne_14"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14_VALUE = 12;
+
+	/**
 	 * An array of all the '<em><b>ENUM Fiktives Signal Funktion</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,6 +316,9 @@ public enum ENUMFiktivesSignalFunktion implements Enumerator {
 			ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_AWANST,
 			ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_OHNE_SIGNAL,
 			ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_STRECKE,
+			ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL,
+			ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK,
+			ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14,
 		};
 
 	/**
@@ -312,6 +385,9 @@ public enum ENUMFiktivesSignalFunktion implements Enumerator {
 			case ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_AWANST_VALUE: return ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_AWANST;
 			case ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_OHNE_SIGNAL_VALUE: return ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_OHNE_SIGNAL;
 			case ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_STRECKE_VALUE: return ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_ZIEL_STRECKE;
+			case ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL_VALUE: return ENUM_FIKTIVES_SIGNAL_FUNKTION_VSIG_VIRTUELL;
+			case ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK_VALUE: return ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_BK;
+			case ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14_VALUE: return ENUM_FIKTIVES_SIGNAL_FUNKTION_ZUG_START_ZIEL_NE_14;
 			default: return null;
 		}
 	}

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -32,6 +39,16 @@ public enum ENUMVProfilArt implements Enumerator {
 	ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT(0, "ENUMV_Profil_Art_anzeigegeführt", "anzeigegef\u00fchrt"),
 
 	/**
+	 * The '<em><b>ENUMV Profil Art anzeigegeführt ES</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES(1, "ENUMV_Profil_Art_anzeigegeführt_ES", "anzeigegef\u00fchrt ES"),
+
+	/**
 	 * The '<em><b>ENUMV Profil Art signalgeführt</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,7 +56,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMV_PROFIL_ART_SIGNALGEFÜHRT(1, "ENUMV_Profil_Art_signalgeführt", "signalgef\u00fchrt"),
+	ENUMV_PROFIL_ART_SIGNALGEFÜHRT(2, "ENUMV_Profil_Art_signalgeführt", "signalgef\u00fchrt"),
 
 	/**
 	 * The '<em><b>ENUMV Profil Art signalgeführt ES</b></em>' literal object.
@@ -49,7 +66,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES(2, "ENUMV_Profil_Art_signalgeführt_ES", "signalgef\u00fchrt ES"),
+	ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES(3, "ENUMV_Profil_Art_signalgeführt_ES", "signalgef\u00fchrt ES"),
 
 	/**
 	 * The '<em><b>ENUMV Profil Art sonstige</b></em>' literal object.
@@ -59,7 +76,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMV_PROFIL_ART_SONSTIGE(3, "ENUMV_Profil_Art_sonstige", "sonstige"),
+	ENUMV_PROFIL_ART_SONSTIGE(4, "ENUMV_Profil_Art_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUMV Profil Art windabhängig</b></em>' literal object.
@@ -69,7 +86,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMV_PROFIL_ART_WINDABHÄNGIG(4, "ENUMV_Profil_Art_windabhängig", "windabh\u00e4ngig");
+	ENUMV_PROFIL_ART_WINDABHÄNGIG(5, "ENUMV_Profil_Art_windabhängig", "windabh\u00e4ngig");
 
 	/**
 	 * The '<em><b>ENUMV Profil Art anzeigegeführt</b></em>' literal value.
@@ -83,6 +100,17 @@ public enum ENUMVProfilArt implements Enumerator {
 	public static final int ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_VALUE = 0;
 
 	/**
+	 * The '<em><b>ENUMV Profil Art anzeigegeführt ES</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES
+	 * @model name="ENUMV_Profil_Art_anzeigegeführt_ES" literal="anzeigegef\374hrt ES"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES_VALUE = 1;
+
+	/**
 	 * The '<em><b>ENUMV Profil Art signalgeführt</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,7 +119,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMV_PROFIL_ART_SIGNALGEFÜHRT_VALUE = 1;
+	public static final int ENUMV_PROFIL_ART_SIGNALGEFÜHRT_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMV Profil Art signalgeführt ES</b></em>' literal value.
@@ -102,7 +130,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES_VALUE = 2;
+	public static final int ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMV Profil Art sonstige</b></em>' literal value.
@@ -113,7 +141,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMV_PROFIL_ART_SONSTIGE_VALUE = 3;
+	public static final int ENUMV_PROFIL_ART_SONSTIGE_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUMV Profil Art windabhängig</b></em>' literal value.
@@ -124,7 +152,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMV_PROFIL_ART_WINDABHÄNGIG_VALUE = 4;
+	public static final int ENUMV_PROFIL_ART_WINDABHÄNGIG_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>ENUMV Profil Art</b></em>' enumerators.
@@ -135,6 +163,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	private static final ENUMVProfilArt[] VALUES_ARRAY =
 		new ENUMVProfilArt[] {
 			ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT,
+			ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES,
 			ENUMV_PROFIL_ART_SIGNALGEFÜHRT,
 			ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES,
 			ENUMV_PROFIL_ART_SONSTIGE,
@@ -196,6 +225,7 @@ public enum ENUMVProfilArt implements Enumerator {
 	public static ENUMVProfilArt get(int value) {
 		switch (value) {
 			case ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_VALUE: return ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT;
+			case ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES_VALUE: return ENUMV_PROFIL_ART_ANZEIGEGEFÜHRT_ES;
 			case ENUMV_PROFIL_ART_SIGNALGEFÜHRT_VALUE: return ENUMV_PROFIL_ART_SIGNALGEFÜHRT;
 			case ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES_VALUE: return ENUMV_PROFIL_ART_SIGNALGEFÜHRT_ES;
 			case ENUMV_PROFIL_ART_SONSTIGE_VALUE: return ENUMV_PROFIL_ART_SONSTIGE;

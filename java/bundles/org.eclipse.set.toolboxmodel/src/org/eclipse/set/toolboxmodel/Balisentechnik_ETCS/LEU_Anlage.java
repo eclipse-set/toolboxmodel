@@ -1,8 +1,13 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
@@ -21,7 +26,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage#getBezeichnung <em>Bezeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage#getIDLEUBezugspunkt <em>IDLEU Bezugspunkt</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage#getLEUAnlageModuleigenschaften <em>LEU Anlage Moduleigenschaften</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage#getLEUAnlageAllg <em>LEU Anlage Allg</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Anlage()
@@ -57,8 +62,7 @@ public interface LEU_Anlage extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf den Bezugspunkt der LEU-Anlage, aus dem in der Regel auch die Bezeichnung generiert wird. Über diesen Verweis erfolgt auch die Ermittlung des Bezugspunkts für von dieser LEU-Anlage gesteuerte Datenpunkte.
-	 * 
+	 * Verweis auf das Bezugselement der LEU-Anlage, aus dem in der Regel auch die Bezeichnung generiert wird. Über diesen Verweis erfolgt auch die Ermittlung des Bezugselements für von dieser LEU-Anlage gesteuerte Datenpunkte.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDLEU Bezugspunkt</em>' reference.
 	 * @see #isSetIDLEUBezugspunkt()
@@ -107,19 +111,26 @@ public interface LEU_Anlage extends Basis_Objekt {
 	boolean isSetIDLEUBezugspunkt();
 
 	/**
-	 * Returns the value of the '<em><b>LEU Anlage Moduleigenschaften</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Moduleigenschaften_AttributeGroup}.
+	 * Returns the value of the '<em><b>LEU Anlage Allg</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Attributgruppe zur Angabe von Eigenschaften der LEU-Module im Rahmen der PT 1-Planung. Der detaillierte Aufbau der LEU (Module) kann nur herstellerabhängig festgelegt werden.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>LEU Anlage Moduleigenschaften</em>' containment reference list.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Anlage_LEUAnlageModuleigenschaften()
+	 * @return the value of the '<em>LEU Anlage Allg</em>' containment reference.
+	 * @see #setLEUAnlageAllg(LEU_Anlage_Allg_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Anlage_LEUAnlageAllg()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='LEU_Anlage_Moduleigenschaften'"
+	 *        extendedMetaData="kind='element' name='LEU_Anlage_Allg'"
 	 * @generated
 	 */
-	EList<LEU_Anlage_Moduleigenschaften_AttributeGroup> getLEUAnlageModuleigenschaften();
+	LEU_Anlage_Allg_AttributeGroup getLEUAnlageAllg();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage#getLEUAnlageAllg <em>LEU Anlage Allg</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>LEU Anlage Allg</em>' containment reference.
+	 * @see #getLEUAnlageAllg()
+	 * @generated
+	 */
+	void setLEUAnlageAllg(LEU_Anlage_Allg_AttributeGroup value);
 
 } // LEU_Anlage

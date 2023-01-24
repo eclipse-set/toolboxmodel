@@ -1,9 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
 
 /**
@@ -12,7 +19,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen über den zugrunde liegenden Fstr Fahrweg ist nicht möglich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Außerdem muss für Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden und ob sie Flankenschutz anfordern sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese über Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spaltenüberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"
+ * Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen über den zugrunde liegenden Fstr Fahrweg ist nicht möglich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Außerdem muss für Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese über Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spaltenüberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"
  * <!-- end-model-doc -->
  *
  * <p>
@@ -35,11 +42,9 @@ public interface Fstr_DWeg_W_Kr extends Basis_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Verschluss der Weiche im Durchrutschweg. Stumpf berutschte, auffahrbare Weichen im Durchrutschweg können unverschlossen bleiben.
-	 * 
 	 * Das Attribut ist herstellerneutralitätskritisch.
-	 *  
-	 * DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"
-	 * 
+	 * DB-Regelwerk 
+	 * Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Element Verschluss</em>' containment reference.
 	 * @see #setElementVerschluss(Element_Verschluss_TypeClass)

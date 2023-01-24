@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -193,6 +194,29 @@ public class PZBItemProviderAdapterFactory extends PZBAdapterFactory implements 
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected INA_Gefahrstelle_AttributeGroupItemProvider inA_Gefahrstelle_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createINA_Gefahrstelle_AttributeGroupAdapter() {
+		if (inA_Gefahrstelle_AttributeGroupItemProvider == null) {
+			inA_Gefahrstelle_AttributeGroupItemProvider = new INA_Gefahrstelle_AttributeGroupItemProvider(this);
+		}
+
+		return inA_Gefahrstelle_AttributeGroupItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PZB.Messfehler_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,6 +237,29 @@ public class PZBItemProviderAdapterFactory extends PZBAdapterFactory implements 
 		}
 
 		return messfehler_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Prioritaet_Gefahrstelle_TypeClassItemProvider prioritaet_Gefahrstelle_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPrioritaet_Gefahrstelle_TypeClassAdapter() {
+		if (prioritaet_Gefahrstelle_TypeClassItemProvider == null) {
+			prioritaet_Gefahrstelle_TypeClassItemProvider = new Prioritaet_Gefahrstelle_TypeClassItemProvider(this);
+		}
+
+		return prioritaet_Gefahrstelle_TypeClassItemProvider;
 	}
 
 	/**
@@ -400,6 +447,52 @@ public class PZBItemProviderAdapterFactory extends PZBAdapterFactory implements 
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PZB_Element_Zuordnung_BP_AttributeGroupItemProvider pzB_Element_Zuordnung_BP_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPZB_Element_Zuordnung_BP_AttributeGroupAdapter() {
+		if (pzB_Element_Zuordnung_BP_AttributeGroupItemProvider == null) {
+			pzB_Element_Zuordnung_BP_AttributeGroupItemProvider = new PZB_Element_Zuordnung_BP_AttributeGroupItemProvider(this);
+		}
+
+		return pzB_Element_Zuordnung_BP_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PZB_Element_Zuordnung_Fstr_AttributeGroupItemProvider pzB_Element_Zuordnung_Fstr_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPZB_Element_Zuordnung_Fstr_AttributeGroupAdapter() {
+		if (pzB_Element_Zuordnung_Fstr_AttributeGroupItemProvider == null) {
+			pzB_Element_Zuordnung_Fstr_AttributeGroupItemProvider = new PZB_Element_Zuordnung_Fstr_AttributeGroupItemProvider(this);
+		}
+
+		return pzB_Element_Zuordnung_Fstr_AttributeGroupItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -466,6 +559,29 @@ public class PZBItemProviderAdapterFactory extends PZBAdapterFactory implements 
 		}
 
 		return pzB_Zuordnung_SignalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Wirksamkeit_Fstr_TypeClassItemProvider wirksamkeit_Fstr_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWirksamkeit_Fstr_TypeClassAdapter() {
+		if (wirksamkeit_Fstr_TypeClassItemProvider == null) {
+			wirksamkeit_Fstr_TypeClassItemProvider = new Wirksamkeit_Fstr_TypeClassItemProvider(this);
+		}
+
+		return wirksamkeit_Fstr_TypeClassItemProvider;
 	}
 
 	/**
@@ -601,7 +717,9 @@ public class PZBItemProviderAdapterFactory extends PZBAdapterFactory implements 
 		if (guE_Bauart_TypeClassItemProvider != null) guE_Bauart_TypeClassItemProvider.dispose();
 		if (guE_Energieversorgung_TypeClassItemProvider != null) guE_Energieversorgung_TypeClassItemProvider.dispose();
 		if (guE_Messstrecke_TypeClassItemProvider != null) guE_Messstrecke_TypeClassItemProvider.dispose();
+		if (inA_Gefahrstelle_AttributeGroupItemProvider != null) inA_Gefahrstelle_AttributeGroupItemProvider.dispose();
 		if (messfehler_TypeClassItemProvider != null) messfehler_TypeClassItemProvider.dispose();
+		if (prioritaet_Gefahrstelle_TypeClassItemProvider != null) prioritaet_Gefahrstelle_TypeClassItemProvider.dispose();
 		if (pruefgeschwindigkeit_TypeClassItemProvider != null) pruefgeschwindigkeit_TypeClassItemProvider.dispose();
 		if (pruefzeit_TypeClassItemProvider != null) pruefzeit_TypeClassItemProvider.dispose();
 		if (pzB_Abstand_GM_TypeClassItemProvider != null) pzB_Abstand_GM_TypeClassItemProvider.dispose();
@@ -610,9 +728,12 @@ public class PZBItemProviderAdapterFactory extends PZBAdapterFactory implements 
 		if (pzB_Element_GM_AttributeGroupItemProvider != null) pzB_Element_GM_AttributeGroupItemProvider.dispose();
 		if (pzB_Element_GUE_AttributeGroupItemProvider != null) pzB_Element_GUE_AttributeGroupItemProvider.dispose();
 		if (pzB_Element_ZuordnungItemProvider != null) pzB_Element_ZuordnungItemProvider.dispose();
+		if (pzB_Element_Zuordnung_BP_AttributeGroupItemProvider != null) pzB_Element_Zuordnung_BP_AttributeGroupItemProvider.dispose();
+		if (pzB_Element_Zuordnung_Fstr_AttributeGroupItemProvider != null) pzB_Element_Zuordnung_Fstr_AttributeGroupItemProvider.dispose();
 		if (pzB_Element_Zuordnung_INA_AttributeGroupItemProvider != null) pzB_Element_Zuordnung_INA_AttributeGroupItemProvider.dispose();
 		if (pzB_INA_TypeClassItemProvider != null) pzB_INA_TypeClassItemProvider.dispose();
 		if (pzB_Zuordnung_SignalItemProvider != null) pzB_Zuordnung_SignalItemProvider.dispose();
+		if (wirksamkeit_Fstr_TypeClassItemProvider != null) wirksamkeit_Fstr_TypeClassItemProvider.dispose();
 		if (wirksamkeit_TypeClassItemProvider != null) wirksamkeit_TypeClassItemProvider.dispose();
 	}
 

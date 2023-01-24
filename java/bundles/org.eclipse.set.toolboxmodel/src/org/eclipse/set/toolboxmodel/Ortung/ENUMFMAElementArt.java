@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
@@ -39,26 +46,6 @@ public enum ENUMFMAElementArt implements Enumerator {
 	ENUMFMA_ELEMENT_ART_DROSSELSPULE(1, "ENUMFMA_Element_Art_Drosselspule", "Drosselspule"),
 
 	/**
-	 * The '<em><b>ENUMFMA Element Art SVerbinder</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ELEMENT_ART_SVERBINDER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMFMA_ELEMENT_ART_SVERBINDER(2, "ENUMFMA_Element_Art_S_Verbinder", "S_Verbinder"),
-
-	/**
-	 * The '<em><b>ENUMFMA Element Art sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ELEMENT_ART_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMFMA_ELEMENT_ART_SONSTIGE(3, "ENUMFMA_Element_Art_sonstige", "sonstige"),
-
-	/**
 	 * The '<em><b>ENUMFMA Element Art Endverbinder</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,7 +53,7 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ELEMENT_ART_ENDVERBINDER(4, "ENUMFMA_Element_Art_Endverbinder", "Endverbinder"),
+	ENUMFMA_ELEMENT_ART_ENDVERBINDER(2, "ENUMFMA_Element_Art_Endverbinder", "Endverbinder"),
 
 	/**
 	 * The '<em><b>ENUMFMA Element Art Endverbinder modifiziert</b></em>' literal object.
@@ -76,7 +63,7 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ELEMENT_ART_ENDVERBINDER_MODIFIZIERT(5, "ENUMFMA_Element_Art_Endverbinder_modifiziert", "Endverbinder_modifiziert"),
+	ENUMFMA_ELEMENT_ART_ENDVERBINDER_MODIFIZIERT(3, "ENUMFMA_Element_Art_Endverbinder_modifiziert", "Endverbinder_modifiziert"),
 
 	/**
 	 * The '<em><b>ENUMFMA Element Art Kurzschlussverbinder</b></em>' literal object.
@@ -86,17 +73,7 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ELEMENT_ART_KURZSCHLUSSVERBINDER(6, "ENUMFMA_Element_Art_Kurzschlussverbinder", "Kurzschlussverbinder"),
-
-	/**
-	 * The '<em><b>ENUMFMA Element Art Ueberlagerungsverbinder</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER(7, "ENUMFMA_Element_Art_Ueberlagerungsverbinder", "Ueberlagerungsverbinder"),
+	ENUMFMA_ELEMENT_ART_KURZSCHLUSSVERBINDER(4, "ENUMFMA_Element_Art_Kurzschlussverbinder", "Kurzschlussverbinder"),
 
 	/**
 	 * The '<em><b>ENUMFMA Element Art Potentialausgleichsverbinder</b></em>' literal object.
@@ -106,7 +83,37 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ELEMENT_ART_POTENTIALAUSGLEICHSVERBINDER(8, "ENUMFMA_Element_Art_Potentialausgleichsverbinder", "Potentialausgleichsverbinder");
+	ENUMFMA_ELEMENT_ART_POTENTIALAUSGLEICHSVERBINDER(5, "ENUMFMA_Element_Art_Potentialausgleichsverbinder", "Potentialausgleichsverbinder"),
+
+	/**
+	 * The '<em><b>ENUMFMA Element Art sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ELEMENT_ART_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMFMA_ELEMENT_ART_SONSTIGE(6, "ENUMFMA_Element_Art_sonstige", "sonstige"),
+
+	/**
+	 * The '<em><b>ENUMFMA Element Art SVerbinder</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ELEMENT_ART_SVERBINDER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMFMA_ELEMENT_ART_SVERBINDER(7, "ENUMFMA_Element_Art_S_Verbinder", "S_Verbinder"),
+
+	/**
+	 * The '<em><b>ENUMFMA Element Art Ueberlagerungsverbinder</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER(8, "ENUMFMA_Element_Art_Ueberlagerungsverbinder", "Ueberlagerungsverbinder");
 
 	/**
 	 * The '<em><b>ENUMFMA Element Art Anschlussseile</b></em>' literal value.
@@ -131,28 +138,6 @@ public enum ENUMFMAElementArt implements Enumerator {
 	public static final int ENUMFMA_ELEMENT_ART_DROSSELSPULE_VALUE = 1;
 
 	/**
-	 * The '<em><b>ENUMFMA Element Art SVerbinder</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ELEMENT_ART_SVERBINDER
-	 * @model name="ENUMFMA_Element_Art_S_Verbinder" literal="S_Verbinder"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMFMA_ELEMENT_ART_SVERBINDER_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUMFMA Element Art sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ELEMENT_ART_SONSTIGE
-	 * @model name="ENUMFMA_Element_Art_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMFMA_ELEMENT_ART_SONSTIGE_VALUE = 3;
-
-	/**
 	 * The '<em><b>ENUMFMA Element Art Endverbinder</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -161,7 +146,7 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ELEMENT_ART_ENDVERBINDER_VALUE = 4;
+	public static final int ENUMFMA_ELEMENT_ART_ENDVERBINDER_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMFMA Element Art Endverbinder modifiziert</b></em>' literal value.
@@ -172,7 +157,7 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ELEMENT_ART_ENDVERBINDER_MODIFIZIERT_VALUE = 5;
+	public static final int ENUMFMA_ELEMENT_ART_ENDVERBINDER_MODIFIZIERT_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMFMA Element Art Kurzschlussverbinder</b></em>' literal value.
@@ -183,18 +168,7 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ELEMENT_ART_KURZSCHLUSSVERBINDER_VALUE = 6;
-
-	/**
-	 * The '<em><b>ENUMFMA Element Art Ueberlagerungsverbinder</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER
-	 * @model name="ENUMFMA_Element_Art_Ueberlagerungsverbinder" literal="Ueberlagerungsverbinder"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER_VALUE = 7;
+	public static final int ENUMFMA_ELEMENT_ART_KURZSCHLUSSVERBINDER_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUMFMA Element Art Potentialausgleichsverbinder</b></em>' literal value.
@@ -205,7 +179,40 @@ public enum ENUMFMAElementArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ELEMENT_ART_POTENTIALAUSGLEICHSVERBINDER_VALUE = 8;
+	public static final int ENUMFMA_ELEMENT_ART_POTENTIALAUSGLEICHSVERBINDER_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUMFMA Element Art sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ELEMENT_ART_SONSTIGE
+	 * @model name="ENUMFMA_Element_Art_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ELEMENT_ART_SONSTIGE_VALUE = 6;
+
+	/**
+	 * The '<em><b>ENUMFMA Element Art SVerbinder</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ELEMENT_ART_SVERBINDER
+	 * @model name="ENUMFMA_Element_Art_S_Verbinder" literal="S_Verbinder"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ELEMENT_ART_SVERBINDER_VALUE = 7;
+
+	/**
+	 * The '<em><b>ENUMFMA Element Art Ueberlagerungsverbinder</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER
+	 * @model name="ENUMFMA_Element_Art_Ueberlagerungsverbinder" literal="Ueberlagerungsverbinder"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER_VALUE = 8;
 
 	/**
 	 * An array of all the '<em><b>ENUMFMA Element Art</b></em>' enumerators.
@@ -217,13 +224,13 @@ public enum ENUMFMAElementArt implements Enumerator {
 		new ENUMFMAElementArt[] {
 			ENUMFMA_ELEMENT_ART_ANSCHLUSSSEILE,
 			ENUMFMA_ELEMENT_ART_DROSSELSPULE,
-			ENUMFMA_ELEMENT_ART_SVERBINDER,
-			ENUMFMA_ELEMENT_ART_SONSTIGE,
 			ENUMFMA_ELEMENT_ART_ENDVERBINDER,
 			ENUMFMA_ELEMENT_ART_ENDVERBINDER_MODIFIZIERT,
 			ENUMFMA_ELEMENT_ART_KURZSCHLUSSVERBINDER,
-			ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER,
 			ENUMFMA_ELEMENT_ART_POTENTIALAUSGLEICHSVERBINDER,
+			ENUMFMA_ELEMENT_ART_SONSTIGE,
+			ENUMFMA_ELEMENT_ART_SVERBINDER,
+			ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER,
 		};
 
 	/**
@@ -282,13 +289,13 @@ public enum ENUMFMAElementArt implements Enumerator {
 		switch (value) {
 			case ENUMFMA_ELEMENT_ART_ANSCHLUSSSEILE_VALUE: return ENUMFMA_ELEMENT_ART_ANSCHLUSSSEILE;
 			case ENUMFMA_ELEMENT_ART_DROSSELSPULE_VALUE: return ENUMFMA_ELEMENT_ART_DROSSELSPULE;
-			case ENUMFMA_ELEMENT_ART_SVERBINDER_VALUE: return ENUMFMA_ELEMENT_ART_SVERBINDER;
-			case ENUMFMA_ELEMENT_ART_SONSTIGE_VALUE: return ENUMFMA_ELEMENT_ART_SONSTIGE;
 			case ENUMFMA_ELEMENT_ART_ENDVERBINDER_VALUE: return ENUMFMA_ELEMENT_ART_ENDVERBINDER;
 			case ENUMFMA_ELEMENT_ART_ENDVERBINDER_MODIFIZIERT_VALUE: return ENUMFMA_ELEMENT_ART_ENDVERBINDER_MODIFIZIERT;
 			case ENUMFMA_ELEMENT_ART_KURZSCHLUSSVERBINDER_VALUE: return ENUMFMA_ELEMENT_ART_KURZSCHLUSSVERBINDER;
-			case ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER_VALUE: return ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER;
 			case ENUMFMA_ELEMENT_ART_POTENTIALAUSGLEICHSVERBINDER_VALUE: return ENUMFMA_ELEMENT_ART_POTENTIALAUSGLEICHSVERBINDER;
+			case ENUMFMA_ELEMENT_ART_SONSTIGE_VALUE: return ENUMFMA_ELEMENT_ART_SONSTIGE;
+			case ENUMFMA_ELEMENT_ART_SVERBINDER_VALUE: return ENUMFMA_ELEMENT_ART_SVERBINDER;
+			case ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER_VALUE: return ENUMFMA_ELEMENT_ART_UEBERLAGERUNGSVERBINDER;
 			default: return null;
 		}
 	}

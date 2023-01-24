@@ -1,11 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
 /**
@@ -14,7 +21,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Grenze des Ausrüstungsbereichs eines Zugbeeinflussungssystems oder RBC-Grenze bei L2. Auch im Lastenheft bzw. Planungsregelwerk als Ausstieg definierte Bereichsgrenzen werden im Datenmodell generell als Einstieg abgebildet. Später Einstieg wird nicht abgebildet
+ * Grenze des Ausrüstungsbereichs eines Zugbeeinflussungssystems oder RBC-Grenze bei L2. Auch im Lastenheft bzw. Planungsregelwerk als Ausstieg definierte Bereichsgrenzen werden im Datenmodell generell als Einstieg abgebildet. Später Einstieg wird nicht abgebildet. Bei bedingtem Einstieg und Oder-Verknüpfung von Weichenlagen müssen verschiedene Instanzen von ZUB_Bereichsgrenze angelegt werden.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -31,6 +38,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze#getZUBBereichsgrenzeNachOhne <em>ZUB Bereichsgrenze Nach Ohne</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze#getZUBBereichsgrenzeNachPZB <em>ZUB Bereichsgrenze Nach PZB</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze#getZUBBereichsgrenzeNachSonstige <em>ZUB Bereichsgrenze Nach Sonstige</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze#getZUBBereichsgrenzeNachZBS <em>ZUB Bereichsgrenze Nach ZBS</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze#getZUBBgrenzeRBCWechsel <em>ZUB Bgrenze RBC Wechsel</em>}</li>
  * </ul>
  *
@@ -153,16 +161,19 @@ public interface ZUB_Bereichsgrenze extends Punkt_Objekt {
 
 	/**
 	 * Returns the value of the '<em><b>ZUB Bereichsgrenze Nach GNT</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup}.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Übergang in einen Ausrüstungsbereich Geschwindigkeitsüberwachung Neigetechnik (GNT) ("true"). Der Wert "false" wird nicht verwendet.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZUB Bereichsgrenze Nach GNT</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachGNT()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='ZUB_Bereichsgrenze_Nach_GNT'"
 	 * @generated
 	 */
-	EList<ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup> getZUBBereichsgrenzeNachGNT();
+	EList<ZUB_Bereichsgrenze_Nach_GNT_TypeClass> getZUBBereichsgrenzeNachGNT();
 
 	/**
 	 * Returns the value of the '<em><b>ZUB Bereichsgrenze Nach L2</b></em>' containment reference list.
@@ -234,6 +245,19 @@ public interface ZUB_Bereichsgrenze extends Punkt_Objekt {
 	 * @generated
 	 */
 	EList<ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup> getZUBBereichsgrenzeNachSonstige();
+
+	/**
+	 * Returns the value of the '<em><b>ZUB Bereichsgrenze Nach ZBS</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ZUB Bereichsgrenze Nach ZBS</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Bereichsgrenze_ZUBBereichsgrenzeNachZBS()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ZUB_Bereichsgrenze_Nach_ZBS'"
+	 * @generated
+	 */
+	EList<ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup> getZUBBereichsgrenzeNachZBS();
 
 	/**
 	 * Returns the value of the '<em><b>ZUB Bgrenze RBC Wechsel</b></em>' containment reference list.

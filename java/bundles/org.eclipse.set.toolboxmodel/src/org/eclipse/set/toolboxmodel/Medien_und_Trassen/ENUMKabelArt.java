@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen;
 
@@ -19,6 +26,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMKabelArt implements Enumerator {
 	/**
+	 * The '<em><b>ENUM Kabel Art Balisenkabel</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_KABEL_ART_BALISENKABEL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_KABEL_ART_BALISENKABEL(0, "ENUMKabel_Art_Balisenkabel", "Balisenkabel"),
+
+	/**
 	 * The '<em><b>ENUM Kabel Art Energie 400V AC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +43,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_KABEL_ART_ENERGIE_400V_AC(0, "ENUMKabel_Art_Energie_400V_AC", "Energie 400V AC"),
+	ENUM_KABEL_ART_ENERGIE_400V_AC(1, "ENUMKabel_Art_Energie_400V_AC", "Energie 400V AC"),
 
 	/**
 	 * The '<em><b>ENUM Kabel Art Energie 750V DC</b></em>' literal object.
@@ -36,7 +53,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_KABEL_ART_ENERGIE_750V_DC(1, "ENUMKabel_Art_Energie_750V_DC", "Energie 750V DC"),
+	ENUM_KABEL_ART_ENERGIE_750V_DC(2, "ENUMKabel_Art_Energie_750V_DC", "Energie 750V DC"),
 
 	/**
 	 * The '<em><b>ENUM Kabel Art LWL</b></em>' literal object.
@@ -46,7 +63,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_KABEL_ART_LWL(2, "ENUMKabel_Art_LWL", "LWL"),
+	ENUM_KABEL_ART_LWL(3, "ENUMKabel_Art_LWL", "LWL"),
 
 	/**
 	 * The '<em><b>ENUM Kabel Art Signalkabel adrig</b></em>' literal object.
@@ -56,7 +73,17 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_KABEL_ART_SIGNALKABEL_ADRIG(3, "ENUMKabel_Art_Signalkabel_adrig", "Signalkabel adrig"),
+	ENUM_KABEL_ART_SIGNALKABEL_ADRIG(4, "ENUMKabel_Art_Signalkabel_adrig", "Signalkabel adrig"),
+
+	/**
+	 * The '<em><b>ENUM Kabel Art Signalkabel kombiniert</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_KABEL_ART_SIGNALKABEL_KOMBINIERT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_KABEL_ART_SIGNALKABEL_KOMBINIERT(5, "ENUMKabel_Art_Signalkabel_kombiniert", "Signalkabel kombiniert"),
 
 	/**
 	 * The '<em><b>ENUM Kabel Art Signalkabel Sternvierer</b></em>' literal object.
@@ -66,7 +93,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_KABEL_ART_SIGNALKABEL_STERNVIERER(4, "ENUMKabel_Art_Signalkabel_Sternvierer", "Signalkabel Sternvierer"),
+	ENUM_KABEL_ART_SIGNALKABEL_STERNVIERER(6, "ENUMKabel_Art_Signalkabel_Sternvierer", "Signalkabel Sternvierer"),
 
 	/**
 	 * The '<em><b>ENUM Kabel Art sonstige</b></em>' literal object.
@@ -76,7 +103,18 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_KABEL_ART_SONSTIGE(5, "ENUMKabel_Art_sonstige", "sonstige");
+	ENUM_KABEL_ART_SONSTIGE(7, "ENUMKabel_Art_sonstige", "sonstige");
+
+	/**
+	 * The '<em><b>ENUM Kabel Art Balisenkabel</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_KABEL_ART_BALISENKABEL
+	 * @model name="ENUMKabel_Art_Balisenkabel" literal="Balisenkabel"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_KABEL_ART_BALISENKABEL_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUM Kabel Art Energie 400V AC</b></em>' literal value.
@@ -87,7 +125,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_KABEL_ART_ENERGIE_400V_AC_VALUE = 0;
+	public static final int ENUM_KABEL_ART_ENERGIE_400V_AC_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Kabel Art Energie 750V DC</b></em>' literal value.
@@ -98,7 +136,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_KABEL_ART_ENERGIE_750V_DC_VALUE = 1;
+	public static final int ENUM_KABEL_ART_ENERGIE_750V_DC_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Kabel Art LWL</b></em>' literal value.
@@ -109,7 +147,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_KABEL_ART_LWL_VALUE = 2;
+	public static final int ENUM_KABEL_ART_LWL_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Kabel Art Signalkabel adrig</b></em>' literal value.
@@ -120,7 +158,18 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_KABEL_ART_SIGNALKABEL_ADRIG_VALUE = 3;
+	public static final int ENUM_KABEL_ART_SIGNALKABEL_ADRIG_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Kabel Art Signalkabel kombiniert</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_KABEL_ART_SIGNALKABEL_KOMBINIERT
+	 * @model name="ENUMKabel_Art_Signalkabel_kombiniert" literal="Signalkabel kombiniert"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_KABEL_ART_SIGNALKABEL_KOMBINIERT_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Kabel Art Signalkabel Sternvierer</b></em>' literal value.
@@ -131,7 +180,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_KABEL_ART_SIGNALKABEL_STERNVIERER_VALUE = 4;
+	public static final int ENUM_KABEL_ART_SIGNALKABEL_STERNVIERER_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Kabel Art sonstige</b></em>' literal value.
@@ -142,7 +191,7 @@ public enum ENUMKabelArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_KABEL_ART_SONSTIGE_VALUE = 5;
+	public static final int ENUM_KABEL_ART_SONSTIGE_VALUE = 7;
 
 	/**
 	 * An array of all the '<em><b>ENUM Kabel Art</b></em>' enumerators.
@@ -152,10 +201,12 @@ public enum ENUMKabelArt implements Enumerator {
 	 */
 	private static final ENUMKabelArt[] VALUES_ARRAY =
 		new ENUMKabelArt[] {
+			ENUM_KABEL_ART_BALISENKABEL,
 			ENUM_KABEL_ART_ENERGIE_400V_AC,
 			ENUM_KABEL_ART_ENERGIE_750V_DC,
 			ENUM_KABEL_ART_LWL,
 			ENUM_KABEL_ART_SIGNALKABEL_ADRIG,
+			ENUM_KABEL_ART_SIGNALKABEL_KOMBINIERT,
 			ENUM_KABEL_ART_SIGNALKABEL_STERNVIERER,
 			ENUM_KABEL_ART_SONSTIGE,
 		};
@@ -214,10 +265,12 @@ public enum ENUMKabelArt implements Enumerator {
 	 */
 	public static ENUMKabelArt get(int value) {
 		switch (value) {
+			case ENUM_KABEL_ART_BALISENKABEL_VALUE: return ENUM_KABEL_ART_BALISENKABEL;
 			case ENUM_KABEL_ART_ENERGIE_400V_AC_VALUE: return ENUM_KABEL_ART_ENERGIE_400V_AC;
 			case ENUM_KABEL_ART_ENERGIE_750V_DC_VALUE: return ENUM_KABEL_ART_ENERGIE_750V_DC;
 			case ENUM_KABEL_ART_LWL_VALUE: return ENUM_KABEL_ART_LWL;
 			case ENUM_KABEL_ART_SIGNALKABEL_ADRIG_VALUE: return ENUM_KABEL_ART_SIGNALKABEL_ADRIG;
+			case ENUM_KABEL_ART_SIGNALKABEL_KOMBINIERT_VALUE: return ENUM_KABEL_ART_SIGNALKABEL_KOMBINIERT;
 			case ENUM_KABEL_ART_SIGNALKABEL_STERNVIERER_VALUE: return ENUM_KABEL_ART_SIGNALKABEL_STERNVIERER;
 			case ENUM_KABEL_ART_SONSTIGE_VALUE: return ENUM_KABEL_ART_SONSTIGE;
 			default: return null;

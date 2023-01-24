@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -17,6 +24,8 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ESG_Ind_Parameter_TypeCl
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ESG_Ind_Parameterwert_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ESG_Individuelle_Merkmale_AttributeGroup;
 
+import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>ESG Individuelle Merkmale Attribute Group</b></em>'.
@@ -28,6 +37,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ESG_Individuelle_Merkmal
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ESG_Individuelle_Merkmale_AttributeGroupImpl#getESGIndErlaeuterung <em>ESG Ind Erlaeuterung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ESG_Individuelle_Merkmale_AttributeGroupImpl#getESGIndParameter <em>ESG Ind Parameter</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ESG_Individuelle_Merkmale_AttributeGroupImpl#getESGIndParameterwert <em>ESG Ind Parameterwert</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ESG_Individuelle_Merkmale_AttributeGroupImpl#getIDAnhangUiG <em>ID Anhang Ui G</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,6 +72,25 @@ public class ESG_Individuelle_Merkmale_AttributeGroupImpl extends MinimalEObject
 	 * @ordered
 	 */
 	protected ESG_Ind_Parameterwert_TypeClass eSGIndParameterwert;
+
+	/**
+	 * The cached value of the '{@link #getIDAnhangUiG() <em>ID Anhang Ui G</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDAnhangUiG()
+	 * @generated
+	 * @ordered
+	 */
+	protected Anhang iDAnhangUiG;
+
+	/**
+	 * This is true if the ID Anhang Ui G reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDAnhangUiGESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -223,6 +252,73 @@ public class ESG_Individuelle_Merkmale_AttributeGroupImpl extends MinimalEObject
 	 * @generated
 	 */
 	@Override
+	public Anhang getIDAnhangUiG() {
+		if (iDAnhangUiG != null && iDAnhangUiG.eIsProxy()) {
+			InternalEObject oldIDAnhangUiG = (InternalEObject)iDAnhangUiG;
+			iDAnhangUiG = (Anhang)eResolveProxy(oldIDAnhangUiG);
+			if (iDAnhangUiG != oldIDAnhangUiG) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ID_ANHANG_UI_G, oldIDAnhangUiG, iDAnhangUiG));
+			}
+		}
+		return iDAnhangUiG;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Anhang basicGetIDAnhangUiG() {
+		return iDAnhangUiG;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDAnhangUiG(Anhang newIDAnhangUiG) {
+		Anhang oldIDAnhangUiG = iDAnhangUiG;
+		iDAnhangUiG = newIDAnhangUiG;
+		boolean oldIDAnhangUiGESet = iDAnhangUiGESet;
+		iDAnhangUiGESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ID_ANHANG_UI_G, oldIDAnhangUiG, iDAnhangUiG, !oldIDAnhangUiGESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDAnhangUiG() {
+		Anhang oldIDAnhangUiG = iDAnhangUiG;
+		boolean oldIDAnhangUiGESet = iDAnhangUiGESet;
+		iDAnhangUiG = null;
+		iDAnhangUiGESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ID_ANHANG_UI_G, oldIDAnhangUiG, null, oldIDAnhangUiGESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDAnhangUiG() {
+		return iDAnhangUiGESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ESG_IND_ERLAEUTERUNG:
@@ -250,6 +346,9 @@ public class ESG_Individuelle_Merkmale_AttributeGroupImpl extends MinimalEObject
 				return getESGIndParameter();
 			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ESG_IND_PARAMETERWERT:
 				return getESGIndParameterwert();
+			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ID_ANHANG_UI_G:
+				if (resolve) return getIDAnhangUiG();
+				return basicGetIDAnhangUiG();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -271,6 +370,9 @@ public class ESG_Individuelle_Merkmale_AttributeGroupImpl extends MinimalEObject
 				return;
 			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ESG_IND_PARAMETERWERT:
 				setESGIndParameterwert((ESG_Ind_Parameterwert_TypeClass)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ID_ANHANG_UI_G:
+				setIDAnhangUiG((Anhang)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -295,6 +397,9 @@ public class ESG_Individuelle_Merkmale_AttributeGroupImpl extends MinimalEObject
 			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ESG_IND_PARAMETERWERT:
 				setESGIndParameterwert((ESG_Ind_Parameterwert_TypeClass)null);
 				return;
+			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ID_ANHANG_UI_G:
+				unsetIDAnhangUiG();
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -315,6 +420,8 @@ public class ESG_Individuelle_Merkmale_AttributeGroupImpl extends MinimalEObject
 				return eSGIndParameter != null;
 			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ESG_IND_PARAMETERWERT:
 				return eSGIndParameterwert != null;
+			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP__ID_ANHANG_UI_G:
+				return isSetIDAnhangUiG();
 			default:
 				return super.eIsSet(featureID);
 		}

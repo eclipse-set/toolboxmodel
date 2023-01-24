@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block.util;
 
@@ -121,10 +128,6 @@ public class BlockAdapterFactory extends AdapterFactoryImpl {
 				return createBremsweg_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseEntwurfsgeschwindigkeit_TypeClass(Entwurfsgeschwindigkeit_TypeClass object) {
-				return createEntwurfsgeschwindigkeit_TypeClassAdapter();
-			}
-			@Override
 			public Adapter caseErlaubnis_Staendig_Vorhanden_TypeClass(Erlaubnis_Staendig_Vorhanden_TypeClass object) {
 				return createErlaubnis_Staendig_Vorhanden_TypeClassAdapter();
 			}
@@ -153,8 +156,12 @@ public class BlockAdapterFactory extends AdapterFactoryImpl {
 				return createStrecke_Art_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseTraktion_Art_TypeClass(Traktion_Art_TypeClass object) {
-				return createTraktion_Art_TypeClassAdapter();
+			public Adapter caseStreckengeschwindigkeit_TypeClass(Streckengeschwindigkeit_TypeClass object) {
+				return createStreckengeschwindigkeit_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseTraktion_Art_Elektrisch_TypeClass(Traktion_Art_Elektrisch_TypeClass object) {
+				return createTraktion_Art_Elektrisch_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseVorblockwecker_TypeClass(Vorblockwecker_TypeClass object) {
@@ -369,20 +376,6 @@ public class BlockAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass <em>Entwurfsgeschwindigkeit Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass
-	 * @generated
-	 */
-	public Adapter createEntwurfsgeschwindigkeit_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Block.Erlaubnis_Staendig_Vorhanden_TypeClass <em>Erlaubnis Staendig Vorhanden Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -481,16 +474,30 @@ public class BlockAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass <em>Traktion Art Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass <em>Streckengeschwindigkeit Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass
 	 * @generated
 	 */
-	public Adapter createTraktion_Art_TypeClassAdapter() {
+	public Adapter createStreckengeschwindigkeit_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass <em>Traktion Art Elektrisch Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass
+	 * @generated
+	 */
+	public Adapter createTraktion_Art_Elektrisch_TypeClassAdapter() {
 		return null;
 	}
 

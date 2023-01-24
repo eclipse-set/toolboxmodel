@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Verweise.util;
 
@@ -87,12 +94,28 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_Anhang_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseID_AnhangBearbeitungsvermerk_TypeClass(ID_AnhangBearbeitungsvermerk_TypeClass object) {
+				return createID_AnhangBearbeitungsvermerk_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseID_Anschluss_Element_TypeClass(ID_Anschluss_Element_TypeClass object) {
 				return createID_Anschluss_Element_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseID_ATO_TS_Instanz_ohne_Proxy_TypeClass(ID_ATO_TS_Instanz_ohne_Proxy_TypeClass object) {
+				return createID_ATO_TS_Instanz_ohne_Proxy_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_ATO_TS_Instanz_TypeClass(ID_ATO_TS_Instanz_TypeClass object) {
+				return createID_ATO_TS_Instanz_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass(ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass object) {
 				return createID_Ausgabe_Fachdaten_ohne_Proxy_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Aussenelementansteuerung_ohne_Proxy_TypeClass(ID_Aussenelementansteuerung_ohne_Proxy_TypeClass object) {
+				return createID_Aussenelementansteuerung_ohne_Proxy_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Aussenelementansteuerung_TypeClass(ID_Aussenelementansteuerung_TypeClass object) {
@@ -123,10 +146,6 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_Basis_Objekt_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseID_Bearbeitungsvermerk_TypeClass(ID_Bearbeitungsvermerk_TypeClass object) {
-				return createID_Bearbeitungsvermerk_TypeClassAdapter();
-			}
-			@Override
 			public Adapter caseID_Bedien_Anzeige_Element_TypeClass(ID_Bedien_Anzeige_Element_TypeClass object) {
 				return createID_Bedien_Anzeige_Element_TypeClassAdapter();
 			}
@@ -151,12 +170,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_Bedien_Zentrale_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseID_Befestigung_Bauwerk_TypeClass(ID_Befestigung_Bauwerk_TypeClass object) {
+				return createID_Befestigung_Bauwerk_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseID_Beginn_Bereich_TypeClass(ID_Beginn_Bereich_TypeClass object) {
 				return createID_Beginn_Bereich_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseID_Binaerdatei_ohne_Proxy_TypeClass(ID_Binaerdatei_ohne_Proxy_TypeClass object) {
-				return createID_Binaerdatei_ohne_Proxy_TypeClassAdapter();
+			public Adapter caseID_Bezugspunkt_Positionierung_TypeClass(ID_Bezugspunkt_Positionierung_TypeClass object) {
+				return createID_Bezugspunkt_Positionierung_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Binaerdaten_ohne_Proxy_TypeClass(ID_Binaerdaten_ohne_Proxy_TypeClass object) {
+				return createID_Binaerdaten_ohne_Proxy_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Block_Anlage_TypeClass(ID_Block_Anlage_TypeClass object) {
@@ -207,8 +234,8 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_Datenpunkt_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseID_DP_Bezugspunkt_TypeClass(ID_DP_Bezugspunkt_TypeClass object) {
-				return createID_DP_Bezugspunkt_TypeClassAdapter();
+			public Adapter caseID_DP_Bezug_Funktional_TypeClass(ID_DP_Bezug_Funktional_TypeClass object) {
+				return createID_DP_Bezug_Funktional_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Einschaltpunkt_TypeClass(ID_Einschaltpunkt_TypeClass object) {
@@ -231,12 +258,16 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_Energie_Eingang_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseID_Energie_Primaer_TypeClass(ID_Energie_Primaer_TypeClass object) {
-				return createID_Energie_Primaer_TypeClassAdapter();
+			public Adapter caseID_Energie_TypeClass(ID_Energie_TypeClass object) {
+				return createID_Energie_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_ESTW_Zentraleinheit_TypeClass(ID_ESTW_Zentraleinheit_TypeClass object) {
 				return createID_ESTW_Zentraleinheit_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_ETCS_Kante_TypeClass(ID_ETCS_Kante_TypeClass object) {
+				return createID_ETCS_Kante_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_ETCS_Knoten_ohne_Proxy_TypeClass(ID_ETCS_Knoten_ohne_Proxy_TypeClass object) {
@@ -249,6 +280,10 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseID_EV_Modul_TypeClass(ID_EV_Modul_TypeClass object) {
 				return createID_EV_Modul_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Fachtelegramm_ohne_Proxy_TypeClass(ID_Fachtelegramm_ohne_Proxy_TypeClass object) {
+				return createID_Fachtelegramm_ohne_Proxy_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Fachtelegramm_TypeClass(ID_Fachtelegramm_TypeClass object) {
@@ -287,8 +322,16 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_Fstr_Ausschluss_Besonders_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseID_Fstr_DWeg_ohne_Proxy_TypeClass(ID_Fstr_DWeg_ohne_Proxy_TypeClass object) {
+				return createID_Fstr_DWeg_ohne_Proxy_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseID_Fstr_DWeg_TypeClass(ID_Fstr_DWeg_TypeClass object) {
 				return createID_Fstr_DWeg_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Fstr_Fahrweg_ohne_Proxy_TypeClass(ID_Fstr_Fahrweg_ohne_Proxy_TypeClass object) {
+				return createID_Fstr_Fahrweg_ohne_Proxy_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Fstr_Fahrweg_TypeClass(ID_Fstr_Fahrweg_TypeClass object) {
@@ -311,6 +354,10 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_GEO_Art_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseID_GEO_Kante_TypeClass(ID_GEO_Kante_TypeClass object) {
+				return createID_GEO_Kante_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseID_GEO_Knoten_TypeClass(ID_GEO_Knoten_TypeClass object) {
 				return createID_GEO_Knoten_TypeClassAdapter();
 			}
@@ -321,10 +368,6 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseID_GEO_Punkt_TypeClass(ID_GEO_Punkt_TypeClass object) {
 				return createID_GEO_Punkt_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseID_Geraet_Programmiert_TypeClass(ID_Geraet_Programmiert_TypeClass object) {
-				return createID_Geraet_Programmiert_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_GFR_Anlage_ohne_Proxy_TypeClass(ID_GFR_Anlage_ohne_Proxy_TypeClass object) {
@@ -359,6 +402,22 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_Information_Primaer_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseID_Komponente_Programmiert_TypeClass(ID_Komponente_Programmiert_TypeClass object) {
+				return createID_Komponente_Programmiert_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Lageplan_Blattschnitt_TypeClass(ID_Lageplan_Blattschnitt_TypeClass object) {
+				return createID_Lageplan_Blattschnitt_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Lageplan_TypeClass(ID_Lageplan_TypeClass object) {
+				return createID_Lageplan_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Lageplan_Zustand_TypeClass(ID_Lageplan_Zustand_TypeClass object) {
+				return createID_Lageplan_Zustand_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseID_LEU_Anlage_ohne_Proxy_TypeClass(ID_LEU_Anlage_ohne_Proxy_TypeClass object) {
 				return createID_LEU_Anlage_ohne_Proxy_TypeClassAdapter();
 			}
@@ -367,8 +426,8 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 				return createID_LEU_Anlage_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseID_LEU_Bezugspunkt_TypeClass(ID_LEU_Bezugspunkt_TypeClass object) {
-				return createID_LEU_Bezugspunkt_TypeClassAdapter();
+			public Adapter caseID_LEU_Bezug_Funktional_TypeClass(ID_LEU_Bezug_Funktional_TypeClass object) {
+				return createID_LEU_Bezug_Funktional_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_LEU_Schaltkasten_ohne_Proxy_TypeClass(ID_LEU_Schaltkasten_ohne_Proxy_TypeClass object) {
@@ -381,6 +440,10 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseID_Markante_Stelle_TypeClass(ID_Markante_Stelle_TypeClass object) {
 				return createID_Markante_Stelle_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Markanter_Punkt_Gleis_Abschluss_TypeClass(ID_Markanter_Punkt_Gleis_Abschluss_TypeClass object) {
+				return createID_Markanter_Punkt_Gleis_Abschluss_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Markanter_Punkt_TypeClass(ID_Markanter_Punkt_TypeClass object) {
@@ -397,6 +460,10 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseID_NB_Zone_TypeClass(ID_NB_Zone_TypeClass object) {
 				return createID_NB_Zone_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Oertlichkeit_Ausgabe_TypeClass(ID_Oertlichkeit_Ausgabe_TypeClass object) {
+				return createID_Oertlichkeit_Ausgabe_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Oertlichkeit_Proxy_TypeClass(ID_Oertlichkeit_Proxy_TypeClass object) {
@@ -441,6 +508,10 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseID_RBC_TypeClass(ID_RBC_TypeClass object) {
 				return createID_RBC_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Regelzeichnung_ohne_Proxy_TypeClass(ID_Regelzeichnung_ohne_Proxy_TypeClass object) {
+				return createID_Regelzeichnung_ohne_Proxy_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Regelzeichnung_TypeClass(ID_Regelzeichnung_TypeClass object) {
@@ -509,6 +580,10 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseID_Stellwerk_TypeClass(ID_Stellwerk_TypeClass object) {
 				return createID_Stellwerk_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_Strecke_Bremsweg_ohne_Proxy_TypeClass(ID_Strecke_Bremsweg_ohne_Proxy_TypeClass object) {
+				return createID_Strecke_Bremsweg_ohne_Proxy_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_Strecke_Punkt_TypeClass(ID_Strecke_Punkt_TypeClass object) {
@@ -617,6 +692,10 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseID_ZL_TypeClass(ID_ZL_TypeClass object) {
 				return createID_ZL_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseID_ZLV_Bus_ohne_Proxy_TypeClass(ID_ZLV_Bus_ohne_Proxy_TypeClass object) {
+				return createID_ZLV_Bus_ohne_Proxy_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseID_ZLV_Bus_TypeClass(ID_ZLV_Bus_TypeClass object) {
@@ -739,6 +818,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_AnhangBearbeitungsvermerk_TypeClass <em>ID Anhang Bearbeitungsvermerk Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_AnhangBearbeitungsvermerk_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_AnhangBearbeitungsvermerk_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Anschluss_Element_TypeClass <em>ID Anschluss Element Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -753,6 +846,34 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_ohne_Proxy_TypeClass <em>ID ATO TS Instanz ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_ATO_TS_Instanz_ohne_Proxy_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_TypeClass <em>ID ATO TS Instanz Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_ATO_TS_Instanz_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_ATO_TS_Instanz_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass <em>ID Ausgabe Fachdaten ohne Proxy Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -763,6 +884,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_Ausgabe_Fachdaten_ohne_Proxy_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Aussenelementansteuerung_ohne_Proxy_TypeClass <em>ID Aussenelementansteuerung ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Aussenelementansteuerung_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Aussenelementansteuerung_ohne_Proxy_TypeClassAdapter() {
 		return null;
 	}
 
@@ -865,20 +1000,6 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Bearbeitungsvermerk_TypeClass <em>ID Bearbeitungsvermerk Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Bearbeitungsvermerk_TypeClass
-	 * @generated
-	 */
-	public Adapter createID_Bearbeitungsvermerk_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Bedien_Anzeige_Element_TypeClass <em>ID Bedien Anzeige Element Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -963,6 +1084,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Befestigung_Bauwerk_TypeClass <em>ID Befestigung Bauwerk Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Befestigung_Bauwerk_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Befestigung_Bauwerk_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Beginn_Bereich_TypeClass <em>ID Beginn Bereich Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -977,16 +1112,30 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdatei_ohne_Proxy_TypeClass <em>ID Binaerdatei ohne Proxy Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Bezugspunkt_Positionierung_TypeClass <em>ID Bezugspunkt Positionierung Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdatei_ohne_Proxy_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Bezugspunkt_Positionierung_TypeClass
 	 * @generated
 	 */
-	public Adapter createID_Binaerdatei_ohne_Proxy_TypeClassAdapter() {
+	public Adapter createID_Bezugspunkt_Positionierung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdaten_ohne_Proxy_TypeClass <em>ID Binaerdaten ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Binaerdaten_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Binaerdaten_ohne_Proxy_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1159,16 +1308,16 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezugspunkt_TypeClass <em>ID DP Bezugspunkt Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezug_Funktional_TypeClass <em>ID DP Bezug Funktional Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezugspunkt_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_DP_Bezug_Funktional_TypeClass
 	 * @generated
 	 */
-	public Adapter createID_DP_Bezugspunkt_TypeClassAdapter() {
+	public Adapter createID_DP_Bezug_Funktional_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1243,16 +1392,16 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Energie_Primaer_TypeClass <em>ID Energie Primaer Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Energie_TypeClass <em>ID Energie Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Energie_Primaer_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Energie_TypeClass
 	 * @generated
 	 */
-	public Adapter createID_Energie_Primaer_TypeClassAdapter() {
+	public Adapter createID_Energie_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1267,6 +1416,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_ESTW_Zentraleinheit_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_ETCS_Kante_TypeClass <em>ID ETCS Kante Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_ETCS_Kante_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_ETCS_Kante_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1309,6 +1472,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_EV_Modul_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Fachtelegramm_ohne_Proxy_TypeClass <em>ID Fachtelegramm ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Fachtelegramm_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Fachtelegramm_ohne_Proxy_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1439,6 +1616,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_ohne_Proxy_TypeClass <em>ID Fstr DWeg ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Fstr_DWeg_ohne_Proxy_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_DWeg_TypeClass <em>ID Fstr DWeg Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1449,6 +1640,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_Fstr_DWeg_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Fahrweg_ohne_Proxy_TypeClass <em>ID Fstr Fahrweg ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Fstr_Fahrweg_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Fstr_Fahrweg_ohne_Proxy_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1523,6 +1728,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Kante_TypeClass <em>ID GEO Kante Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Kante_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_GEO_Kante_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_GEO_Knoten_TypeClass <em>ID GEO Knoten Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1561,20 +1780,6 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_GEO_Punkt_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Geraet_Programmiert_TypeClass <em>ID Geraet Programmiert Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Geraet_Programmiert_TypeClass
-	 * @generated
-	 */
-	public Adapter createID_Geraet_Programmiert_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1691,6 +1896,62 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Komponente_Programmiert_TypeClass <em>ID Komponente Programmiert Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Komponente_Programmiert_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Komponente_Programmiert_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Blattschnitt_TypeClass <em>ID Lageplan Blattschnitt Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Blattschnitt_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Lageplan_Blattschnitt_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_TypeClass <em>ID Lageplan Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Lageplan_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Zustand_TypeClass <em>ID Lageplan Zustand Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Lageplan_Zustand_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Lageplan_Zustand_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Anlage_ohne_Proxy_TypeClass <em>ID LEU Anlage ohne Proxy Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1719,16 +1980,16 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezugspunkt_TypeClass <em>ID LEU Bezugspunkt Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezug_Funktional_TypeClass <em>ID LEU Bezug Funktional Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezugspunkt_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_LEU_Bezug_Funktional_TypeClass
 	 * @generated
 	 */
-	public Adapter createID_LEU_Bezugspunkt_TypeClassAdapter() {
+	public Adapter createID_LEU_Bezug_Funktional_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1771,6 +2032,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_Markante_Stelle_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Markanter_Punkt_Gleis_Abschluss_TypeClass <em>ID Markanter Punkt Gleis Abschluss Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Markanter_Punkt_Gleis_Abschluss_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Markanter_Punkt_Gleis_Abschluss_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1827,6 +2102,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_NB_Zone_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Oertlichkeit_Ausgabe_TypeClass <em>ID Oertlichkeit Ausgabe Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Oertlichkeit_Ausgabe_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Oertlichkeit_Ausgabe_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1981,6 +2270,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_RBC_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Regelzeichnung_ohne_Proxy_TypeClass <em>ID Regelzeichnung ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Regelzeichnung_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Regelzeichnung_ohne_Proxy_TypeClassAdapter() {
 		return null;
 	}
 
@@ -2219,6 +2522,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_Stellwerk_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_Strecke_Bremsweg_ohne_Proxy_TypeClass <em>ID Strecke Bremsweg ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_Strecke_Bremsweg_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_Strecke_Bremsweg_ohne_Proxy_TypeClassAdapter() {
 		return null;
 	}
 
@@ -2597,6 +2914,20 @@ public class VerweiseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createID_ZL_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Verweise.ID_ZLV_Bus_ohne_Proxy_TypeClass <em>ID ZLV Bus ohne Proxy Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Verweise.ID_ZLV_Bus_ohne_Proxy_TypeClass
+	 * @generated
+	 */
+	public Adapter createID_ZLV_Bus_ohne_Proxy_TypeClassAdapter() {
 		return null;
 	}
 

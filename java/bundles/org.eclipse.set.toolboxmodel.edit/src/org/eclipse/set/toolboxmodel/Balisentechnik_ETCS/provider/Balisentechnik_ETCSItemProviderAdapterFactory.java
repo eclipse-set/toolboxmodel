@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -78,6 +79,121 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Bes_Langer_Einfahrweg_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Bes_Langer_Einfahrweg_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstand_Bes_Langer_Einfahrweg_TypeClassAdapter() {
+		if (abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider == null) {
+			abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider = new Abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider(this);
+		}
+
+		return abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClassAdapter() {
+		if (abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider == null) {
+			abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider = new Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider(this);
+		}
+
+		return abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EP_TPI_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Abstand_Datenpunkt_EP_TPI_TypeClassItemProvider abstand_Datenpunkt_EP_TPI_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EP_TPI_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstand_Datenpunkt_EP_TPI_TypeClassAdapter() {
+		if (abstand_Datenpunkt_EP_TPI_TypeClassItemProvider == null) {
+			abstand_Datenpunkt_EP_TPI_TypeClassItemProvider = new Abstand_Datenpunkt_EP_TPI_TypeClassItemProvider(this);
+		}
+
+		return abstand_Datenpunkt_EP_TPI_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_TPI_Folgesignal_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_TPI_Folgesignal_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstand_Datenpunkt_TPI_Folgesignal_TypeClassAdapter() {
+		if (abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider == null) {
+			abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider = new Abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider(this);
+		}
+
+		return abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Einmesspunkt_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Abstand_Einmesspunkt_TypeClassItemProvider abstand_Einmesspunkt_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Einmesspunkt_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstand_Einmesspunkt_TypeClassAdapter() {
+		if (abstand_Einmesspunkt_TypeClassItemProvider == null) {
+			abstand_Einmesspunkt_TypeClassItemProvider = new Abstand_Einmesspunkt_TypeClassItemProvider(this);
+		}
+
+		return abstand_Einmesspunkt_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Grenze_Bereich_C_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,6 +214,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return abstand_Grenze_Bereich_C_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Reduziert_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Abstand_Reduziert_TypeClassItemProvider abstand_Reduziert_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Reduziert_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstand_Reduziert_TypeClassAdapter() {
+		if (abstand_Reduziert_TypeClassItemProvider == null) {
+			abstand_Reduziert_TypeClassItemProvider = new Abstand_Reduziert_TypeClassItemProvider(this);
+		}
+
+		return abstand_Reduziert_TypeClassItemProvider;
 	}
 
 	/**
@@ -144,6 +283,52 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return anordnung_Im_DP_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_ESG_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Anwendung_ESG_TypeClassItemProvider anwendung_ESG_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_ESG_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnwendung_ESG_TypeClassAdapter() {
+		if (anwendung_ESG_TypeClassItemProvider == null) {
+			anwendung_ESG_TypeClassItemProvider = new Anwendung_ESG_TypeClassItemProvider(this);
+		}
+
+		return anwendung_ESG_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_GNT_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Anwendung_GNT_TypeClassItemProvider anwendung_GNT_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_GNT_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnwendung_GNT_TypeClassAdapter() {
+		if (anwendung_GNT_TypeClassItemProvider == null) {
+			anwendung_GNT_TypeClassItemProvider = new Anwendung_GNT_TypeClassItemProvider(this);
+		}
+
+		return anwendung_GNT_TypeClassItemProvider;
 	}
 
 	/**
@@ -377,26 +562,72 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_SRS_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Geraetestand_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Baseline_SRS_TypeClassItemProvider baseline_SRS_TypeClassItemProvider;
+	protected Balise_Geraetestand_TypeClassItemProvider balise_Geraetestand_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_SRS_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Geraetestand_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createBaseline_SRS_TypeClassAdapter() {
-		if (baseline_SRS_TypeClassItemProvider == null) {
-			baseline_SRS_TypeClassItemProvider = new Baseline_SRS_TypeClassItemProvider(this);
+	public Adapter createBalise_Geraetestand_TypeClassAdapter() {
+		if (balise_Geraetestand_TypeClassItemProvider == null) {
+			balise_Geraetestand_TypeClassItemProvider = new Balise_Geraetestand_TypeClassItemProvider(this);
 		}
 
-		return baseline_SRS_TypeClassItemProvider;
+		return balise_Geraetestand_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisenhalter_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Balisenhalter_TypeClassItemProvider balisenhalter_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisenhalter_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBalisenhalter_TypeClassAdapter() {
+		if (balisenhalter_TypeClassItemProvider == null) {
+			balisenhalter_TypeClassItemProvider = new Balisenhalter_TypeClassItemProvider(this);
+		}
+
+		return balisenhalter_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_System_Version_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Baseline_System_Version_TypeClassItemProvider baseline_System_Version_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_System_Version_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBaseline_System_Version_TypeClassAdapter() {
+		if (baseline_System_Version_TypeClassItemProvider == null) {
+			baseline_System_Version_TypeClassItemProvider = new Baseline_System_Version_TypeClassItemProvider(this);
+		}
+
+		return baseline_System_Version_TypeClassItemProvider;
 	}
 
 	/**
@@ -837,6 +1068,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupAdapter() {
+		if (bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider == null) {
+			bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider = new Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider(this);
+		}
+
+		return bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -860,72 +1114,49 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BinaerdateiItemProvider binaerdateiItemProvider;
+	protected BinaerdatenItemProvider binaerdatenItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createBinaerdateiAdapter() {
-		if (binaerdateiItemProvider == null) {
-			binaerdateiItemProvider = new BinaerdateiItemProvider(this);
+	public Adapter createBinaerdatenAdapter() {
+		if (binaerdatenItemProvider == null) {
+			binaerdatenItemProvider = new BinaerdatenItemProvider(this);
 		}
 
-		return binaerdateiItemProvider;
+		return binaerdatenItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei_Allg_AttributeGroup} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten_Datei_AttributeGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Binaerdatei_Allg_AttributeGroupItemProvider binaerdatei_Allg_AttributeGroupItemProvider;
+	protected Binaerdaten_Datei_AttributeGroupItemProvider binaerdaten_Datei_AttributeGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei_Allg_AttributeGroup}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten_Datei_AttributeGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createBinaerdatei_Allg_AttributeGroupAdapter() {
-		if (binaerdatei_Allg_AttributeGroupItemProvider == null) {
-			binaerdatei_Allg_AttributeGroupItemProvider = new Binaerdatei_Allg_AttributeGroupItemProvider(this);
+	public Adapter createBinaerdaten_Datei_AttributeGroupAdapter() {
+		if (binaerdaten_Datei_AttributeGroupItemProvider == null) {
+			binaerdaten_Datei_AttributeGroupItemProvider = new Binaerdaten_Datei_AttributeGroupItemProvider(this);
 		}
 
-		return binaerdatei_Allg_AttributeGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bremsweg_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Bremsweg_TypeClassItemProvider bremsweg_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bremsweg_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBremsweg_TypeClassAdapter() {
-		if (bremsweg_TypeClassItemProvider == null) {
-			bremsweg_TypeClassItemProvider = new Bremsweg_TypeClassItemProvider(this);
-		}
-
-		return bremsweg_TypeClassItemProvider;
+		return binaerdaten_Datei_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -1090,6 +1321,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Einmesspunkt_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Datenpunkt_Einmesspunkt_AttributeGroupItemProvider datenpunkt_Einmesspunkt_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Einmesspunkt_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDatenpunkt_Einmesspunkt_AttributeGroupAdapter() {
+		if (datenpunkt_Einmesspunkt_AttributeGroupItemProvider == null) {
+			datenpunkt_Einmesspunkt_AttributeGroupItemProvider = new Datenpunkt_Einmesspunkt_AttributeGroupItemProvider(this);
+		}
+
+		return datenpunkt_Einmesspunkt_AttributeGroupItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Laenge_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1205,49 +1459,72 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_Art_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_ATO_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DP_Bezug_Betrieblich_Art_TypeClassItemProvider dP_Bezug_Betrieblich_Art_TypeClassItemProvider;
+	protected DP_ATO_TypeClassItemProvider dP_ATO_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_Art_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_ATO_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDP_Bezug_Betrieblich_Art_TypeClassAdapter() {
-		if (dP_Bezug_Betrieblich_Art_TypeClassItemProvider == null) {
-			dP_Bezug_Betrieblich_Art_TypeClassItemProvider = new DP_Bezug_Betrieblich_Art_TypeClassItemProvider(this);
+	public Adapter createDP_ATO_TypeClassAdapter() {
+		if (dP_ATO_TypeClassItemProvider == null) {
+			dP_ATO_TypeClassItemProvider = new DP_ATO_TypeClassItemProvider(this);
 		}
 
-		return dP_Bezug_Betrieblich_Art_TypeClassItemProvider;
+		return dP_ATO_TypeClassItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_AttributeGroup} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_Art_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DP_Bezug_Betrieblich_AttributeGroupItemProvider dP_Bezug_Betrieblich_AttributeGroupItemProvider;
+	protected DP_Bezug_Funktional_Art_TypeClassItemProvider dP_Bezug_Funktional_Art_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_AttributeGroup}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_Art_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDP_Bezug_Betrieblich_AttributeGroupAdapter() {
-		if (dP_Bezug_Betrieblich_AttributeGroupItemProvider == null) {
-			dP_Bezug_Betrieblich_AttributeGroupItemProvider = new DP_Bezug_Betrieblich_AttributeGroupItemProvider(this);
+	public Adapter createDP_Bezug_Funktional_Art_TypeClassAdapter() {
+		if (dP_Bezug_Funktional_Art_TypeClassItemProvider == null) {
+			dP_Bezug_Funktional_Art_TypeClassItemProvider = new DP_Bezug_Funktional_Art_TypeClassItemProvider(this);
 		}
 
-		return dP_Bezug_Betrieblich_AttributeGroupItemProvider;
+		return dP_Bezug_Funktional_Art_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DP_Bezug_Funktional_AttributeGroupItemProvider dP_Bezug_Funktional_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDP_Bezug_Funktional_AttributeGroupAdapter() {
+		if (dP_Bezug_Funktional_AttributeGroupItemProvider == null) {
+			dP_Bezug_Funktional_AttributeGroupItemProvider = new DP_Bezug_Funktional_AttributeGroupItemProvider(this);
+		}
+
+		return dP_Bezug_Funktional_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -1688,6 +1965,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Verlinkt_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DP_Verlinkt_TypeClassItemProvider dP_Verlinkt_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Verlinkt_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDP_Verlinkt_TypeClassAdapter() {
+		if (dP_Verlinkt_TypeClassItemProvider == null) {
+			dP_Verlinkt_TypeClassItemProvider = new DP_Verlinkt_TypeClassItemProvider(this);
+		}
+
+		return dP_Verlinkt_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Dunkelschaltanstoss_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2033,72 +2333,26 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_Kennung_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Gefahrpunktabstand_Abweichend_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ETCS_Adresse_Kennung_TypeClassItemProvider etcS_Adresse_Kennung_TypeClassItemProvider;
+	protected ETCS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider etcS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_Kennung_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Gefahrpunktabstand_Abweichend_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createETCS_Adresse_Kennung_TypeClassAdapter() {
-		if (etcS_Adresse_Kennung_TypeClassItemProvider == null) {
-			etcS_Adresse_Kennung_TypeClassItemProvider = new ETCS_Adresse_Kennung_TypeClassItemProvider(this);
+	public Adapter createETCS_Gefahrpunktabstand_Abweichend_TypeClassAdapter() {
+		if (etcS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider == null) {
+			etcS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider = new ETCS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider(this);
 		}
 
-		return etcS_Adresse_Kennung_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_BG_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ETCS_Adresse_NID_BG_TypeClassItemProvider etcS_Adresse_NID_BG_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_BG_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createETCS_Adresse_NID_BG_TypeClassAdapter() {
-		if (etcS_Adresse_NID_BG_TypeClassItemProvider == null) {
-			etcS_Adresse_NID_BG_TypeClassItemProvider = new ETCS_Adresse_NID_BG_TypeClassItemProvider(this);
-		}
-
-		return etcS_Adresse_NID_BG_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_C_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ETCS_Adresse_NID_C_TypeClassItemProvider etcS_Adresse_NID_C_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_C_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createETCS_Adresse_NID_C_TypeClassAdapter() {
-		if (etcS_Adresse_NID_C_TypeClassItemProvider == null) {
-			etcS_Adresse_NID_C_TypeClassItemProvider = new ETCS_Adresse_NID_C_TypeClassItemProvider(this);
-		}
-
-		return etcS_Adresse_NID_C_TypeClassItemProvider;
+		return etcS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider;
 	}
 
 	/**
@@ -2145,29 +2399,6 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return etcS_Kante_Bezeichnung_AttributeGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kennung_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ETCS_Kennung_TypeClassItemProvider etcS_Kennung_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kennung_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createETCS_Kennung_TypeClassAdapter() {
-		if (etcS_Kennung_TypeClassItemProvider == null) {
-			etcS_Kennung_TypeClassItemProvider = new ETCS_Kennung_TypeClassItemProvider(this);
-		}
-
-		return etcS_Kennung_TypeClassItemProvider;
 	}
 
 	/**
@@ -2309,6 +2540,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Richtungsanzeige} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETCS_RichtungsanzeigeItemProvider etcS_RichtungsanzeigeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Richtungsanzeige}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETCS_RichtungsanzeigeAdapter() {
+		if (etcS_RichtungsanzeigeItemProvider == null) {
+			etcS_RichtungsanzeigeItemProvider = new ETCS_RichtungsanzeigeItemProvider(this);
+		}
+
+		return etcS_RichtungsanzeigeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2401,6 +2655,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_System_Version_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETCS_System_Version_TypeClassItemProvider etcS_System_Version_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_System_Version_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETCS_System_Version_TypeClassAdapter() {
+		if (etcS_System_Version_TypeClassItemProvider == null) {
+			etcS_System_Version_TypeClassItemProvider = new ETCS_System_Version_TypeClassItemProvider(this);
+		}
+
+		return etcS_System_Version_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2444,29 +2721,6 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return etcS_W_Kr_MUKA_AttributeGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Ortsgestellt_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ETCS_W_Ortsgestellt_TypeClassItemProvider etcS_W_Ortsgestellt_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Ortsgestellt_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createETCS_W_Ortsgestellt_TypeClassAdapter() {
-		if (etcS_W_Ortsgestellt_TypeClassItemProvider == null) {
-			etcS_W_Ortsgestellt_TypeClassItemProvider = new ETCS_W_Ortsgestellt_TypeClassItemProvider(this);
-		}
-
-		return etcS_W_Ortsgestellt_TypeClassItemProvider;
 	}
 
 	/**
@@ -3091,26 +3345,26 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.GNT_Merkmale_AttributeGroup} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FW_Teil_Nummer_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GNT_Merkmale_AttributeGroupItemProvider gnT_Merkmale_AttributeGroupItemProvider;
+	protected FW_Teil_Nummer_TypeClassItemProvider fW_Teil_Nummer_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.GNT_Merkmale_AttributeGroup}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FW_Teil_Nummer_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createGNT_Merkmale_AttributeGroupAdapter() {
-		if (gnT_Merkmale_AttributeGroupItemProvider == null) {
-			gnT_Merkmale_AttributeGroupItemProvider = new GNT_Merkmale_AttributeGroupItemProvider(this);
+	public Adapter createFW_Teil_Nummer_TypeClassAdapter() {
+		if (fW_Teil_Nummer_TypeClassItemProvider == null) {
+			fW_Teil_Nummer_TypeClassItemProvider = new FW_Teil_Nummer_TypeClassItemProvider(this);
 		}
 
-		return gnT_Merkmale_AttributeGroupItemProvider;
+		return fW_Teil_Nummer_TypeClassItemProvider;
 	}
 
 	/**
@@ -3206,26 +3460,26 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individuell_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individualisierung_Weitere_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Individuell_TypeClassItemProvider individuell_TypeClassItemProvider;
+	protected Individualisierung_Weitere_TypeClassItemProvider individualisierung_Weitere_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individuell_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individualisierung_Weitere_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIndividuell_TypeClassAdapter() {
-		if (individuell_TypeClassItemProvider == null) {
-			individuell_TypeClassItemProvider = new Individuell_TypeClassItemProvider(this);
+	public Adapter createIndividualisierung_Weitere_TypeClassAdapter() {
+		if (individualisierung_Weitere_TypeClassItemProvider == null) {
+			individualisierung_Weitere_TypeClassItemProvider = new Individualisierung_Weitere_TypeClassItemProvider(this);
 		}
 
-		return individuell_TypeClassItemProvider;
+		return individualisierung_Weitere_TypeClassItemProvider;
 	}
 
 	/**
@@ -3436,6 +3690,75 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Gestufte_V_Signalisierung_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Laenge_Gestufte_V_Signalisierung_TypeClassItemProvider laenge_Gestufte_V_Signalisierung_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Gestufte_V_Signalisierung_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLaenge_Gestufte_V_Signalisierung_TypeClassAdapter() {
+		if (laenge_Gestufte_V_Signalisierung_TypeClassItemProvider == null) {
+			laenge_Gestufte_V_Signalisierung_TypeClassItemProvider = new Laenge_Gestufte_V_Signalisierung_TypeClassItemProvider(this);
+		}
+
+		return laenge_Gestufte_V_Signalisierung_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Soll_Mind_150_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Laenge_Soll_Mind_150_TypeClassItemProvider laenge_Soll_Mind_150_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Soll_Mind_150_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLaenge_Soll_Mind_150_TypeClassAdapter() {
+		if (laenge_Soll_Mind_150_TypeClassItemProvider == null) {
+			laenge_Soll_Mind_150_TypeClassItemProvider = new Laenge_Soll_Mind_150_TypeClassItemProvider(this);
+		}
+
+		return laenge_Soll_Mind_150_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Leistungsbedarf_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Leistungsbedarf_TypeClassItemProvider leistungsbedarf_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Leistungsbedarf_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLeistungsbedarf_TypeClassAdapter() {
+		if (leistungsbedarf_TypeClassItemProvider == null) {
+			leistungsbedarf_TypeClassItemProvider = new Leistungsbedarf_TypeClassItemProvider(this);
+		}
+
+		return leistungsbedarf_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3459,6 +3782,52 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Allg_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LEU_Anlage_Allg_AttributeGroupItemProvider leU_Anlage_Allg_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Allg_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLEU_Anlage_Allg_AttributeGroupAdapter() {
+		if (leU_Anlage_Allg_AttributeGroupItemProvider == null) {
+			leU_Anlage_Allg_AttributeGroupItemProvider = new LEU_Anlage_Allg_AttributeGroupItemProvider(this);
+		}
+
+		return leU_Anlage_Allg_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Art_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LEU_Anlage_Art_TypeClassItemProvider leU_Anlage_Art_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Art_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLEU_Anlage_Art_TypeClassAdapter() {
+		if (leU_Anlage_Art_TypeClassItemProvider == null) {
+			leU_Anlage_Art_TypeClassItemProvider = new LEU_Anlage_Art_TypeClassItemProvider(this);
+		}
+
+		return leU_Anlage_Art_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Bezeichnung_AttributeGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3479,29 +3848,6 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return leU_Anlage_Bezeichnung_AttributeGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Moduleigenschaften_AttributeGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LEU_Anlage_Moduleigenschaften_AttributeGroupItemProvider leU_Anlage_Moduleigenschaften_AttributeGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Moduleigenschaften_AttributeGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLEU_Anlage_Moduleigenschaften_AttributeGroupAdapter() {
-		if (leU_Anlage_Moduleigenschaften_AttributeGroupItemProvider == null) {
-			leU_Anlage_Moduleigenschaften_AttributeGroupItemProvider = new LEU_Anlage_Moduleigenschaften_AttributeGroupItemProvider(this);
-		}
-
-		return leU_Anlage_Moduleigenschaften_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -3640,6 +3986,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return leU_Modul_Bezeichnung_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Geraetestand_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LEU_Modul_Geraetestand_TypeClassItemProvider leU_Modul_Geraetestand_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Geraetestand_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLEU_Modul_Geraetestand_TypeClassAdapter() {
+		if (leU_Modul_Geraetestand_TypeClassItemProvider == null) {
+			leU_Modul_Geraetestand_TypeClassItemProvider = new LEU_Modul_Geraetestand_TypeClassItemProvider(this);
+		}
+
+		return leU_Modul_Geraetestand_TypeClassItemProvider;
 	}
 
 	/**
@@ -3827,29 +4196,6 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LfdNr_in_Telegr_Spec_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LfdNr_in_Telegr_Spec_TypeClassItemProvider lfdNr_in_Telegr_Spec_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LfdNr_in_Telegr_Spec_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLfdNr_in_Telegr_Spec_TypeClassAdapter() {
-		if (lfdNr_in_Telegr_Spec_TypeClassItemProvider == null) {
-			lfdNr_in_Telegr_Spec_TypeClassItemProvider = new LfdNr_in_Telegr_Spec_TypeClassItemProvider(this);
-		}
-
-		return lfdNr_in_Telegr_Spec_TypeClassItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Link_Distanz_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3916,6 +4262,52 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return lM_G_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdatei_Hilfe_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LT_Binaerdatei_Hilfe_AttributeGroupItemProvider lT_Binaerdatei_Hilfe_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdatei_Hilfe_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLT_Binaerdatei_Hilfe_AttributeGroupAdapter() {
+		if (lT_Binaerdatei_Hilfe_AttributeGroupItemProvider == null) {
+			lT_Binaerdatei_Hilfe_AttributeGroupItemProvider = new LT_Binaerdatei_Hilfe_AttributeGroupItemProvider(this);
+		}
+
+		return lT_Binaerdatei_Hilfe_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdaten_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LT_Binaerdaten_AttributeGroupItemProvider lT_Binaerdaten_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdaten_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLT_Binaerdaten_AttributeGroupAdapter() {
+		if (lT_Binaerdaten_AttributeGroupItemProvider == null) {
+			lT_Binaerdaten_AttributeGroupItemProvider = new LT_Binaerdaten_AttributeGroupItemProvider(this);
+		}
+
+		return lT_Binaerdaten_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -4011,6 +4403,75 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_150_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Massgebende_Neigung_Mind_150_TypeClassItemProvider massgebende_Neigung_Mind_150_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_150_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMassgebende_Neigung_Mind_150_TypeClassAdapter() {
+		if (massgebende_Neigung_Mind_150_TypeClassItemProvider == null) {
+			massgebende_Neigung_Mind_150_TypeClassItemProvider = new Massgebende_Neigung_Mind_150_TypeClassItemProvider(this);
+		}
+
+		return massgebende_Neigung_Mind_150_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_150_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_150_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMassgebende_Neigung_Mind_Sig_150_TypeClassAdapter() {
+		if (massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider == null) {
+			massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider = new Massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider(this);
+		}
+
+		return massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Massgebende_Neigung_Mind_Sig_TypeClassItemProvider massgebende_Neigung_Mind_Sig_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMassgebende_Neigung_Mind_Sig_TypeClassAdapter() {
+		if (massgebende_Neigung_Mind_Sig_TypeClassItemProvider == null) {
+			massgebende_Neigung_Mind_Sig_TypeClassItemProvider = new Massgebende_Neigung_Mind_Sig_TypeClassItemProvider(this);
+		}
+
+		return massgebende_Neigung_Mind_Sig_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Mastschild_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4080,26 +4541,72 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_AttributeGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Metallteil_TypeClassItemProvider metallteil_TypeClassItemProvider;
+	protected Metallteil_AttributeGroupItemProvider metallteil_AttributeGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_AttributeGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMetallteil_TypeClassAdapter() {
-		if (metallteil_TypeClassItemProvider == null) {
-			metallteil_TypeClassItemProvider = new Metallteil_TypeClassItemProvider(this);
+	public Adapter createMetallteil_AttributeGroupAdapter() {
+		if (metallteil_AttributeGroupItemProvider == null) {
+			metallteil_AttributeGroupItemProvider = new Metallteil_AttributeGroupItemProvider(this);
 		}
 
-		return metallteil_TypeClassItemProvider;
+		return metallteil_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Kategorie_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Metallteil_Kategorie_TypeClassItemProvider metallteil_Kategorie_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Kategorie_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMetallteil_Kategorie_TypeClassAdapter() {
+		if (metallteil_Kategorie_TypeClassItemProvider == null) {
+			metallteil_Kategorie_TypeClassItemProvider = new Metallteil_Kategorie_TypeClassItemProvider(this);
+		}
+
+		return metallteil_Kategorie_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Laenge_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Metallteil_Laenge_TypeClassItemProvider metallteil_Laenge_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Laenge_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMetallteil_Laenge_TypeClassAdapter() {
+		if (metallteil_Laenge_TypeClassItemProvider == null) {
+			metallteil_Laenge_TypeClassItemProvider = new Metallteil_Laenge_TypeClassItemProvider(this);
+		}
+
+		return metallteil_Laenge_TypeClassItemProvider;
 	}
 
 	/**
@@ -4123,6 +4630,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return modulnummer_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Montageabweichung_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Montageabweichung_TypeClassItemProvider montageabweichung_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Montageabweichung_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMontageabweichung_TypeClassAdapter() {
+		if (montageabweichung_TypeClassItemProvider == null) {
+			montageabweichung_TypeClassItemProvider = new Montageabweichung_TypeClassItemProvider(this);
+		}
+
+		return montageabweichung_TypeClassItemProvider;
 	}
 
 	/**
@@ -4169,6 +4699,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return nennleistung_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_BG_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NID_BG_TypeClassItemProvider niD_BG_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_BG_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNID_BG_TypeClassAdapter() {
+		if (niD_BG_TypeClassItemProvider == null) {
+			niD_BG_TypeClassItemProvider = new NID_BG_TypeClassItemProvider(this);
+		}
+
+		return niD_BG_TypeClassItemProvider;
 	}
 
 	/**
@@ -4238,6 +4791,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return niD_STM_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_TSR_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NID_TSR_TypeClassItemProvider niD_TSR_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_TSR_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNID_TSR_TypeClassAdapter() {
+		if (niD_TSR_TypeClassItemProvider == null) {
+			niD_TSR_TypeClassItemProvider = new NID_TSR_TypeClassItemProvider(this);
+		}
+
+		return niD_TSR_TypeClassItemProvider;
 	}
 
 	/**
@@ -4471,6 +5047,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Projektierungsfall_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Projektierungsfall_TypeClassItemProvider projektierungsfall_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Projektierungsfall_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProjektierungsfall_TypeClassAdapter() {
+		if (projektierungsfall_TypeClassItemProvider == null) {
+			projektierungsfall_TypeClassItemProvider = new Projektierungsfall_TypeClassItemProvider(this);
+		}
+
+		return projektierungsfall_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4517,26 +5116,26 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Unterversion_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_ETCS_System_Version_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RBC_SRS_Unterversion_TypeClassItemProvider rbC_SRS_Unterversion_TypeClassItemProvider;
+	protected RBC_ETCS_System_Version_TypeClassItemProvider rbC_ETCS_System_Version_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Unterversion_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_ETCS_System_Version_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRBC_SRS_Unterversion_TypeClassAdapter() {
-		if (rbC_SRS_Unterversion_TypeClassItemProvider == null) {
-			rbC_SRS_Unterversion_TypeClassItemProvider = new RBC_SRS_Unterversion_TypeClassItemProvider(this);
+	public Adapter createRBC_ETCS_System_Version_TypeClassAdapter() {
+		if (rbC_ETCS_System_Version_TypeClassItemProvider == null) {
+			rbC_ETCS_System_Version_TypeClassItemProvider = new RBC_ETCS_System_Version_TypeClassItemProvider(this);
 		}
 
-		return rbC_SRS_Unterversion_TypeClassItemProvider;
+		return rbC_ETCS_System_Version_TypeClassItemProvider;
 	}
 
 	/**
@@ -4701,6 +5300,52 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_150_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Solllaenge_Mind_Sig_150_TypeClassItemProvider solllaenge_Mind_Sig_150_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_150_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSolllaenge_Mind_Sig_150_TypeClassAdapter() {
+		if (solllaenge_Mind_Sig_150_TypeClassItemProvider == null) {
+			solllaenge_Mind_Sig_150_TypeClassItemProvider = new Solllaenge_Mind_Sig_150_TypeClassItemProvider(this);
+		}
+
+		return solllaenge_Mind_Sig_150_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Solllaenge_Mind_Sig_TypeClassItemProvider solllaenge_Mind_Sig_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSolllaenge_Mind_Sig_TypeClassAdapter() {
+		if (solllaenge_Mind_Sig_TypeClassItemProvider == null) {
+			solllaenge_Mind_Sig_TypeClassItemProvider = new Solllaenge_Mind_Sig_TypeClassItemProvider(this);
+		}
+
+		return solllaenge_Mind_Sig_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Sonstige_Standortangabe_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4790,29 +5435,6 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return spannung_Toleranz_Untere_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.SRS_Unterversion_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SRS_Unterversion_TypeClassItemProvider srS_Unterversion_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.SRS_Unterversion_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSRS_Unterversion_TypeClassAdapter() {
-		if (srS_Unterversion_TypeClassItemProvider == null) {
-			srS_Unterversion_TypeClassItemProvider = new SRS_Unterversion_TypeClassItemProvider(this);
-		}
-
-		return srS_Unterversion_TypeClassItemProvider;
 	}
 
 	/**
@@ -5023,6 +5645,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegramm_Index_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Telegramm_Index_TypeClassItemProvider telegramm_Index_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegramm_Index_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTelegramm_Index_TypeClassAdapter() {
+		if (telegramm_Index_TypeClassItemProvider == null) {
+			telegramm_Index_TypeClassItemProvider = new Telegramm_Index_TypeClassItemProvider(this);
+		}
+
+		return telegramm_Index_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegrammnummer_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5069,6 +5714,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Textmeldung_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Textmeldung_TypeClassItemProvider textmeldung_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Textmeldung_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTextmeldung_TypeClassAdapter() {
+		if (textmeldung_TypeClassItemProvider == null) {
+			textmeldung_TypeClassItemProvider = new Textmeldung_TypeClassItemProvider(this);
+		}
+
+		return textmeldung_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ueberbrueckung_EV_Unterbrechung_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5089,6 +5757,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return ueberbrueckung_EV_Unterbrechung_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ueberwachung_Laenge_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Ueberwachung_Laenge_TypeClassItemProvider ueberwachung_Laenge_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ueberwachung_Laenge_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUeberwachung_Laenge_TypeClassAdapter() {
+		if (ueberwachung_Laenge_TypeClassItemProvider == null) {
+			ueberwachung_Laenge_TypeClassItemProvider = new Ueberwachung_Laenge_TypeClassItemProvider(this);
+		}
+
+		return ueberwachung_Laenge_TypeClassItemProvider;
 	}
 
 	/**
@@ -5207,6 +5898,52 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Start_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected V_Start_TypeClassItemProvider v_Start_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Start_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createV_Start_TypeClassAdapter() {
+		if (v_Start_TypeClassItemProvider == null) {
+			v_Start_TypeClassItemProvider = new V_Start_TypeClassItemProvider(this);
+		}
+
+		return v_Start_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Ziel_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected V_Ziel_TypeClassItemProvider v_Ziel_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Ziel_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createV_Ziel_TypeClassAdapter() {
+		if (v_Ziel_TypeClassItemProvider == null) {
+			v_Ziel_TypeClassItemProvider = new V_Ziel_TypeClassItemProvider(this);
+		}
+
+		return v_Ziel_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Zul_Strecke_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5227,6 +5964,98 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return v_Zul_Strecke_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Kennung_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VBC_Kennung_TypeClassItemProvider vbC_Kennung_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Kennung_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVBC_Kennung_TypeClassAdapter() {
+		if (vbC_Kennung_TypeClassItemProvider == null) {
+			vbC_Kennung_TypeClassItemProvider = new VBC_Kennung_TypeClassItemProvider(this);
+		}
+
+		return vbC_Kennung_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_NID_C_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VBC_NID_C_TypeClassItemProvider vbC_NID_C_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_NID_C_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVBC_NID_C_TypeClassAdapter() {
+		if (vbC_NID_C_TypeClassItemProvider == null) {
+			vbC_NID_C_TypeClassItemProvider = new VBC_NID_C_TypeClassItemProvider(this);
+		}
+
+		return vbC_NID_C_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Setzen_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VBC_Setzen_TypeClassItemProvider vbC_Setzen_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Setzen_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVBC_Setzen_TypeClassAdapter() {
+		if (vbC_Setzen_TypeClassItemProvider == null) {
+			vbC_Setzen_TypeClassItemProvider = new VBC_Setzen_TypeClassItemProvider(this);
+		}
+
+		return vbC_Setzen_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Timer_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VBC_Timer_TypeClassItemProvider vbC_Timer_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Timer_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVBC_Timer_TypeClassAdapter() {
+		if (vbC_Timer_TypeClassItemProvider == null) {
+			vbC_Timer_TypeClassItemProvider = new VBC_Timer_TypeClassItemProvider(this);
+		}
+
+		return vbC_Timer_TypeClassItemProvider;
 	}
 
 	/**
@@ -5299,6 +6128,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verkuerzter_Abstand_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Verkuerzter_Abstand_TypeClassItemProvider verkuerzter_Abstand_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verkuerzter_Abstand_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVerkuerzter_Abstand_TypeClassAdapter() {
+		if (verkuerzter_Abstand_TypeClassItemProvider == null) {
+			verkuerzter_Abstand_TypeClassItemProvider = new Verkuerzter_Abstand_TypeClassItemProvider(this);
+		}
+
+		return verkuerzter_Abstand_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_Als_Rueckfall_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5319,6 +6171,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return verwendung_Als_Rueckfall_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_Hilfe_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Verwendung_Hilfe_TypeClassItemProvider verwendung_Hilfe_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_Hilfe_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVerwendung_Hilfe_TypeClassAdapter() {
+		if (verwendung_Hilfe_TypeClassItemProvider == null) {
+			verwendung_Hilfe_TypeClassItemProvider = new Verwendung_Hilfe_TypeClassItemProvider(this);
+		}
+
+		return verwendung_Hilfe_TypeClassItemProvider;
 	}
 
 	/**
@@ -5434,6 +6309,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return vlA_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Vorsignalabstand_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Vorsignalabstand_TypeClassItemProvider vorsignalabstand_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Vorsignalabstand_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVorsignalabstand_TypeClassAdapter() {
+		if (vorsignalabstand_TypeClassItemProvider == null) {
+			vorsignalabstand_TypeClassItemProvider = new Vorsignalabstand_TypeClassItemProvider(this);
+		}
+
+		return vorsignalabstand_TypeClassItemProvider;
 	}
 
 	/**
@@ -5690,6 +6588,98 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZBS_SchutzstreckeItemProvider zbS_SchutzstreckeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZBS_SchutzstreckeAdapter() {
+		if (zbS_SchutzstreckeItemProvider == null) {
+			zbS_SchutzstreckeItemProvider = new ZBS_SchutzstreckeItemProvider(this);
+		}
+
+		return zbS_SchutzstreckeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke_Allg_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZBS_Schutzstrecke_Allg_AttributeGroupItemProvider zbS_Schutzstrecke_Allg_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke_Allg_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZBS_Schutzstrecke_Allg_AttributeGroupAdapter() {
+		if (zbS_Schutzstrecke_Allg_AttributeGroupItemProvider == null) {
+			zbS_Schutzstrecke_Allg_AttributeGroupItemProvider = new ZBS_Schutzstrecke_Allg_AttributeGroupItemProvider(this);
+		}
+
+		return zbS_Schutzstrecke_Allg_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZBS_SignalItemProvider zbS_SignalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZBS_SignalAdapter() {
+		if (zbS_SignalItemProvider == null) {
+			zbS_SignalItemProvider = new ZBS_SignalItemProvider(this);
+		}
+
+		return zbS_SignalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal_Signalabstand_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZBS_Signal_Signalabstand_AttributeGroupItemProvider zbS_Signal_Signalabstand_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal_Signalabstand_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZBS_Signal_Signalabstand_AttributeGroupAdapter() {
+		if (zbS_Signal_Signalabstand_AttributeGroupItemProvider == null) {
+			zbS_Signal_Signalabstand_AttributeGroupItemProvider = new ZBS_Signal_Signalabstand_AttributeGroupItemProvider(this);
+		}
+
+		return zbS_Signal_Signalabstand_AttributeGroupItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ziel_DP_Ausrichtung_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5874,26 +6864,26 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ZUB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider zuB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider;
+	protected ZUB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider zuB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createZUB_Bereichsgrenze_Nach_GNT_AttributeGroupAdapter() {
-		if (zuB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider == null) {
-			zuB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider = new ZUB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider(this);
+	public Adapter createZUB_Bereichsgrenze_Nach_GNT_TypeClassAdapter() {
+		if (zuB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider == null) {
+			zuB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider = new ZUB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider(this);
 		}
 
-		return zuB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider;
+		return zuB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider;
 	}
 
 	/**
@@ -5917,6 +6907,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return zuB_Bereichsgrenze_Nach_L2_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupAdapter() {
+		if (zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider == null) {
+			zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider = new ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider(this);
+		}
+
+		return zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -6009,6 +7022,29 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		}
 
 		return zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider zuB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZUB_Bereichsgrenze_Nach_ZBS_AttributeGroupAdapter() {
+		if (zuB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider == null) {
+			zuB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider = new ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider(this);
+		}
+
+		return zuB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -6208,9 +7244,17 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 	 */
 	@Override
 	public void dispose() {
+		if (abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider != null) abstand_Bes_Langer_Einfahrweg_TypeClassItemProvider.dispose();
+		if (abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider != null) abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassItemProvider.dispose();
+		if (abstand_Datenpunkt_EP_TPI_TypeClassItemProvider != null) abstand_Datenpunkt_EP_TPI_TypeClassItemProvider.dispose();
+		if (abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider != null) abstand_Datenpunkt_TPI_Folgesignal_TypeClassItemProvider.dispose();
+		if (abstand_Einmesspunkt_TypeClassItemProvider != null) abstand_Einmesspunkt_TypeClassItemProvider.dispose();
 		if (abstand_Grenze_Bereich_C_TypeClassItemProvider != null) abstand_Grenze_Bereich_C_TypeClassItemProvider.dispose();
+		if (abstand_Reduziert_TypeClassItemProvider != null) abstand_Reduziert_TypeClassItemProvider.dispose();
 		if (anlagenteil_Sonstige_TypeClassItemProvider != null) anlagenteil_Sonstige_TypeClassItemProvider.dispose();
 		if (anordnung_Im_DP_TypeClassItemProvider != null) anordnung_Im_DP_TypeClassItemProvider.dispose();
+		if (anwendung_ESG_TypeClassItemProvider != null) anwendung_ESG_TypeClassItemProvider.dispose();
+		if (anwendung_GNT_TypeClassItemProvider != null) anwendung_GNT_TypeClassItemProvider.dispose();
 		if (anwendung_Sonst_TypeClassItemProvider != null) anwendung_Sonst_TypeClassItemProvider.dispose();
 		if (anwendungssystem_TypeClassItemProvider != null) anwendungssystem_TypeClassItemProvider.dispose();
 		if (anzahl_Voll_LEU_Kalkuliert_TypeClassItemProvider != null) anzahl_Voll_LEU_Kalkuliert_TypeClassItemProvider.dispose();
@@ -6221,7 +7265,9 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (ausstieg_ETCS_Sperre_TypeClassItemProvider != null) ausstieg_ETCS_Sperre_TypeClassItemProvider.dispose();
 		if (baliseItemProvider != null) baliseItemProvider.dispose();
 		if (balise_Allg_AttributeGroupItemProvider != null) balise_Allg_AttributeGroupItemProvider.dispose();
-		if (baseline_SRS_TypeClassItemProvider != null) baseline_SRS_TypeClassItemProvider.dispose();
+		if (balise_Geraetestand_TypeClassItemProvider != null) balise_Geraetestand_TypeClassItemProvider.dispose();
+		if (balisenhalter_TypeClassItemProvider != null) balisenhalter_TypeClassItemProvider.dispose();
+		if (baseline_System_Version_TypeClassItemProvider != null) baseline_System_Version_TypeClassItemProvider.dispose();
 		if (bedingung_Besondere_AttributeGroupItemProvider != null) bedingung_Besondere_AttributeGroupItemProvider.dispose();
 		if (bedingung_PZB_AttributeGroupItemProvider != null) bedingung_PZB_AttributeGroupItemProvider.dispose();
 		if (bedingung_Signal_AttributeGroupItemProvider != null) bedingung_Signal_AttributeGroupItemProvider.dispose();
@@ -6241,10 +7287,10 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (bgrenze_Nach_LZB_Bed_Einstieg_AttributeGroupItemProvider != null) bgrenze_Nach_LZB_Bed_Einstieg_AttributeGroupItemProvider.dispose();
 		if (bgrenze_Nach_Ohne_Bed_Einstieg_AttributeGroupItemProvider != null) bgrenze_Nach_Ohne_Bed_Einstieg_AttributeGroupItemProvider.dispose();
 		if (bgrenze_Nach_PZB_Bed_Einstieg_AttributeGroupItemProvider != null) bgrenze_Nach_PZB_Bed_Einstieg_AttributeGroupItemProvider.dispose();
+		if (bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider != null) bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupItemProvider.dispose();
 		if (bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroupItemProvider != null) bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroupItemProvider.dispose();
-		if (binaerdateiItemProvider != null) binaerdateiItemProvider.dispose();
-		if (binaerdatei_Allg_AttributeGroupItemProvider != null) binaerdatei_Allg_AttributeGroupItemProvider.dispose();
-		if (bremsweg_TypeClassItemProvider != null) bremsweg_TypeClassItemProvider.dispose();
+		if (binaerdatenItemProvider != null) binaerdatenItemProvider.dispose();
+		if (binaerdaten_Datei_AttributeGroupItemProvider != null) binaerdaten_Datei_AttributeGroupItemProvider.dispose();
 		if (d_LEVELTR_TypeClassItemProvider != null) d_LEVELTR_TypeClassItemProvider.dispose();
 		if (dateiname_TypeClassItemProvider != null) dateiname_TypeClassItemProvider.dispose();
 		if (dateityp_Binaerdatei_TypeClassItemProvider != null) dateityp_Binaerdatei_TypeClassItemProvider.dispose();
@@ -6252,13 +7298,15 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (datenpunktItemProvider != null) datenpunktItemProvider.dispose();
 		if (datenpunkt_Allg_AttributeGroupItemProvider != null) datenpunkt_Allg_AttributeGroupItemProvider.dispose();
 		if (datenpunkt_Beschreibung_TypeClassItemProvider != null) datenpunkt_Beschreibung_TypeClassItemProvider.dispose();
+		if (datenpunkt_Einmesspunkt_AttributeGroupItemProvider != null) datenpunkt_Einmesspunkt_AttributeGroupItemProvider.dispose();
 		if (datenpunkt_Laenge_TypeClassItemProvider != null) datenpunkt_Laenge_TypeClassItemProvider.dispose();
 		if (datenpunkt_LinkItemProvider != null) datenpunkt_LinkItemProvider.dispose();
 		if (delta_VGES_TypeClassItemProvider != null) delta_VGES_TypeClassItemProvider.dispose();
 		if (delta_VLES_TypeClassItemProvider != null) delta_VLES_TypeClassItemProvider.dispose();
 		if (delta_VZES_TypeClassItemProvider != null) delta_VZES_TypeClassItemProvider.dispose();
-		if (dP_Bezug_Betrieblich_Art_TypeClassItemProvider != null) dP_Bezug_Betrieblich_Art_TypeClassItemProvider.dispose();
-		if (dP_Bezug_Betrieblich_AttributeGroupItemProvider != null) dP_Bezug_Betrieblich_AttributeGroupItemProvider.dispose();
+		if (dP_ATO_TypeClassItemProvider != null) dP_ATO_TypeClassItemProvider.dispose();
+		if (dP_Bezug_Funktional_Art_TypeClassItemProvider != null) dP_Bezug_Funktional_Art_TypeClassItemProvider.dispose();
+		if (dP_Bezug_Funktional_AttributeGroupItemProvider != null) dP_Bezug_Funktional_AttributeGroupItemProvider.dispose();
 		if (dP_ETCS_Adresse_AttributeGroupItemProvider != null) dP_ETCS_Adresse_AttributeGroupItemProvider.dispose();
 		if (dP_Link_Art_TypeClassItemProvider != null) dP_Link_Art_TypeClassItemProvider.dispose();
 		if (dP_Telegramm_AttributeGroupItemProvider != null) dP_Telegramm_AttributeGroupItemProvider.dispose();
@@ -6278,6 +7326,7 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (dP_Typ_Trans_TypeClassItemProvider != null) dP_Typ_Trans_TypeClassItemProvider.dispose();
 		if (dP_Typ_V_La_TypeClassItemProvider != null) dP_Typ_V_La_TypeClassItemProvider.dispose();
 		if (dP_Typ_ZBS_TypeClassItemProvider != null) dP_Typ_ZBS_TypeClassItemProvider.dispose();
+		if (dP_Verlinkt_TypeClassItemProvider != null) dP_Verlinkt_TypeClassItemProvider.dispose();
 		if (dunkelschaltanstoss_TypeClassItemProvider != null) dunkelschaltanstoss_TypeClassItemProvider.dispose();
 		if (dWeg_Intervall_200_TypeClassItemProvider != null) dWeg_Intervall_200_TypeClassItemProvider.dispose();
 		if (dWeg_Intervall_50_200_TypeClassItemProvider != null) dWeg_Intervall_50_200_TypeClassItemProvider.dispose();
@@ -6293,25 +7342,23 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (esG_Individuelle_Merkmale_AttributeGroupItemProvider != null) esG_Individuelle_Merkmale_AttributeGroupItemProvider.dispose();
 		if (esG_Spezifische_Merkmale_AttributeGroupItemProvider != null) esG_Spezifische_Merkmale_AttributeGroupItemProvider.dispose();
 		if (etcS_Adresse_AttributeGroupItemProvider != null) etcS_Adresse_AttributeGroupItemProvider.dispose();
-		if (etcS_Adresse_Kennung_TypeClassItemProvider != null) etcS_Adresse_Kennung_TypeClassItemProvider.dispose();
-		if (etcS_Adresse_NID_BG_TypeClassItemProvider != null) etcS_Adresse_NID_BG_TypeClassItemProvider.dispose();
-		if (etcS_Adresse_NID_C_TypeClassItemProvider != null) etcS_Adresse_NID_C_TypeClassItemProvider.dispose();
+		if (etcS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider != null) etcS_Gefahrpunktabstand_Abweichend_TypeClassItemProvider.dispose();
 		if (etcS_KanteItemProvider != null) etcS_KanteItemProvider.dispose();
 		if (etcS_Kante_Bezeichnung_AttributeGroupItemProvider != null) etcS_Kante_Bezeichnung_AttributeGroupItemProvider.dispose();
-		if (etcS_Kennung_TypeClassItemProvider != null) etcS_Kennung_TypeClassItemProvider.dispose();
 		if (etcS_KnotenItemProvider != null) etcS_KnotenItemProvider.dispose();
 		if (etcS_Knoten_Art_Sonstige_TypeClassItemProvider != null) etcS_Knoten_Art_Sonstige_TypeClassItemProvider.dispose();
 		if (etcS_Paketnummer_TypeClassItemProvider != null) etcS_Paketnummer_TypeClassItemProvider.dispose();
 		if (etcS_Par_Erlaeuterung_TypeClassItemProvider != null) etcS_Par_Erlaeuterung_TypeClassItemProvider.dispose();
 		if (etcS_Parametername_TypeClassItemProvider != null) etcS_Parametername_TypeClassItemProvider.dispose();
 		if (etcS_Parameterwert_TypeClassItemProvider != null) etcS_Parameterwert_TypeClassItemProvider.dispose();
+		if (etcS_RichtungsanzeigeItemProvider != null) etcS_RichtungsanzeigeItemProvider.dispose();
 		if (etcS_SignalItemProvider != null) etcS_SignalItemProvider.dispose();
 		if (etcS_Signal_Allg_AttributeGroupItemProvider != null) etcS_Signal_Allg_AttributeGroupItemProvider.dispose();
 		if (etcS_Signal_DWeg_AttributeGroupItemProvider != null) etcS_Signal_DWeg_AttributeGroupItemProvider.dispose();
 		if (etcS_Signal_TBV_AttributeGroupItemProvider != null) etcS_Signal_TBV_AttributeGroupItemProvider.dispose();
+		if (etcS_System_Version_TypeClassItemProvider != null) etcS_System_Version_TypeClassItemProvider.dispose();
 		if (etcS_W_KrItemProvider != null) etcS_W_KrItemProvider.dispose();
 		if (etcS_W_Kr_MUKA_AttributeGroupItemProvider != null) etcS_W_Kr_MUKA_AttributeGroupItemProvider.dispose();
-		if (etcS_W_Ortsgestellt_TypeClassItemProvider != null) etcS_W_Ortsgestellt_TypeClassItemProvider.dispose();
 		if (eV_ModulItemProvider != null) eV_ModulItemProvider.dispose();
 		if (eV_Modul_Art_TypeClassItemProvider != null) eV_Modul_Art_TypeClassItemProvider.dispose();
 		if (eV_Modul_Ausgang_AttributeGroupItemProvider != null) eV_Modul_Ausgang_AttributeGroupItemProvider.dispose();
@@ -6339,12 +7386,12 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (fT_ZBS_Merkmale_AttributeGroupItemProvider != null) fT_ZBS_Merkmale_AttributeGroupItemProvider.dispose();
 		if (fT_ZBS_Merkmale_La_AttributeGroupItemProvider != null) fT_ZBS_Merkmale_La_AttributeGroupItemProvider.dispose();
 		if (fT_ZBS_Typ_TypeClassItemProvider != null) fT_ZBS_Typ_TypeClassItemProvider.dispose();
-		if (gnT_Merkmale_AttributeGroupItemProvider != null) gnT_Merkmale_AttributeGroupItemProvider.dispose();
+		if (fW_Teil_Nummer_TypeClassItemProvider != null) fW_Teil_Nummer_TypeClassItemProvider.dispose();
 		if (gruppen_ID_TypeClassItemProvider != null) gruppen_ID_TypeClassItemProvider.dispose();
 		if (harter_Ausstieg_Aus_L2_TypeClassItemProvider != null) harter_Ausstieg_Aus_L2_TypeClassItemProvider.dispose();
 		if (hersteller_TypeClassItemProvider != null) hersteller_TypeClassItemProvider.dispose();
 		if (hinweis_Balisenbefestigung_TypeClassItemProvider != null) hinweis_Balisenbefestigung_TypeClassItemProvider.dispose();
-		if (individuell_TypeClassItemProvider != null) individuell_TypeClassItemProvider.dispose();
+		if (individualisierung_Weitere_TypeClassItemProvider != null) individualisierung_Weitere_TypeClassItemProvider.dispose();
 		if (ist_Befahren_TypeClassItemProvider != null) ist_Befahren_TypeClassItemProvider.dispose();
 		if (km_BTS_1_TypeClassItemProvider != null) km_BTS_1_TypeClassItemProvider.dispose();
 		if (km_BTS_2_TypeClassItemProvider != null) km_BTS_2_TypeClassItemProvider.dispose();
@@ -6354,15 +7401,20 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (l_ACKLEVELTR_TypeClassItemProvider != null) l_ACKLEVELTR_TypeClassItemProvider.dispose();
 		if (laenge_1_TypeClassItemProvider != null) laenge_1_TypeClassItemProvider.dispose();
 		if (laenge_Ausfuehrungsbereich_TypeClassItemProvider != null) laenge_Ausfuehrungsbereich_TypeClassItemProvider.dispose();
+		if (laenge_Gestufte_V_Signalisierung_TypeClassItemProvider != null) laenge_Gestufte_V_Signalisierung_TypeClassItemProvider.dispose();
+		if (laenge_Soll_Mind_150_TypeClassItemProvider != null) laenge_Soll_Mind_150_TypeClassItemProvider.dispose();
+		if (leistungsbedarf_TypeClassItemProvider != null) leistungsbedarf_TypeClassItemProvider.dispose();
 		if (leU_AnlageItemProvider != null) leU_AnlageItemProvider.dispose();
+		if (leU_Anlage_Allg_AttributeGroupItemProvider != null) leU_Anlage_Allg_AttributeGroupItemProvider.dispose();
+		if (leU_Anlage_Art_TypeClassItemProvider != null) leU_Anlage_Art_TypeClassItemProvider.dispose();
 		if (leU_Anlage_Bezeichnung_AttributeGroupItemProvider != null) leU_Anlage_Bezeichnung_AttributeGroupItemProvider.dispose();
-		if (leU_Anlage_Moduleigenschaften_AttributeGroupItemProvider != null) leU_Anlage_Moduleigenschaften_AttributeGroupItemProvider.dispose();
 		if (leU_Ausgang_Nr_TypeClassItemProvider != null) leU_Ausgang_Nr_TypeClassItemProvider.dispose();
 		if (leU_ModulItemProvider != null) leU_ModulItemProvider.dispose();
 		if (leU_Modul_Allg_AttributeGroupItemProvider != null) leU_Modul_Allg_AttributeGroupItemProvider.dispose();
 		if (leU_Modul_Art_TypeClassItemProvider != null) leU_Modul_Art_TypeClassItemProvider.dispose();
 		if (leU_Modul_Ausgang_AttributeGroupItemProvider != null) leU_Modul_Ausgang_AttributeGroupItemProvider.dispose();
 		if (leU_Modul_Bezeichnung_AttributeGroupItemProvider != null) leU_Modul_Bezeichnung_AttributeGroupItemProvider.dispose();
+		if (leU_Modul_Geraetestand_TypeClassItemProvider != null) leU_Modul_Geraetestand_TypeClassItemProvider.dispose();
 		if (leU_Modul_Typ_TypeClassItemProvider != null) leU_Modul_Typ_TypeClassItemProvider.dispose();
 		if (leU_SchaltkastenItemProvider != null) leU_SchaltkastenItemProvider.dispose();
 		if (leU_Schaltkasten_Bezeichnung_AttributeGroupItemProvider != null) leU_Schaltkasten_Bezeichnung_AttributeGroupItemProvider.dispose();
@@ -6371,24 +7423,33 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (leU_Schaltkasten_Typ_TypeClassItemProvider != null) leU_Schaltkasten_Typ_TypeClassItemProvider.dispose();
 		if (leU_Steuernde_AttributeGroupItemProvider != null) leU_Steuernde_AttributeGroupItemProvider.dispose();
 		if (lfd_Nr_Am_Bezugspunkt_TypeClassItemProvider != null) lfd_Nr_Am_Bezugspunkt_TypeClassItemProvider.dispose();
-		if (lfdNr_in_Telegr_Spec_TypeClassItemProvider != null) lfdNr_in_Telegr_Spec_TypeClassItemProvider.dispose();
 		if (link_Distanz_TypeClassItemProvider != null) link_Distanz_TypeClassItemProvider.dispose();
 		if (llA_TypeClassItemProvider != null) llA_TypeClassItemProvider.dispose();
 		if (lM_G_TypeClassItemProvider != null) lM_G_TypeClassItemProvider.dispose();
+		if (lT_Binaerdatei_Hilfe_AttributeGroupItemProvider != null) lT_Binaerdatei_Hilfe_AttributeGroupItemProvider.dispose();
+		if (lT_Binaerdaten_AttributeGroupItemProvider != null) lT_Binaerdaten_AttributeGroupItemProvider.dispose();
 		if (luft_TelegrammItemProvider != null) luft_TelegrammItemProvider.dispose();
 		if (m_LEVELTR_TypeClassItemProvider != null) m_LEVELTR_TypeClassItemProvider.dispose();
 		if (massgebende_Neig_1_TypeClassItemProvider != null) massgebende_Neig_1_TypeClassItemProvider.dispose();
 		if (massgebende_Neig_Schutzstrecke_TypeClassItemProvider != null) massgebende_Neig_Schutzstrecke_TypeClassItemProvider.dispose();
+		if (massgebende_Neigung_Mind_150_TypeClassItemProvider != null) massgebende_Neigung_Mind_150_TypeClassItemProvider.dispose();
+		if (massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider != null) massgebende_Neigung_Mind_Sig_150_TypeClassItemProvider.dispose();
+		if (massgebende_Neigung_Mind_Sig_TypeClassItemProvider != null) massgebende_Neigung_Mind_Sig_TypeClassItemProvider.dispose();
 		if (mastschild_TypeClassItemProvider != null) mastschild_TypeClassItemProvider.dispose();
 		if (max_Leistung_TypeClassItemProvider != null) max_Leistung_TypeClassItemProvider.dispose();
 		if (max_Unterbrechungszeit_TypeClassItemProvider != null) max_Unterbrechungszeit_TypeClassItemProvider.dispose();
-		if (metallteil_TypeClassItemProvider != null) metallteil_TypeClassItemProvider.dispose();
+		if (metallteil_AttributeGroupItemProvider != null) metallteil_AttributeGroupItemProvider.dispose();
+		if (metallteil_Kategorie_TypeClassItemProvider != null) metallteil_Kategorie_TypeClassItemProvider.dispose();
+		if (metallteil_Laenge_TypeClassItemProvider != null) metallteil_Laenge_TypeClassItemProvider.dispose();
 		if (modulnummer_TypeClassItemProvider != null) modulnummer_TypeClassItemProvider.dispose();
+		if (montageabweichung_TypeClassItemProvider != null) montageabweichung_TypeClassItemProvider.dispose();
 		if (neigung_TypeClassItemProvider != null) neigung_TypeClassItemProvider.dispose();
 		if (nennleistung_TypeClassItemProvider != null) nennleistung_TypeClassItemProvider.dispose();
+		if (niD_BG_TypeClassItemProvider != null) niD_BG_TypeClassItemProvider.dispose();
 		if (niD_C_TypeClassItemProvider != null) niD_C_TypeClassItemProvider.dispose();
 		if (niD_RBC_TypeClassItemProvider != null) niD_RBC_TypeClassItemProvider.dispose();
 		if (niD_STM_TypeClassItemProvider != null) niD_STM_TypeClassItemProvider.dispose();
+		if (niD_TSR_TypeClassItemProvider != null) niD_TSR_TypeClassItemProvider.dispose();
 		if (nummer_Schaltkasten_TypeClassItemProvider != null) nummer_Schaltkasten_TypeClassItemProvider.dispose();
 		if (oberstrombegrenzung_Gueterzug_TypeClassItemProvider != null) oberstrombegrenzung_Gueterzug_TypeClassItemProvider.dispose();
 		if (oberstrombegrenzung_Reisezug_TypeClassItemProvider != null) oberstrombegrenzung_Reisezug_TypeClassItemProvider.dispose();
@@ -6399,9 +7460,10 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (prioritaet_TypeClassItemProvider != null) prioritaet_TypeClassItemProvider.dispose();
 		if (prog_Datei_Einzel_AttributeGroupItemProvider != null) prog_Datei_Einzel_AttributeGroupItemProvider.dispose();
 		if (prog_Datei_GruppeItemProvider != null) prog_Datei_GruppeItemProvider.dispose();
+		if (projektierungsfall_TypeClassItemProvider != null) projektierungsfall_TypeClassItemProvider.dispose();
 		if (rbcItemProvider != null) rbcItemProvider.dispose();
 		if (rbC_Allg_AttributeGroupItemProvider != null) rbC_Allg_AttributeGroupItemProvider.dispose();
-		if (rbC_SRS_Unterversion_TypeClassItemProvider != null) rbC_SRS_Unterversion_TypeClassItemProvider.dispose();
+		if (rbC_ETCS_System_Version_TypeClassItemProvider != null) rbC_ETCS_System_Version_TypeClassItemProvider.dispose();
 		if (rbC_SRS_Version_TypeClassItemProvider != null) rbC_SRS_Version_TypeClassItemProvider.dispose();
 		if (rekursion_2_Nr_TypeClassItemProvider != null) rekursion_2_Nr_TypeClassItemProvider.dispose();
 		if (rekursion_Nr_TypeClassItemProvider != null) rekursion_Nr_TypeClassItemProvider.dispose();
@@ -6409,11 +7471,12 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (sbE_TypeClassItemProvider != null) sbE_TypeClassItemProvider.dispose();
 		if (schutzstrecke_Erforderlich_TypeClassItemProvider != null) schutzstrecke_Erforderlich_TypeClassItemProvider.dispose();
 		if (schutzstrecke_Vorhanden_TypeClassItemProvider != null) schutzstrecke_Vorhanden_TypeClassItemProvider.dispose();
+		if (solllaenge_Mind_Sig_150_TypeClassItemProvider != null) solllaenge_Mind_Sig_150_TypeClassItemProvider.dispose();
+		if (solllaenge_Mind_Sig_TypeClassItemProvider != null) solllaenge_Mind_Sig_TypeClassItemProvider.dispose();
 		if (sonstige_Standortangabe_TypeClassItemProvider != null) sonstige_Standortangabe_TypeClassItemProvider.dispose();
 		if (spannung_Art_TypeClassItemProvider != null) spannung_Art_TypeClassItemProvider.dispose();
 		if (spannung_Toleranz_Obere_TypeClassItemProvider != null) spannung_Toleranz_Obere_TypeClassItemProvider.dispose();
 		if (spannung_Toleranz_Untere_TypeClassItemProvider != null) spannung_Toleranz_Untere_TypeClassItemProvider.dispose();
-		if (srS_Unterversion_TypeClassItemProvider != null) srS_Unterversion_TypeClassItemProvider.dispose();
 		if (srS_Version_TypeClassItemProvider != null) srS_Version_TypeClassItemProvider.dispose();
 		if (standortangabe_Balisenschild_TypeClassItemProvider != null) standortangabe_Balisenschild_TypeClassItemProvider.dispose();
 		if (start_W_Element_AttributeGroupItemProvider != null) start_W_Element_AttributeGroupItemProvider.dispose();
@@ -6423,24 +7486,36 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (tbV_Meldepunkt_TypeClassItemProvider != null) tbV_Meldepunkt_TypeClassItemProvider.dispose();
 		if (tbV_Tunnelbereich_Laenge_TypeClassItemProvider != null) tbV_Tunnelbereich_Laenge_TypeClassItemProvider.dispose();
 		if (tbV_Tunnelsignal_TypeClassItemProvider != null) tbV_Tunnelsignal_TypeClassItemProvider.dispose();
+		if (telegramm_Index_TypeClassItemProvider != null) telegramm_Index_TypeClassItemProvider.dispose();
 		if (telegrammnummer_TypeClassItemProvider != null) telegrammnummer_TypeClassItemProvider.dispose();
 		if (text_Bedingung_TypeClassItemProvider != null) text_Bedingung_TypeClassItemProvider.dispose();
+		if (textmeldung_TypeClassItemProvider != null) textmeldung_TypeClassItemProvider.dispose();
 		if (ueberbrueckung_EV_Unterbrechung_TypeClassItemProvider != null) ueberbrueckung_EV_Unterbrechung_TypeClassItemProvider.dispose();
+		if (ueberwachung_Laenge_TypeClassItemProvider != null) ueberwachung_Laenge_TypeClassItemProvider.dispose();
 		if (umfahrstrasse_TypeClassItemProvider != null) umfahrstrasse_TypeClassItemProvider.dispose();
 		if (untergruppen_ID_TypeClassItemProvider != null) untergruppen_ID_TypeClassItemProvider.dispose();
 		if (v_Befehl_R_TypeClassItemProvider != null) v_Befehl_R_TypeClassItemProvider.dispose();
 		if (v_Befehl_Z_TypeClassItemProvider != null) v_Befehl_Z_TypeClassItemProvider.dispose();
 		if (v_Frei_TypeClassItemProvider != null) v_Frei_TypeClassItemProvider.dispose();
+		if (v_Start_TypeClassItemProvider != null) v_Start_TypeClassItemProvider.dispose();
+		if (v_Ziel_TypeClassItemProvider != null) v_Ziel_TypeClassItemProvider.dispose();
 		if (v_Zul_Strecke_TypeClassItemProvider != null) v_Zul_Strecke_TypeClassItemProvider.dispose();
+		if (vbC_Kennung_TypeClassItemProvider != null) vbC_Kennung_TypeClassItemProvider.dispose();
+		if (vbC_NID_C_TypeClassItemProvider != null) vbC_NID_C_TypeClassItemProvider.dispose();
+		if (vbC_Setzen_TypeClassItemProvider != null) vbC_Setzen_TypeClassItemProvider.dispose();
+		if (vbC_Timer_TypeClassItemProvider != null) vbC_Timer_TypeClassItemProvider.dispose();
 		if (verbot_Anhalten_TypeClassItemProvider != null) verbot_Anhalten_TypeClassItemProvider.dispose();
 		if (verbot_Regenerative_Bremse_TypeClassItemProvider != null) verbot_Regenerative_Bremse_TypeClassItemProvider.dispose();
 		if (verbot_WB_Art_TypeClassItemProvider != null) verbot_WB_Art_TypeClassItemProvider.dispose();
+		if (verkuerzter_Abstand_TypeClassItemProvider != null) verkuerzter_Abstand_TypeClassItemProvider.dispose();
 		if (verwendung_Als_Rueckfall_TypeClassItemProvider != null) verwendung_Als_Rueckfall_TypeClassItemProvider.dispose();
+		if (verwendung_Hilfe_TypeClassItemProvider != null) verwendung_Hilfe_TypeClassItemProvider.dispose();
 		if (verwendung_TypeClassItemProvider != null) verwendung_TypeClassItemProvider.dispose();
 		if (vgR_1_TypeClassItemProvider != null) vgR_1_TypeClassItemProvider.dispose();
 		if (vgR_2_TypeClassItemProvider != null) vgR_2_TypeClassItemProvider.dispose();
 		if (vgR_TypeClassItemProvider != null) vgR_TypeClassItemProvider.dispose();
 		if (vlA_TypeClassItemProvider != null) vlA_TypeClassItemProvider.dispose();
+		if (vorsignalabstand_TypeClassItemProvider != null) vorsignalabstand_TypeClassItemProvider.dispose();
 		if (vZ_TypeClassItemProvider != null) vZ_TypeClassItemProvider.dispose();
 		if (w_Anschluss_TypeClassItemProvider != null) w_Anschluss_TypeClassItemProvider.dispose();
 		if (w_Lage_TypeClassItemProvider != null) w_Lage_TypeClassItemProvider.dispose();
@@ -6452,6 +7527,10 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (zbS_La_Bereich_Neigung_TypeClassItemProvider != null) zbS_La_Bereich_Neigung_TypeClassItemProvider.dispose();
 		if (zbS_Merkmale_AttributeGroupItemProvider != null) zbS_Merkmale_AttributeGroupItemProvider.dispose();
 		if (zbS_Reaktion_TypeClassItemProvider != null) zbS_Reaktion_TypeClassItemProvider.dispose();
+		if (zbS_SchutzstreckeItemProvider != null) zbS_SchutzstreckeItemProvider.dispose();
+		if (zbS_Schutzstrecke_Allg_AttributeGroupItemProvider != null) zbS_Schutzstrecke_Allg_AttributeGroupItemProvider.dispose();
+		if (zbS_SignalItemProvider != null) zbS_SignalItemProvider.dispose();
+		if (zbS_Signal_Signalabstand_AttributeGroupItemProvider != null) zbS_Signal_Signalabstand_AttributeGroupItemProvider.dispose();
 		if (ziel_DP_Ausrichtung_TypeClassItemProvider != null) ziel_DP_Ausrichtung_TypeClassItemProvider.dispose();
 		if (ziel_Ist_Fahrwegende_TypeClassItemProvider != null) ziel_Ist_Fahrwegende_TypeClassItemProvider.dispose();
 		if (ziel_W_Element_AttributeGroupItemProvider != null) ziel_W_Element_AttributeGroupItemProvider.dispose();
@@ -6460,12 +7539,14 @@ public class Balisentechnik_ETCSItemProviderAdapterFactory extends Balisentechni
 		if (zuB_Bereichsgrenze_Allg_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Allg_AttributeGroupItemProvider.dispose();
 		if (zuB_Bereichsgrenze_Bezeichnung_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Bezeichnung_AttributeGroupItemProvider.dispose();
 		if (zuB_Bereichsgrenze_Nach_ESG_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_ESG_AttributeGroupItemProvider.dispose();
-		if (zuB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_GNT_AttributeGroupItemProvider.dispose();
+		if (zuB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider != null) zuB_Bereichsgrenze_Nach_GNT_TypeClassItemProvider.dispose();
 		if (zuB_Bereichsgrenze_Nach_L2_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_L2_AttributeGroupItemProvider.dispose();
+		if (zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupItemProvider.dispose();
 		if (zuB_Bereichsgrenze_Nach_LZB_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_LZB_AttributeGroupItemProvider.dispose();
 		if (zuB_Bereichsgrenze_Nach_Ohne_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_Ohne_AttributeGroupItemProvider.dispose();
 		if (zuB_Bereichsgrenze_Nach_PZB_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_PZB_AttributeGroupItemProvider.dispose();
 		if (zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroupItemProvider.dispose();
+		if (zuB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider != null) zuB_Bereichsgrenze_Nach_ZBS_AttributeGroupItemProvider.dispose();
 		if (zuB_Bgrenze_RBC_Wechsel_AttributeGroupItemProvider != null) zuB_Bgrenze_RBC_Wechsel_AttributeGroupItemProvider.dispose();
 		if (zuB_SE_Ausruestung_AttributeGroupItemProvider != null) zuB_SE_Ausruestung_AttributeGroupItemProvider.dispose();
 		if (zuB_StreckeneigenschaftItemProvider != null) zuB_StreckeneigenschaftItemProvider.dispose();

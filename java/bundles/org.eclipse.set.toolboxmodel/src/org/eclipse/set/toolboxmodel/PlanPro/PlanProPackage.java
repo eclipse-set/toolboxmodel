@@ -34,9 +34,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +53,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +72,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +91,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +110,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +129,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +148,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +167,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +186,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +205,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +224,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +243,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +262,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +281,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +300,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +319,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +338,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +357,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +376,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +395,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +414,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +433,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +452,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +471,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +490,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +569,7 @@ public interface PlanProPackage extends EPackage {
 	int ADRESSE_PLZ_ORT_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +615,7 @@ public interface PlanProPackage extends EPackage {
 	int ADRESSE_STRASSE_NR_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -939,7 +908,7 @@ public interface PlanProPackage extends EPackage {
 	int BAUABSCHNITT_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -985,7 +954,7 @@ public interface PlanProPackage extends EPackage {
 	int BAUPHASE_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1031,7 +1000,7 @@ public interface PlanProPackage extends EPackage {
 	int BAUZUSTAND_KURZBEZEICHNUNG_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1077,7 +1046,7 @@ public interface PlanProPackage extends EPackage {
 	int BAUZUSTAND_LANGBEZEICHNUNG_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1123,7 +1092,7 @@ public interface PlanProPackage extends EPackage {
 	int BEMERKUNG_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1169,7 +1138,7 @@ public interface PlanProPackage extends EPackage {
 	int BEZEICHNUNG_ANLAGE_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1215,7 +1184,7 @@ public interface PlanProPackage extends EPackage {
 	int BEZEICHNUNG_PLANUNG_GRUPPE_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1261,7 +1230,7 @@ public interface PlanProPackage extends EPackage {
 	int BEZEICHNUNG_PLANUNG_PROJEKT_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1307,7 +1276,7 @@ public interface PlanProPackage extends EPackage {
 	int BEZEICHNUNG_UNTERANLAGE_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1362,13 +1331,40 @@ public interface PlanProPackage extends EPackage {
 	int CONTAINER_ATTRIBUTE_GROUP__ANHANG = 0;
 
 	/**
+	 * The feature id for the '<em><b>ATO Segment Profile</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE = 1;
+
+	/**
+	 * The feature id for the '<em><b>ATO Timing Point</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT = 2;
+
+	/**
+	 * The feature id for the '<em><b>ATOTS Instanz</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ = 3;
+
+	/**
 	 * The feature id for the '<em><b>Aussenelementansteuerung</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG = 1;
+	int CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG = 4;
 
 	/**
 	 * The feature id for the '<em><b>Bahnsteig Anlage</b></em>' containment reference list.
@@ -1377,7 +1373,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ANLAGE = 2;
+	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ANLAGE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Bahnsteig Dach</b></em>' containment reference list.
@@ -1386,7 +1382,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_DACH = 3;
+	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_DACH = 6;
 
 	/**
 	 * The feature id for the '<em><b>Bahnsteig Kante</b></em>' containment reference list.
@@ -1395,7 +1391,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_KANTE = 4;
+	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_KANTE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Bahnsteig Zugang</b></em>' containment reference list.
@@ -1404,7 +1400,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ZUGANG = 5;
+	int CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ZUGANG = 8;
 
 	/**
 	 * The feature id for the '<em><b>Balise</b></em>' containment reference list.
@@ -1413,7 +1409,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BALISE = 6;
+	int CONTAINER_ATTRIBUTE_GROUP__BALISE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Bearbeitungsvermerk</b></em>' containment reference list.
@@ -1422,7 +1418,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK = 7;
+	int CONTAINER_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK = 10;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Anrueckabschnitt</b></em>' containment reference list.
@@ -1431,7 +1427,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ANRUECKABSCHNITT = 8;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ANRUECKABSCHNITT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Anzeige Element</b></em>' containment reference list.
@@ -1440,7 +1436,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ANZEIGE_ELEMENT = 9;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ANZEIGE_ELEMENT = 12;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Bezirk</b></em>' containment reference list.
@@ -1449,7 +1445,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_BEZIRK = 10;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_BEZIRK = 13;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Einrichtung Oertlich</b></em>' containment reference list.
@@ -1458,7 +1454,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_EINRICHTUNG_OERTLICH = 11;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_EINRICHTUNG_OERTLICH = 14;
 
 	/**
 	 * The feature id for the '<em><b>Bedien GBT</b></em>' containment reference list.
@@ -1467,7 +1463,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_GBT = 12;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_GBT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Oberflaeche</b></em>' containment reference list.
@@ -1476,7 +1472,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_OBERFLAECHE = 13;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_OBERFLAECHE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Oberflaeche Bild</b></em>' containment reference list.
@@ -1485,7 +1481,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_OBERFLAECHE_BILD = 14;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_OBERFLAECHE_BILD = 17;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Oertlichkeit</b></em>' containment reference list.
@@ -1494,7 +1490,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_OERTLICHKEIT = 15;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_OERTLICHKEIT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Platz</b></em>' containment reference list.
@@ -1503,7 +1499,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_PLATZ = 16;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_PLATZ = 19;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Standort</b></em>' containment reference list.
@@ -1512,7 +1508,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_STANDORT = 17;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_STANDORT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Bedien Zentrale</b></em>' containment reference list.
@@ -1521,16 +1517,16 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ZENTRALE = 18;
+	int CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ZENTRALE = 21;
 
 	/**
-	 * The feature id for the '<em><b>Binaerdatei</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Binaerdaten</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI = 19;
+	int CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN = 22;
 
 	/**
 	 * The feature id for the '<em><b>Block Anlage</b></em>' containment reference list.
@@ -1539,7 +1535,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE = 20;
+	int CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Block Element</b></em>' containment reference list.
@@ -1548,7 +1544,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BLOCK_ELEMENT = 21;
+	int CONTAINER_ATTRIBUTE_GROUP__BLOCK_ELEMENT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Block Strecke</b></em>' containment reference list.
@@ -1557,7 +1553,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BLOCK_STRECKE = 22;
+	int CONTAINER_ATTRIBUTE_GROUP__BLOCK_STRECKE = 25;
 
 	/**
 	 * The feature id for the '<em><b>BUE Anlage</b></em>' containment reference list.
@@ -1566,7 +1562,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_ANLAGE = 23;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_ANLAGE = 26;
 
 	/**
 	 * The feature id for the '<em><b>BUE Anlage Strasse</b></em>' containment reference list.
@@ -1575,7 +1571,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_ANLAGE_STRASSE = 24;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_ANLAGE_STRASSE = 27;
 
 	/**
 	 * The feature id for the '<em><b>BUE Anlage V</b></em>' containment reference list.
@@ -1584,7 +1580,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_ANLAGE_V = 25;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_ANLAGE_V = 28;
 
 	/**
 	 * The feature id for the '<em><b>BUE Ausschaltung</b></em>' containment reference list.
@@ -1593,7 +1589,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_AUSSCHALTUNG = 26;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_AUSSCHALTUNG = 29;
 
 	/**
 	 * The feature id for the '<em><b>BUE Bedien Anzeige Element</b></em>' containment reference list.
@@ -1602,7 +1598,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_BEDIEN_ANZEIGE_ELEMENT = 27;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_BEDIEN_ANZEIGE_ELEMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>BUE Deckendes Signal Zuordnung</b></em>' containment reference list.
@@ -1611,7 +1607,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_DECKENDES_SIGNAL_ZUORDNUNG = 28;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_DECKENDES_SIGNAL_ZUORDNUNG = 31;
 
 	/**
 	 * The feature id for the '<em><b>BUE Einschaltung</b></em>' containment reference list.
@@ -1620,7 +1616,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_EINSCHALTUNG = 29;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_EINSCHALTUNG = 32;
 
 	/**
 	 * The feature id for the '<em><b>BUE Einschaltung Zuordnung</b></em>' containment reference list.
@@ -1629,7 +1625,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_EINSCHALTUNG_ZUORDNUNG = 30;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_EINSCHALTUNG_ZUORDNUNG = 33;
 
 	/**
 	 * The feature id for the '<em><b>BUE Gefahrraum Eckpunkt</b></em>' containment reference list.
@@ -1638,7 +1634,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_GEFAHRRAUM_ECKPUNKT = 31;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_GEFAHRRAUM_ECKPUNKT = 34;
 
 	/**
 	 * The feature id for the '<em><b>BUE Gleisbezogener Gefahrraum</b></em>' containment reference list.
@@ -1647,7 +1643,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_GLEISBEZOGENER_GEFAHRRAUM = 32;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_GLEISBEZOGENER_GEFAHRRAUM = 35;
 
 	/**
 	 * The feature id for the '<em><b>BUE Kante</b></em>' containment reference list.
@@ -1656,7 +1652,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_KANTE = 33;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_KANTE = 36;
 
 	/**
 	 * The feature id for the '<em><b>BUE Kreuzungsplan</b></em>' containment reference list.
@@ -1665,7 +1661,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_KREUZUNGSPLAN = 34;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_KREUZUNGSPLAN = 37;
 
 	/**
 	 * The feature id for the '<em><b>BUE Schnittstelle</b></em>' containment reference list.
@@ -1674,7 +1670,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_SCHNITTSTELLE = 35;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_SCHNITTSTELLE = 38;
 
 	/**
 	 * The feature id for the '<em><b>BUE Spezifisches Signal</b></em>' containment reference list.
@@ -1683,7 +1679,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUE_SPEZIFISCHES_SIGNAL = 36;
+	int CONTAINER_ATTRIBUTE_GROUP__BUE_SPEZIFISCHES_SIGNAL = 39;
 
 	/**
 	 * The feature id for the '<em><b>BUEWS Fstr Zuordnung</b></em>' containment reference list.
@@ -1692,7 +1688,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__BUEWS_FSTR_ZUORDNUNG = 37;
+	int CONTAINER_ATTRIBUTE_GROUP__BUEWS_FSTR_ZUORDNUNG = 40;
 
 	/**
 	 * The feature id for the '<em><b>Datenpunkt</b></em>' containment reference list.
@@ -1701,7 +1697,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__DATENPUNKT = 38;
+	int CONTAINER_ATTRIBUTE_GROUP__DATENPUNKT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Datenpunkt Link</b></em>' containment reference list.
@@ -1710,7 +1706,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__DATENPUNKT_LINK = 39;
+	int CONTAINER_ATTRIBUTE_GROUP__DATENPUNKT_LINK = 42;
 
 	/**
 	 * The feature id for the '<em><b>ESTW Zentraleinheit</b></em>' containment reference list.
@@ -1719,7 +1715,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ESTW_ZENTRALEINHEIT = 40;
+	int CONTAINER_ATTRIBUTE_GROUP__ESTW_ZENTRALEINHEIT = 43;
 
 	/**
 	 * The feature id for the '<em><b>ETCS Kante</b></em>' containment reference list.
@@ -1728,7 +1724,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ETCS_KANTE = 41;
+	int CONTAINER_ATTRIBUTE_GROUP__ETCS_KANTE = 44;
 
 	/**
 	 * The feature id for the '<em><b>ETCS Knoten</b></em>' containment reference list.
@@ -1737,7 +1733,16 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN = 42;
+	int CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN = 45;
+
+	/**
+	 * The feature id for the '<em><b>ETCS Richtungsanzeige</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE = 46;
 
 	/**
 	 * The feature id for the '<em><b>ETCS Signal</b></em>' containment reference list.
@@ -1746,7 +1751,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL = 43;
+	int CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL = 47;
 
 	/**
 	 * The feature id for the '<em><b>ETCSW Kr</b></em>' containment reference list.
@@ -1755,7 +1760,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ETCSW_KR = 44;
+	int CONTAINER_ATTRIBUTE_GROUP__ETCSW_KR = 48;
 
 	/**
 	 * The feature id for the '<em><b>EV Modul</b></em>' containment reference list.
@@ -1764,7 +1769,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__EV_MODUL = 45;
+	int CONTAINER_ATTRIBUTE_GROUP__EV_MODUL = 49;
 
 	/**
 	 * The feature id for the '<em><b>Fachtelegramm</b></em>' containment reference list.
@@ -1773,7 +1778,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FACHTELEGRAMM = 46;
+	int CONTAINER_ATTRIBUTE_GROUP__FACHTELEGRAMM = 50;
 
 	/**
 	 * The feature id for the '<em><b>Fla Freimelde Zuordnung</b></em>' containment reference list.
@@ -1782,7 +1787,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FLA_FREIMELDE_ZUORDNUNG = 47;
+	int CONTAINER_ATTRIBUTE_GROUP__FLA_FREIMELDE_ZUORDNUNG = 51;
 
 	/**
 	 * The feature id for the '<em><b>Fla Schutz</b></em>' containment reference list.
@@ -1791,7 +1796,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FLA_SCHUTZ = 48;
+	int CONTAINER_ATTRIBUTE_GROUP__FLA_SCHUTZ = 52;
 
 	/**
 	 * The feature id for the '<em><b>Fla Zwieschutz</b></em>' containment reference list.
@@ -1800,7 +1805,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FLA_ZWIESCHUTZ = 49;
+	int CONTAINER_ATTRIBUTE_GROUP__FLA_ZWIESCHUTZ = 53;
 
 	/**
 	 * The feature id for the '<em><b>FMA Anlage</b></em>' containment reference list.
@@ -1809,7 +1814,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FMA_ANLAGE = 50;
+	int CONTAINER_ATTRIBUTE_GROUP__FMA_ANLAGE = 54;
 
 	/**
 	 * The feature id for the '<em><b>FMA Element</b></em>' containment reference list.
@@ -1818,7 +1823,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FMA_ELEMENT = 51;
+	int CONTAINER_ATTRIBUTE_GROUP__FMA_ELEMENT = 55;
 
 	/**
 	 * The feature id for the '<em><b>FMA Komponente</b></em>' containment reference list.
@@ -1827,7 +1832,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FMA_KOMPONENTE = 52;
+	int CONTAINER_ATTRIBUTE_GROUP__FMA_KOMPONENTE = 56;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Abhaengigkeit</b></em>' containment reference list.
@@ -1836,7 +1841,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ABHAENGIGKEIT = 53;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ABHAENGIGKEIT = 57;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Aneinander</b></em>' containment reference list.
@@ -1845,7 +1850,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ANEINANDER = 54;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ANEINANDER = 58;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Aneinander Zuordnung</b></em>' containment reference list.
@@ -1854,7 +1859,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ANEINANDER_ZUORDNUNG = 55;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ANEINANDER_ZUORDNUNG = 59;
 
 	/**
 	 * The feature id for the '<em><b>Fstr DWeg</b></em>' containment reference list.
@@ -1863,7 +1868,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_DWEG = 56;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_DWEG = 60;
 
 	/**
 	 * The feature id for the '<em><b>Fstr DWeg WKr</b></em>' containment reference list.
@@ -1872,7 +1877,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_DWEG_WKR = 57;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_DWEG_WKR = 61;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Fahrweg</b></em>' containment reference list.
@@ -1881,7 +1886,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_FAHRWEG = 58;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_FAHRWEG = 62;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Nichthaltfall</b></em>' containment reference list.
@@ -1890,7 +1895,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_NICHTHALTFALL = 59;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_NICHTHALTFALL = 63;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Rangier Fla Zuordnung</b></em>' containment reference list.
@@ -1899,7 +1904,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_RANGIER_FLA_ZUORDNUNG = 60;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_RANGIER_FLA_ZUORDNUNG = 64;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Signalisierung</b></em>' containment reference list.
@@ -1908,7 +1913,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_SIGNALISIERUNG = 61;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_SIGNALISIERUNG = 65;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Umfahrpunkt</b></em>' containment reference list.
@@ -1917,7 +1922,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_UMFAHRPUNKT = 62;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_UMFAHRPUNKT = 66;
 
 	/**
 	 * The feature id for the '<em><b>Fstr Zug Rangier</b></em>' containment reference list.
@@ -1926,7 +1931,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ZUG_RANGIER = 63;
+	int CONTAINER_ATTRIBUTE_GROUP__FSTR_ZUG_RANGIER = 67;
 
 	/**
 	 * The feature id for the '<em><b>FT Anschaltbedingung</b></em>' containment reference list.
@@ -1935,7 +1940,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FT_ANSCHALTBEDINGUNG = 64;
+	int CONTAINER_ATTRIBUTE_GROUP__FT_ANSCHALTBEDINGUNG = 68;
 
 	/**
 	 * The feature id for the '<em><b>FT Fahrweg Teil</b></em>' containment reference list.
@@ -1944,7 +1949,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__FT_FAHRWEG_TEIL = 65;
+	int CONTAINER_ATTRIBUTE_GROUP__FT_FAHRWEG_TEIL = 69;
 
 	/**
 	 * The feature id for the '<em><b>GEO Kante</b></em>' containment reference list.
@@ -1953,7 +1958,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GEO_KANTE = 66;
+	int CONTAINER_ATTRIBUTE_GROUP__GEO_KANTE = 70;
 
 	/**
 	 * The feature id for the '<em><b>GEO Knoten</b></em>' containment reference list.
@@ -1962,7 +1967,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GEO_KNOTEN = 67;
+	int CONTAINER_ATTRIBUTE_GROUP__GEO_KNOTEN = 71;
 
 	/**
 	 * The feature id for the '<em><b>GEO Punkt</b></em>' containment reference list.
@@ -1971,7 +1976,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GEO_PUNKT = 68;
+	int CONTAINER_ATTRIBUTE_GROUP__GEO_PUNKT = 72;
 
 	/**
 	 * The feature id for the '<em><b>Geschwindigkeitsprofil</b></em>' containment reference list.
@@ -1980,7 +1985,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GESCHWINDIGKEITSPROFIL = 69;
+	int CONTAINER_ATTRIBUTE_GROUP__GESCHWINDIGKEITSPROFIL = 73;
 
 	/**
 	 * The feature id for the '<em><b>GFR Anlage</b></em>' containment reference list.
@@ -1989,7 +1994,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GFR_ANLAGE = 70;
+	int CONTAINER_ATTRIBUTE_GROUP__GFR_ANLAGE = 74;
 
 	/**
 	 * The feature id for the '<em><b>GFR Element</b></em>' containment reference list.
@@ -1998,7 +2003,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GFR_ELEMENT = 71;
+	int CONTAINER_ATTRIBUTE_GROUP__GFR_ELEMENT = 75;
 
 	/**
 	 * The feature id for the '<em><b>GFR Tripelspiegel</b></em>' containment reference list.
@@ -2007,7 +2012,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GFR_TRIPELSPIEGEL = 72;
+	int CONTAINER_ATTRIBUTE_GROUP__GFR_TRIPELSPIEGEL = 76;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Abschluss</b></em>' containment reference list.
@@ -2016,7 +2021,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_ABSCHLUSS = 73;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_ABSCHLUSS = 77;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Abschnitt</b></em>' containment reference list.
@@ -2025,7 +2030,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_ABSCHNITT = 74;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_ABSCHNITT = 78;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Art</b></em>' containment reference list.
@@ -2034,7 +2039,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_ART = 75;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_ART = 79;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Baubereich</b></em>' containment reference list.
@@ -2043,7 +2048,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_BAUBEREICH = 76;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_BAUBEREICH = 80;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Bezeichnung</b></em>' containment reference list.
@@ -2052,7 +2057,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_BEZEICHNUNG = 77;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_BEZEICHNUNG = 81;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Fahrbahn</b></em>' containment reference list.
@@ -2061,7 +2066,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_FAHRBAHN = 78;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_FAHRBAHN = 82;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Lichtraum</b></em>' containment reference list.
@@ -2070,7 +2075,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_LICHTRAUM = 79;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_LICHTRAUM = 83;
 
 	/**
 	 * The feature id for the '<em><b>Gleis Schaltgruppe</b></em>' containment reference list.
@@ -2079,7 +2084,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_SCHALTGRUPPE = 80;
+	int CONTAINER_ATTRIBUTE_GROUP__GLEIS_SCHALTGRUPPE = 84;
 
 	/**
 	 * The feature id for the '<em><b>Hoehenlinie</b></em>' containment reference list.
@@ -2088,7 +2093,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__HOEHENLINIE = 81;
+	int CONTAINER_ATTRIBUTE_GROUP__HOEHENLINIE = 85;
 
 	/**
 	 * The feature id for the '<em><b>Hoehenpunkt</b></em>' containment reference list.
@@ -2097,7 +2102,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__HOEHENPUNKT = 82;
+	int CONTAINER_ATTRIBUTE_GROUP__HOEHENPUNKT = 86;
 
 	/**
 	 * The feature id for the '<em><b>Kabel</b></em>' containment reference list.
@@ -2106,7 +2111,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__KABEL = 83;
+	int CONTAINER_ATTRIBUTE_GROUP__KABEL = 87;
 
 	/**
 	 * The feature id for the '<em><b>Kabel Verteilpunkt</b></em>' containment reference list.
@@ -2115,7 +2120,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__KABEL_VERTEILPUNKT = 84;
+	int CONTAINER_ATTRIBUTE_GROUP__KABEL_VERTEILPUNKT = 88;
 
 	/**
 	 * The feature id for the '<em><b>LEU Anlage</b></em>' containment reference list.
@@ -2124,7 +2129,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__LEU_ANLAGE = 85;
+	int CONTAINER_ATTRIBUTE_GROUP__LEU_ANLAGE = 89;
 
 	/**
 	 * The feature id for the '<em><b>LEU Modul</b></em>' containment reference list.
@@ -2133,7 +2138,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__LEU_MODUL = 86;
+	int CONTAINER_ATTRIBUTE_GROUP__LEU_MODUL = 90;
 
 	/**
 	 * The feature id for the '<em><b>LEU Schaltkasten</b></em>' containment reference list.
@@ -2142,7 +2147,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__LEU_SCHALTKASTEN = 87;
+	int CONTAINER_ATTRIBUTE_GROUP__LEU_SCHALTKASTEN = 91;
 
 	/**
 	 * The feature id for the '<em><b>Lieferobjekt</b></em>' containment reference list.
@@ -2151,7 +2156,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__LIEFEROBJEKT = 88;
+	int CONTAINER_ATTRIBUTE_GROUP__LIEFEROBJEKT = 92;
 
 	/**
 	 * The feature id for the '<em><b>Luft Telegramm</b></em>' containment reference list.
@@ -2160,7 +2165,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__LUFT_TELEGRAMM = 89;
+	int CONTAINER_ATTRIBUTE_GROUP__LUFT_TELEGRAMM = 93;
 
 	/**
 	 * The feature id for the '<em><b>Markanter Punkt</b></em>' containment reference list.
@@ -2169,7 +2174,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__MARKANTER_PUNKT = 90;
+	int CONTAINER_ATTRIBUTE_GROUP__MARKANTER_PUNKT = 94;
 
 	/**
 	 * The feature id for the '<em><b>NB</b></em>' containment reference list.
@@ -2178,7 +2183,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__NB = 91;
+	int CONTAINER_ATTRIBUTE_GROUP__NB = 95;
 
 	/**
 	 * The feature id for the '<em><b>NB Bedien Anzeige Element</b></em>' containment reference list.
@@ -2187,7 +2192,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__NB_BEDIEN_ANZEIGE_ELEMENT = 92;
+	int CONTAINER_ATTRIBUTE_GROUP__NB_BEDIEN_ANZEIGE_ELEMENT = 96;
 
 	/**
 	 * The feature id for the '<em><b>NB Zone</b></em>' containment reference list.
@@ -2196,7 +2201,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__NB_ZONE = 93;
+	int CONTAINER_ATTRIBUTE_GROUP__NB_ZONE = 97;
 
 	/**
 	 * The feature id for the '<em><b>NB Zone Element</b></em>' containment reference list.
@@ -2205,7 +2210,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__NB_ZONE_ELEMENT = 94;
+	int CONTAINER_ATTRIBUTE_GROUP__NB_ZONE_ELEMENT = 98;
 
 	/**
 	 * The feature id for the '<em><b>NB Zone Grenze</b></em>' containment reference list.
@@ -2214,7 +2219,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__NB_ZONE_GRENZE = 95;
+	int CONTAINER_ATTRIBUTE_GROUP__NB_ZONE_GRENZE = 99;
 
 	/**
 	 * The feature id for the '<em><b>Oertlichkeit</b></em>' containment reference list.
@@ -2223,7 +2228,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__OERTLICHKEIT = 96;
+	int CONTAINER_ATTRIBUTE_GROUP__OERTLICHKEIT = 100;
 
 	/**
 	 * The feature id for the '<em><b>Prog Datei Gruppe</b></em>' containment reference list.
@@ -2232,7 +2237,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__PROG_DATEI_GRUPPE = 97;
+	int CONTAINER_ATTRIBUTE_GROUP__PROG_DATEI_GRUPPE = 101;
 
 	/**
 	 * The feature id for the '<em><b>Proxy Objekt</b></em>' containment reference list.
@@ -2241,7 +2246,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__PROXY_OBJEKT = 98;
+	int CONTAINER_ATTRIBUTE_GROUP__PROXY_OBJEKT = 102;
 
 	/**
 	 * The feature id for the '<em><b>PZB Element</b></em>' containment reference list.
@@ -2250,7 +2255,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__PZB_ELEMENT = 99;
+	int CONTAINER_ATTRIBUTE_GROUP__PZB_ELEMENT = 103;
 
 	/**
 	 * The feature id for the '<em><b>PZB Element Zuordnung</b></em>' containment reference list.
@@ -2259,7 +2264,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__PZB_ELEMENT_ZUORDNUNG = 100;
+	int CONTAINER_ATTRIBUTE_GROUP__PZB_ELEMENT_ZUORDNUNG = 104;
 
 	/**
 	 * The feature id for the '<em><b>PZB Zuordnung Signal</b></em>' containment reference list.
@@ -2268,7 +2273,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__PZB_ZUORDNUNG_SIGNAL = 101;
+	int CONTAINER_ATTRIBUTE_GROUP__PZB_ZUORDNUNG_SIGNAL = 105;
 
 	/**
 	 * The feature id for the '<em><b>RBC</b></em>' containment reference list.
@@ -2277,7 +2282,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__RBC = 102;
+	int CONTAINER_ATTRIBUTE_GROUP__RBC = 106;
 
 	/**
 	 * The feature id for the '<em><b>Regelzeichnung</b></em>' containment reference list.
@@ -2286,7 +2291,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__REGELZEICHNUNG = 103;
+	int CONTAINER_ATTRIBUTE_GROUP__REGELZEICHNUNG = 107;
 
 	/**
 	 * The feature id for the '<em><b>Regelzeichnung Parameter</b></em>' containment reference list.
@@ -2295,7 +2300,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__REGELZEICHNUNG_PARAMETER = 104;
+	int CONTAINER_ATTRIBUTE_GROUP__REGELZEICHNUNG_PARAMETER = 108;
 
 	/**
 	 * The feature id for the '<em><b>Schaltmittel Fstr Zuordnung</b></em>' containment reference list.
@@ -2304,7 +2309,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SCHALTMITTEL_FSTR_ZUORDNUNG = 105;
+	int CONTAINER_ATTRIBUTE_GROUP__SCHALTMITTEL_FSTR_ZUORDNUNG = 109;
 
 	/**
 	 * The feature id for the '<em><b>Schaltmittel Zuordnung</b></em>' containment reference list.
@@ -2313,7 +2318,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SCHALTMITTEL_ZUORDNUNG = 106;
+	int CONTAINER_ATTRIBUTE_GROUP__SCHALTMITTEL_ZUORDNUNG = 110;
 
 	/**
 	 * The feature id for the '<em><b>Schloss</b></em>' containment reference list.
@@ -2322,7 +2327,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SCHLOSS = 107;
+	int CONTAINER_ATTRIBUTE_GROUP__SCHLOSS = 111;
 
 	/**
 	 * The feature id for the '<em><b>Schlosskombination</b></em>' containment reference list.
@@ -2331,7 +2336,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SCHLOSSKOMBINATION = 108;
+	int CONTAINER_ATTRIBUTE_GROUP__SCHLOSSKOMBINATION = 112;
 
 	/**
 	 * The feature id for the '<em><b>Schluessel</b></em>' containment reference list.
@@ -2340,7 +2345,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SCHLUESSEL = 109;
+	int CONTAINER_ATTRIBUTE_GROUP__SCHLUESSEL = 113;
 
 	/**
 	 * The feature id for the '<em><b>Schluesselsperre</b></em>' containment reference list.
@@ -2349,7 +2354,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SCHLUESSELSPERRE = 110;
+	int CONTAINER_ATTRIBUTE_GROUP__SCHLUESSELSPERRE = 114;
 
 	/**
 	 * The feature id for the '<em><b>Schrankenantrieb</b></em>' containment reference list.
@@ -2358,7 +2363,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SCHRANKENANTRIEB = 111;
+	int CONTAINER_ATTRIBUTE_GROUP__SCHRANKENANTRIEB = 115;
 
 	/**
 	 * The feature id for the '<em><b>Signal</b></em>' containment reference list.
@@ -2367,7 +2372,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL = 112;
+	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL = 116;
 
 	/**
 	 * The feature id for the '<em><b>Signal Befestigung</b></em>' containment reference list.
@@ -2376,7 +2381,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNG = 113;
+	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNG = 117;
 
 	/**
 	 * The feature id for the '<em><b>Signal Fank Zuordnung</b></em>' containment reference list.
@@ -2385,7 +2390,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_FANK_ZUORDNUNG = 114;
+	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_FANK_ZUORDNUNG = 118;
 
 	/**
 	 * The feature id for the '<em><b>Signal Rahmen</b></em>' containment reference list.
@@ -2394,7 +2399,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_RAHMEN = 115;
+	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_RAHMEN = 119;
 
 	/**
 	 * The feature id for the '<em><b>Signal Signalbegriff</b></em>' containment reference list.
@@ -2403,7 +2408,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_SIGNALBEGRIFF = 116;
+	int CONTAINER_ATTRIBUTE_GROUP__SIGNAL_SIGNALBEGRIFF = 120;
 
 	/**
 	 * The feature id for the '<em><b>Sonstiger Punkt</b></em>' containment reference list.
@@ -2412,7 +2417,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__SONSTIGER_PUNKT = 117;
+	int CONTAINER_ATTRIBUTE_GROUP__SONSTIGER_PUNKT = 121;
 
 	/**
 	 * The feature id for the '<em><b>Stell Bereich</b></em>' containment reference list.
@@ -2421,7 +2426,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__STELL_BEREICH = 118;
+	int CONTAINER_ATTRIBUTE_GROUP__STELL_BEREICH = 122;
 
 	/**
 	 * The feature id for the '<em><b>Stellelement</b></em>' containment reference list.
@@ -2430,7 +2435,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__STELLELEMENT = 119;
+	int CONTAINER_ATTRIBUTE_GROUP__STELLELEMENT = 123;
 
 	/**
 	 * The feature id for the '<em><b>Strecke</b></em>' containment reference list.
@@ -2439,7 +2444,16 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__STRECKE = 120;
+	int CONTAINER_ATTRIBUTE_GROUP__STRECKE = 124;
+
+	/**
+	 * The feature id for the '<em><b>Strecke Bremsweg</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG = 125;
 
 	/**
 	 * The feature id for the '<em><b>Strecke Punkt</b></em>' containment reference list.
@@ -2448,7 +2462,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT = 121;
+	int CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT = 126;
 
 	/**
 	 * The feature id for the '<em><b>Technik Standort</b></em>' containment reference list.
@@ -2457,7 +2471,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__TECHNIK_STANDORT = 122;
+	int CONTAINER_ATTRIBUTE_GROUP__TECHNIK_STANDORT = 127;
 
 	/**
 	 * The feature id for the '<em><b>Technischer Bereich</b></em>' containment reference list.
@@ -2466,7 +2480,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__TECHNISCHER_BEREICH = 123;
+	int CONTAINER_ATTRIBUTE_GROUP__TECHNISCHER_BEREICH = 128;
 
 	/**
 	 * The feature id for the '<em><b>Technischer Punkt</b></em>' containment reference list.
@@ -2475,7 +2489,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__TECHNISCHER_PUNKT = 124;
+	int CONTAINER_ATTRIBUTE_GROUP__TECHNISCHER_PUNKT = 129;
 
 	/**
 	 * The feature id for the '<em><b>TOP Kante</b></em>' containment reference list.
@@ -2484,7 +2498,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__TOP_KANTE = 125;
+	int CONTAINER_ATTRIBUTE_GROUP__TOP_KANTE = 130;
 
 	/**
 	 * The feature id for the '<em><b>TOP Knoten</b></em>' containment reference list.
@@ -2493,7 +2507,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__TOP_KNOTEN = 126;
+	int CONTAINER_ATTRIBUTE_GROUP__TOP_KNOTEN = 131;
 
 	/**
 	 * The feature id for the '<em><b>Trasse Kante</b></em>' containment reference list.
@@ -2502,7 +2516,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__TRASSE_KANTE = 127;
+	int CONTAINER_ATTRIBUTE_GROUP__TRASSE_KANTE = 132;
 
 	/**
 	 * The feature id for the '<em><b>Trasse Knoten</b></em>' containment reference list.
@@ -2511,7 +2525,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__TRASSE_KNOTEN = 128;
+	int CONTAINER_ATTRIBUTE_GROUP__TRASSE_KNOTEN = 133;
 
 	/**
 	 * The feature id for the '<em><b>Ueberhoehung</b></em>' containment reference list.
@@ -2520,7 +2534,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__UEBERHOEHUNG = 129;
+	int CONTAINER_ATTRIBUTE_GROUP__UEBERHOEHUNG = 134;
 
 	/**
 	 * The feature id for the '<em><b>Ueberhoehungslinie</b></em>' containment reference list.
@@ -2529,7 +2543,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__UEBERHOEHUNGSLINIE = 130;
+	int CONTAINER_ATTRIBUTE_GROUP__UEBERHOEHUNGSLINIE = 135;
 
 	/**
 	 * The feature id for the '<em><b>Uebertragungsweg</b></em>' containment reference list.
@@ -2538,7 +2552,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__UEBERTRAGUNGSWEG = 131;
+	int CONTAINER_ATTRIBUTE_GROUP__UEBERTRAGUNGSWEG = 136;
 
 	/**
 	 * The feature id for the '<em><b>Unterbringung</b></em>' containment reference list.
@@ -2547,7 +2561,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__UNTERBRINGUNG = 132;
+	int CONTAINER_ATTRIBUTE_GROUP__UNTERBRINGUNG = 137;
 
 	/**
 	 * The feature id for the '<em><b>Verkehrszeichen</b></em>' containment reference list.
@@ -2556,7 +2570,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__VERKEHRSZEICHEN = 133;
+	int CONTAINER_ATTRIBUTE_GROUP__VERKEHRSZEICHEN = 138;
 
 	/**
 	 * The feature id for the '<em><b>WKr Anlage</b></em>' containment reference list.
@@ -2565,7 +2579,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__WKR_ANLAGE = 134;
+	int CONTAINER_ATTRIBUTE_GROUP__WKR_ANLAGE = 139;
 
 	/**
 	 * The feature id for the '<em><b>WKr Gsp Element</b></em>' containment reference list.
@@ -2574,7 +2588,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__WKR_GSP_ELEMENT = 135;
+	int CONTAINER_ATTRIBUTE_GROUP__WKR_GSP_ELEMENT = 140;
 
 	/**
 	 * The feature id for the '<em><b>WKr Gsp Komponente</b></em>' containment reference list.
@@ -2583,7 +2597,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__WKR_GSP_KOMPONENTE = 136;
+	int CONTAINER_ATTRIBUTE_GROUP__WKR_GSP_KOMPONENTE = 141;
 
 	/**
 	 * The feature id for the '<em><b>Weichenlaufkette</b></em>' containment reference list.
@@ -2592,7 +2606,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE = 137;
+	int CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE = 142;
 
 	/**
 	 * The feature id for the '<em><b>Weichenlaufkette Zuordnung</b></em>' containment reference list.
@@ -2601,7 +2615,25 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE_ZUORDNUNG = 138;
+	int CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE_ZUORDNUNG = 143;
+
+	/**
+	 * The feature id for the '<em><b>ZBS Schutzstrecke</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE = 144;
+
+	/**
+	 * The feature id for the '<em><b>ZBS Signal</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL = 145;
 
 	/**
 	 * The feature id for the '<em><b>ZL</b></em>' containment reference list.
@@ -2610,7 +2642,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZL = 139;
+	int CONTAINER_ATTRIBUTE_GROUP__ZL = 146;
 
 	/**
 	 * The feature id for the '<em><b>ZLDLP Abschnitt</b></em>' containment reference list.
@@ -2619,7 +2651,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZLDLP_ABSCHNITT = 140;
+	int CONTAINER_ATTRIBUTE_GROUP__ZLDLP_ABSCHNITT = 147;
 
 	/**
 	 * The feature id for the '<em><b>ZLDLP Fstr</b></em>' containment reference list.
@@ -2628,7 +2660,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZLDLP_FSTR = 141;
+	int CONTAINER_ATTRIBUTE_GROUP__ZLDLP_FSTR = 148;
 
 	/**
 	 * The feature id for the '<em><b>ZL Fstr</b></em>' containment reference list.
@@ -2637,7 +2669,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZL_FSTR = 142;
+	int CONTAINER_ATTRIBUTE_GROUP__ZL_FSTR = 149;
 
 	/**
 	 * The feature id for the '<em><b>ZL Fstr Anstoss</b></em>' containment reference list.
@@ -2646,7 +2678,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZL_FSTR_ANSTOSS = 143;
+	int CONTAINER_ATTRIBUTE_GROUP__ZL_FSTR_ANSTOSS = 150;
 
 	/**
 	 * The feature id for the '<em><b>ZL Signalgruppe</b></em>' containment reference list.
@@ -2655,7 +2687,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZL_SIGNALGRUPPE = 144;
+	int CONTAINER_ATTRIBUTE_GROUP__ZL_SIGNALGRUPPE = 151;
 
 	/**
 	 * The feature id for the '<em><b>ZL Signalgruppe Zuordnung</b></em>' containment reference list.
@@ -2664,7 +2696,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZL_SIGNALGRUPPE_ZUORDNUNG = 145;
+	int CONTAINER_ATTRIBUTE_GROUP__ZL_SIGNALGRUPPE_ZUORDNUNG = 152;
 
 	/**
 	 * The feature id for the '<em><b>ZLV Bus</b></em>' containment reference list.
@@ -2673,7 +2705,16 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS = 146;
+	int CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS = 153;
+
+	/**
+	 * The feature id for the '<em><b>ZLV Bus Besondere Anlage</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE = 154;
 
 	/**
 	 * The feature id for the '<em><b>ZLV Bus US Zuordnung</b></em>' containment reference list.
@@ -2682,7 +2723,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG = 147;
+	int CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG = 155;
 
 	/**
 	 * The feature id for the '<em><b>ZN</b></em>' containment reference list.
@@ -2691,7 +2732,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZN = 148;
+	int CONTAINER_ATTRIBUTE_GROUP__ZN = 156;
 
 	/**
 	 * The feature id for the '<em><b>ZN Akustik</b></em>' containment reference list.
@@ -2700,7 +2741,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZN_AKUSTIK = 149;
+	int CONTAINER_ATTRIBUTE_GROUP__ZN_AKUSTIK = 157;
 
 	/**
 	 * The feature id for the '<em><b>ZN Anzeigefeld</b></em>' containment reference list.
@@ -2709,7 +2750,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZN_ANZEIGEFELD = 150;
+	int CONTAINER_ATTRIBUTE_GROUP__ZN_ANZEIGEFELD = 158;
 
 	/**
 	 * The feature id for the '<em><b>ZN Fortschalt Kriterium</b></em>' containment reference list.
@@ -2718,7 +2759,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZN_FORTSCHALT_KRITERIUM = 151;
+	int CONTAINER_ATTRIBUTE_GROUP__ZN_FORTSCHALT_KRITERIUM = 159;
 
 	/**
 	 * The feature id for the '<em><b>ZN Telegramm84 Zuordnung</b></em>' containment reference list.
@@ -2727,7 +2768,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZN_TELEGRAMM84_ZUORDNUNG = 152;
+	int CONTAINER_ATTRIBUTE_GROUP__ZN_TELEGRAMM84_ZUORDNUNG = 160;
 
 	/**
 	 * The feature id for the '<em><b>ZN Telegramm85 Zuordnung</b></em>' containment reference list.
@@ -2736,7 +2777,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZN_TELEGRAMM85_ZUORDNUNG = 153;
+	int CONTAINER_ATTRIBUTE_GROUP__ZN_TELEGRAMM85_ZUORDNUNG = 161;
 
 	/**
 	 * The feature id for the '<em><b>ZN Unterstation</b></em>' containment reference list.
@@ -2745,7 +2786,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZN_UNTERSTATION = 154;
+	int CONTAINER_ATTRIBUTE_GROUP__ZN_UNTERSTATION = 162;
 
 	/**
 	 * The feature id for the '<em><b>ZNZBS</b></em>' containment reference list.
@@ -2754,7 +2795,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZNZBS = 155;
+	int CONTAINER_ATTRIBUTE_GROUP__ZNZBS = 163;
 
 	/**
 	 * The feature id for the '<em><b>ZUB Bereichsgrenze</b></em>' containment reference list.
@@ -2763,7 +2804,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE = 156;
+	int CONTAINER_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE = 164;
 
 	/**
 	 * The feature id for the '<em><b>ZUB Streckeneigenschaft</b></em>' containment reference list.
@@ -2772,7 +2813,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZUB_STRECKENEIGENSCHAFT = 157;
+	int CONTAINER_ATTRIBUTE_GROUP__ZUB_STRECKENEIGENSCHAFT = 165;
 
 	/**
 	 * The feature id for the '<em><b>Zugeinwirkung</b></em>' containment reference list.
@@ -2781,7 +2822,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP__ZUGEINWIRKUNG = 158;
+	int CONTAINER_ATTRIBUTE_GROUP__ZUGEINWIRKUNG = 166;
 
 	/**
 	 * The number of structural features of the '<em>Container Attribute Group</em>' class.
@@ -2790,7 +2831,7 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_ATTRIBUTE_GROUP_FEATURE_COUNT = 159;
+	int CONTAINER_ATTRIBUTE_GROUP_FEATURE_COUNT = 167;
 
 	/**
 	 * The number of operations of the '<em>Container Attribute Group</em>' class.
@@ -2812,7 +2853,7 @@ public interface PlanProPackage extends EPackage {
 	int DATUM_ABSCHLUSS_EINZEL_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2858,7 +2899,7 @@ public interface PlanProPackage extends EPackage {
 	int DATUM_ABSCHLUSS_GRUPPE_TYPE_CLASS = 17;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2904,7 +2945,7 @@ public interface PlanProPackage extends EPackage {
 	int DATUM_ABSCHLUSS_PROJEKT_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2950,7 +2991,7 @@ public interface PlanProPackage extends EPackage {
 	int DATUM_REGELWERKSSTAND_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2996,7 +3037,7 @@ public interface PlanProPackage extends EPackage {
 	int DATUM_TYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3042,7 +3083,7 @@ public interface PlanProPackage extends EPackage {
 	int DATUM_UEBERNAHME_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3152,7 +3193,7 @@ public interface PlanProPackage extends EPackage {
 	int EMAIL_ADRESSE_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3198,7 +3239,7 @@ public interface PlanProPackage extends EPackage {
 	int ERZEUGUNG_ZEITSTEMPEL_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3281,7 +3322,7 @@ public interface PlanProPackage extends EPackage {
 	int FUEHRENDE_OERTLICHKEIT_TYPE_CLASS = 26;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3327,7 +3368,7 @@ public interface PlanProPackage extends EPackage {
 	int IDENT_ROLLE_TYPE_CLASS = 27;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3373,7 +3414,7 @@ public interface PlanProPackage extends EPackage {
 	int INDEX_AUSGABE_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3419,7 +3460,7 @@ public interface PlanProPackage extends EPackage {
 	int INFORMATIV_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3465,7 +3506,7 @@ public interface PlanProPackage extends EPackage {
 	int KOORDINATENSYSTEM_BB_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3511,7 +3552,7 @@ public interface PlanProPackage extends EPackage {
 	int KOORDINATENSYSTEM_PB_TYPE_CLASS = 31;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3557,7 +3598,7 @@ public interface PlanProPackage extends EPackage {
 	int LAUFENDE_NUMMER_AUSGABE_TYPE_CLASS = 32;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3741,7 +3782,7 @@ public interface PlanProPackage extends EPackage {
 	int NAME_AKTEUR_10_TYPE_CLASS = 36;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3787,7 +3828,7 @@ public interface PlanProPackage extends EPackage {
 	int NAME_AKTEUR_5TYPE_CLASS = 37;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3833,7 +3874,7 @@ public interface PlanProPackage extends EPackage {
 	int NAME_AKTEUR_TYPE_CLASS = 38;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3879,7 +3920,7 @@ public interface PlanProPackage extends EPackage {
 	int NAME_ORGANISATION_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4053,7 +4094,7 @@ public interface PlanProPackage extends EPackage {
 	int ORGANISATIONSEINHEIT_TYPE_CLASS = 42;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4135,13 +4176,22 @@ public interface PlanProPackage extends EPackage {
 	int PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Wzk Invalid ID References</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Plan Pro Schnittstelle</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLAN_PRO_SCHNITTSTELLE_FEATURE_COUNT = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 3;
+	int PLAN_PRO_SCHNITTSTELLE_FEATURE_COUNT = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Plan Pro Schnittstelle</em>' class.
@@ -4153,6 +4203,79 @@ public interface PlanProPackage extends EPackage {
 	int PLAN_PRO_SCHNITTSTELLE_OPERATION_COUNT = BasisobjektePackage.UR_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PlanPro.impl.WzkInvalidIDReferenceImpl <em>Wzk Invalid ID Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.WzkInvalidIDReferenceImpl
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getWzkInvalidIDReference()
+	 * @generated
+	 */
+	int WZK_INVALID_ID_REFERENCE = 44;
+
+	/**
+	 * The feature id for the '<em><b>Guid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WZK_INVALID_ID_REFERENCE__GUID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WZK_INVALID_ID_REFERENCE__SOURCE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Source Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WZK_INVALID_ID_REFERENCE__SOURCE_REF = 2;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WZK_INVALID_ID_REFERENCE__TARGET = 3;
+
+	/**
+	 * The feature id for the '<em><b>Target Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WZK_INVALID_ID_REFERENCE__TARGET_REF = 4;
+
+	/**
+	 * The number of structural features of the '<em>Wzk Invalid ID Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WZK_INVALID_ID_REFERENCE_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Wzk Invalid ID Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WZK_INVALID_ID_REFERENCE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_Schnittstelle_Allg_AttributeGroupImpl <em>Plan Pro Schnittstelle Allg Attribute Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4160,7 +4283,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanPro_Schnittstelle_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int PLAN_PRO_SCHNITTSTELLE_ALLG_ATTRIBUTE_GROUP = 44;
+	int PLAN_PRO_SCHNITTSTELLE_ALLG_ATTRIBUTE_GROUP = 45;
 
 	/**
 	 * The feature id for the '<em><b>Bemerkung</b></em>' containment reference.
@@ -4224,10 +4347,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanPro_XSD_Version_TypeClass()
 	 * @generated
 	 */
-	int PLAN_PRO_XSD_VERSION_TYPE_CLASS = 45;
+	int PLAN_PRO_XSD_VERSION_TYPE_CLASS = 46;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4270,7 +4393,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_E_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int PLANUNG_EALLG_ATTRIBUTE_GROUP = 46;
+	int PLANUNG_EALLG_ATTRIBUTE_GROUP = 47;
 
 	/**
 	 * The feature id for the '<em><b>Bauphase</b></em>' containment reference.
@@ -4388,10 +4511,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_E_Art_TypeClass()
 	 * @generated
 	 */
-	int PLANUNG_EART_TYPE_CLASS = 47;
+	int PLANUNG_EART_TYPE_CLASS = 48;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4434,7 +4557,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_E_Ausgabe_Besonders_AttributeGroup()
 	 * @generated
 	 */
-	int PLANUNG_EAUSGABE_BESONDERS_ATTRIBUTE_GROUP = 48;
+	int PLANUNG_EAUSGABE_BESONDERS_ATTRIBUTE_GROUP = 49;
 
 	/**
 	 * The feature id for the '<em><b>Referenz Vergleich Besonders</b></em>' containment reference.
@@ -4489,7 +4612,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_E_Handlung_AttributeGroup()
 	 * @generated
 	 */
-	int PLANUNG_EHANDLUNG_ATTRIBUTE_GROUP = 49;
+	int PLANUNG_EHANDLUNG_ATTRIBUTE_GROUP = 50;
 
 	/**
 	 * The feature id for the '<em><b>Planung EAbnahme</b></em>' containment reference list.
@@ -4598,7 +4721,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_Einzel()
 	 * @generated
 	 */
-	int PLANUNG_EINZEL = 50;
+	int PLANUNG_EINZEL = 51;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -4716,7 +4839,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_G_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int PLANUNG_GALLG_ATTRIBUTE_GROUP = 51;
+	int PLANUNG_GALLG_ATTRIBUTE_GROUP = 52;
 
 	/**
 	 * The feature id for the '<em><b>Anhang BAST</b></em>' containment reference list.
@@ -4798,10 +4921,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_G_Art_Besonders_TypeClass()
 	 * @generated
 	 */
-	int PLANUNG_GART_BESONDERS_TYPE_CLASS = 52;
+	int PLANUNG_GART_BESONDERS_TYPE_CLASS = 53;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4844,7 +4967,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_G_Fuehrende_Strecke_AttributeGroup()
 	 * @generated
 	 */
-	int PLANUNG_GFUEHRENDE_STRECKE_ATTRIBUTE_GROUP = 53;
+	int PLANUNG_GFUEHRENDE_STRECKE_ATTRIBUTE_GROUP = 54;
 
 	/**
 	 * The feature id for the '<em><b>Strecke Abschnitt</b></em>' containment reference.
@@ -4899,7 +5022,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_G_Schriftfeld_AttributeGroup()
 	 * @generated
 	 */
-	int PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP = 54;
+	int PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP = 55;
 
 	/**
 	 * The feature id for the '<em><b>Bauabschnitt</b></em>' containment reference.
@@ -4947,13 +5070,22 @@ public interface PlanProPackage extends EPackage {
 	int PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO = 4;
 
 	/**
+	 * The feature id for the '<em><b>Planungsbuero Logo</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO = 5;
+
+	/**
 	 * The number of structural features of the '<em>Planung GSchriftfeld Attribute Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
+	int PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Planung GSchriftfeld Attribute Group</em>' class.
@@ -4972,7 +5104,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_Gruppe()
 	 * @generated
 	 */
-	int PLANUNG_GRUPPE = 55;
+	int PLANUNG_GRUPPE = 56;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -5072,7 +5204,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_P_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int PLANUNG_PALLG_ATTRIBUTE_GROUP = 56;
+	int PLANUNG_PALLG_ATTRIBUTE_GROUP = 57;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung Planung Projekt</b></em>' containment reference.
@@ -5136,10 +5268,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_Phase_TypeClass()
 	 * @generated
 	 */
-	int PLANUNG_PHASE_TYPE_CLASS = 57;
+	int PLANUNG_PHASE_TYPE_CLASS = 58;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5182,7 +5314,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanung_Projekt()
 	 * @generated
 	 */
-	int PLANUNG_PROJEKT = 58;
+	int PLANUNG_PROJEKT = 59;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -5212,22 +5344,13 @@ public interface PlanProPackage extends EPackage {
 	int PLANUNG_PROJEKT__PLANUNG_PALLG = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Lst Planung Erste Gruppe</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANUNG_PROJEKT__LST_PLANUNG_ERSTE_GRUPPE = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Planung Projekt</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANUNG_PROJEKT_FEATURE_COUNT = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 3;
+	int PLANUNG_PROJEKT_FEATURE_COUNT = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Planung Projekt</em>' class.
@@ -5246,7 +5369,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPolygone_Betrachtungsbereich_AttributeGroup()
 	 * @generated
 	 */
-	int POLYGONE_BETRACHTUNGSBEREICH_ATTRIBUTE_GROUP = 59;
+	int POLYGONE_BETRACHTUNGSBEREICH_ATTRIBUTE_GROUP = 60;
 
 	/**
 	 * The feature id for the '<em><b>Koordinatensystem BB</b></em>' containment reference.
@@ -5292,7 +5415,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPolygone_Planungsbereich_AttributeGroup()
 	 * @generated
 	 */
-	int POLYGONE_PLANUNGSBEREICH_ATTRIBUTE_GROUP = 60;
+	int POLYGONE_PLANUNGSBEREICH_ATTRIBUTE_GROUP = 61;
 
 	/**
 	 * The feature id for the '<em><b>Koordinatensystem PB</b></em>' containment reference.
@@ -5338,10 +5461,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPolygonzug_Betrachtungsbereich_TypeClass()
 	 * @generated
 	 */
-	int POLYGONZUG_BETRACHTUNGSBEREICH_TYPE_CLASS = 61;
+	int POLYGONZUG_BETRACHTUNGSBEREICH_TYPE_CLASS = 62;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5384,10 +5507,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPolygonzug_Planungsbereich_TypeClass()
 	 * @generated
 	 */
-	int POLYGONZUG_PLANUNGSBEREICH_TYPE_CLASS = 62;
+	int POLYGONZUG_PLANUNGSBEREICH_TYPE_CLASS = 63;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5430,10 +5553,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getProjekt_Nummer_TypeClass()
 	 * @generated
 	 */
-	int PROJEKT_NUMMER_TYPE_CLASS = 63;
+	int PROJEKT_NUMMER_TYPE_CLASS = 64;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5476,10 +5599,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getReferenz_Planung_Basis_TypeClass()
 	 * @generated
 	 */
-	int REFERENZ_PLANUNG_BASIS_TYPE_CLASS = 64;
+	int REFERENZ_PLANUNG_BASIS_TYPE_CLASS = 65;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5522,10 +5645,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getReferenz_Vergleich_Besonders_TypeClass()
 	 * @generated
 	 */
-	int REFERENZ_VERGLEICH_BESONDERS_TYPE_CLASS = 65;
+	int REFERENZ_VERGLEICH_BESONDERS_TYPE_CLASS = 66;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5568,10 +5691,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getStrecke_Abschnitt_TypeClass()
 	 * @generated
 	 */
-	int STRECKE_ABSCHNITT_TYPE_CLASS = 66;
+	int STRECKE_ABSCHNITT_TYPE_CLASS = 67;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5614,10 +5737,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getStrecke_Km_TypeClass()
 	 * @generated
 	 */
-	int STRECKE_KM_TYPE_CLASS = 67;
+	int STRECKE_KM_TYPE_CLASS = 68;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5660,10 +5783,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getStrecke_Nummer_TypeClass()
 	 * @generated
 	 */
-	int STRECKE_NUMMER_TYPE_CLASS = 68;
+	int STRECKE_NUMMER_TYPE_CLASS = 69;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5706,10 +5829,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getTelefonnummer_TypeClass()
 	 * @generated
 	 */
-	int TELEFONNUMMER_TYPE_CLASS = 69;
+	int TELEFONNUMMER_TYPE_CLASS = 70;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5752,10 +5875,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getUntergewerk_Art_TypeClass()
 	 * @generated
 	 */
-	int UNTERGEWERK_ART_TYPE_CLASS = 70;
+	int UNTERGEWERK_ART_TYPE_CLASS = 71;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5798,10 +5921,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getVerantwortliche_Stelle_DB_TypeClass()
 	 * @generated
 	 */
-	int VERANTWORTLICHE_STELLE_DB_TYPE_CLASS = 71;
+	int VERANTWORTLICHE_STELLE_DB_TYPE_CLASS = 72;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5844,10 +5967,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getVergleich_Ausgabestand_Basis_TypeClass()
 	 * @generated
 	 */
-	int VERGLEICH_AUSGABESTAND_BASIS_TYPE_CLASS = 72;
+	int VERGLEICH_AUSGABESTAND_BASIS_TYPE_CLASS = 73;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5890,10 +6013,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getVergleichstyp_Besonders_TypeClass()
 	 * @generated
 	 */
-	int VERGLEICHSTYP_BESONDERS_TYPE_CLASS = 73;
+	int VERGLEICHSTYP_BESONDERS_TYPE_CLASS = 74;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5936,10 +6059,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getWerkzeug_Name_TypeClass()
 	 * @generated
 	 */
-	int WERKZEUG_NAME_TYPE_CLASS = 74;
+	int WERKZEUG_NAME_TYPE_CLASS = 75;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5982,10 +6105,10 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getWerkzeug_Version_TypeClass()
 	 * @generated
 	 */
-	int WERKZEUG_VERSION_TYPE_CLASS = 75;
+	int WERKZEUG_VERSION_TYPE_CLASS = 76;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6028,7 +6151,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMKoordinatensystem()
 	 * @generated
 	 */
-	int ENUM_KOORDINATENSYSTEM = 76;
+	int ENUM_KOORDINATENSYSTEM = 77;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PlanPro.ENUMPlanungEArt <em>ENUM Planung EArt</em>}' enum.
@@ -6038,7 +6161,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMPlanungEArt()
 	 * @generated
 	 */
-	int ENUM_PLANUNG_EART = 77;
+	int ENUM_PLANUNG_EART = 78;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PlanPro.ENUMPlanungGArtBesonders <em>ENUM Planung GArt Besonders</em>}' enum.
@@ -6048,7 +6171,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMPlanungGArtBesonders()
 	 * @generated
 	 */
-	int ENUM_PLANUNG_GART_BESONDERS = 78;
+	int ENUM_PLANUNG_GART_BESONDERS = 79;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PlanPro.ENUMPlanungPhase <em>ENUM Planung Phase</em>}' enum.
@@ -6058,7 +6181,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMPlanungPhase()
 	 * @generated
 	 */
-	int ENUM_PLANUNG_PHASE = 79;
+	int ENUM_PLANUNG_PHASE = 80;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PlanPro.ENUMUntergewerkArt <em>ENUM Untergewerk Art</em>}' enum.
@@ -6068,7 +6191,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMUntergewerkArt()
 	 * @generated
 	 */
-	int ENUM_UNTERGEWERK_ART = 80;
+	int ENUM_UNTERGEWERK_ART = 81;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PlanPro.ENUMVergleichstypBesonders <em>ENUM Vergleichstyp Besonders</em>}' enum.
@@ -6078,7 +6201,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMVergleichstypBesonders()
 	 * @generated
 	 */
-	int ENUM_VERGLEICHSTYP_BESONDERS = 81;
+	int ENUM_VERGLEICHSTYP_BESONDERS = 82;
 
 	/**
 	 * The meta object id for the '<em>Adresse PLZ Ort Type</em>' data type.
@@ -6088,7 +6211,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getAdresse_PLZ_Ort_Type()
 	 * @generated
 	 */
-	int ADRESSE_PLZ_ORT_TYPE = 82;
+	int ADRESSE_PLZ_ORT_TYPE = 83;
 
 	/**
 	 * The meta object id for the '<em>Adresse Strasse Nr Type</em>' data type.
@@ -6098,7 +6221,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getAdresse_Strasse_Nr_Type()
 	 * @generated
 	 */
-	int ADRESSE_STRASSE_NR_TYPE = 83;
+	int ADRESSE_STRASSE_NR_TYPE = 84;
 
 	/**
 	 * The meta object id for the '<em>Bauabschnitt Type</em>' data type.
@@ -6108,7 +6231,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBauabschnitt_Type()
 	 * @generated
 	 */
-	int BAUABSCHNITT_TYPE = 84;
+	int BAUABSCHNITT_TYPE = 85;
 
 	/**
 	 * The meta object id for the '<em>Bauphase Type</em>' data type.
@@ -6118,7 +6241,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBauphase_Type()
 	 * @generated
 	 */
-	int BAUPHASE_TYPE = 85;
+	int BAUPHASE_TYPE = 86;
 
 	/**
 	 * The meta object id for the '<em>Bauzustand Kurzbezeichnung Type</em>' data type.
@@ -6128,7 +6251,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBauzustand_Kurzbezeichnung_Type()
 	 * @generated
 	 */
-	int BAUZUSTAND_KURZBEZEICHNUNG_TYPE = 86;
+	int BAUZUSTAND_KURZBEZEICHNUNG_TYPE = 87;
 
 	/**
 	 * The meta object id for the '<em>Bauzustand Langbezeichnung Type</em>' data type.
@@ -6138,7 +6261,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBauzustand_Langbezeichnung_Type()
 	 * @generated
 	 */
-	int BAUZUSTAND_LANGBEZEICHNUNG_TYPE = 87;
+	int BAUZUSTAND_LANGBEZEICHNUNG_TYPE = 88;
 
 	/**
 	 * The meta object id for the '<em>Bemerkung Type</em>' data type.
@@ -6148,7 +6271,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBemerkung_Type()
 	 * @generated
 	 */
-	int BEMERKUNG_TYPE = 88;
+	int BEMERKUNG_TYPE = 89;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Anlage Type</em>' data type.
@@ -6158,7 +6281,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBezeichnung_Anlage_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_ANLAGE_TYPE = 89;
+	int BEZEICHNUNG_ANLAGE_TYPE = 90;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Planung Gruppe Type</em>' data type.
@@ -6168,7 +6291,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBezeichnung_Planung_Gruppe_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_PLANUNG_GRUPPE_TYPE = 90;
+	int BEZEICHNUNG_PLANUNG_GRUPPE_TYPE = 91;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Planung Projekt Type</em>' data type.
@@ -6178,7 +6301,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBezeichnung_Planung_Projekt_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_PLANUNG_PROJEKT_TYPE = 91;
+	int BEZEICHNUNG_PLANUNG_PROJEKT_TYPE = 92;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Unteranlage Type</em>' data type.
@@ -6188,7 +6311,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getBezeichnung_Unteranlage_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_UNTERANLAGE_TYPE = 92;
+	int BEZEICHNUNG_UNTERANLAGE_TYPE = 93;
 
 	/**
 	 * The meta object id for the '<em>EMail Adresse Type</em>' data type.
@@ -6198,7 +6321,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getE_Mail_Adresse_Type()
 	 * @generated
 	 */
-	int EMAIL_ADRESSE_TYPE = 93;
+	int EMAIL_ADRESSE_TYPE = 94;
 
 	/**
 	 * The meta object id for the '<em>ENUM Koordinatensystem Object</em>' data type.
@@ -6208,7 +6331,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMKoordinatensystemObject()
 	 * @generated
 	 */
-	int ENUM_KOORDINATENSYSTEM_OBJECT = 94;
+	int ENUM_KOORDINATENSYSTEM_OBJECT = 95;
 
 	/**
 	 * The meta object id for the '<em>ENUM Planung EArt Object</em>' data type.
@@ -6218,7 +6341,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMPlanungEArtObject()
 	 * @generated
 	 */
-	int ENUM_PLANUNG_EART_OBJECT = 95;
+	int ENUM_PLANUNG_EART_OBJECT = 96;
 
 	/**
 	 * The meta object id for the '<em>ENUM Planung GArt Besonders Object</em>' data type.
@@ -6228,7 +6351,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMPlanungGArtBesondersObject()
 	 * @generated
 	 */
-	int ENUM_PLANUNG_GART_BESONDERS_OBJECT = 96;
+	int ENUM_PLANUNG_GART_BESONDERS_OBJECT = 97;
 
 	/**
 	 * The meta object id for the '<em>ENUM Planung Phase Object</em>' data type.
@@ -6238,7 +6361,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMPlanungPhaseObject()
 	 * @generated
 	 */
-	int ENUM_PLANUNG_PHASE_OBJECT = 97;
+	int ENUM_PLANUNG_PHASE_OBJECT = 98;
 
 	/**
 	 * The meta object id for the '<em>ENUM Untergewerk Art Object</em>' data type.
@@ -6248,7 +6371,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMUntergewerkArtObject()
 	 * @generated
 	 */
-	int ENUM_UNTERGEWERK_ART_OBJECT = 98;
+	int ENUM_UNTERGEWERK_ART_OBJECT = 99;
 
 	/**
 	 * The meta object id for the '<em>ENUM Vergleichstyp Besonders Object</em>' data type.
@@ -6258,7 +6381,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getENUMVergleichstypBesondersObject()
 	 * @generated
 	 */
-	int ENUM_VERGLEICHSTYP_BESONDERS_OBJECT = 99;
+	int ENUM_VERGLEICHSTYP_BESONDERS_OBJECT = 100;
 
 	/**
 	 * The meta object id for the '<em>Fuehrende Oertlichkeit Type</em>' data type.
@@ -6268,7 +6391,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getFuehrende_Oertlichkeit_Type()
 	 * @generated
 	 */
-	int FUEHRENDE_OERTLICHKEIT_TYPE = 100;
+	int FUEHRENDE_OERTLICHKEIT_TYPE = 101;
 
 	/**
 	 * The meta object id for the '<em>Ident Rolle Type</em>' data type.
@@ -6278,7 +6401,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getIdent_Rolle_Type()
 	 * @generated
 	 */
-	int IDENT_ROLLE_TYPE = 101;
+	int IDENT_ROLLE_TYPE = 102;
 
 	/**
 	 * The meta object id for the '<em>Index Ausgabe Type</em>' data type.
@@ -6288,7 +6411,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getIndex_Ausgabe_Type()
 	 * @generated
 	 */
-	int INDEX_AUSGABE_TYPE = 102;
+	int INDEX_AUSGABE_TYPE = 103;
 
 	/**
 	 * The meta object id for the '<em>Laufende Nummer Ausgabe Type</em>' data type.
@@ -6298,7 +6421,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getLaufende_Nummer_Ausgabe_Type()
 	 * @generated
 	 */
-	int LAUFENDE_NUMMER_AUSGABE_TYPE = 103;
+	int LAUFENDE_NUMMER_AUSGABE_TYPE = 104;
 
 	/**
 	 * The meta object id for the '<em>Name Akteur 10 Type</em>' data type.
@@ -6308,7 +6431,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getName_Akteur_10_Type()
 	 * @generated
 	 */
-	int NAME_AKTEUR_10_TYPE = 104;
+	int NAME_AKTEUR_10_TYPE = 105;
 
 	/**
 	 * The meta object id for the '<em>Name Akteur 5Type</em>' data type.
@@ -6318,7 +6441,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getName_Akteur_5_Type()
 	 * @generated
 	 */
-	int NAME_AKTEUR_5TYPE = 105;
+	int NAME_AKTEUR_5TYPE = 106;
 
 	/**
 	 * The meta object id for the '<em>Name Akteur Type</em>' data type.
@@ -6328,7 +6451,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getName_Akteur_Type()
 	 * @generated
 	 */
-	int NAME_AKTEUR_TYPE = 106;
+	int NAME_AKTEUR_TYPE = 107;
 
 	/**
 	 * The meta object id for the '<em>Name Organisation Type</em>' data type.
@@ -6338,7 +6461,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getName_Organisation_Type()
 	 * @generated
 	 */
-	int NAME_ORGANISATION_TYPE = 107;
+	int NAME_ORGANISATION_TYPE = 108;
 
 	/**
 	 * The meta object id for the '<em>Organisationseinheit Type</em>' data type.
@@ -6348,7 +6471,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getOrganisationseinheit_Type()
 	 * @generated
 	 */
-	int ORGANISATIONSEINHEIT_TYPE = 108;
+	int ORGANISATIONSEINHEIT_TYPE = 109;
 
 	/**
 	 * The meta object id for the '<em>Plan Pro XSD Version Type</em>' data type.
@@ -6358,7 +6481,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPlanPro_XSD_Version_Type()
 	 * @generated
 	 */
-	int PLAN_PRO_XSD_VERSION_TYPE = 109;
+	int PLAN_PRO_XSD_VERSION_TYPE = 110;
 
 	/**
 	 * The meta object id for the '<em>Polygonzug Betrachtungsbereich Type</em>' data type.
@@ -6368,7 +6491,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPolygonzug_Betrachtungsbereich_Type()
 	 * @generated
 	 */
-	int POLYGONZUG_BETRACHTUNGSBEREICH_TYPE = 110;
+	int POLYGONZUG_BETRACHTUNGSBEREICH_TYPE = 111;
 
 	/**
 	 * The meta object id for the '<em>Polygonzug Planungsbereich Type</em>' data type.
@@ -6378,7 +6501,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getPolygonzug_Planungsbereich_Type()
 	 * @generated
 	 */
-	int POLYGONZUG_PLANUNGSBEREICH_TYPE = 111;
+	int POLYGONZUG_PLANUNGSBEREICH_TYPE = 112;
 
 	/**
 	 * The meta object id for the '<em>Projekt Nummer Type</em>' data type.
@@ -6388,7 +6511,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getProjekt_Nummer_Type()
 	 * @generated
 	 */
-	int PROJEKT_NUMMER_TYPE = 112;
+	int PROJEKT_NUMMER_TYPE = 113;
 
 	/**
 	 * The meta object id for the '<em>Referenz Planung Basis Type</em>' data type.
@@ -6398,7 +6521,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getReferenz_Planung_Basis_Type()
 	 * @generated
 	 */
-	int REFERENZ_PLANUNG_BASIS_TYPE = 113;
+	int REFERENZ_PLANUNG_BASIS_TYPE = 114;
 
 	/**
 	 * The meta object id for the '<em>Referenz Vergleich Besonders Type</em>' data type.
@@ -6408,7 +6531,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getReferenz_Vergleich_Besonders_Type()
 	 * @generated
 	 */
-	int REFERENZ_VERGLEICH_BESONDERS_TYPE = 114;
+	int REFERENZ_VERGLEICH_BESONDERS_TYPE = 115;
 
 	/**
 	 * The meta object id for the '<em>Strecke Abschnitt Type</em>' data type.
@@ -6418,7 +6541,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getStrecke_Abschnitt_Type()
 	 * @generated
 	 */
-	int STRECKE_ABSCHNITT_TYPE = 115;
+	int STRECKE_ABSCHNITT_TYPE = 116;
 
 	/**
 	 * The meta object id for the '<em>Strecke Km Type</em>' data type.
@@ -6428,7 +6551,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getStrecke_Km_Type()
 	 * @generated
 	 */
-	int STRECKE_KM_TYPE = 116;
+	int STRECKE_KM_TYPE = 117;
 
 	/**
 	 * The meta object id for the '<em>Strecke Nummer Type</em>' data type.
@@ -6438,7 +6561,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getStrecke_Nummer_Type()
 	 * @generated
 	 */
-	int STRECKE_NUMMER_TYPE = 117;
+	int STRECKE_NUMMER_TYPE = 118;
 
 	/**
 	 * The meta object id for the '<em>Telefonnummer Type</em>' data type.
@@ -6448,7 +6571,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getTelefonnummer_Type()
 	 * @generated
 	 */
-	int TELEFONNUMMER_TYPE = 118;
+	int TELEFONNUMMER_TYPE = 119;
 
 	/**
 	 * The meta object id for the '<em>Verantwortliche Stelle DB Type</em>' data type.
@@ -6458,7 +6581,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getVerantwortliche_Stelle_DB_Type()
 	 * @generated
 	 */
-	int VERANTWORTLICHE_STELLE_DB_TYPE = 119;
+	int VERANTWORTLICHE_STELLE_DB_TYPE = 120;
 
 	/**
 	 * The meta object id for the '<em>Vergleich Ausgabestand Basis Type</em>' data type.
@@ -6468,7 +6591,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getVergleich_Ausgabestand_Basis_Type()
 	 * @generated
 	 */
-	int VERGLEICH_AUSGABESTAND_BASIS_TYPE = 120;
+	int VERGLEICH_AUSGABESTAND_BASIS_TYPE = 121;
 
 	/**
 	 * The meta object id for the '<em>Werkzeug Name Type</em>' data type.
@@ -6478,7 +6601,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getWerkzeug_Name_Type()
 	 * @generated
 	 */
-	int WERKZEUG_NAME_TYPE = 121;
+	int WERKZEUG_NAME_TYPE = 122;
 
 	/**
 	 * The meta object id for the '<em>Werkzeug Version Type</em>' data type.
@@ -6488,7 +6611,7 @@ public interface PlanProPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.impl.PlanProPackageImpl#getWerkzeug_Version_Type()
 	 * @generated
 	 */
-	int WERKZEUG_VERSION_TYPE = 122;
+	int WERKZEUG_VERSION_TYPE = 123;
 
 
 	/**
@@ -6916,6 +7039,39 @@ public interface PlanProPackage extends EPackage {
 	EReference getContainer_AttributeGroup_Anhang();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOSegmentProfile <em>ATO Segment Profile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>ATO Segment Profile</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOSegmentProfile()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_ATOSegmentProfile();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOTimingPoint <em>ATO Timing Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>ATO Timing Point</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOTimingPoint()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_ATOTimingPoint();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOTSInstanz <em>ATOTS Instanz</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>ATOTS Instanz</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOTSInstanz()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_ATOTSInstanz();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getAussenelementansteuerung <em>Aussenelementansteuerung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7114,15 +7270,15 @@ public interface PlanProPackage extends EPackage {
 	EReference getContainer_AttributeGroup_BedienZentrale();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBinaerdatei <em>Binaerdatei</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBinaerdaten <em>Binaerdaten</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Binaerdatei</em>'.
-	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBinaerdatei()
+	 * @return the meta object for the containment reference list '<em>Binaerdaten</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBinaerdaten()
 	 * @see #getContainer_AttributeGroup()
 	 * @generated
 	 */
-	EReference getContainer_AttributeGroup_Binaerdatei();
+	EReference getContainer_AttributeGroup_Binaerdaten();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBlockAnlage <em>Block Anlage</em>}'.
@@ -7376,6 +7532,17 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getContainer_AttributeGroup_ETCSKnoten();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSRichtungsanzeige <em>ETCS Richtungsanzeige</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>ETCS Richtungsanzeige</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSRichtungsanzeige()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_ETCSRichtungsanzeige();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSSignal <em>ETCS Signal</em>}'.
@@ -8236,6 +8403,17 @@ public interface PlanProPackage extends EPackage {
 	EReference getContainer_AttributeGroup_Strecke();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStreckeBremsweg <em>Strecke Bremsweg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Strecke Bremsweg</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStreckeBremsweg()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_StreckeBremsweg();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStreckePunkt <em>Strecke Punkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8434,6 +8612,28 @@ public interface PlanProPackage extends EPackage {
 	EReference getContainer_AttributeGroup_WeichenlaufketteZuordnung();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZBSSchutzstrecke <em>ZBS Schutzstrecke</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>ZBS Schutzstrecke</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZBSSchutzstrecke()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_ZBSSchutzstrecke();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZBSSignal <em>ZBS Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>ZBS Signal</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZBSSignal()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_ZBSSignal();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZL <em>ZL</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8520,6 +8720,17 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getContainer_AttributeGroup_ZLVBus();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLVBusBesondereAnlage <em>ZLV Bus Besondere Anlage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>ZLV Bus Besondere Anlage</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLVBusBesondereAnlage()
+	 * @see #getContainer_AttributeGroup()
+	 * @generated
+	 */
+	EReference getContainer_AttributeGroup_ZLVBusBesondereAnlage();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLVBusUSZuordnung <em>ZLV Bus US Zuordnung</em>}'.
@@ -9374,6 +9585,82 @@ public interface PlanProPackage extends EPackage {
 	EReference getPlanPro_Schnittstelle_LSTZustand();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getWzkInvalidIDReferences <em>Wzk Invalid ID References</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Wzk Invalid ID References</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getWzkInvalidIDReferences()
+	 * @see #getPlanPro_Schnittstelle()
+	 * @generated
+	 */
+	EReference getPlanPro_Schnittstelle_WzkInvalidIDReferences();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference <em>Wzk Invalid ID Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Wzk Invalid ID Reference</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference
+	 * @generated
+	 */
+	EClass getWzkInvalidIDReference();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getGuid <em>Guid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Guid</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getGuid()
+	 * @see #getWzkInvalidIDReference()
+	 * @generated
+	 */
+	EAttribute getWzkInvalidIDReference_Guid();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getSource()
+	 * @see #getWzkInvalidIDReference()
+	 * @generated
+	 */
+	EReference getWzkInvalidIDReference_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getSourceRef <em>Source Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source Ref</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getSourceRef()
+	 * @see #getWzkInvalidIDReference()
+	 * @generated
+	 */
+	EReference getWzkInvalidIDReference_SourceRef();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getTarget()
+	 * @see #getWzkInvalidIDReference()
+	 * @generated
+	 */
+	EReference getWzkInvalidIDReference_Target();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getTargetRef <em>Target Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Ref</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference#getTargetRef()
+	 * @see #getWzkInvalidIDReference()
+	 * @generated
+	 */
+	EReference getWzkInvalidIDReference_TargetRef();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle_Allg_AttributeGroup <em>Plan Pro Schnittstelle Allg Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10056,6 +10343,17 @@ public interface PlanProPackage extends EPackage {
 	EReference getPlanung_G_Schriftfeld_AttributeGroup_Planungsbuero();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PlanPro.Planung_G_Schriftfeld_AttributeGroup#getPlanungsbueroLogo <em>Planungsbuero Logo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Planungsbuero Logo</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.Planung_G_Schriftfeld_AttributeGroup#getPlanungsbueroLogo()
+	 * @see #getPlanung_G_Schriftfeld_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPlanung_G_Schriftfeld_AttributeGroup_PlanungsbueroLogo();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PlanPro.Planung_Gruppe <em>Planung Gruppe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10248,17 +10546,6 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPlanung_Projekt_PlanungPAllg();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PlanPro.Planung_Projekt#getLstPlanungErsteGruppe <em>Lst Planung Erste Gruppe</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Lst Planung Erste Gruppe</em>'.
-	 * @see org.eclipse.set.toolboxmodel.PlanPro.Planung_Projekt#getLstPlanungErsteGruppe()
-	 * @see #getPlanung_Projekt()
-	 * @generated
-	 */
-	EReference getPlanung_Projekt_LstPlanungErsteGruppe();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PlanPro.Polygone_Betrachtungsbereich_AttributeGroup <em>Polygone Betrachtungsbereich Attribute Group</em>}'.
@@ -10754,7 +11041,7 @@ public interface PlanProPackage extends EPackage {
 	 * @return the meta object for data type '<em>Bauzustand Kurzbezeichnung Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TBauzustand_Kurzbezeichnung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText' pattern='.{1,15}'"
+	 *        extendedMetaData="name='TBauzustand_Kurzbezeichnung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText' pattern='[A-Z,a-z,0-9]{1,15}'"
 	 * @generated
 	 */
 	EDataType getBauzustand_Kurzbezeichnung_Type();
@@ -10994,7 +11281,7 @@ public interface PlanProPackage extends EPackage {
 	 * @return the meta object for data type '<em>Name Akteur Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TName_Akteur' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText' pattern='.{1,30}'"
+	 *        extendedMetaData="name='TName_Akteur' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText' pattern='.{1,35}'"
 	 * @generated
 	 */
 	EDataType getName_Akteur_Type();

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.util;
 
@@ -259,6 +266,8 @@ public class BahnuebergangValidator extends EObjectValidator {
 				return validateGitterbehang_TypeClass((Gitterbehang_TypeClass)value, diagnostics, context);
 			case BahnuebergangPackage.GLEIS_AM_BUE_TYPE_CLASS:
 				return validateGleis_Am_Bue_TypeClass((Gleis_Am_Bue_TypeClass)value, diagnostics, context);
+			case BahnuebergangPackage.HALTEZEIT_TYPE_CLASS:
+				return validateHaltezeit_TypeClass((Haltezeit_TypeClass)value, diagnostics, context);
 			case BahnuebergangPackage.HERSTELLER_TYPE_CLASS:
 				return validateHersteller_TypeClass((Hersteller_TypeClass)value, diagnostics, context);
 			case BahnuebergangPackage.HP_ERSATZSTECKER_TYPE_CLASS:
@@ -495,6 +504,8 @@ public class BahnuebergangValidator extends EObjectValidator {
 				return validateGFR_Typ_Type((String)value, diagnostics, context);
 			case BahnuebergangPackage.GLEIS_AM_BUE_TYPE:
 				return validateGleis_Am_Bue_Type((String)value, diagnostics, context);
+			case BahnuebergangPackage.HALTEZEIT_TYPE:
+				return validateHaltezeit_Type((BigDecimal)value, diagnostics, context);
 			case BahnuebergangPackage.KONTRASTBLENDE_TYPE:
 				return validateKontrastblende_Type((Boolean)value, diagnostics, context);
 			case BahnuebergangPackage.KONTRASTBLENDE_TYPE_OBJECT:
@@ -1222,6 +1233,15 @@ public class BahnuebergangValidator extends EObjectValidator {
 	 */
 	public boolean validateGleis_Am_Bue_TypeClass(Gleis_Am_Bue_TypeClass gleis_Am_Bue_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(gleis_Am_Bue_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateHaltezeit_TypeClass(Haltezeit_TypeClass haltezeit_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(haltezeit_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2524,6 +2544,16 @@ public class BahnuebergangValidator extends EObjectValidator {
 	 */
 	public boolean validateGleis_Am_Bue_Type_Pattern(String gleis_Am_Bue_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(BahnuebergangPackage.eINSTANCE.getGleis_Am_Bue_Type(), gleis_Am_Bue_Type, GLEIS_AM_BUE_TYPE__PATTERN__VALUES, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateHaltezeit_Type(BigDecimal haltezeit_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateSekunde_Type_Pattern(haltezeit_Type, diagnostics, context);
+		return result;
 	}
 
 	/**

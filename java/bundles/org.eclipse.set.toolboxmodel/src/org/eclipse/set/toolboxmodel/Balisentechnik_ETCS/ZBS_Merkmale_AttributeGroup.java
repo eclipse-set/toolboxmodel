@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -27,7 +34,7 @@ public interface ZBS_Merkmale_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Art des Linkings (Grund- oder Hilfs-). Der Ziel-Datenpunkt des Grund-Linkings muss mit dem Ziel-Datenpunkt des letzten Hilfs-Linkings übereinstimmen. Ist diese Bedingung nicht erfüllt, ist ein Verkettungsstützpunkt erforderlich. Ein Verkettungsstützpunkt besitzt keine Grundverkettung.
+	 * Art des Linkings (Grund- oder Hilfs-). Der Ziel-Datenpunkt des Grund-Linkings muss mit dem Ziel-Datenpunkt des letzten Hilfs-Linkings übereinstimmen. Ist diese Bedingung nicht erfüllt, ist ein Verkettungsstützpunkt erforderlich. Ein Verkettungsstützpunkt besitzt keine Grundverkettung und er ist Start-DP für weitere Hilfs-Linkings mit unterschiedlichen Fachtelegrammen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>DP Link Art</em>' containment reference.
 	 * @see #setDPLinkArt(DP_Link_Art_TypeClass)

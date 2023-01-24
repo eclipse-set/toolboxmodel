@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -32,66 +39,6 @@ public enum ENUMEVArt implements Enumerator {
 	ENUMEV_ART_ANDERE_AUSSENELEMENTANSTEUERUNG(0, "ENUMEV_Art_andere_Aussenelementansteuerung", "andere_Aussenelementansteuerung"),
 
 	/**
-	 * The '<em><b>ENUMEV Art Fe Ak 400V DC direkt</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_FE_AK_400V_DC_DIREKT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMEV_ART_FE_AK_400V_DC_DIREKT(1, "ENUMEV_Art_FeAk_400V_DC_direkt", "FeAk_400V_DC_direkt"),
-
-	/**
-	 * The '<em><b>ENUMEV Art Fe Ak 750V DC Energiebus</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS(2, "ENUMEV_Art_FeAk_750V_DC_Energiebus", "FeAk_750V_DC_Energiebus"),
-
-	/**
-	 * The '<em><b>ENUMEV Art Landesnetz VNB</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_LANDESNETZ_VNB_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMEV_ART_LANDESNETZ_VNB(3, "ENUMEV_Art_Landesnetz_VNB", "Landesnetz_VNB"),
-
-	/**
-	 * The '<em><b>ENUMEV Art Notstromaggregat NEA mobil</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL(4, "ENUMEV_Art_Notstromaggregat_NEA_mobil", "Notstromaggregat_NEA_mobil"),
-
-	/**
-	 * The '<em><b>ENUMEV Art Notstromaggregat NEA stationaer</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER(5, "ENUMEV_Art_Notstromaggregat_NEA_stationaer", "Notstromaggregat_NEA_stationaer"),
-
-	/**
-	 * The '<em><b>ENUMEV Art Solar</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_SOLAR_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMEV_ART_SOLAR(6, "ENUMEV_Art_Solar", "Solar"),
-
-	/**
 	 * The '<em><b>ENUMEV Art Batterie</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,17 +46,7 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMEV_ART_BATTERIE(7, "ENUMEV_Art_Batterie", "Batterie"),
-
-	/**
-	 * The '<em><b>ENUMEV Art sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMEV_ART_SONSTIGE(8, "ENUMEV_Art_sonstige", "sonstige"),
+	ENUMEV_ART_BATTERIE(1, "ENUMEV_Art_Batterie", "Batterie"),
 
 	/**
 	 * The '<em><b>ENUMEV Art BUE</b></em>' literal object.
@@ -119,7 +56,7 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMEV_ART_BUE(9, "ENUMEV_Art_BUE", "BUE"),
+	ENUMEV_ART_BUE(2, "ENUMEV_Art_BUE", "BUE"),
 
 	/**
 	 * The '<em><b>ENUMEV Art ESTW Zentraleinheit</b></em>' literal object.
@@ -129,7 +66,7 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMEV_ART_ESTW_ZENTRALEINHEIT(10, "ENUMEV_Art_ESTW_Zentraleinheit", "ESTW_Zentraleinheit"),
+	ENUMEV_ART_ESTW_ZENTRALEINHEIT(3, "ENUMEV_Art_ESTW_Zentraleinheit", "ESTW_Zentraleinheit"),
 
 	/**
 	 * The '<em><b>ENUMEV Art Fahrleitung</b></em>' literal object.
@@ -139,7 +76,77 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMEV_ART_FAHRLEITUNG(11, "ENUMEV_Art_Fahrleitung", "Fahrleitung");
+	ENUMEV_ART_FAHRLEITUNG(4, "ENUMEV_Art_Fahrleitung", "Fahrleitung"),
+
+	/**
+	 * The '<em><b>ENUMEV Art Fe Ak 400V DC direkt</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_FE_AK_400V_DC_DIREKT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMEV_ART_FE_AK_400V_DC_DIREKT(5, "ENUMEV_Art_FeAk_400V_DC_direkt", "FeAk_400V_DC_direkt"),
+
+	/**
+	 * The '<em><b>ENUMEV Art Fe Ak 750V DC Energiebus</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS(6, "ENUMEV_Art_FeAk_750V_DC_Energiebus", "FeAk_750V_DC_Energiebus"),
+
+	/**
+	 * The '<em><b>ENUMEV Art Landesnetz VNB</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_LANDESNETZ_VNB_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMEV_ART_LANDESNETZ_VNB(7, "ENUMEV_Art_Landesnetz_VNB", "Landesnetz_VNB"),
+
+	/**
+	 * The '<em><b>ENUMEV Art Notstromaggregat NEA stationaer</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER(8, "ENUMEV_Art_Notstromaggregat_NEA_stationaer", "Notstromaggregat_NEA_stationaer"),
+
+	/**
+	 * The '<em><b>ENUMEV Art Notstromanschluss NEA mobil</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL(9, "ENUMEV_Art_Notstromanschluss_NEA_mobil", "Notstromanschluss_NEA_mobil"),
+
+	/**
+	 * The '<em><b>ENUMEV Art Solar</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_SOLAR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMEV_ART_SOLAR(10, "ENUMEV_Art_Solar", "Solar"),
+
+	/**
+	 * The '<em><b>ENUMEV Art sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMEV_ART_SONSTIGE(11, "ENUMEV_Art_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUMEV Art andere Aussenelementansteuerung</b></em>' literal value.
@@ -153,72 +160,6 @@ public enum ENUMEVArt implements Enumerator {
 	public static final int ENUMEV_ART_ANDERE_AUSSENELEMENTANSTEUERUNG_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUMEV Art Fe Ak 400V DC direkt</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_FE_AK_400V_DC_DIREKT
-	 * @model name="ENUMEV_Art_FeAk_400V_DC_direkt" literal="FeAk_400V_DC_direkt"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMEV_ART_FE_AK_400V_DC_DIREKT_VALUE = 1;
-
-	/**
-	 * The '<em><b>ENUMEV Art Fe Ak 750V DC Energiebus</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS
-	 * @model name="ENUMEV_Art_FeAk_750V_DC_Energiebus" literal="FeAk_750V_DC_Energiebus"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUMEV Art Landesnetz VNB</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_LANDESNETZ_VNB
-	 * @model name="ENUMEV_Art_Landesnetz_VNB" literal="Landesnetz_VNB"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMEV_ART_LANDESNETZ_VNB_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUMEV Art Notstromaggregat NEA mobil</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL
-	 * @model name="ENUMEV_Art_Notstromaggregat_NEA_mobil" literal="Notstromaggregat_NEA_mobil"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL_VALUE = 4;
-
-	/**
-	 * The '<em><b>ENUMEV Art Notstromaggregat NEA stationaer</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER
-	 * @model name="ENUMEV_Art_Notstromaggregat_NEA_stationaer" literal="Notstromaggregat_NEA_stationaer"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER_VALUE = 5;
-
-	/**
-	 * The '<em><b>ENUMEV Art Solar</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_SOLAR
-	 * @model name="ENUMEV_Art_Solar" literal="Solar"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMEV_ART_SOLAR_VALUE = 6;
-
-	/**
 	 * The '<em><b>ENUMEV Art Batterie</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -227,18 +168,7 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMEV_ART_BATTERIE_VALUE = 7;
-
-	/**
-	 * The '<em><b>ENUMEV Art sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMEV_ART_SONSTIGE
-	 * @model name="ENUMEV_Art_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMEV_ART_SONSTIGE_VALUE = 8;
+	public static final int ENUMEV_ART_BATTERIE_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUMEV Art BUE</b></em>' literal value.
@@ -249,7 +179,7 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMEV_ART_BUE_VALUE = 9;
+	public static final int ENUMEV_ART_BUE_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMEV Art ESTW Zentraleinheit</b></em>' literal value.
@@ -260,7 +190,7 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMEV_ART_ESTW_ZENTRALEINHEIT_VALUE = 10;
+	public static final int ENUMEV_ART_ESTW_ZENTRALEINHEIT_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUMEV Art Fahrleitung</b></em>' literal value.
@@ -271,7 +201,84 @@ public enum ENUMEVArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMEV_ART_FAHRLEITUNG_VALUE = 11;
+	public static final int ENUMEV_ART_FAHRLEITUNG_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUMEV Art Fe Ak 400V DC direkt</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_FE_AK_400V_DC_DIREKT
+	 * @model name="ENUMEV_Art_FeAk_400V_DC_direkt" literal="FeAk_400V_DC_direkt"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMEV_ART_FE_AK_400V_DC_DIREKT_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUMEV Art Fe Ak 750V DC Energiebus</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS
+	 * @model name="ENUMEV_Art_FeAk_750V_DC_Energiebus" literal="FeAk_750V_DC_Energiebus"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS_VALUE = 6;
+
+	/**
+	 * The '<em><b>ENUMEV Art Landesnetz VNB</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_LANDESNETZ_VNB
+	 * @model name="ENUMEV_Art_Landesnetz_VNB" literal="Landesnetz_VNB"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMEV_ART_LANDESNETZ_VNB_VALUE = 7;
+
+	/**
+	 * The '<em><b>ENUMEV Art Notstromaggregat NEA stationaer</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER
+	 * @model name="ENUMEV_Art_Notstromaggregat_NEA_stationaer" literal="Notstromaggregat_NEA_stationaer"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER_VALUE = 8;
+
+	/**
+	 * The '<em><b>ENUMEV Art Notstromanschluss NEA mobil</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL
+	 * @model name="ENUMEV_Art_Notstromanschluss_NEA_mobil" literal="Notstromanschluss_NEA_mobil"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL_VALUE = 9;
+
+	/**
+	 * The '<em><b>ENUMEV Art Solar</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_SOLAR
+	 * @model name="ENUMEV_Art_Solar" literal="Solar"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMEV_ART_SOLAR_VALUE = 10;
+
+	/**
+	 * The '<em><b>ENUMEV Art sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMEV_ART_SONSTIGE
+	 * @model name="ENUMEV_Art_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMEV_ART_SONSTIGE_VALUE = 11;
 
 	/**
 	 * An array of all the '<em><b>ENUMEV Art</b></em>' enumerators.
@@ -282,17 +289,17 @@ public enum ENUMEVArt implements Enumerator {
 	private static final ENUMEVArt[] VALUES_ARRAY =
 		new ENUMEVArt[] {
 			ENUMEV_ART_ANDERE_AUSSENELEMENTANSTEUERUNG,
-			ENUMEV_ART_FE_AK_400V_DC_DIREKT,
-			ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS,
-			ENUMEV_ART_LANDESNETZ_VNB,
-			ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL,
-			ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER,
-			ENUMEV_ART_SOLAR,
 			ENUMEV_ART_BATTERIE,
-			ENUMEV_ART_SONSTIGE,
 			ENUMEV_ART_BUE,
 			ENUMEV_ART_ESTW_ZENTRALEINHEIT,
 			ENUMEV_ART_FAHRLEITUNG,
+			ENUMEV_ART_FE_AK_400V_DC_DIREKT,
+			ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS,
+			ENUMEV_ART_LANDESNETZ_VNB,
+			ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER,
+			ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL,
+			ENUMEV_ART_SOLAR,
+			ENUMEV_ART_SONSTIGE,
 		};
 
 	/**
@@ -350,17 +357,17 @@ public enum ENUMEVArt implements Enumerator {
 	public static ENUMEVArt get(int value) {
 		switch (value) {
 			case ENUMEV_ART_ANDERE_AUSSENELEMENTANSTEUERUNG_VALUE: return ENUMEV_ART_ANDERE_AUSSENELEMENTANSTEUERUNG;
-			case ENUMEV_ART_FE_AK_400V_DC_DIREKT_VALUE: return ENUMEV_ART_FE_AK_400V_DC_DIREKT;
-			case ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS_VALUE: return ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS;
-			case ENUMEV_ART_LANDESNETZ_VNB_VALUE: return ENUMEV_ART_LANDESNETZ_VNB;
-			case ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL_VALUE: return ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL;
-			case ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER_VALUE: return ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER;
-			case ENUMEV_ART_SOLAR_VALUE: return ENUMEV_ART_SOLAR;
 			case ENUMEV_ART_BATTERIE_VALUE: return ENUMEV_ART_BATTERIE;
-			case ENUMEV_ART_SONSTIGE_VALUE: return ENUMEV_ART_SONSTIGE;
 			case ENUMEV_ART_BUE_VALUE: return ENUMEV_ART_BUE;
 			case ENUMEV_ART_ESTW_ZENTRALEINHEIT_VALUE: return ENUMEV_ART_ESTW_ZENTRALEINHEIT;
 			case ENUMEV_ART_FAHRLEITUNG_VALUE: return ENUMEV_ART_FAHRLEITUNG;
+			case ENUMEV_ART_FE_AK_400V_DC_DIREKT_VALUE: return ENUMEV_ART_FE_AK_400V_DC_DIREKT;
+			case ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS_VALUE: return ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS;
+			case ENUMEV_ART_LANDESNETZ_VNB_VALUE: return ENUMEV_ART_LANDESNETZ_VNB;
+			case ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER_VALUE: return ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER;
+			case ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL_VALUE: return ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL;
+			case ENUMEV_ART_SOLAR_VALUE: return ENUMEV_ART_SOLAR;
+			case ENUMEV_ART_SONSTIGE_VALUE: return ENUMEV_ART_SONSTIGE;
 			default: return null;
 		}
 	}

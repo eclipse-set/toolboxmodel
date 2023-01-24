@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
@@ -13,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup#getFstrMittelArt <em>Fstr Mittel Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup#getFstrMittelVAufwertung <em>Fstr Mittel VAufwertung</em>}</li>
  * </ul>
  *
@@ -21,6 +29,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Fstr_Mittel_AttributeGroup extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Fstr Mittel Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Art der Mittelweichenteil-Fahrstraße. ZM – ZugMittelweichenteil-, ZUM – ZugUmfahrMittelweichenteil-. DB-Regelwerk Zugstraßentabelle, Spalte 2 "Art"
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Fstr Mittel Art</em>' containment reference.
+	 * @see #setFstrMittelArt(Fstr_Mittel_Art_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage#getFstr_Mittel_AttributeGroup_FstrMittelArt()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='Fstr_Mittel_Art'"
+	 * @generated
+	 */
+	Fstr_Mittel_Art_TypeClass getFstrMittelArt();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup#getFstrMittelArt <em>Fstr Mittel Art</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fstr Mittel Art</em>' containment reference.
+	 * @see #getFstrMittelArt()
+	 * @generated
+	 */
+	void setFstrMittelArt(Fstr_Mittel_Art_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>Fstr Mittel VAufwertung</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

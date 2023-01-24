@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung.util;
 
@@ -103,6 +110,13 @@ public class ZuglenkungSwitch<T> extends Switch<T> {
 				Einstellkontrollzeit_TypeClass einstellkontrollzeit_TypeClass = (Einstellkontrollzeit_TypeClass)theEObject;
 				T result = caseEinstellkontrollzeit_TypeClass(einstellkontrollzeit_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(einstellkontrollzeit_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ZuglenkungPackage.FSTR_BILDEZEIT_TYPE_CLASS: {
+				Fstr_Bildezeit_TypeClass fstr_Bildezeit_TypeClass = (Fstr_Bildezeit_TypeClass)theEObject;
+				T result = caseFstr_Bildezeit_TypeClass(fstr_Bildezeit_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Bildezeit_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -358,6 +372,21 @@ public class ZuglenkungSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEinstellkontrollzeit_TypeClass(Einstellkontrollzeit_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fstr Bildezeit Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fstr Bildezeit Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFstr_Bildezeit_TypeClass(Fstr_Bildezeit_TypeClass object) {
 		return null;
 	}
 

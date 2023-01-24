@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl;
 
@@ -12,6 +19,10 @@ import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_Energieversorgung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_GFK_IP_Adressblock_AttributeGroup;
@@ -24,6 +35,7 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bandbreite_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bauart_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_AEA_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_ESTW_ZE_TypeClass;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_TSO_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMAussenelementansteuerungArt;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMBandbreite;
@@ -33,9 +45,11 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMMediumArt;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMNetzArt;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTSOTeilsystemArt;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTechnikArt;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUebertragungswegArt;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUnterbringungArt;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUnterbringungBefestigung;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Bezeichnung_AttributeGroup;
@@ -62,6 +76,7 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Technik_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Technik_Beschreibung_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Technik_Standort;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Technik_Standort_Bezeichnung_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Uebertragungsweg;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Uebertragungsweg_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Uebertragungsweg_Technik_AttributeGroup;
@@ -69,6 +84,8 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Befestigung_TypeClass;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.util.Ansteuerung_ElementValidator;
 
@@ -116,13 +133,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -147,9 +168,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -252,6 +275,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass bezeichnung_Stellwerk_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass bezeichnung_TSO_TypeClassEClass = null;
 
 	/**
@@ -267,6 +297,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	private EClass energieversorgung_Art_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass estW_ZE_Energieversorgung_AttributeGroupEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -441,6 +478,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tueranschlag_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass uebertragungswegEClass = null;
 
 	/**
@@ -484,6 +528,20 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	private EClass unterbringung_Befestigung_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unterbringung_Polygonzug_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass zusatzinformation_Stellwerk_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -546,6 +604,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum enumTueranschlagEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum enumUebertragungswegArtEEnum = null;
 
 	/**
@@ -582,6 +647,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	private EDataType bezeichnung_ESTW_ZE_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType bezeichnung_Stellwerk_TypeEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -645,6 +717,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	private EDataType enumtsoTeilsystemArtObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumTueranschlagObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -724,6 +803,20 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	private EDataType technik_Beschreibung_TypeEDataType = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType unterbringung_Polygonzug_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType zusatzinformation_Stellwerk_TypeEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -771,30 +864,34 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -811,8 +908,8 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -830,16 +927,18 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 
 		// Create package meta-data objects
 		theAnsteuerung_ElementPackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -847,23 +946,25 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theAnsteuerung_ElementPackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -871,7 +972,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -1276,6 +1377,26 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public EClass getBezeichnung_Stellwerk_TypeClass() {
+		return bezeichnung_Stellwerk_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBezeichnung_Stellwerk_TypeClass_Wert() {
+		return (EAttribute)bezeichnung_Stellwerk_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getBezeichnung_TSO_TypeClass() {
 		return bezeichnung_TSO_TypeClassEClass;
 	}
@@ -1336,6 +1457,66 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public EClass getESTW_ZE_Energieversorgung_AttributeGroup() {
+		return estW_ZE_Energieversorgung_AttributeGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArt() {
+		return (EReference)estW_ZE_Energieversorgung_AttributeGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergiePrimaer() {
+		return (EReference)estW_ZE_Energieversorgung_AttributeGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz() {
+		return (EReference)estW_ZE_Energieversorgung_AttributeGroupEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz2() {
+		return (EReference)estW_ZE_Energieversorgung_AttributeGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergieSekundaer() {
+		return (EReference)estW_ZE_Energieversorgung_AttributeGroupEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getESTW_Zentraleinheit() {
 		return estW_ZentraleinheitEClass;
 	}
@@ -1356,7 +1537,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getESTW_Zentraleinheit_ESTWZentraleinheitAllg() {
+	public EReference getESTW_Zentraleinheit_ESTWZEEnergieversorgung() {
 		return (EReference)estW_ZentraleinheitEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1366,7 +1547,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getESTW_Zentraleinheit_IDOertlichkeitNamensgebend() {
+	public EReference getESTW_Zentraleinheit_ESTWZentraleinheitAllg() {
 		return (EReference)estW_ZentraleinheitEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1376,7 +1557,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getESTW_Zentraleinheit_IDUnterbringung() {
+	public EReference getESTW_Zentraleinheit_IDOertlichkeitNamensgebend() {
 		return (EReference)estW_ZentraleinheitEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1386,7 +1567,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getESTW_Zentraleinheit_IDBedienBezirkVirtuell() {
+	public EReference getESTW_Zentraleinheit_IDUnterbringung() {
 		return (EReference)estW_ZentraleinheitEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1396,8 +1577,18 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getESTW_Zentraleinheit_IDBedienBezirkZentral() {
+	public EReference getESTW_Zentraleinheit_IDBedienBezirkVirtuell() {
 		return (EReference)estW_ZentraleinheitEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getESTW_Zentraleinheit_IDBedienBezirkZentral() {
+		return (EReference)estW_ZentraleinheitEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1426,38 +1617,8 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArt() {
-		return (EReference)estW_Zentraleinheit_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz() {
-		return (EReference)estW_Zentraleinheit_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz2() {
-		return (EReference)estW_Zentraleinheit_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getESTW_Zentraleinheit_Allg_AttributeGroup_Hersteller() {
-		return (EReference)estW_Zentraleinheit_Allg_AttributeGroupEClass.getEStructuralFeatures().get(4);
+		return (EReference)estW_Zentraleinheit_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1736,8 +1897,28 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getStell_Bereich_IDAussenelementansteuerung() {
+	public EReference getStell_Bereich_ZusatzinformationStellwerk() {
 		return (EReference)stell_BereichEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStell_Bereich_BezeichnungStellwerk() {
+		return (EReference)stell_BereichEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStell_Bereich_IDAussenelementansteuerung() {
+		return (EReference)stell_BereichEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2016,6 +2197,26 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public EClass getTueranschlag_TypeClass() {
+		return tueranschlag_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTueranschlag_TypeClass_Wert() {
+		return (EAttribute)tueranschlag_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getUebertragungsweg() {
 		return uebertragungswegEClass;
 	}
@@ -2226,6 +2427,16 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public EReference getUnterbringung_UnterbringungPolygonzug() {
+		return (EReference)unterbringungEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getUnterbringung_Allg_AttributeGroup() {
 		return unterbringung_Allg_AttributeGroupEClass;
 	}
@@ -2246,7 +2457,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getUnterbringung_Allg_AttributeGroup_UnterbringungArt() {
+	public EReference getUnterbringung_Allg_AttributeGroup_Tueranschlag() {
 		return (EReference)unterbringung_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2256,8 +2467,18 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
-	public EReference getUnterbringung_Allg_AttributeGroup_UnterbringungBefestigung() {
+	public EReference getUnterbringung_Allg_AttributeGroup_UnterbringungArt() {
 		return (EReference)unterbringung_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUnterbringung_Allg_AttributeGroup_UnterbringungBefestigung() {
+		return (EReference)unterbringung_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2298,6 +2519,46 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	@Override
 	public EAttribute getUnterbringung_Befestigung_TypeClass_Wert() {
 		return (EAttribute)unterbringung_Befestigung_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUnterbringung_Polygonzug_TypeClass() {
+		return unterbringung_Polygonzug_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUnterbringung_Polygonzug_TypeClass_Wert() {
+		return (EAttribute)unterbringung_Polygonzug_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getZusatzinformation_Stellwerk_TypeClass() {
+		return zusatzinformation_Stellwerk_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getZusatzinformation_Stellwerk_TypeClass_Wert() {
+		return (EAttribute)zusatzinformation_Stellwerk_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2386,6 +2647,16 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public EEnum getENUMTueranschlag() {
+		return enumTueranschlagEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getENUMUebertragungswegArt() {
 		return enumUebertragungswegArtEEnum;
 	}
@@ -2438,6 +2709,16 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	@Override
 	public EDataType getBezeichnung_ESTW_ZE_Type() {
 		return bezeichnung_ESTW_ZE_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getBezeichnung_Stellwerk_Type() {
+		return bezeichnung_Stellwerk_TypeEDataType;
 	}
 
 	/**
@@ -2528,6 +2809,16 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	@Override
 	public EDataType getENUMTSOTeilsystemArtObject() {
 		return enumtsoTeilsystemArtObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMTueranschlagObject() {
+		return enumTueranschlagObjectEDataType;
 	}
 
 	/**
@@ -2646,6 +2937,26 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 	 * @generated
 	 */
 	@Override
+	public EDataType getUnterbringung_Polygonzug_Type() {
+		return unterbringung_Polygonzug_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getZusatzinformation_Stellwerk_Type() {
+		return zusatzinformation_Stellwerk_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Ansteuerung_ElementFactory getAnsteuerung_ElementFactory() {
 		return (Ansteuerung_ElementFactory)getEFactoryInstance();
 	}
@@ -2716,6 +3027,9 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		bezeichnung_ESTW_ZE_TypeClassEClass = createEClass(BEZEICHNUNG_ESTW_ZE_TYPE_CLASS);
 		createEAttribute(bezeichnung_ESTW_ZE_TypeClassEClass, BEZEICHNUNG_ESTW_ZE_TYPE_CLASS__WERT);
 
+		bezeichnung_Stellwerk_TypeClassEClass = createEClass(BEZEICHNUNG_STELLWERK_TYPE_CLASS);
+		createEAttribute(bezeichnung_Stellwerk_TypeClassEClass, BEZEICHNUNG_STELLWERK_TYPE_CLASS__WERT);
+
 		bezeichnung_TSO_TypeClassEClass = createEClass(BEZEICHNUNG_TSO_TYPE_CLASS);
 		createEAttribute(bezeichnung_TSO_TypeClassEClass, BEZEICHNUNG_TSO_TYPE_CLASS__WERT);
 
@@ -2725,8 +3039,16 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		energieversorgung_Art_TypeClassEClass = createEClass(ENERGIEVERSORGUNG_ART_TYPE_CLASS);
 		createEAttribute(energieversorgung_Art_TypeClassEClass, ENERGIEVERSORGUNG_ART_TYPE_CLASS__WERT);
 
+		estW_ZE_Energieversorgung_AttributeGroupEClass = createEClass(ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP);
+		createEReference(estW_ZE_Energieversorgung_AttributeGroupEClass, ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2);
+		createEReference(estW_ZE_Energieversorgung_AttributeGroupEClass, ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART);
+		createEReference(estW_ZE_Energieversorgung_AttributeGroupEClass, ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_PRIMAER);
+		createEReference(estW_ZE_Energieversorgung_AttributeGroupEClass, ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ);
+		createEReference(estW_ZE_Energieversorgung_AttributeGroupEClass, ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_SEKUNDAER);
+
 		estW_ZentraleinheitEClass = createEClass(ESTW_ZENTRALEINHEIT);
 		createEReference(estW_ZentraleinheitEClass, ESTW_ZENTRALEINHEIT__BEZEICHNUNG);
+		createEReference(estW_ZentraleinheitEClass, ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG);
 		createEReference(estW_ZentraleinheitEClass, ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG);
 		createEReference(estW_ZentraleinheitEClass, ESTW_ZENTRALEINHEIT__ID_OERTLICHKEIT_NAMENSGEBEND);
 		createEReference(estW_ZentraleinheitEClass, ESTW_ZENTRALEINHEIT__ID_UNTERBRINGUNG);
@@ -2735,9 +3057,6 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 
 		estW_Zentraleinheit_Allg_AttributeGroupEClass = createEClass(ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP);
 		createEReference(estW_Zentraleinheit_Allg_AttributeGroupEClass, ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__BAUART);
-		createEReference(estW_Zentraleinheit_Allg_AttributeGroupEClass, ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART);
-		createEReference(estW_Zentraleinheit_Allg_AttributeGroupEClass, ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ);
-		createEReference(estW_Zentraleinheit_Allg_AttributeGroupEClass, ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2);
 		createEReference(estW_Zentraleinheit_Allg_AttributeGroupEClass, ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__HERSTELLER);
 
 		estW_Zentraleinheit_Bezeichnung_AttributeGroupEClass = createEClass(ESTW_ZENTRALEINHEIT_BEZEICHNUNG_ATTRIBUTE_GROUP);
@@ -2780,6 +3099,8 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		createEAttribute(standort_Beschreibung_TypeClassEClass, STANDORT_BESCHREIBUNG_TYPE_CLASS__WERT);
 
 		stell_BereichEClass = createEClass(STELL_BEREICH);
+		createEReference(stell_BereichEClass, STELL_BEREICH__ZUSATZINFORMATION_STELLWERK);
+		createEReference(stell_BereichEClass, STELL_BEREICH__BEZEICHNUNG_STELLWERK);
 		createEReference(stell_BereichEClass, STELL_BEREICH__ID_AUSSENELEMENTANSTEUERUNG);
 
 		stellelementEClass = createEClass(STELLELEMENT);
@@ -2817,6 +3138,9 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		tsO_Teilsystem_Art_TypeClassEClass = createEClass(TSO_TEILSYSTEM_ART_TYPE_CLASS);
 		createEAttribute(tsO_Teilsystem_Art_TypeClassEClass, TSO_TEILSYSTEM_ART_TYPE_CLASS__WERT);
 
+		tueranschlag_TypeClassEClass = createEClass(TUERANSCHLAG_TYPE_CLASS);
+		createEAttribute(tueranschlag_TypeClassEClass, TUERANSCHLAG_TYPE_CLASS__WERT);
+
 		uebertragungswegEClass = createEClass(UEBERTRAGUNGSWEG);
 		createEReference(uebertragungswegEClass, UEBERTRAGUNGSWEG__ID_ANHANG_UE_WEG_NACH);
 		createEReference(uebertragungswegEClass, UEBERTRAGUNGSWEG__ID_ANHANG_UE_WEG_VON);
@@ -2841,9 +3165,11 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		createEReference(unterbringungEClass, UNTERBRINGUNG__IDGEO_PUNKT);
 		createEReference(unterbringungEClass, UNTERBRINGUNG__PUNKT_OBJEKT_TOP_KANTE);
 		createEReference(unterbringungEClass, UNTERBRINGUNG__STANDORT_BESCHREIBUNG);
+		createEReference(unterbringungEClass, UNTERBRINGUNG__UNTERBRINGUNG_POLYGONZUG);
 
 		unterbringung_Allg_AttributeGroupEClass = createEClass(UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP);
 		createEReference(unterbringung_Allg_AttributeGroupEClass, UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER);
+		createEReference(unterbringung_Allg_AttributeGroupEClass, UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG);
 		createEReference(unterbringung_Allg_AttributeGroupEClass, UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART);
 		createEReference(unterbringung_Allg_AttributeGroupEClass, UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG);
 
@@ -2852,6 +3178,12 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 
 		unterbringung_Befestigung_TypeClassEClass = createEClass(UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS);
 		createEAttribute(unterbringung_Befestigung_TypeClassEClass, UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS__WERT);
+
+		unterbringung_Polygonzug_TypeClassEClass = createEClass(UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS);
+		createEAttribute(unterbringung_Polygonzug_TypeClassEClass, UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS__WERT);
+
+		zusatzinformation_Stellwerk_TypeClassEClass = createEClass(ZUSATZINFORMATION_STELLWERK_TYPE_CLASS);
+		createEAttribute(zusatzinformation_Stellwerk_TypeClassEClass, ZUSATZINFORMATION_STELLWERK_TYPE_CLASS__WERT);
 
 		// Create enums
 		enumAussenelementansteuerungArtEEnum = createEEnum(ENUM_AUSSENELEMENTANSTEUERUNG_ART);
@@ -2862,6 +3194,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		enumNetzArtEEnum = createEEnum(ENUM_NETZ_ART);
 		enumTechnikArtEEnum = createEEnum(ENUM_TECHNIK_ART);
 		enumtsoTeilsystemArtEEnum = createEEnum(ENUMTSO_TEILSYSTEM_ART);
+		enumTueranschlagEEnum = createEEnum(ENUM_TUERANSCHLAG);
 		enumUebertragungswegArtEEnum = createEEnum(ENUM_UEBERTRAGUNGSWEG_ART);
 		enumUnterbringungArtEEnum = createEEnum(ENUM_UNTERBRINGUNG_ART);
 		enumUnterbringungBefestigungEEnum = createEEnum(ENUM_UNTERBRINGUNG_BEFESTIGUNG);
@@ -2870,6 +3203,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		bauart_TypeEDataType = createEDataType(BAUART_TYPE);
 		bezeichnung_AEA_TypeEDataType = createEDataType(BEZEICHNUNG_AEA_TYPE);
 		bezeichnung_ESTW_ZE_TypeEDataType = createEDataType(BEZEICHNUNG_ESTW_ZE_TYPE);
+		bezeichnung_Stellwerk_TypeEDataType = createEDataType(BEZEICHNUNG_STELLWERK_TYPE);
 		bezeichnung_TSO_TypeEDataType = createEDataType(BEZEICHNUNG_TSO_TYPE);
 		enumAussenelementansteuerungArtObjectEDataType = createEDataType(ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJECT);
 		enumBandbreiteObjectEDataType = createEDataType(ENUM_BANDBREITE_OBJECT);
@@ -2879,6 +3213,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		enumNetzArtObjectEDataType = createEDataType(ENUM_NETZ_ART_OBJECT);
 		enumTechnikArtObjectEDataType = createEDataType(ENUM_TECHNIK_ART_OBJECT);
 		enumtsoTeilsystemArtObjectEDataType = createEDataType(ENUMTSO_TEILSYSTEM_ART_OBJECT);
+		enumTueranschlagObjectEDataType = createEDataType(ENUM_TUERANSCHLAG_OBJECT);
 		enumUebertragungswegArtObjectEDataType = createEDataType(ENUM_UEBERTRAGUNGSWEG_ART_OBJECT);
 		enumUnterbringungArtObjectEDataType = createEDataType(ENUM_UNTERBRINGUNG_ART_OBJECT);
 		enumUnterbringungBefestigungObjectEDataType = createEDataType(ENUM_UNTERBRINGUNG_BEFESTIGUNG_OBJECT);
@@ -2890,6 +3225,8 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		iP_Adressblock_Grau_V6_TypeEDataType = createEDataType(IP_ADRESSBLOCK_GRAU_V6_TYPE);
 		standort_Beschreibung_TypeEDataType = createEDataType(STANDORT_BESCHREIBUNG_TYPE);
 		technik_Beschreibung_TypeEDataType = createEDataType(TECHNIK_BESCHREIBUNG_TYPE);
+		unterbringung_Polygonzug_TypeEDataType = createEDataType(UNTERBRINGUNG_POLYGONZUG_TYPE);
+		zusatzinformation_Stellwerk_TypeEDataType = createEDataType(ZUSATZINFORMATION_STELLWERK_TYPE);
 	}
 
 	/**
@@ -2932,6 +3269,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		bauart_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bezeichnung_AEA_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bezeichnung_ESTW_ZE_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		bezeichnung_Stellwerk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bezeichnung_TSO_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		energieversorgung_Art_Ersatz_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		energieversorgung_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -2954,11 +3292,14 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		technik_Beschreibung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		technik_StandortEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		tsO_Teilsystem_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		tueranschlag_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		uebertragungswegEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		uebertragungsweg_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		unterbringungEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		unterbringung_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		unterbringung_Befestigung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		unterbringung_Polygonzug_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		zusatzinformation_Stellwerk_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(aeA_Allg_AttributeGroupEClass, AEA_Allg_AttributeGroup.class, "AEA_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2967,7 +3308,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 
 		initEClass(aeA_Energieversorgung_AttributeGroupEClass, AEA_Energieversorgung_AttributeGroup.class, "AEA_Energieversorgung_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAEA_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz(), this.getEnergieversorgung_Art_Ersatz_TypeClass(), null, "energieversorgungArtErsatz", null, 0, 1, AEA_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAEA_Energieversorgung_AttributeGroup_IDEnergieSekundaer(), this.getAussenelementansteuerung(), null, "iDEnergieSekundaer", null, 0, 1, AEA_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAEA_Energieversorgung_AttributeGroup_IDEnergieSekundaer(), theBasisobjektePackage.getBasis_Objekt(), null, "iDEnergieSekundaer", null, 0, 1, AEA_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAEA_Energieversorgung_AttributeGroup_EnergieversorgungArt(), this.getEnergieversorgung_Art_TypeClass(), null, "energieversorgungArt", null, 0, 1, AEA_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAEA_Energieversorgung_AttributeGroup_IDEnergiePrimaer(), theBasisobjektePackage.getBasis_Objekt(), null, "iDEnergiePrimaer", null, 0, 1, AEA_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3008,6 +3349,9 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEClass(bezeichnung_ESTW_ZE_TypeClassEClass, Bezeichnung_ESTW_ZE_TypeClass.class, "Bezeichnung_ESTW_ZE_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBezeichnung_ESTW_ZE_TypeClass_Wert(), this.getBezeichnung_ESTW_ZE_Type(), "wert", null, 1, 1, Bezeichnung_ESTW_ZE_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(bezeichnung_Stellwerk_TypeClassEClass, Bezeichnung_Stellwerk_TypeClass.class, "Bezeichnung_Stellwerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBezeichnung_Stellwerk_TypeClass_Wert(), this.getBezeichnung_Stellwerk_Type(), "wert", null, 1, 1, Bezeichnung_Stellwerk_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(bezeichnung_TSO_TypeClassEClass, Bezeichnung_TSO_TypeClass.class, "Bezeichnung_TSO_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBezeichnung_TSO_TypeClass_Wert(), this.getBezeichnung_TSO_Type(), "wert", null, 1, 1, Bezeichnung_TSO_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3017,8 +3361,16 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEClass(energieversorgung_Art_TypeClassEClass, Energieversorgung_Art_TypeClass.class, "Energieversorgung_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEnergieversorgung_Art_TypeClass_Wert(), this.getENUMEVArtObject(), "wert", null, 1, 1, Energieversorgung_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(estW_ZE_Energieversorgung_AttributeGroupEClass, ESTW_ZE_Energieversorgung_AttributeGroup.class, "ESTW_ZE_Energieversorgung_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz2(), this.getEnergieversorgung_Art_Ersatz_TypeClass(), null, "energieversorgungArtErsatz2", null, 0, 1, ESTW_ZE_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArt(), this.getEnergieversorgung_Art_TypeClass(), null, "energieversorgungArt", null, 0, 1, ESTW_ZE_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergiePrimaer(), theBasisobjektePackage.getBasis_Objekt(), null, "iDEnergiePrimaer", null, 0, 1, ESTW_ZE_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz(), this.getEnergieversorgung_Art_Ersatz_TypeClass(), null, "energieversorgungArtErsatz", null, 0, 1, ESTW_ZE_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergieSekundaer(), theBasisobjektePackage.getBasis_Objekt(), null, "iDEnergieSekundaer", null, 0, 1, ESTW_ZE_Energieversorgung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(estW_ZentraleinheitEClass, ESTW_Zentraleinheit.class, "ESTW_Zentraleinheit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getESTW_Zentraleinheit_Bezeichnung(), this.getESTW_Zentraleinheit_Bezeichnung_AttributeGroup(), null, "bezeichnung", null, 1, 1, ESTW_Zentraleinheit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getESTW_Zentraleinheit_ESTWZEEnergieversorgung(), this.getESTW_ZE_Energieversorgung_AttributeGroup(), null, "eSTWZEEnergieversorgung", null, 1, 1, ESTW_Zentraleinheit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getESTW_Zentraleinheit_ESTWZentraleinheitAllg(), this.getESTW_Zentraleinheit_Allg_AttributeGroup(), null, "eSTWZentraleinheitAllg", null, 1, 1, ESTW_Zentraleinheit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getESTW_Zentraleinheit_IDOertlichkeitNamensgebend(), theGeodatenPackage.getOertlichkeit(), null, "iDOertlichkeitNamensgebend", null, 0, 1, ESTW_Zentraleinheit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getESTW_Zentraleinheit_IDUnterbringung(), theBasisobjektePackage.getBasis_Objekt(), null, "iDUnterbringung", null, 1, 1, ESTW_Zentraleinheit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3027,9 +3379,6 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 
 		initEClass(estW_Zentraleinheit_Allg_AttributeGroupEClass, ESTW_Zentraleinheit_Allg_AttributeGroup.class, "ESTW_Zentraleinheit_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getESTW_Zentraleinheit_Allg_AttributeGroup_Bauart(), this.getBauart_TypeClass(), null, "bauart", null, 0, 1, ESTW_Zentraleinheit_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArt(), this.getEnergieversorgung_Art_TypeClass(), null, "energieversorgungArt", null, 1, 1, ESTW_Zentraleinheit_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz(), this.getEnergieversorgung_Art_Ersatz_TypeClass(), null, "energieversorgungArtErsatz", null, 0, 1, ESTW_Zentraleinheit_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz2(), this.getEnergieversorgung_Art_Ersatz_TypeClass(), null, "energieversorgungArtErsatz2", null, 0, 1, ESTW_Zentraleinheit_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getESTW_Zentraleinheit_Allg_AttributeGroup_Hersteller(), this.getHersteller_TypeClass(), null, "hersteller", null, 0, 1, ESTW_Zentraleinheit_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(estW_Zentraleinheit_Bezeichnung_AttributeGroupEClass, ESTW_Zentraleinheit_Bezeichnung_AttributeGroup.class, "ESTW_Zentraleinheit_Bezeichnung_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3072,7 +3421,9 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEAttribute(getStandort_Beschreibung_TypeClass_Wert(), this.getStandort_Beschreibung_Type(), "wert", null, 1, 1, Standort_Beschreibung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stell_BereichEClass, Stell_Bereich.class, "Stell_Bereich", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStell_Bereich_IDAussenelementansteuerung(), this.getAussenelementansteuerung(), null, "iDAussenelementansteuerung", null, 1, 1, Stell_Bereich.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStell_Bereich_ZusatzinformationStellwerk(), this.getZusatzinformation_Stellwerk_TypeClass(), null, "zusatzinformationStellwerk", null, 0, 1, Stell_Bereich.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStell_Bereich_BezeichnungStellwerk(), this.getBezeichnung_Stellwerk_TypeClass(), null, "bezeichnungStellwerk", null, 0, 1, Stell_Bereich.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStell_Bereich_IDAussenelementansteuerung(), this.getAussenelementansteuerung(), null, "iDAussenelementansteuerung", null, 0, 1, Stell_Bereich.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stellelementEClass, Stellelement.class, "Stellelement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStellelement_IDEnergie(), this.getAussenelementansteuerung(), null, "iDEnergie", null, 1, 1, Stellelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3109,6 +3460,9 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEClass(tsO_Teilsystem_Art_TypeClassEClass, TSO_Teilsystem_Art_TypeClass.class, "TSO_Teilsystem_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTSO_Teilsystem_Art_TypeClass_Wert(), this.getENUMTSOTeilsystemArtObject(), "wert", null, 1, 1, TSO_Teilsystem_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(tueranschlag_TypeClassEClass, Tueranschlag_TypeClass.class, "Tueranschlag_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTueranschlag_TypeClass_Wert(), this.getENUMTueranschlagObject(), "wert", null, 1, 1, Tueranschlag_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(uebertragungswegEClass, Uebertragungsweg.class, "Uebertragungsweg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUebertragungsweg_IDAnhangUeWegNach(), theBasisobjektePackage.getAnhang(), null, "iDAnhangUeWegNach", null, 0, -1, Uebertragungsweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUebertragungsweg_IDAnhangUeWegVon(), theBasisobjektePackage.getAnhang(), null, "iDAnhangUeWegVon", null, 0, -1, Uebertragungsweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3130,12 +3484,14 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEClass(unterbringungEClass, Unterbringung.class, "Unterbringung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnterbringung_PunktObjektStrecke(), theBasisobjektePackage.getPunkt_Objekt_Strecke_AttributeGroup(), null, "punktObjektStrecke", null, 0, -1, Unterbringung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnterbringung_UnterbringungAllg(), this.getUnterbringung_Allg_AttributeGroup(), null, "unterbringungAllg", null, 1, 1, Unterbringung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnterbringung_IDGEOPunkt(), theGeodatenPackage.getGEO_Punkt(), null, "iDGEOPunkt", null, 0, 1, Unterbringung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnterbringung_IDGEOPunkt(), theGeodatenPackage.getGEO_Punkt(), null, "iDGEOPunkt", null, 0, -1, Unterbringung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnterbringung_PunktObjektTOPKante(), theBasisobjektePackage.getPunkt_Objekt_TOP_Kante_AttributeGroup(), null, "punktObjektTOPKante", null, 0, 1, Unterbringung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnterbringung_StandortBeschreibung(), this.getStandort_Beschreibung_TypeClass(), null, "standortBeschreibung", null, 0, 1, Unterbringung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnterbringung_UnterbringungPolygonzug(), this.getUnterbringung_Polygonzug_TypeClass(), null, "unterbringungPolygonzug", null, 0, 1, Unterbringung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unterbringung_Allg_AttributeGroupEClass, Unterbringung_Allg_AttributeGroup.class, "Unterbringung_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnterbringung_Allg_AttributeGroup_Hersteller(), this.getHersteller_TypeClass(), null, "hersteller", null, 0, 1, Unterbringung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnterbringung_Allg_AttributeGroup_Tueranschlag(), this.getTueranschlag_TypeClass(), null, "tueranschlag", null, 0, 1, Unterbringung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnterbringung_Allg_AttributeGroup_UnterbringungArt(), this.getUnterbringung_Art_TypeClass(), null, "unterbringungArt", null, 1, 1, Unterbringung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnterbringung_Allg_AttributeGroup_UnterbringungBefestigung(), this.getUnterbringung_Befestigung_TypeClass(), null, "unterbringungBefestigung", null, 1, 1, Unterbringung_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3145,14 +3501,21 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEClass(unterbringung_Befestigung_TypeClassEClass, Unterbringung_Befestigung_TypeClass.class, "Unterbringung_Befestigung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUnterbringung_Befestigung_TypeClass_Wert(), this.getENUMUnterbringungBefestigungObject(), "wert", null, 1, 1, Unterbringung_Befestigung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(unterbringung_Polygonzug_TypeClassEClass, Unterbringung_Polygonzug_TypeClass.class, "Unterbringung_Polygonzug_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUnterbringung_Polygonzug_TypeClass_Wert(), this.getUnterbringung_Polygonzug_Type(), "wert", null, 1, 1, Unterbringung_Polygonzug_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(zusatzinformation_Stellwerk_TypeClassEClass, Zusatzinformation_Stellwerk_TypeClass.class, "Zusatzinformation_Stellwerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getZusatzinformation_Stellwerk_TypeClass_Wert(), this.getZusatzinformation_Stellwerk_Type(), "wert", null, 1, 1, Zusatzinformation_Stellwerk_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.class, "ENUMAussenelementansteuerungArt");
-		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK);
-		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK);
+		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG);
 		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A);
+		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK);
+		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS);
+		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK);
 		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE);
 		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER);
-		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK);
 		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE);
 		addEEnumLiteral(enumAussenelementansteuerungArtEEnum, ENUMAussenelementansteuerungArt.ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG);
 
@@ -3165,17 +3528,17 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 
 		initEEnum(enumevArtEEnum, ENUMEVArt.class, "ENUMEVArt");
 		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_ANDERE_AUSSENELEMENTANSTEUERUNG);
-		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_FE_AK_400V_DC_DIREKT);
-		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS);
-		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_LANDESNETZ_VNB);
-		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_NOTSTROMAGGREGAT_NEA_MOBIL);
-		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER);
-		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_SOLAR);
 		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_BATTERIE);
-		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_SONSTIGE);
 		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_BUE);
 		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_ESTW_ZENTRALEINHEIT);
 		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_FAHRLEITUNG);
+		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_FE_AK_400V_DC_DIREKT);
+		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_FE_AK_750V_DC_ENERGIEBUS);
+		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_LANDESNETZ_VNB);
+		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_NOTSTROMAGGREGAT_NEA_STATIONAER);
+		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_NOTSTROMANSCHLUSS_NEA_MOBIL);
+		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_SOLAR);
+		addEEnumLiteral(enumevArtEEnum, ENUMEVArt.ENUMEV_ART_SONSTIGE);
 
 		initEEnum(enumgfkKategorieEEnum, ENUMGFKKategorie.class, "ENUMGFKKategorie");
 		addEEnumLiteral(enumgfkKategorieEEnum, ENUMGFKKategorie.ENUMGFK_KATEGORIE_GROSS);
@@ -3215,6 +3578,15 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		addEEnumLiteral(enumtsoTeilsystemArtEEnum, ENUMTSOTeilsystemArt.ENUMTSO_TEILSYSTEM_ART_TRANSFERNETZ_MIT_SI_LST);
 		addEEnumLiteral(enumtsoTeilsystemArtEEnum, ENUMTSOTeilsystemArt.ENUMTSO_TEILSYSTEM_ART_ZE);
 
+		initEEnum(enumTueranschlagEEnum, ENUMTueranschlag.class, "ENUMTueranschlag");
+		addEEnumLiteral(enumTueranschlagEEnum, ENUMTueranschlag.ENUM_TUERANSCHLAG_ABNEHMBAR);
+		addEEnumLiteral(enumTueranschlagEEnum, ENUMTueranschlag.ENUM_TUERANSCHLAG_BEIDSEITIG);
+		addEEnumLiteral(enumTueranschlagEEnum, ENUMTueranschlag.ENUM_TUERANSCHLAG_LINKS);
+		addEEnumLiteral(enumTueranschlagEEnum, ENUMTueranschlag.ENUM_TUERANSCHLAG_OBEN);
+		addEEnumLiteral(enumTueranschlagEEnum, ENUMTueranschlag.ENUM_TUERANSCHLAG_RECHTS);
+		addEEnumLiteral(enumTueranschlagEEnum, ENUMTueranschlag.ENUM_TUERANSCHLAG_SONSTIGE);
+		addEEnumLiteral(enumTueranschlagEEnum, ENUMTueranschlag.ENUM_TUERANSCHLAG_UNTEN);
+
 		initEEnum(enumUebertragungswegArtEEnum, ENUMUebertragungswegArt.class, "ENUMUebertragungswegArt");
 		addEEnumLiteral(enumUebertragungswegArtEEnum, ENUMUebertragungswegArt.ENUM_UEBERTRAGUNGSWEG_ART_BAHNUEBERGANG);
 		addEEnumLiteral(enumUebertragungswegArtEEnum, ENUMUebertragungswegArt.ENUM_UEBERTRAGUNGSWEG_ART_DIAGNOSE);
@@ -3224,12 +3596,12 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 
 		initEEnum(enumUnterbringungArtEEnum, ENUMUnterbringungArt.class, "ENUMUnterbringungArt");
 		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_ANTRIEB);
+		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_GEBAEUDE);
 		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_KEINE);
+		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_SCHALTHAUS);
 		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN);
 		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_SONSTIGE);
 		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_TAFEL);
-		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_GEBAEUDE);
-		addEEnumLiteral(enumUnterbringungArtEEnum, ENUMUnterbringungArt.ENUM_UNTERBRINGUNG_ART_SCHALTHAUS);
 
 		initEEnum(enumUnterbringungBefestigungEEnum, ENUMUnterbringungBefestigung.class, "ENUMUnterbringungBefestigung");
 		addEEnumLiteral(enumUnterbringungBefestigungEEnum, ENUMUnterbringungBefestigung.ENUM_UNTERBRINGUNG_BEFESTIGUNG_FUNDAMENT);
@@ -3245,6 +3617,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEDataType(bauart_TypeEDataType, String.class, "Bauart_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(bezeichnung_AEA_TypeEDataType, String.class, "Bezeichnung_AEA_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(bezeichnung_ESTW_ZE_TypeEDataType, String.class, "Bezeichnung_ESTW_ZE_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(bezeichnung_Stellwerk_TypeEDataType, String.class, "Bezeichnung_Stellwerk_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(bezeichnung_TSO_TypeEDataType, String.class, "Bezeichnung_TSO_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumAussenelementansteuerungArtObjectEDataType, ENUMAussenelementansteuerungArt.class, "ENUMAussenelementansteuerungArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumBandbreiteObjectEDataType, ENUMBandbreite.class, "ENUMBandbreiteObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -3254,6 +3627,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEDataType(enumNetzArtObjectEDataType, ENUMNetzArt.class, "ENUMNetzArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumTechnikArtObjectEDataType, ENUMTechnikArt.class, "ENUMTechnikArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumtsoTeilsystemArtObjectEDataType, ENUMTSOTeilsystemArt.class, "ENUMTSOTeilsystemArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumTueranschlagObjectEDataType, ENUMTueranschlag.class, "ENUMTueranschlagObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumUebertragungswegArtObjectEDataType, ENUMUebertragungswegArt.class, "ENUMUebertragungswegArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumUnterbringungArtObjectEDataType, ENUMUnterbringungArt.class, "ENUMUnterbringungArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumUnterbringungBefestigungObjectEDataType, ENUMUnterbringungBefestigung.class, "ENUMUnterbringungBefestigungObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -3265,6 +3639,8 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		initEDataType(iP_Adressblock_Grau_V6_TypeEDataType, String.class, "IP_Adressblock_Grau_V6_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(standort_Beschreibung_TypeEDataType, String.class, "Standort_Beschreibung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(technik_Beschreibung_TypeEDataType, String.class, "Technik_Beschreibung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(unterbringung_Polygonzug_TypeEDataType, String.class, "Unterbringung_Polygonzug_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(zusatzinformation_Stellwerk_TypeEDataType, String.class, "Zusatzinformation_Stellwerk_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -3290,7 +3666,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (getAEA_Allg_AttributeGroup_AussenelementansteuerungArt(),
@@ -3425,6 +3801,24 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "documentation", "VNB: Versorgungsnetzbetreiber; NEA: Netzersatzaggregat"
 		   });
 		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz2(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe der zweiten Ersatz-Energieversorgung (bei DSTW: 1. Ersatz Fahrleitung, 2. Ersatz NEA)."
+		   });
+		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArt(),
+		   source,
+		   new String[] {
+			   "documentation", "Grunds\u00e4tzliche Art der Energieversorgung. Wird f\u00fcr die Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein B\u00dc verwendet, so kann dies in fr\u00fchen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In sp\u00e4teren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Primaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erl\u00e4uterungsbericht"
+		   });
+		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz(),
+		   source,
+		   new String[] {
+			   "documentation", "Grunds\u00e4tzliche Art der Ersatz-Energieversorgung. Wird f\u00fcr die Ersatz-Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein B\u00dc verwendet, so kann dies in fr\u00fchen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In sp\u00e4teren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Sekundaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erl\u00e4uterungsbericht"
+		   });
+		addAnnotation
 		  (estW_ZentraleinheitEClass,
 		   source,
 		   new String[] {
@@ -3467,24 +3861,6 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "documentation", "Herstellerbezogene Bauart der Steuerung. Das Attribut beschreibt im Gegensatz zu Aussenelementansteuerung Art bzw. Hersteller die herstellerbezogene Bauart der Steuerung. Es ist ein R\u00fccklaufdatum der AP PT 2 und dient der Bestandsdatenverwaltung. Beispiel: Aussenelementansteuerung_Art == ESTW_A, Bauart == \"J\u00fcdel E8001\". DB-Regelwerk Beschreibung im Erl\u00e4uterungsbericht"
 		   });
 		addAnnotation
-		  (getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArt(),
-		   source,
-		   new String[] {
-			   "documentation", "Grunds\u00e4tzliche Art der Energieversorgung. Wird f\u00fcr die Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein B\u00dc verwendet, so kann dies in fr\u00fchen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In sp\u00e4teren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Primaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erl\u00e4uterungsbericht"
-		   });
-		addAnnotation
-		  (getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz(),
-		   source,
-		   new String[] {
-			   "documentation", "Grunds\u00e4tzliche Art der Ersatz-Energieversorgung. Wird f\u00fcr die Ersatz-Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein B\u00dc verwendet, so kann dies in fr\u00fchen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In sp\u00e4teren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Sekundaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erl\u00e4uterungsbericht"
-		   });
-		addAnnotation
-		  (getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz2(),
-		   source,
-		   new String[] {
-			   "documentation", "Angabe der zweiten Ersatz-Energieversorgung (bei DSTW: 1. Ersatz Fahrleitung, 2. Ersatz NEA)."
-		   });
-		addAnnotation
 		  (getESTW_Zentraleinheit_Allg_AttributeGroup_Hersteller(),
 		   source,
 		   new String[] {
@@ -3501,6 +3877,18 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		   source,
 		   new String[] {
 			   "documentation", "Bereich_Objekt, mit dem ein Stellbereich beschrieben wird. Ein Stellbereich wird immer von einer AEA (Top) gesteuert. Grenzen des Stellbereichs sind Haupt-, Sperr- oder virtuelle Signale oder Gleisabschl\u00fcsse. Jedes Hauptgleis muss einem Stellbereich zugeordnet sein."
+		   });
+		addAnnotation
+		  (getStell_Bereich_ZusatzinformationStellwerk(),
+		   source,
+		   new String[] {
+			   "documentation", "Erg\u00e4nzende Information zur Beschreibung des Stellbereichs."
+		   });
+		addAnnotation
+		  (getStell_Bereich_BezeichnungStellwerk(),
+		   source,
+		   new String[] {
+			   "documentation", "Bezeichnung des Stellwerks, sofern kein Verweis auf eine Aussenelementansteuerung m\u00f6glich ist (z. B. \"Relaisstellwerk xyz\")."
 		   });
 		addAnnotation
 		  (getStell_Bereich_IDAussenelementansteuerung(),
@@ -3608,7 +3996,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		  (uebertragungswegEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Physikalischer/logischer \u00dcbertragungsweg zwischen zwei Objekten f\u00fcr eine erforderliche Informations\u00fcbertragung. Die Angabe erfolgt, wenn der \u00dcbertragungsweg vom Betreiber beigestellt wird oder die Informations\u00fcbertragung vom Lieferanten zus\u00e4tzlich zu schalten ist. Es geht um die Erfassung der physikalischen/logischen Verbindung zweier Objekte, die entweder einer funktionalen Verbindung zwischen den Objekten des Modells selbst dient, z.B. der ESTW-Bus zwischen zwei Aussenelementansteuerungen; einer funktionalen Verbindung eines Objektes des Modells zu einer nicht im Modell befindlichen Komponente dient, z.B. der Anbindung der KUS \u00fcber die ZN_ZBS an die Leittechnik der BZ; einer funktionalen Verbindung zwischen zwei Komponenten, die nicht im Modell abgebildet sind, aber \u00fcber diese angebunden werden und darum f\u00fcr die SBI dokumentiert werden m\u00fcssen, z.B. die Verbindung von der LZB-Zentrale in der ESTW Zentraleinheit zum LZB-Bedienplatz in der Bedien Zentrale. Je nach Art und Anwendungsfall kann ein Objekt nur eine oder auch mehrere Verbindungen zu einem oder mehreren anderen Objekten haben. Der Anschluss von stellwerkstypischen Elementen an das Stellwerk (Kabelanlage) wird nicht mit diesem Objekt abgebildet. "
+			   "documentation", "Physikalischer/logischer \u00dcbertragungsweg zwischen zwei Objekten f\u00fcr eine erforderliche Informations\u00fcbertragung. Die Angabe erfolgt, wenn der \u00dcbertragungsweg vom Betreiber beigestellt wird oder die Informations\u00fcbertragung vom Lieferanten zus\u00e4tzlich zu schalten ist. Es geht um die Erfassung der physikalischen/logischen Verbindung zweier Objekte, die entweder einer funktionalen Verbindung zwischen den Objekten des Modells selbst dient, z.B. der ESTW-Bus zwischen zwei Aussenelementansteuerungen; einer funktionalen Verbindung eines Objektes des Modells zu einer nicht im Modell befindlichen Komponente dient, z.B. der Anbindung der KUS \u00fcber die ZN_ZBS an die Leittechnik der BZ; einer funktionalen Verbindung zwischen zwei Komponenten, die nicht im Modell abgebildet sind, aber \u00fcber diese angebunden werden und darum f\u00fcr die SBI dokumentiert werden m\u00fcssen, z.B. die Verbindung von der LZB-Zentrale in der ESTW Zentraleinheit zum LZB-Bedienplatz in der Bedien Zentrale. Je nach Art und Anwendungsfall kann ein Objekt nur eine oder auch mehrere Verbindungen zu einem oder mehreren anderen Objekten haben. Der Anschluss von stellwerkstypischen Elementen an das Stellwerk (Kabelanlage) wird nicht mit diesem Objekt abgebildet."
 		   });
 		addAnnotation
 		  (getUebertragungsweg_IDAnhangUeWegNach(),
@@ -3674,7 +4062,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		  (unterbringungEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Ort der Anordnung von nicht an das Gleis gebundenen Komponenten. Die Verortung der U. erfolgt entweder analog zum Punkt Objekt, mit einem GEO Punkt oder durch einen beschreibenden Text. Eine U. beschreibt in der Regel die Umhausung der Komponente. Ist sie nicht eingehaust, wird als Unterbringung Art \"keine\" angegeben. In diesen F\u00e4llen hat die Komponente dennoch eine Unterbringung Befestigung. Das ist z. B. der Fall, wenn eine wetterfeste Komponente (z. B. Schl\u00fcsselschalter) ohne Einhausung direkt an einem Pfosten befestigt ist. In einer U. k\u00f6nnen mehrere LST-Objekte untergebracht sein. Eine U. ist z. B. ein Betonschalthaus oder ein Schaltkasten. DB-Regelwerk Darstellung des Geb\u00e4udes im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erl\u00e4uterungsbericht"
+			   "documentation", "Ort der Anordnung von nicht an das Gleis gebundenen Komponenten. Die Verortung der U. erfolgt entweder analog zum Punkt Objekt, mit einem GEO Punkt, einem Polygonzug oder durch einen beschreibenden Text. Eine U. beschreibt in der Regel die Umhausung der Komponente. Ist sie nicht eingehaust, wird als Unterbringung Art \"keine\" angegeben. In diesen F\u00e4llen hat die Komponente dennoch eine Unterbringung Befestigung. Das ist z. B. der Fall, wenn eine wetterfeste Komponente (z. B. Schl\u00fcsselschalter) ohne Einhausung direkt an einem Pfosten befestigt ist. In einer U. k\u00f6nnen mehrere LST-Objekte untergebracht sein. Eine U. ist z. B. ein Betonschalthaus oder ein Schaltkasten. DB-Regelwerk Darstellung des Geb\u00e4udes im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erl\u00e4uterungsbericht"
 		   });
 		addAnnotation
 		  (getUnterbringung_PunktObjektStrecke(),
@@ -3686,7 +4074,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		  (getUnterbringung_IDGEOPunkt(),
 		   source,
 		   new String[] {
-			   "documentation", "Verweis auf einen GEO Punkt, der eine Verortung \u00fcber x- und y-Koordinate erm\u00f6glicht. DB-Regelwerk ESTW: Darstellung im sicherungstechnischen Lageplan. "
+			   "documentation", "Verweis auf einen GEO Punkt, der eine Verortung \u00fcber x- und y-Koordinate erm\u00f6glicht. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig. DB-Regelwerk ESTW: Darstellung im sicherungstechnischen Lageplan."
 		   });
 		addAnnotation
 		  (getUnterbringung_PunktObjektTOPKante(),
@@ -3701,10 +4089,22 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "documentation", "Textuelle Beschreibung des Standorts der Unterbringung. Das Attribut wird genutzt, wenn eine punktf\u00f6rmige Verortung nicht m\u00f6glich ist, z. B. aufgrund der gro\u00dfen Entfernung des Standorts und der somit bedingten Lage au\u00dferhalb des Planungs- oder Betrachtungsbereichs."
 		   });
 		addAnnotation
+		  (getUnterbringung_UnterbringungPolygonzug(),
+		   source,
+		   new String[] {
+			   "documentation", "Grundriss der Unterbringung, beschrieben mittels Polygonzug unter Nutzung des GML-Standards."
+		   });
+		addAnnotation
 		  (getUnterbringung_Allg_AttributeGroup_Hersteller(),
 		   source,
 		   new String[] {
 			   "documentation", "Unternehmen, das die Funktionsf\u00e4higkeit der Anlage verantwortlich hergestellt hat oder Hersteller des jeweiligen Elements. Diese Eigenschaft ist kein Datum einer Planung, sondern dient im R\u00fccklauf der Planung dazu den Hersteller im Bestand zu erfassen. Es ist die zum Zeitpunkt der Inbetriebnahme g\u00fcltige Firmierung zu verwenden. DB-Regelwerk Beschreibung im Erl\u00e4uterungsbericht"
+		   });
+		addAnnotation
+		  (getUnterbringung_Allg_AttributeGroup_Tueranschlag(),
+		   source,
+		   new String[] {
+			   "documentation", "Seite des T\u00fcranschlags. Die Angabe wird insbesondere bei Unterbringungen f\u00fcr FeAK/FeAS ben\u00f6tigt."
 		   });
 		addAnnotation
 		  (getUnterbringung_Allg_AttributeGroup_UnterbringungArt(),
@@ -4010,6 +4410,27 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (bezeichnung_Stellwerk_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TBezeichnung_Stellwerk",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
+		   });
+		addAnnotation
+		  (bezeichnung_Stellwerk_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCBezeichnung_Stellwerk",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getBezeichnung_Stellwerk_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (bezeichnung_TSO_TypeEDataType,
 		   source,
 		   new String[] {
@@ -4163,6 +4584,19 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "baseType", "ENUMTSO_Teilsystem_Art"
 		   });
 		addAnnotation
+		  (enumTueranschlagEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMTueranschlag"
+		   });
+		addAnnotation
+		  (enumTueranschlagObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMTueranschlag:Object",
+			   "baseType", "ENUMTueranschlag"
+		   });
+		addAnnotation
 		  (enumUebertragungswegArtEEnum,
 		   source,
 		   new String[] {
@@ -4202,6 +4636,48 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "baseType", "ENUMUnterbringung_Befestigung"
 		   });
 		addAnnotation
+		  (estW_ZE_Energieversorgung_AttributeGroupEClass,
+		   source,
+		   new String[] {
+			   "name", "CESTW_ZE_Energieversorgung",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz2(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Energieversorgung_Art_Ersatz_2"
+		   });
+		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArt(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Energieversorgung_Art"
+		   });
+		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergiePrimaer(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_Energie_Primaer"
+		   });
+		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Energieversorgung_Art_Ersatz"
+		   });
+		addAnnotation
+		  (getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergieSekundaer(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_Energie_Sekundaer"
+		   });
+		addAnnotation
 		  (estW_ZentraleinheitEClass,
 		   source,
 		   new String[] {
@@ -4214,6 +4690,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		   new String[] {
 			   "kind", "element",
 			   "name", "Bezeichnung"
+		   });
+		addAnnotation
+		  (getESTW_Zentraleinheit_ESTWZEEnergieversorgung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ESTW_ZE_Energieversorgung"
 		   });
 		addAnnotation
 		  (getESTW_Zentraleinheit_ESTWZentraleinheitAllg(),
@@ -4263,27 +4746,6 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		   new String[] {
 			   "kind", "element",
 			   "name", "Bauart"
-		   });
-		addAnnotation
-		  (getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArt(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Energieversorgung_Art"
-		   });
-		addAnnotation
-		  (getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Energieversorgung_Art_Ersatz"
-		   });
-		addAnnotation
-		  (getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz2(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Energieversorgung_Art_Ersatz_2"
 		   });
 		addAnnotation
 		  (getESTW_Zentraleinheit_Allg_AttributeGroup_Hersteller(),
@@ -4531,6 +4993,20 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (getStell_Bereich_ZusatzinformationStellwerk(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Zusatzinformation_Stellwerk"
+		   });
+		addAnnotation
+		  (getStell_Bereich_BezeichnungStellwerk(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Bezeichnung_Stellwerk"
+		   });
+		addAnnotation
 		  (getStell_Bereich_IDAussenelementansteuerung(),
 		   source,
 		   new String[] {
@@ -4734,6 +5210,20 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (tueranschlag_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCTueranschlag",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getTueranschlag_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (uebertragungswegEClass,
 		   source,
 		   new String[] {
@@ -4881,6 +5371,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "name", "Standort_Beschreibung"
 		   });
 		addAnnotation
+		  (getUnterbringung_UnterbringungPolygonzug(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Unterbringung_Polygonzug"
+		   });
+		addAnnotation
 		  (unterbringung_Allg_AttributeGroupEClass,
 		   source,
 		   new String[] {
@@ -4893,6 +5390,13 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		   new String[] {
 			   "kind", "element",
 			   "name", "Hersteller"
+		   });
+		addAnnotation
+		  (getUnterbringung_Allg_AttributeGroup_Tueranschlag(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Tueranschlag"
 		   });
 		addAnnotation
 		  (getUnterbringung_Allg_AttributeGroup_UnterbringungArt(),
@@ -4936,6 +5440,48 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 			   "kind", "element",
 			   "name", "Wert"
 		   });
+		addAnnotation
+		  (unterbringung_Polygonzug_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TUnterbringung_Polygonzug",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TFreiText"
+		   });
+		addAnnotation
+		  (unterbringung_Polygonzug_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCUnterbringung_Polygonzug",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUnterbringung_Polygonzug_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (zusatzinformation_Stellwerk_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TZusatzinformation_Stellwerk",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
+		   });
+		addAnnotation
+		  (zusatzinformation_Stellwerk_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCZusatzinformation_Stellwerk",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getZusatzinformation_Stellwerk_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
 	}
 
 	/**
@@ -4950,7 +5496,7 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		  (aussenelementansteuerungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getAussenelementansteuerung_Bezeichnung_AttributeGroup_BezeichnungAEA(),
@@ -4962,37 +5508,37 @@ public class Ansteuerung_ElementPackageImpl extends EPackageImpl implements Anst
 		  (estW_ZentraleinheitEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (stell_BereichEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (stellelementEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW|B\u00dc</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (technik_StandortEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (uebertragungswegEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW|B\u00dc|ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (unterbringungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ATO|Bedienung Fdl ESTW|Bedienung Fdl BZ|B\u00dc| ESTW|ETCS|ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 	}
 

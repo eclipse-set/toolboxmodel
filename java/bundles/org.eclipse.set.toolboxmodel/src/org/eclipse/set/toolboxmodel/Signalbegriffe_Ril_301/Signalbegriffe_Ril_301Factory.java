@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301;
 
@@ -47,6 +54,15 @@ public interface Signalbegriffe_Ril_301Factory extends EFactory {
 	 * @generated
 	 */
 	BSWdh createBSWdh();
+
+	/**
+	 * Returns a new object of class '<em>BSZBS Ber</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>BSZBS Ber</em>'.
+	 * @generated
+	 */
+	BSZBSBer createBSZBSBer();
 
 	/**
 	 * Returns a new object of class '<em>BS Zusatz</em>'.
@@ -580,6 +596,15 @@ public interface Signalbegriffe_Ril_301Factory extends EFactory {
 	Lf12 createLf12();
 
 	/**
+	 * Returns a new object of class '<em>Lf1 Wdh</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lf1 Wdh</em>'.
+	 * @generated
+	 */
+	Lf1Wdh createLf1Wdh();
+
+	/**
 	 * Returns a new object of class '<em>Lf2</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -650,15 +675,6 @@ public interface Signalbegriffe_Ril_301Factory extends EFactory {
 	 * @generated
 	 */
 	Lf7 createLf7();
-
-	/**
-	 * Returns a new object of class '<em>Lf Pf</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lf Pf</em>'.
-	 * @generated
-	 */
-	LfPf createLfPf();
 
 	/**
 	 * Returns a new object of class '<em>Lf Pf L</em>'.
@@ -922,15 +938,6 @@ public interface Signalbegriffe_Ril_301Factory extends EFactory {
 	Ne7b createNe7b();
 
 	/**
-	 * Returns a new object of class '<em>NISESHM</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>NISESHM</em>'.
-	 * @generated
-	 */
-	NISESHM createNISESHM();
-
-	/**
 	 * Returns a new object of class '<em>Oz Auto ET</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -985,6 +992,15 @@ public interface Signalbegriffe_Ril_301Factory extends EFactory {
 	OzFak createOzFak();
 
 	/**
+	 * Returns a new object of class '<em>Oz GSMR</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oz GSMR</em>'.
+	 * @generated
+	 */
+	OzGSMR createOzGSMR();
+
+	/**
 	 * Returns a new object of class '<em>Oz HET</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -992,6 +1008,15 @@ public interface Signalbegriffe_Ril_301Factory extends EFactory {
 	 * @generated
 	 */
 	OzHET createOzHET();
+
+	/**
+	 * Returns a new object of class '<em>Oz HM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oz HM</em>'.
+	 * @generated
+	 */
+	OzHM createOzHM();
 
 	/**
 	 * Returns a new object of class '<em>Oz ICE</em>'.

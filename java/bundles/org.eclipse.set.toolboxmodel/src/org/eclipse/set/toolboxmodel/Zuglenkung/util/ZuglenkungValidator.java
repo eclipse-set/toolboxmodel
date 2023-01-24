@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung.util;
 
@@ -121,6 +128,8 @@ public class ZuglenkungValidator extends EObjectValidator {
 				return validateDWeg_Prio_TypeClass((DWeg_Prio_TypeClass)value, diagnostics, context);
 			case ZuglenkungPackage.EINSTELLKONTROLLZEIT_TYPE_CLASS:
 				return validateEinstellkontrollzeit_TypeClass((Einstellkontrollzeit_TypeClass)value, diagnostics, context);
+			case ZuglenkungPackage.FSTR_BILDEZEIT_TYPE_CLASS:
+				return validateFstr_Bildezeit_TypeClass((Fstr_Bildezeit_TypeClass)value, diagnostics, context);
 			case ZuglenkungPackage.FUEM_AUSWERTUNG_TYPE_CLASS:
 				return validateFUEM_Auswertung_TypeClass((FUEM_Auswertung_TypeClass)value, diagnostics, context);
 			case ZuglenkungPackage.GK_TYPE_CLASS:
@@ -187,6 +196,8 @@ public class ZuglenkungValidator extends EObjectValidator {
 				return validateENUMLenkziffernstellenObject((ENUMLenkziffernstellen)value, diagnostics, context);
 			case ZuglenkungPackage.ENUMZN_STELLEN_OBJECT:
 				return validateENUMZNStellenObject((ENUMZNStellen)value, diagnostics, context);
+			case ZuglenkungPackage.FSTR_BILDEZEIT_TYPE:
+				return validateFstr_Bildezeit_Type((BigDecimal)value, diagnostics, context);
 			case ZuglenkungPackage.GK_TYPE:
 				return validateGK_Type((BigInteger)value, diagnostics, context);
 			case ZuglenkungPackage.LENKABBRUCHZEIT_TYPE:
@@ -251,6 +262,15 @@ public class ZuglenkungValidator extends EObjectValidator {
 	 */
 	public boolean validateEinstellkontrollzeit_TypeClass(Einstellkontrollzeit_TypeClass einstellkontrollzeit_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(einstellkontrollzeit_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFstr_Bildezeit_TypeClass(Fstr_Bildezeit_TypeClass fstr_Bildezeit_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fstr_Bildezeit_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -650,6 +670,42 @@ public class ZuglenkungValidator extends EObjectValidator {
 	 */
 	public boolean validateENUMZNStellenObject(ENUMZNStellen enumznStellenObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFstr_Bildezeit_Type(BigDecimal fstr_Bildezeit_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = validateFstr_Bildezeit_Type_Pattern(fstr_Bildezeit_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateFstr_Bildezeit_Type_Pattern
+	 */
+	public static final  PatternMatcher [][] FSTR_BILDEZEIT_TYPE__PATTERN__VALUES =
+		new PatternMatcher [][] {
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher("0|[1-9][0-9]{0,1}|[1-8][0-9]{2}|900")
+			},
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher("[0-9]{1,5}(\\.[0-9]{2})?")
+			}
+		};
+
+	/**
+	 * Validates the Pattern constraint of '<em>Fstr Bildezeit Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFstr_Bildezeit_Type_Pattern(BigDecimal fstr_Bildezeit_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(ZuglenkungPackage.Literals.FSTR_BILDEZEIT_TYPE, fstr_Bildezeit_Type, FSTR_BILDEZEIT_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**

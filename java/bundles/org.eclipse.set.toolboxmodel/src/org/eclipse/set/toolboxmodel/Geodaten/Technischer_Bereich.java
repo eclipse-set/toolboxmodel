@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -32,6 +39,7 @@ public interface Technischer_Bereich extends Bereich_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Art des technischen Bereichs. Anhand der in der Planung entstehenden Erfahrungen wird die ENUM-Liste erweitert. 
+	 * Schutzwand: bauliches Element in unmittelbarer Nähe des Gleises, das bei der Platzierung von Elementen zu berücksichtigen ist (z. B. Stützmauer, Schallschutzwand).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>TB Art</em>' containment reference.
 	 * @see #setTBArt(TB_Art_TypeClass)

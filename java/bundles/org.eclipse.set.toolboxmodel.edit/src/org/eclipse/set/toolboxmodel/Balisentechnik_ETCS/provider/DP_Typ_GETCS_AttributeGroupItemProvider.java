@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -19,6 +20,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -32,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GETCS_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GETCS_AttributeGroup} object.
@@ -69,8 +71,31 @@ public class DP_Typ_GETCS_AttributeGroupItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIDDPBezugFunktionalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the IDDP Bezug Funktional feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDDPBezugFunktionalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DP_Typ_GETCS_AttributeGroup_iDDPBezugFunktional_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DP_Typ_GETCS_AttributeGroup_iDDPBezugFunktional_feature", "_UI_DP_Typ_GETCS_AttributeGroup_type"),
+				 Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GETCS_AttributeGroup_IDDPBezugFunktional(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -85,7 +110,9 @@ public class DP_Typ_GETCS_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GETCS_AttributeGroup_DPATO());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GETCS_AttributeGroup_DPTypETCS());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GETCS_AttributeGroup_VerkuerzterAbstand());
 		}
 		return childrenFeatures;
 	}
@@ -138,7 +165,9 @@ public class DP_Typ_GETCS_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DP_Typ_GETCS_AttributeGroup.class)) {
+			case Balisentechnik_ETCSPackage.DP_TYP_GETCS_ATTRIBUTE_GROUP__DPATO:
 			case Balisentechnik_ETCSPackage.DP_TYP_GETCS_ATTRIBUTE_GROUP__DP_TYP_ETCS:
+			case Balisentechnik_ETCSPackage.DP_TYP_GETCS_ATTRIBUTE_GROUP__VERKUERZTER_ABSTAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -160,8 +189,18 @@ public class DP_Typ_GETCS_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GETCS_AttributeGroup_DPATO(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createDP_ATO_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GETCS_AttributeGroup_DPTypETCS(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createDP_Typ_ETCS_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GETCS_AttributeGroup_VerkuerzterAbstand(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createVerkuerzter_Abstand_TypeClass()));
 	}
 
 	/**

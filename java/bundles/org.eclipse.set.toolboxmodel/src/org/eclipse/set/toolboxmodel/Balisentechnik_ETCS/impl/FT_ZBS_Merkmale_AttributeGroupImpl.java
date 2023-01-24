@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -31,6 +38,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Mastschild_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Schutzstrecke_Erforderlich_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Schutzstrecke_Vorhanden_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegrammnummer_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ueberwachung_Laenge_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VGR_1_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VGR_2_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Befehl_R_TypeClass;
@@ -57,6 +65,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Zul_Strecke_TypeClass;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_ZBS_Merkmale_AttributeGroupImpl#getSchutzstreckeErforderlich <em>Schutzstrecke Erforderlich</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_ZBS_Merkmale_AttributeGroupImpl#getSchutzstreckeVorhanden <em>Schutzstrecke Vorhanden</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_ZBS_Merkmale_AttributeGroupImpl#getTelegrammnummer <em>Telegrammnummer</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_ZBS_Merkmale_AttributeGroupImpl#getUeberwachungLaenge <em>Ueberwachung Laenge</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_ZBS_Merkmale_AttributeGroupImpl#getVBefehlR <em>VBefehl R</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_ZBS_Merkmale_AttributeGroupImpl#getVBefehlZ <em>VBefehl Z</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.FT_ZBS_Merkmale_AttributeGroupImpl#getVFrei <em>VFrei</em>}</li>
@@ -177,6 +186,16 @@ public class FT_ZBS_Merkmale_AttributeGroupImpl extends MinimalEObjectImpl.Conta
 	 * @ordered
 	 */
 	protected Telegrammnummer_TypeClass telegrammnummer;
+
+	/**
+	 * The cached value of the '{@link #getUeberwachungLaenge() <em>Ueberwachung Laenge</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUeberwachungLaenge()
+	 * @generated
+	 * @ordered
+	 */
+	protected Ueberwachung_Laenge_TypeClass ueberwachungLaenge;
 
 	/**
 	 * The cached value of the '{@link #getVBefehlR() <em>VBefehl R</em>}' containment reference.
@@ -726,6 +745,51 @@ public class FT_ZBS_Merkmale_AttributeGroupImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 */
 	@Override
+	public Ueberwachung_Laenge_TypeClass getUeberwachungLaenge() {
+		return ueberwachungLaenge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUeberwachungLaenge(Ueberwachung_Laenge_TypeClass newUeberwachungLaenge, NotificationChain msgs) {
+		Ueberwachung_Laenge_TypeClass oldUeberwachungLaenge = ueberwachungLaenge;
+		ueberwachungLaenge = newUeberwachungLaenge;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE, oldUeberwachungLaenge, newUeberwachungLaenge);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUeberwachungLaenge(Ueberwachung_Laenge_TypeClass newUeberwachungLaenge) {
+		if (newUeberwachungLaenge != ueberwachungLaenge) {
+			NotificationChain msgs = null;
+			if (ueberwachungLaenge != null)
+				msgs = ((InternalEObject)ueberwachungLaenge).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE, null, msgs);
+			if (newUeberwachungLaenge != null)
+				msgs = ((InternalEObject)newUeberwachungLaenge).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE, null, msgs);
+			msgs = basicSetUeberwachungLaenge(newUeberwachungLaenge, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE, newUeberwachungLaenge, newUeberwachungLaenge));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public V_Befehl_R_TypeClass getVBefehlR() {
 		return vBefehlR;
 	}
@@ -1020,6 +1084,8 @@ public class FT_ZBS_Merkmale_AttributeGroupImpl extends MinimalEObjectImpl.Conta
 				return basicSetSchutzstreckeVorhanden(null, msgs);
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__TELEGRAMMNUMMER:
 				return basicSetTelegrammnummer(null, msgs);
+			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE:
+				return basicSetUeberwachungLaenge(null, msgs);
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_R:
 				return basicSetVBefehlR(null, msgs);
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_Z:
@@ -1067,6 +1133,8 @@ public class FT_ZBS_Merkmale_AttributeGroupImpl extends MinimalEObjectImpl.Conta
 				return getSchutzstreckeVorhanden();
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__TELEGRAMMNUMMER:
 				return getTelegrammnummer();
+			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE:
+				return getUeberwachungLaenge();
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_R:
 				return getVBefehlR();
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_Z:
@@ -1126,6 +1194,9 @@ public class FT_ZBS_Merkmale_AttributeGroupImpl extends MinimalEObjectImpl.Conta
 				return;
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__TELEGRAMMNUMMER:
 				setTelegrammnummer((Telegrammnummer_TypeClass)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE:
+				setUeberwachungLaenge((Ueberwachung_Laenge_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_R:
 				setVBefehlR((V_Befehl_R_TypeClass)newValue);
@@ -1192,6 +1263,9 @@ public class FT_ZBS_Merkmale_AttributeGroupImpl extends MinimalEObjectImpl.Conta
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__TELEGRAMMNUMMER:
 				setTelegrammnummer((Telegrammnummer_TypeClass)null);
 				return;
+			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE:
+				setUeberwachungLaenge((Ueberwachung_Laenge_TypeClass)null);
+				return;
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_R:
 				setVBefehlR((V_Befehl_R_TypeClass)null);
 				return;
@@ -1246,6 +1320,8 @@ public class FT_ZBS_Merkmale_AttributeGroupImpl extends MinimalEObjectImpl.Conta
 				return schutzstreckeVorhanden != null;
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__TELEGRAMMNUMMER:
 				return telegrammnummer != null;
+			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE:
+				return ueberwachungLaenge != null;
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_R:
 				return vBefehlR != null;
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_Z:

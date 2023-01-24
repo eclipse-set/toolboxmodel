@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.util;
 
@@ -111,8 +118,8 @@ public class FahrstrasseValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
-			case FahrstrassePackage.AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS:
-				return validateAufloesung_Ssp_Zielgeis_TypeClass((Aufloesung_Ssp_Zielgeis_TypeClass)value, diagnostics, context);
+			case FahrstrassePackage.AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS:
+				return validateAufloesung_Ssp_Zielgleis_TypeClass((Aufloesung_Ssp_Zielgleis_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.AUFLOESUNG_VERZOEGERUNG_TYPE_CLASS:
 				return validateAufloesung_Verzoegerung_TypeClass((Aufloesung_Verzoegerung_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.AUTOMATISCHE_EINSTELLUNG_TYPE_CLASS:
@@ -143,12 +150,8 @@ public class FahrstrasseValidator extends EObjectValidator {
 				return validateFstr_Aneinander_Bedienstring_TypeClass((Fstr_Aneinander_Bedienstring_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_ANEINANDER_ZUORDNUNG:
 				return validateFstr_Aneinander_Zuordnung((Fstr_Aneinander_Zuordnung)value, diagnostics, context);
-			case FahrstrassePackage.FSTR_ART_TYPE_CLASS:
-				return validateFstr_Art_TypeClass((Fstr_Art_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_BEDIENSTRING_TYPE_CLASS:
 				return validateFstr_Bedienstring_TypeClass((Fstr_Bedienstring_TypeClass)value, diagnostics, context);
-			case FahrstrassePackage.FSTR_BILDEZEIT_TYPE_CLASS:
-				return validateFstr_Bildezeit_TypeClass((Fstr_Bildezeit_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_DWEG:
 				return validateFstr_DWeg((Fstr_DWeg)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_DWEG_ALLG_ATTRIBUTE_GROUP:
@@ -159,20 +162,18 @@ public class FahrstrasseValidator extends EObjectValidator {
 				return validateFstr_DWeg_Spezifisch_AttributeGroup((Fstr_DWeg_Spezifisch_AttributeGroup)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_DWEG_WKR:
 				return validateFstr_DWeg_W_Kr((Fstr_DWeg_W_Kr)value, diagnostics, context);
-			case FahrstrassePackage.FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP:
-				return validateFstr_DWeg_W_Kr_Allg_AttributeGroup((Fstr_DWeg_W_Kr_Allg_AttributeGroup)value, diagnostics, context);
-			case FahrstrassePackage.FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP:
-				return validateFstr_DWeg_W_Kr_Allg_child_AttributeGroup((Fstr_DWeg_W_Kr_Allg_child_AttributeGroup)value, diagnostics, context);
-			case FahrstrassePackage.FSTR_DWEG_WKR_TYPE_CLASS:
-				return validateFstr_DWeg_W_Kr_TypeClass((Fstr_DWeg_W_Kr_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_FAHRWEG:
 				return validateFstr_Fahrweg((Fstr_Fahrweg)value, diagnostics, context);
+			case FahrstrassePackage.FSTR_MITTEL_ART_TYPE_CLASS:
+				return validateFstr_Mittel_Art_TypeClass((Fstr_Mittel_Art_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_MITTEL_ATTRIBUTE_GROUP:
 				return validateFstr_Mittel_AttributeGroup((Fstr_Mittel_AttributeGroup)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_MITTEL_VAUFWERTUNG_TYPE_CLASS:
 				return validateFstr_Mittel_V_Aufwertung_TypeClass((Fstr_Mittel_V_Aufwertung_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_NICHTHALTFALL:
 				return validateFstr_Nichthaltfall((Fstr_Nichthaltfall)value, diagnostics, context);
+			case FahrstrassePackage.FSTR_RANGIER_ART_TYPE_CLASS:
+				return validateFstr_Rangier_Art_TypeClass((Fstr_Rangier_Art_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP:
 				return validateFstr_Rangier_AttributeGroup((Fstr_Rangier_AttributeGroup)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_RANGIER_FLA_ZUORDNUNG:
@@ -189,6 +190,8 @@ public class FahrstrasseValidator extends EObjectValidator {
 				return validateFstr_V_TypeClass((Fstr_V_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS:
 				return validateFstr_Vsigabstand_Verkuerzt_TypeClass((Fstr_Vsigabstand_Verkuerzt_TypeClass)value, diagnostics, context);
+			case FahrstrassePackage.FSTR_ZUG_ART_TYPE_CLASS:
+				return validateFstr_Zug_Art_TypeClass((Fstr_Zug_Art_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP:
 				return validateFstr_Zug_AttributeGroup((Fstr_Zug_AttributeGroup)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_ZUG_DWEG_ATTRIBUTE_GROUP:
@@ -209,14 +212,22 @@ public class FahrstrasseValidator extends EObjectValidator {
 				return validateRangier_Gegenfahrtausschluss_TypeClass((Rangier_Gegenfahrtausschluss_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.SONSTIGER_PUNKT:
 				return validateSonstiger_Punkt((Sonstiger_Punkt)value, diagnostics, context);
+			case FahrstrassePackage.START_SIGNAL_CHARAKTER_TYPE_CLASS:
+				return validateStart_Signal_Charakter_TypeClass((Start_Signal_Charakter_TypeClass)value, diagnostics, context);
 			case FahrstrassePackage.ENUM_AUFLOESUNG_SSP_ZIELGLEIS:
 				return validateENUMAufloesungSspZielgleis((ENUMAufloesungSspZielgleis)value, diagnostics, context);
 			case FahrstrassePackage.ENUM_AUTOMATISCHE_EINSTELLUNG:
 				return validateENUMAutomatischeEinstellung((ENUMAutomatischeEinstellung)value, diagnostics, context);
-			case FahrstrassePackage.ENUM_FSTR_ART:
-				return validateENUMFstrArt((ENUMFstrArt)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_FSTR_MITTEL_ART:
+				return validateENUMFstrMittelArt((ENUMFstrMittelArt)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_FSTR_RANGIER_ART:
+				return validateENUMFstrRangierArt((ENUMFstrRangierArt)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_FSTR_ZUG_ART:
+				return validateENUMFstrZugArt((ENUMFstrZugArt)value, diagnostics, context);
 			case FahrstrassePackage.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS:
 				return validateENUMRangierGegenfahrtausschluss((ENUMRangierGegenfahrtausschluss)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_START_SIGNAL_CHARAKTER:
+				return validateENUMStartSignalCharakter((ENUMStartSignalCharakter)value, diagnostics, context);
 			case FahrstrassePackage.AUFLOESUNG_VERZOEGERUNG_TYPE:
 				return validateAufloesung_Verzoegerung_Type((BigDecimal)value, diagnostics, context);
 			case FahrstrassePackage.BEZEICHNUNG_FSTR_DWEG_TYPE:
@@ -231,16 +242,20 @@ public class FahrstrasseValidator extends EObjectValidator {
 				return validateENUMAufloesungSspZielgleisObject((ENUMAufloesungSspZielgleis)value, diagnostics, context);
 			case FahrstrassePackage.ENUM_AUTOMATISCHE_EINSTELLUNG_OBJECT:
 				return validateENUMAutomatischeEinstellungObject((ENUMAutomatischeEinstellung)value, diagnostics, context);
-			case FahrstrassePackage.ENUM_FSTR_ART_OBJECT:
-				return validateENUMFstrArtObject((ENUMFstrArt)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_FSTR_MITTEL_ART_OBJECT:
+				return validateENUMFstrMittelArtObject((ENUMFstrMittelArt)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_FSTR_RANGIER_ART_OBJECT:
+				return validateENUMFstrRangierArtObject((ENUMFstrRangierArt)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_FSTR_ZUG_ART_OBJECT:
+				return validateENUMFstrZugArtObject((ENUMFstrZugArt)value, diagnostics, context);
 			case FahrstrassePackage.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_OBJECT:
 				return validateENUMRangierGegenfahrtausschlussObject((ENUMRangierGegenfahrtausschluss)value, diagnostics, context);
+			case FahrstrassePackage.ENUM_START_SIGNAL_CHARAKTER_OBJECT:
+				return validateENUMStartSignalCharakterObject((ENUMStartSignalCharakter)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_ANEINANDER_BEDIENSTRING_TYPE:
 				return validateFstr_Aneinander_Bedienstring_Type((String)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_BEDIENSTRING_TYPE:
 				return validateFstr_Bedienstring_Type((String)value, diagnostics, context);
-			case FahrstrassePackage.FSTR_BILDEZEIT_TYPE:
-				return validateFstr_Bildezeit_Type((BigDecimal)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_REIHENFOLGE_TYPE:
 				return validateFstr_Reihenfolge_Type((BigInteger)value, diagnostics, context);
 			case FahrstrassePackage.FSTR_VHG_TYPE:
@@ -261,8 +276,8 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateAufloesung_Ssp_Zielgeis_TypeClass(Aufloesung_Ssp_Zielgeis_TypeClass aufloesung_Ssp_Zielgeis_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(aufloesung_Ssp_Zielgeis_TypeClass, diagnostics, context);
+	public boolean validateAufloesung_Ssp_Zielgleis_TypeClass(Aufloesung_Ssp_Zielgleis_TypeClass aufloesung_Ssp_Zielgleis_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(aufloesung_Ssp_Zielgleis_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -405,26 +420,8 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateFstr_Art_TypeClass(Fstr_Art_TypeClass fstr_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(fstr_Art_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateFstr_Bedienstring_TypeClass(Fstr_Bedienstring_TypeClass fstr_Bedienstring_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(fstr_Bedienstring_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFstr_Bildezeit_TypeClass(Fstr_Bildezeit_TypeClass fstr_Bildezeit_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(fstr_Bildezeit_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -477,35 +474,17 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateFstr_DWeg_W_Kr_Allg_AttributeGroup(Fstr_DWeg_W_Kr_Allg_AttributeGroup fstr_DWeg_W_Kr_Allg_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(fstr_DWeg_W_Kr_Allg_AttributeGroup, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFstr_DWeg_W_Kr_Allg_child_AttributeGroup(Fstr_DWeg_W_Kr_Allg_child_AttributeGroup fstr_DWeg_W_Kr_Allg_child_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(fstr_DWeg_W_Kr_Allg_child_AttributeGroup, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFstr_DWeg_W_Kr_TypeClass(Fstr_DWeg_W_Kr_TypeClass fstr_DWeg_W_Kr_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(fstr_DWeg_W_Kr_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateFstr_Fahrweg(Fstr_Fahrweg fstr_Fahrweg, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(fstr_Fahrweg, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFstr_Mittel_Art_TypeClass(Fstr_Mittel_Art_TypeClass fstr_Mittel_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fstr_Mittel_Art_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -533,6 +512,15 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 */
 	public boolean validateFstr_Nichthaltfall(Fstr_Nichthaltfall fstr_Nichthaltfall, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(fstr_Nichthaltfall, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFstr_Rangier_Art_TypeClass(Fstr_Rangier_Art_TypeClass fstr_Rangier_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fstr_Rangier_Art_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -605,6 +593,15 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 */
 	public boolean validateFstr_Vsigabstand_Verkuerzt_TypeClass(Fstr_Vsigabstand_Verkuerzt_TypeClass fstr_Vsigabstand_Verkuerzt_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(fstr_Vsigabstand_Verkuerzt_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFstr_Zug_Art_TypeClass(Fstr_Zug_Art_TypeClass fstr_Zug_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fstr_Zug_Art_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -702,6 +699,15 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateStart_Signal_Charakter_TypeClass(Start_Signal_Charakter_TypeClass start_Signal_Charakter_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(start_Signal_Charakter_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateENUMAufloesungSspZielgleis(ENUMAufloesungSspZielgleis enumAufloesungSspZielgleis, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -720,7 +726,25 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMFstrArt(ENUMFstrArt enumFstrArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMFstrMittelArt(ENUMFstrMittelArt enumFstrMittelArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMFstrRangierArt(ENUMFstrRangierArt enumFstrRangierArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMFstrZugArt(ENUMFstrZugArt enumFstrZugArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -730,6 +754,15 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMRangierGegenfahrtausschluss(ENUMRangierGegenfahrtausschluss enumRangierGegenfahrtausschluss, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMStartSignalCharakter(ENUMStartSignalCharakter enumStartSignalCharakter, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -930,7 +963,25 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMFstrArtObject(ENUMFstrArt enumFstrArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMFstrMittelArtObject(ENUMFstrMittelArt enumFstrMittelArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMFstrRangierArtObject(ENUMFstrRangierArt enumFstrRangierArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMFstrZugArtObject(ENUMFstrZugArt enumFstrZugArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -940,6 +991,15 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMRangierGegenfahrtausschlussObject(ENUMRangierGegenfahrtausschluss enumRangierGegenfahrtausschlussObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMStartSignalCharakterObject(ENUMStartSignalCharakter enumStartSignalCharakterObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1013,42 +1073,6 @@ public class FahrstrasseValidator extends EObjectValidator {
 	 */
 	public boolean validateFstr_Bedienstring_Type_Pattern(String fstr_Bedienstring_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(FahrstrassePackage.Literals.FSTR_BEDIENSTRING_TYPE, fstr_Bedienstring_Type, FSTR_BEDIENSTRING_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFstr_Bildezeit_Type(BigDecimal fstr_Bildezeit_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateFstr_Bildezeit_Type_Pattern(fstr_Bildezeit_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @see #validateFstr_Bildezeit_Type_Pattern
-	 */
-	public static final  PatternMatcher [][] FSTR_BILDEZEIT_TYPE__PATTERN__VALUES =
-		new PatternMatcher [][] {
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("0|[1-9][0-9]{0,1}|[1-8][0-9]{2}|900")
-			},
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[0-9]{1,5}(\\.[0-9]{2})?")
-			}
-		};
-
-	/**
-	 * Validates the Pattern constraint of '<em>Fstr Bildezeit Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFstr_Bildezeit_Type_Pattern(BigDecimal fstr_Bildezeit_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(FahrstrassePackage.Literals.FSTR_BILDEZEIT_TYPE, fstr_Bildezeit_Type, FSTR_BILDEZEIT_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**

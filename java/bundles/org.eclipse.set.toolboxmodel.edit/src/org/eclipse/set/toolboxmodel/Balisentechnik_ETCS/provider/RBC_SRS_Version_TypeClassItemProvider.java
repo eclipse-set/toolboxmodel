@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -8,8 +9,6 @@
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.provider;
 
-
-import java.math.BigInteger;
 
 import java.util.Collection;
 import java.util.List;
@@ -29,7 +28,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Version_TypeClas
 
 import org.eclipse.set.toolboxmodel.BasisTypen.provider.BasisAttribut_AttributeGroupItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Version_TypeClass} object.
@@ -105,8 +104,7 @@ public class RBC_SRS_Version_TypeClassItemProvider extends BasisAttribut_Attribu
 	 */
 	@Override
 	public String getText(Object object) {
-		BigInteger labelValue = ((RBC_SRS_Version_TypeClass)object).getWert();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((RBC_SRS_Version_TypeClass)object).getWert();
 		return label == null || label.length() == 0 ?
 			getString("_UI_RBC_SRS_Version_TypeClass_type") :
 			getString("_UI_RBC_SRS_Version_TypeClass_type") + " " + label;

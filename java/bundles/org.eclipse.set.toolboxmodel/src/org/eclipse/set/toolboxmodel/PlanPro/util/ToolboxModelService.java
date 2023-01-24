@@ -8,8 +8,6 @@
  */
 package org.eclipse.set.toolboxmodel.PlanPro.util;
 
-import java.util.List;
-
 import org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle;
 
@@ -27,7 +25,7 @@ public interface ToolboxModelService {
 	 * @return the toolbox model
 	 */
 	DocumentRoot loadPlanProModel(
-			org.eclipse.set.model.model1902.PlanPro.DocumentRoot planPro);
+			org.eclipse.set.model.model11001.PlanPro.DocumentRoot planPro);
 
 	/**
 	 * Loads a PlanPro Model into the Toolbox Model
@@ -37,7 +35,7 @@ public interface ToolboxModelService {
 	 * @return the toolbox model
 	 */
 	PlanPro_Schnittstelle loadPlanProModel(
-			org.eclipse.set.model.model1902.PlanPro.PlanPro_Schnittstelle planPro);
+			org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle planPro);
 
 	/**
 	 * Saves the current state of the Toolbox model to a PlanPro Model
@@ -46,8 +44,8 @@ public interface ToolboxModelService {
 	 *            the toolbox model
 	 * @return the planpro model
 	 */
-	org.eclipse.set.model.model1902.PlanPro.DocumentRoot savePlanProModel(
-			org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot toolbox);
+	org.eclipse.set.model.model11001.PlanPro.DocumentRoot savePlanProModel(
+			DocumentRoot toolbox);
 
 	/**
 	 * Saves the current state of the Toolbox model to a PlanPro Model
@@ -56,13 +54,7 @@ public interface ToolboxModelService {
 	 *            the toolbox model
 	 * @return the planpro model
 	 */
-	org.eclipse.set.model.model1902.PlanPro.PlanPro_Schnittstelle savePlanProModel(
-			org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle toolbox);
-
-	/**
-	 * @return a list of ID references that could not be resolved in the last
-	 *         loadPlanProModel()-call
-	 */
-	List<IDReference> getInvalidIDReferences();
+	org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle savePlanProModel(
+			PlanPro_Schnittstelle toolbox);
 
 }

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.impl;
 
@@ -71,7 +78,6 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 			case BasisobjektePackage.BASIS_OBJEKT_ALLG_ATTRIBUTE_GROUP: return createBasis_Objekt_Allg_AttributeGroup();
 			case BasisobjektePackage.BEARBEITUNGSVERMERK: return createBearbeitungsvermerk();
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP: return createBearbeitungsvermerk_Allg_AttributeGroup();
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS: return createBearbeitungsvermerk_Kennung_TypeClass();
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ROLLE_TYPE_CLASS: return createBearbeitungsvermerk_Rolle_TypeClass();
 			case BasisobjektePackage.BEGRENZUNG_ATYPE_CLASS: return createBegrenzung_A_TypeClass();
 			case BasisobjektePackage.BEGRENZUNG_BTYPE_CLASS: return createBegrenzung_B_TypeClass();
@@ -79,12 +85,14 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 			case BasisobjektePackage.BESCHREIBUNG_TYPE_CLASS: return createBeschreibung_TypeClass();
 			case BasisobjektePackage.BESTANDSRELEVANZ_TYPE_CLASS: return createBestandsrelevanz_TypeClass();
 			case BasisobjektePackage.BESTANDSSCHUTZ_TYPE_CLASS: return createBestandsschutz_TypeClass();
+			case BasisobjektePackage.BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS: return createBV_Darstellung_In_Plan_TypeClass();
+			case BasisobjektePackage.BV_KATEGORIE_TYPE_CLASS: return createBV_Kategorie_TypeClass();
 			case BasisobjektePackage.DATEINAME_TYPE_CLASS: return createDateiname_TypeClass();
 			case BasisobjektePackage.DATEITYP_TYPE_CLASS: return createDateityp_TypeClass();
-			case BasisobjektePackage.DATEN_TYPE_CLASS: return createDaten_TypeClass();
 			case BasisobjektePackage.DATUM_REGELWERK_TYPE_CLASS: return createDatum_Regelwerk_TypeClass();
 			case BasisobjektePackage.DB_GDI_REFERENZ_TYPE_CLASS: return createDB_GDI_Referenz_TypeClass();
 			case BasisobjektePackage.IDENTITAET_TYPE_CLASS: return createIdentitaet_TypeClass();
+			case BasisobjektePackage.KM_MASSGEBEND_TYPE_CLASS: return createKm_Massgebend_TypeClass();
 			case BasisobjektePackage.KOMMENTAR_TYPE_CLASS: return createKommentar_TypeClass();
 			case BasisobjektePackage.KURZTEXT_TYPE_CLASS: return createKurztext_TypeClass();
 			case BasisobjektePackage.LIEFEROBJEKT: return createLieferobjekt();
@@ -126,6 +134,8 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 				return createENUMAnhangArtFromString(eDataType, initialValue);
 			case BasisobjektePackage.ENUM_BESTANDSRELEVANZ:
 				return createENUMBestandsrelevanzFromString(eDataType, initialValue);
+			case BasisobjektePackage.ENUMBV_DARSTELLUNG_IN_PLAN:
+				return createENUMBVDarstellungInPlanFromString(eDataType, initialValue);
 			case BasisobjektePackage.ENUM_DATEITYP:
 				return createENUMDateitypFromString(eDataType, initialValue);
 			case BasisobjektePackage.ENUMLST_OBJEKT_ART:
@@ -136,20 +146,22 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 				return createENUMRolleFromString(eDataType, initialValue);
 			case BasisobjektePackage.ABSTAND_TYPE:
 				return createAbstand_TypeFromString(eDataType, initialValue);
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_KENNUNG_TYPE:
-				return createBearbeitungsvermerk_Kennung_TypeFromString(eDataType, initialValue);
 			case BasisobjektePackage.BEGRENZUNG_ATYPE:
 				return createBegrenzung_A_TypeFromString(eDataType, initialValue);
 			case BasisobjektePackage.BEGRENZUNG_BTYPE:
 				return createBegrenzung_B_TypeFromString(eDataType, initialValue);
 			case BasisobjektePackage.BESCHREIBUNG_TYPE:
 				return createBeschreibung_TypeFromString(eDataType, initialValue);
+			case BasisobjektePackage.BV_KATEGORIE_TYPE:
+				return createBV_Kategorie_TypeFromString(eDataType, initialValue);
 			case BasisobjektePackage.DB_GDI_REFERENZ_TYPE:
 				return createDB_GDI_Referenz_TypeFromString(eDataType, initialValue);
 			case BasisobjektePackage.ENUM_ANHANG_ART_OBJECT:
 				return createENUMAnhangArtObjectFromString(eDataType, initialValue);
 			case BasisobjektePackage.ENUM_BESTANDSRELEVANZ_OBJECT:
 				return createENUMBestandsrelevanzObjectFromString(eDataType, initialValue);
+			case BasisobjektePackage.ENUMBV_DARSTELLUNG_IN_PLAN_OBJECT:
+				return createENUMBVDarstellungInPlanObjectFromString(eDataType, initialValue);
 			case BasisobjektePackage.ENUM_DATEITYP_OBJECT:
 				return createENUMDateitypObjectFromString(eDataType, initialValue);
 			case BasisobjektePackage.ENUMLST_OBJEKT_ART_OBJECT:
@@ -201,6 +213,8 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 				return convertENUMAnhangArtToString(eDataType, instanceValue);
 			case BasisobjektePackage.ENUM_BESTANDSRELEVANZ:
 				return convertENUMBestandsrelevanzToString(eDataType, instanceValue);
+			case BasisobjektePackage.ENUMBV_DARSTELLUNG_IN_PLAN:
+				return convertENUMBVDarstellungInPlanToString(eDataType, instanceValue);
 			case BasisobjektePackage.ENUM_DATEITYP:
 				return convertENUMDateitypToString(eDataType, instanceValue);
 			case BasisobjektePackage.ENUMLST_OBJEKT_ART:
@@ -211,20 +225,22 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 				return convertENUMRolleToString(eDataType, instanceValue);
 			case BasisobjektePackage.ABSTAND_TYPE:
 				return convertAbstand_TypeToString(eDataType, instanceValue);
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_KENNUNG_TYPE:
-				return convertBearbeitungsvermerk_Kennung_TypeToString(eDataType, instanceValue);
 			case BasisobjektePackage.BEGRENZUNG_ATYPE:
 				return convertBegrenzung_A_TypeToString(eDataType, instanceValue);
 			case BasisobjektePackage.BEGRENZUNG_BTYPE:
 				return convertBegrenzung_B_TypeToString(eDataType, instanceValue);
 			case BasisobjektePackage.BESCHREIBUNG_TYPE:
 				return convertBeschreibung_TypeToString(eDataType, instanceValue);
+			case BasisobjektePackage.BV_KATEGORIE_TYPE:
+				return convertBV_Kategorie_TypeToString(eDataType, instanceValue);
 			case BasisobjektePackage.DB_GDI_REFERENZ_TYPE:
 				return convertDB_GDI_Referenz_TypeToString(eDataType, instanceValue);
 			case BasisobjektePackage.ENUM_ANHANG_ART_OBJECT:
 				return convertENUMAnhangArtObjectToString(eDataType, instanceValue);
 			case BasisobjektePackage.ENUM_BESTANDSRELEVANZ_OBJECT:
 				return convertENUMBestandsrelevanzObjectToString(eDataType, instanceValue);
+			case BasisobjektePackage.ENUMBV_DARSTELLUNG_IN_PLAN_OBJECT:
+				return convertENUMBVDarstellungInPlanObjectToString(eDataType, instanceValue);
 			case BasisobjektePackage.ENUM_DATEITYP_OBJECT:
 				return convertENUMDateitypObjectToString(eDataType, instanceValue);
 			case BasisobjektePackage.ENUMLST_OBJEKT_ART_OBJECT:
@@ -347,17 +363,6 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
-	public Bearbeitungsvermerk_Kennung_TypeClass createBearbeitungsvermerk_Kennung_TypeClass() {
-		Bearbeitungsvermerk_Kennung_TypeClassImpl bearbeitungsvermerk_Kennung_TypeClass = new Bearbeitungsvermerk_Kennung_TypeClassImpl();
-		return bearbeitungsvermerk_Kennung_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Bearbeitungsvermerk_Rolle_TypeClass createBearbeitungsvermerk_Rolle_TypeClass() {
 		Bearbeitungsvermerk_Rolle_TypeClassImpl bearbeitungsvermerk_Rolle_TypeClass = new Bearbeitungsvermerk_Rolle_TypeClassImpl();
 		return bearbeitungsvermerk_Rolle_TypeClass;
@@ -435,6 +440,28 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	 * @generated
 	 */
 	@Override
+	public BV_Darstellung_In_Plan_TypeClass createBV_Darstellung_In_Plan_TypeClass() {
+		BV_Darstellung_In_Plan_TypeClassImpl bV_Darstellung_In_Plan_TypeClass = new BV_Darstellung_In_Plan_TypeClassImpl();
+		return bV_Darstellung_In_Plan_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BV_Kategorie_TypeClass createBV_Kategorie_TypeClass() {
+		BV_Kategorie_TypeClassImpl bV_Kategorie_TypeClass = new BV_Kategorie_TypeClassImpl();
+		return bV_Kategorie_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Dateiname_TypeClass createDateiname_TypeClass() {
 		Dateiname_TypeClassImpl dateiname_TypeClass = new Dateiname_TypeClassImpl();
 		return dateiname_TypeClass;
@@ -449,17 +476,6 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	public Dateityp_TypeClass createDateityp_TypeClass() {
 		Dateityp_TypeClassImpl dateityp_TypeClass = new Dateityp_TypeClassImpl();
 		return dateityp_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Daten_TypeClass createDaten_TypeClass() {
-		Daten_TypeClassImpl daten_TypeClass = new Daten_TypeClassImpl();
-		return daten_TypeClass;
 	}
 
 	/**
@@ -493,6 +509,17 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	public Identitaet_TypeClass createIdentitaet_TypeClass() {
 		Identitaet_TypeClassImpl identitaet_TypeClass = new Identitaet_TypeClassImpl();
 		return identitaet_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Km_Massgebend_TypeClass createKm_Massgebend_TypeClass() {
+		Km_Massgebend_TypeClassImpl km_Massgebend_TypeClass = new Km_Massgebend_TypeClassImpl();
+		return km_Massgebend_TypeClass;
 	}
 
 	/**
@@ -804,6 +831,26 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ENUMBVDarstellungInPlan createENUMBVDarstellungInPlanFromString(EDataType eDataType, String initialValue) {
+		ENUMBVDarstellungInPlan result = ENUMBVDarstellungInPlan.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMBVDarstellungInPlanToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMDateityp createENUMDateitypFromString(EDataType eDataType, String initialValue) {
 		ENUMDateityp result = ENUMDateityp.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -902,24 +949,6 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createBearbeitungsvermerk_Kennung_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertBearbeitungsvermerk_Kennung_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public BigDecimal createBegrenzung_A_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
 	}
@@ -966,6 +995,24 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	 * @generated
 	 */
 	public String convertBeschreibung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createBV_Kategorie_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBV_Kategorie_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
@@ -1021,6 +1068,24 @@ public class BasisobjekteFactoryImpl extends EFactoryImpl implements Basisobjekt
 	 */
 	public String convertENUMBestandsrelevanzObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMBestandsrelevanzToString(BasisobjektePackage.Literals.ENUM_BESTANDSRELEVANZ, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMBVDarstellungInPlan createENUMBVDarstellungInPlanObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMBVDarstellungInPlanFromString(BasisobjektePackage.Literals.ENUMBV_DARSTELLUNG_IN_PLAN, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMBVDarstellungInPlanObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMBVDarstellungInPlanToString(BasisobjektePackage.Literals.ENUMBV_DARSTELLUNG_IN_PLAN, instanceValue);
 	}
 
 	/**

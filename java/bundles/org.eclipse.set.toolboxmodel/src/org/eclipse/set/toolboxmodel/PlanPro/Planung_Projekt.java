@@ -12,12 +12,10 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Ermöglicht die globale Angabe und Zuordnung von organisatorischen und inhaltlichen Daten, die für alle Planungsgruppen eines Planungsprojekts gleichermaßen gelten. 
- * 
+ * Ermöglicht die globale Angabe und Zuordnung von organisatorischen und inhaltlichen Daten, die für alle Planungsgruppen eines Planungsprojekts gleichermaßen gelten.
  * Ein ~ enthält mindestens eine Planungsgruppe.
- * 
  * DB-Regelwerk
- * Bisher keine eindeutige Abbildung als Schriftfeldeintrag gemäß Ril 819.0103.
+ * Bisher keine eindeutige Abbildung als Schriftfeldeintrag gemäß Ril 886.0102.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -26,7 +24,6 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Planung_Projekt#getLSTPlanungGruppe <em>LST Planung Gruppe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Planung_Projekt#getPlanungPAllg <em>Planung PAllg</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Planung_Projekt#getLstPlanungErsteGruppe <em>Lst Planung Erste Gruppe</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getPlanung_Projekt()
@@ -41,10 +38,8 @@ public interface Planung_Projekt extends Ur_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Einbindung des Objekts Planung_Gruppe in das Objekt Planung_Projekt.
-	 * 
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro.
-	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>LST Planung Gruppe</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getPlanung_Projekt_LSTPlanungGruppe()
@@ -76,6 +71,7 @@ public interface Planung_Projekt extends Ur_Objekt {
 	 * @generated
 	 */
 	void setPlanungPAllg(Planung_P_Allg_AttributeGroup value);
+	
 
 	/**
 	 * Returns the value of the '<em><b>Lst Planung Erste Gruppe</b></em>' reference.
@@ -99,5 +95,6 @@ public interface Planung_Projekt extends Ur_Objekt {
 	 * @generated
 	 */
 	void setLstPlanungErsteGruppe(Planung_Gruppe value);
+
 
 } // Planung_Projekt

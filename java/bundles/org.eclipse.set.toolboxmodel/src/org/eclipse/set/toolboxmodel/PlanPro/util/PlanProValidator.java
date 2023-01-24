@@ -275,6 +275,8 @@ public class PlanProValidator extends EObjectValidator {
 				return validateOrganisationseinheit_TypeClass((Organisationseinheit_TypeClass)value, diagnostics, context);
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE:
 				return validatePlanPro_Schnittstelle((PlanPro_Schnittstelle)value, diagnostics, context);
+			case PlanProPackage.WZK_INVALID_ID_REFERENCE:
+				return validateWzkInvalidIDReference((WzkInvalidIDReference)value, diagnostics, context);
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE_ALLG_ATTRIBUTE_GROUP:
 				return validatePlanPro_Schnittstelle_Allg_AttributeGroup((PlanPro_Schnittstelle_Allg_AttributeGroup)value, diagnostics, context);
 			case PlanProPackage.PLAN_PRO_XSD_VERSION_TYPE_CLASS:
@@ -831,6 +833,15 @@ public class PlanProValidator extends EObjectValidator {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateWzkInvalidIDReference(WzkInvalidIDReference wzkInvalidIDReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(wzkInvalidIDReference, diagnostics, context);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1323,7 +1334,7 @@ public class PlanProValidator extends EObjectValidator {
 	 */
 	public static final PatternMatcher [][] BAUZUSTAND_KURZBEZEICHNUNG_TYPE__PATTERN__VALUES = new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher(".{1,15}")
+				XMLTypeUtil.createPatternMatcher("[A-Z,a-z,0-9]{1,15}")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher(".{1,250}")
@@ -1820,7 +1831,7 @@ public class PlanProValidator extends EObjectValidator {
 	 */
 	public static final PatternMatcher [][] NAME_AKTEUR_TYPE__PATTERN__VALUES = new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher(".{1,30}")
+				XMLTypeUtil.createPatternMatcher(".{1,35}")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher(".{1,250}")

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
@@ -32,9 +39,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -53,9 +58,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -74,9 +77,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -95,9 +96,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -116,9 +115,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -137,9 +134,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -158,9 +153,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -179,9 +172,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -200,9 +191,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -221,9 +210,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -242,9 +229,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -263,9 +248,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -284,9 +267,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -305,9 +286,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -326,9 +305,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -347,9 +324,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -368,9 +343,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -389,9 +362,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -410,9 +381,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -431,9 +400,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -452,9 +419,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -473,9 +438,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -494,9 +457,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -515,9 +476,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -536,9 +495,26 @@ import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -598,7 +574,7 @@ public interface BasisobjektePackage extends EPackage {
 	int ABSTAND_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -641,7 +617,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getUr_Objekt()
 	 * @generated
 	 */
-	int UR_OBJEKT = 46;
+	int UR_OBJEKT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -754,22 +730,13 @@ public interface BasisobjektePackage extends EPackage {
 	int ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP = 2;
 
 	/**
-	 * The feature id for the '<em><b>Daten</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN = 3;
-
-	/**
 	 * The number of structural features of the '<em>Anhang Allg Attribute Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANHANG_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
+	int ANHANG_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Anhang Allg Attribute Group</em>' class.
@@ -791,7 +758,7 @@ public interface BasisobjektePackage extends EPackage {
 	int ANHANG_ART_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -855,7 +822,7 @@ public interface BasisobjektePackage extends EPackage {
 	int BASIS_OBJEKT__BASIS_OBJEKT_ALLG = UR_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -864,13 +831,22 @@ public interface BasisobjektePackage extends EPackage {
 	int BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK = UR_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE = UR_OBJEKT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BASIS_OBJEKT__OBJEKTREFERENZEN = UR_OBJEKT_FEATURE_COUNT + 2;
+	int BASIS_OBJEKT__OBJEKTREFERENZEN = UR_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Basis Objekt</em>' class.
@@ -879,7 +855,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BASIS_OBJEKT_FEATURE_COUNT = UR_OBJEKT_FEATURE_COUNT + 3;
+	int BASIS_OBJEKT_FEATURE_COUNT = UR_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Basis Objekt</em>' class.
@@ -1020,22 +996,13 @@ public interface BasisobjektePackage extends EPackage {
 	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP = 7;
 
 	/**
-	 * The feature id for the '<em><b>Bearbeitungsvermerk Kennung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG = 0;
-
-	/**
 	 * The feature id for the '<em><b>Bearbeitungsvermerk Rolle</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE = 1;
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Bestandsrelevanz</b></em>' containment reference.
@@ -1044,7 +1011,25 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ = 2;
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ = 1;
+
+	/**
+	 * The feature id for the '<em><b>BV Darstellung In Plan</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN = 2;
+
+	/**
+	 * The feature id for the '<em><b>BV Kategorie</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Kommentar</b></em>' containment reference.
@@ -1053,7 +1038,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR = 3;
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR = 4;
 
 	/**
 	 * The feature id for the '<em><b>Kurztext</b></em>' containment reference.
@@ -1062,7 +1047,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT = 4;
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Zeit Bearbeitungsvermerk</b></em>' containment reference.
@@ -1071,7 +1056,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__ZEIT_BEARBEITUNGSVERMERK = 5;
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__ZEIT_BEARBEITUNGSVERMERK = 6;
 
 	/**
 	 * The number of structural features of the '<em>Bearbeitungsvermerk Allg Attribute Group</em>' class.
@@ -1080,7 +1065,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
+	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Bearbeitungsvermerk Allg Attribute Group</em>' class.
@@ -1092,52 +1077,6 @@ public interface BasisobjektePackage extends EPackage {
 	int BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Kennung_TypeClassImpl <em>Bearbeitungsvermerk Kennung Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Kennung_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBearbeitungsvermerk_Kennung_TypeClass()
-	 * @generated
-	 */
-	int BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS = 8;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Bearbeitungsvermerk Kennung Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Bearbeitungsvermerk Kennung Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Rolle_TypeClassImpl <em>Bearbeitungsvermerk Rolle Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1145,10 +1084,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBearbeitungsvermerk_Rolle_TypeClass()
 	 * @generated
 	 */
-	int BEARBEITUNGSVERMERK_ROLLE_TYPE_CLASS = 9;
+	int BEARBEITUNGSVERMERK_ROLLE_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1191,10 +1130,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBegrenzung_A_TypeClass()
 	 * @generated
 	 */
-	int BEGRENZUNG_ATYPE_CLASS = 10;
+	int BEGRENZUNG_ATYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1237,10 +1176,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBegrenzung_B_TypeClass()
 	 * @generated
 	 */
-	int BEGRENZUNG_BTYPE_CLASS = 11;
+	int BEGRENZUNG_BTYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1283,7 +1222,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBereich_Objekt()
 	 * @generated
 	 */
-	int BEREICH_OBJEKT = 12;
+	int BEREICH_OBJEKT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1304,13 +1243,22 @@ public interface BasisobjektePackage extends EPackage {
 	int BEREICH_OBJEKT__BASIS_OBJEKT_ALLG = BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK = BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE = BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1356,7 +1304,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBereich_Objekt_Teilbereich_AttributeGroup()
 	 * @generated
 	 */
-	int BEREICH_OBJEKT_TEILBEREICH_ATTRIBUTE_GROUP = 13;
+	int BEREICH_OBJEKT_TEILBEREICH_ATTRIBUTE_GROUP = 12;
 
 	/**
 	 * The feature id for the '<em><b>Begrenzung A</b></em>' containment reference.
@@ -1420,10 +1368,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBeschreibung_TypeClass()
 	 * @generated
 	 */
-	int BESCHREIBUNG_TYPE_CLASS = 14;
+	int BESCHREIBUNG_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1466,10 +1414,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBestandsrelevanz_TypeClass()
 	 * @generated
 	 */
-	int BESTANDSRELEVANZ_TYPE_CLASS = 15;
+	int BESTANDSRELEVANZ_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1512,10 +1460,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBestandsschutz_TypeClass()
 	 * @generated
 	 */
-	int BESTANDSSCHUTZ_TYPE_CLASS = 16;
+	int BESTANDSSCHUTZ_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1551,6 +1499,98 @@ public interface BasisobjektePackage extends EPackage {
 	int BESTANDSSCHUTZ_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Darstellung_In_Plan_TypeClassImpl <em>BV Darstellung In Plan Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Darstellung_In_Plan_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBV_Darstellung_In_Plan_TypeClass()
+	 * @generated
+	 */
+	int BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS = 16;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>BV Darstellung In Plan Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>BV Darstellung In Plan Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Kategorie_TypeClassImpl <em>BV Kategorie Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Kategorie_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBV_Kategorie_TypeClass()
+	 * @generated
+	 */
+	int BV_KATEGORIE_TYPE_CLASS = 17;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_KATEGORIE_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_KATEGORIE_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>BV Kategorie Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_KATEGORIE_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>BV Kategorie Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BV_KATEGORIE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Dateiname_TypeClassImpl <em>Dateiname Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1558,10 +1598,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getDateiname_TypeClass()
 	 * @generated
 	 */
-	int DATEINAME_TYPE_CLASS = 17;
+	int DATEINAME_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1604,10 +1644,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getDateityp_TypeClass()
 	 * @generated
 	 */
-	int DATEITYP_TYPE_CLASS = 18;
+	int DATEITYP_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1643,52 +1683,6 @@ public interface BasisobjektePackage extends EPackage {
 	int DATEITYP_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Daten_TypeClassImpl <em>Daten Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.Daten_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getDaten_TypeClass()
-	 * @generated
-	 */
-	int DATEN_TYPE_CLASS = 19;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATEN_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATEN_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Daten Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATEN_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Daten Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATEN_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Datum_Regelwerk_TypeClassImpl <em>Datum Regelwerk Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1699,7 +1693,7 @@ public interface BasisobjektePackage extends EPackage {
 	int DATUM_REGELWERK_TYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1745,7 +1739,7 @@ public interface BasisobjektePackage extends EPackage {
 	int DB_GDI_REFERENZ_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1791,7 +1785,7 @@ public interface BasisobjektePackage extends EPackage {
 	int IDENTITAET_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1827,6 +1821,52 @@ public interface BasisobjektePackage extends EPackage {
 	int IDENTITAET_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Km_Massgebend_TypeClassImpl <em>Km Massgebend Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.Km_Massgebend_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getKm_Massgebend_TypeClass()
+	 * @generated
+	 */
+	int KM_MASSGEBEND_TYPE_CLASS = 23;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KM_MASSGEBEND_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KM_MASSGEBEND_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Km Massgebend Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KM_MASSGEBEND_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Km Massgebend Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KM_MASSGEBEND_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Kommentar_TypeClassImpl <em>Kommentar Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1834,10 +1874,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getKommentar_TypeClass()
 	 * @generated
 	 */
-	int KOMMENTAR_TYPE_CLASS = 23;
+	int KOMMENTAR_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1880,10 +1920,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getKurztext_TypeClass()
 	 * @generated
 	 */
-	int KURZTEXT_TYPE_CLASS = 24;
+	int KURZTEXT_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1926,7 +1966,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLieferobjekt()
 	 * @generated
 	 */
-	int LIEFEROBJEKT = 25;
+	int LIEFEROBJEKT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1947,13 +1987,22 @@ public interface BasisobjektePackage extends EPackage {
 	int LIEFEROBJEKT__BASIS_OBJEKT_ALLG = BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int LIEFEROBJEKT__ID_BEARBEITUNGSVERMERK = BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIEFEROBJEKT__ID_OERTLICHKEIT_AUSGABE = BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1974,13 +2023,22 @@ public interface BasisobjektePackage extends EPackage {
 	int LIEFEROBJEKT__BESCHREIBUNG = BASIS_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>IDGEO Punkt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIEFEROBJEKT__IDGEO_PUNKT = BASIS_OBJEKT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>IDLO Einbau</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIEFEROBJEKT__IDLO_EINBAU = BASIS_OBJEKT_FEATURE_COUNT + 1;
+	int LIEFEROBJEKT__IDLO_EINBAU = BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>LO Ersatz</b></em>' containment reference.
@@ -1989,7 +2047,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIEFEROBJEKT__LO_ERSATZ = BASIS_OBJEKT_FEATURE_COUNT + 2;
+	int LIEFEROBJEKT__LO_ERSATZ = BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>LO Material</b></em>' containment reference.
@@ -1998,7 +2056,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIEFEROBJEKT__LO_MATERIAL = BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int LIEFEROBJEKT__LO_MATERIAL = BASIS_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Lieferobjekt</em>' class.
@@ -2007,7 +2065,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIEFEROBJEKT_FEATURE_COUNT = BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int LIEFEROBJEKT_FEATURE_COUNT = BASIS_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Lieferobjekt</em>' class.
@@ -2026,10 +2084,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Ausgabestand_TypeClass()
 	 * @generated
 	 */
-	int LO_AUSGABESTAND_TYPE_CLASS = 26;
+	int LO_AUSGABESTAND_TYPE_CLASS = 27;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2072,10 +2130,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Datum_Herstellung_TypeClass()
 	 * @generated
 	 */
-	int LO_DATUM_HERSTELLUNG_TYPE_CLASS = 27;
+	int LO_DATUM_HERSTELLUNG_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2118,10 +2176,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_DB_Freigabe_TypeClass()
 	 * @generated
 	 */
-	int LO_DB_FREIGABE_TYPE_CLASS = 28;
+	int LO_DB_FREIGABE_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2164,10 +2222,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_EMA_Nr_TypeClass()
 	 * @generated
 	 */
-	int LO_EMA_NR_TYPE_CLASS = 29;
+	int LO_EMA_NR_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2210,10 +2268,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Ersatz_TypeClass()
 	 * @generated
 	 */
-	int LO_ERSATZ_TYPE_CLASS = 30;
+	int LO_ERSATZ_TYPE_CLASS = 31;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2256,10 +2314,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Firmensachnummer_TypeClass()
 	 * @generated
 	 */
-	int LO_FIRMENSACHNUMMER_TYPE_CLASS = 31;
+	int LO_FIRMENSACHNUMMER_TYPE_CLASS = 32;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2302,7 +2360,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Material_AttributeGroup()
 	 * @generated
 	 */
-	int LO_MATERIAL_ATTRIBUTE_GROUP = 32;
+	int LO_MATERIAL_ATTRIBUTE_GROUP = 33;
 
 	/**
 	 * The feature id for the '<em><b>LO Ausgabestand</b></em>' containment reference.
@@ -2384,10 +2442,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Seriennummer_TypeClass()
 	 * @generated
 	 */
-	int LO_SERIENNUMMER_TYPE_CLASS = 33;
+	int LO_SERIENNUMMER_TYPE_CLASS = 34;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2430,10 +2488,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLST_Objekt_Art_TypeClass()
 	 * @generated
 	 */
-	int LST_OBJEKT_ART_TYPE_CLASS = 34;
+	int LST_OBJEKT_ART_TYPE_CLASS = 35;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2476,7 +2534,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getObjektreferenzen_AttributeGroup()
 	 * @generated
 	 */
-	int OBJEKTREFERENZEN_ATTRIBUTE_GROUP = 35;
+	int OBJEKTREFERENZEN_ATTRIBUTE_GROUP = 36;
 
 	/**
 	 * The feature id for the '<em><b>DBGDI Referenz</b></em>' containment reference.
@@ -2522,10 +2580,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getObjektzustand_Besonders_TypeClass()
 	 * @generated
 	 */
-	int OBJEKTZUSTAND_BESONDERS_TYPE_CLASS = 36;
+	int OBJEKTZUSTAND_BESONDERS_TYPE_CLASS = 37;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2568,7 +2626,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getProxy_Objekt()
 	 * @generated
 	 */
-	int PROXY_OBJEKT = 37;
+	int PROXY_OBJEKT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2614,7 +2672,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getPunkt_Objekt()
 	 * @generated
 	 */
-	int PUNKT_OBJEKT = 38;
+	int PUNKT_OBJEKT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2635,13 +2693,22 @@ public interface BasisobjektePackage extends EPackage {
 	int PUNKT_OBJEKT__BASIS_OBJEKT_ALLG = BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK = BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE = BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2696,7 +2763,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getPunkt_Objekt_Strecke_AttributeGroup()
 	 * @generated
 	 */
-	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP = 39;
+	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP = 40;
 
 	/**
 	 * The feature id for the '<em><b>ID Strecke</b></em>' reference.
@@ -2708,13 +2775,22 @@ public interface BasisobjektePackage extends EPackage {
 	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__ID_STRECKE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Km Massgebend</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__KM_MASSGEBEND = 1;
+
+	/**
 	 * The feature id for the '<em><b>Strecke Km</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__STRECKE_KM = 1;
+	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__STRECKE_KM = 2;
 
 	/**
 	 * The number of structural features of the '<em>Punkt Objekt Strecke Attribute Group</em>' class.
@@ -2723,7 +2799,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
+	int PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Punkt Objekt Strecke Attribute Group</em>' class.
@@ -2742,7 +2818,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getPunkt_Objekt_TOP_Kante_AttributeGroup()
 	 * @generated
 	 */
-	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP = 40;
+	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP = 41;
 
 	/**
 	 * The feature id for the '<em><b>Abstand</b></em>' containment reference.
@@ -2754,13 +2830,22 @@ public interface BasisobjektePackage extends EPackage {
 	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND = 0;
 
 	/**
+	 * The feature id for the '<em><b>IDGEO Punkt Berechnet</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET = 1;
+
+	/**
 	 * The feature id for the '<em><b>IDTOP Kante</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDTOP_KANTE = 1;
+	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDTOP_KANTE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Wirkrichtung</b></em>' containment reference.
@@ -2769,7 +2854,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__WIRKRICHTUNG = 2;
+	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__WIRKRICHTUNG = 3;
 
 	/**
 	 * The feature id for the '<em><b>Seitliche Lage</b></em>' containment reference.
@@ -2778,7 +2863,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__SEITLICHE_LAGE = 3;
+	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__SEITLICHE_LAGE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Seitlicher Abstand</b></em>' containment reference.
@@ -2787,7 +2872,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__SEITLICHER_ABSTAND = 4;
+	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__SEITLICHER_ABSTAND = 5;
 
 	/**
 	 * The number of structural features of the '<em>Punkt Objekt TOP Kante Attribute Group</em>' class.
@@ -2796,7 +2881,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
+	int PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Punkt Objekt TOP Kante Attribute Group</em>' class.
@@ -2815,10 +2900,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getRichtungsbezug_TypeClass()
 	 * @generated
 	 */
-	int RICHTUNGSBEZUG_TYPE_CLASS = 41;
+	int RICHTUNGSBEZUG_TYPE_CLASS = 42;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2861,10 +2946,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getSeitliche_Lage_TypeClass()
 	 * @generated
 	 */
-	int SEITLICHE_LAGE_TYPE_CLASS = 42;
+	int SEITLICHE_LAGE_TYPE_CLASS = 43;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2907,10 +2992,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getSeitlicher_Abstand_TypeClass()
 	 * @generated
 	 */
-	int SEITLICHER_ABSTAND_TYPE_CLASS = 43;
+	int SEITLICHER_ABSTAND_TYPE_CLASS = 44;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2953,10 +3038,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getStrecke_Km_TypeClass()
 	 * @generated
 	 */
-	int STRECKE_KM_TYPE_CLASS = 44;
+	int STRECKE_KM_TYPE_CLASS = 45;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2999,10 +3084,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getTechnischer_Platz_TypeClass()
 	 * @generated
 	 */
-	int TECHNISCHER_PLATZ_TYPE_CLASS = 45;
+	int TECHNISCHER_PLATZ_TYPE_CLASS = 46;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3045,10 +3130,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getWirkrichtung_TypeClass()
 	 * @generated
 	 */
-	int WIRKRICHTUNG_TYPE_CLASS = 47;
+	int WIRKRICHTUNG_TYPE_CLASS = 48;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3091,10 +3176,10 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getZeit_Bearbeitungsvermerk_TypeClass()
 	 * @generated
 	 */
-	int ZEIT_BEARBEITUNGSVERMERK_TYPE_CLASS = 48;
+	int ZEIT_BEARBEITUNGSVERMERK_TYPE_CLASS = 49;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3137,7 +3222,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMAnhangArt()
 	 * @generated
 	 */
-	int ENUM_ANHANG_ART = 49;
+	int ENUM_ANHANG_ART = 50;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBestandsrelevanz <em>ENUM Bestandsrelevanz</em>}' enum.
@@ -3147,7 +3232,17 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMBestandsrelevanz()
 	 * @generated
 	 */
-	int ENUM_BESTANDSRELEVANZ = 50;
+	int ENUM_BESTANDSRELEVANZ = 51;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan <em>ENUMBV Darstellung In Plan</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMBVDarstellungInPlan()
+	 * @generated
+	 */
+	int ENUMBV_DARSTELLUNG_IN_PLAN = 52;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMDateityp <em>ENUM Dateityp</em>}' enum.
@@ -3157,7 +3252,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMDateityp()
 	 * @generated
 	 */
-	int ENUM_DATEITYP = 51;
+	int ENUM_DATEITYP = 53;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMLSTObjektArt <em>ENUMLST Objekt Art</em>}' enum.
@@ -3167,7 +3262,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMLSTObjektArt()
 	 * @generated
 	 */
-	int ENUMLST_OBJEKT_ART = 52;
+	int ENUMLST_OBJEKT_ART = 54;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMObjektzustandBesonders <em>ENUM Objektzustand Besonders</em>}' enum.
@@ -3177,7 +3272,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMObjektzustandBesonders()
 	 * @generated
 	 */
-	int ENUM_OBJEKTZUSTAND_BESONDERS = 53;
+	int ENUM_OBJEKTZUSTAND_BESONDERS = 55;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMRolle <em>ENUM Rolle</em>}' enum.
@@ -3187,7 +3282,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMRolle()
 	 * @generated
 	 */
-	int ENUM_ROLLE = 54;
+	int ENUM_ROLLE = 56;
 
 	/**
 	 * The meta object id for the '<em>Abstand Type</em>' data type.
@@ -3197,17 +3292,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getAbstand_Type()
 	 * @generated
 	 */
-	int ABSTAND_TYPE = 55;
-
-	/**
-	 * The meta object id for the '<em>Bearbeitungsvermerk Kennung Type</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.lang.String
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBearbeitungsvermerk_Kennung_Type()
-	 * @generated
-	 */
-	int BEARBEITUNGSVERMERK_KENNUNG_TYPE = 56;
+	int ABSTAND_TYPE = 57;
 
 	/**
 	 * The meta object id for the '<em>Begrenzung AType</em>' data type.
@@ -3217,7 +3302,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBegrenzung_A_Type()
 	 * @generated
 	 */
-	int BEGRENZUNG_ATYPE = 57;
+	int BEGRENZUNG_ATYPE = 58;
 
 	/**
 	 * The meta object id for the '<em>Begrenzung BType</em>' data type.
@@ -3227,7 +3312,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBegrenzung_B_Type()
 	 * @generated
 	 */
-	int BEGRENZUNG_BTYPE = 58;
+	int BEGRENZUNG_BTYPE = 59;
 
 	/**
 	 * The meta object id for the '<em>Beschreibung Type</em>' data type.
@@ -3237,7 +3322,17 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBeschreibung_Type()
 	 * @generated
 	 */
-	int BESCHREIBUNG_TYPE = 59;
+	int BESCHREIBUNG_TYPE = 60;
+
+	/**
+	 * The meta object id for the '<em>BV Kategorie Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBV_Kategorie_Type()
+	 * @generated
+	 */
+	int BV_KATEGORIE_TYPE = 61;
 
 	/**
 	 * The meta object id for the '<em>DB GDI Referenz Type</em>' data type.
@@ -3247,7 +3342,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getDB_GDI_Referenz_Type()
 	 * @generated
 	 */
-	int DB_GDI_REFERENZ_TYPE = 60;
+	int DB_GDI_REFERENZ_TYPE = 62;
 
 	/**
 	 * The meta object id for the '<em>ENUM Anhang Art Object</em>' data type.
@@ -3257,7 +3352,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMAnhangArtObject()
 	 * @generated
 	 */
-	int ENUM_ANHANG_ART_OBJECT = 61;
+	int ENUM_ANHANG_ART_OBJECT = 63;
 
 	/**
 	 * The meta object id for the '<em>ENUM Bestandsrelevanz Object</em>' data type.
@@ -3267,7 +3362,17 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMBestandsrelevanzObject()
 	 * @generated
 	 */
-	int ENUM_BESTANDSRELEVANZ_OBJECT = 62;
+	int ENUM_BESTANDSRELEVANZ_OBJECT = 64;
+
+	/**
+	 * The meta object id for the '<em>ENUMBV Darstellung In Plan Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMBVDarstellungInPlanObject()
+	 * @generated
+	 */
+	int ENUMBV_DARSTELLUNG_IN_PLAN_OBJECT = 65;
 
 	/**
 	 * The meta object id for the '<em>ENUM Dateityp Object</em>' data type.
@@ -3277,7 +3382,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMDateitypObject()
 	 * @generated
 	 */
-	int ENUM_DATEITYP_OBJECT = 63;
+	int ENUM_DATEITYP_OBJECT = 66;
 
 	/**
 	 * The meta object id for the '<em>ENUMLST Objekt Art Object</em>' data type.
@@ -3287,7 +3392,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMLSTObjektArtObject()
 	 * @generated
 	 */
-	int ENUMLST_OBJEKT_ART_OBJECT = 64;
+	int ENUMLST_OBJEKT_ART_OBJECT = 67;
 
 	/**
 	 * The meta object id for the '<em>ENUM Objektzustand Besonders Object</em>' data type.
@@ -3297,7 +3402,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMObjektzustandBesondersObject()
 	 * @generated
 	 */
-	int ENUM_OBJEKTZUSTAND_BESONDERS_OBJECT = 65;
+	int ENUM_OBJEKTZUSTAND_BESONDERS_OBJECT = 68;
 
 	/**
 	 * The meta object id for the '<em>ENUM Rolle Object</em>' data type.
@@ -3307,7 +3412,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMRolleObject()
 	 * @generated
 	 */
-	int ENUM_ROLLE_OBJECT = 66;
+	int ENUM_ROLLE_OBJECT = 69;
 
 	/**
 	 * The meta object id for the '<em>Identitaet Type</em>' data type.
@@ -3317,7 +3422,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getIdentitaet_Type()
 	 * @generated
 	 */
-	int IDENTITAET_TYPE = 67;
+	int IDENTITAET_TYPE = 70;
 
 	/**
 	 * The meta object id for the '<em>Kommentar Type</em>' data type.
@@ -3327,7 +3432,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getKommentar_Type()
 	 * @generated
 	 */
-	int KOMMENTAR_TYPE = 68;
+	int KOMMENTAR_TYPE = 71;
 
 	/**
 	 * The meta object id for the '<em>Kurztext Type</em>' data type.
@@ -3337,7 +3442,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getKurztext_Type()
 	 * @generated
 	 */
-	int KURZTEXT_TYPE = 69;
+	int KURZTEXT_TYPE = 72;
 
 	/**
 	 * The meta object id for the '<em>LO Ausgabestand Type</em>' data type.
@@ -3347,7 +3452,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Ausgabestand_Type()
 	 * @generated
 	 */
-	int LO_AUSGABESTAND_TYPE = 70;
+	int LO_AUSGABESTAND_TYPE = 73;
 
 	/**
 	 * The meta object id for the '<em>LO DB Freigabe Type</em>' data type.
@@ -3357,7 +3462,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_DB_Freigabe_Type()
 	 * @generated
 	 */
-	int LO_DB_FREIGABE_TYPE = 71;
+	int LO_DB_FREIGABE_TYPE = 74;
 
 	/**
 	 * The meta object id for the '<em>LO EMA Nr Type</em>' data type.
@@ -3367,7 +3472,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_EMA_Nr_Type()
 	 * @generated
 	 */
-	int LO_EMA_NR_TYPE = 72;
+	int LO_EMA_NR_TYPE = 75;
 
 	/**
 	 * The meta object id for the '<em>LO Firmensachnummer Type</em>' data type.
@@ -3377,7 +3482,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Firmensachnummer_Type()
 	 * @generated
 	 */
-	int LO_FIRMENSACHNUMMER_TYPE = 73;
+	int LO_FIRMENSACHNUMMER_TYPE = 76;
 
 	/**
 	 * The meta object id for the '<em>LO Seriennummer Type</em>' data type.
@@ -3387,7 +3492,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getLO_Seriennummer_Type()
 	 * @generated
 	 */
-	int LO_SERIENNUMMER_TYPE = 74;
+	int LO_SERIENNUMMER_TYPE = 77;
 
 	/**
 	 * The meta object id for the '<em>Richtungsbezug Type</em>' data type.
@@ -3397,7 +3502,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getRichtungsbezug_Type()
 	 * @generated
 	 */
-	int RICHTUNGSBEZUG_TYPE = 75;
+	int RICHTUNGSBEZUG_TYPE = 78;
 
 	/**
 	 * The meta object id for the '<em>Seitliche Lage Type</em>' data type.
@@ -3407,7 +3512,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getSeitliche_Lage_Type()
 	 * @generated
 	 */
-	int SEITLICHE_LAGE_TYPE = 76;
+	int SEITLICHE_LAGE_TYPE = 79;
 
 	/**
 	 * The meta object id for the '<em>Seitlicher Abstand Type</em>' data type.
@@ -3417,7 +3522,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getSeitlicher_Abstand_Type()
 	 * @generated
 	 */
-	int SEITLICHER_ABSTAND_TYPE = 77;
+	int SEITLICHER_ABSTAND_TYPE = 80;
 
 	/**
 	 * The meta object id for the '<em>Strecke Km Type</em>' data type.
@@ -3427,7 +3532,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getStrecke_Km_Type()
 	 * @generated
 	 */
-	int STRECKE_KM_TYPE = 78;
+	int STRECKE_KM_TYPE = 81;
 
 	/**
 	 * The meta object id for the '<em>Technischer Platz Type</em>' data type.
@@ -3437,7 +3542,7 @@ public interface BasisobjektePackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getTechnischer_Platz_Type()
 	 * @generated
 	 */
-	int TECHNISCHER_PLATZ_TYPE = 79;
+	int TECHNISCHER_PLATZ_TYPE = 82;
 
 
 	/**
@@ -3526,17 +3631,6 @@ public interface BasisobjektePackage extends EPackage {
 	EReference getAnhang_Allg_AttributeGroup_Dateityp();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup#getDaten <em>Daten</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Daten</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup#getDaten()
-	 * @see #getAnhang_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getAnhang_Allg_AttributeGroup_Daten();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Art_TypeClass <em>Anhang Art Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3579,15 +3673,26 @@ public interface BasisobjektePackage extends EPackage {
 	EReference getBasis_Objekt_BasisObjektAllg();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt#getIDBearbeitungsvermerk <em>ID Bearbeitungsvermerk</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt#getIDBearbeitungsvermerk <em>ID Bearbeitungsvermerk</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>ID Bearbeitungsvermerk</em>'.
+	 * @return the meta object for the containment reference list '<em>ID Bearbeitungsvermerk</em>'.
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt#getIDBearbeitungsvermerk()
 	 * @see #getBasis_Objekt()
 	 * @generated
 	 */
 	EReference getBasis_Objekt_IDBearbeitungsvermerk();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt#getIDOertlichkeitAusgabe <em>ID Oertlichkeit Ausgabe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Oertlichkeit Ausgabe</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt#getIDOertlichkeitAusgabe()
+	 * @see #getBasis_Objekt()
+	 * @generated
+	 */
+	EReference getBasis_Objekt_IDOertlichkeitAusgabe();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt#getObjektreferenzen <em>Objektreferenzen</em>}'.
@@ -3697,17 +3802,6 @@ public interface BasisobjektePackage extends EPackage {
 	EClass getBearbeitungsvermerk_Allg_AttributeGroup();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBearbeitungsvermerkKennung <em>Bearbeitungsvermerk Kennung</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Bearbeitungsvermerk Kennung</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBearbeitungsvermerkKennung()
-	 * @see #getBearbeitungsvermerk_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkKennung();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBearbeitungsvermerkRolle <em>Bearbeitungsvermerk Rolle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3728,6 +3822,28 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBearbeitungsvermerk_Allg_AttributeGroup_Bestandsrelevanz();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBVDarstellungInPlan <em>BV Darstellung In Plan</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>BV Darstellung In Plan</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBVDarstellungInPlan()
+	 * @see #getBearbeitungsvermerk_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getBearbeitungsvermerk_Allg_AttributeGroup_BVDarstellungInPlan();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBVKategorie <em>BV Kategorie</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>BV Kategorie</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBVKategorie()
+	 * @see #getBearbeitungsvermerk_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getBearbeitungsvermerk_Allg_AttributeGroup_BVKategorie();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getKommentar <em>Kommentar</em>}'.
@@ -3761,27 +3877,6 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBearbeitungsvermerk_Allg_AttributeGroup_ZeitBearbeitungsvermerk();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass <em>Bearbeitungsvermerk Kennung Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Bearbeitungsvermerk Kennung Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass
-	 * @generated
-	 */
-	EClass getBearbeitungsvermerk_Kennung_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Kennung_TypeClass#getWert()
-	 * @see #getBearbeitungsvermerk_Kennung_TypeClass()
-	 * @generated
-	 */
-	EAttribute getBearbeitungsvermerk_Kennung_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Rolle_TypeClass <em>Bearbeitungsvermerk Rolle Type Class</em>}'.
@@ -3985,6 +4080,48 @@ public interface BasisobjektePackage extends EPackage {
 	EAttribute getBestandsschutz_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass <em>BV Darstellung In Plan Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>BV Darstellung In Plan Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass
+	 * @generated
+	 */
+	EClass getBV_Darstellung_In_Plan_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass#getWert()
+	 * @see #getBV_Darstellung_In_Plan_TypeClass()
+	 * @generated
+	 */
+	EAttribute getBV_Darstellung_In_Plan_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass <em>BV Kategorie Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>BV Kategorie Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass
+	 * @generated
+	 */
+	EClass getBV_Kategorie_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BV_Kategorie_TypeClass#getWert()
+	 * @see #getBV_Kategorie_TypeClass()
+	 * @generated
+	 */
+	EAttribute getBV_Kategorie_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Dateiname_TypeClass <em>Dateiname Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4025,27 +4162,6 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDateityp_TypeClass_Wert();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass <em>Daten Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Daten Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass
-	 * @generated
-	 */
-	EClass getDaten_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass#getWert()
-	 * @see #getDaten_TypeClass()
-	 * @generated
-	 */
-	EAttribute getDaten_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Datum_Regelwerk_TypeClass <em>Datum Regelwerk Type Class</em>}'.
@@ -4111,6 +4227,27 @@ public interface BasisobjektePackage extends EPackage {
 	EAttribute getIdentitaet_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass <em>Km Massgebend Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Km Massgebend Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass
+	 * @generated
+	 */
+	EClass getKm_Massgebend_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Km_Massgebend_TypeClass#getWert()
+	 * @see #getKm_Massgebend_TypeClass()
+	 * @generated
+	 */
+	EAttribute getKm_Massgebend_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Kommentar_TypeClass <em>Kommentar Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4172,6 +4309,17 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLieferobjekt_Beschreibung();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getIDGEOPunkt <em>IDGEO Punkt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>IDGEO Punkt</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getIDGEOPunkt()
+	 * @see #getLieferobjekt()
+	 * @generated
+	 */
+	EReference getLieferobjekt_IDGEOPunkt();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getIDLOEinbau <em>IDLO Einbau</em>}'.
@@ -4578,6 +4726,17 @@ public interface BasisobjektePackage extends EPackage {
 	EReference getPunkt_Objekt_Strecke_AttributeGroup_IDStrecke();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup#getKmMassgebend <em>Km Massgebend</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Km Massgebend</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup#getKmMassgebend()
+	 * @see #getPunkt_Objekt_Strecke_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPunkt_Objekt_Strecke_AttributeGroup_KmMassgebend();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup#getStreckeKm <em>Strecke Km</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4608,6 +4767,17 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_Abstand();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getIDGEOPunktBerechnet <em>IDGEO Punkt Berechnet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>IDGEO Punkt Berechnet</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getIDGEOPunktBerechnet()
+	 * @see #getPunkt_Objekt_TOP_Kante_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPunkt_Objekt_TOP_Kante_AttributeGroup_IDGEOPunktBerechnet();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getIDTOPKante <em>IDTOP Kante</em>}'.
@@ -4842,6 +5012,16 @@ public interface BasisobjektePackage extends EPackage {
 	EEnum getENUMBestandsrelevanz();
 
 	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan <em>ENUMBV Darstellung In Plan</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUMBV Darstellung In Plan</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan
+	 * @generated
+	 */
+	EEnum getENUMBVDarstellungInPlan();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMDateityp <em>ENUM Dateityp</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4894,18 +5074,6 @@ public interface BasisobjektePackage extends EPackage {
 	EDataType getAbstand_Type();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.String <em>Bearbeitungsvermerk Kennung Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Bearbeitungsvermerk Kennung Type</em>'.
-	 * @see java.lang.String
-	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TBearbeitungsvermerk_Kennung' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TZeichenkette'"
-	 * @generated
-	 */
-	EDataType getBearbeitungsvermerk_Kennung_Type();
-
-	/**
 	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>Begrenzung AType</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4942,6 +5110,18 @@ public interface BasisobjektePackage extends EPackage {
 	EDataType getBeschreibung_Type();
 
 	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>BV Kategorie Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>BV Kategorie Type</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='TBV_Kategorie' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
+	 * @generated
+	 */
+	EDataType getBV_Kategorie_Type();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>DB GDI Referenz Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4976,6 +5156,18 @@ public interface BasisobjektePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMBestandsrelevanzObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan <em>ENUMBV Darstellung In Plan Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUMBV Darstellung In Plan Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan"
+	 *        extendedMetaData="name='ENUMBV_Darstellung_In_Plan:Object' baseType='ENUMBV_Darstellung_In_Plan'"
+	 * @generated
+	 */
+	EDataType getENUMBVDarstellungInPlanObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMDateityp <em>ENUM Dateityp Object</em>}'.
@@ -5275,14 +5467,6 @@ public interface BasisobjektePackage extends EPackage {
 		EReference ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP = eINSTANCE.getAnhang_Allg_AttributeGroup_Dateityp();
 
 		/**
-		 * The meta object literal for the '<em><b>Daten</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN = eINSTANCE.getAnhang_Allg_AttributeGroup_Daten();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Anhang_Art_TypeClassImpl <em>Anhang Art Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5319,12 +5503,20 @@ public interface BasisobjektePackage extends EPackage {
 		EReference BASIS_OBJEKT__BASIS_OBJEKT_ALLG = eINSTANCE.getBasis_Objekt_BasisObjektAllg();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK = eINSTANCE.getBasis_Objekt_IDBearbeitungsvermerk();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE = eINSTANCE.getBasis_Objekt_IDOertlichkeitAusgabe();
 
 		/**
 		 * The meta object literal for the '<em><b>Objektreferenzen</b></em>' containment reference feature.
@@ -5413,14 +5605,6 @@ public interface BasisobjektePackage extends EPackage {
 		EClass BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP = eINSTANCE.getBearbeitungsvermerk_Allg_AttributeGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Bearbeitungsvermerk Kennung</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG = eINSTANCE.getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkKennung();
-
-		/**
 		 * The meta object literal for the '<em><b>Bearbeitungsvermerk Rolle</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5435,6 +5619,22 @@ public interface BasisobjektePackage extends EPackage {
 		 * @generated
 		 */
 		EReference BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ = eINSTANCE.getBearbeitungsvermerk_Allg_AttributeGroup_Bestandsrelevanz();
+
+		/**
+		 * The meta object literal for the '<em><b>BV Darstellung In Plan</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN = eINSTANCE.getBearbeitungsvermerk_Allg_AttributeGroup_BVDarstellungInPlan();
+
+		/**
+		 * The meta object literal for the '<em><b>BV Kategorie</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE = eINSTANCE.getBearbeitungsvermerk_Allg_AttributeGroup_BVKategorie();
 
 		/**
 		 * The meta object literal for the '<em><b>Kommentar</b></em>' containment reference feature.
@@ -5459,24 +5659,6 @@ public interface BasisobjektePackage extends EPackage {
 		 * @generated
 		 */
 		EReference BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__ZEIT_BEARBEITUNGSVERMERK = eINSTANCE.getBearbeitungsvermerk_Allg_AttributeGroup_ZeitBearbeitungsvermerk();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Kennung_TypeClassImpl <em>Bearbeitungsvermerk Kennung Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Kennung_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBearbeitungsvermerk_Kennung_TypeClass()
-		 * @generated
-		 */
-		EClass BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS = eINSTANCE.getBearbeitungsvermerk_Kennung_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS__WERT = eINSTANCE.getBearbeitungsvermerk_Kennung_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bearbeitungsvermerk_Rolle_TypeClassImpl <em>Bearbeitungsvermerk Rolle Type Class</em>}' class.
@@ -5647,6 +5829,42 @@ public interface BasisobjektePackage extends EPackage {
 		EAttribute BESTANDSSCHUTZ_TYPE_CLASS__WERT = eINSTANCE.getBestandsschutz_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Darstellung_In_Plan_TypeClassImpl <em>BV Darstellung In Plan Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Darstellung_In_Plan_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBV_Darstellung_In_Plan_TypeClass()
+		 * @generated
+		 */
+		EClass BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS = eINSTANCE.getBV_Darstellung_In_Plan_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS__WERT = eINSTANCE.getBV_Darstellung_In_Plan_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Kategorie_TypeClassImpl <em>BV Kategorie Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BV_Kategorie_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBV_Kategorie_TypeClass()
+		 * @generated
+		 */
+		EClass BV_KATEGORIE_TYPE_CLASS = eINSTANCE.getBV_Kategorie_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BV_KATEGORIE_TYPE_CLASS__WERT = eINSTANCE.getBV_Kategorie_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Dateiname_TypeClassImpl <em>Dateiname Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5681,24 +5899,6 @@ public interface BasisobjektePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATEITYP_TYPE_CLASS__WERT = eINSTANCE.getDateityp_TypeClass_Wert();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Daten_TypeClassImpl <em>Daten Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.Daten_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getDaten_TypeClass()
-		 * @generated
-		 */
-		EClass DATEN_TYPE_CLASS = eINSTANCE.getDaten_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATEN_TYPE_CLASS__WERT = eINSTANCE.getDaten_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Datum_Regelwerk_TypeClassImpl <em>Datum Regelwerk Type Class</em>}' class.
@@ -5755,6 +5955,24 @@ public interface BasisobjektePackage extends EPackage {
 		EAttribute IDENTITAET_TYPE_CLASS__WERT = eINSTANCE.getIdentitaet_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Km_Massgebend_TypeClassImpl <em>Km Massgebend Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.Km_Massgebend_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getKm_Massgebend_TypeClass()
+		 * @generated
+		 */
+		EClass KM_MASSGEBEND_TYPE_CLASS = eINSTANCE.getKm_Massgebend_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KM_MASSGEBEND_TYPE_CLASS__WERT = eINSTANCE.getKm_Massgebend_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Kommentar_TypeClassImpl <em>Kommentar Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5807,6 +6025,14 @@ public interface BasisobjektePackage extends EPackage {
 		 * @generated
 		 */
 		EReference LIEFEROBJEKT__BESCHREIBUNG = eINSTANCE.getLieferobjekt_Beschreibung();
+
+		/**
+		 * The meta object literal for the '<em><b>IDGEO Punkt</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIEFEROBJEKT__IDGEO_PUNKT = eINSTANCE.getLieferobjekt_IDGEOPunkt();
 
 		/**
 		 * The meta object literal for the '<em><b>IDLO Einbau</b></em>' reference list feature.
@@ -6141,6 +6367,14 @@ public interface BasisobjektePackage extends EPackage {
 		EReference PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__ID_STRECKE = eINSTANCE.getPunkt_Objekt_Strecke_AttributeGroup_IDStrecke();
 
 		/**
+		 * The meta object literal for the '<em><b>Km Massgebend</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PUNKT_OBJEKT_STRECKE_ATTRIBUTE_GROUP__KM_MASSGEBEND = eINSTANCE.getPunkt_Objekt_Strecke_AttributeGroup_KmMassgebend();
+
+		/**
 		 * The meta object literal for the '<em><b>Strecke Km</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6165,6 +6399,14 @@ public interface BasisobjektePackage extends EPackage {
 		 * @generated
 		 */
 		EReference PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND = eINSTANCE.getPunkt_Objekt_TOP_Kante_AttributeGroup_Abstand();
+
+		/**
+		 * The meta object literal for the '<em><b>IDGEO Punkt Berechnet</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET = eINSTANCE.getPunkt_Objekt_TOP_Kante_AttributeGroup_IDGEOPunktBerechnet();
 
 		/**
 		 * The meta object literal for the '<em><b>IDTOP Kante</b></em>' reference feature.
@@ -6363,6 +6605,16 @@ public interface BasisobjektePackage extends EPackage {
 		EEnum ENUM_BESTANDSRELEVANZ = eINSTANCE.getENUMBestandsrelevanz();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan <em>ENUMBV Darstellung In Plan</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMBVDarstellungInPlan()
+		 * @generated
+		 */
+		EEnum ENUMBV_DARSTELLUNG_IN_PLAN = eINSTANCE.getENUMBVDarstellungInPlan();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.ENUMDateityp <em>ENUM Dateityp</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6413,16 +6665,6 @@ public interface BasisobjektePackage extends EPackage {
 		EDataType ABSTAND_TYPE = eINSTANCE.getAbstand_Type();
 
 		/**
-		 * The meta object literal for the '<em>Bearbeitungsvermerk Kennung Type</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.lang.String
-		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBearbeitungsvermerk_Kennung_Type()
-		 * @generated
-		 */
-		EDataType BEARBEITUNGSVERMERK_KENNUNG_TYPE = eINSTANCE.getBearbeitungsvermerk_Kennung_Type();
-
-		/**
 		 * The meta object literal for the '<em>Begrenzung AType</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6453,6 +6695,16 @@ public interface BasisobjektePackage extends EPackage {
 		EDataType BESCHREIBUNG_TYPE = eINSTANCE.getBeschreibung_Type();
 
 		/**
+		 * The meta object literal for the '<em>BV Kategorie Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getBV_Kategorie_Type()
+		 * @generated
+		 */
+		EDataType BV_KATEGORIE_TYPE = eINSTANCE.getBV_Kategorie_Type();
+
+		/**
 		 * The meta object literal for the '<em>DB GDI Referenz Type</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6481,6 +6733,16 @@ public interface BasisobjektePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_BESTANDSRELEVANZ_OBJECT = eINSTANCE.getENUMBestandsrelevanzObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUMBV Darstellung In Plan Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.ENUMBVDarstellungInPlan
+		 * @see org.eclipse.set.toolboxmodel.Basisobjekte.impl.BasisobjektePackageImpl#getENUMBVDarstellungInPlanObject()
+		 * @generated
+		 */
+		EDataType ENUMBV_DARSTELLUNG_IN_PLAN_OBJECT = eINSTANCE.getENUMBVDarstellungInPlanObject();
 
 		/**
 		 * The meta object literal for the '<em>ENUM Dateityp Object</em>' data type.

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -30,12 +37,12 @@ public interface LEU_Schaltkasten_Energie_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Kalkulierte Anzahl der Voll-LEU im LEU-Schaltkasten (Grundlage für die Energiebedarfsermittlung). Die tatsächliche Anzahl ergibt sich aus den Instanzen LEU_Modul, die dem LEU-Schaltkasten zugeordnet sind.
+	 * Kalkulierte Anzahl der Voll-LEU im LEU-Schaltkasten, sofern planungsseitig noch keine LEU-Module angelegt worden sind oder die Angabe der LEU_Art fehlt (Grundlage für die Energiebedarfsermittlung). Sofern das Attribut im PT 1 genutzt wird, ergibt sich die tatsächliche Anzahl aus den im Rahmen des PT 2 angelegten Instanzen LEU_Modul, die dem LEU-Schaltkasten zugeordnet sind.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Anzahl Voll LEU Kalkuliert</em>' containment reference.
 	 * @see #setAnzahlVollLEUKalkuliert(Anzahl_Voll_LEU_Kalkuliert_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Schaltkasten_Energie_AttributeGroup_AnzahlVollLEUKalkuliert()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Anzahl_Voll_LEU_Kalkuliert'"
 	 * @generated
 	 */
@@ -109,7 +116,7 @@ public interface LEU_Schaltkasten_Energie_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Maximaler Leistungsbedarf des LEU-Schaltkastens (Summe aller LEU-Module). Der Leistungsbedarf soll durch das Planungswerkzeug über LEU_Art und die Anzahl der zugehörigen Datenpunkte bestimmt werden. Im besonderen Fall ist die Korrektur durch den Planer möglich.
+	 * Maximaler Leistungsbedarf des LEU-Schaltkastens (Summe aller LEU-Module). Der Leistungsbedarf soll durch das Planungswerkzeug über LEU_Modul_Art und die Anzahl der zugehörigen Datenpunkte bestimmt werden. Im besonderen Fall ist die Korrektur durch den Planer möglich.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Max Leistung</em>' containment reference.
 	 * @see #setMaxLeistung(Max_Leistung_TypeClass)
@@ -140,7 +147,7 @@ public interface LEU_Schaltkasten_Energie_AttributeGroup extends EObject {
 	 * @return the value of the '<em>Spannung Art</em>' containment reference.
 	 * @see #setSpannungArt(Spannung_Art_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Schaltkasten_Energie_AttributeGroup_SpannungArt()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Spannung_Art'"
 	 * @generated
 	 */

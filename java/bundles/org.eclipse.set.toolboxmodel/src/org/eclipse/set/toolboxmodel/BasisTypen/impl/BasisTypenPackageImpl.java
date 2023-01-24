@@ -1,11 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen.impl;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
-import java.util.List;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
@@ -18,6 +23,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -52,9 +61,10 @@ import org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts;
 import org.eclipse.set.toolboxmodel.BasisTypen.ENUMPruefsummeArt;
 import org.eclipse.set.toolboxmodel.BasisTypen.ENUMRegionalbereich;
 import org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung;
-import org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup;
+import org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
 import org.eclipse.set.toolboxmodel.BasisTypen.Kennzahl_TypeClass;
 import org.eclipse.set.toolboxmodel.BasisTypen.Oertlicher_Elementname_TypeClass;
+import org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup;
 import org.eclipse.set.toolboxmodel.BasisTypen.Pruefsumme_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.BasisTypen.Pruefsumme_TypeClass;
 import org.eclipse.set.toolboxmodel.BasisTypen.Version_Auslieferung_TypeClass;
@@ -90,13 +100,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -121,9 +135,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -205,7 +221,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eigenschaften_Datei_AttributeGroupEClass = null;
+	private EClass iD_Bearbeitungsvermerk_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,6 +236,13 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 	 * @generated
 	 */
 	private EClass oertlicher_Elementname_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pruefmerkmale_Daten_AttributeGroupEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -506,13 +529,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType pruefsumme_TypeEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EDataType regionalbereich_TypeEDataType = null;
 
 	/**
@@ -598,30 +614,34 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -638,8 +658,8 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -657,16 +677,18 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 
 		// Create package meta-data objects
 		theBasisTypenPackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -674,23 +696,25 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBasisTypenPackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -698,7 +722,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -923,8 +947,8 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 	 * @generated
 	 */
 	@Override
-	public EClass getEigenschaften_Datei_AttributeGroup() {
-		return eigenschaften_Datei_AttributeGroupEClass;
+	public EClass getID_Bearbeitungsvermerk_TypeClass() {
+		return iD_Bearbeitungsvermerk_TypeClassEClass;
 	}
 
 	/**
@@ -933,38 +957,8 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 	 * @generated
 	 */
 	@Override
-	public EReference getEigenschaften_Datei_AttributeGroup_DatumAuslieferung() {
-		return (EReference)eigenschaften_Datei_AttributeGroupEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEigenschaften_Datei_AttributeGroup_Pruefsumme() {
-		return (EReference)eigenschaften_Datei_AttributeGroupEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEigenschaften_Datei_AttributeGroup_PruefsummeArt() {
-		return (EReference)eigenschaften_Datei_AttributeGroupEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEigenschaften_Datei_AttributeGroup_VersionAuslieferung() {
-		return (EReference)eigenschaften_Datei_AttributeGroupEClass.getEStructuralFeatures().get(3);
+	public EAttribute getID_Bearbeitungsvermerk_TypeClass_Wert() {
+		return (EAttribute)iD_Bearbeitungsvermerk_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1005,6 +999,56 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 	@Override
 	public EAttribute getOertlicher_Elementname_TypeClass_Wert() {
 		return (EAttribute)oertlicher_Elementname_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPruefmerkmale_Daten_AttributeGroup() {
+		return pruefmerkmale_Daten_AttributeGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPruefmerkmale_Daten_AttributeGroup_DatumAuslieferung() {
+		return (EReference)pruefmerkmale_Daten_AttributeGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPruefmerkmale_Daten_AttributeGroup_Pruefsumme() {
+		return (EReference)pruefmerkmale_Daten_AttributeGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPruefmerkmale_Daten_AttributeGroup_PruefsummeArt() {
+		return (EReference)pruefmerkmale_Daten_AttributeGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPruefmerkmale_Daten_AttributeGroup_VersionAuslieferung() {
+		return (EReference)pruefmerkmale_Daten_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1453,16 +1497,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 	 * @generated
 	 */
 	@Override
-	public EDataType getPruefsumme_Type() {
-		return pruefsumme_TypeEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EDataType getRegionalbereich_Type() {
 		return regionalbereich_TypeEDataType;
 	}
@@ -1572,17 +1606,20 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		datum_Auslieferung_TypeClassEClass = createEClass(DATUM_AUSLIEFERUNG_TYPE_CLASS);
 		createEAttribute(datum_Auslieferung_TypeClassEClass, DATUM_AUSLIEFERUNG_TYPE_CLASS__WERT);
 
-		eigenschaften_Datei_AttributeGroupEClass = createEClass(EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP);
-		createEReference(eigenschaften_Datei_AttributeGroupEClass, EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__DATUM_AUSLIEFERUNG);
-		createEReference(eigenschaften_Datei_AttributeGroupEClass, EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__PRUEFSUMME);
-		createEReference(eigenschaften_Datei_AttributeGroupEClass, EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__PRUEFSUMME_ART);
-		createEReference(eigenschaften_Datei_AttributeGroupEClass, EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__VERSION_AUSLIEFERUNG);
+		iD_Bearbeitungsvermerk_TypeClassEClass = createEClass(ID_BEARBEITUNGSVERMERK_TYPE_CLASS);
+		createEAttribute(iD_Bearbeitungsvermerk_TypeClassEClass, ID_BEARBEITUNGSVERMERK_TYPE_CLASS__WERT);
 
 		kennzahl_TypeClassEClass = createEClass(KENNZAHL_TYPE_CLASS);
 		createEAttribute(kennzahl_TypeClassEClass, KENNZAHL_TYPE_CLASS__WERT);
 
 		oertlicher_Elementname_TypeClassEClass = createEClass(OERTLICHER_ELEMENTNAME_TYPE_CLASS);
 		createEAttribute(oertlicher_Elementname_TypeClassEClass, OERTLICHER_ELEMENTNAME_TYPE_CLASS__WERT);
+
+		pruefmerkmale_Daten_AttributeGroupEClass = createEClass(PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP);
+		createEReference(pruefmerkmale_Daten_AttributeGroupEClass, PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__DATUM_AUSLIEFERUNG);
+		createEReference(pruefmerkmale_Daten_AttributeGroupEClass, PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__PRUEFSUMME);
+		createEReference(pruefmerkmale_Daten_AttributeGroupEClass, PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__PRUEFSUMME_ART);
+		createEReference(pruefmerkmale_Daten_AttributeGroupEClass, PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__VERSION_AUSLIEFERUNG);
 
 		pruefsumme_Art_TypeClassEClass = createEClass(PRUEFSUMME_ART_TYPE_CLASS);
 		createEAttribute(pruefsumme_Art_TypeClassEClass, PRUEFSUMME_ART_TYPE_CLASS__WERT);
@@ -1635,7 +1672,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		meter_TypeEDataType = createEDataType(METER_TYPE);
 		objektname_TypeEDataType = createEDataType(OBJEKTNAME_TYPE);
 		oertlicher_Elementname_TypeEDataType = createEDataType(OERTLICHER_ELEMENTNAME_TYPE);
-		pruefsumme_TypeEDataType = createEDataType(PRUEFSUMME_TYPE);
 		regionalbereich_TypeEDataType = createEDataType(REGIONALBEREICH_TYPE);
 		sekunde_TypeEDataType = createEDataType(SEKUNDE_TYPE);
 		text_TypeEDataType = createEDataType(TEXT_TYPE);
@@ -1667,9 +1703,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		BasisobjektePackage theBasisobjektePackage = (BasisobjektePackage)EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -1689,7 +1722,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(basisAttribut_AttributeGroupEClass, BasisAttribut_AttributeGroup.class, "BasisAttribut_AttributeGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBasisAttribut_AttributeGroup_IDBearbeitungsvermerk(), theBasisobjektePackage.getBearbeitungsvermerk(), null, "iDBearbeitungsvermerk", null, 0, -1, BasisAttribut_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBasisAttribut_AttributeGroup_IDBearbeitungsvermerk(), this.getID_Bearbeitungsvermerk_TypeClass(), null, "iDBearbeitungsvermerk", null, 0, -1, BasisAttribut_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bezeichnung_Aussenanlage_TypeClassEClass, Bezeichnung_Aussenanlage_TypeClass.class, "Bezeichnung_Aussenanlage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBezeichnung_Aussenanlage_TypeClass_Wert(), this.getBezeichnung_Aussenanlage_Type(), "wert", null, 1, 1, Bezeichnung_Aussenanlage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1714,11 +1747,8 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		initEClass(datum_Auslieferung_TypeClassEClass, Datum_Auslieferung_TypeClass.class, "Datum_Auslieferung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDatum_Auslieferung_TypeClass_Wert(), this.getDatum_Auslieferung_Type(), "wert", null, 1, 1, Datum_Auslieferung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(eigenschaften_Datei_AttributeGroupEClass, Eigenschaften_Datei_AttributeGroup.class, "Eigenschaften_Datei_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEigenschaften_Datei_AttributeGroup_DatumAuslieferung(), this.getDatum_Auslieferung_TypeClass(), null, "datumAuslieferung", null, 1, 1, Eigenschaften_Datei_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEigenschaften_Datei_AttributeGroup_Pruefsumme(), this.getPruefsumme_TypeClass(), null, "pruefsumme", null, 1, 1, Eigenschaften_Datei_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEigenschaften_Datei_AttributeGroup_PruefsummeArt(), this.getPruefsumme_Art_TypeClass(), null, "pruefsummeArt", null, 1, 1, Eigenschaften_Datei_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEigenschaften_Datei_AttributeGroup_VersionAuslieferung(), this.getVersion_Auslieferung_TypeClass(), null, "versionAuslieferung", null, 1, 1, Eigenschaften_Datei_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(iD_Bearbeitungsvermerk_TypeClassEClass, ID_Bearbeitungsvermerk_TypeClass.class, "ID_Bearbeitungsvermerk_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getID_Bearbeitungsvermerk_TypeClass_Wert(), this.getGUID_Type(), "wert", null, 1, 1, ID_Bearbeitungsvermerk_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kennzahl_TypeClassEClass, Kennzahl_TypeClass.class, "Kennzahl_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKennzahl_TypeClass_Wert(), this.getKennzahl_Type(), "wert", null, 1, 1, Kennzahl_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1726,11 +1756,17 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		initEClass(oertlicher_Elementname_TypeClassEClass, Oertlicher_Elementname_TypeClass.class, "Oertlicher_Elementname_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOertlicher_Elementname_TypeClass_Wert(), this.getOertlicher_Elementname_Type(), "wert", null, 1, 1, Oertlicher_Elementname_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(pruefmerkmale_Daten_AttributeGroupEClass, Pruefmerkmale_Daten_AttributeGroup.class, "Pruefmerkmale_Daten_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPruefmerkmale_Daten_AttributeGroup_DatumAuslieferung(), this.getDatum_Auslieferung_TypeClass(), null, "datumAuslieferung", null, 1, 1, Pruefmerkmale_Daten_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPruefmerkmale_Daten_AttributeGroup_Pruefsumme(), this.getPruefsumme_TypeClass(), null, "pruefsumme", null, 1, 1, Pruefmerkmale_Daten_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPruefmerkmale_Daten_AttributeGroup_PruefsummeArt(), this.getPruefsumme_Art_TypeClass(), null, "pruefsummeArt", null, 1, 1, Pruefmerkmale_Daten_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPruefmerkmale_Daten_AttributeGroup_VersionAuslieferung(), this.getVersion_Auslieferung_TypeClass(), null, "versionAuslieferung", null, 1, 1, Pruefmerkmale_Daten_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(pruefsumme_Art_TypeClassEClass, Pruefsumme_Art_TypeClass.class, "Pruefsumme_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPruefsumme_Art_TypeClass_Wert(), this.getENUMPruefsummeArtObject(), "wert", null, 1, 1, Pruefsumme_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pruefsumme_TypeClassEClass, Pruefsumme_TypeClass.class, "Pruefsumme_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPruefsumme_TypeClass_Wert(), this.getPruefsumme_Type(), "wert", null, 1, 1, Pruefsumme_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPruefsumme_TypeClass_Wert(), this.getText_Type(), "wert", null, 1, 1, Pruefsumme_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(version_Auslieferung_TypeClassEClass, Version_Auslieferung_TypeClass.class, "Version_Auslieferung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVersion_Auslieferung_TypeClass_Wert(), this.getVersion_Auslieferung_Type(), "wert", null, 1, 1, Version_Auslieferung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1780,7 +1816,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		addEEnumLiteral(enumPruefsummeArtEEnum, ENUMPruefsummeArt.ENUM_PRUEFSUMME_ART_MD5);
 		addEEnumLiteral(enumPruefsummeArtEEnum, ENUMPruefsummeArt.ENUM_PRUEFSUMME_ART_SHA1);
 		addEEnumLiteral(enumPruefsummeArtEEnum, ENUMPruefsummeArt.ENUM_PRUEFSUMME_ART_SHA256);
-		addEEnumLiteral(enumPruefsummeArtEEnum, ENUMPruefsummeArt.ENUM_PRUEFSUMME_ART_SONSTIGE);
 
 		initEEnum(enumRegionalbereichEEnum, ENUMRegionalbereich.class, "ENUMRegionalbereich");
 		addEEnumLiteral(enumRegionalbereichEEnum, ENUMRegionalbereich.ENUM_REGIONALBEREICH_MITTE);
@@ -1814,7 +1849,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		initEDataType(enumPruefsummeArtObjectEDataType, ENUMPruefsummeArt.class, "ENUMPruefsummeArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumRegionalbereichObjectEDataType, ENUMRegionalbereich.class, "ENUMRegionalbereichObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumWirkrichtungObjectEDataType, ENUMWirkrichtung.class, "ENUMWirkrichtungObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(fahrstrom_TypeEDataType, List.class, "Fahrstrom_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(fahrstrom_TypeEDataType, ENUMFahrstrom.class, "Fahrstrom_Type", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(freiText_TypeEDataType, String.class, "FreiText_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(geschwindigkeit_TypeEDataType, BigInteger.class, "Geschwindigkeit_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(guiD_TypeEDataType, String.class, "GUID_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1825,7 +1860,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		initEDataType(meter_TypeEDataType, BigDecimal.class, "Meter_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(objektname_TypeEDataType, String.class, "Objektname_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(oertlicher_Elementname_TypeEDataType, String.class, "Oertlicher_Elementname_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(pruefsumme_TypeEDataType, String.class, "Pruefsumme_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(regionalbereich_TypeEDataType, ENUMRegionalbereich.class, "Regionalbereich_Type", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(sekunde_TypeEDataType, BigDecimal.class, "Sekunde_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(text_TypeEDataType, String.class, "Text_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1857,7 +1891,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (anwendungssystem_TypeEDataType,
@@ -1893,7 +1927,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		  (getBezeichnung_Element_AttributeGroup_BezeichnungAussenanlage(),
 		   source,
 		   new String[] {
-			   "documentation", "Beschriftung des Elements oder der Komponente der LST-Anlage. \n\nDie Bezeichnung besteht i. d. R. aus dem Elementnamen (siehe Bildung der Bezeichnungen). Komponenten, die nicht bedienbar sind (z.B. Achsz\u00e4hlpunkte) k\u00f6nnen durch Zusammenf\u00fcgen von Elementnamen oder modifizierten Elementnamen bezeichnet werden. \n\nBei Elementen der LST-Anlage, die in der Au\u00dfenanlage kein Bezeichnungsschild und im sicherungstechnischen Plan- und Tabellenwerk keinen spezifischen Bezeichner haben, kann dieses Attribut entfallen.\n\nBeispiele: \n\u2022 ein Hauptsignal hat in der Au\u00dfenanlage ein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird bef\u00fcllt; \n\u2022 ein Vorsignal hat in der Au\u00dfenanlage kein Bezeichnungsschild, aber auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird bef\u00fcllt; \n\u2022 ein Bedienpunkt (fiktives Signal) existiert gar nicht in der Au\u00dfenanlage, hat aber mindestens im Tabellenwerk einen spezifischen Bezeichner, das Attribut wird bef\u00fcllt; \n\u2022 ein Lf 7 hat in der Au\u00dfenanlage kein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan keinen spezifischen Bezeichner, das Attribut entf\u00e4llt (Hinweis: Auch wenn im Lageplan der Bezeichner "
+			   "documentation", "Beschriftung des Elements oder der Komponente der LST-Anlage. \n\nDie Bezeichnung besteht i. d. R. aus dem Elementnamen (siehe Bildung der Bezeichnungen). Komponenten, die nicht bedienbar sind (z.B. Achsz\u00e4hlpunkte) k\u00f6nnen durch Zusammenf\u00fcgen von Elementnamen oder modifizierten Elementnamen bezeichnet werden. \n\nBei Elementen der LST-Anlage, die in der Au\u00dfenanlage kein Bezeichnungsschild und im sicherungstechnischen Plan- und Tabellenwerk keinen spezifischen Bezeichner haben, kann dieses Attribut entfallen.\n\nBeispiele: \n\u2022 ein Hauptsignal hat in der Au\u00dfenanlage ein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird bef\u00fcllt; \n\u2022 ein Vorsignal hat in der Au\u00dfenanlage kein Bezeichnungsschild, aber auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird bef\u00fcllt; \n\u2022 ein Bedienpunkt (fiktives Signal) existiert gar nicht in der Au\u00dfenanlage, hat aber mindestens im Tabellenwerk einen spezifischen Bezeichner, das Attribut wird bef\u00fcllt; \n\u2022 ein Lf 7 hat in der Au\u00dfenanlage kein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan keinen spezifischen Bezeichner, das Attribut entf\u00e4llt (Hinweis: Auch wenn im Lageplan der Bezeichner \"LF7\" eingetragen wird, so ist das dennoch kein spezifischer Bezeichner, sondern ein allgemeiner Bezeichner f\u00fcr alle Signale Lf 7). \n\nDB-Regelwerk\n\u2022 819.9001\n"
 		   });
 		addAnnotation
 		  (getBezeichnung_Element_AttributeGroup_BezeichnungLageplanKurz(),
@@ -1917,13 +1951,19 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		  (getBezeichnung_Element_AttributeGroup_Kennzahl(),
 		   source,
 		   new String[] {
-			   "documentation", "Eindeutige Kennzahl der operativen Sicherungstechnik innerhalb eines Bedienbezirks f\u00fcr eine Betriebsstelle.\n\nDie ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!\n\nEine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Geb\u00e4ude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \\\u201eHH Kennzahl 06\\\u201c und \\\u201eHHZX Kennzahl 30\\\u201c).\n\nEine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei \u00dcberleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \\\u201e\u00dcst Giften HGIF\\\u201c und \\\u201e\u00dcst Ritterkamp HRIT\\\u201c.\n\nIn Stellbereichen von Bedienbezirken werden f\u00fcr Betriebsstellen (z. B. Bahnh\u00f6fe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.\n\nEindeutigkeit der Kennzahlen bei angrenzenden Bedienbezirken entlang einer Strecke:\n\nInnerhalb eines Bedienbezirks und f\u00fcr benachbarte Betriebsstellen eines angrenzenden Bedienbezirks entlang einer Strecke darf eine Kennzahl nur einmal verwendet werden. Beispiel: Media:Bedien Oertlichkeit Kennzahl 131121.pdf\n\nF\u00fcr alle im jeweiligen Bereich befindlichen Stellelemente der Betriebsstellen und Strecken wird die Kennzahl Bestandteil der ausf\u00fchrlichen Elementbezeichnung. Hierdurch er\u00fcbrigt sich in einem gr\u00f6\u00dferen Bereich der Infrastruktur die Mitf\u00fchrung eines Ortsbezeichners.\n\nZentrale Vergabe von Kennzahlen auch ohne Anbindung an Bedien_Zentralen:\n\nUnabnh\u00e4ngig ob eine ESTW-Zentraleinheit aus einer Bedien_Zentrale gesteuert wird oder nur \u00f6rtlich eingerichtet ist, soll die Kennzahlenvergabe zentral im Sinne einer m\u00f6glichen Konzentration von ESTW-Zentraleinheiten in Bedienbezirken geplant und vergeben werden. \n\nDB-Regelwerk\n\u2022 Kennzahltabelle oder Kennzaheln\u00fcbersichtsplan im PT 1, \n\u2022 819.0603 2, \n\u2022 819.9001 1 (5).\n\n"
+			   "documentation", "Eindeutige Kennzahl der operativen Sicherungstechnik innerhalb eines Bedienbezirks f\u00fcr eine Betriebsstelle.\n\nDie ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!\n\nEine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Geb\u00e4ude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \"HH Kennzahl 06\" und \"HHZX Kennzahl 30\").\n\nEine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei \u00dcberleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \"\u00dcst Giften HGIF\" und \"\u00dcst Ritterkamp HRIT\".\n\nIn Stellbereichen von Bedienbezirken werden f\u00fcr Betriebsstellen (z. B. Bahnh\u00f6fe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.\n\nEindeutigkeit der Kennzahlen bei angrenzenden Bedienbezirken entlang einer Strecke:\n\nInnerhalb eines Bedienbezirks und f\u00fcr benachbarte Betriebsstellen eines angrenzenden Bedienbezirks entlang einer Strecke darf eine Kennzahl nur einmal verwendet werden. Beispiel: Media:Bedien Oertlichkeit Kennzahl 131121.pdf\n\nF\u00fcr alle im jeweiligen Bereich befindlichen Stellelemente der Betriebsstellen und Strecken wird die Kennzahl Bestandteil der ausf\u00fchrlichen Elementbezeichnung. Hierdurch er\u00fcbrigt sich in einem gr\u00f6\u00dferen Bereich der Infrastruktur die Mitf\u00fchrung eines Ortsbezeichners.\n\nZentrale Vergabe von Kennzahlen auch ohne Anbindung an Bedien_Zentralen:\n\nUnabnh\u00e4ngig ob eine ESTW-Zentraleinheit aus einer Bedien_Zentrale gesteuert wird oder nur \u00f6rtlich eingerichtet ist, soll die Kennzahlenvergabe zentral im Sinne einer m\u00f6glichen Konzentration von ESTW-Zentraleinheiten in Bedienbezirken geplant und vergeben werden. \n\nDB-Regelwerk\n\u2022 Kennzahltabelle oder Kennzaheln\u00fcbersichtsplan im PT 1, \n\u2022 819.0603 2, \n\u2022 819.9001 1 (5).\n\n"
 		   });
 		addAnnotation
 		  (getBezeichnung_Element_AttributeGroup_OertlicherElementname(),
 		   source,
 		   new String[] {
 			   "documentation", "Kurzbezeichnung eines Elements. Der \u00f6rtliche Elementname ist Bestandteil des Elementnamens und wird elementspezifisch gebildet. Bei Lichtsperrsignalen und anderen Elementen mit Richtungsbuchstaben (X, Y) kann dieser nicht immer eindeutig und automatisch aus einem Richtungsattribut abgeleitet werden. Er ist in jedem Fall vom Planer zu bestimmen und als Bestandteil des \u00f6rtlichen Elementnamens abzuspeichern. Der \u00f6rtliche Elementname wird \u00fcblicherweise im Lageplan verwendet. Siehe auch Bildung der Bezeichnungen. DB-Regelwerk 819.0603 (Stellwerkseinrichtungen - Bedienoberfl\u00e4chen), 819.9001 (Symbolbezeichnungen sicherungstechnischer Pl\u00e4ne).\n\n"
+		   });
+		addAnnotation
+		  (bremsweg_TypeEDataType,
+		   source,
+		   new String[] {
+			   "documentation", "Bremsweg als Grundlage f\u00fcr die Dimensionierung der zugeh\u00f6rigen Strecke. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen."
 		   });
 		addAnnotation
 		  (dateiname_TypeEDataType,
@@ -1936,36 +1976,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		   source,
 		   new String[] {
 			   "documentation", "Datum, an dem die Binaerdatei vom Hersteller ausgeliefert wurde."
-		   });
-		addAnnotation
-		  (eigenschaften_Datei_AttributeGroupEClass,
-		   source,
-		   new String[] {
-			   "documentation", "Basisattributgruppe zur Zuordnung von Metadaten zu einer Datei.\n"
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_DatumAuslieferung(),
-		   source,
-		   new String[] {
-			   "documentation", "Datum, an dem die Binaerdatei vom Hersteller ausgeliefert wurde."
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_Pruefsumme(),
-		   source,
-		   new String[] {
-			   "documentation", "Pr\u00fcfsumme f\u00fcr die im Objekt Binaerdatei enthaltene Datei.\n"
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_PruefsummeArt(),
-		   source,
-		   new String[] {
-			   "documentation", "Art der verwendeten Pr\u00fcfsumme (z. B. MD4)."
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_VersionAuslieferung(),
-		   source,
-		   new String[] {
-			   "documentation", "Version der Auslieferung vom Hersteller.\n"
 		   });
 		addAnnotation
 		  (enumLinksRechtsEEnum,
@@ -2013,7 +2023,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		  (kennzahl_TypeEDataType,
 		   source,
 		   new String[] {
-			   "documentation", "Eindeutige Kennzahl der operativen Sicherungstechnik innerhalb eines Bedienbezirks f\u00fcr eine Betriebsstelle.\n\nDie ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!\n\nEine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Geb\u00e4ude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \\\u201eHH Kennzahl 06\\\u201c und \\\u201eHHZX Kennzahl 30\\\u201c).\n\nEine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei \u00dcberleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \\\u201e\u00dcst Giften HGIF\\\u201c und \\\u201e\u00dcst Ritterkamp HRIT\\\u201c.\n\nIn Stellbereichen von Bedienbezirken werden f\u00fcr Betriebsstellen (z. B. Bahnh\u00f6fe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.\n\nEindeutigkeit der Kennzahlen bei angrenzenden Bedienbezirken entlang einer Strecke:\n\nInnerhalb eines Bedienbezirks und f\u00fcr benachbarte Betriebsstellen eines angrenzenden Bedienbezirks entlang einer Strecke darf eine Kennzahl nur einmal verwendet werden. Beispiel: Media:Bedien Oertlichkeit Kennzahl 131121.pdf\n\nF\u00fcr alle im jeweiligen Bereich befindlichen Stellelemente der Betriebsstellen und Strecken wird die Kennzahl Bestandteil der ausf\u00fchrlichen Elementbezeichnung. Hierdurch er\u00fcbrigt sich in einem gr\u00f6\u00dferen Bereich der Infrastruktur die Mitf\u00fchrung eines Ortsbezeichners.\n\nZentrale Vergabe von Kennzahlen auch ohne Anbindung an Bedien_Zentralen:\n\nUnabnh\u00e4ngig ob eine ESTW-Zentraleinheit aus einer Bedien_Zentrale gesteuert wird oder nur \u00f6rtlich eingerichtet ist, soll die Kennzahlenvergabe zentral im Sinne einer m\u00f6glichen Konzentration von ESTW-Zentraleinheiten in Bedienbezirken geplant und vergeben werden. \n\nDB-Regelwerk\n\u2022 Kennzahltabelle oder Kennzaheln\u00fcbersichtsplan im PT 1, \n\u2022 819.0603 2, \n\u2022 819.9001 1 (5).\n\n"
+			   "documentation", "Eindeutige Kennzahl der operativen Sicherungstechnik innerhalb eines Bedienbezirks f\u00fcr eine Betriebsstelle.\n\nDie ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!\n\nEine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Geb\u00e4ude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \"HH Kennzahl 06\" und \"HHZX Kennzahl 30\").\n\nEine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei \u00dcberleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \"\u00dcst Giften HGIF\" und \"\u00dcst Ritterkamp HRIT\".\n\nIn Stellbereichen von Bedienbezirken werden f\u00fcr Betriebsstellen (z. B. Bahnh\u00f6fe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.\n\nEindeutigkeit der Kennzahlen bei angrenzenden Bedienbezirken entlang einer Strecke:\n\nInnerhalb eines Bedienbezirks und f\u00fcr benachbarte Betriebsstellen eines angrenzenden Bedienbezirks entlang einer Strecke darf eine Kennzahl nur einmal verwendet werden. Beispiel: Media:Bedien Oertlichkeit Kennzahl 131121.pdf\n\nF\u00fcr alle im jeweiligen Bereich befindlichen Stellelemente der Betriebsstellen und Strecken wird die Kennzahl Bestandteil der ausf\u00fchrlichen Elementbezeichnung. Hierdurch er\u00fcbrigt sich in einem gr\u00f6\u00dferen Bereich der Infrastruktur die Mitf\u00fchrung eines Ortsbezeichners.\n\nZentrale Vergabe von Kennzahlen auch ohne Anbindung an Bedien_Zentralen:\n\nUnabnh\u00e4ngig ob eine ESTW-Zentraleinheit aus einer Bedien_Zentrale gesteuert wird oder nur \u00f6rtlich eingerichtet ist, soll die Kennzahlenvergabe zentral im Sinne einer m\u00f6glichen Konzentration von ESTW-Zentraleinheiten in Bedienbezirken geplant und vergeben werden. \n\nDB-Regelwerk\n\u2022 Kennzahltabelle oder Kennzaheln\u00fcbersichtsplan im PT 1, \n\u2022 819.0603 2, \n\u2022 819.9001 1 (5).\n\n"
 		   });
 		addAnnotation
 		  (kilometrierung_TypeEDataType,
@@ -2025,7 +2035,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		  (linksRechts_TypeEDataType,
 		   source,
 		   new String[] {
-			   "documentation", "Attribute dieses Basistyps k\u00f6nnen den ENUM-Wert \'links\' oder \'rechts\' annehmen."
+			   "documentation", "Attribute dieses Basistyps k\u00f6nnen den ENUM-Wert \"links\" oder \"rechts\" annehmen."
 		   });
 		addAnnotation
 		  (meter_TypeEDataType,
@@ -2046,10 +2056,34 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 			   "documentation", "Kurzbezeichnung eines Elements. Der \u00f6rtliche Elementbezeichner ist Bestandteil des Elementnamens und wird elementspezifisch gebildet. Bei Lichtsperrsignalen und anderen Elementen mit Richtungsbuchstaben (X, Y) kann dieser nicht immer eindeutig und automatisch aus einem Richtungsattribut abgeleitet werden. Er ist in jedem Fall vom Planer zu bestimmen und als Bestandteil des \u00f6rtlichen Elementbezeichners abzuspeichern. Der \u00f6rtliche Elementbezeichner wird \u00fcblicherweise im Lageplan verwendet. Siehe auch Bildung der Bezeichnungen. DB-Regelwerk 819.0603 (Stellwerkseinrichtungen - Bedienoberfl\u00e4chen), 819.9001 (Symbolbezeichnungen sicherungstechnischer Pl\u00e4ne).\n\n\n"
 		   });
 		addAnnotation
-		  (pruefsumme_TypeEDataType,
+		  (pruefmerkmale_Daten_AttributeGroupEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Pr\u00fcfsumme f\u00fcr die im Objekt Binaerdatei enthaltene Datei.\n"
+			   "documentation", "Basisattributgruppe zur Zuordnung von Pr\u00fcfmerkmalen zu Daten bzw. einer Datei."
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_DatumAuslieferung(),
+		   source,
+		   new String[] {
+			   "documentation", "Datum, an dem die Daten bzw. die Datei vom Hersteller ausgeliefert wurde(n)."
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_Pruefsumme(),
+		   source,
+		   new String[] {
+			   "documentation", "Pr\u00fcfsumme f\u00fcr die Daten bzw. die Datei zur Sicherstellung der Unverf\u00e4lschtheit."
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_PruefsummeArt(),
+		   source,
+		   new String[] {
+			   "documentation", "Art der verwendeten Pr\u00fcfsumme (z. B. MD4)."
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_VersionAuslieferung(),
+		   source,
+		   new String[] {
+			   "documentation", "Version der Auslieferung vom Hersteller."
 		   });
 		addAnnotation
 		  (regionalbereich_TypeEDataType,
@@ -2311,41 +2345,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 			   "name", "Wert"
 		   });
 		addAnnotation
-		  (eigenschaften_Datei_AttributeGroupEClass,
-		   source,
-		   new String[] {
-			   "name", "CEigenschaften_Datei",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_DatumAuslieferung(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Datum_Auslieferung"
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_Pruefsumme(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Pruefsumme"
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_PruefsummeArt(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Pruefsumme_Art"
-		   });
-		addAnnotation
-		  (getEigenschaften_Datei_AttributeGroup_VersionAuslieferung(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Version_Auslieferung"
-		   });
-		addAnnotation
 		  (enumAnwendungssystemEEnum,
 		   source,
 		   new String[] {
@@ -2454,7 +2453,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		   source,
 		   new String[] {
 			   "name", "TFahrstrom",
-			   "itemType", "ENUMFahrstrom"
+			   "baseType", "ENUMFahrstrom"
 		   });
 		addAnnotation
 		  (freiText_TypeEDataType,
@@ -2485,6 +2484,20 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		   new String[] {
 			   "name", "THersteller",
 			   "baseType", "TText"
+		   });
+		addAnnotation
+		  (iD_Bearbeitungsvermerk_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCID_Bearbeitungsvermerk",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getID_Bearbeitungsvermerk_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
 		   });
 		addAnnotation
 		  (kennzahl_TypeEDataType,
@@ -2560,6 +2573,41 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (pruefmerkmale_Daten_AttributeGroupEClass,
+		   source,
+		   new String[] {
+			   "name", "CPruefmerkmale_Daten",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_DatumAuslieferung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Datum_Auslieferung"
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_Pruefsumme(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Pruefsumme"
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_PruefsummeArt(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Pruefsumme_Art"
+		   });
+		addAnnotation
+		  (getPruefmerkmale_Daten_AttributeGroup_VersionAuslieferung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Version_Auslieferung"
+		   });
+		addAnnotation
 		  (pruefsumme_Art_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -2572,13 +2620,6 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		   new String[] {
 			   "kind", "element",
 			   "name", "Wert"
-		   });
-		addAnnotation
-		  (pruefsumme_TypeEDataType,
-		   source,
-		   new String[] {
-			   "name", "TPruefsumme",
-			   "baseType", "TText"
 		   });
 		addAnnotation
 		  (pruefsumme_TypeClassEClass,

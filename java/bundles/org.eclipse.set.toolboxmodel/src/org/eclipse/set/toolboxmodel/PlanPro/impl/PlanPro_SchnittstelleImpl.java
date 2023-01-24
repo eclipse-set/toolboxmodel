@@ -2,14 +2,18 @@
  */
 package org.eclipse.set.toolboxmodel.PlanPro.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Ur_ObjektImpl;
 
 import org.eclipse.set.toolboxmodel.PlanPro.LST_Planung_AttributeGroup;
@@ -17,6 +21,7 @@ import org.eclipse.set.toolboxmodel.PlanPro.LST_Zustand;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle_Allg_AttributeGroup;
+import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +34,7 @@ import org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle_Allg_Attribute
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getPlanProSchnittstelleAllg <em>Plan Pro Schnittstelle Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getLSTPlanung <em>LST Planung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getLSTZustand <em>LST Zustand</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getWzkInvalidIDReferences <em>Wzk Invalid ID References</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,6 +69,16 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 	 * @ordered
 	 */
 	protected LST_Zustand lSTZustand;
+
+	/**
+	 * The cached value of the '{@link #getWzkInvalidIDReferences() <em>Wzk Invalid ID References</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWzkInvalidIDReferences()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<WzkInvalidIDReference> wzkInvalidIDReferences;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -224,6 +240,19 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 	 * @generated
 	 */
 	@Override
+	public EList<WzkInvalidIDReference> getWzkInvalidIDReferences() {
+		if (wzkInvalidIDReferences == null) {
+			wzkInvalidIDReferences = new EObjectContainmentEList<WzkInvalidIDReference>(WzkInvalidIDReference.class, this, PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES);
+		}
+		return wzkInvalidIDReferences;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLAN_PRO_SCHNITTSTELLE_ALLG:
@@ -232,6 +261,8 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				return basicSetLSTPlanung(null, msgs);
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND:
 				return basicSetLSTZustand(null, msgs);
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
+				return ((InternalEList<?>)getWzkInvalidIDReferences()).basicRemove(otherEnd, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -251,6 +282,8 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				return getLSTPlanung();
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND:
 				return getLSTZustand();
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
+				return getWzkInvalidIDReferences();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -261,6 +294,7 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -272,6 +306,10 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				return;
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND:
 				setLSTZustand((LST_Zustand)newValue);
+				return;
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
+				getWzkInvalidIDReferences().clear();
+				getWzkInvalidIDReferences().addAll((Collection<? extends WzkInvalidIDReference>)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -296,6 +334,9 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND:
 				setLSTZustand((LST_Zustand)null);
 				return;
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
+				getWzkInvalidIDReferences().clear();
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -316,6 +357,8 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				return lSTPlanung != null;
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND:
 				return lSTZustand != null;
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
+				return wzkInvalidIDReferences != null && !wzkInvalidIDReferences.isEmpty();
 			default:
 				return super.eIsSet(featureID);
 		}

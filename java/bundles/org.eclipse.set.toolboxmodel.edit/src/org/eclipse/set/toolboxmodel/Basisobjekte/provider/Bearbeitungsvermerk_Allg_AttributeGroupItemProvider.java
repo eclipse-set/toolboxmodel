@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup} object.
@@ -85,9 +86,10 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG);
 			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE);
 			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ);
+			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN);
+			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE);
 			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR);
 			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT);
 			childrenFeatures.add(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__ZEIT_BEARBEITUNGSVERMERK);
@@ -143,9 +145,10 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Bearbeitungsvermerk_Allg_AttributeGroup.class)) {
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG:
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE:
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ:
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN:
+			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE:
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KOMMENTAR:
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__KURZTEXT:
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__ZEIT_BEARBEITUNGSVERMERK:
@@ -170,11 +173,6 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_KENNUNG,
-				 BasisobjekteFactory.eINSTANCE.createBearbeitungsvermerk_Kennung_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BEARBEITUNGSVERMERK_ROLLE,
 				 BasisobjekteFactory.eINSTANCE.createBearbeitungsvermerk_Rolle_TypeClass()));
 
@@ -182,6 +180,16 @@ public class Bearbeitungsvermerk_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BESTANDSRELEVANZ,
 				 BasisobjekteFactory.eINSTANCE.createBestandsrelevanz_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_DARSTELLUNG_IN_PLAN,
+				 BasisobjekteFactory.eINSTANCE.createBV_Darstellung_In_Plan_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasisobjektePackage.Literals.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP__BV_KATEGORIE,
+				 BasisobjekteFactory.eINSTANCE.createBV_Kategorie_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

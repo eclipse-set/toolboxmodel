@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -10,7 +17,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Ständig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergeführt sein. Er wird auf den Punkt verortet, der die Grenze der möglichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, fällt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem ergänzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der möglichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet wodurch der seitliche Abschand immer 0.000 sein muss. 
+ * Ständig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergeführt sein. Er wird auf den Punkt verortet, der die Grenze der möglichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, fällt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem ergänzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der möglichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet, sodass die Angabe des seitlichen Abstands bzw. der seitlichen Lage entfällt.
  * <!-- end-model-doc -->
  *
  * <p>

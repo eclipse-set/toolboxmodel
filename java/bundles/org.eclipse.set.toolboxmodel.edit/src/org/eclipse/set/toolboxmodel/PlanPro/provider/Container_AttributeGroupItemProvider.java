@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,6 +29,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.set.toolboxmodel.ATO.ATOFactory;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementFactory;
 
 import org.eclipse.set.toolboxmodel.Bahnsteig.BahnsteigFactory;
@@ -50,9 +53,11 @@ import org.eclipse.set.toolboxmodel.Geodaten.GeodatenFactory;
 
 import org.eclipse.set.toolboxmodel.Gleis.GleisFactory;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenFactory;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichFactory;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungFactory;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungFactory;
 
@@ -125,6 +130,9 @@ public class Container_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Anhang());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ATOSegmentProfile());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ATOTimingPoint());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ATOTSInstanz());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Aussenelementansteuerung());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BahnsteigAnlage());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BahnsteigDach());
@@ -143,7 +151,7 @@ public class Container_AttributeGroupItemProvider
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BedienPlatz());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BedienStandort());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BedienZentrale());
-			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Binaerdatei());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Binaerdaten());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BlockAnlage());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BlockElement());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_BlockStrecke());
@@ -167,6 +175,7 @@ public class Container_AttributeGroupItemProvider
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ESTWZentraleinheit());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ETCSKante());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ETCSKnoten());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ETCSRichtungsanzeige());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ETCSSignal());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ETCSWKr());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_EVModul());
@@ -245,6 +254,7 @@ public class Container_AttributeGroupItemProvider
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_StellBereich());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Stellelement());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Strecke());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_StreckeBremsweg());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_StreckePunkt());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_TechnikStandort());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_TechnischerBereich());
@@ -263,6 +273,8 @@ public class Container_AttributeGroupItemProvider
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_WKrGspKomponente());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Weichenlaufkette());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_WeichenlaufketteZuordnung());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZBSSchutzstrecke());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZBSSignal());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZL());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLDLPAbschnitt());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLDLPFstr());
@@ -271,6 +283,7 @@ public class Container_AttributeGroupItemProvider
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLSignalgruppe());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLSignalgruppeZuordnung());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLVBus());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLVBusBesondereAnlage());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLVBusUSZuordnung());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZN());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZNAkustik());
@@ -336,6 +349,9 @@ public class Container_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Container_AttributeGroup.class)) {
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ANHANG:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_SEGMENT_PROFILE:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATO_TIMING_POINT:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ATOTS_INSTANZ:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__AUSSENELEMENTANSTEUERUNG:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_ANLAGE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BAHNSTEIG_DACH:
@@ -354,7 +370,7 @@ public class Container_AttributeGroupItemProvider
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BEDIEN_PLATZ:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BEDIEN_STANDORT:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BEDIEN_ZENTRALE:
-			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEI:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BINAERDATEN:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ANLAGE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_ELEMENT:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__BLOCK_STRECKE:
@@ -378,6 +394,7 @@ public class Container_AttributeGroupItemProvider
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ESTW_ZENTRALEINHEIT:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KANTE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_KNOTEN:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_RICHTUNGSANZEIGE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCS_SIGNAL:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ETCSW_KR:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__EV_MODUL:
@@ -456,6 +473,7 @@ public class Container_AttributeGroupItemProvider
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STELL_BEREICH:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STELLELEMENT:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_BREMSWEG:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__STRECKE_PUNKT:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__TECHNIK_STANDORT:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__TECHNISCHER_BEREICH:
@@ -474,6 +492,8 @@ public class Container_AttributeGroupItemProvider
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__WKR_GSP_KOMPONENTE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__WEICHENLAUFKETTE_ZUORDNUNG:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SCHUTZSTRECKE:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZBS_SIGNAL:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLDLP_ABSCHNITT:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLDLP_FSTR:
@@ -482,6 +502,7 @@ public class Container_AttributeGroupItemProvider
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL_SIGNALGRUPPE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZL_SIGNALGRUPPE_ZUORDNUNG:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS:
+			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_BESONDERE_ANLAGE:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZLV_BUS_US_ZUORDNUNG:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZN:
 			case PlanProPackage.CONTAINER_ATTRIBUTE_GROUP__ZN_AKUSTIK:
@@ -517,6 +538,21 @@ public class Container_AttributeGroupItemProvider
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Anhang(),
 				 BasisobjekteFactory.eINSTANCE.createAnhang()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ATOSegmentProfile(),
+				 ATOFactory.eINSTANCE.createATO_Segment_Profile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ATOTimingPoint(),
+				 ATOFactory.eINSTANCE.createATO_Timing_Point()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ATOTSInstanz(),
+				 ATOFactory.eINSTANCE.createATO_TS_Instanz()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -610,8 +646,8 @@ public class Container_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Binaerdatei(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createBinaerdatei()));
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_Binaerdaten(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createBinaerdaten()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -727,6 +763,11 @@ public class Container_AttributeGroupItemProvider
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ETCSKnoten(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_Knoten()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ETCSRichtungsanzeige(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_Richtungsanzeige()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -971,27 +1012,27 @@ public class Container_AttributeGroupItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_NB(),
-				 NahbedienbereichFactory.eINSTANCE.createNB()));
+				 NahbedienungFactory.eINSTANCE.createNB()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_NBBedienAnzeigeElement(),
-				 NahbedienbereichFactory.eINSTANCE.createNB_Bedien_Anzeige_Element()));
+				 NahbedienungFactory.eINSTANCE.createNB_Bedien_Anzeige_Element()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_NBZone(),
-				 NahbedienbereichFactory.eINSTANCE.createNB_Zone()));
+				 NahbedienungFactory.eINSTANCE.createNB_Zone()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_NBZoneElement(),
-				 NahbedienbereichFactory.eINSTANCE.createNB_Zone_Element()));
+				 NahbedienungFactory.eINSTANCE.createNB_Zone_Element()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_NBZoneGrenze(),
-				 NahbedienbereichFactory.eINSTANCE.createNB_Zone_Grenze()));
+				 NahbedienungFactory.eINSTANCE.createNB_Zone_Grenze()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -1120,6 +1161,11 @@ public class Container_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_StreckeBremsweg(),
+				 GeodatenFactory.eINSTANCE.createStrecke_Bremsweg()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_StreckePunkt(),
 				 GeodatenFactory.eINSTANCE.createStrecke_Punkt()));
 
@@ -1147,6 +1193,11 @@ public class Container_AttributeGroupItemProvider
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_TOPKnoten(),
 				 GeodatenFactory.eINSTANCE.createTOP_Knoten()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_TrasseKante(),
+				 GeodatenFactory.eINSTANCE.createTrasse_Kante_child_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -1210,6 +1261,16 @@ public class Container_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZBSSchutzstrecke(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createZBS_Schutzstrecke()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZBSSignal(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createZBS_Signal()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZL(),
 				 ZuglenkungFactory.eINSTANCE.createZL()));
 
@@ -1247,6 +1308,11 @@ public class Container_AttributeGroupItemProvider
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLVBus(),
 				 ZugnummernmeldeanlageFactory.eINSTANCE.createZLV_Bus()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getContainer_AttributeGroup_ZLVBusBesondereAnlage(),
+				 ZugnummernmeldeanlageFactory.eINSTANCE.createZLV_Bus_Besondere_Anlage()));
 
 		newChildDescriptors.add
 			(createChildParameter

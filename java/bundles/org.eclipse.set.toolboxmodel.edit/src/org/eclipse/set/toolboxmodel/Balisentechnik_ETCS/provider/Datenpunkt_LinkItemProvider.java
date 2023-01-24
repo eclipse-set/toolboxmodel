@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link} object.
@@ -146,7 +147,8 @@ public class Datenpunkt_LinkItemProvider extends Basis_ObjektItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_LinkDistanz());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_ZielDPAusrichtung());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_GNTMerkmale());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_AnwendungESG());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_AnwendungGNT());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_ZBSMerkmale());
 		}
 		return childrenFeatures;
@@ -202,7 +204,8 @@ public class Datenpunkt_LinkItemProvider extends Basis_ObjektItemProvider {
 		switch (notification.getFeatureID(Datenpunkt_Link.class)) {
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__LINK_DISTANZ:
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZIEL_DP_AUSRICHTUNG:
-			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__GNT_MERKMALE:
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_ESG:
+			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ANWENDUNG_GNT:
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK__ZBS_MERKMALE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -235,8 +238,13 @@ public class Datenpunkt_LinkItemProvider extends Basis_ObjektItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_GNTMerkmale(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createGNT_Merkmale_AttributeGroup()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_AnwendungESG(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createAnwendung_ESG_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_Link_AnwendungGNT(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createAnwendung_GNT_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int ABSTAND_GEHWEG_FAHRBAHN_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int AKUSTIK_FUSSGAENGER_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int AUSRICHTUNG_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int AUSRICHTUNG_WINKEL_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +760,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int AUTO_HET_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -830,7 +806,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BAULAST_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -876,7 +852,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BAUMPROFIL_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -922,7 +898,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BEEINFLUSSUNG_STRASSENVERKEHR_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -968,7 +944,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BEZ_SCHRANKENANTRIEB_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1014,7 +990,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BEZEICHNUNG_BUE_GFR_ECKPUNKT_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1060,7 +1036,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BEZEICHNUNG_GFR_ELEMENT_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1106,7 +1082,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BEZEICHNUNG_GFR_TRIPELSPIEGEL_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1152,7 +1128,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BEZEICHNUNG_VERKEHRSZEICHEN_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1198,7 +1174,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BLITZPFEIL_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1335,13 +1311,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_ANLAGE__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_ANLAGE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_ANLAGE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1389,13 +1374,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_ANLAGE__BUE_ANLAGE_ALLG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>IDAEABUE Anschaltung</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_ANLAGE__IDAEABUE_ANSCHALTUNG = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>IDBUE Schnittstelle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_ANLAGE__IDBUE_SCHNITTSTELLE = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 2;
+	int BUE_ANLAGE__IDBUE_SCHNITTSTELLE = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>BUE Anlage</em>' class.
@@ -1404,7 +1398,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_ANLAGE_FEATURE_COUNT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 3;
+	int BUE_ANLAGE_FEATURE_COUNT = BasisobjektePackage.PUNKT_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>BUE Anlage</em>' class.
@@ -1572,13 +1566,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_ANLAGE_STRASSE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_ANLAGE_STRASSE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_ANLAGE_STRASSE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1745,13 +1748,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_ANLAGE_V__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_ANLAGE_V__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_ANLAGE_V__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1900,13 +1912,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_AUSSCHALTUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_AUSSCHALTUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_AUSSCHALTUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1955,7 +1976,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_BAUART_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2074,13 +2095,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_BEDIEN_ANZEIGE_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_BEDIEN_ANZEIGE_ELEMENT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_BEDIEN_ANZEIGE_ELEMENT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2129,7 +2159,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_BUESTRA_TYPE_CLASS = 26;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2193,13 +2223,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_DECKENDES_SIGNAL_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_DECKENDES_SIGNAL_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_DECKENDES_SIGNAL_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2284,13 +2323,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_EINSCHALTUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_EINSCHALTUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_EINSCHALTUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2366,13 +2414,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__EINSCHALTVERZ_GEWAEHLT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Haltezeit</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__HALTEZEIT = 2;
+
+	/**
 	 * The feature id for the '<em><b>Kurzzugschaltung</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG = 2;
+	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__KURZZUGSCHALTUNG = 3;
 
 	/**
 	 * The feature id for the '<em><b>Signalverz Errechnet</b></em>' containment reference.
@@ -2381,7 +2438,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_ERRECHNET = 3;
+	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_ERRECHNET = 4;
 
 	/**
 	 * The feature id for the '<em><b>Signalverz Gewaehlt</b></em>' containment reference.
@@ -2390,7 +2447,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_GEWAEHLT = 4;
+	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__SIGNALVERZ_GEWAEHLT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Teilvorgabezeit</b></em>' containment reference.
@@ -2399,7 +2456,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__TEILVORGABEZEIT = 5;
+	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP__TEILVORGABEZEIT = 6;
 
 	/**
 	 * The number of structural features of the '<em>BUE Einschaltung Hp Attribute Group</em>' class.
@@ -2408,7 +2465,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP_FEATURE_COUNT = 6;
+	int BUE_EINSCHALTUNG_HP_ATTRIBUTE_GROUP_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>BUE Einschaltung Hp Attribute Group</em>' class.
@@ -2448,13 +2505,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_EINSCHALTUNG_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_EINSCHALTUNG_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_EINSCHALTUNG_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2512,7 +2578,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_FUNKTIONSUEBERWACHUNG_TYPE_CLASS = 31;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2576,13 +2642,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_GEFAHRRAUM_ECKPUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_GEFAHRRAUM_ECKPUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_GEFAHRRAUM_ECKPUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2713,13 +2788,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_GLEISBEZOGENER_GEFAHRRAUM__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_GLEISBEZOGENER_GEFAHRRAUM__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_GLEISBEZOGENER_GEFAHRRAUM__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2795,7 +2879,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_HANDSCHALTEINRICHTUNG_TYPE_CLASS = 35;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2859,13 +2943,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_KANTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_KANTE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_KANTE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2950,13 +3043,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_KREUZUNGSPLAN__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_KREUZUNGSPLAN__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_KREUZUNGSPLAN__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2986,13 +3088,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_KREUZUNGSPLAN__ID_ANHANG_KREUZUNGSPLAN = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>IDBUE Anlage</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_KREUZUNGSPLAN__IDBUE_ANLAGE = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>BUE Kreuzungsplan</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUE_KREUZUNGSPLAN_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+	int BUE_KREUZUNGSPLAN_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>BUE Kreuzungsplan</em>' class.
@@ -3014,7 +3125,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP = 38;
 
 	/**
-	 * The feature id for the '<em><b>IDGEO Punkt</b></em>' reference.
+	 * The feature id for the '<em><b>IDGEO Punkt</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3069,7 +3180,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_MIT_GFR_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3115,7 +3226,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_NACHLAUFZEIT_TYPE_CLASS = 40;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3161,7 +3272,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_NEIGUNG_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3225,13 +3336,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_SCHNITTSTELLE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_SCHNITTSTELLE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_SCHNITTSTELLE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3362,7 +3482,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_SICHERUNGSART_TYPE_CLASS = 44;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3408,7 +3528,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_SICHERUNGSZEIT_TYPE_CLASS = 45;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3472,13 +3592,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_SPEZIFISCHES_SIGNAL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_SPEZIFISCHES_SIGNAL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_SPEZIFISCHES_SIGNAL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3545,7 +3674,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_STRASSE_TYPE_CLASS = 47;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3591,7 +3720,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_TECHNIK_TYPE_CLASS = 48;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3637,7 +3766,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_VORLAUFZEIT_TYPE_CLASS = 49;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3701,13 +3830,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int BUE_WS_FSTR_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BUE_WS_FSTR_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUE_WS_FSTR_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -3765,7 +3903,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int EINSCHALTVERZ_ERRECHNET_TYPE_CLASS = 51;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3811,7 +3949,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int EINSCHALTVERZ_GEWAEHLT_TYPE_CLASS = 52;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3857,7 +3995,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int ERSATZSTECKER_GLEISBEZOGEN_TYPE_CLASS = 53;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3903,7 +4041,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int FAHRBAHN_BEFESTIGUNG_GLEIS_TYPE_CLASS = 54;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3949,7 +4087,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int FAHRBAHN_BEFESTIGUNG_TYPE_CLASS = 55;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3995,7 +4133,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int FAHRBAHN_BREITE_TYPE_CLASS = 56;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4041,7 +4179,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int FUE_SCHALTFALL_TYPE_CLASS = 57;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4087,7 +4225,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int FUSS_RADWEG_ART_TYPE_CLASS = 58;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4133,7 +4271,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int FUSS_RADWEG_SEITE_TYPE_CLASS = 59;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4197,13 +4335,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int GFR_ANLAGE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GFR_ANLAGE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GFR_ANLAGE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -4325,7 +4472,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int GFR_ART_TYPE_CLASS = 62;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4389,13 +4536,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int GFR_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GFR_ELEMENT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GFR_ELEMENT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -4517,7 +4673,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int GFR_NEIGUNG_TYPE_CLASS = 65;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4581,13 +4737,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int GFR_TRIPELSPIEGEL__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GFR_TRIPELSPIEGEL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GFR_TRIPELSPIEGEL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -4764,7 +4929,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int GFR_TYP_TYPE_CLASS = 69;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4810,7 +4975,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int GITTERBEHANG_TYPE_CLASS = 70;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4856,7 +5021,7 @@ public interface BahnuebergangPackage extends EPackage {
 	int GLEIS_AM_BUE_TYPE_CLASS = 71;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4892,6 +5057,52 @@ public interface BahnuebergangPackage extends EPackage {
 	int GLEIS_AM_BUE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.Haltezeit_TypeClassImpl <em>Haltezeit Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.Haltezeit_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getHaltezeit_TypeClass()
+	 * @generated
+	 */
+	int HALTEZEIT_TYPE_CLASS = 72;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALTEZEIT_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALTEZEIT_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Haltezeit Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALTEZEIT_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Haltezeit Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALTEZEIT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.impl.Hersteller_TypeClassImpl <em>Hersteller Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4899,10 +5110,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getHersteller_TypeClass()
 	 * @generated
 	 */
-	int HERSTELLER_TYPE_CLASS = 72;
+	int HERSTELLER_TYPE_CLASS = 73;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4945,10 +5156,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getHp_Ersatzstecker_TypeClass()
 	 * @generated
 	 */
-	int HP_ERSATZSTECKER_TYPE_CLASS = 73;
+	int HP_ERSATZSTECKER_TYPE_CLASS = 74;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4991,10 +5202,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getKlassifizierung_TypeClass()
 	 * @generated
 	 */
-	int KLASSIFIZIERUNG_TYPE_CLASS = 74;
+	int KLASSIFIZIERUNG_TYPE_CLASS = 75;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5037,10 +5248,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getKontrastblende_TypeClass()
 	 * @generated
 	 */
-	int KONTRASTBLENDE_TYPE_CLASS = 75;
+	int KONTRASTBLENDE_TYPE_CLASS = 76;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5083,10 +5294,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getKreuzungswinkel_TypeClass()
 	 * @generated
 	 */
-	int KREUZUNGSWINKEL_TYPE_CLASS = 76;
+	int KREUZUNGSWINKEL_TYPE_CLASS = 77;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5129,10 +5340,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getKurzzugschaltung_TypeClass()
 	 * @generated
 	 */
-	int KURZZUGSCHALTUNG_TYPE_CLASS = 77;
+	int KURZZUGSCHALTUNG_TYPE_CLASS = 78;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5175,10 +5386,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getLagerung_Art_TypeClass()
 	 * @generated
 	 */
-	int LAGERUNG_ART_TYPE_CLASS = 78;
+	int LAGERUNG_ART_TYPE_CLASS = 79;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5221,10 +5432,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getLFUE_Impuls_TypeClass()
 	 * @generated
 	 */
-	int LFUE_IMPULS_TYPE_CLASS = 79;
+	int LFUE_IMPULS_TYPE_CLASS = 80;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5267,10 +5478,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getLieferlaenge_TypeClass()
 	 * @generated
 	 */
-	int LIEFERLAENGE_TYPE_CLASS = 80;
+	int LIEFERLAENGE_TYPE_CLASS = 81;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5313,10 +5524,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getMontage_Ausgleichsgewichte_TypeClass()
 	 * @generated
 	 */
-	int MONTAGE_AUSGLEICHSGEWICHTE_TYPE_CLASS = 81;
+	int MONTAGE_AUSGLEICHSGEWICHTE_TYPE_CLASS = 82;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5359,10 +5570,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getMontage_Besonders_TypeClass()
 	 * @generated
 	 */
-	int MONTAGE_BESONDERS_TYPE_CLASS = 82;
+	int MONTAGE_BESONDERS_TYPE_CLASS = 83;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5405,10 +5616,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getMontagehoehe_TypeClass()
 	 * @generated
 	 */
-	int MONTAGEHOEHE_TYPE_CLASS = 83;
+	int MONTAGEHOEHE_TYPE_CLASS = 84;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5451,10 +5662,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getOptik_Durchmesser_TypeClass()
 	 * @generated
 	 */
-	int OPTIK_DURCHMESSER_TYPE_CLASS = 84;
+	int OPTIK_DURCHMESSER_TYPE_CLASS = 85;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5497,10 +5708,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getOptik_Symbolmaske_TypeClass()
 	 * @generated
 	 */
-	int OPTIK_SYMBOLMASKE_TYPE_CLASS = 85;
+	int OPTIK_SYMBOLMASKE_TYPE_CLASS = 86;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5543,10 +5754,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getPegel_TypeClass()
 	 * @generated
 	 */
-	int PEGEL_TYPE_CLASS = 86;
+	int PEGEL_TYPE_CLASS = 87;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5589,10 +5800,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getPixel_Koordinate_X_TypeClass()
 	 * @generated
 	 */
-	int PIXEL_KOORDINATE_XTYPE_CLASS = 87;
+	int PIXEL_KOORDINATE_XTYPE_CLASS = 88;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5635,10 +5846,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getPixel_Koordinate_Y_TypeClass()
 	 * @generated
 	 */
-	int PIXEL_KOORDINATE_YTYPE_CLASS = 88;
+	int PIXEL_KOORDINATE_YTYPE_CLASS = 89;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5681,10 +5892,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DAB_TypeClass()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DAB_TYPE_CLASS = 89;
+	int RAEUMSTRECKE_DAB_TYPE_CLASS = 90;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5727,10 +5938,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DBK_TypeClass()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DBK_TYPE_CLASS = 90;
+	int RAEUMSTRECKE_DBK_TYPE_CLASS = 91;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5773,10 +5984,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DCK_TypeClass()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DCK_TYPE_CLASS = 91;
+	int RAEUMSTRECKE_DCK_TYPE_CLASS = 92;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5819,10 +6030,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DSK_Strich_TypeClass()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DSK_STRICH_TYPE_CLASS = 92;
+	int RAEUMSTRECKE_DSK_STRICH_TYPE_CLASS = 93;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5865,10 +6076,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_TypeClass()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_TYPE_CLASS = 93;
+	int RAEUMSTRECKE_TYPE_CLASS = 94;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5911,10 +6122,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRichtungspfeil_TypeClass()
 	 * @generated
 	 */
-	int RICHTUNGSPFEIL_TYPE_CLASS = 94;
+	int RICHTUNGSPFEIL_TYPE_CLASS = 95;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5957,7 +6168,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSA_Schrankenbaum_AttributeGroup()
 	 * @generated
 	 */
-	int SA_SCHRANKENBAUM_ATTRIBUTE_GROUP = 95;
+	int SA_SCHRANKENBAUM_ATTRIBUTE_GROUP = 96;
 
 	/**
 	 * The feature id for the '<em><b>Ausrichtung</b></em>' containment reference.
@@ -6057,10 +6268,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchaltgruppe_TypeClass()
 	 * @generated
 	 */
-	int SCHALTGRUPPE_TYPE_CLASS = 96;
+	int SCHALTGRUPPE_TYPE_CLASS = 97;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6103,7 +6314,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchaltmittel_Fstr_Zuordnung()
 	 * @generated
 	 */
-	int SCHALTMITTEL_FSTR_ZUORDNUNG = 97;
+	int SCHALTMITTEL_FSTR_ZUORDNUNG = 98;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -6124,13 +6335,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int SCHALTMITTEL_FSTR_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SCHALTMITTEL_FSTR_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHALTMITTEL_FSTR_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -6185,7 +6405,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchrankenantrieb()
 	 * @generated
 	 */
-	int SCHRANKENANTRIEB = 98;
+	int SCHRANKENANTRIEB = 99;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -6206,13 +6426,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int SCHRANKENANTRIEB__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SCHRANKENANTRIEB__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHRANKENANTRIEB__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -6303,7 +6532,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchrankenantrieb_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int SCHRANKENANTRIEB_ALLG_ATTRIBUTE_GROUP = 99;
+	int SCHRANKENANTRIEB_ALLG_ATTRIBUTE_GROUP = 100;
 
 	/**
 	 * The feature id for the '<em><b>Abstand Gehweg Fahrbahn</b></em>' containment reference.
@@ -6358,7 +6587,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchrankenantrieb_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int SCHRANKENANTRIEB_BEZEICHNUNG_ATTRIBUTE_GROUP = 100;
+	int SCHRANKENANTRIEB_BEZEICHNUNG_ATTRIBUTE_GROUP = 101;
 
 	/**
 	 * The feature id for the '<em><b>Bez Schrankenantrieb</b></em>' containment reference.
@@ -6395,10 +6624,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchutzbuegel_TypeClass()
 	 * @generated
 	 */
-	int SCHUTZBUEGEL_TYPE_CLASS = 101;
+	int SCHUTZBUEGEL_TYPE_CLASS = 102;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6441,10 +6670,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSicherheitsabstand_TypeClass()
 	 * @generated
 	 */
-	int SICHERHEITSABSTAND_TYPE_CLASS = 102;
+	int SICHERHEITSABSTAND_TYPE_CLASS = 103;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6487,10 +6716,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSignalverz_Errechnet_TypeClass()
 	 * @generated
 	 */
-	int SIGNALVERZ_ERRECHNET_TYPE_CLASS = 103;
+	int SIGNALVERZ_ERRECHNET_TYPE_CLASS = 104;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6533,10 +6762,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSignalverz_Gewaehlt_TypeClass()
 	 * @generated
 	 */
-	int SIGNALVERZ_GEWAEHLT_TYPE_CLASS = 104;
+	int SIGNALVERZ_GEWAEHLT_TYPE_CLASS = 105;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6579,10 +6808,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSperrlaenge_TypeClass()
 	 * @generated
 	 */
-	int SPERRLAENGE_TYPE_CLASS = 105;
+	int SPERRLAENGE_TYPE_CLASS = 106;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6625,10 +6854,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSperrstrecke_Fussgaenger_TypeClass()
 	 * @generated
 	 */
-	int SPERRSTRECKE_FUSSGAENGER_TYPE_CLASS = 106;
+	int SPERRSTRECKE_FUSSGAENGER_TYPE_CLASS = 107;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6671,10 +6900,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSperrstrecke_TypeClass()
 	 * @generated
 	 */
-	int SPERRSTRECKE_TYPE_CLASS = 107;
+	int SPERRSTRECKE_TYPE_CLASS = 108;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6717,10 +6946,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getStoerhalt_Haltfall_TypeClass()
 	 * @generated
 	 */
-	int STOERHALT_HALTFALL_TYPE_CLASS = 108;
+	int STOERHALT_HALTFALL_TYPE_CLASS = 109;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6763,10 +6992,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getStoerhalt_Merkhinweis_TypeClass()
 	 * @generated
 	 */
-	int STOERHALT_MERKHINWEIS_TYPE_CLASS = 109;
+	int STOERHALT_MERKHINWEIS_TYPE_CLASS = 110;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6809,10 +7038,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getTeilsperrstrecke_TypeClass()
 	 * @generated
 	 */
-	int TEILSPERRSTRECKE_TYPE_CLASS = 110;
+	int TEILSPERRSTRECKE_TYPE_CLASS = 111;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6855,10 +7084,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getTeilvorgabezeit_TypeClass()
 	 * @generated
 	 */
-	int TEILVORGABEZEIT_TYPE_CLASS = 111;
+	int TEILVORGABEZEIT_TYPE_CLASS = 112;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6901,10 +7130,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getTragkopf_Verstellbar_TypeClass()
 	 * @generated
 	 */
-	int TRAGKOPF_VERSTELLBAR_TYPE_CLASS = 112;
+	int TRAGKOPF_VERSTELLBAR_TYPE_CLASS = 113;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6947,10 +7176,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Max_Schiene_TypeClass()
 	 * @generated
 	 */
-	int VMAX_SCHIENE_TYPE_CLASS = 113;
+	int VMAX_SCHIENE_TYPE_CLASS = 114;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6993,10 +7222,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Max_Strasse_TypeClass()
 	 * @generated
 	 */
-	int VMAX_STRASSE_TYPE_CLASS = 114;
+	int VMAX_STRASSE_TYPE_CLASS = 115;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7039,10 +7268,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Min_Fussweg_TypeClass()
 	 * @generated
 	 */
-	int VMIN_FUSSWEG_TYPE_CLASS = 115;
+	int VMIN_FUSSWEG_TYPE_CLASS = 116;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7085,10 +7314,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Min_Schiene_TypeClass()
 	 * @generated
 	 */
-	int VMIN_SCHIENE_TYPE_CLASS = 116;
+	int VMIN_SCHIENE_TYPE_CLASS = 117;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7131,10 +7360,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Min_Strasse_TypeClass()
 	 * @generated
 	 */
-	int VMIN_STRASSE_TYPE_CLASS = 117;
+	int VMIN_STRASSE_TYPE_CLASS = 118;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7177,7 +7406,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVerkehrszeichen()
 	 * @generated
 	 */
-	int VERKEHRSZEICHEN = 118;
+	int VERKEHRSZEICHEN = 119;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -7198,13 +7427,22 @@ public interface BahnuebergangPackage extends EPackage {
 	int VERKEHRSZEICHEN__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int VERKEHRSZEICHEN__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERKEHRSZEICHEN__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -7304,7 +7542,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVerkehrszeichen_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int VERKEHRSZEICHEN_ALLG_ATTRIBUTE_GROUP = 119;
+	int VERKEHRSZEICHEN_ALLG_ATTRIBUTE_GROUP = 120;
 
 	/**
 	 * The feature id for the '<em><b>Abstand Gehweg Fahrbahn</b></em>' containment reference.
@@ -7359,7 +7597,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVerkehrszeichen_Andreaskreuz_AttributeGroup()
 	 * @generated
 	 */
-	int VERKEHRSZEICHEN_ANDREASKREUZ_ATTRIBUTE_GROUP = 120;
+	int VERKEHRSZEICHEN_ANDREASKREUZ_ATTRIBUTE_GROUP = 121;
 
 	/**
 	 * The feature id for the '<em><b>Blitzpfeil</b></em>' containment reference.
@@ -7432,7 +7670,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVerkehrszeichen_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int VERKEHRSZEICHEN_BEZEICHNUNG_ATTRIBUTE_GROUP = 121;
+	int VERKEHRSZEICHEN_BEZEICHNUNG_ATTRIBUTE_GROUP = 122;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung Verkehrszeichen</b></em>' containment reference.
@@ -7469,7 +7707,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVerkehrszeichen_Lz_AttributeGroup()
 	 * @generated
 	 */
-	int VERKEHRSZEICHEN_LZ_ATTRIBUTE_GROUP = 122;
+	int VERKEHRSZEICHEN_LZ_ATTRIBUTE_GROUP = 123;
 
 	/**
 	 * The feature id for the '<em><b>Akustik Fussgaenger</b></em>' containment reference.
@@ -7560,10 +7798,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVorgeschaltet_TypeClass()
 	 * @generated
 	 */
-	int VORGESCHALTET_TYPE_CLASS = 123;
+	int VORGESCHALTET_TYPE_CLASS = 124;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7606,7 +7844,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVz_Sperrstrecke_AttributeGroup()
 	 * @generated
 	 */
-	int VZ_SPERRSTRECKE_ATTRIBUTE_GROUP = 124;
+	int VZ_SPERRSTRECKE_ATTRIBUTE_GROUP = 125;
 
 	/**
 	 * The feature id for the '<em><b>Vz Sperrstrecke Vorgeschaltet</b></em>' containment reference.
@@ -7670,7 +7908,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVz_Sperrstrecke_Schranke_AttributeGroup()
 	 * @generated
 	 */
-	int VZ_SPERRSTRECKE_SCHRANKE_ATTRIBUTE_GROUP = 125;
+	int VZ_SPERRSTRECKE_SCHRANKE_ATTRIBUTE_GROUP = 126;
 
 	/**
 	 * The feature id for the '<em><b>Raeumstrecke</b></em>' containment reference.
@@ -7716,7 +7954,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVz_Sperrstrecke_Vorgeschaltet_AttributeGroup()
 	 * @generated
 	 */
-	int VZ_SPERRSTRECKE_VORGESCHALTET_ATTRIBUTE_GROUP = 126;
+	int VZ_SPERRSTRECKE_VORGESCHALTET_ATTRIBUTE_GROUP = 127;
 
 	/**
 	 * The feature id for the '<em><b>Beeinflussung Strassenverkehr</b></em>' containment reference.
@@ -7789,10 +8027,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getWinkel_Alpha_TypeClass()
 	 * @generated
 	 */
-	int WINKEL_ALPHA_TYPE_CLASS = 127;
+	int WINKEL_ALPHA_TYPE_CLASS = 128;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7835,10 +8073,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getZeitueberschreitungsmeldung_TypeClass()
 	 * @generated
 	 */
-	int ZEITUEBERSCHREITUNGSMELDUNG_TYPE_CLASS = 128;
+	int ZEITUEBERSCHREITUNGSMELDUNG_TYPE_CLASS = 129;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7881,10 +8119,10 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getZusatzschild_TypeClass()
 	 * @generated
 	 */
-	int ZUSATZSCHILD_TYPE_CLASS = 129;
+	int ZUSATZSCHILD_TYPE_CLASS = 130;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7927,7 +8165,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBaumprofil()
 	 * @generated
 	 */
-	int ENUM_BAUMPROFIL = 130;
+	int ENUM_BAUMPROFIL = 131;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMBUEBauart <em>ENUMBUE Bauart</em>}' enum.
@@ -7937,7 +8175,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUEBauart()
 	 * @generated
 	 */
-	int ENUMBUE_BAUART = 131;
+	int ENUMBUE_BAUART = 132;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMBUEFunktionsueberwachung <em>ENUMBUE Funktionsueberwachung</em>}' enum.
@@ -7947,7 +8185,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUEFunktionsueberwachung()
 	 * @generated
 	 */
-	int ENUMBUE_FUNKTIONSUEBERWACHUNG = 132;
+	int ENUMBUE_FUNKTIONSUEBERWACHUNG = 133;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMBUEHandschalteinrichtung <em>ENUMBUE Handschalteinrichtung</em>}' enum.
@@ -7957,7 +8195,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUEHandschalteinrichtung()
 	 * @generated
 	 */
-	int ENUMBUE_HANDSCHALTEINRICHTUNG = 133;
+	int ENUMBUE_HANDSCHALTEINRICHTUNG = 134;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMBUESicherungsart <em>ENUMBUE Sicherungsart</em>}' enum.
@@ -7967,7 +8205,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUESicherungsart()
 	 * @generated
 	 */
-	int ENUMBUE_SICHERUNGSART = 134;
+	int ENUMBUE_SICHERUNGSART = 135;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMBUETechnik <em>ENUMBUE Technik</em>}' enum.
@@ -7977,7 +8215,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUETechnik()
 	 * @generated
 	 */
-	int ENUMBUE_TECHNIK = 135;
+	int ENUMBUE_TECHNIK = 136;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMFueSchaltfall <em>ENUM Fue Schaltfall</em>}' enum.
@@ -7987,7 +8225,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMFueSchaltfall()
 	 * @generated
 	 */
-	int ENUM_FUE_SCHALTFALL = 136;
+	int ENUM_FUE_SCHALTFALL = 137;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMFussRadwegArt <em>ENUM Fuss Radweg Art</em>}' enum.
@@ -7997,7 +8235,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMFussRadwegArt()
 	 * @generated
 	 */
-	int ENUM_FUSS_RADWEG_ART = 137;
+	int ENUM_FUSS_RADWEG_ART = 138;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMFussRadwegSeite <em>ENUM Fuss Radweg Seite</em>}' enum.
@@ -8007,7 +8245,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMFussRadwegSeite()
 	 * @generated
 	 */
-	int ENUM_FUSS_RADWEG_SEITE = 138;
+	int ENUM_FUSS_RADWEG_SEITE = 139;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMGFRArt <em>ENUMGFR Art</em>}' enum.
@@ -8017,7 +8255,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMGFRArt()
 	 * @generated
 	 */
-	int ENUMGFR_ART = 139;
+	int ENUMGFR_ART = 140;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMHpErsatzstecker <em>ENUM Hp Ersatzstecker</em>}' enum.
@@ -8027,7 +8265,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMHpErsatzstecker()
 	 * @generated
 	 */
-	int ENUM_HP_ERSATZSTECKER = 140;
+	int ENUM_HP_ERSATZSTECKER = 141;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMKlassifizierung <em>ENUM Klassifizierung</em>}' enum.
@@ -8037,7 +8275,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMKlassifizierung()
 	 * @generated
 	 */
-	int ENUM_KLASSIFIZIERUNG = 141;
+	int ENUM_KLASSIFIZIERUNG = 142;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMLagerung <em>ENUM Lagerung</em>}' enum.
@@ -8047,7 +8285,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMLagerung()
 	 * @generated
 	 */
-	int ENUM_LAGERUNG = 142;
+	int ENUM_LAGERUNG = 143;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMLFUEImpuls <em>ENUMLFUE Impuls</em>}' enum.
@@ -8057,7 +8295,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMLFUEImpuls()
 	 * @generated
 	 */
-	int ENUMLFUE_IMPULS = 143;
+	int ENUMLFUE_IMPULS = 144;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMMontageAusgleichsgewichte <em>ENUM Montage Ausgleichsgewichte</em>}' enum.
@@ -8067,7 +8305,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMMontageAusgleichsgewichte()
 	 * @generated
 	 */
-	int ENUM_MONTAGE_AUSGLEICHSGEWICHTE = 144;
+	int ENUM_MONTAGE_AUSGLEICHSGEWICHTE = 145;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMOptikSymbol <em>ENUM Optik Symbol</em>}' enum.
@@ -8077,7 +8315,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMOptikSymbol()
 	 * @generated
 	 */
-	int ENUM_OPTIK_SYMBOL = 145;
+	int ENUM_OPTIK_SYMBOL = 146;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.ENUMRichtungspfeil <em>ENUM Richtungspfeil</em>}' enum.
@@ -8087,7 +8325,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMRichtungspfeil()
 	 * @generated
 	 */
-	int ENUM_RICHTUNGSPFEIL = 146;
+	int ENUM_RICHTUNGSPFEIL = 147;
 
 	/**
 	 * The meta object id for the '<em>Abstand Gehweg Fahrbahn Type</em>' data type.
@@ -8097,7 +8335,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getAbstand_Gehweg_Fahrbahn_Type()
 	 * @generated
 	 */
-	int ABSTAND_GEHWEG_FAHRBAHN_TYPE = 147;
+	int ABSTAND_GEHWEG_FAHRBAHN_TYPE = 148;
 
 	/**
 	 * The meta object id for the '<em>Akustik Fussgaenger Type</em>' data type.
@@ -8106,7 +8344,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getAkustik_Fussgaenger_Type()
 	 * @generated
 	 */
-	int AKUSTIK_FUSSGAENGER_TYPE = 148;
+	int AKUSTIK_FUSSGAENGER_TYPE = 149;
 
 	/**
 	 * The meta object id for the '<em>Akustik Fussgaenger Type Object</em>' data type.
@@ -8116,7 +8354,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getAkustik_Fussgaenger_TypeObject()
 	 * @generated
 	 */
-	int AKUSTIK_FUSSGAENGER_TYPE_OBJECT = 149;
+	int AKUSTIK_FUSSGAENGER_TYPE_OBJECT = 150;
 
 	/**
 	 * The meta object id for the '<em>Ausrichtung Winkel Type</em>' data type.
@@ -8126,7 +8364,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getAusrichtung_Winkel_Type()
 	 * @generated
 	 */
-	int AUSRICHTUNG_WINKEL_TYPE = 150;
+	int AUSRICHTUNG_WINKEL_TYPE = 151;
 
 	/**
 	 * The meta object id for the '<em>Baulast Type</em>' data type.
@@ -8136,7 +8374,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBaulast_Type()
 	 * @generated
 	 */
-	int BAULAST_TYPE = 151;
+	int BAULAST_TYPE = 152;
 
 	/**
 	 * The meta object id for the '<em>Beeinflussung Strassenverkehr Type</em>' data type.
@@ -8146,7 +8384,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBeeinflussung_Strassenverkehr_Type()
 	 * @generated
 	 */
-	int BEEINFLUSSUNG_STRASSENVERKEHR_TYPE = 152;
+	int BEEINFLUSSUNG_STRASSENVERKEHR_TYPE = 153;
 
 	/**
 	 * The meta object id for the '<em>Bez Schrankenantrieb Type</em>' data type.
@@ -8156,7 +8394,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBez_Schrankenantrieb_Type()
 	 * @generated
 	 */
-	int BEZ_SCHRANKENANTRIEB_TYPE = 153;
+	int BEZ_SCHRANKENANTRIEB_TYPE = 154;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung BUE GFR Eckpunkt Type</em>' data type.
@@ -8166,7 +8404,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBezeichnung_BUE_GFR_Eckpunkt_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_BUE_GFR_ECKPUNKT_TYPE = 154;
+	int BEZEICHNUNG_BUE_GFR_ECKPUNKT_TYPE = 155;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung GFR Element Type</em>' data type.
@@ -8176,7 +8414,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBezeichnung_GFR_Element_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_GFR_ELEMENT_TYPE = 155;
+	int BEZEICHNUNG_GFR_ELEMENT_TYPE = 156;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung GFR Tripelspiegel Type</em>' data type.
@@ -8186,7 +8424,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBezeichnung_GFR_Tripelspiegel_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_GFR_TRIPELSPIEGEL_TYPE = 156;
+	int BEZEICHNUNG_GFR_TRIPELSPIEGEL_TYPE = 157;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Verkehrszeichen Type</em>' data type.
@@ -8196,7 +8434,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBezeichnung_Verkehrszeichen_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_VERKEHRSZEICHEN_TYPE = 157;
+	int BEZEICHNUNG_VERKEHRSZEICHEN_TYPE = 158;
 
 	/**
 	 * The meta object id for the '<em>Blitzpfeil Type</em>' data type.
@@ -8205,7 +8443,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBlitzpfeil_Type()
 	 * @generated
 	 */
-	int BLITZPFEIL_TYPE = 158;
+	int BLITZPFEIL_TYPE = 159;
 
 	/**
 	 * The meta object id for the '<em>Blitzpfeil Type Object</em>' data type.
@@ -8215,7 +8453,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBlitzpfeil_TypeObject()
 	 * @generated
 	 */
-	int BLITZPFEIL_TYPE_OBJECT = 159;
+	int BLITZPFEIL_TYPE_OBJECT = 160;
 
 	/**
 	 * The meta object id for the '<em>BUE Nachlaufzeit Type</em>' data type.
@@ -8225,7 +8463,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBUE_Nachlaufzeit_Type()
 	 * @generated
 	 */
-	int BUE_NACHLAUFZEIT_TYPE = 160;
+	int BUE_NACHLAUFZEIT_TYPE = 161;
 
 	/**
 	 * The meta object id for the '<em>BUE Neigung Type</em>' data type.
@@ -8235,7 +8473,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBUE_Neigung_Type()
 	 * @generated
 	 */
-	int BUE_NEIGUNG_TYPE = 161;
+	int BUE_NEIGUNG_TYPE = 162;
 
 	/**
 	 * The meta object id for the '<em>BUE Sicherungszeit Type</em>' data type.
@@ -8245,7 +8483,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBUE_Sicherungszeit_Type()
 	 * @generated
 	 */
-	int BUE_SICHERUNGSZEIT_TYPE = 162;
+	int BUE_SICHERUNGSZEIT_TYPE = 163;
 
 	/**
 	 * The meta object id for the '<em>BUE Strasse Type</em>' data type.
@@ -8255,7 +8493,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBUE_Strasse_Type()
 	 * @generated
 	 */
-	int BUE_STRASSE_TYPE = 163;
+	int BUE_STRASSE_TYPE = 164;
 
 	/**
 	 * The meta object id for the '<em>BUE Vorlaufzeit Type</em>' data type.
@@ -8265,7 +8503,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getBUE_Vorlaufzeit_Type()
 	 * @generated
 	 */
-	int BUE_VORLAUFZEIT_TYPE = 164;
+	int BUE_VORLAUFZEIT_TYPE = 165;
 
 	/**
 	 * The meta object id for the '<em>Einschaltverz Errechnet Type</em>' data type.
@@ -8275,7 +8513,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getEinschaltverz_Errechnet_Type()
 	 * @generated
 	 */
-	int EINSCHALTVERZ_ERRECHNET_TYPE = 165;
+	int EINSCHALTVERZ_ERRECHNET_TYPE = 166;
 
 	/**
 	 * The meta object id for the '<em>Einschaltverz Gewaehlt Type</em>' data type.
@@ -8285,7 +8523,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getEinschaltverz_Gewaehlt_Type()
 	 * @generated
 	 */
-	int EINSCHALTVERZ_GEWAEHLT_TYPE = 166;
+	int EINSCHALTVERZ_GEWAEHLT_TYPE = 167;
 
 	/**
 	 * The meta object id for the '<em>ENUM Baumprofil Object</em>' data type.
@@ -8295,7 +8533,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBaumprofilObject()
 	 * @generated
 	 */
-	int ENUM_BAUMPROFIL_OBJECT = 167;
+	int ENUM_BAUMPROFIL_OBJECT = 168;
 
 	/**
 	 * The meta object id for the '<em>ENUMBUE Bauart Object</em>' data type.
@@ -8305,7 +8543,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUEBauartObject()
 	 * @generated
 	 */
-	int ENUMBUE_BAUART_OBJECT = 168;
+	int ENUMBUE_BAUART_OBJECT = 169;
 
 	/**
 	 * The meta object id for the '<em>ENUMBUE Funktionsueberwachung Object</em>' data type.
@@ -8315,7 +8553,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUEFunktionsueberwachungObject()
 	 * @generated
 	 */
-	int ENUMBUE_FUNKTIONSUEBERWACHUNG_OBJECT = 169;
+	int ENUMBUE_FUNKTIONSUEBERWACHUNG_OBJECT = 170;
 
 	/**
 	 * The meta object id for the '<em>ENUMBUE Handschalteinrichtung Object</em>' data type.
@@ -8325,7 +8563,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUEHandschalteinrichtungObject()
 	 * @generated
 	 */
-	int ENUMBUE_HANDSCHALTEINRICHTUNG_OBJECT = 170;
+	int ENUMBUE_HANDSCHALTEINRICHTUNG_OBJECT = 171;
 
 	/**
 	 * The meta object id for the '<em>ENUMBUE Sicherungsart Object</em>' data type.
@@ -8335,7 +8573,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUESicherungsartObject()
 	 * @generated
 	 */
-	int ENUMBUE_SICHERUNGSART_OBJECT = 171;
+	int ENUMBUE_SICHERUNGSART_OBJECT = 172;
 
 	/**
 	 * The meta object id for the '<em>ENUMBUE Technik Object</em>' data type.
@@ -8345,7 +8583,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMBUETechnikObject()
 	 * @generated
 	 */
-	int ENUMBUE_TECHNIK_OBJECT = 172;
+	int ENUMBUE_TECHNIK_OBJECT = 173;
 
 	/**
 	 * The meta object id for the '<em>ENUM Fue Schaltfall Object</em>' data type.
@@ -8355,7 +8593,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMFueSchaltfallObject()
 	 * @generated
 	 */
-	int ENUM_FUE_SCHALTFALL_OBJECT = 173;
+	int ENUM_FUE_SCHALTFALL_OBJECT = 174;
 
 	/**
 	 * The meta object id for the '<em>ENUM Fuss Radweg Art Object</em>' data type.
@@ -8365,7 +8603,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMFussRadwegArtObject()
 	 * @generated
 	 */
-	int ENUM_FUSS_RADWEG_ART_OBJECT = 174;
+	int ENUM_FUSS_RADWEG_ART_OBJECT = 175;
 
 	/**
 	 * The meta object id for the '<em>ENUM Fuss Radweg Seite Object</em>' data type.
@@ -8375,7 +8613,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMFussRadwegSeiteObject()
 	 * @generated
 	 */
-	int ENUM_FUSS_RADWEG_SEITE_OBJECT = 175;
+	int ENUM_FUSS_RADWEG_SEITE_OBJECT = 176;
 
 	/**
 	 * The meta object id for the '<em>ENUMGFR Art Object</em>' data type.
@@ -8385,7 +8623,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMGFRArtObject()
 	 * @generated
 	 */
-	int ENUMGFR_ART_OBJECT = 176;
+	int ENUMGFR_ART_OBJECT = 177;
 
 	/**
 	 * The meta object id for the '<em>ENUM Hp Ersatzstecker Object</em>' data type.
@@ -8395,7 +8633,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMHpErsatzsteckerObject()
 	 * @generated
 	 */
-	int ENUM_HP_ERSATZSTECKER_OBJECT = 177;
+	int ENUM_HP_ERSATZSTECKER_OBJECT = 178;
 
 	/**
 	 * The meta object id for the '<em>ENUM Klassifizierung Object</em>' data type.
@@ -8405,7 +8643,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMKlassifizierungObject()
 	 * @generated
 	 */
-	int ENUM_KLASSIFIZIERUNG_OBJECT = 178;
+	int ENUM_KLASSIFIZIERUNG_OBJECT = 179;
 
 	/**
 	 * The meta object id for the '<em>ENUM Lagerung Object</em>' data type.
@@ -8415,7 +8653,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMLagerungObject()
 	 * @generated
 	 */
-	int ENUM_LAGERUNG_OBJECT = 179;
+	int ENUM_LAGERUNG_OBJECT = 180;
 
 	/**
 	 * The meta object id for the '<em>ENUMLFUE Impuls Object</em>' data type.
@@ -8425,7 +8663,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMLFUEImpulsObject()
 	 * @generated
 	 */
-	int ENUMLFUE_IMPULS_OBJECT = 180;
+	int ENUMLFUE_IMPULS_OBJECT = 181;
 
 	/**
 	 * The meta object id for the '<em>ENUM Montage Ausgleichsgewichte Object</em>' data type.
@@ -8435,7 +8673,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMMontageAusgleichsgewichteObject()
 	 * @generated
 	 */
-	int ENUM_MONTAGE_AUSGLEICHSGEWICHTE_OBJECT = 181;
+	int ENUM_MONTAGE_AUSGLEICHSGEWICHTE_OBJECT = 182;
 
 	/**
 	 * The meta object id for the '<em>ENUM Optik Symbol Object</em>' data type.
@@ -8445,7 +8683,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMOptikSymbolObject()
 	 * @generated
 	 */
-	int ENUM_OPTIK_SYMBOL_OBJECT = 182;
+	int ENUM_OPTIK_SYMBOL_OBJECT = 183;
 
 	/**
 	 * The meta object id for the '<em>ENUM Richtungspfeil Object</em>' data type.
@@ -8455,7 +8693,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getENUMRichtungspfeilObject()
 	 * @generated
 	 */
-	int ENUM_RICHTUNGSPFEIL_OBJECT = 183;
+	int ENUM_RICHTUNGSPFEIL_OBJECT = 184;
 
 	/**
 	 * The meta object id for the '<em>Fahrbahn Befestigung Gleis Type</em>' data type.
@@ -8465,7 +8703,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getFahrbahn_Befestigung_Gleis_Type()
 	 * @generated
 	 */
-	int FAHRBAHN_BEFESTIGUNG_GLEIS_TYPE = 184;
+	int FAHRBAHN_BEFESTIGUNG_GLEIS_TYPE = 185;
 
 	/**
 	 * The meta object id for the '<em>Fahrbahn Befestigung Type</em>' data type.
@@ -8475,7 +8713,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getFahrbahn_Befestigung_Type()
 	 * @generated
 	 */
-	int FAHRBAHN_BEFESTIGUNG_TYPE = 185;
+	int FAHRBAHN_BEFESTIGUNG_TYPE = 186;
 
 	/**
 	 * The meta object id for the '<em>Fahrbahn Breite Type</em>' data type.
@@ -8485,7 +8723,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getFahrbahn_Breite_Type()
 	 * @generated
 	 */
-	int FAHRBAHN_BREITE_TYPE = 186;
+	int FAHRBAHN_BREITE_TYPE = 187;
 
 	/**
 	 * The meta object id for the '<em>GFR Neigung Type</em>' data type.
@@ -8495,7 +8733,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getGFR_Neigung_Type()
 	 * @generated
 	 */
-	int GFR_NEIGUNG_TYPE = 187;
+	int GFR_NEIGUNG_TYPE = 188;
 
 	/**
 	 * The meta object id for the '<em>GFR Typ Type</em>' data type.
@@ -8505,7 +8743,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getGFR_Typ_Type()
 	 * @generated
 	 */
-	int GFR_TYP_TYPE = 188;
+	int GFR_TYP_TYPE = 189;
 
 	/**
 	 * The meta object id for the '<em>Gleis Am Bue Type</em>' data type.
@@ -8515,7 +8753,17 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getGleis_Am_Bue_Type()
 	 * @generated
 	 */
-	int GLEIS_AM_BUE_TYPE = 189;
+	int GLEIS_AM_BUE_TYPE = 190;
+
+	/**
+	 * The meta object id for the '<em>Haltezeit Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.math.BigDecimal
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getHaltezeit_Type()
+	 * @generated
+	 */
+	int HALTEZEIT_TYPE = 191;
 
 	/**
 	 * The meta object id for the '<em>Kontrastblende Type</em>' data type.
@@ -8524,7 +8772,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getKontrastblende_Type()
 	 * @generated
 	 */
-	int KONTRASTBLENDE_TYPE = 190;
+	int KONTRASTBLENDE_TYPE = 192;
 
 	/**
 	 * The meta object id for the '<em>Kontrastblende Type Object</em>' data type.
@@ -8534,7 +8782,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getKontrastblende_TypeObject()
 	 * @generated
 	 */
-	int KONTRASTBLENDE_TYPE_OBJECT = 191;
+	int KONTRASTBLENDE_TYPE_OBJECT = 193;
 
 	/**
 	 * The meta object id for the '<em>Kreuzungswinkel Type</em>' data type.
@@ -8544,7 +8792,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getKreuzungswinkel_Type()
 	 * @generated
 	 */
-	int KREUZUNGSWINKEL_TYPE = 192;
+	int KREUZUNGSWINKEL_TYPE = 194;
 
 	/**
 	 * The meta object id for the '<em>Lieferlaenge Type</em>' data type.
@@ -8554,7 +8802,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getLieferlaenge_Type()
 	 * @generated
 	 */
-	int LIEFERLAENGE_TYPE = 193;
+	int LIEFERLAENGE_TYPE = 195;
 
 	/**
 	 * The meta object id for the '<em>Montage Besonders Type</em>' data type.
@@ -8564,7 +8812,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getMontage_Besonders_Type()
 	 * @generated
 	 */
-	int MONTAGE_BESONDERS_TYPE = 194;
+	int MONTAGE_BESONDERS_TYPE = 196;
 
 	/**
 	 * The meta object id for the '<em>Montagehoehe Type</em>' data type.
@@ -8574,7 +8822,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getMontagehoehe_Type()
 	 * @generated
 	 */
-	int MONTAGEHOEHE_TYPE = 195;
+	int MONTAGEHOEHE_TYPE = 197;
 
 	/**
 	 * The meta object id for the '<em>Optik Durchmesser Type</em>' data type.
@@ -8584,7 +8832,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getOptik_Durchmesser_Type()
 	 * @generated
 	 */
-	int OPTIK_DURCHMESSER_TYPE = 196;
+	int OPTIK_DURCHMESSER_TYPE = 198;
 
 	/**
 	 * The meta object id for the '<em>Pegel Type</em>' data type.
@@ -8594,7 +8842,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getPegel_Type()
 	 * @generated
 	 */
-	int PEGEL_TYPE = 197;
+	int PEGEL_TYPE = 199;
 
 	/**
 	 * The meta object id for the '<em>Pixel Koordinate XType</em>' data type.
@@ -8604,7 +8852,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getPixel_Koordinate_X_Type()
 	 * @generated
 	 */
-	int PIXEL_KOORDINATE_XTYPE = 198;
+	int PIXEL_KOORDINATE_XTYPE = 200;
 
 	/**
 	 * The meta object id for the '<em>Pixel Koordinate YType</em>' data type.
@@ -8614,7 +8862,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getPixel_Koordinate_Y_Type()
 	 * @generated
 	 */
-	int PIXEL_KOORDINATE_YTYPE = 199;
+	int PIXEL_KOORDINATE_YTYPE = 201;
 
 	/**
 	 * The meta object id for the '<em>Raeumstrecke DAB Type</em>' data type.
@@ -8624,7 +8872,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DAB_Type()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DAB_TYPE = 200;
+	int RAEUMSTRECKE_DAB_TYPE = 202;
 
 	/**
 	 * The meta object id for the '<em>Raeumstrecke DBK Type</em>' data type.
@@ -8634,7 +8882,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DBK_Type()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DBK_TYPE = 201;
+	int RAEUMSTRECKE_DBK_TYPE = 203;
 
 	/**
 	 * The meta object id for the '<em>Raeumstrecke DCK Type</em>' data type.
@@ -8644,7 +8892,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DCK_Type()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DCK_TYPE = 202;
+	int RAEUMSTRECKE_DCK_TYPE = 204;
 
 	/**
 	 * The meta object id for the '<em>Raeumstrecke DSK Strich Type</em>' data type.
@@ -8654,7 +8902,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_DSK_Strich_Type()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_DSK_STRICH_TYPE = 203;
+	int RAEUMSTRECKE_DSK_STRICH_TYPE = 205;
 
 	/**
 	 * The meta object id for the '<em>Raeumstrecke Type</em>' data type.
@@ -8664,7 +8912,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getRaeumstrecke_Type()
 	 * @generated
 	 */
-	int RAEUMSTRECKE_TYPE = 204;
+	int RAEUMSTRECKE_TYPE = 206;
 
 	/**
 	 * The meta object id for the '<em>Schaltgruppe Type</em>' data type.
@@ -8674,7 +8922,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchaltgruppe_Type()
 	 * @generated
 	 */
-	int SCHALTGRUPPE_TYPE = 205;
+	int SCHALTGRUPPE_TYPE = 207;
 
 	/**
 	 * The meta object id for the '<em>Schutzbuegel Type</em>' data type.
@@ -8683,7 +8931,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchutzbuegel_Type()
 	 * @generated
 	 */
-	int SCHUTZBUEGEL_TYPE = 206;
+	int SCHUTZBUEGEL_TYPE = 208;
 
 	/**
 	 * The meta object id for the '<em>Schutzbuegel Type Object</em>' data type.
@@ -8693,7 +8941,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSchutzbuegel_TypeObject()
 	 * @generated
 	 */
-	int SCHUTZBUEGEL_TYPE_OBJECT = 207;
+	int SCHUTZBUEGEL_TYPE_OBJECT = 209;
 
 	/**
 	 * The meta object id for the '<em>Sicherheitsabstand Type</em>' data type.
@@ -8703,7 +8951,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSicherheitsabstand_Type()
 	 * @generated
 	 */
-	int SICHERHEITSABSTAND_TYPE = 208;
+	int SICHERHEITSABSTAND_TYPE = 210;
 
 	/**
 	 * The meta object id for the '<em>Signalverz Errechnet Type</em>' data type.
@@ -8713,7 +8961,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSignalverz_Errechnet_Type()
 	 * @generated
 	 */
-	int SIGNALVERZ_ERRECHNET_TYPE = 209;
+	int SIGNALVERZ_ERRECHNET_TYPE = 211;
 
 	/**
 	 * The meta object id for the '<em>Signalverz Gewaehlt Type</em>' data type.
@@ -8723,7 +8971,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSignalverz_Gewaehlt_Type()
 	 * @generated
 	 */
-	int SIGNALVERZ_GEWAEHLT_TYPE = 210;
+	int SIGNALVERZ_GEWAEHLT_TYPE = 212;
 
 	/**
 	 * The meta object id for the '<em>Sperrlaenge Type</em>' data type.
@@ -8733,7 +8981,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSperrlaenge_Type()
 	 * @generated
 	 */
-	int SPERRLAENGE_TYPE = 211;
+	int SPERRLAENGE_TYPE = 213;
 
 	/**
 	 * The meta object id for the '<em>Sperrstrecke Fussgaenger Type</em>' data type.
@@ -8743,7 +8991,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSperrstrecke_Fussgaenger_Type()
 	 * @generated
 	 */
-	int SPERRSTRECKE_FUSSGAENGER_TYPE = 212;
+	int SPERRSTRECKE_FUSSGAENGER_TYPE = 214;
 
 	/**
 	 * The meta object id for the '<em>Sperrstrecke Type</em>' data type.
@@ -8753,7 +9001,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getSperrstrecke_Type()
 	 * @generated
 	 */
-	int SPERRSTRECKE_TYPE = 213;
+	int SPERRSTRECKE_TYPE = 215;
 
 	/**
 	 * The meta object id for the '<em>Teilsperrstrecke Type</em>' data type.
@@ -8763,7 +9011,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getTeilsperrstrecke_Type()
 	 * @generated
 	 */
-	int TEILSPERRSTRECKE_TYPE = 214;
+	int TEILSPERRSTRECKE_TYPE = 216;
 
 	/**
 	 * The meta object id for the '<em>Teilvorgabezeit Type</em>' data type.
@@ -8773,7 +9021,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getTeilvorgabezeit_Type()
 	 * @generated
 	 */
-	int TEILVORGABEZEIT_TYPE = 215;
+	int TEILVORGABEZEIT_TYPE = 217;
 
 	/**
 	 * The meta object id for the '<em>Tragkopf Verstellbar Type</em>' data type.
@@ -8782,7 +9030,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getTragkopf_Verstellbar_Type()
 	 * @generated
 	 */
-	int TRAGKOPF_VERSTELLBAR_TYPE = 216;
+	int TRAGKOPF_VERSTELLBAR_TYPE = 218;
 
 	/**
 	 * The meta object id for the '<em>Tragkopf Verstellbar Type Object</em>' data type.
@@ -8792,7 +9040,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getTragkopf_Verstellbar_TypeObject()
 	 * @generated
 	 */
-	int TRAGKOPF_VERSTELLBAR_TYPE_OBJECT = 217;
+	int TRAGKOPF_VERSTELLBAR_TYPE_OBJECT = 219;
 
 	/**
 	 * The meta object id for the '<em>VMax Schiene Type</em>' data type.
@@ -8802,7 +9050,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Max_Schiene_Type()
 	 * @generated
 	 */
-	int VMAX_SCHIENE_TYPE = 218;
+	int VMAX_SCHIENE_TYPE = 220;
 
 	/**
 	 * The meta object id for the '<em>VMax Strasse Type</em>' data type.
@@ -8812,7 +9060,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Max_Strasse_Type()
 	 * @generated
 	 */
-	int VMAX_STRASSE_TYPE = 219;
+	int VMAX_STRASSE_TYPE = 221;
 
 	/**
 	 * The meta object id for the '<em>VMin Fussweg Type</em>' data type.
@@ -8822,7 +9070,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Min_Fussweg_Type()
 	 * @generated
 	 */
-	int VMIN_FUSSWEG_TYPE = 220;
+	int VMIN_FUSSWEG_TYPE = 222;
 
 	/**
 	 * The meta object id for the '<em>VMin Schiene Type</em>' data type.
@@ -8832,7 +9080,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Min_Schiene_Type()
 	 * @generated
 	 */
-	int VMIN_SCHIENE_TYPE = 221;
+	int VMIN_SCHIENE_TYPE = 223;
 
 	/**
 	 * The meta object id for the '<em>VMin Strasse Type</em>' data type.
@@ -8842,7 +9090,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getV_Min_Strasse_Type()
 	 * @generated
 	 */
-	int VMIN_STRASSE_TYPE = 222;
+	int VMIN_STRASSE_TYPE = 224;
 
 	/**
 	 * The meta object id for the '<em>Vorgeschaltet Type</em>' data type.
@@ -8851,7 +9099,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVorgeschaltet_Type()
 	 * @generated
 	 */
-	int VORGESCHALTET_TYPE = 223;
+	int VORGESCHALTET_TYPE = 225;
 
 	/**
 	 * The meta object id for the '<em>Vorgeschaltet Type Object</em>' data type.
@@ -8861,7 +9109,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getVorgeschaltet_TypeObject()
 	 * @generated
 	 */
-	int VORGESCHALTET_TYPE_OBJECT = 224;
+	int VORGESCHALTET_TYPE_OBJECT = 226;
 
 	/**
 	 * The meta object id for the '<em>Winkel Alpha Type</em>' data type.
@@ -8871,7 +9119,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getWinkel_Alpha_Type()
 	 * @generated
 	 */
-	int WINKEL_ALPHA_TYPE = 225;
+	int WINKEL_ALPHA_TYPE = 227;
 
 	/**
 	 * The meta object id for the '<em>Zeitueberschreitungsmeldung Type</em>' data type.
@@ -8881,7 +9129,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getZeitueberschreitungsmeldung_Type()
 	 * @generated
 	 */
-	int ZEITUEBERSCHREITUNGSMELDUNG_TYPE = 226;
+	int ZEITUEBERSCHREITUNGSMELDUNG_TYPE = 228;
 
 	/**
 	 * The meta object id for the '<em>Zusatzschild Type</em>' data type.
@@ -8891,7 +9139,7 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.impl.BahnuebergangPackageImpl#getZusatzschild_Type()
 	 * @generated
 	 */
-	int ZUSATZSCHILD_TYPE = 227;
+	int ZUSATZSCHILD_TYPE = 229;
 
 
 	/**
@@ -9284,6 +9532,17 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBUE_Anlage_BUEAnlageAllg();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDAEABUEAnschaltung <em>IDAEABUE Anschaltung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>IDAEABUE Anschaltung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDAEABUEAnschaltung()
+	 * @see #getBUE_Anlage()
+	 * @generated
+	 */
+	EReference getBUE_Anlage_IDAEABUEAnschaltung();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDBUESchnittstelle <em>IDBUE Schnittstelle</em>}'.
@@ -9855,6 +10114,17 @@ public interface BahnuebergangPackage extends EPackage {
 	EReference getBUE_Einschaltung_Hp_AttributeGroup_EinschaltverzGewaehlt();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getHaltezeit <em>Haltezeit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Haltezeit</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getHaltezeit()
+	 * @see #getBUE_Einschaltung_Hp_AttributeGroup()
+	 * @generated
+	 */
+	EReference getBUE_Einschaltung_Hp_AttributeGroup_Haltezeit();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung_Hp_AttributeGroup#getKurzzugschaltung <em>Kurzzugschaltung</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10122,6 +10392,17 @@ public interface BahnuebergangPackage extends EPackage {
 	EReference getBUE_Kreuzungsplan_IDAnhangKreuzungsplan();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getIDBUEAnlage <em>IDBUE Anlage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>IDBUE Anlage</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getIDBUEAnlage()
+	 * @see #getBUE_Kreuzungsplan()
+	 * @generated
+	 */
+	EReference getBUE_Kreuzungsplan_IDBUEAnlage();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan_Koordinaten_AttributeGroup <em>BUE Kreuzungsplan Koordinaten Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10132,10 +10413,10 @@ public interface BahnuebergangPackage extends EPackage {
 	EClass getBUE_Kreuzungsplan_Koordinaten_AttributeGroup();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan_Koordinaten_AttributeGroup#getIDGEOPunkt <em>IDGEO Punkt</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan_Koordinaten_AttributeGroup#getIDGEOPunkt <em>IDGEO Punkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>IDGEO Punkt</em>'.
+	 * @return the meta object for the reference list '<em>IDGEO Punkt</em>'.
 	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan_Koordinaten_AttributeGroup#getIDGEOPunkt()
 	 * @see #getBUE_Kreuzungsplan_Koordinaten_AttributeGroup()
 	 * @generated
@@ -11076,6 +11357,27 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGleis_Am_Bue_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass <em>Haltezeit Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Haltezeit Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass
+	 * @generated
+	 */
+	EClass getHaltezeit_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass#getWert()
+	 * @see #getHaltezeit_TypeClass()
+	 * @generated
+	 */
+	EAttribute getHaltezeit_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.Hersteller_TypeClass <em>Hersteller Type Class</em>}'.
@@ -13407,6 +13709,18 @@ public interface BahnuebergangPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getGleis_Am_Bue_Type();
+
+	/**
+	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>Haltezeit Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Haltezeit Type</em>'.
+	 * @see java.math.BigDecimal
+	 * @model instanceClass="java.math.BigDecimal"
+	 *        extendedMetaData="name='THaltezeit' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TSekunde'"
+	 * @generated
+	 */
+	EDataType getHaltezeit_Type();
 
 	/**
 	 * Returns the meta object for data type '<em>Kontrastblende Type</em>'.

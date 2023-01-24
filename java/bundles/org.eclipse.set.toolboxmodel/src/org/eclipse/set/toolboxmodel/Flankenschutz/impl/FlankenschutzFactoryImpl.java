@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz.impl;
 
@@ -61,6 +68,7 @@ public class FlankenschutzFactoryImpl extends EFactoryImpl implements Flankensch
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case FlankenschutzPackage.EKW_KR_ANTEIL_TYPE_CLASS: return createEKW_Kr_Anteil_TypeClass();
 			case FlankenschutzPackage.FAHRT_UEBER_TYPE_CLASS: return createFahrt_Ueber_TypeClass();
 			case FlankenschutzPackage.FLA_FREIMELDE_ZUORDNUNG: return createFla_Freimelde_Zuordnung();
 			case FlankenschutzPackage.FLA_RAUM_FREIMELDUNG_TYPE_CLASS: return createFla_Raum_Freimeldung_TypeClass();
@@ -134,6 +142,17 @@ public class FlankenschutzFactoryImpl extends EFactoryImpl implements Flankensch
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EKW_Kr_Anteil_TypeClass createEKW_Kr_Anteil_TypeClass() {
+		EKW_Kr_Anteil_TypeClassImpl ekW_Kr_Anteil_TypeClass = new EKW_Kr_Anteil_TypeClassImpl();
+		return ekW_Kr_Anteil_TypeClass;
 	}
 
 	/**

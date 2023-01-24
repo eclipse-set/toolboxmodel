@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung;
 
@@ -65,6 +72,15 @@ public interface ZuglenkungFactory extends EFactory {
 	 * @generated
 	 */
 	Einstellkontrollzeit_TypeClass createEinstellkontrollzeit_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Fstr Bildezeit Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fstr Bildezeit Type Class</em>'.
+	 * @generated
+	 */
+	Fstr_Bildezeit_TypeClass createFstr_Bildezeit_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>FUEM Auswertung Type Class</em>'.

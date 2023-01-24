@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface BlockPackage extends EPackage {
 	int AUTO_ERLAUBNISHOLEN_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface BlockPackage extends EPackage {
 	int AUTO_ERLAUBNISRUECKLAUF_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface BlockPackage extends EPackage {
 	int BETRIEBSFUEHRUNG_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -756,13 +732,22 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_ANLAGE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BLOCK_ANLAGE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_ANLAGE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -884,7 +869,7 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_BAUFORM_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -948,13 +933,22 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BLOCK_ELEMENT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_ELEMENT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1194,13 +1188,22 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_STRECKE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int BLOCK_STRECKE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_STRECKE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1248,13 +1251,22 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_STRECKE__ID_STRECKE = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>ID Strecke Bremsweg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_STRECKE__ID_STRECKE_BREMSWEG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Block Strecke</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK_STRECKE_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int BLOCK_STRECKE_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Block Strecke</em>' class.
@@ -1294,34 +1306,34 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG = 1;
 
 	/**
-	 * The feature id for the '<em><b>Entwurfsgeschwindigkeit</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT = 2;
-
-	/**
 	 * The feature id for the '<em><b>Strecke Art</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART = 3;
+	int BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART = 2;
 
 	/**
-	 * The feature id for the '<em><b>Traktion Art</b></em>' containment reference.
+	 * The feature id for the '<em><b>Streckengeschwindigkeit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART = 4;
+	int BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Zugbeeinflussung Art</b></em>' containment reference.
+	 * The feature id for the '<em><b>Traktion Art Elektrisch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH = 4;
+
+	/**
+	 * The feature id for the '<em><b>Zugbeeinflussung Art</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1367,7 +1379,7 @@ public interface BlockPackage extends EPackage {
 	int BREMSWEG_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1403,52 +1415,6 @@ public interface BlockPackage extends EPackage {
 	int BREMSWEG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Entwurfsgeschwindigkeit_TypeClassImpl <em>Entwurfsgeschwindigkeit Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Block.impl.Entwurfsgeschwindigkeit_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getEntwurfsgeschwindigkeit_TypeClass()
-	 * @generated
-	 */
-	int ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS = 12;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Entwurfsgeschwindigkeit Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Entwurfsgeschwindigkeit Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Erlaubnis_Staendig_Vorhanden_TypeClassImpl <em>Erlaubnis Staendig Vorhanden Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1456,10 +1422,10 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getErlaubnis_Staendig_Vorhanden_TypeClass()
 	 * @generated
 	 */
-	int ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS = 13;
+	int ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1502,10 +1468,10 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getErlaubnisabgabespeicherung_TypeClass()
 	 * @generated
 	 */
-	int ERLAUBNISABGABESPEICHERUNG_TYPE_CLASS = 14;
+	int ERLAUBNISABGABESPEICHERUNG_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1548,10 +1514,10 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getErlaubnisholen_TypeClass()
 	 * @generated
 	 */
-	int ERLAUBNISHOLEN_TYPE_CLASS = 15;
+	int ERLAUBNISHOLEN_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1594,10 +1560,10 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getRueckblockwecker_TypeClass()
 	 * @generated
 	 */
-	int RUECKBLOCKWECKER_TYPE_CLASS = 16;
+	int RUECKBLOCKWECKER_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1640,10 +1606,10 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getSchaltung_TypeClass()
 	 * @generated
 	 */
-	int SCHALTUNG_TYPE_CLASS = 17;
+	int SCHALTUNG_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1686,10 +1652,10 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getSchutzuebertrager_TypeClass()
 	 * @generated
 	 */
-	int SCHUTZUEBERTRAGER_TYPE_CLASS = 18;
+	int SCHUTZUEBERTRAGER_TYPE_CLASS = 17;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1732,10 +1698,10 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getStrecke_Art_TypeClass()
 	 * @generated
 	 */
-	int STRECKE_ART_TYPE_CLASS = 19;
+	int STRECKE_ART_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1771,23 +1737,23 @@ public interface BlockPackage extends EPackage {
 	int STRECKE_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_TypeClassImpl <em>Traktion Art Type Class</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Streckengeschwindigkeit_TypeClassImpl <em>Streckengeschwindigkeit Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getTraktion_Art_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Block.impl.Streckengeschwindigkeit_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getStreckengeschwindigkeit_TypeClass()
 	 * @generated
 	 */
-	int TRAKTION_ART_TYPE_CLASS = 20;
+	int STRECKENGESCHWINDIGKEIT_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAKTION_ART_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+	int STRECKENGESCHWINDIGKEIT_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
 
 	/**
 	 * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -1796,25 +1762,71 @@ public interface BlockPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAKTION_ART_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+	int STRECKENGESCHWINDIGKEIT_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Traktion Art Type Class</em>' class.
+	 * The number of structural features of the '<em>Streckengeschwindigkeit Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAKTION_ART_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+	int STRECKENGESCHWINDIGKEIT_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Traktion Art Type Class</em>' class.
+	 * The number of operations of the '<em>Streckengeschwindigkeit Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAKTION_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+	int STRECKENGESCHWINDIGKEIT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_Elektrisch_TypeClassImpl <em>Traktion Art Elektrisch Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_Elektrisch_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getTraktion_Art_Elektrisch_TypeClass()
+	 * @generated
+	 */
+	int TRAKTION_ART_ELEKTRISCH_TYPE_CLASS = 20;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAKTION_ART_ELEKTRISCH_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAKTION_ART_ELEKTRISCH_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Traktion Art Elektrisch Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAKTION_ART_ELEKTRISCH_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Traktion Art Elektrisch Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAKTION_ART_ELEKTRISCH_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Vorblockwecker_TypeClassImpl <em>Vorblockwecker Type Class</em>}' class.
@@ -1827,7 +1839,7 @@ public interface BlockPackage extends EPackage {
 	int VORBLOCKWECKER_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1873,7 +1885,7 @@ public interface BlockPackage extends EPackage {
 	int ZUGBEEINFLUSSUNG_ART_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1919,7 +1931,7 @@ public interface BlockPackage extends EPackage {
 	int ZUSATZINFORMATION_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1995,16 +2007,6 @@ public interface BlockPackage extends EPackage {
 	int ENUM_STRECKE_ART = 27;
 
 	/**
-	 * The meta object id for the '<em>Entwurfsgeschwindigkeit Type</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.math.BigInteger
-	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getEntwurfsgeschwindigkeit_Type()
-	 * @generated
-	 */
-	int ENTWURFSGESCHWINDIGKEIT_TYPE = 28;
-
-	/**
 	 * The meta object id for the '<em>ENUM Betriebsfuehrung Object</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2012,7 +2014,7 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getENUMBetriebsfuehrungObject()
 	 * @generated
 	 */
-	int ENUM_BETRIEBSFUEHRUNG_OBJECT = 29;
+	int ENUM_BETRIEBSFUEHRUNG_OBJECT = 28;
 
 	/**
 	 * The meta object id for the '<em>ENUM Block Bauform Object</em>' data type.
@@ -2022,7 +2024,7 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getENUMBlockBauformObject()
 	 * @generated
 	 */
-	int ENUM_BLOCK_BAUFORM_OBJECT = 30;
+	int ENUM_BLOCK_BAUFORM_OBJECT = 29;
 
 	/**
 	 * The meta object id for the '<em>ENUM Schaltung Object</em>' data type.
@@ -2032,7 +2034,7 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getENUMSchaltungObject()
 	 * @generated
 	 */
-	int ENUM_SCHALTUNG_OBJECT = 31;
+	int ENUM_SCHALTUNG_OBJECT = 30;
 
 	/**
 	 * The meta object id for the '<em>ENUM Strecke Art Object</em>' data type.
@@ -2042,7 +2044,17 @@ public interface BlockPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getENUMStreckeArtObject()
 	 * @generated
 	 */
-	int ENUM_STRECKE_ART_OBJECT = 32;
+	int ENUM_STRECKE_ART_OBJECT = 31;
+
+	/**
+	 * The meta object id for the '<em>Streckengeschwindigkeit Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.math.BigInteger
+	 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getStreckengeschwindigkeit_Type()
+	 * @generated
+	 */
+	int STRECKENGESCHWINDIGKEIT_TYPE = 32;
 
 	/**
 	 * The meta object id for the '<em>Zusatzinformation Type</em>' data type.
@@ -2464,6 +2476,17 @@ public interface BlockPackage extends EPackage {
 	EReference getBlock_Strecke_IDStrecke();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDStreckeBremsweg <em>ID Strecke Bremsweg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Strecke Bremsweg</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDStreckeBremsweg()
+	 * @see #getBlock_Strecke()
+	 * @generated
+	 */
+	EReference getBlock_Strecke_IDStreckeBremsweg();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup <em>Block Strecke Allg Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2496,17 +2519,6 @@ public interface BlockPackage extends EPackage {
 	EReference getBlock_Strecke_Allg_AttributeGroup_Bremsweg();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getEntwurfsgeschwindigkeit <em>Entwurfsgeschwindigkeit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Entwurfsgeschwindigkeit</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getEntwurfsgeschwindigkeit()
-	 * @see #getBlock_Strecke_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getBlock_Strecke_Allg_AttributeGroup_Entwurfsgeschwindigkeit();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getStreckeArt <em>Strecke Art</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2518,21 +2530,32 @@ public interface BlockPackage extends EPackage {
 	EReference getBlock_Strecke_Allg_AttributeGroup_StreckeArt();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getTraktionArt <em>Traktion Art</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getStreckengeschwindigkeit <em>Streckengeschwindigkeit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Traktion Art</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getTraktionArt()
+	 * @return the meta object for the containment reference '<em>Streckengeschwindigkeit</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getStreckengeschwindigkeit()
 	 * @see #getBlock_Strecke_Allg_AttributeGroup()
 	 * @generated
 	 */
-	EReference getBlock_Strecke_Allg_AttributeGroup_TraktionArt();
+	EReference getBlock_Strecke_Allg_AttributeGroup_Streckengeschwindigkeit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getZugbeeinflussungArt <em>Zugbeeinflussung Art</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getTraktionArtElektrisch <em>Traktion Art Elektrisch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Zugbeeinflussung Art</em>'.
+	 * @return the meta object for the containment reference '<em>Traktion Art Elektrisch</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getTraktionArtElektrisch()
+	 * @see #getBlock_Strecke_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getBlock_Strecke_Allg_AttributeGroup_TraktionArtElektrisch();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getZugbeeinflussungArt <em>Zugbeeinflussung Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Zugbeeinflussung Art</em>'.
 	 * @see org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup#getZugbeeinflussungArt()
 	 * @see #getBlock_Strecke_Allg_AttributeGroup()
 	 * @generated
@@ -2570,27 +2593,6 @@ public interface BlockPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBremsweg_TypeClass_Wert();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass <em>Entwurfsgeschwindigkeit Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entwurfsgeschwindigkeit Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass
-	 * @generated
-	 */
-	EClass getEntwurfsgeschwindigkeit_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass#getWert()
-	 * @see #getEntwurfsgeschwindigkeit_TypeClass()
-	 * @generated
-	 */
-	EAttribute getEntwurfsgeschwindigkeit_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Block.Erlaubnis_Staendig_Vorhanden_TypeClass <em>Erlaubnis Staendig Vorhanden Type Class</em>}'.
@@ -2740,25 +2742,46 @@ public interface BlockPackage extends EPackage {
 	EAttribute getStrecke_Art_TypeClass_Wert();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass <em>Traktion Art Type Class</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass <em>Streckengeschwindigkeit Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Traktion Art Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass
+	 * @return the meta object for class '<em>Streckengeschwindigkeit Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass
 	 * @generated
 	 */
-	EClass getTraktion_Art_TypeClass();
+	EClass getStreckengeschwindigkeit_TypeClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass#getWert <em>Wert</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass#getWert <em>Wert</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass#getWert()
-	 * @see #getTraktion_Art_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass#getWert()
+	 * @see #getStreckengeschwindigkeit_TypeClass()
 	 * @generated
 	 */
-	EAttribute getTraktion_Art_TypeClass_Wert();
+	EAttribute getStreckengeschwindigkeit_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass <em>Traktion Art Elektrisch Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Traktion Art Elektrisch Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass
+	 * @generated
+	 */
+	EClass getTraktion_Art_Elektrisch_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass#getWert()
+	 * @see #getTraktion_Art_Elektrisch_TypeClass()
+	 * @generated
+	 */
+	EAttribute getTraktion_Art_Elektrisch_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Block.Vorblockwecker_TypeClass <em>Vorblockwecker Type Class</em>}'.
@@ -2864,18 +2887,6 @@ public interface BlockPackage extends EPackage {
 	EEnum getENUMStreckeArt();
 
 	/**
-	 * Returns the meta object for data type '{@link java.math.BigInteger <em>Entwurfsgeschwindigkeit Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Entwurfsgeschwindigkeit Type</em>'.
-	 * @see java.math.BigInteger
-	 * @model instanceClass="java.math.BigInteger"
-	 *        extendedMetaData="name='TEntwurfsgeschwindigkeit' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TGeschwindigkeit'"
-	 * @generated
-	 */
-	EDataType getEntwurfsgeschwindigkeit_Type();
-
-	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Block.ENUMBetriebsfuehrung <em>ENUM Betriebsfuehrung Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2922,6 +2933,18 @@ public interface BlockPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMStreckeArtObject();
+
+	/**
+	 * Returns the meta object for data type '{@link java.math.BigInteger <em>Streckengeschwindigkeit Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Streckengeschwindigkeit Type</em>'.
+	 * @see java.math.BigInteger
+	 * @model instanceClass="java.math.BigInteger"
+	 *        extendedMetaData="name='TStreckengeschwindigkeit' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TGeschwindigkeit'"
+	 * @generated
+	 */
+	EDataType getStreckengeschwindigkeit_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Zusatzinformation Type</em>}'.
@@ -3283,6 +3306,14 @@ public interface BlockPackage extends EPackage {
 		EReference BLOCK_STRECKE__ID_STRECKE = eINSTANCE.getBlock_Strecke_IDStrecke();
 
 		/**
+		 * The meta object literal for the '<em><b>ID Strecke Bremsweg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BLOCK_STRECKE__ID_STRECKE_BREMSWEG = eINSTANCE.getBlock_Strecke_IDStreckeBremsweg();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl <em>Block Strecke Allg Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3309,14 +3340,6 @@ public interface BlockPackage extends EPackage {
 		EReference BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG = eINSTANCE.getBlock_Strecke_Allg_AttributeGroup_Bremsweg();
 
 		/**
-		 * The meta object literal for the '<em><b>Entwurfsgeschwindigkeit</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT = eINSTANCE.getBlock_Strecke_Allg_AttributeGroup_Entwurfsgeschwindigkeit();
-
-		/**
 		 * The meta object literal for the '<em><b>Strecke Art</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3325,15 +3348,23 @@ public interface BlockPackage extends EPackage {
 		EReference BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART = eINSTANCE.getBlock_Strecke_Allg_AttributeGroup_StreckeArt();
 
 		/**
-		 * The meta object literal for the '<em><b>Traktion Art</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Streckengeschwindigkeit</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART = eINSTANCE.getBlock_Strecke_Allg_AttributeGroup_TraktionArt();
+		EReference BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT = eINSTANCE.getBlock_Strecke_Allg_AttributeGroup_Streckengeschwindigkeit();
 
 		/**
-		 * The meta object literal for the '<em><b>Zugbeeinflussung Art</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Traktion Art Elektrisch</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH = eINSTANCE.getBlock_Strecke_Allg_AttributeGroup_TraktionArtElektrisch();
+
+		/**
+		 * The meta object literal for the '<em><b>Zugbeeinflussung Art</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3365,24 +3396,6 @@ public interface BlockPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BREMSWEG_TYPE_CLASS__WERT = eINSTANCE.getBremsweg_TypeClass_Wert();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Entwurfsgeschwindigkeit_TypeClassImpl <em>Entwurfsgeschwindigkeit Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Block.impl.Entwurfsgeschwindigkeit_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getEntwurfsgeschwindigkeit_TypeClass()
-		 * @generated
-		 */
-		EClass ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS = eINSTANCE.getEntwurfsgeschwindigkeit_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS__WERT = eINSTANCE.getEntwurfsgeschwindigkeit_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Erlaubnis_Staendig_Vorhanden_TypeClassImpl <em>Erlaubnis Staendig Vorhanden Type Class</em>}' class.
@@ -3511,14 +3524,14 @@ public interface BlockPackage extends EPackage {
 		EAttribute STRECKE_ART_TYPE_CLASS__WERT = eINSTANCE.getStrecke_Art_TypeClass_Wert();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_TypeClassImpl <em>Traktion Art Type Class</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Streckengeschwindigkeit_TypeClassImpl <em>Streckengeschwindigkeit Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getTraktion_Art_TypeClass()
+		 * @see org.eclipse.set.toolboxmodel.Block.impl.Streckengeschwindigkeit_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getStreckengeschwindigkeit_TypeClass()
 		 * @generated
 		 */
-		EClass TRAKTION_ART_TYPE_CLASS = eINSTANCE.getTraktion_Art_TypeClass();
+		EClass STRECKENGESCHWINDIGKEIT_TYPE_CLASS = eINSTANCE.getStreckengeschwindigkeit_TypeClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
@@ -3526,7 +3539,25 @@ public interface BlockPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRAKTION_ART_TYPE_CLASS__WERT = eINSTANCE.getTraktion_Art_TypeClass_Wert();
+		EAttribute STRECKENGESCHWINDIGKEIT_TYPE_CLASS__WERT = eINSTANCE.getStreckengeschwindigkeit_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_Elektrisch_TypeClassImpl <em>Traktion Art Elektrisch Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Block.impl.Traktion_Art_Elektrisch_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getTraktion_Art_Elektrisch_TypeClass()
+		 * @generated
+		 */
+		EClass TRAKTION_ART_ELEKTRISCH_TYPE_CLASS = eINSTANCE.getTraktion_Art_Elektrisch_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAKTION_ART_ELEKTRISCH_TYPE_CLASS__WERT = eINSTANCE.getTraktion_Art_Elektrisch_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Block.impl.Vorblockwecker_TypeClassImpl <em>Vorblockwecker Type Class</em>}' class.
@@ -3623,16 +3654,6 @@ public interface BlockPackage extends EPackage {
 		EEnum ENUM_STRECKE_ART = eINSTANCE.getENUMStreckeArt();
 
 		/**
-		 * The meta object literal for the '<em>Entwurfsgeschwindigkeit Type</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.math.BigInteger
-		 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getEntwurfsgeschwindigkeit_Type()
-		 * @generated
-		 */
-		EDataType ENTWURFSGESCHWINDIGKEIT_TYPE = eINSTANCE.getEntwurfsgeschwindigkeit_Type();
-
-		/**
 		 * The meta object literal for the '<em>ENUM Betriebsfuehrung Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3671,6 +3692,16 @@ public interface BlockPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_STRECKE_ART_OBJECT = eINSTANCE.getENUMStreckeArtObject();
+
+		/**
+		 * The meta object literal for the '<em>Streckengeschwindigkeit Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.math.BigInteger
+		 * @see org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl#getStreckengeschwindigkeit_Type()
+		 * @generated
+		 */
+		EDataType STRECKENGESCHWINDIGKEIT_TYPE = eINSTANCE.getStreckengeschwindigkeit_Type();
 
 		/**
 		 * The meta object literal for the '<em>Zusatzinformation Type</em>' data type.

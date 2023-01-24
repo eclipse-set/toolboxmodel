@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -259,6 +260,29 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 		}
 
 		return besonderes_Schaltkriterium_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bezeichnung_Besondere_Anlage_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Bezeichnung_Besondere_Anlage_TypeClassItemProvider bezeichnung_Besondere_Anlage_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bezeichnung_Besondere_Anlage_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBezeichnung_Besondere_Anlage_TypeClassAdapter() {
+		if (bezeichnung_Besondere_Anlage_TypeClassItemProvider == null) {
+			bezeichnung_Besondere_Anlage_TypeClassItemProvider = new Bezeichnung_Besondere_Anlage_TypeClassItemProvider(this);
+		}
+
+		return bezeichnung_Besondere_Anlage_TypeClassItemProvider;
 	}
 
 	/**
@@ -535,6 +559,29 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 		}
 
 		return koppelunterstation_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.KUs_Zeittelegramm_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected KUs_Zeittelegramm_TypeClassItemProvider kUs_Zeittelegramm_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.KUs_Zeittelegramm_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createKUs_Zeittelegramm_TypeClassAdapter() {
+		if (kUs_Zeittelegramm_TypeClassItemProvider == null) {
+			kUs_Zeittelegramm_TypeClassItemProvider = new KUs_Zeittelegramm_TypeClassItemProvider(this);
+		}
+
+		return kUs_Zeittelegramm_TypeClassItemProvider;
 	}
 
 	/**
@@ -1113,6 +1160,29 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zeitsynchronisation_Funkuhr_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Zeitsynchronisation_Funkuhr_TypeClassItemProvider zeitsynchronisation_Funkuhr_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zeitsynchronisation_Funkuhr_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZeitsynchronisation_Funkuhr_TypeClassAdapter() {
+		if (zeitsynchronisation_Funkuhr_TypeClassItemProvider == null) {
+			zeitsynchronisation_Funkuhr_TypeClassItemProvider = new Zeitsynchronisation_Funkuhr_TypeClassItemProvider(this);
+		}
+
+		return zeitsynchronisation_Funkuhr_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1156,6 +1226,75 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 		}
 
 		return zlV_Bus_Allg_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZLV_Bus_Besondere_AnlageItemProvider zlV_Bus_Besondere_AnlageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZLV_Bus_Besondere_AnlageAdapter() {
+		if (zlV_Bus_Besondere_AnlageItemProvider == null) {
+			zlV_Bus_Besondere_AnlageItemProvider = new ZLV_Bus_Besondere_AnlageItemProvider(this);
+		}
+
+		return zlV_Bus_Besondere_AnlageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupAdapter() {
+		if (zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider == null) {
+			zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider = new ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider(this);
+		}
+
+		return zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Bezeichnung_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZLV_Bus_Bezeichnung_AttributeGroupItemProvider zlV_Bus_Bezeichnung_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Bezeichnung_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createZLV_Bus_Bezeichnung_AttributeGroupAdapter() {
+		if (zlV_Bus_Bezeichnung_AttributeGroupItemProvider == null) {
+			zlV_Bus_Bezeichnung_AttributeGroupItemProvider = new ZLV_Bus_Bezeichnung_AttributeGroupItemProvider(this);
+		}
+
+		return zlV_Bus_Bezeichnung_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -1780,29 +1919,6 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS_Allg_AttributeGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ZN_ZBS_Allg_AttributeGroupItemProvider zN_ZBS_Allg_AttributeGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS_Allg_AttributeGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createZN_ZBS_Allg_AttributeGroupAdapter() {
-		if (zN_ZBS_Allg_AttributeGroupItemProvider == null) {
-			zN_ZBS_Allg_AttributeGroupItemProvider = new ZN_ZBS_Allg_AttributeGroupItemProvider(this);
-		}
-
-		return zN_ZBS_Allg_AttributeGroupItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zugvorbereitungsmeldung_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1938,6 +2054,7 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 		if (ausfahrdruck_TypeClassItemProvider != null) ausfahrdruck_TypeClassItemProvider.dispose();
 		if (bedienbarkeit_Anzeigefeld_TypeClassItemProvider != null) bedienbarkeit_Anzeigefeld_TypeClassItemProvider.dispose();
 		if (besonderes_Schaltkriterium_TypeClassItemProvider != null) besonderes_Schaltkriterium_TypeClassItemProvider.dispose();
+		if (bezeichnung_Besondere_Anlage_TypeClassItemProvider != null) bezeichnung_Besondere_Anlage_TypeClassItemProvider.dispose();
 		if (bf_Kennung_TypeClassItemProvider != null) bf_Kennung_TypeClassItemProvider.dispose();
 		if (bf_Nr_ANB_TypeClassItemProvider != null) bf_Nr_ANB_TypeClassItemProvider.dispose();
 		if (bf_Nr_TypeClassItemProvider != null) bf_Nr_TypeClassItemProvider.dispose();
@@ -1950,6 +2067,7 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 		if (hoA_TypeClassItemProvider != null) hoA_TypeClassItemProvider.dispose();
 		if (iP_Adresse_TypeClassItemProvider != null) iP_Adresse_TypeClassItemProvider.dispose();
 		if (koppelunterstation_TypeClassItemProvider != null) koppelunterstation_TypeClassItemProvider.dispose();
+		if (kUs_Zeittelegramm_TypeClassItemProvider != null) kUs_Zeittelegramm_TypeClassItemProvider.dispose();
 		if (meldedruck_TypeClassItemProvider != null) meldedruck_TypeClassItemProvider.dispose();
 		if (prioritaet_TypeClassItemProvider != null) prioritaet_TypeClassItemProvider.dispose();
 		if (reaktivierungsfunktion_TypeClassItemProvider != null) reaktivierungsfunktion_TypeClassItemProvider.dispose();
@@ -1975,8 +2093,12 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 		if (zbS_Adresse_TypeClassItemProvider != null) zbS_Adresse_TypeClassItemProvider.dispose();
 		if (zbS_Anbindung_TypeClassItemProvider != null) zbS_Anbindung_TypeClassItemProvider.dispose();
 		if (zbS_Schnittstelle_TypeClassItemProvider != null) zbS_Schnittstelle_TypeClassItemProvider.dispose();
+		if (zeitsynchronisation_Funkuhr_TypeClassItemProvider != null) zeitsynchronisation_Funkuhr_TypeClassItemProvider.dispose();
 		if (zlV_BusItemProvider != null) zlV_BusItemProvider.dispose();
 		if (zlV_Bus_Allg_AttributeGroupItemProvider != null) zlV_Bus_Allg_AttributeGroupItemProvider.dispose();
+		if (zlV_Bus_Besondere_AnlageItemProvider != null) zlV_Bus_Besondere_AnlageItemProvider.dispose();
+		if (zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider != null) zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupItemProvider.dispose();
+		if (zlV_Bus_Bezeichnung_AttributeGroupItemProvider != null) zlV_Bus_Bezeichnung_AttributeGroupItemProvider.dispose();
 		if (zlV_Bus_Nr_TypeClassItemProvider != null) zlV_Bus_Nr_TypeClassItemProvider.dispose();
 		if (zlV_Bus_US_ZuordnungItemProvider != null) zlV_Bus_US_ZuordnungItemProvider.dispose();
 		if (zlV_Bus_US_Zuordnung_Telegramm_AttributeGroupItemProvider != null) zlV_Bus_US_Zuordnung_Telegramm_AttributeGroupItemProvider.dispose();
@@ -2004,7 +2126,6 @@ public class ZugnummernmeldeanlageItemProviderAdapterFactory extends Zugnummernm
 		if (zN_Unterstation_Allg_AttributeGroupItemProvider != null) zN_Unterstation_Allg_AttributeGroupItemProvider.dispose();
 		if (zN_Unterstation_Bf_Nr_AttributeGroupItemProvider != null) zN_Unterstation_Bf_Nr_AttributeGroupItemProvider.dispose();
 		if (zN_ZBSItemProvider != null) zN_ZBSItemProvider.dispose();
-		if (zN_ZBS_Allg_AttributeGroupItemProvider != null) zN_ZBS_Allg_AttributeGroupItemProvider.dispose();
 		if (zugvorbereitungsmeldung_TypeClassItemProvider != null) zugvorbereitungsmeldung_TypeClassItemProvider.dispose();
 	}
 

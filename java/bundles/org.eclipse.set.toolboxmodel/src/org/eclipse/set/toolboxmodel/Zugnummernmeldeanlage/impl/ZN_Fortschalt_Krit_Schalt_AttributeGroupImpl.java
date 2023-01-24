@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl;
 
@@ -12,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Besonderes_Schaltkriterium_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Telegrammwiederholung_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Fortschalt_Krit_Schalt_AttributeGroup;

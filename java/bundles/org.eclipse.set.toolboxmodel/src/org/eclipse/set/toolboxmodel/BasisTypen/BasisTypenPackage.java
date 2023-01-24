@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen;
 
@@ -30,9 +37,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -51,9 +56,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -72,9 +75,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -93,9 +94,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -114,9 +113,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -135,9 +132,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -156,9 +151,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -177,9 +170,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -198,9 +189,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -219,9 +208,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -240,9 +227,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -261,9 +246,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -282,9 +265,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -303,9 +284,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -324,9 +303,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -345,9 +322,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -366,9 +341,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -387,9 +360,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -408,9 +379,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -429,9 +398,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -450,9 +417,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -471,9 +436,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -492,9 +455,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -513,9 +474,7 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -534,9 +493,26 @@ import org.eclipse.emf.ecore.EReference;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -596,7 +572,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BASIS_ATTRIBUT_ATTRIBUTE_GROUP = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -633,7 +609,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_AUSSENANLAGE_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -761,7 +737,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_LAGEPLAN_KURZ_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -807,7 +783,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_LAGEPLAN_LANG_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -853,7 +829,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_TABELLE_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -899,7 +875,7 @@ public interface BasisTypenPackage extends EPackage {
 	int DATUM_AUSLIEFERUNG_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -935,68 +911,41 @@ public interface BasisTypenPackage extends EPackage {
 	int DATUM_AUSLIEFERUNG_TYPE_CLASS_OPERATION_COUNT = BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Eigenschaften_Datei_AttributeGroupImpl <em>Eigenschaften Datei Attribute Group</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.ID_Bearbeitungsvermerk_TypeClassImpl <em>ID Bearbeitungsvermerk Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.Eigenschaften_Datei_AttributeGroupImpl
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getEigenschaften_Datei_AttributeGroup()
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.ID_Bearbeitungsvermerk_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getID_Bearbeitungsvermerk_TypeClass()
 	 * @generated
 	 */
-	int EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP = 7;
+	int ID_BEARBEITUNGSVERMERK_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>Datum Auslieferung</b></em>' containment reference.
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__DATUM_AUSLIEFERUNG = 0;
+	int ID_BEARBEITUNGSVERMERK_TYPE_CLASS__WERT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Pruefsumme</b></em>' containment reference.
+	 * The number of structural features of the '<em>ID Bearbeitungsvermerk Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__PRUEFSUMME = 1;
+	int ID_BEARBEITUNGSVERMERK_TYPE_CLASS_FEATURE_COUNT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Pruefsumme Art</b></em>' containment reference.
+	 * The number of operations of the '<em>ID Bearbeitungsvermerk Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__PRUEFSUMME_ART = 2;
-
-	/**
-	 * The feature id for the '<em><b>Version Auslieferung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__VERSION_AUSLIEFERUNG = 3;
-
-	/**
-	 * The number of structural features of the '<em>Eigenschaften Datei Attribute Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Eigenschaften Datei Attribute Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+	int ID_BEARBEITUNGSVERMERK_TYPE_CLASS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Kennzahl_TypeClassImpl <em>Kennzahl Type Class</em>}' class.
@@ -1009,7 +958,7 @@ public interface BasisTypenPackage extends EPackage {
 	int KENNZAHL_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1055,7 +1004,7 @@ public interface BasisTypenPackage extends EPackage {
 	int OERTLICHER_ELEMENTNAME_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1091,6 +1040,70 @@ public interface BasisTypenPackage extends EPackage {
 	int OERTLICHER_ELEMENTNAME_TYPE_CLASS_OPERATION_COUNT = BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Pruefmerkmale_Daten_AttributeGroupImpl <em>Pruefmerkmale Daten Attribute Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.Pruefmerkmale_Daten_AttributeGroupImpl
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getPruefmerkmale_Daten_AttributeGroup()
+	 * @generated
+	 */
+	int PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP = 10;
+
+	/**
+	 * The feature id for the '<em><b>Datum Auslieferung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__DATUM_AUSLIEFERUNG = 0;
+
+	/**
+	 * The feature id for the '<em><b>Pruefsumme</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__PRUEFSUMME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Pruefsumme Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__PRUEFSUMME_ART = 2;
+
+	/**
+	 * The feature id for the '<em><b>Version Auslieferung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__VERSION_AUSLIEFERUNG = 3;
+
+	/**
+	 * The number of structural features of the '<em>Pruefmerkmale Daten Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Pruefmerkmale Daten Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Pruefsumme_Art_TypeClassImpl <em>Pruefsumme Art Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1098,10 +1111,10 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getPruefsumme_Art_TypeClass()
 	 * @generated
 	 */
-	int PRUEFSUMME_ART_TYPE_CLASS = 10;
+	int PRUEFSUMME_ART_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1144,10 +1157,10 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getPruefsumme_TypeClass()
 	 * @generated
 	 */
-	int PRUEFSUMME_TYPE_CLASS = 11;
+	int PRUEFSUMME_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1190,10 +1203,10 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getVersion_Auslieferung_TypeClass()
 	 * @generated
 	 */
-	int VERSION_AUSLIEFERUNG_TYPE_CLASS = 12;
+	int VERSION_AUSLIEFERUNG_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1236,10 +1249,10 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getZeiger_TypeClass()
 	 * @generated
 	 */
-	int ZEIGER_TYPE_CLASS = 13;
+	int ZEIGER_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1282,7 +1295,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMAnwendungssystem()
 	 * @generated
 	 */
-	int ENUM_ANWENDUNGSSYSTEM = 14;
+	int ENUM_ANWENDUNGSSYSTEM = 15;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMAusrichtung <em>ENUM Ausrichtung</em>}' enum.
@@ -1292,7 +1305,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMAusrichtung()
 	 * @generated
 	 */
-	int ENUM_AUSRICHTUNG = 15;
+	int ENUM_AUSRICHTUNG = 16;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMBremsweg <em>ENUM Bremsweg</em>}' enum.
@@ -1302,7 +1315,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMBremsweg()
 	 * @generated
 	 */
-	int ENUM_BREMSWEG = 16;
+	int ENUM_BREMSWEG = 17;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom <em>ENUM Fahrstrom</em>}' enum.
@@ -1312,7 +1325,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMFahrstrom()
 	 * @generated
 	 */
-	int ENUM_FAHRSTROM = 17;
+	int ENUM_FAHRSTROM = 18;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts <em>ENUM Links Rechts</em>}' enum.
@@ -1322,7 +1335,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMLinksRechts()
 	 * @generated
 	 */
-	int ENUM_LINKS_RECHTS = 18;
+	int ENUM_LINKS_RECHTS = 19;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMPruefsummeArt <em>ENUM Pruefsumme Art</em>}' enum.
@@ -1332,7 +1345,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMPruefsummeArt()
 	 * @generated
 	 */
-	int ENUM_PRUEFSUMME_ART = 19;
+	int ENUM_PRUEFSUMME_ART = 20;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMRegionalbereich <em>ENUM Regionalbereich</em>}' enum.
@@ -1342,7 +1355,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMRegionalbereich()
 	 * @generated
 	 */
-	int ENUM_REGIONALBEREICH = 20;
+	int ENUM_REGIONALBEREICH = 21;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung <em>ENUM Wirkrichtung</em>}' enum.
@@ -1352,7 +1365,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMWirkrichtung()
 	 * @generated
 	 */
-	int ENUM_WIRKRICHTUNG = 21;
+	int ENUM_WIRKRICHTUNG = 22;
 
 	/**
 	 * The meta object id for the '<em>Anwendungssystem Type</em>' data type.
@@ -1362,7 +1375,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getAnwendungssystem_Type()
 	 * @generated
 	 */
-	int ANWENDUNGSSYSTEM_TYPE = 22;
+	int ANWENDUNGSSYSTEM_TYPE = 23;
 
 	/**
 	 * The meta object id for the '<em>Ausrichtung Type</em>' data type.
@@ -1372,7 +1385,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getAusrichtung_Type()
 	 * @generated
 	 */
-	int AUSRICHTUNG_TYPE = 23;
+	int AUSRICHTUNG_TYPE = 24;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Aussenanlage Type</em>' data type.
@@ -1382,7 +1395,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getBezeichnung_Aussenanlage_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_AUSSENANLAGE_TYPE = 24;
+	int BEZEICHNUNG_AUSSENANLAGE_TYPE = 25;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Lageplan Kurz Type</em>' data type.
@@ -1392,7 +1405,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getBezeichnung_Lageplan_Kurz_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_LAGEPLAN_KURZ_TYPE = 25;
+	int BEZEICHNUNG_LAGEPLAN_KURZ_TYPE = 26;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Lageplan Lang Type</em>' data type.
@@ -1402,7 +1415,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getBezeichnung_Lageplan_Lang_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_LAGEPLAN_LANG_TYPE = 26;
+	int BEZEICHNUNG_LAGEPLAN_LANG_TYPE = 27;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Tabelle Type</em>' data type.
@@ -1412,7 +1425,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getBezeichnung_Tabelle_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_TABELLE_TYPE = 27;
+	int BEZEICHNUNG_TABELLE_TYPE = 28;
 
 	/**
 	 * The meta object id for the '<em>Bremsweg Type</em>' data type.
@@ -1422,7 +1435,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getBremsweg_Type()
 	 * @generated
 	 */
-	int BREMSWEG_TYPE = 28;
+	int BREMSWEG_TYPE = 29;
 
 	/**
 	 * The meta object id for the '<em>Dateiname Type</em>' data type.
@@ -1432,7 +1445,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getDateiname_Type()
 	 * @generated
 	 */
-	int DATEINAME_TYPE = 29;
+	int DATEINAME_TYPE = 30;
 
 	/**
 	 * The meta object id for the '<em>Datum Auslieferung Type</em>' data type.
@@ -1442,7 +1455,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getDatum_Auslieferung_Type()
 	 * @generated
 	 */
-	int DATUM_AUSLIEFERUNG_TYPE = 30;
+	int DATUM_AUSLIEFERUNG_TYPE = 31;
 
 	/**
 	 * The meta object id for the '<em>ENUM Anwendungssystem Object</em>' data type.
@@ -1452,7 +1465,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMAnwendungssystemObject()
 	 * @generated
 	 */
-	int ENUM_ANWENDUNGSSYSTEM_OBJECT = 31;
+	int ENUM_ANWENDUNGSSYSTEM_OBJECT = 32;
 
 	/**
 	 * The meta object id for the '<em>ENUM Ausrichtung Object</em>' data type.
@@ -1462,7 +1475,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMAusrichtungObject()
 	 * @generated
 	 */
-	int ENUM_AUSRICHTUNG_OBJECT = 32;
+	int ENUM_AUSRICHTUNG_OBJECT = 33;
 
 	/**
 	 * The meta object id for the '<em>ENUM Bremsweg Object</em>' data type.
@@ -1472,7 +1485,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMBremswegObject()
 	 * @generated
 	 */
-	int ENUM_BREMSWEG_OBJECT = 33;
+	int ENUM_BREMSWEG_OBJECT = 34;
 
 	/**
 	 * The meta object id for the '<em>ENUM Fahrstrom Object</em>' data type.
@@ -1482,7 +1495,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMFahrstromObject()
 	 * @generated
 	 */
-	int ENUM_FAHRSTROM_OBJECT = 34;
+	int ENUM_FAHRSTROM_OBJECT = 35;
 
 	/**
 	 * The meta object id for the '<em>ENUM Links Rechts Object</em>' data type.
@@ -1492,7 +1505,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMLinksRechtsObject()
 	 * @generated
 	 */
-	int ENUM_LINKS_RECHTS_OBJECT = 35;
+	int ENUM_LINKS_RECHTS_OBJECT = 36;
 
 	/**
 	 * The meta object id for the '<em>ENUM Pruefsumme Art Object</em>' data type.
@@ -1502,7 +1515,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMPruefsummeArtObject()
 	 * @generated
 	 */
-	int ENUM_PRUEFSUMME_ART_OBJECT = 36;
+	int ENUM_PRUEFSUMME_ART_OBJECT = 37;
 
 	/**
 	 * The meta object id for the '<em>ENUM Regionalbereich Object</em>' data type.
@@ -1512,7 +1525,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMRegionalbereichObject()
 	 * @generated
 	 */
-	int ENUM_REGIONALBEREICH_OBJECT = 37;
+	int ENUM_REGIONALBEREICH_OBJECT = 38;
 
 	/**
 	 * The meta object id for the '<em>ENUM Wirkrichtung Object</em>' data type.
@@ -1522,17 +1535,17 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getENUMWirkrichtungObject()
 	 * @generated
 	 */
-	int ENUM_WIRKRICHTUNG_OBJECT = 38;
+	int ENUM_WIRKRICHTUNG_OBJECT = 39;
 
 	/**
 	 * The meta object id for the '<em>Fahrstrom Type</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.util.List
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getFahrstrom_Type()
 	 * @generated
 	 */
-	int FAHRSTROM_TYPE = 39;
+	int FAHRSTROM_TYPE = 40;
 
 	/**
 	 * The meta object id for the '<em>Frei Text Type</em>' data type.
@@ -1542,7 +1555,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getFreiText_Type()
 	 * @generated
 	 */
-	int FREI_TEXT_TYPE = 40;
+	int FREI_TEXT_TYPE = 41;
 
 	/**
 	 * The meta object id for the '<em>Geschwindigkeit Type</em>' data type.
@@ -1552,7 +1565,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getGeschwindigkeit_Type()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_TYPE = 41;
+	int GESCHWINDIGKEIT_TYPE = 42;
 
 	/**
 	 * The meta object id for the '<em>GUID Type</em>' data type.
@@ -1562,7 +1575,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getGUID_Type()
 	 * @generated
 	 */
-	int GUID_TYPE = 42;
+	int GUID_TYPE = 43;
 
 	/**
 	 * The meta object id for the '<em>Hersteller Type</em>' data type.
@@ -1572,7 +1585,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getHersteller_Type()
 	 * @generated
 	 */
-	int HERSTELLER_TYPE = 43;
+	int HERSTELLER_TYPE = 44;
 
 	/**
 	 * The meta object id for the '<em>Kennzahl Type</em>' data type.
@@ -1582,7 +1595,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getKennzahl_Type()
 	 * @generated
 	 */
-	int KENNZAHL_TYPE = 44;
+	int KENNZAHL_TYPE = 45;
 
 	/**
 	 * The meta object id for the '<em>Kilometrierung Type</em>' data type.
@@ -1592,7 +1605,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getKilometrierung_Type()
 	 * @generated
 	 */
-	int KILOMETRIERUNG_TYPE = 45;
+	int KILOMETRIERUNG_TYPE = 46;
 
 	/**
 	 * The meta object id for the '<em>Links Rechts Type</em>' data type.
@@ -1602,7 +1615,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getLinksRechts_Type()
 	 * @generated
 	 */
-	int LINKS_RECHTS_TYPE = 46;
+	int LINKS_RECHTS_TYPE = 47;
 
 	/**
 	 * The meta object id for the '<em>Meter Type</em>' data type.
@@ -1612,7 +1625,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getMeter_Type()
 	 * @generated
 	 */
-	int METER_TYPE = 47;
+	int METER_TYPE = 48;
 
 	/**
 	 * The meta object id for the '<em>Objektname Type</em>' data type.
@@ -1622,7 +1635,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getObjektname_Type()
 	 * @generated
 	 */
-	int OBJEKTNAME_TYPE = 48;
+	int OBJEKTNAME_TYPE = 49;
 
 	/**
 	 * The meta object id for the '<em>Oertlicher Elementname Type</em>' data type.
@@ -1632,17 +1645,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getOertlicher_Elementname_Type()
 	 * @generated
 	 */
-	int OERTLICHER_ELEMENTNAME_TYPE = 49;
-
-	/**
-	 * The meta object id for the '<em>Pruefsumme Type</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.lang.String
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getPruefsumme_Type()
-	 * @generated
-	 */
-	int PRUEFSUMME_TYPE = 50;
+	int OERTLICHER_ELEMENTNAME_TYPE = 50;
 
 	/**
 	 * The meta object id for the '<em>Regionalbereich Type</em>' data type.
@@ -1716,10 +1719,10 @@ public interface BasisTypenPackage extends EPackage {
 	EClass getBasisAttribut_AttributeGroup();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup#getIDBearbeitungsvermerk <em>ID Bearbeitungsvermerk</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup#getIDBearbeitungsvermerk <em>ID Bearbeitungsvermerk</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>ID Bearbeitungsvermerk</em>'.
+	 * @return the meta object for the containment reference list '<em>ID Bearbeitungsvermerk</em>'.
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup#getIDBearbeitungsvermerk()
 	 * @see #getBasisAttribut_AttributeGroup()
 	 * @generated
@@ -1908,58 +1911,25 @@ public interface BasisTypenPackage extends EPackage {
 	EAttribute getDatum_Auslieferung_TypeClass_Wert();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup <em>Eigenschaften Datei Attribute Group</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass <em>ID Bearbeitungsvermerk Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Eigenschaften Datei Attribute Group</em>'.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup
+	 * @return the meta object for class '<em>ID Bearbeitungsvermerk Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass
 	 * @generated
 	 */
-	EClass getEigenschaften_Datei_AttributeGroup();
+	EClass getID_Bearbeitungsvermerk_TypeClass();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getDatumAuslieferung <em>Datum Auslieferung</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass#getWert <em>Wert</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Datum Auslieferung</em>'.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getDatumAuslieferung()
-	 * @see #getEigenschaften_Datei_AttributeGroup()
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass#getWert()
+	 * @see #getID_Bearbeitungsvermerk_TypeClass()
 	 * @generated
 	 */
-	EReference getEigenschaften_Datei_AttributeGroup_DatumAuslieferung();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getPruefsumme <em>Pruefsumme</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Pruefsumme</em>'.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getPruefsumme()
-	 * @see #getEigenschaften_Datei_AttributeGroup()
-	 * @generated
-	 */
-	EReference getEigenschaften_Datei_AttributeGroup_Pruefsumme();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getPruefsummeArt <em>Pruefsumme Art</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Pruefsumme Art</em>'.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getPruefsummeArt()
-	 * @see #getEigenschaften_Datei_AttributeGroup()
-	 * @generated
-	 */
-	EReference getEigenschaften_Datei_AttributeGroup_PruefsummeArt();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getVersionAuslieferung <em>Version Auslieferung</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Version Auslieferung</em>'.
-	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup#getVersionAuslieferung()
-	 * @see #getEigenschaften_Datei_AttributeGroup()
-	 * @generated
-	 */
-	EReference getEigenschaften_Datei_AttributeGroup_VersionAuslieferung();
+	EAttribute getID_Bearbeitungsvermerk_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.BasisTypen.Kennzahl_TypeClass <em>Kennzahl Type Class</em>}'.
@@ -2002,6 +1972,60 @@ public interface BasisTypenPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOertlicher_Elementname_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup <em>Pruefmerkmale Daten Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pruefmerkmale Daten Attribute Group</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup
+	 * @generated
+	 */
+	EClass getPruefmerkmale_Daten_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getDatumAuslieferung <em>Datum Auslieferung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Datum Auslieferung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getDatumAuslieferung()
+	 * @see #getPruefmerkmale_Daten_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPruefmerkmale_Daten_AttributeGroup_DatumAuslieferung();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getPruefsumme <em>Pruefsumme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pruefsumme</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getPruefsumme()
+	 * @see #getPruefmerkmale_Daten_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPruefmerkmale_Daten_AttributeGroup_Pruefsumme();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getPruefsummeArt <em>Pruefsumme Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pruefsumme Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getPruefsummeArt()
+	 * @see #getPruefmerkmale_Daten_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPruefmerkmale_Daten_AttributeGroup_PruefsummeArt();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getVersionAuslieferung <em>Version Auslieferung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Version Auslieferung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup#getVersionAuslieferung()
+	 * @see #getPruefmerkmale_Daten_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPruefmerkmale_Daten_AttributeGroup_VersionAuslieferung();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefsumme_Art_TypeClass <em>Pruefsumme Art Type Class</em>}'.
@@ -2251,6 +2275,9 @@ public interface BasisTypenPackage extends EPackage {
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMBremsweg <em>Bremsweg Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Bremsweg als Grundlage für die Dimensionierung der zugehörigen Strecke. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen.
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Bremsweg Type</em>'.
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMBremsweg
 	 * @model instanceClass="org.eclipse.set.toolboxmodel.BasisTypen.ENUMBremsweg"
@@ -2386,7 +2413,7 @@ public interface BasisTypenPackage extends EPackage {
 	EDataType getENUMWirkrichtungObject();
 
 	/**
-	 * Returns the meta object for data type '{@link java.util.List <em>Fahrstrom Type</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom <em>Fahrstrom Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
@@ -2394,9 +2421,9 @@ public interface BasisTypenPackage extends EPackage {
      * 
      * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Fahrstrom Type</em>'.
-	 * @see java.util.List
-	 * @model instanceClass="java.util.List"
-	 *        extendedMetaData="name='TFahrstrom' itemType='ENUMFahrstrom'"
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom"
+	 *        extendedMetaData="name='TFahrstrom' baseType='ENUMFahrstrom'"
 	 * @generated
 	 */
 	EDataType getFahrstrom_Type();
@@ -2471,9 +2498,9 @@ public interface BasisTypenPackage extends EPackage {
      * 
      * Die ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!
      * 
-     * Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \„HH Kennzahl 06\“ und \„HHZX Kennzahl 30\“).
+     * Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten "HH Kennzahl 06" und "HHZX Kennzahl 30").
      * 
-     * Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \„Üst Giften HGIF\“ und \„Üst Ritterkamp HRIT\“.
+     * Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit "Üst Giften HGIF" und "Üst Ritterkamp HRIT".
      * 
      * In Stellbereichen von Bedienbezirken werden für Betriebsstellen (z. B. Bahnhöfe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.
      * 
@@ -2535,7 +2562,7 @@ public interface BasisTypenPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * Attribute dieses Basistyps können den ENUM-Wert 'links' oder 'rechts' annehmen.
+     * Attribute dieses Basistyps können den ENUM-Wert "links" oder "rechts" annehmen.
      * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Links Rechts Type</em>'.
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts
@@ -2592,22 +2619,6 @@ public interface BasisTypenPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getOertlicher_Elementname_Type();
-
-	/**
-	 * Returns the meta object for data type '{@link java.lang.String <em>Pruefsumme Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * <!-- begin-model-doc -->
-     * Prüfsumme für die im Objekt Binaerdatei enthaltene Datei.
-     * 
-     * <!-- end-model-doc -->
-	 * @return the meta object for data type '<em>Pruefsumme Type</em>'.
-	 * @see java.lang.String
-	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='TPruefsumme' baseType='TText'"
-	 * @generated
-	 */
-	EDataType getPruefsumme_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMRegionalbereich <em>Regionalbereich Type</em>}'.
@@ -2735,7 +2746,7 @@ public interface BasisTypenPackage extends EPackage {
 		EClass BASIS_ATTRIBUT_ATTRIBUTE_GROUP = eINSTANCE.getBasisAttribut_AttributeGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2891,46 +2902,22 @@ public interface BasisTypenPackage extends EPackage {
 		EAttribute DATUM_AUSLIEFERUNG_TYPE_CLASS__WERT = eINSTANCE.getDatum_Auslieferung_TypeClass_Wert();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Eigenschaften_Datei_AttributeGroupImpl <em>Eigenschaften Datei Attribute Group</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.ID_Bearbeitungsvermerk_TypeClassImpl <em>ID Bearbeitungsvermerk Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.Eigenschaften_Datei_AttributeGroupImpl
-		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getEigenschaften_Datei_AttributeGroup()
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.ID_Bearbeitungsvermerk_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getID_Bearbeitungsvermerk_TypeClass()
 		 * @generated
 		 */
-		EClass EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP = eINSTANCE.getEigenschaften_Datei_AttributeGroup();
+		EClass ID_BEARBEITUNGSVERMERK_TYPE_CLASS = eINSTANCE.getID_Bearbeitungsvermerk_TypeClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Datum Auslieferung</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__DATUM_AUSLIEFERUNG = eINSTANCE.getEigenschaften_Datei_AttributeGroup_DatumAuslieferung();
-
-		/**
-		 * The meta object literal for the '<em><b>Pruefsumme</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__PRUEFSUMME = eINSTANCE.getEigenschaften_Datei_AttributeGroup_Pruefsumme();
-
-		/**
-		 * The meta object literal for the '<em><b>Pruefsumme Art</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__PRUEFSUMME_ART = eINSTANCE.getEigenschaften_Datei_AttributeGroup_PruefsummeArt();
-
-		/**
-		 * The meta object literal for the '<em><b>Version Auslieferung</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP__VERSION_AUSLIEFERUNG = eINSTANCE.getEigenschaften_Datei_AttributeGroup_VersionAuslieferung();
+		EAttribute ID_BEARBEITUNGSVERMERK_TYPE_CLASS__WERT = eINSTANCE.getID_Bearbeitungsvermerk_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Kennzahl_TypeClassImpl <em>Kennzahl Type Class</em>}' class.
@@ -2967,6 +2954,48 @@ public interface BasisTypenPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OERTLICHER_ELEMENTNAME_TYPE_CLASS__WERT = eINSTANCE.getOertlicher_Elementname_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Pruefmerkmale_Daten_AttributeGroupImpl <em>Pruefmerkmale Daten Attribute Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.Pruefmerkmale_Daten_AttributeGroupImpl
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getPruefmerkmale_Daten_AttributeGroup()
+		 * @generated
+		 */
+		EClass PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP = eINSTANCE.getPruefmerkmale_Daten_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Datum Auslieferung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__DATUM_AUSLIEFERUNG = eINSTANCE.getPruefmerkmale_Daten_AttributeGroup_DatumAuslieferung();
+
+		/**
+		 * The meta object literal for the '<em><b>Pruefsumme</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__PRUEFSUMME = eINSTANCE.getPruefmerkmale_Daten_AttributeGroup_Pruefsumme();
+
+		/**
+		 * The meta object literal for the '<em><b>Pruefsumme Art</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__PRUEFSUMME_ART = eINSTANCE.getPruefmerkmale_Daten_AttributeGroup_PruefsummeArt();
+
+		/**
+		 * The meta object literal for the '<em><b>Version Auslieferung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP__VERSION_AUSLIEFERUNG = eINSTANCE.getPruefmerkmale_Daten_AttributeGroup_VersionAuslieferung();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.BasisTypen.impl.Pruefsumme_Art_TypeClassImpl <em>Pruefsumme Art Type Class</em>}' class.
@@ -3294,7 +3323,7 @@ public interface BasisTypenPackage extends EPackage {
 		 * The meta object literal for the '<em>Fahrstrom Type</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.util.List
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom
 		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getFahrstrom_Type()
 		 * @generated
 		 */
@@ -3399,16 +3428,6 @@ public interface BasisTypenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType OERTLICHER_ELEMENTNAME_TYPE = eINSTANCE.getOertlicher_Elementname_Type();
-
-		/**
-		 * The meta object literal for the '<em>Pruefsumme Type</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.lang.String
-		 * @see org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisTypenPackageImpl#getPruefsumme_Type()
-		 * @generated
-		 */
-		EDataType PRUEFSUMME_TYPE = eINSTANCE.getPruefsumme_Type();
 
 		/**
 		 * The meta object literal for the '<em>Regionalbereich Type</em>' data type.

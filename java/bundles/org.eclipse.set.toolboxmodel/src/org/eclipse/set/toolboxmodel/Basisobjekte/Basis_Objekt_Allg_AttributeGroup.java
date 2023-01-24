@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
@@ -55,7 +62,7 @@ public interface Basis_Objekt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Besonderer Zustand eines Objekts im Planungsbereich. Ist dieses Attribut nicht vorhanden, so ist das LST-Objekt „in Betrieb“. Die verwendeten ENUM-Werte haben folgende Bedeutung: abgedeckt: Objekt, das im Knoten-Kanten-Modell verortet bleibt, technisch weiterhin in Betrieb bleibt, jedoch seine betriebliche Funktion zeitweilig nicht mehr erfüllt (anderweitig außer_Betrieb gesetzt, z. B. abgedeckte Signale [außer_Betrieb mit besonderer Maßnahme] oder Signale am Baugleis [außer_Betrieb ohne besondere Maßnahme]). ausser_Betrieb: Objekt, das im Knoten-Kanten-Modell verortet bleibt, aber seine betriebliche Funktion zeitweilig nicht mehr erfüllt und auch technisch außer Betrieb gesetzt ist. ausser_Betrieb_vorbereitend: Objekt, das im Knoten-Kanten-Modell erstmalig neu verortet wird, aber seine betriebliche Funktion zeitweilig noch nicht erfüllt und auch technisch noch nicht in Betrieb gesetzt ist, jedoch zu einem späteren Zeitpunkt (z. B. nachfolgender Bauzustand) in Betrieb gesetzt werden soll. sonstige: Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Bisher keine eindeutige Abbildung, besonderer Objektzustand meist Fußnoteneintrag in Planungsunterlagen.
+	 * Besonderer Zustand eines Objekts im Planungsbereich. Ist dieses Attribut nicht vorhanden, so ist das Objekt am geplanten/vorgesehenen Standort und angesteuert. "Nicht gültig" sind gemäß Betra als nicht gültig erklärte Signale im Baugleis [gem. Ril 819.1701 (11)]. "Ungültig" sind betrieblich außer Betrieb befindliche Signale, die mit einem Ungültigkeitskreuz [gem. Ril 819.1701 (10)] versehen sind. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Bisher keine eindeutige Abbildung, besonderer Objektzustand meist Fußnoteneintrag in Planungsunterlagen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Objektzustand Besonders</em>' containment reference.
 	 * @see #setObjektzustandBesonders(Objektzustand_Besonders_TypeClass)
@@ -81,7 +88,7 @@ public interface Basis_Objekt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Datum des letzten Planungsstandes eines Objekts, Hinweis auf den Regelwerksstand zum Planungszeitpunkt. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Anhand des Regelwerksstandes lassen sich die jeweils gültigen Stände der verwendeten Regelwerke herleiten (wichtig für Bestandsschutz). Abweichungen werden auf Objektebene (Basis Objekt) über das Attribut ID Anhang Regelwerk Besonders beigefügt. Im Rahmen der Erstellung einer Planung_Einzel werden alle neuen und geänderten Objekte standardmäßig mit dem zentral einzugebenden Wert des Attributs „Datum Regelwerksstand“ der Planung_Einzel befüllt. Durch die Befüllung dürfen bereits vorhandene Angaben „ID_Anhang_Regelwerk_Besonders“ nicht überschrieben werden. Bei Abweichungen kann der LST-Fachplaner objekt- oder objektgruppenbezogen „ID_Anhang_Regelwerk_Besonders“ füllen. DB-Regelwerk Bisher ohne eindeutige Abbildung im Schriftfeld gemäß Ril 819.0103. 
+	 * Datum des letzten Planungsstandes eines Objekts, Hinweis auf den Regelwerksstand zum Planungszeitpunkt. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Anhand des Regelwerksstandes lassen sich die jeweils gültigen Stände der verwendeten Regelwerke herleiten (wichtig für Bestandsschutz). Abweichungen werden auf Objektebene (Basis Objekt) über das Attribut ID Anhang Regelwerk Besonders beigefügt. Im Rahmen der Erstellung einer Planung_Einzel werden alle neuen und geänderten Objekte standardmäßig mit dem zentral einzugebenden Wert des Attributs „Datum Regelwerksstand“ der Planung_Einzel befüllt. Durch die Befüllung dürfen bereits vorhandene Angaben „ID_Anhang_Regelwerk_Besonders“ nicht überschrieben werden. Bei Abweichungen kann der LST-Fachplaner objekt- oder objektgruppenbezogen „ID_Anhang_Regelwerk_Besonders“ füllen. DB-Regelwerk Bisher ohne eindeutige Abbildung im Schriftfeld gemäß Ril 886.0102. 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Datum Regelwerk</em>' containment reference.
 	 * @see #setDatumRegelwerk(Datum_Regelwerk_TypeClass)
@@ -107,7 +114,7 @@ public interface Basis_Objekt_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Für das Objekt abweichend geltendes Regelwerk. Verweis auf einen Anhang, aus dem der besondere Regelwerksstand eines LST-Objektes hervorgeht. Dieser gilt abweichend von dem für die Planung_Einzel festgelegten Datum Regelwerksstand. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Im Schriftfeld gemäß Ril 819.0103 dient Feld 30 "Zusätzliche Vermerke" üblicherweise zur Angabe von Regelwerksabweichungen. DB-Regelwerk Bisher eine eindeutige Abbildung als Schriftfeldeintrag gemäß Ril 819.0103. Meist Angabe im Erläuterungsbericht. 
+	 * Für das Objekt abweichend geltendes Regelwerk. Verweis auf einen Anhang, aus dem der besondere Regelwerksstand eines LST-Objektes hervorgeht. Dieser gilt abweichend von dem für die Planung_Einzel festgelegten Datum Regelwerksstand. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Im Schriftfeld gemäß Ril 886.0102 dient Feld 30 "Zusätzliche Vermerke" üblicherweise zur Angabe von Regelwerksabweichungen. DB-Regelwerk Bisher eine eindeutige Abbildung als Schriftfeldeintrag gemäß Ril 886.0102. Meist Angabe im Erläuterungsbericht. 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Anhang Regelwerk Besonders</em>' reference.
 	 * @see #isSetIDAnhangRegelwerkBesonders()

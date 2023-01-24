@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -21,12 +22,15 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom;
+
 import org.eclipse.set.toolboxmodel.BasisTypen.provider.BasisAttribut_AttributeGroupItemProvider;
 
 import org.eclipse.set.toolboxmodel.Gleis.Fahrstrom_TypeClass;
 import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Gleis.Fahrstrom_TypeClass} object.
@@ -102,7 +106,7 @@ public class Fahrstrom_TypeClassItemProvider extends BasisAttribut_AttributeGrou
 	 */
 	@Override
 	public String getText(Object object) {
-		List labelValue = ((Fahrstrom_TypeClass)object).getWert();
+		ENUMFahrstrom labelValue = ((Fahrstrom_TypeClass)object).getWert();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Fahrstrom_TypeClass_type") :

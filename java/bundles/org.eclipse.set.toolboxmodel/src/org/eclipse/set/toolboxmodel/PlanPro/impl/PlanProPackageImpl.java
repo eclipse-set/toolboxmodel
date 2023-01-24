@@ -26,6 +26,8 @@ import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl;
@@ -74,14 +76,13 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
-
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
-
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
-
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
 import org.eclipse.set.toolboxmodel.Ortung.impl.OrtungPackageImpl;
@@ -450,6 +451,13 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	private EClass planPro_SchnittstelleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass wzkInvalidIDReferenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1053,30 +1061,34 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -1093,8 +1105,8 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -1111,17 +1123,19 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 		theSignalbegriffe_Ril_301Package.loadPackage();
 
 		// Create package meta-data objects
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -1129,23 +1143,25 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -1153,7 +1169,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -1636,7 +1652,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Aussenelementansteuerung() {
+	public EReference getContainer_AttributeGroup_ATOSegmentProfile() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(1);
 	}
 
@@ -1646,7 +1662,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BahnsteigAnlage() {
+	public EReference getContainer_AttributeGroup_ATOTimingPoint() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(2);
 	}
 
@@ -1656,7 +1672,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BahnsteigDach() {
+	public EReference getContainer_AttributeGroup_ATOTSInstanz() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(3);
 	}
 
@@ -1666,7 +1682,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BahnsteigKante() {
+	public EReference getContainer_AttributeGroup_Aussenelementansteuerung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(4);
 	}
 
@@ -1676,7 +1692,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BahnsteigZugang() {
+	public EReference getContainer_AttributeGroup_BahnsteigAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(5);
 	}
 
@@ -1686,7 +1702,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Balise() {
+	public EReference getContainer_AttributeGroup_BahnsteigDach() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(6);
 	}
 
@@ -1696,7 +1712,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Bearbeitungsvermerk() {
+	public EReference getContainer_AttributeGroup_BahnsteigKante() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(7);
 	}
 
@@ -1706,7 +1722,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienAnrueckabschnitt() {
+	public EReference getContainer_AttributeGroup_BahnsteigZugang() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(8);
 	}
 
@@ -1716,7 +1732,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienAnzeigeElement() {
+	public EReference getContainer_AttributeGroup_Balise() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(9);
 	}
 
@@ -1726,7 +1742,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienBezirk() {
+	public EReference getContainer_AttributeGroup_Bearbeitungsvermerk() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(10);
 	}
 
@@ -1736,7 +1752,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienEinrichtungOertlich() {
+	public EReference getContainer_AttributeGroup_BedienAnrueckabschnitt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(11);
 	}
 
@@ -1746,7 +1762,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienGBT() {
+	public EReference getContainer_AttributeGroup_BedienAnzeigeElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(12);
 	}
 
@@ -1756,7 +1772,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienOberflaeche() {
+	public EReference getContainer_AttributeGroup_BedienBezirk() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(13);
 	}
 
@@ -1766,7 +1782,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienOberflaecheBild() {
+	public EReference getContainer_AttributeGroup_BedienEinrichtungOertlich() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(14);
 	}
 
@@ -1776,7 +1792,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienOertlichkeit() {
+	public EReference getContainer_AttributeGroup_BedienGBT() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(15);
 	}
 
@@ -1786,7 +1802,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienPlatz() {
+	public EReference getContainer_AttributeGroup_BedienOberflaeche() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(16);
 	}
 
@@ -1796,7 +1812,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienStandort() {
+	public EReference getContainer_AttributeGroup_BedienOberflaecheBild() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(17);
 	}
 
@@ -1806,7 +1822,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BedienZentrale() {
+	public EReference getContainer_AttributeGroup_BedienOertlichkeit() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(18);
 	}
 
@@ -1816,7 +1832,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Binaerdatei() {
+	public EReference getContainer_AttributeGroup_BedienPlatz() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(19);
 	}
 
@@ -1826,7 +1842,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BlockAnlage() {
+	public EReference getContainer_AttributeGroup_BedienStandort() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(20);
 	}
 
@@ -1836,7 +1852,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BlockElement() {
+	public EReference getContainer_AttributeGroup_BedienZentrale() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(21);
 	}
 
@@ -1846,7 +1862,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BlockStrecke() {
+	public EReference getContainer_AttributeGroup_Binaerdaten() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(22);
 	}
 
@@ -1856,7 +1872,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEAnlage() {
+	public EReference getContainer_AttributeGroup_BlockAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(23);
 	}
 
@@ -1866,7 +1882,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEAnlageStrasse() {
+	public EReference getContainer_AttributeGroup_BlockElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(24);
 	}
 
@@ -1876,7 +1892,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEAnlageV() {
+	public EReference getContainer_AttributeGroup_BlockStrecke() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(25);
 	}
 
@@ -1886,7 +1902,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEAusschaltung() {
+	public EReference getContainer_AttributeGroup_BUEAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(26);
 	}
 
@@ -1896,7 +1912,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEBedienAnzeigeElement() {
+	public EReference getContainer_AttributeGroup_BUEAnlageStrasse() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(27);
 	}
 
@@ -1906,7 +1922,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEDeckendesSignalZuordnung() {
+	public EReference getContainer_AttributeGroup_BUEAnlageV() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(28);
 	}
 
@@ -1916,7 +1932,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEEinschaltung() {
+	public EReference getContainer_AttributeGroup_BUEAusschaltung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(29);
 	}
 
@@ -1926,7 +1942,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEEinschaltungZuordnung() {
+	public EReference getContainer_AttributeGroup_BUEBedienAnzeigeElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(30);
 	}
 
@@ -1936,7 +1952,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEGefahrraumEckpunkt() {
+	public EReference getContainer_AttributeGroup_BUEDeckendesSignalZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(31);
 	}
 
@@ -1946,7 +1962,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEGleisbezogenerGefahrraum() {
+	public EReference getContainer_AttributeGroup_BUEEinschaltung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(32);
 	}
 
@@ -1956,7 +1972,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEKante() {
+	public EReference getContainer_AttributeGroup_BUEEinschaltungZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(33);
 	}
 
@@ -1966,7 +1982,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEKreuzungsplan() {
+	public EReference getContainer_AttributeGroup_BUEGefahrraumEckpunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(34);
 	}
 
@@ -1976,7 +1992,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUESchnittstelle() {
+	public EReference getContainer_AttributeGroup_BUEGleisbezogenerGefahrraum() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(35);
 	}
 
@@ -1986,7 +2002,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUESpezifischesSignal() {
+	public EReference getContainer_AttributeGroup_BUEKante() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(36);
 	}
 
@@ -1996,7 +2012,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_BUEWSFstrZuordnung() {
+	public EReference getContainer_AttributeGroup_BUEKreuzungsplan() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(37);
 	}
 
@@ -2006,7 +2022,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Datenpunkt() {
+	public EReference getContainer_AttributeGroup_BUESchnittstelle() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(38);
 	}
 
@@ -2016,7 +2032,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_DatenpunktLink() {
+	public EReference getContainer_AttributeGroup_BUESpezifischesSignal() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(39);
 	}
 
@@ -2026,7 +2042,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ESTWZentraleinheit() {
+	public EReference getContainer_AttributeGroup_BUEWSFstrZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(40);
 	}
 
@@ -2036,7 +2052,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ETCSKante() {
+	public EReference getContainer_AttributeGroup_Datenpunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(41);
 	}
 
@@ -2046,7 +2062,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ETCSKnoten() {
+	public EReference getContainer_AttributeGroup_DatenpunktLink() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(42);
 	}
 
@@ -2056,7 +2072,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ETCSSignal() {
+	public EReference getContainer_AttributeGroup_ESTWZentraleinheit() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(43);
 	}
 
@@ -2066,7 +2082,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ETCSWKr() {
+	public EReference getContainer_AttributeGroup_ETCSKante() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(44);
 	}
 
@@ -2076,7 +2092,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_EVModul() {
+	public EReference getContainer_AttributeGroup_ETCSKnoten() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(45);
 	}
 
@@ -2086,7 +2102,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Fachtelegramm() {
+	public EReference getContainer_AttributeGroup_ETCSRichtungsanzeige() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(46);
 	}
 
@@ -2096,7 +2112,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FlaFreimeldeZuordnung() {
+	public EReference getContainer_AttributeGroup_ETCSSignal() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(47);
 	}
 
@@ -2106,7 +2122,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FlaSchutz() {
+	public EReference getContainer_AttributeGroup_ETCSWKr() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(48);
 	}
 
@@ -2116,7 +2132,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FlaZwieschutz() {
+	public EReference getContainer_AttributeGroup_EVModul() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(49);
 	}
 
@@ -2126,7 +2142,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FMAAnlage() {
+	public EReference getContainer_AttributeGroup_Fachtelegramm() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(50);
 	}
 
@@ -2136,7 +2152,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FMAElement() {
+	public EReference getContainer_AttributeGroup_FlaFreimeldeZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(51);
 	}
 
@@ -2146,7 +2162,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FMAKomponente() {
+	public EReference getContainer_AttributeGroup_FlaSchutz() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(52);
 	}
 
@@ -2156,7 +2172,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrAbhaengigkeit() {
+	public EReference getContainer_AttributeGroup_FlaZwieschutz() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(53);
 	}
 
@@ -2166,7 +2182,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrAneinander() {
+	public EReference getContainer_AttributeGroup_FMAAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(54);
 	}
 
@@ -2176,7 +2192,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrAneinanderZuordnung() {
+	public EReference getContainer_AttributeGroup_FMAElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(55);
 	}
 
@@ -2186,7 +2202,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrDWeg() {
+	public EReference getContainer_AttributeGroup_FMAKomponente() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(56);
 	}
 
@@ -2196,7 +2212,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrDWegWKr() {
+	public EReference getContainer_AttributeGroup_FstrAbhaengigkeit() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(57);
 	}
 
@@ -2206,7 +2222,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrFahrweg() {
+	public EReference getContainer_AttributeGroup_FstrAneinander() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(58);
 	}
 
@@ -2216,7 +2232,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrNichthaltfall() {
+	public EReference getContainer_AttributeGroup_FstrAneinanderZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(59);
 	}
 
@@ -2226,7 +2242,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrRangierFlaZuordnung() {
+	public EReference getContainer_AttributeGroup_FstrDWeg() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(60);
 	}
 
@@ -2236,7 +2252,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrSignalisierung() {
+	public EReference getContainer_AttributeGroup_FstrDWegWKr() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(61);
 	}
 
@@ -2246,7 +2262,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrUmfahrpunkt() {
+	public EReference getContainer_AttributeGroup_FstrFahrweg() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(62);
 	}
 
@@ -2256,7 +2272,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FstrZugRangier() {
+	public EReference getContainer_AttributeGroup_FstrNichthaltfall() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(63);
 	}
 
@@ -2266,7 +2282,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FTAnschaltbedingung() {
+	public EReference getContainer_AttributeGroup_FstrRangierFlaZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(64);
 	}
 
@@ -2276,7 +2292,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_FTFahrwegTeil() {
+	public EReference getContainer_AttributeGroup_FstrSignalisierung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(65);
 	}
 
@@ -2286,7 +2302,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GEOKante() {
+	public EReference getContainer_AttributeGroup_FstrUmfahrpunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(66);
 	}
 
@@ -2296,7 +2312,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GEOKnoten() {
+	public EReference getContainer_AttributeGroup_FstrZugRangier() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(67);
 	}
 
@@ -2306,7 +2322,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GEOPunkt() {
+	public EReference getContainer_AttributeGroup_FTAnschaltbedingung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(68);
 	}
 
@@ -2316,7 +2332,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Geschwindigkeitsprofil() {
+	public EReference getContainer_AttributeGroup_FTFahrwegTeil() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(69);
 	}
 
@@ -2326,7 +2342,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GFRAnlage() {
+	public EReference getContainer_AttributeGroup_GEOKante() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(70);
 	}
 
@@ -2336,7 +2352,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GFRElement() {
+	public EReference getContainer_AttributeGroup_GEOKnoten() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(71);
 	}
 
@@ -2346,7 +2362,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GFRTripelspiegel() {
+	public EReference getContainer_AttributeGroup_GEOPunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(72);
 	}
 
@@ -2356,7 +2372,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisAbschluss() {
+	public EReference getContainer_AttributeGroup_Geschwindigkeitsprofil() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(73);
 	}
 
@@ -2366,7 +2382,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisAbschnitt() {
+	public EReference getContainer_AttributeGroup_GFRAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(74);
 	}
 
@@ -2376,7 +2392,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisArt() {
+	public EReference getContainer_AttributeGroup_GFRElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(75);
 	}
 
@@ -2386,7 +2402,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisBaubereich() {
+	public EReference getContainer_AttributeGroup_GFRTripelspiegel() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(76);
 	}
 
@@ -2396,7 +2412,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisBezeichnung() {
+	public EReference getContainer_AttributeGroup_GleisAbschluss() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(77);
 	}
 
@@ -2406,7 +2422,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisFahrbahn() {
+	public EReference getContainer_AttributeGroup_GleisAbschnitt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(78);
 	}
 
@@ -2416,7 +2432,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisLichtraum() {
+	public EReference getContainer_AttributeGroup_GleisArt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(79);
 	}
 
@@ -2426,7 +2442,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_GleisSchaltgruppe() {
+	public EReference getContainer_AttributeGroup_GleisBaubereich() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(80);
 	}
 
@@ -2436,7 +2452,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Hoehenlinie() {
+	public EReference getContainer_AttributeGroup_GleisBezeichnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(81);
 	}
 
@@ -2446,7 +2462,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Hoehenpunkt() {
+	public EReference getContainer_AttributeGroup_GleisFahrbahn() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(82);
 	}
 
@@ -2456,7 +2472,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Kabel() {
+	public EReference getContainer_AttributeGroup_GleisLichtraum() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(83);
 	}
 
@@ -2466,7 +2482,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_KabelVerteilpunkt() {
+	public EReference getContainer_AttributeGroup_GleisSchaltgruppe() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(84);
 	}
 
@@ -2476,7 +2492,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_LEUAnlage() {
+	public EReference getContainer_AttributeGroup_Hoehenlinie() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(85);
 	}
 
@@ -2486,7 +2502,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_LEUModul() {
+	public EReference getContainer_AttributeGroup_Hoehenpunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(86);
 	}
 
@@ -2496,7 +2512,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_LEUSchaltkasten() {
+	public EReference getContainer_AttributeGroup_Kabel() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(87);
 	}
 
@@ -2506,7 +2522,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Lieferobjekt() {
+	public EReference getContainer_AttributeGroup_KabelVerteilpunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(88);
 	}
 
@@ -2516,7 +2532,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_LuftTelegramm() {
+	public EReference getContainer_AttributeGroup_LEUAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(89);
 	}
 
@@ -2526,7 +2542,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_MarkanterPunkt() {
+	public EReference getContainer_AttributeGroup_LEUModul() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(90);
 	}
 
@@ -2536,7 +2552,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_NB() {
+	public EReference getContainer_AttributeGroup_LEUSchaltkasten() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(91);
 	}
 
@@ -2546,7 +2562,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_NBBedienAnzeigeElement() {
+	public EReference getContainer_AttributeGroup_Lieferobjekt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(92);
 	}
 
@@ -2556,7 +2572,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_NBZone() {
+	public EReference getContainer_AttributeGroup_LuftTelegramm() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(93);
 	}
 
@@ -2566,7 +2582,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_NBZoneElement() {
+	public EReference getContainer_AttributeGroup_MarkanterPunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(94);
 	}
 
@@ -2576,7 +2592,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_NBZoneGrenze() {
+	public EReference getContainer_AttributeGroup_NB() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(95);
 	}
 
@@ -2586,7 +2602,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Oertlichkeit() {
+	public EReference getContainer_AttributeGroup_NBBedienAnzeigeElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(96);
 	}
 
@@ -2596,7 +2612,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ProgDateiGruppe() {
+	public EReference getContainer_AttributeGroup_NBZone() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(97);
 	}
 
@@ -2606,7 +2622,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ProxyObjekt() {
+	public EReference getContainer_AttributeGroup_NBZoneElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(98);
 	}
 
@@ -2616,7 +2632,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_PZBElement() {
+	public EReference getContainer_AttributeGroup_NBZoneGrenze() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(99);
 	}
 
@@ -2626,7 +2642,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_PZBElementZuordnung() {
+	public EReference getContainer_AttributeGroup_Oertlichkeit() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(100);
 	}
 
@@ -2636,7 +2652,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_PZBZuordnungSignal() {
+	public EReference getContainer_AttributeGroup_ProgDateiGruppe() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(101);
 	}
 
@@ -2646,7 +2662,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_RBC() {
+	public EReference getContainer_AttributeGroup_ProxyObjekt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(102);
 	}
 
@@ -2656,7 +2672,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Regelzeichnung() {
+	public EReference getContainer_AttributeGroup_PZBElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(103);
 	}
 
@@ -2666,7 +2682,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_RegelzeichnungParameter() {
+	public EReference getContainer_AttributeGroup_PZBElementZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(104);
 	}
 
@@ -2676,7 +2692,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_SchaltmittelFstrZuordnung() {
+	public EReference getContainer_AttributeGroup_PZBZuordnungSignal() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(105);
 	}
 
@@ -2686,7 +2702,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_SchaltmittelZuordnung() {
+	public EReference getContainer_AttributeGroup_RBC() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(106);
 	}
 
@@ -2696,7 +2712,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Schloss() {
+	public EReference getContainer_AttributeGroup_Regelzeichnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(107);
 	}
 
@@ -2706,7 +2722,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Schlosskombination() {
+	public EReference getContainer_AttributeGroup_RegelzeichnungParameter() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(108);
 	}
 
@@ -2716,7 +2732,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Schluessel() {
+	public EReference getContainer_AttributeGroup_SchaltmittelFstrZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(109);
 	}
 
@@ -2726,7 +2742,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Schluesselsperre() {
+	public EReference getContainer_AttributeGroup_SchaltmittelZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(110);
 	}
 
@@ -2736,7 +2752,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Schrankenantrieb() {
+	public EReference getContainer_AttributeGroup_Schloss() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(111);
 	}
 
@@ -2746,7 +2762,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Signal() {
+	public EReference getContainer_AttributeGroup_Schlosskombination() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(112);
 	}
 
@@ -2756,7 +2772,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_SignalBefestigung() {
+	public EReference getContainer_AttributeGroup_Schluessel() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(113);
 	}
 
@@ -2766,7 +2782,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_SignalFankZuordnung() {
+	public EReference getContainer_AttributeGroup_Schluesselsperre() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(114);
 	}
 
@@ -2776,7 +2792,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_SignalRahmen() {
+	public EReference getContainer_AttributeGroup_Schrankenantrieb() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(115);
 	}
 
@@ -2786,7 +2802,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_SignalSignalbegriff() {
+	public EReference getContainer_AttributeGroup_Signal() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(116);
 	}
 
@@ -2796,7 +2812,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_SonstigerPunkt() {
+	public EReference getContainer_AttributeGroup_SignalBefestigung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(117);
 	}
 
@@ -2806,7 +2822,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_StellBereich() {
+	public EReference getContainer_AttributeGroup_SignalFankZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(118);
 	}
 
@@ -2816,7 +2832,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Stellelement() {
+	public EReference getContainer_AttributeGroup_SignalRahmen() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(119);
 	}
 
@@ -2826,7 +2842,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Strecke() {
+	public EReference getContainer_AttributeGroup_SignalSignalbegriff() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(120);
 	}
 
@@ -2836,7 +2852,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_StreckePunkt() {
+	public EReference getContainer_AttributeGroup_SonstigerPunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(121);
 	}
 
@@ -2846,7 +2862,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_TechnikStandort() {
+	public EReference getContainer_AttributeGroup_StellBereich() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(122);
 	}
 
@@ -2856,7 +2872,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_TechnischerBereich() {
+	public EReference getContainer_AttributeGroup_Stellelement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(123);
 	}
 
@@ -2866,7 +2882,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_TechnischerPunkt() {
+	public EReference getContainer_AttributeGroup_Strecke() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(124);
 	}
 
@@ -2876,7 +2892,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_TOPKante() {
+	public EReference getContainer_AttributeGroup_StreckeBremsweg() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(125);
 	}
 
@@ -2886,7 +2902,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_TOPKnoten() {
+	public EReference getContainer_AttributeGroup_StreckePunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(126);
 	}
 
@@ -2896,7 +2912,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_TrasseKante() {
+	public EReference getContainer_AttributeGroup_TechnikStandort() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(127);
 	}
 
@@ -2906,7 +2922,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_TrasseKnoten() {
+	public EReference getContainer_AttributeGroup_TechnischerBereich() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(128);
 	}
 
@@ -2916,7 +2932,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Ueberhoehung() {
+	public EReference getContainer_AttributeGroup_TechnischerPunkt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(129);
 	}
 
@@ -2926,7 +2942,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Ueberhoehungslinie() {
+	public EReference getContainer_AttributeGroup_TOPKante() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(130);
 	}
 
@@ -2936,7 +2952,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Uebertragungsweg() {
+	public EReference getContainer_AttributeGroup_TOPKnoten() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(131);
 	}
 
@@ -2946,7 +2962,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Unterbringung() {
+	public EReference getContainer_AttributeGroup_TrasseKante() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(132);
 	}
 
@@ -2956,7 +2972,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Verkehrszeichen() {
+	public EReference getContainer_AttributeGroup_TrasseKnoten() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(133);
 	}
 
@@ -2966,7 +2982,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_WKrAnlage() {
+	public EReference getContainer_AttributeGroup_Ueberhoehung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(134);
 	}
 
@@ -2976,7 +2992,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_WKrGspElement() {
+	public EReference getContainer_AttributeGroup_Ueberhoehungslinie() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(135);
 	}
 
@@ -2986,7 +3002,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_WKrGspKomponente() {
+	public EReference getContainer_AttributeGroup_Uebertragungsweg() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(136);
 	}
 
@@ -2996,7 +3012,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Weichenlaufkette() {
+	public EReference getContainer_AttributeGroup_Unterbringung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(137);
 	}
 
@@ -3006,7 +3022,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_WeichenlaufketteZuordnung() {
+	public EReference getContainer_AttributeGroup_Verkehrszeichen() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(138);
 	}
 
@@ -3016,7 +3032,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZL() {
+	public EReference getContainer_AttributeGroup_WKrAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(139);
 	}
 
@@ -3026,7 +3042,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLDLPAbschnitt() {
+	public EReference getContainer_AttributeGroup_WKrGspElement() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(140);
 	}
 
@@ -3036,7 +3052,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLDLPFstr() {
+	public EReference getContainer_AttributeGroup_WKrGspKomponente() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(141);
 	}
 
@@ -3046,7 +3062,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLFstr() {
+	public EReference getContainer_AttributeGroup_Weichenlaufkette() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(142);
 	}
 
@@ -3056,7 +3072,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLFstrAnstoss() {
+	public EReference getContainer_AttributeGroup_WeichenlaufketteZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(143);
 	}
 
@@ -3066,7 +3082,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLSignalgruppe() {
+	public EReference getContainer_AttributeGroup_ZBSSchutzstrecke() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(144);
 	}
 
@@ -3076,7 +3092,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLSignalgruppeZuordnung() {
+	public EReference getContainer_AttributeGroup_ZBSSignal() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(145);
 	}
 
@@ -3086,7 +3102,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLVBus() {
+	public EReference getContainer_AttributeGroup_ZL() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(146);
 	}
 
@@ -3096,7 +3112,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZLVBusUSZuordnung() {
+	public EReference getContainer_AttributeGroup_ZLDLPAbschnitt() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(147);
 	}
 
@@ -3106,7 +3122,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZN() {
+	public EReference getContainer_AttributeGroup_ZLDLPFstr() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(148);
 	}
 
@@ -3116,7 +3132,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZNAkustik() {
+	public EReference getContainer_AttributeGroup_ZLFstr() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(149);
 	}
 
@@ -3126,7 +3142,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZNAnzeigefeld() {
+	public EReference getContainer_AttributeGroup_ZLFstrAnstoss() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(150);
 	}
 
@@ -3136,7 +3152,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZNFortschaltKriterium() {
+	public EReference getContainer_AttributeGroup_ZLSignalgruppe() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(151);
 	}
 
@@ -3146,7 +3162,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZNTelegramm84Zuordnung() {
+	public EReference getContainer_AttributeGroup_ZLSignalgruppeZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(152);
 	}
 
@@ -3156,7 +3172,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZNTelegramm85Zuordnung() {
+	public EReference getContainer_AttributeGroup_ZLVBus() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(153);
 	}
 
@@ -3166,7 +3182,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZNUnterstation() {
+	public EReference getContainer_AttributeGroup_ZLVBusBesondereAnlage() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(154);
 	}
 
@@ -3176,7 +3192,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZNZBS() {
+	public EReference getContainer_AttributeGroup_ZLVBusUSZuordnung() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(155);
 	}
 
@@ -3186,7 +3202,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZUBBereichsgrenze() {
+	public EReference getContainer_AttributeGroup_ZN() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(156);
 	}
 
@@ -3196,7 +3212,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_ZUBStreckeneigenschaft() {
+	public EReference getContainer_AttributeGroup_ZNAkustik() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(157);
 	}
 
@@ -3206,8 +3222,88 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getContainer_AttributeGroup_Zugeinwirkung() {
+	public EReference getContainer_AttributeGroup_ZNAnzeigefeld() {
         return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(158);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_ZNFortschaltKriterium() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(159);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_ZNTelegramm84Zuordnung() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(160);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_ZNTelegramm85Zuordnung() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(161);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_ZNUnterstation() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(162);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_ZNZBS() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(163);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_ZUBBereichsgrenze() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(164);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_ZUBStreckeneigenschaft() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(165);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_AttributeGroup_Zugeinwirkung() {
+        return (EReference)getContainer_AttributeGroup().getEStructuralFeatures().get(166);
 	}
 
 	/**
@@ -3980,9 +4076,82 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getPlanPro_Schnittstelle_WzkInvalidIDReferences() {
+        return (EReference)getPlanPro_Schnittstelle().getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getWzkInvalidIDReference() {
+		if (wzkInvalidIDReferenceEClass == null) {
+			wzkInvalidIDReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(77);
+		}
+		return wzkInvalidIDReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWzkInvalidIDReference_Guid() {
+        return (EAttribute)getWzkInvalidIDReference().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWzkInvalidIDReference_Source() {
+        return (EReference)getWzkInvalidIDReference().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWzkInvalidIDReference_SourceRef() {
+        return (EReference)getWzkInvalidIDReference().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWzkInvalidIDReference_Target() {
+        return (EReference)getWzkInvalidIDReference().getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWzkInvalidIDReference_TargetRef() {
+        return (EReference)getWzkInvalidIDReference().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPlanPro_Schnittstelle_Allg_AttributeGroup() {
 		if (planPro_Schnittstelle_Allg_AttributeGroupEClass == null) {
-			planPro_Schnittstelle_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(77);
+			planPro_Schnittstelle_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(78);
 		}
 		return planPro_Schnittstelle_Allg_AttributeGroupEClass;
 	}
@@ -4035,7 +4204,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanPro_XSD_Version_TypeClass() {
 		if (planPro_XSD_Version_TypeClassEClass == null) {
-			planPro_XSD_Version_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(79);
+			planPro_XSD_Version_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(80);
 		}
 		return planPro_XSD_Version_TypeClassEClass;
 	}
@@ -4058,7 +4227,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_E_Allg_AttributeGroup() {
 		if (planung_E_Allg_AttributeGroupEClass == null) {
-			planung_E_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(80);
+			planung_E_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(81);
 		}
 		return planung_E_Allg_AttributeGroupEClass;
 	}
@@ -4171,7 +4340,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_E_Art_TypeClass() {
 		if (planung_E_Art_TypeClassEClass == null) {
-			planung_E_Art_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(81);
+			planung_E_Art_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(82);
 		}
 		return planung_E_Art_TypeClassEClass;
 	}
@@ -4194,7 +4363,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_E_Ausgabe_Besonders_AttributeGroup() {
 		if (planung_E_Ausgabe_Besonders_AttributeGroupEClass == null) {
-			planung_E_Ausgabe_Besonders_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(82);
+			planung_E_Ausgabe_Besonders_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(83);
 		}
 		return planung_E_Ausgabe_Besonders_AttributeGroupEClass;
 	}
@@ -4237,7 +4406,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_E_Handlung_AttributeGroup() {
 		if (planung_E_Handlung_AttributeGroupEClass == null) {
-			planung_E_Handlung_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(83);
+			planung_E_Handlung_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(84);
 		}
 		return planung_E_Handlung_AttributeGroupEClass;
 	}
@@ -4340,7 +4509,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_Einzel() {
 		if (planung_EinzelEClass == null) {
-			planung_EinzelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(84);
+			planung_EinzelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(85);
 		}
 		return planung_EinzelEClass;
 	}
@@ -4443,7 +4612,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_G_Allg_AttributeGroup() {
 		if (planung_G_Allg_AttributeGroupEClass == null) {
-			planung_G_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(85);
+			planung_G_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(86);
 		}
 		return planung_G_Allg_AttributeGroupEClass;
 	}
@@ -4516,7 +4685,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_G_Art_Besonders_TypeClass() {
 		if (planung_G_Art_Besonders_TypeClassEClass == null) {
-			planung_G_Art_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(86);
+			planung_G_Art_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(87);
 		}
 		return planung_G_Art_Besonders_TypeClassEClass;
 	}
@@ -4539,7 +4708,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_G_Fuehrende_Strecke_AttributeGroup() {
 		if (planung_G_Fuehrende_Strecke_AttributeGroupEClass == null) {
-			planung_G_Fuehrende_Strecke_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(87);
+			planung_G_Fuehrende_Strecke_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(88);
 		}
 		return planung_G_Fuehrende_Strecke_AttributeGroupEClass;
 	}
@@ -4582,7 +4751,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_G_Schriftfeld_AttributeGroup() {
 		if (planung_G_Schriftfeld_AttributeGroupEClass == null) {
-			planung_G_Schriftfeld_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(88);
+			planung_G_Schriftfeld_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(89);
 		}
 		return planung_G_Schriftfeld_AttributeGroupEClass;
 	}
@@ -4643,9 +4812,19 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getPlanung_G_Schriftfeld_AttributeGroup_PlanungsbueroLogo() {
+        return (EReference)getPlanung_G_Schriftfeld_AttributeGroup().getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPlanung_Gruppe() {
 		if (planung_GruppeEClass == null) {
-			planung_GruppeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(89);
+			planung_GruppeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(90);
 		}
 		return planung_GruppeEClass;
 	}
@@ -4728,7 +4907,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_P_Allg_AttributeGroup() {
 		if (planung_P_Allg_AttributeGroupEClass == null) {
-			planung_P_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(90);
+			planung_P_Allg_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(91);
 		}
 		return planung_P_Allg_AttributeGroupEClass;
 	}
@@ -4781,7 +4960,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_Phase_TypeClass() {
 		if (planung_Phase_TypeClassEClass == null) {
-			planung_Phase_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(91);
+			planung_Phase_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(92);
 		}
 		return planung_Phase_TypeClassEClass;
 	}
@@ -4804,7 +4983,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPlanung_Projekt() {
 		if (planung_ProjektEClass == null) {
-			planung_ProjektEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(92);
+			planung_ProjektEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(93);
 		}
 		return planung_ProjektEClass;
 	}
@@ -4835,19 +5014,9 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPlanung_Projekt_LstPlanungErsteGruppe() {
-        return (EReference)getPlanung_Projekt().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getPolygone_Betrachtungsbereich_AttributeGroup() {
 		if (polygone_Betrachtungsbereich_AttributeGroupEClass == null) {
-			polygone_Betrachtungsbereich_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(93);
+			polygone_Betrachtungsbereich_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(94);
 		}
 		return polygone_Betrachtungsbereich_AttributeGroupEClass;
 	}
@@ -4880,7 +5049,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPolygone_Planungsbereich_AttributeGroup() {
 		if (polygone_Planungsbereich_AttributeGroupEClass == null) {
-			polygone_Planungsbereich_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(94);
+			polygone_Planungsbereich_AttributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(95);
 		}
 		return polygone_Planungsbereich_AttributeGroupEClass;
 	}
@@ -4913,7 +5082,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPolygonzug_Betrachtungsbereich_TypeClass() {
 		if (polygonzug_Betrachtungsbereich_TypeClassEClass == null) {
-			polygonzug_Betrachtungsbereich_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(96);
+			polygonzug_Betrachtungsbereich_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(97);
 		}
 		return polygonzug_Betrachtungsbereich_TypeClassEClass;
 	}
@@ -4936,7 +5105,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getPolygonzug_Planungsbereich_TypeClass() {
 		if (polygonzug_Planungsbereich_TypeClassEClass == null) {
-			polygonzug_Planungsbereich_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(98);
+			polygonzug_Planungsbereich_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(99);
 		}
 		return polygonzug_Planungsbereich_TypeClassEClass;
 	}
@@ -4959,7 +5128,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getProjekt_Nummer_TypeClass() {
 		if (projekt_Nummer_TypeClassEClass == null) {
-			projekt_Nummer_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(100);
+			projekt_Nummer_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(101);
 		}
 		return projekt_Nummer_TypeClassEClass;
 	}
@@ -4982,7 +5151,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getReferenz_Planung_Basis_TypeClass() {
 		if (referenz_Planung_Basis_TypeClassEClass == null) {
-			referenz_Planung_Basis_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(102);
+			referenz_Planung_Basis_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(103);
 		}
 		return referenz_Planung_Basis_TypeClassEClass;
 	}
@@ -5005,7 +5174,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getReferenz_Vergleich_Besonders_TypeClass() {
 		if (referenz_Vergleich_Besonders_TypeClassEClass == null) {
-			referenz_Vergleich_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(104);
+			referenz_Vergleich_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(105);
 		}
 		return referenz_Vergleich_Besonders_TypeClassEClass;
 	}
@@ -5028,7 +5197,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getStrecke_Abschnitt_TypeClass() {
 		if (strecke_Abschnitt_TypeClassEClass == null) {
-			strecke_Abschnitt_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(106);
+			strecke_Abschnitt_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(107);
 		}
 		return strecke_Abschnitt_TypeClassEClass;
 	}
@@ -5051,7 +5220,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getStrecke_Km_TypeClass() {
 		if (strecke_Km_TypeClassEClass == null) {
-			strecke_Km_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(108);
+			strecke_Km_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(109);
 		}
 		return strecke_Km_TypeClassEClass;
 	}
@@ -5074,7 +5243,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getStrecke_Nummer_TypeClass() {
 		if (strecke_Nummer_TypeClassEClass == null) {
-			strecke_Nummer_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(110);
+			strecke_Nummer_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(111);
 		}
 		return strecke_Nummer_TypeClassEClass;
 	}
@@ -5097,7 +5266,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getTelefonnummer_TypeClass() {
 		if (telefonnummer_TypeClassEClass == null) {
-			telefonnummer_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(112);
+			telefonnummer_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(113);
 		}
 		return telefonnummer_TypeClassEClass;
 	}
@@ -5120,7 +5289,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getUntergewerk_Art_TypeClass() {
 		if (untergewerk_Art_TypeClassEClass == null) {
-			untergewerk_Art_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(113);
+			untergewerk_Art_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(114);
 		}
 		return untergewerk_Art_TypeClassEClass;
 	}
@@ -5143,7 +5312,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getVerantwortliche_Stelle_DB_TypeClass() {
 		if (verantwortliche_Stelle_DB_TypeClassEClass == null) {
-			verantwortliche_Stelle_DB_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(115);
+			verantwortliche_Stelle_DB_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(116);
 		}
 		return verantwortliche_Stelle_DB_TypeClassEClass;
 	}
@@ -5166,7 +5335,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getVergleich_Ausgabestand_Basis_TypeClass() {
 		if (vergleich_Ausgabestand_Basis_TypeClassEClass == null) {
-			vergleich_Ausgabestand_Basis_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(117);
+			vergleich_Ausgabestand_Basis_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(118);
 		}
 		return vergleich_Ausgabestand_Basis_TypeClassEClass;
 	}
@@ -5189,7 +5358,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getVergleichstyp_Besonders_TypeClass() {
 		if (vergleichstyp_Besonders_TypeClassEClass == null) {
-			vergleichstyp_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(118);
+			vergleichstyp_Besonders_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(119);
 		}
 		return vergleichstyp_Besonders_TypeClassEClass;
 	}
@@ -5212,7 +5381,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getWerkzeug_Name_TypeClass() {
 		if (werkzeug_Name_TypeClassEClass == null) {
-			werkzeug_Name_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(120);
+			werkzeug_Name_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(121);
 		}
 		return werkzeug_Name_TypeClassEClass;
 	}
@@ -5235,7 +5404,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EClass getWerkzeug_Version_TypeClass() {
 		if (werkzeug_Version_TypeClassEClass == null) {
-			werkzeug_Version_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(122);
+			werkzeug_Version_TypeClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(123);
 		}
 		return werkzeug_Version_TypeClassEClass;
 	}
@@ -5687,7 +5856,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getPlanPro_XSD_Version_Type() {
 		if (planPro_XSD_Version_TypeEDataType == null) {
-			planPro_XSD_Version_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(78);
+			planPro_XSD_Version_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(79);
 		}
 		return planPro_XSD_Version_TypeEDataType;
 	}
@@ -5700,7 +5869,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getPolygonzug_Betrachtungsbereich_Type() {
 		if (polygonzug_Betrachtungsbereich_TypeEDataType == null) {
-			polygonzug_Betrachtungsbereich_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(95);
+			polygonzug_Betrachtungsbereich_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(96);
 		}
 		return polygonzug_Betrachtungsbereich_TypeEDataType;
 	}
@@ -5713,7 +5882,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getPolygonzug_Planungsbereich_Type() {
 		if (polygonzug_Planungsbereich_TypeEDataType == null) {
-			polygonzug_Planungsbereich_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(97);
+			polygonzug_Planungsbereich_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(98);
 		}
 		return polygonzug_Planungsbereich_TypeEDataType;
 	}
@@ -5726,7 +5895,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getProjekt_Nummer_Type() {
 		if (projekt_Nummer_TypeEDataType == null) {
-			projekt_Nummer_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(99);
+			projekt_Nummer_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(100);
 		}
 		return projekt_Nummer_TypeEDataType;
 	}
@@ -5739,7 +5908,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getReferenz_Planung_Basis_Type() {
 		if (referenz_Planung_Basis_TypeEDataType == null) {
-			referenz_Planung_Basis_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(101);
+			referenz_Planung_Basis_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(102);
 		}
 		return referenz_Planung_Basis_TypeEDataType;
 	}
@@ -5752,7 +5921,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getReferenz_Vergleich_Besonders_Type() {
 		if (referenz_Vergleich_Besonders_TypeEDataType == null) {
-			referenz_Vergleich_Besonders_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(103);
+			referenz_Vergleich_Besonders_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(104);
 		}
 		return referenz_Vergleich_Besonders_TypeEDataType;
 	}
@@ -5765,7 +5934,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getStrecke_Abschnitt_Type() {
 		if (strecke_Abschnitt_TypeEDataType == null) {
-			strecke_Abschnitt_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(105);
+			strecke_Abschnitt_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(106);
 		}
 		return strecke_Abschnitt_TypeEDataType;
 	}
@@ -5778,7 +5947,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getStrecke_Km_Type() {
 		if (strecke_Km_TypeEDataType == null) {
-			strecke_Km_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(107);
+			strecke_Km_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(108);
 		}
 		return strecke_Km_TypeEDataType;
 	}
@@ -5791,7 +5960,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getStrecke_Nummer_Type() {
 		if (strecke_Nummer_TypeEDataType == null) {
-			strecke_Nummer_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(109);
+			strecke_Nummer_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(110);
 		}
 		return strecke_Nummer_TypeEDataType;
 	}
@@ -5804,7 +5973,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getTelefonnummer_Type() {
 		if (telefonnummer_TypeEDataType == null) {
-			telefonnummer_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(111);
+			telefonnummer_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(112);
 		}
 		return telefonnummer_TypeEDataType;
 	}
@@ -5817,7 +5986,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getVerantwortliche_Stelle_DB_Type() {
 		if (verantwortliche_Stelle_DB_TypeEDataType == null) {
-			verantwortliche_Stelle_DB_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(114);
+			verantwortliche_Stelle_DB_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(115);
 		}
 		return verantwortliche_Stelle_DB_TypeEDataType;
 	}
@@ -5830,7 +5999,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getVergleich_Ausgabestand_Basis_Type() {
 		if (vergleich_Ausgabestand_Basis_TypeEDataType == null) {
-			vergleich_Ausgabestand_Basis_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(116);
+			vergleich_Ausgabestand_Basis_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(117);
 		}
 		return vergleich_Ausgabestand_Basis_TypeEDataType;
 	}
@@ -5843,7 +6012,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getWerkzeug_Name_Type() {
 		if (werkzeug_Name_TypeEDataType == null) {
-			werkzeug_Name_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(119);
+			werkzeug_Name_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(120);
 		}
 		return werkzeug_Name_TypeEDataType;
 	}
@@ -5856,7 +6025,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	@Override
 	public EDataType getWerkzeug_Version_Type() {
 		if (werkzeug_Version_TypeEDataType == null) {
-			werkzeug_Version_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(121);
+			werkzeug_Version_TypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(122);
 		}
 		return werkzeug_Version_TypeEDataType;
 	}

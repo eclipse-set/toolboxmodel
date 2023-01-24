@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz;
 
@@ -30,7 +37,7 @@ public interface Fla_Zwieschutz_Element_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf die Ersatzschutzmaßnahme bei Fernschutz und Anforderung in Linkslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 "direkt anschließender Flankenschutz" und 8...9 "Flankenschutz"
+	 * Verweis auf die Ersatzschutzmaßnahme bei Ersatzschutz und Anforderung in Linkslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 "direkt anschließender Flankenschutz" und 8...9 "Flankenschutz"
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Fla Schutz L</em>' reference.
 	 * @see #isSetIDFlaSchutzL()
@@ -83,7 +90,7 @@ public interface Fla_Zwieschutz_Element_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf die Ersatzschutzmaßnahme bei Fernschutz und Anforderung in Rechtslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 "direkt anschließender Flankenschutz" und 8...9 "Flankenschutz"
+	 * Verweis auf die Ersatzschutzmaßnahme bei Ersatzschutz und Anforderung in Rechtslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 "direkt anschließender Flankenschutz" und 8...9 "Flankenschutz"
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Fla Schutz R</em>' reference.
 	 * @see #isSetIDFlaSchutzR()
@@ -136,7 +143,8 @@ public interface Fla_Zwieschutz_Element_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Maßnahme, durch die der Flankenschutz im linken Strang der Zwieschutzweiche hergestellt wird. Fernschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Linkslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. Die Maßnahmen beziehen sich nur auf den Zwieschutzfall. Wird die Weiche nur in einem Strang angefordert, wird sie regulär Flankenschutz bieten, wie es in der Flankenschutzplanung vorgesehen ist. DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 "Zwieschutzfall-Maßnahme"
+	 * Maßnahme, durch die der Flankenschutz im linken Strang der Zwieschutzweiche hergestellt wird. Ersatzschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Linkslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. Verschluss/Ersatzschutz: Der Wert bildet den Planungsfall ab, dass die Flankenschutzanforderungen an die Zwieschutzweiche von gleichberechtigten Fahrstraßen kommen und damit planerisch keine feste Zuweisung von Verschluss und Ersatzschutz erfolgt. Der ENUM-Wert ist also im Sinne „Verschluss oder Ersatzschutz“ zu interpretieren. In der Praxis bedeutet dies, dass die Fahrstraße, die zuerst eingestellt wird, den direkten Flankenschutz und die als zweite eingestellte Fahrstraße den Ersatzschutz erhält. 
+	 * Die Maßnahmen beziehen sich nur auf den Zwieschutzfall. Wird die Weiche nur in einem Strang angefordert, wird sie regulär Flankenschutz bieten, wie es in der Flankenschutzplanung vorgesehen ist. DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 "Zwieschutzfall-Maßnahme"
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Massnahme L</em>' containment reference.
 	 * @see #setMassnahmeL(Massnahme_TypeClass)
@@ -162,7 +170,8 @@ public interface Fla_Zwieschutz_Element_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Maßnahme, durch die der Flankenschutz im rechten Strang der Zwieschutzweiche hergestellt wird. Fernschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Rechtslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 "Zwieschutzfall-Maßnahme"
+	 * Maßnahme, durch die der Flankenschutz im rechten Strang der Zwieschutzweiche hergestellt wird. Ersatzschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Rechtslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. Verschluss/Ersatzschutz: Der Wert bildet den Planungsfall ab, dass die Flankenschutzanforderungen an die Zwieschutzweiche von gleichberechtigten Fahrstraßen kommen und damit planerisch keine feste Zuweisung von Verschluss und Ersatzschutz erfolgt. Der ENUM-Wert ist also im Sinne „Verschluss oder Ersatzschutz“ zu interpretieren. In der Praxis bedeutet dies, dass die Fahrstraße, die zuerst eingestellt wird, den direkten Flankenschutz und die als zweite eingestellte Fahrstraße den Ersatzchutz erhält. Die Maßnahmen beziehen sich nur auf den Zwieschutzfall. Wird die Weiche nur in einem Strang angefordert, wird sie regulär Flankenschutz bieten, wie es in der Flankenschutzplanung vorgesehen ist. 
+	 * DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 "Zwieschutzfall-Maßnahme"
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Massnahme R</em>' containment reference.
 	 * @see #setMassnahmeR(Massnahme_TypeClass)

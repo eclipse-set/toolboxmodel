@@ -1,10 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -129,14 +135,14 @@ public interface LEU_Modul extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf den LEU-Schaltkasten, in dem das LEU-Modul untergebracht ist. Es können LEU-Module verschiedener LEU-Anlagen in einem LEU-Schaltkasten untergebracht sein.
+	 * Verweis auf den LEU-Schaltkasten, in dem das LEU-Modul untergebracht ist. Es können LEU-Module verschiedener LEU-Anlagen in einem LEU-Schaltkasten untergebracht sein. Die Angabe entfällt bei ESG.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDLEU Schaltkasten</em>' reference.
 	 * @see #isSetIDLEUSchaltkasten()
 	 * @see #unsetIDLEUSchaltkasten()
 	 * @see #setIDLEUSchaltkasten(LEU_Schaltkasten)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Modul_IDLEUSchaltkasten()
-	 * @model unsettable="true" required="true"
+	 * @model unsettable="true"
 	 *        extendedMetaData="kind='element' name='ID_LEU_Schaltkasten'"
 	 * @generated
 	 */
@@ -206,12 +212,11 @@ public interface LEU_Modul extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Attributgruppe zur Zuordnung von Ausgängen des LEU-Moduls zu Balisen. 
-	 * 
+	 * Attributgruppe zur Zuordnung von Ausgängen des LEU-Moduls zu Balisen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>LEU Modul Ausgang</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Modul_LEUModulAusgang()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='LEU_Modul_Ausgang'"
 	 * @generated
 	 */

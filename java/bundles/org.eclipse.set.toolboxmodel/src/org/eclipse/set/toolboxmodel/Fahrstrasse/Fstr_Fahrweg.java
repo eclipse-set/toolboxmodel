@@ -1,10 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Bereich_Objekt;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -23,6 +30,7 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg#getFstrVHg <em>Fstr VHg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg#getIDStart <em>ID Start</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg#getIDZiel <em>ID Ziel</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg#getStartSignalCharakter <em>Start Signal Charakter</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage#getFstr_Fahrweg()
@@ -161,5 +169,31 @@ public interface Fstr_Fahrweg extends Bereich_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDZiel();
+
+	/**
+	 * Returns the value of the '<em><b>Start Signal Charakter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Fahrwegbezogener Charakter des Start-Signals, sofern abweichend von der im Signal definierten Signal_Funktion. DB-Regelwerk Ril 819.1361, Tabelle der Signalabstände und Schutzstrecken
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Start Signal Charakter</em>' containment reference.
+	 * @see #setStartSignalCharakter(Start_Signal_Charakter_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage#getFstr_Fahrweg_StartSignalCharakter()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Start_Signal_Charakter'"
+	 * @generated
+	 */
+	Start_Signal_Charakter_TypeClass getStartSignalCharakter();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg#getStartSignalCharakter <em>Start Signal Charakter</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start Signal Charakter</em>' containment reference.
+	 * @see #getStartSignalCharakter()
+	 * @generated
+	 */
+	void setStartSignalCharakter(Start_Signal_Charakter_TypeClass value);
 
 } // Fstr_Fahrweg

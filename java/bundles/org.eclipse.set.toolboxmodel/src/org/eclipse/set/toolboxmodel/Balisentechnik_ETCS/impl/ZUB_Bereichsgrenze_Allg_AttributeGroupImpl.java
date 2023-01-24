@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,13 +17,13 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
@@ -45,23 +52,14 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  */
 public class ZUB_Bereichsgrenze_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements ZUB_Bereichsgrenze_Allg_AttributeGroup {
 	/**
-	 * The cached value of the '{@link #getIDElementGrenze() <em>ID Element Grenze</em>}' reference.
+	 * The cached value of the '{@link #getIDElementGrenze() <em>ID Element Grenze</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIDElementGrenze()
 	 * @generated
 	 * @ordered
 	 */
-	protected Basis_Objekt iDElementGrenze;
-
-	/**
-	 * This is true if the ID Element Grenze reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDElementGrenzeESet;
+	protected EList<Basis_Objekt> iDElementGrenze;
 
 	/**
 	 * The cached value of the '{@link #getIDRBCVorGrenze() <em>IDRBC Vor Grenze</em>}' reference.
@@ -127,65 +125,11 @@ public class ZUB_Bereichsgrenze_Allg_AttributeGroupImpl extends MinimalEObjectIm
 	 * @generated
 	 */
 	@Override
-	public Basis_Objekt getIDElementGrenze() {
-		if (iDElementGrenze != null && iDElementGrenze.eIsProxy()) {
-			InternalEObject oldIDElementGrenze = (InternalEObject)iDElementGrenze;
-			iDElementGrenze = (Basis_Objekt)eResolveProxy(oldIDElementGrenze);
-			if (iDElementGrenze != oldIDElementGrenze) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE, oldIDElementGrenze, iDElementGrenze));
-			}
+	public EList<Basis_Objekt> getIDElementGrenze() {
+		if (iDElementGrenze == null) {
+			iDElementGrenze = new EObjectResolvingEList<Basis_Objekt>(Basis_Objekt.class, this, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE);
 		}
 		return iDElementGrenze;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Basis_Objekt basicGetIDElementGrenze() {
-		return iDElementGrenze;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDElementGrenze(Basis_Objekt newIDElementGrenze) {
-		Basis_Objekt oldIDElementGrenze = iDElementGrenze;
-		iDElementGrenze = newIDElementGrenze;
-		boolean oldIDElementGrenzeESet = iDElementGrenzeESet;
-		iDElementGrenzeESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE, oldIDElementGrenze, iDElementGrenze, !oldIDElementGrenzeESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDElementGrenze() {
-		Basis_Objekt oldIDElementGrenze = iDElementGrenze;
-		boolean oldIDElementGrenzeESet = iDElementGrenzeESet;
-		iDElementGrenze = null;
-		iDElementGrenzeESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE, oldIDElementGrenze, null, oldIDElementGrenzeESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDElementGrenze() {
-		return iDElementGrenzeESet;
 	}
 
 	/**
@@ -307,8 +251,7 @@ public class ZUB_Bereichsgrenze_Allg_AttributeGroupImpl extends MinimalEObjectIm
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE:
-				if (resolve) return getIDElementGrenze();
-				return basicGetIDElementGrenze();
+				return getIDElementGrenze();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__IDRBC_VOR_GRENZE:
 				if (resolve) return getIDRBCVorGrenze();
 				return basicGetIDRBCVorGrenze();
@@ -331,7 +274,8 @@ public class ZUB_Bereichsgrenze_Allg_AttributeGroupImpl extends MinimalEObjectIm
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE:
-				setIDElementGrenze((Basis_Objekt)newValue);
+				getIDElementGrenze().clear();
+				getIDElementGrenze().addAll((Collection<? extends Basis_Objekt>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__IDRBC_VOR_GRENZE:
 				setIDRBCVorGrenze((RBC)newValue);
@@ -359,7 +303,7 @@ public class ZUB_Bereichsgrenze_Allg_AttributeGroupImpl extends MinimalEObjectIm
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE:
-				unsetIDElementGrenze();
+				getIDElementGrenze().clear();
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__IDRBC_VOR_GRENZE:
 				unsetIDRBCVorGrenze();
@@ -385,7 +329,7 @@ public class ZUB_Bereichsgrenze_Allg_AttributeGroupImpl extends MinimalEObjectIm
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__ID_ELEMENT_GRENZE:
-				return isSetIDElementGrenze();
+				return iDElementGrenze != null && !iDElementGrenze.isEmpty();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__IDRBC_VOR_GRENZE:
 				return isSetIDRBCVorGrenze();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP__SYSTEM_VOR_GRENZE:

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -19,6 +26,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMGleisAbschlussArt implements Enumerator {
 	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Bremsprellbock</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK(0, "ENUMGleis_Abschluss_Art_Bremsprellbock", "Bremsprellbock"),
+
+	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Drehscheibe</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +43,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE(0, "ENUMGleis_Abschluss_Art_Drehscheibe", "Drehscheibe"),
+	ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE(1, "ENUMGleis_Abschluss_Art_Drehscheibe", "Drehscheibe"),
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Faehranleger</b></em>' literal object.
@@ -36,7 +53,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER(1, "ENUMGleis_Abschluss_Art_Faehranleger", "Faehranleger"),
+	ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER(2, "ENUMGleis_Abschluss_Art_Faehranleger", "Faehranleger"),
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Festprellbock</b></em>' literal object.
@@ -46,7 +63,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK(2, "ENUMGleis_Abschluss_Art_Festprellbock", "Festprellbock"),
+	ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK(3, "ENUMGleis_Abschluss_Art_Festprellbock", "Festprellbock"),
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Infrastrukturgrenze</b></em>' literal object.
@@ -56,7 +73,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_INFRASTRUKTURGRENZE(3, "ENUMGleis_Abschluss_Art_Infrastrukturgrenze", "Infrastrukturgrenze"),
+	ENUM_GLEIS_ABSCHLUSS_ART_INFRASTRUKTURGRENZE(4, "ENUMGleis_Abschluss_Art_Infrastrukturgrenze", "Infrastrukturgrenze"),
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Kopframpe</b></em>' literal object.
@@ -66,7 +83,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_KOPFRAMPE(4, "ENUMGleis_Abschluss_Art_Kopframpe", "Kopframpe"),
+	ENUM_GLEIS_ABSCHLUSS_ART_KOPFRAMPE(5, "ENUMGleis_Abschluss_Art_Kopframpe", "Kopframpe"),
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Schiebebuehne</b></em>' literal object.
@@ -76,7 +93,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE(5, "ENUMGleis_Abschluss_Art_Schiebebuehne", "Schiebebuehne"),
+	ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE(6, "ENUMGleis_Abschluss_Art_Schiebebuehne", "Schiebebuehne"),
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Schwellenkreuz</b></em>' literal object.
@@ -86,7 +103,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ(6, "ENUMGleis_Abschluss_Art_Schwellenkreuz", "Schwellenkreuz"),
+	ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ(7, "ENUMGleis_Abschluss_Art_Schwellenkreuz", "Schwellenkreuz"),
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art sonstige</b></em>' literal object.
@@ -96,105 +113,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE(7, "ENUMGleis_Abschluss_Art_sonstige", "sonstige"),
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Bremsprellbock</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK(8, "ENUMGleis_Abschluss_Art_Bremsprellbock", "Bremsprellbock");
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Drehscheibe</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE
-	 * @model name="ENUMGleis_Abschluss_Art_Drehscheibe" literal="Drehscheibe"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE_VALUE = 0;
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Faehranleger</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER
-	 * @model name="ENUMGleis_Abschluss_Art_Faehranleger" literal="Faehranleger"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER_VALUE = 1;
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Festprellbock</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK
-	 * @model name="ENUMGleis_Abschluss_Art_Festprellbock" literal="Festprellbock"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Infrastrukturgrenze</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_INFRASTRUKTURGRENZE
-	 * @model name="ENUMGleis_Abschluss_Art_Infrastrukturgrenze" literal="Infrastrukturgrenze"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_INFRASTRUKTURGRENZE_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Kopframpe</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_KOPFRAMPE
-	 * @model name="ENUMGleis_Abschluss_Art_Kopframpe" literal="Kopframpe"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_KOPFRAMPE_VALUE = 4;
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Schiebebuehne</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE
-	 * @model name="ENUMGleis_Abschluss_Art_Schiebebuehne" literal="Schiebebuehne"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE_VALUE = 5;
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art Schwellenkreuz</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ
-	 * @model name="ENUMGleis_Abschluss_Art_Schwellenkreuz" literal="Schwellenkreuz"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ_VALUE = 6;
-
-	/**
-	 * The '<em><b>ENUM Gleis Abschluss Art sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE
-	 * @model name="ENUMGleis_Abschluss_Art_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE_VALUE = 7;
+	ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE(8, "ENUMGleis_Abschluss_Art_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUM Gleis Abschluss Art Bremsprellbock</b></em>' literal value.
@@ -205,7 +124,95 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK_VALUE = 8;
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Drehscheibe</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE
+	 * @model name="ENUMGleis_Abschluss_Art_Drehscheibe" literal="Drehscheibe"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Faehranleger</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER
+	 * @model name="ENUMGleis_Abschluss_Art_Faehranleger" literal="Faehranleger"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Festprellbock</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK
+	 * @model name="ENUMGleis_Abschluss_Art_Festprellbock" literal="Festprellbock"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK_VALUE = 3;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Infrastrukturgrenze</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_INFRASTRUKTURGRENZE
+	 * @model name="ENUMGleis_Abschluss_Art_Infrastrukturgrenze" literal="Infrastrukturgrenze"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_INFRASTRUKTURGRENZE_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Kopframpe</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_KOPFRAMPE
+	 * @model name="ENUMGleis_Abschluss_Art_Kopframpe" literal="Kopframpe"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_KOPFRAMPE_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Schiebebuehne</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE
+	 * @model name="ENUMGleis_Abschluss_Art_Schiebebuehne" literal="Schiebebuehne"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE_VALUE = 6;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art Schwellenkreuz</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ
+	 * @model name="ENUMGleis_Abschluss_Art_Schwellenkreuz" literal="Schwellenkreuz"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ_VALUE = 7;
+
+	/**
+	 * The '<em><b>ENUM Gleis Abschluss Art sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE
+	 * @model name="ENUMGleis_Abschluss_Art_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE_VALUE = 8;
 
 	/**
 	 * An array of all the '<em><b>ENUM Gleis Abschluss Art</b></em>' enumerators.
@@ -215,6 +222,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 */
 	private static final ENUMGleisAbschlussArt[] VALUES_ARRAY =
 		new ENUMGleisAbschlussArt[] {
+			ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK,
 			ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE,
 			ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER,
 			ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK,
@@ -223,7 +231,6 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 			ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE,
 			ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ,
 			ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE,
-			ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK,
 		};
 
 	/**
@@ -280,6 +287,7 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 	 */
 	public static ENUMGleisAbschlussArt get(int value) {
 		switch (value) {
+			case ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK;
 			case ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE;
 			case ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER;
 			case ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK;
@@ -288,7 +296,6 @@ public enum ENUMGleisAbschlussArt implements Enumerator {
 			case ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE;
 			case ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ;
 			case ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE;
-			case ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK_VALUE: return ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK;
 			default: return null;
 		}
 	}

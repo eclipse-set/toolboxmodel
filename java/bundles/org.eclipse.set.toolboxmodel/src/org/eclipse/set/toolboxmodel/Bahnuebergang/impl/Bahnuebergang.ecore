@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Bahnuebergang" nsURI="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
     nsPrefix="nsBahnuebergang">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation" value="Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Für Fragen zum Schema wenden Sie sich bitte an Herrn :&#xA;&#xA;Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface."/>
+    <details key="documentation" value="Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface.&#xD;&#xA;Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.&#xA;&#xA;Weitere Informationen zur Lizenz finden Sie auf&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Inhalt der Datei:&#xA;XML Schema für PlanPro Schnittstelle.&#xA;&#xA;Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com&#xA;&#xA;--------------------------------------------------------------------------------&#xA;&#xA;This Document is licensed under the open source license RailPL V1.0.&#xA;&#xA;More information about the license can be found on&#xA;http://www.dbnetze.com/planpro&#xA;&#xA;Contents of the file:&#xA;XML Schema for PlanPro interface."/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EDataType" name="Abstand_Gehweg_Fahrbahn_Type" instanceClassName="java.math.BigDecimal">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -344,10 +344,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BUE_Anlage" eSuperTypes="http://www.plan-pro.org/modell/Basisobjekte/toolbox#//Punkt_Objekt">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Zurzeit beschränken sich die Angaben auf den im Lageplan darzustellenden Teil des BÜ. Zu einem späteren Zeitpunkt werden die spezifischen BÜ-Sicherungsanlagen wie Lichtzeichen, Andreaskreuze, Schrankenantriebe, Belag im BÜ-Bereich etc. in das Modell aufgenommen. Gleiches gilt für die Einschaltstreckenberechnung sowie die Beeinflussungsberechnung. Das Objekt wird auf den Kreuzungspunkt (in der Mitte der kreuzenden Straße) verortet; damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815 819.12xx Die konkreten Bezüge zum Regelwerk werden in den einzelnen Attributen angegeben. "/>
+      <details key="documentation" value="Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Das Objekt wird auf den Kreuzungspunkt gem. Ril 815.2000 verortet, wobei die punktförmige Verortung auf alle zum BÜ gehörigen Gleisachsen erfolgen soll. Damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815, 819.12xx. Die konkreten Bezüge zum Regelwerk werden für die einzelnen Attributen angegeben."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Anlage"/>
@@ -369,6 +369,16 @@
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="BUE_Anlage_Allg"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iDAEABUEAnschaltung" eType="ecore:EClass http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox#//Aussenelementansteuerung"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Verweis auf die Aussenelementansteuerung, von der die BÜ-Anlage gesteuert/geschaltet wird."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ID_AEA_BUE_Anschaltung"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iDBUESchnittstelle" eType="#//BUE_Schnittstelle"
@@ -429,7 +439,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="bUESicherungsart" eType="#//BUE_Sicherungsart_TypeClass"
         containment="true" resolveProxies="false">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Bauart der Bahnübergangs(BÜ)-Sicherung. A: Anrufschranke; F: abgesetzter Fuß-/Radweg mit eigener Halbschranke; Lf: Geschwindigkeitsreduzierung im BÜ-Bereich mittels Lf-Signalen; Lz: Lichtzeichen; H: Halbschranken; HH: zwei Halbschranken, die gemeinsam die gesamte Straßenbreite sichern; P: Pfeiftafel; Ue: Übersicht (Ermittlung durch Sichtdreieck); V: Vollschranke; bei abgesetzten Fuß-/Radwegen sichert die Vollschranke auch diese. Schlüsselabhängig sind z. B. Bau-BÜ. Bei Auswahl von &quot;sonstige&quot; ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk 815.0010 4 (7) Tabelle 1 in Verbindung mit 815.0031 oder 815.0032 "/>
+        <details key="documentation" value="Bauart der Bahnübergangs(BÜ)-Sicherung. A: Abschluss; bgBÜ: benutzergesteuerte BÜSA; F: abgesetzter Fuß-/Radweg mit eigener Halbschranke; Lf: Geschwindigkeitsreduzierung im BÜ-Bereich mittels Lf-Signalen; Lz: Lichtzeichen; H: Halbschranken; HH: zwei Halbschranken, die gemeinsam die gesamte Straßenbreite sichern; P: Pfeiftafel; U: Umlaufsperre; Ue: Übersicht (Ermittlung durch Sichtdreieck); V: Vollschranke; bei abgesetzten Fuß-/Radwegen sichert die Vollschranke auch diese. Schlüsselabhängig sind z. B. Bau-BÜ; V(A): Anrufschranke. Bei Auswahl von &quot;sonstige&quot; ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk 815.2000, Abschnitt 2 (6) mit Tabelle 3"/>
       </eAnnotations>
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -449,7 +459,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="bUETechnik" eType="#//BUE_Technik_TypeClass"
         containment="true" resolveProxies="false">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Bauart der technischen BÜ-Sicherung. Ist der BÜ nichttechnisch gesichert, ist &quot;keine&quot; anzugeben. Bei Auswahl von &quot;sonstige&quot; ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Das Planungsdatum ist im Regelwerk der DB AG nicht enthalten. Die Festlegung neu zu errichtender BÜ-Technik erfolgt projektbezogen durch Vorgabe des Bestellers. Allgemeine Angaben finden sich in der Ril 819.1203 2 "/>
+        <details key="documentation" value="Technik der technischen BÜ-Sicherung. Ist der BÜ nichttechnisch gesichert, ist &quot;keine&quot; anzugeben. Bei Auswahl von &quot;sonstige&quot; ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Das Planungsdatum ist im Regelwerk der DB AG nicht enthalten. Die Festlegung neu zu errichtender BÜ-Technik erfolgt projektbezogen durch Vorgabe des Bestellers. Allgemeine Angaben finden sich in der Ril 819.1203 2 "/>
       </eAnnotations>
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -488,7 +498,7 @@
       <details key="documentation" value="Straßenbezogene Angaben zur BUE_Anlage, die im Wesentlichen im Rahmen der bautechnischen Planung benötigt werden. Die Themen Längsneigung und Ausrundungshalbmesser werden aufgrund der Vielzahl notwendiger Angaben nicht im Modell abgebildet (separate Betrachtung erforderlich)."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Anlage_Strasse"/>
@@ -591,7 +601,7 @@
       <details key="documentation" value="Angaben zu gleis- und straßenseitigen Mindest- und Höchstgeschwindigkeiten für die Einschaltstreckenberechnung."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Anlage_V"/>
@@ -682,7 +692,7 @@
       <details key="documentation" value="Logisches Objekt, das alle Informationen zur Ausschaltung eines Bahnübergangs enthält. Über den Verweis auf BUE Gleisbezogener Gefahrraum findet eine Verortung am zugehörigen Gleis statt, für das der Ausschaltkontakt angeordnet wird. Der Ausschaltkontakt selbst ist über das Objekt Schaltmittel Zuordnung abgebildet. Für die BUE_Ausschaltung ist, in Fahrtrichtung Ausschaltkontakt weg vom BÜ gesehen, die RÜCKGELEGENE Grenze von BUE Gleisbezogener Gefahrraum für die Verortung maßgebend. Die Gefahrraum-Grenze liegt damit in Fahrtrichtung VOR dem Ausschaltkontakt. DB-Regelwerk 815.0032 4 (3) Die Planung der Ausschaltung erfolgt entsprechend der Projektierungshinweise der konkreten BÜ-Technik. Seitens der Ril 815 gibt es dazu keine konkreten Vorgaben. "/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Ausschaltung"/>
@@ -756,7 +766,7 @@
       <details key="documentation" value="Objekt zur Definition der logischen Bedienfunktionen, die über Taster auf den BÜ einwirken. Es dient der Zuordnung der ausgewählten Bedienfunktionen zum BÜ bzw. zu den Ein-/Ausschaltungen des zugehörigen Gleises. Die Zuordnung zur physischen Unterbringung erfolgt über den Verweis auf Bedien Anzeige Element. DB-Regelwerk 819.1204 8 TM 2012 - 001 I.NVT 3 "/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Bedien_Anzeige_Element"/>
@@ -789,7 +799,7 @@
       <details key="documentation" value="Das Zuordnungsobjekt BUE_Deckendes_Signal bildet die diesbezügliche Angabe in der Signaltabelle 1 sowie in der Einschaltstreckenberechnung ab. Die Angaben in der Signaltabelle 1 sowie in der Einschaltstreckenberechnung beziehen sich auf das deckende Signal (Haupt-/LS-Signal) und nicht auf die den BÜ-Schließvorgang anstoßende Fahrstraße. DB-Regelwerk Signaltabelle 1, Zeile 33 und 34 Einschaltstreckenberechnung "/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Deckendes_Signal_Zuordnung"/>
@@ -832,7 +842,7 @@
       <details key="documentation" value="Logisches Objekt, das alle Informationen zur Einschaltung eines Bahnübergangs (BÜ) enthält. Über den Verweis auf BUE Gleisbezogener Gefahrraum findet eine Verortung am zugehörigen Gleis statt, für das der Einschaltkontakt angeordnet wird. Der Einschaltkontakt selbst ist über das Objekt Schaltmittel Zuordnung abgebildet. Für die BUE Einschaltung ist die in Fahrtrichtung von Anrückmelder / Einschaltkontakt in Richtung BÜ die VOR der BÜ-Mitte liegende Grenze von BUE Gleisbezogener Gefahrraum maßgebend, auf dem das Objekt verortet wird. Die Gefahrraum-Grenze liegt damit in Fahrtrichtung HINTER dem Anrückmelder / Einschaltkontakt. Bei Ausbildung des Einschaltpunktes als Doppelschleife gelten hinsichtlich des maßgebenden Einschaltpunktes gemäß Einschaltstreckenberechnung folgende Unterschiede: Hersteller PintschBamag: maßgebend ist die Mitte der in Fahrtrichtung BÜ liegenden ERSTEN Schleife Hersteller Scheidt\u0026amp;Bachmann: maßgebend ist die Mitte der in Fahrtrichtung BÜ liegenden ZWEITE Schleife DB-Regelwerk 815.0033 in Verbindung mit Einschaltstreckenberechnung Die Angaben zur BÜ-Einschaltung beschränken sich gegenwärtig auf die Planungswerte mit Auswirkungen auf das Stellwerk."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Einschaltung"/>
@@ -849,7 +859,7 @@
         lowerBound="1" eType="#//BUE_Funktionsueberwachung_TypeClass" containment="true"
         resolveProxies="false">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Angabe der Funktionsüberwachung, die der Ermittlung der Einschaltung zugrunde liegt. Es wird zwischen folgenden Funktionsüberwachungen unterschieden: Hp: Der BÜ ist durch Hauptsignal(e) gedeckt. Die Fahrtstellung erfolgt erst, wenn der BÜ geschlossen ist. Fü: Der BÜ wird zugbewirkt eingeschaltet, die Überwachung erfolgt durch einen Fahrdienstleiter im Stellwerk. Dieser kann im Störungsfall eingreifen. Üs: Der BÜ wird zugbewirkt eingeschaltet und vom Triebfahrzeugführer überwacht. Der Zustand des BÜ wird diesem durch Überwachungssignale angezeigt. Es gibt keine Verbindung zum Stellwerk. Kombinationen der Funtkionsüberwachungen sind möglich. Die ENUM-Werte &quot;Fue&quot;, &quot;Ues&quot; und &quot;UesOE&quot; sollen künftig entfernt und daher nicht mehr verwendet werden. DB-Regelwerk 815.0032 1 (1) und (2) 819.1203 3 "/>
+        <details key="documentation" value="Angabe der Funktionsüberwachung, die der Ermittlung der Einschaltung zugrunde liegt. Es wird zwischen folgenden Funktionsüberwachungen unterschieden: Hp: Der BÜ ist durch Hauptsignal(e) gedeckt. Die Fahrtstellung erfolgt erst, wenn der BÜ geschlossen ist. Fü: Der BÜ wird zugbewirkt eingeschaltet, die Überwachung erfolgt durch einen Fahrdienstleiter im Stellwerk. Dieser kann im Störungsfall eingreifen. Üs: Der BÜ wird zugbewirkt eingeschaltet und vom Triebfahrzeugführer überwacht. Der Zustand des BÜ wird diesem durch Überwachungssignale angezeigt. Es gibt keine Verbindung zum Stellwerk. Kombinationen der Funtkionsüberwachungen sind möglich. DB-Regelwerk 815.0032 1 (1) und (2) 819.1203 3 "/>
       </eAnnotations>
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -888,6 +898,16 @@
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="Einschaltverz_Gewaehlt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="haltezeit" eType="#//Haltezeit_TypeClass"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Haltezeit der haltenden Züge am Haltepunkt in der Einschaltstrecke inklusive der Brems- und Anfahrbeschleunigung (tZH)"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="Haltezeit"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="kurzzugschaltung" eType="#//Kurzzugschaltung_TypeClass"
@@ -942,10 +962,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BUE_Einschaltung_Zuordnung" eSuperTypes="http://www.plan-pro.org/modell/Basisobjekte/toolbox#//Basis_Objekt">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Logisches Objekt zur Zuordnung zwischen BUE Einschaltung und zugehörigem BUE Gleisbezogener Gefahrraum. Im Regelfall wirkt eine BUE_Einschaltung direkt auf einen gleisbezogenen Gefahrraum; das Zuordnungsobjekt wäre nicht erforderlich. Liegt jedoch zwischen BUE_Einschaltung und dem BÜ eine Weichenverbindung, wird eine Zuordnung der BUE_Einschaltung auf mehrere gleisbezogene Gefahrräume notwendig. Diese Verbindung stellt das Zuordnungsobjekt her. Zur Vereinheitlichung wurde auf eine Choice zwischen direktem Verweis von BUE_Einschaltung auf BUE_Gleisbezogener_Gefahrraum und den Verweisen durch das Zuordnungsobjekt verzichtet. DB-Regelwerk Dieser Anwendungsfall ist im Regelwerk der DB AG nicht explizit beschrieben. "/>
+      <details key="documentation" value="Logisches Objekt zur Zuordnung zwischen BUE Einschaltung und zugehörigem BUE Gleisbezogener Gefahrraum. Im Regelfall wirkt eine BUE_Einschaltung direkt auf einen gleisbezogenen Gefahrraum; das Zuordnungsobjekt wäre nicht erforderlich. Liegt jedoch zwischen BUE_Einschaltung und dem BÜ eine Weichenverbindung, wird eine Zuordnung der BUE_Einschaltung auf mehrere gleisbezogene Gefahrräume notwendig. Diese Verbindung stellt das Zuordnungsobjekt her. Zur Vereinheitlichung wurde auf eine Choice zwischen direktem Verweis von BUE_Einschaltung auf BUE_Gleisbezogener_Gefahrraum und den Verweisen durch das Zuordnungsobjekt verzichtet. DB-Regelwerk Dieser Anwendungsfall ist im Regelwerk der DB AG nicht explizit beschrieben."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Einschaltung_Zuordnung"/>
@@ -991,7 +1011,7 @@
       <details key="documentation" value="Eckpunkt des BÜ-Gefahrraums."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Gefahrraum_Eckpunkt"/>
@@ -1038,7 +1058,7 @@
       <details key="documentation" value="Bereichsobjekt, das den Gefahrraum eines BÜ für ein Gleis abbildet. Die Grenzen des Bereichsobjektes liegen jeweils auf dem Schnittpunkt zwischen Gefahrraumkante und zugehörigem Gleis. Die zugehörigen Ein- und Ausschaltelemente verweisen auf die jeweilige Grenze des Bereichsobjektes. Für jedes Gleis am BÜ ist ein solches Objekt vorzusehen. Somit hat ein BÜ bzw. eine BUE Anlage immer genauso viele Instanzen von BUE_Gleisbezogener_Gefahrraum wie BÜ-Gleise. Zu einem späteren Zeitpunkt werden ggf. weitere, Gefahrraum-spezifische Angaben ergänzt. DB-Regelwerk 819.1210 7 (1)-(3) "/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Gleisbezogener_Gefahrraum"/>
@@ -1097,7 +1117,7 @@
       <details key="documentation" value="Gleisbezogene Abbildung der BÜ-Kante zur Berechnung des Sicherheitsabstands bei Hp-gedeckten Bahnübergängen."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Kante"/>
@@ -1119,7 +1139,7 @@
       <details key="documentation" value="Verortungspunkte des für die BÜ-Planung verwendeten bautechnischen BÜ-Kreuzungsplans. Sofern der Anhang nicht als GeoTiff vorliegt, sind mindestens 2 Verortungspunkte anzugeben."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Kreuzungsplan"/>
@@ -1144,6 +1164,16 @@
         <details key="name" value="ID_Anhang_Kreuzungsplan"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iDBUEAnlage" lowerBound="1"
+        eType="#//BUE_Anlage" unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Verweis auf die für die Ausgabe des Kreuzungsplans relevante BÜ-Anlage."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ID_BUE_Anlage"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BUE_Kreuzungsplan_Koordinaten_AttributeGroup">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1151,10 +1181,9 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iDGEOPunkt" lowerBound="1"
-        eType="ecore:EClass http://www.plan-pro.org/modell/Geodaten/toolbox#//GEO_Punkt"
-        unsettable="true">
+        upperBound="-1" eType="ecore:EClass http://www.plan-pro.org/modell/Geodaten/toolbox#//GEO_Punkt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Verweis auf einen GEO_Punkt zur geografischen Verortung des Bildpunktes."/>
+        <details key="documentation" value="Verweis auf einen GEO_Punkt zur geografischen Verortung des Bildpunktes. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig."/>
       </eAnnotations>
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -1239,7 +1268,7 @@
       <details key="documentation" value="Schnittstelle zwischen dem Planer des ESTW und dem Planer der technischen Sicherung des Bahnübergangs. Im ESTW wird eine technische Schnittstelle für Hp-Abhängigkeiten zwischen ESTW und BÜ und/oder Fernüberwachung (FÜ) durch den özF vorgesehen. Bau-BÜ, die über eine Schlüsselsperre gesichert werden, sowie nichttechnisch gesicherte BÜ erhalten keine BUE_Schnittstelle. DB-Regelwerk Die betreffenden Angaben finden sich im &quot;Datenblatt für die Abhängigkeiten BÜ - Stw&quot;."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Schnittstelle"/>
@@ -1252,8 +1281,8 @@
         <details key="name" value="BUE_Abhaengigkeit_Fue"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bUESchnittstelleAllg" lowerBound="1"
-        eType="#//BUE_Schnittstelle_Allg_AttributeGroup" containment="true" resolveProxies="false">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bUESchnittstelleAllg" eType="#//BUE_Schnittstelle_Allg_AttributeGroup"
+        containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="BUE_Schnittstelle_Allg"/>
@@ -1363,7 +1392,7 @@
       <details key="documentation" value="Objekt zur Zuordnung von Signalen, die ausschließlich im Zusammenhang mit einem Bahnübergang (BÜ) angeordnet werden. Dazu gehören zum Beispiel Pfeiftafeln, Lf-Signale mit und ohne Zusatz &quot;BÜ&quot; oder Überwachungssignale für BÜ, Merktafeln oder Merkpfähle u.a. Die Anwendung von Pfeiftafeln und Lf-Signalen erfolgt zumeist bei nichttechnisch gesicherten BÜ; die Anwendung der Überwachungssignale bei Bahnübergängen der Funktionsüberwachung &quot;ÜS&quot;. Für die vorgenannten Fälle ist der Verweis auf BUE Anlage zu befüllen. Wird zum Beispiel ein Merkpfahl zur Kennzeichnung eines Einschaltpunktes (Anwendung in besonderen Planungsfällen) vorgesehen, ist der Verweis auf BUE Einschaltung zu befüllen. Für die Bezeichnung von BÜ-spezifischen Signalen, insbesondere Überwachungssignale, sind Ausführungen auf der Seite Bezeichnung Signal vorhanden. DB-Regelwerk Formblatt zur Ermittlung der Sichtflächen für nichttechnisch gesicherte BÜ 819.1204 9 für ÜS SPU 24 für Merktafel /-pfahl BÜ-Kabellage- und -übersichtsplan "/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_Spezifisches_Signal"/>
@@ -1458,7 +1487,7 @@
       <details key="documentation" value="Zuordnung zwischen BUE-Einschaltung und zugehörigen Fahrstraßen, für die die Wirksamkeitskontakte wirken sollen."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CBUE_WS_Fstr_Zuordnung"/>
@@ -1546,8 +1575,8 @@
     </eAnnotations>
     <eLiterals name="ENUMBUE_Bauart_Bau_Bue" literal="Bau_Bue"/>
     <eLiterals name="ENUMBUE_Bauart_Bue" value="1" literal="Bue"/>
-    <eLiterals name="ENUMBUE_Bauart_ntg_Reisendenuebergang" value="2" literal="ntg_Reisendenuebergang"/>
-    <eLiterals name="ENUMBUE_Bauart_Resi" value="3" literal="Resi"/>
+    <eLiterals name="ENUMBUE_Bauart_ntResi" value="2" literal="ntResi"/>
+    <eLiterals name="ENUMBUE_Bauart_tResi" value="3" literal="tResi"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ENUMBUEBauartObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1559,10 +1588,13 @@
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="ENUMBUE_Funktionsueberwachung"/>
     </eAnnotations>
-    <eLiterals name="ENUMBUE_Funktionsueberwachung_Fü" literal="Fü"/>
-    <eLiterals name="ENUMBUE_Funktionsueberwachung_Hp" value="1" literal="Hp"/>
-    <eLiterals name="ENUMBUE_Funktionsueberwachung_Us" value="2" literal="Üs"/>
-    <eLiterals name="ENUMBUE_Funktionsueberwachung_UsOE" value="3" literal="ÜsOE"/>
+    <eLiterals name="ENUMBUE_Funktionsueberwachung_FSUe_B" literal="FSUe_B"/>
+    <eLiterals name="ENUMBUE_Funktionsueberwachung_FSUe_E" value="1" literal="FSUe_E"/>
+    <eLiterals name="ENUMBUE_Funktionsueberwachung_FSUe_S" value="2" literal="FSUe_S"/>
+    <eLiterals name="ENUMBUE_Funktionsueberwachung_Fü" value="3" literal="Fü"/>
+    <eLiterals name="ENUMBUE_Funktionsueberwachung_Hp" value="4" literal="Hp"/>
+    <eLiterals name="ENUMBUE_Funktionsueberwachung_Us" value="5" literal="Üs"/>
+    <eLiterals name="ENUMBUE_Funktionsueberwachung_UsOE" value="6" literal="ÜsOE"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ENUMBUEFunktionsueberwachungObject"
       instanceClassName="org.eclipse.emf.common.util.Enumerator">
@@ -1576,13 +1608,13 @@
       <details key="name" value="ENUMBUE_Handschalteinrichtung"/>
     </eAnnotations>
     <eLiterals name="ENUMBUE_Handschalteinrichtung_AT" literal="AT"/>
-    <eLiterals name="ENUMBUE_Handschalteinrichtung_sonstige" value="1" literal="sonstige"/>
-    <eLiterals name="ENUMBUE_Handschalteinrichtung_ET" value="2" literal="ET"/>
-    <eLiterals name="ENUMBUE_Handschalteinrichtung_HAT" value="3" literal="HAT"/>
-    <eLiterals name="ENUMBUE_Handschalteinrichtung_HET" value="4" literal="HET"/>
-    <eLiterals name="ENUMBUE_Handschalteinrichtung_RS" value="5" literal="RS"/>
-    <eLiterals name="ENUMBUE_Handschalteinrichtung_RT_ein_aus" value="6" literal="RT_ein_aus"/>
-    <eLiterals name="ENUMBUE_Handschalteinrichtung_RT_ein_RT_aus" value="7" literal="RT_ein_RT_aus"/>
+    <eLiterals name="ENUMBUE_Handschalteinrichtung_ET" value="1" literal="ET"/>
+    <eLiterals name="ENUMBUE_Handschalteinrichtung_HAT" value="2" literal="HAT"/>
+    <eLiterals name="ENUMBUE_Handschalteinrichtung_HET" value="3" literal="HET"/>
+    <eLiterals name="ENUMBUE_Handschalteinrichtung_RS" value="4" literal="RS"/>
+    <eLiterals name="ENUMBUE_Handschalteinrichtung_RT_ein_aus" value="5" literal="RT_ein_aus"/>
+    <eLiterals name="ENUMBUE_Handschalteinrichtung_RT_ein_RT_aus" value="6" literal="RT_ein_RT_aus"/>
+    <eLiterals name="ENUMBUE_Handschalteinrichtung_sonstige" value="7" literal="sonstige"/>
     <eLiterals name="ENUMBUE_Handschalteinrichtung_UT" value="8" literal="UT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ENUMBUEHandschalteinrichtungObject"
@@ -1596,20 +1628,30 @@
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="ENUMBUE_Sicherungsart"/>
     </eAnnotations>
-    <eLiterals name="ENUMBUE_Sicherungsart_A_und_Lf" literal="A_und_Lf"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_A_und_Sprechverbindung" value="1" literal="A_und_Sprechverbindung"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_Lz" value="2" literal="Lz"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_LzH" value="3" literal="LzH"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_LzH_2F" value="4" literal="LzH_2F"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_LzH_F" value="5" literal="LzH_F"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_LzHH" value="6" literal="LzHH"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_LzV" value="7" literal="LzV"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_P" value="8" literal="P"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_P_und_Lf" value="9" literal="P_und_Lf"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_schluesselabhaengig" value="10" literal="schluesselabhaengig"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_sonstige" value="11" literal="sonstige"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_Ue" value="12" literal="Ue"/>
-    <eLiterals name="ENUMBUE_Sicherungsart_Ue_und_P" value="13" literal="Ue_und_P"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_A" literal="A"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_A_und_Lf" value="1" literal="A_und_Lf"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_A_und_Sprechverbindung" value="2" literal="A_und_Sprechverbindung"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_Anrufschranke_und_Sprechverbindung" value="3"
+        literal="Anrufschranke_und_Sprechverbindung"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_bgBUe" value="4" literal="bgBUe"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_Lz" value="5" literal="Lz"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzF" value="6" literal="LzF"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzH" value="7" literal="LzH"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzH_2F" value="8" literal="LzH_2F"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzH_F" value="9" literal="LzH_F"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzHH" value="10" literal="LzHH"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzHH_2F" value="11" literal="LzHH_2F"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzHH_F" value="12" literal="LzHH_F"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_LzV" value="13" literal="LzV"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_P" value="14" literal="P"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_P_und_Lf" value="15" literal="P_und_Lf"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_P_und_U" value="16" literal="P_und_U"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_schluesselabhaengig" value="17" literal="schluesselabhaengig"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_sonstige" value="18" literal="sonstige"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_Ue" value="19" literal="Ue"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_Ue_und_A" value="20" literal="Ue_und_A"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_Ue_und_P" value="21" literal="Ue_und_P"/>
+    <eLiterals name="ENUMBUE_Sicherungsart_Ue_und_U" value="22" literal="Ue_und_U"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ENUMBUESicherungsartObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1638,9 +1680,10 @@
     <eLiterals name="ENUMBUE_Technik_LO1" value="14" literal="LO1"/>
     <eLiterals name="ENUMBUE_Technik_LO1_57" value="15" literal="LO1_57"/>
     <eLiterals name="ENUMBUE_Technik_NE_BUE_90" value="16" literal="NE_BUE_90"/>
-    <eLiterals name="ENUMBUE_Technik_RBUET" value="17" literal="RBUET"/>
-    <eLiterals name="ENUMBUE_Technik_SIMIS_LC" value="18" literal="SIMIS_LC"/>
-    <eLiterals name="ENUMBUE_Technik_sonstige" value="19" literal="sonstige"/>
+    <eLiterals name="ENUMBUE_Technik_RBUEP" value="17" literal="RBUEP"/>
+    <eLiterals name="ENUMBUE_Technik_RBUET" value="18" literal="RBUET"/>
+    <eLiterals name="ENUMBUE_Technik_SIMIS_LC" value="19" literal="SIMIS_LC"/>
+    <eLiterals name="ENUMBUE_Technik_sonstige" value="20" literal="sonstige"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ENUMBUETechnikObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -1940,7 +1983,7 @@
       <details key="documentation" value="Gerfahrraumfreimeldeanlage. Folgende Rahmenbedingungen sind für den Einsatz einer GFR zu beachten: max. Höhe der Bodenwellen des BÜ: 15 cm; max. Neigung des BÜ: 2°."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CGFR_Anlage"/>
@@ -2028,7 +2071,7 @@
       <details key="documentation" value="Detektor der GFR-Anlage (z. B. Radar). Elemente für eine Kamera-Überwachung sind  Bestandteil TK-Ausrüstung und werden daher nicht abgebildet."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CGFR_Element"/>
@@ -2124,7 +2167,7 @@
       <details key="documentation" value="Ortungshilfe für GFR-Anlagen der Firma Honeywell."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CGFR_Tripelspiegel"/>
@@ -2257,6 +2300,25 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wert" lowerBound="1" eType="#//Gleis_Am_Bue_Type"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="Wert"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Haltezeit_Type" instanceClassName="java.math.BigDecimal">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="THaltezeit"/>
+      <details key="baseType" value="http://www.plan-pro.org/modell/BasisTypen/toolbox#TSekunde"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Haltezeit_TypeClass" eSuperTypes="http://www.plan-pro.org/modell/BasisTypen/toolbox#//BasisAttribut_AttributeGroup">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="TCHaltezeit"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wert" lowerBound="1" eType="#//Haltezeit_Type"
         unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -2776,7 +2838,7 @@
       <details key="documentation" value="Verknüpft bei einem Bahnübergang mit der Funktionsüberwachung Fü die möglichen Fahrstraßen mit den Elementen für die Wirksamschaltung."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ|ESTW&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CSchaltmittel_Fstr_Zuordnung"/>
@@ -2809,7 +2871,7 @@
       <details key="documentation" value="Abbildung von Schrankenantrieben für Bahnübergänge."/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CSchrankenantrieb"/>
@@ -3242,7 +3304,7 @@
       <details key="documentation" value="Abbildung von Lichtzeichen und Andreaskreuzen im Rahmen der BÜ-Planung. Die Attributgruppe Verkehrszeichen_Lz entfällt bei nichttechnisch gesicherten BÜ oder beschrankten BÜ mit Läutewerk. Die Attributgruppe Verkehrszeichen_Andreaskreuz entfällt bei vorgeschalteten Lichtzeichen. Mehrere Andreaskreuze bei einmündenden Straßen sind möglich (i. d. R. max 3). Die Attributgruppe Vz_Sperrstrecke entfällt bei vorgeschalteten Lichtzeichen"/>
     </eAnnotations>
     <eAnnotations>
-      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
+      <details key="appinfo" value="&#xD;&#xA;              &#xD;&#xA;  &lt;WorkflowInformation xmlns=&quot;http://www.plan-pro.org/modell/PlanProInformation&quot;>&#xD;&#xA;                   &#xD;&#xA;    &lt;ObjectType>LST_OBJECT&lt;/ObjectType>&#xD;&#xA;                   &#xD;&#xA;    &lt;Untergewerke>BÜ&lt;/Untergewerke>&#xD;&#xA;                &#xD;&#xA;  &lt;/WorkflowInformation>&#xD;&#xA;           &#xD;&#xA;"/>
     </eAnnotations>
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CVerkehrszeichen"/>

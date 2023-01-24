@@ -1,10 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage;
 
 /**
@@ -17,6 +25,7 @@ import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getAutomatischeEinstellung <em>Automatische Einstellung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getFstrRangierArt <em>Fstr Rangier Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getIDFMAAnlageRangierFrei <em>IDFMA Anlage Rangier Frei</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getRangierGegenfahrtausschluss <em>Rangier Gegenfahrtausschluss</em>}</li>
  * </ul>
@@ -51,6 +60,32 @@ public interface Fstr_Rangier_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setAutomatischeEinstellung(Automatische_Einstellung_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Fstr Rangier Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Art der Rangierstraße. RR – RangierRegel-, RT - RangierTeil-, RTU - RangierTeilUmfahr-, RU – RangierUmfahr-. DB-Regelwerk Rangierstraßentabelle, Spalte 2 "Art"
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Fstr Rangier Art</em>' containment reference.
+	 * @see #setFstrRangierArt(Fstr_Rangier_Art_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage#getFstr_Rangier_AttributeGroup_FstrRangierArt()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='Fstr_Rangier_Art'"
+	 * @generated
+	 */
+	Fstr_Rangier_Art_TypeClass getFstrRangierArt();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup#getFstrRangierArt <em>Fstr Rangier Art</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fstr Rangier Art</em>' containment reference.
+	 * @see #getFstrRangierArt()
+	 * @generated
+	 */
+	void setFstrRangierArt(Fstr_Rangier_Art_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>IDFMA Anlage Rangier Frei</b></em>' reference list.

@@ -1,11 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -57,18 +62,18 @@ public interface Fachtelegramm extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf einen Anhang mit folgenden möglichen Inhalten: Umsetzung der Fachtelegramme auf die Lufttelegramme, Lastenheftangaben, Planungsrichtlinien, SRS-Version.
+	 * Verweis auf einen Anhang oder Bearbeitungsvermerk mit folgenden möglichen Inhalten: Umsetzung der Fachtelegramme auf die Lufttelegramme, Lastenheftangaben, Planungsrichtlinien, SRS-Version.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Doku Telegrammkodierung</em>' reference.
 	 * @see #isSetIDDokuTelegrammkodierung()
 	 * @see #unsetIDDokuTelegrammkodierung()
-	 * @see #setIDDokuTelegrammkodierung(Anhang)
+	 * @see #setIDDokuTelegrammkodierung(Basis_Objekt)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getFachtelegramm_IDDokuTelegrammkodierung()
 	 * @model unsettable="true"
 	 *        extendedMetaData="kind='element' name='ID_Doku_Telegrammkodierung'"
 	 * @generated
 	 */
-	Anhang getIDDokuTelegrammkodierung();
+	Basis_Objekt getIDDokuTelegrammkodierung();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Fachtelegramm#getIDDokuTelegrammkodierung <em>ID Doku Telegrammkodierung</em>}' reference.
@@ -80,7 +85,7 @@ public interface Fachtelegramm extends Basis_Objekt {
 	 * @see #getIDDokuTelegrammkodierung()
 	 * @generated
 	 */
-	void setIDDokuTelegrammkodierung(Anhang value);
+	void setIDDokuTelegrammkodierung(Basis_Objekt value);
 
 	/**
 	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Fachtelegramm#getIDDokuTelegrammkodierung <em>ID Doku Telegrammkodierung</em>}' reference.
@@ -88,7 +93,7 @@ public interface Fachtelegramm extends Basis_Objekt {
 	 * <!-- end-user-doc -->
 	 * @see #isSetIDDokuTelegrammkodierung()
 	 * @see #getIDDokuTelegrammkodierung()
-	 * @see #setIDDokuTelegrammkodierung(Anhang)
+	 * @see #setIDDokuTelegrammkodierung(Basis_Objekt)
 	 * @generated
 	 */
 	void unsetIDDokuTelegrammkodierung();
@@ -100,7 +105,7 @@ public interface Fachtelegramm extends Basis_Objekt {
 	 * @return whether the value of the '<em>ID Doku Telegrammkodierung</em>' reference is set.
 	 * @see #unsetIDDokuTelegrammkodierung()
 	 * @see #getIDDokuTelegrammkodierung()
-	 * @see #setIDDokuTelegrammkodierung(Anhang)
+	 * @see #setIDDokuTelegrammkodierung(Basis_Objekt)
 	 * @generated
 	 */
 	boolean isSetIDDokuTelegrammkodierung();
@@ -110,7 +115,7 @@ public interface Fachtelegramm extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Richtung der betrieblichen Funktion in Bezug auf die Ausrichtung des Datenpunkts. Der Wert "in" ist mit "nominal" gleichzusetzen, der Wert "gegen" mit "reverse".
+	 * Richtung der betrieblichen Funktion in Bezug auf die physikalische oder durch Linking vorgegebene Ausrichtung des Datenpunkts. Der Wert "in" ist mit "nominal" gleichzusetzen, der Wert "gegen" mit "reverse".
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Wirkrichtung In Datenpunkt</em>' containment reference.
 	 * @see #setWirkrichtungInDatenpunkt(Wirkrichtung_In_Datenpunkt_TypeClass)

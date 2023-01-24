@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.impl;
 
@@ -6,14 +13,16 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
+import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
+
 import org.eclipse.set.toolboxmodel.Signale.Rahmen_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 import org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung;
 import org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen;
@@ -27,15 +36,36 @@ import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_RahmenImpl#getIDRegelzeichnung <em>ID Regelzeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_RahmenImpl#getIDSignal <em>ID Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_RahmenImpl#getIDSignalBefestigung <em>ID Signal Befestigung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_RahmenImpl#getIDSignalNachordnung <em>ID Signal Nachordnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_RahmenImpl#getRahmenArt <em>Rahmen Art</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_RahmenImpl#getRahmenHoehe <em>Rahmen Hoehe</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen {
+	/**
+	 * The cached value of the '{@link #getIDRegelzeichnung() <em>ID Regelzeichnung</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDRegelzeichnung()
+	 * @generated
+	 * @ordered
+	 */
+	protected Regelzeichnung iDRegelzeichnung;
+
+	/**
+	 * This is true if the ID Regelzeichnung reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDRegelzeichnungESet;
+
 	/**
 	 * The cached value of the '{@link #getIDSignal() <em>ID Signal</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -104,6 +134,16 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 	protected Rahmen_Art_TypeClass rahmenArt;
 
 	/**
+	 * The cached value of the '{@link #getRahmenHoehe() <em>Rahmen Hoehe</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRahmenHoehe()
+	 * @generated
+	 * @ordered
+	 */
+	protected Rahmen_Hoehe_TypeClass rahmenHoehe;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -120,6 +160,73 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 	@Override
 	protected EClass eStaticClass() {
 		return SignalePackage.Literals.SIGNAL_RAHMEN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Regelzeichnung getIDRegelzeichnung() {
+		if (iDRegelzeichnung != null && iDRegelzeichnung.eIsProxy()) {
+			InternalEObject oldIDRegelzeichnung = (InternalEObject)iDRegelzeichnung;
+			iDRegelzeichnung = (Regelzeichnung)eResolveProxy(oldIDRegelzeichnung);
+			if (iDRegelzeichnung != oldIDRegelzeichnung) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SignalePackage.SIGNAL_RAHMEN__ID_REGELZEICHNUNG, oldIDRegelzeichnung, iDRegelzeichnung));
+			}
+		}
+		return iDRegelzeichnung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Regelzeichnung basicGetIDRegelzeichnung() {
+		return iDRegelzeichnung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDRegelzeichnung(Regelzeichnung newIDRegelzeichnung) {
+		Regelzeichnung oldIDRegelzeichnung = iDRegelzeichnung;
+		iDRegelzeichnung = newIDRegelzeichnung;
+		boolean oldIDRegelzeichnungESet = iDRegelzeichnungESet;
+		iDRegelzeichnungESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_RAHMEN__ID_REGELZEICHNUNG, oldIDRegelzeichnung, iDRegelzeichnung, !oldIDRegelzeichnungESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDRegelzeichnung() {
+		Regelzeichnung oldIDRegelzeichnung = iDRegelzeichnung;
+		boolean oldIDRegelzeichnungESet = iDRegelzeichnungESet;
+		iDRegelzeichnung = null;
+		iDRegelzeichnungESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, SignalePackage.SIGNAL_RAHMEN__ID_REGELZEICHNUNG, oldIDRegelzeichnung, null, oldIDRegelzeichnungESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDRegelzeichnung() {
+		return iDRegelzeichnungESet;
 	}
 
 	/**
@@ -374,10 +481,57 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 	 * @generated
 	 */
 	@Override
+	public Rahmen_Hoehe_TypeClass getRahmenHoehe() {
+		return rahmenHoehe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRahmenHoehe(Rahmen_Hoehe_TypeClass newRahmenHoehe, NotificationChain msgs) {
+		Rahmen_Hoehe_TypeClass oldRahmenHoehe = rahmenHoehe;
+		rahmenHoehe = newRahmenHoehe;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE, oldRahmenHoehe, newRahmenHoehe);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRahmenHoehe(Rahmen_Hoehe_TypeClass newRahmenHoehe) {
+		if (newRahmenHoehe != rahmenHoehe) {
+			NotificationChain msgs = null;
+			if (rahmenHoehe != null)
+				msgs = ((InternalEObject)rahmenHoehe).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE, null, msgs);
+			if (newRahmenHoehe != null)
+				msgs = ((InternalEObject)newRahmenHoehe).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE, null, msgs);
+			msgs = basicSetRahmenHoehe(newRahmenHoehe, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE, newRahmenHoehe, newRahmenHoehe));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_ART:
 				return basicSetRahmenArt(null, msgs);
+			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE:
+				return basicSetRahmenHoehe(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -391,6 +545,9 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case SignalePackage.SIGNAL_RAHMEN__ID_REGELZEICHNUNG:
+				if (resolve) return getIDRegelzeichnung();
+				return basicGetIDRegelzeichnung();
 			case SignalePackage.SIGNAL_RAHMEN__ID_SIGNAL:
 				if (resolve) return getIDSignal();
 				return basicGetIDSignal();
@@ -402,6 +559,8 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 				return basicGetIDSignalNachordnung();
 			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_ART:
 				return getRahmenArt();
+			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE:
+				return getRahmenHoehe();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -415,6 +574,9 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SignalePackage.SIGNAL_RAHMEN__ID_REGELZEICHNUNG:
+				setIDRegelzeichnung((Regelzeichnung)newValue);
+				return;
 			case SignalePackage.SIGNAL_RAHMEN__ID_SIGNAL:
 				setIDSignal((Signal)newValue);
 				return;
@@ -426,6 +588,9 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 				return;
 			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_ART:
 				setRahmenArt((Rahmen_Art_TypeClass)newValue);
+				return;
+			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE:
+				setRahmenHoehe((Rahmen_Hoehe_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -441,6 +606,9 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case SignalePackage.SIGNAL_RAHMEN__ID_REGELZEICHNUNG:
+				unsetIDRegelzeichnung();
+				return;
 			case SignalePackage.SIGNAL_RAHMEN__ID_SIGNAL:
 				unsetIDSignal();
 				return;
@@ -452,6 +620,9 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 				return;
 			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_ART:
 				setRahmenArt((Rahmen_Art_TypeClass)null);
+				return;
+			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE:
+				setRahmenHoehe((Rahmen_Hoehe_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -467,6 +638,8 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case SignalePackage.SIGNAL_RAHMEN__ID_REGELZEICHNUNG:
+				return isSetIDRegelzeichnung();
 			case SignalePackage.SIGNAL_RAHMEN__ID_SIGNAL:
 				return isSetIDSignal();
 			case SignalePackage.SIGNAL_RAHMEN__ID_SIGNAL_BEFESTIGUNG:
@@ -475,6 +648,8 @@ public class Signal_RahmenImpl extends Basis_ObjektImpl implements Signal_Rahmen
 				return isSetIDSignalNachordnung();
 			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_ART:
 				return rahmenArt != null;
+			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE:
+				return rahmenHoehe != null;
 			default:
 				return super.eIsSet(featureID);
 		}

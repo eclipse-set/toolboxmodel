@@ -12,9 +12,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * <!-- begin-model-doc -->
  * Am PlanPro-Planungsprozess beteiligter Akteur.
  * In PlanPro werden der Name und Kontaktdaten des Akteurs erfasst. Einschränkungen hinsichtlich der zulässigen Rolle des Akteurs sind durch entsprechende Attributbezeichnungen und -beschreibungen ersichtlich.
- * DB-Regelwerk
- * • Schriftfeldeintrag gemäß Ril 819.0103
- * 
+ * DB-Regelwerk Schriftfeldeintrag gemäß Ril 886.0102
  * <!-- end-model-doc -->
  *
  * <p>
@@ -60,7 +58,7 @@ public interface Akteur extends Ur_Objekt {
 	 * <!-- begin-model-doc -->
 	 * Kontaktdaten des Akteurs zur Unternehmenszuordnung.
 	 * DB-Regelwerk
-	 * Bisher keine Abbildung als Schriftfeldeintrag gemäß Ril 819.0103.
+	 * Bisher keine Abbildung als Schriftfeldeintrag gemäß Ril 886.0102.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Kontaktdaten</em>' containment reference.
 	 * @see #setKontaktdaten(Organisation)

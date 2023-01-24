@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -99,6 +106,16 @@ public enum ENUMWKrArt implements Enumerator {
 	ENUMW_KR_ART_KLOTHOIDENWEICHE(7, "ENUMW_Kr_Art_Klothoidenweiche", "Klothoidenweiche"),
 
 	/**
+	 * The '<em><b>ENUMW Kr Art Korbbogenweiche</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMW_KR_ART_KORBBOGENWEICHE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMW_KR_ART_KORBBOGENWEICHE(8, "ENUMW_Kr_Art_Korbbogenweiche", "Korbbogenweiche"),
+
+	/**
 	 * The '<em><b>ENUMW Kr Art Kr</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,7 +123,7 @@ public enum ENUMWKrArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMW_KR_ART_KR(8, "ENUMW_Kr_Art_Kr", "Kr"),
+	ENUMW_KR_ART_KR(9, "ENUMW_Kr_Art_Kr", "Kr"),
 
 	/**
 	 * The '<em><b>ENUMW Kr Art sonstige</b></em>' literal object.
@@ -116,17 +133,7 @@ public enum ENUMWKrArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMW_KR_ART_SONSTIGE(9, "ENUMW_Kr_Art_sonstige", "sonstige"),
-
-	/**
-	 * The '<em><b>ENUMW Kr Art Korbbogenweiche</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMW_KR_ART_KORBBOGENWEICHE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMW_KR_ART_KORBBOGENWEICHE(10, "ENUMW_Kr_Art_Korbbogenweiche", "Korbbogenweiche");
+	ENUMW_KR_ART_SONSTIGE(10, "ENUMW_Kr_Art_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUMW Kr Art ABW</b></em>' literal value.
@@ -217,6 +224,17 @@ public enum ENUMWKrArt implements Enumerator {
 	public static final int ENUMW_KR_ART_KLOTHOIDENWEICHE_VALUE = 7;
 
 	/**
+	 * The '<em><b>ENUMW Kr Art Korbbogenweiche</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMW_KR_ART_KORBBOGENWEICHE
+	 * @model name="ENUMW_Kr_Art_Korbbogenweiche" literal="Korbbogenweiche"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMW_KR_ART_KORBBOGENWEICHE_VALUE = 8;
+
+	/**
 	 * The '<em><b>ENUMW Kr Art Kr</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -225,7 +243,7 @@ public enum ENUMWKrArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMW_KR_ART_KR_VALUE = 8;
+	public static final int ENUMW_KR_ART_KR_VALUE = 9;
 
 	/**
 	 * The '<em><b>ENUMW Kr Art sonstige</b></em>' literal value.
@@ -236,18 +254,7 @@ public enum ENUMWKrArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMW_KR_ART_SONSTIGE_VALUE = 9;
-
-	/**
-	 * The '<em><b>ENUMW Kr Art Korbbogenweiche</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMW_KR_ART_KORBBOGENWEICHE
-	 * @model name="ENUMW_Kr_Art_Korbbogenweiche" literal="Korbbogenweiche"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMW_KR_ART_KORBBOGENWEICHE_VALUE = 10;
+	public static final int ENUMW_KR_ART_SONSTIGE_VALUE = 10;
 
 	/**
 	 * An array of all the '<em><b>ENUMW Kr Art</b></em>' enumerators.
@@ -265,9 +272,9 @@ public enum ENUMWKrArt implements Enumerator {
 			ENUMW_KR_ART_FLACHKREUZUNG,
 			ENUMW_KR_ART_IBW,
 			ENUMW_KR_ART_KLOTHOIDENWEICHE,
+			ENUMW_KR_ART_KORBBOGENWEICHE,
 			ENUMW_KR_ART_KR,
 			ENUMW_KR_ART_SONSTIGE,
-			ENUMW_KR_ART_KORBBOGENWEICHE,
 		};
 
 	/**
@@ -332,9 +339,9 @@ public enum ENUMWKrArt implements Enumerator {
 			case ENUMW_KR_ART_FLACHKREUZUNG_VALUE: return ENUMW_KR_ART_FLACHKREUZUNG;
 			case ENUMW_KR_ART_IBW_VALUE: return ENUMW_KR_ART_IBW;
 			case ENUMW_KR_ART_KLOTHOIDENWEICHE_VALUE: return ENUMW_KR_ART_KLOTHOIDENWEICHE;
+			case ENUMW_KR_ART_KORBBOGENWEICHE_VALUE: return ENUMW_KR_ART_KORBBOGENWEICHE;
 			case ENUMW_KR_ART_KR_VALUE: return ENUMW_KR_ART_KR;
 			case ENUMW_KR_ART_SONSTIGE_VALUE: return ENUMW_KR_ART_SONSTIGE;
-			case ENUMW_KR_ART_KORBBOGENWEICHE_VALUE: return ENUMW_KR_ART_KORBBOGENWEICHE;
 			default: return null;
 		}
 	}

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Verweise.impl;
 
@@ -60,8 +67,12 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_ANFORDERUNG_TYPE_CLASS: return createID_Anforderung_TypeClass();
 			case VerweisePackage.ID_ANHANG_OHNE_PROXY_TYPE_CLASS: return createID_Anhang_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_ANHANG_TYPE_CLASS: return createID_Anhang_TypeClass();
+			case VerweisePackage.ID_ANHANG_BEARBEITUNGSVERMERK_TYPE_CLASS: return createID_AnhangBearbeitungsvermerk_TypeClass();
 			case VerweisePackage.ID_ANSCHLUSS_ELEMENT_TYPE_CLASS: return createID_Anschluss_Element_TypeClass();
+			case VerweisePackage.ID_ATO_TS_INSTANZ_OHNE_PROXY_TYPE_CLASS: return createID_ATO_TS_Instanz_ohne_Proxy_TypeClass();
+			case VerweisePackage.ID_ATO_TS_INSTANZ_TYPE_CLASS: return createID_ATO_TS_Instanz_TypeClass();
 			case VerweisePackage.ID_AUSGABE_FACHDATEN_OHNE_PROXY_TYPE_CLASS: return createID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass();
+			case VerweisePackage.ID_AUSSENELEMENTANSTEUERUNG_OHNE_PROXY_TYPE_CLASS: return createID_Aussenelementansteuerung_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_AUSSENELEMENTANSTEUERUNG_TYPE_CLASS: return createID_Aussenelementansteuerung_TypeClass();
 			case VerweisePackage.ID_BAHNSTEIG_ANLAGE_TYPE_CLASS: return createID_Bahnsteig_Anlage_TypeClass();
 			case VerweisePackage.ID_BAHNSTEIG_KANTE_OHNE_PROXY_TYPE_CLASS: return createID_Bahnsteig_Kante_ohne_Proxy_TypeClass();
@@ -69,15 +80,16 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_BALISE_OHNE_PROXY_TYPE_CLASS: return createID_Balise_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_BALISE_TYPE_CLASS: return createID_Balise_TypeClass();
 			case VerweisePackage.ID_BASIS_OBJEKT_TYPE_CLASS: return createID_Basis_Objekt_TypeClass();
-			case VerweisePackage.ID_BEARBEITUNGSVERMERK_TYPE_CLASS: return createID_Bearbeitungsvermerk_TypeClass();
 			case VerweisePackage.ID_BEDIEN_ANZEIGE_ELEMENT_TYPE_CLASS: return createID_Bedien_Anzeige_Element_TypeClass();
 			case VerweisePackage.ID_BEDIEN_BEZIRK_TYPE_CLASS: return createID_Bedien_Bezirk_TypeClass();
 			case VerweisePackage.ID_BEDIEN_EINRICHTUNG_OERTLICH_TYPE_CLASS: return createID_Bedien_Einrichtung_Oertlich_TypeClass();
 			case VerweisePackage.ID_BEDIEN_OBERFLAECHE_TYPE_CLASS: return createID_Bedien_Oberflaeche_TypeClass();
 			case VerweisePackage.ID_BEDIEN_STANDORT_TYPE_CLASS: return createID_Bedien_Standort_TypeClass();
 			case VerweisePackage.ID_BEDIEN_ZENTRALE_TYPE_CLASS: return createID_Bedien_Zentrale_TypeClass();
+			case VerweisePackage.ID_BEFESTIGUNG_BAUWERK_TYPE_CLASS: return createID_Befestigung_Bauwerk_TypeClass();
 			case VerweisePackage.ID_BEGINN_BEREICH_TYPE_CLASS: return createID_Beginn_Bereich_TypeClass();
-			case VerweisePackage.ID_BINAERDATEI_OHNE_PROXY_TYPE_CLASS: return createID_Binaerdatei_ohne_Proxy_TypeClass();
+			case VerweisePackage.ID_BEZUGSPUNKT_POSITIONIERUNG_TYPE_CLASS: return createID_Bezugspunkt_Positionierung_TypeClass();
+			case VerweisePackage.ID_BINAERDATEN_OHNE_PROXY_TYPE_CLASS: return createID_Binaerdaten_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_BLOCK_ANLAGE_TYPE_CLASS: return createID_Block_Anlage_TypeClass();
 			case VerweisePackage.ID_BLOCK_ELEMENT_TYPE_CLASS: return createID_Block_Element_TypeClass();
 			case VerweisePackage.ID_BLOCK_STRECKE_TYPE_CLASS: return createID_Block_Strecke_TypeClass();
@@ -90,17 +102,19 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_BUE_WS_FSTR_ZUORDNUNG_TYPE_CLASS: return createID_BUE_WS_Fstr_Zuordnung_TypeClass();
 			case VerweisePackage.ID_DATENPUNKT_OHNE_PROXY_TYPE_CLASS: return createID_Datenpunkt_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_DATENPUNKT_TYPE_CLASS: return createID_Datenpunkt_TypeClass();
-			case VerweisePackage.ID_DP_BEZUGSPUNKT_TYPE_CLASS: return createID_DP_Bezugspunkt_TypeClass();
+			case VerweisePackage.ID_DP_BEZUG_FUNKTIONAL_TYPE_CLASS: return createID_DP_Bezug_Funktional_TypeClass();
 			case VerweisePackage.ID_EINSCHALTPUNKT_TYPE_CLASS: return createID_Einschaltpunkt_TypeClass();
 			case VerweisePackage.ID_ELEMENT_GRENZE_TYPE_CLASS: return createID_Element_Grenze_TypeClass();
 			case VerweisePackage.ID_ELEMENT_TYPE_CLASS: return createID_Element_TypeClass();
 			case VerweisePackage.ID_ELEMENT_UNTERBRINGUNG_TYPE_CLASS: return createID_Element_Unterbringung_TypeClass();
 			case VerweisePackage.ID_ENERGIE_EINGANG_TYPE_CLASS: return createID_Energie_Eingang_TypeClass();
-			case VerweisePackage.ID_ENERGIE_PRIMAER_TYPE_CLASS: return createID_Energie_Primaer_TypeClass();
+			case VerweisePackage.ID_ENERGIE_TYPE_CLASS: return createID_Energie_TypeClass();
 			case VerweisePackage.ID_ESTW_ZENTRALEINHEIT_TYPE_CLASS: return createID_ESTW_Zentraleinheit_TypeClass();
+			case VerweisePackage.ID_ETCS_KANTE_TYPE_CLASS: return createID_ETCS_Kante_TypeClass();
 			case VerweisePackage.ID_ETCS_KNOTEN_OHNE_PROXY_TYPE_CLASS: return createID_ETCS_Knoten_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_ETCS_KNOTEN_TYPE_CLASS: return createID_ETCS_Knoten_TypeClass();
 			case VerweisePackage.ID_EV_MODUL_TYPE_CLASS: return createID_EV_Modul_TypeClass();
+			case VerweisePackage.ID_FACHTELEGRAMM_OHNE_PROXY_TYPE_CLASS: return createID_Fachtelegramm_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_FACHTELEGRAMM_TYPE_CLASS: return createID_Fachtelegramm_TypeClass();
 			case VerweisePackage.ID_FLA_SCHUTZ_TYPE_CLASS: return createID_Fla_Schutz_TypeClass();
 			case VerweisePackage.ID_FMA_ANLAGE_RANGIER_FREI_TYPE_CLASS: return createID_FMA_Anlage_Rangier_Frei_TypeClass();
@@ -110,16 +124,18 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_FORTSCHALTUNG_START_TYPE_CLASS: return createID_Fortschaltung_Start_TypeClass();
 			case VerweisePackage.ID_FSTR_ANEINANDER_TYPE_CLASS: return createID_Fstr_Aneinander_TypeClass();
 			case VerweisePackage.ID_FSTR_AUSSCHLUSS_BESONDERS_TYPE_CLASS: return createID_Fstr_Ausschluss_Besonders_TypeClass();
+			case VerweisePackage.ID_FSTR_DWEG_OHNE_PROXY_TYPE_CLASS: return createID_Fstr_DWeg_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_FSTR_DWEG_TYPE_CLASS: return createID_Fstr_DWeg_TypeClass();
+			case VerweisePackage.ID_FSTR_FAHRWEG_OHNE_PROXY_TYPE_CLASS: return createID_Fstr_Fahrweg_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_FSTR_FAHRWEG_TYPE_CLASS: return createID_Fstr_Fahrweg_TypeClass();
 			case VerweisePackage.ID_FSTR_ZUG_RANGIER_TYPE_CLASS: return createID_Fstr_Zug_Rangier_TypeClass();
 			case VerweisePackage.ID_FT_ANSCHALTBEDINGUNG_TYPE_CLASS: return createID_FT_Anschaltbedingung_TypeClass();
 			case VerweisePackage.ID_FT_FAHRWEG_TEIL_TYPE_CLASS: return createID_FT_Fahrweg_Teil_TypeClass();
 			case VerweisePackage.ID_GEO_ART_TYPE_CLASS: return createID_GEO_Art_TypeClass();
+			case VerweisePackage.ID_GEO_KANTE_TYPE_CLASS: return createID_GEO_Kante_TypeClass();
 			case VerweisePackage.ID_GEO_KNOTEN_TYPE_CLASS: return createID_GEO_Knoten_TypeClass();
 			case VerweisePackage.ID_GEO_PUNKT_OHNE_PROXY_TYPE_CLASS: return createID_GEO_Punkt_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_GEO_PUNKT_TYPE_CLASS: return createID_GEO_Punkt_TypeClass();
-			case VerweisePackage.ID_GERAET_PROGRAMMIERT_TYPE_CLASS: return createID_Geraet_Programmiert_TypeClass();
 			case VerweisePackage.ID_GFR_ANLAGE_OHNE_PROXY_TYPE_CLASS: return createID_GFR_Anlage_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_GLEIS_ABSCHNITT_TYPE_CLASS: return createID_Gleis_Abschnitt_TypeClass();
 			case VerweisePackage.ID_GLEIS_BEZEICHNUNG_TYPE_CLASS: return createID_Gleis_Bezeichnung_TypeClass();
@@ -128,16 +144,22 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_HOEHENPUNKT_TYPE_CLASS: return createID_Hoehenpunkt_TypeClass();
 			case VerweisePackage.ID_INFORMATION_EINGANG_TYPE_CLASS: return createID_Information_Eingang_TypeClass();
 			case VerweisePackage.ID_INFORMATION_PRIMAER_TYPE_CLASS: return createID_Information_Primaer_TypeClass();
+			case VerweisePackage.ID_KOMPONENTE_PROGRAMMIERT_TYPE_CLASS: return createID_Komponente_Programmiert_TypeClass();
+			case VerweisePackage.ID_LAGEPLAN_BLATTSCHNITT_TYPE_CLASS: return createID_Lageplan_Blattschnitt_TypeClass();
+			case VerweisePackage.ID_LAGEPLAN_TYPE_CLASS: return createID_Lageplan_TypeClass();
+			case VerweisePackage.ID_LAGEPLAN_ZUSTAND_TYPE_CLASS: return createID_Lageplan_Zustand_TypeClass();
 			case VerweisePackage.ID_LEU_ANLAGE_OHNE_PROXY_TYPE_CLASS: return createID_LEU_Anlage_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_LEU_ANLAGE_TYPE_CLASS: return createID_LEU_Anlage_TypeClass();
-			case VerweisePackage.ID_LEU_BEZUGSPUNKT_TYPE_CLASS: return createID_LEU_Bezugspunkt_TypeClass();
+			case VerweisePackage.ID_LEU_BEZUG_FUNKTIONAL_TYPE_CLASS: return createID_LEU_Bezug_Funktional_TypeClass();
 			case VerweisePackage.ID_LEU_SCHALTKASTEN_OHNE_PROXY_TYPE_CLASS: return createID_LEU_Schaltkasten_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_LO_EINBAU_TYPE_CLASS: return createID_LO_Einbau_TypeClass();
 			case VerweisePackage.ID_MARKANTE_STELLE_TYPE_CLASS: return createID_Markante_Stelle_TypeClass();
+			case VerweisePackage.ID_MARKANTER_PUNKT_GLEIS_ABSCHLUSS_TYPE_CLASS: return createID_Markanter_Punkt_Gleis_Abschluss_TypeClass();
 			case VerweisePackage.ID_MARKANTER_PUNKT_TYPE_CLASS: return createID_Markanter_Punkt_TypeClass();
 			case VerweisePackage.ID_NB_ELEMENT_TYPE_CLASS: return createID_NB_Element_TypeClass();
 			case VerweisePackage.ID_NB_TYPE_CLASS: return createID_NB_TypeClass();
 			case VerweisePackage.ID_NB_ZONE_TYPE_CLASS: return createID_NB_Zone_TypeClass();
+			case VerweisePackage.ID_OERTLICHKEIT_AUSGABE_TYPE_CLASS: return createID_Oertlichkeit_Ausgabe_TypeClass();
 			case VerweisePackage.ID_OERTLICHKEIT_PROXY_TYPE_CLASS: return createID_Oertlichkeit_Proxy_TypeClass();
 			case VerweisePackage.ID_OERTLICHKEIT_TYPE_CLASS: return createID_Oertlichkeit_TypeClass();
 			case VerweisePackage.ID_PLAN_PRO_SCHNITTSTELLE_TYPE_CLASS: return createID_PlanPro_Schnittstelle_TypeClass();
@@ -149,6 +171,7 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_PZB_ELEMENT_ZUORDNUNG_TYPE_CLASS: return createID_PZB_Element_Zuordnung_TypeClass();
 			case VerweisePackage.ID_QUELLELEMENT_TYPE_CLASS: return createID_Quellelement_TypeClass();
 			case VerweisePackage.ID_RBC_TYPE_CLASS: return createID_RBC_TypeClass();
+			case VerweisePackage.ID_REGELZEICHNUNG_OHNE_PROXY_TYPE_CLASS: return createID_Regelzeichnung_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_REGELZEICHNUNG_TYPE_CLASS: return createID_Regelzeichnung_TypeClass();
 			case VerweisePackage.ID_SCHALTER_TYPE_CLASS: return createID_Schalter_TypeClass();
 			case VerweisePackage.ID_SCHALTMITTEL_ZUORDNUNG_TYPE_CLASS: return createID_Schaltmittel_Zuordnung_TypeClass();
@@ -166,6 +189,7 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_SONDERANLAGE_TYPE_CLASS: return createID_Sonderanlage_TypeClass();
 			case VerweisePackage.ID_STELLELEMENT_TYPE_CLASS: return createID_Stellelement_TypeClass();
 			case VerweisePackage.ID_STELLWERK_TYPE_CLASS: return createID_Stellwerk_TypeClass();
+			case VerweisePackage.ID_STRECKE_BREMSWEG_OHNE_PROXY_TYPE_CLASS: return createID_Strecke_Bremsweg_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_STRECKE_PUNKT_TYPE_CLASS: return createID_Strecke_Punkt_TypeClass();
 			case VerweisePackage.ID_STRECKE_TYPE_CLASS: return createID_Strecke_TypeClass();
 			case VerweisePackage.ID_TECHNISCHER_PUNKT_TYPE_CLASS: return createID_Technischer_Punkt_TypeClass();
@@ -193,6 +217,7 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 			case VerweisePackage.ID_ZL_FSTR_TYPE_CLASS: return createID_ZL_Fstr_TypeClass();
 			case VerweisePackage.ID_ZL_SIGNALGRUPPE_TYPE_CLASS: return createID_ZL_Signalgruppe_TypeClass();
 			case VerweisePackage.ID_ZL_TYPE_CLASS: return createID_ZL_TypeClass();
+			case VerweisePackage.ID_ZLV_BUS_OHNE_PROXY_TYPE_CLASS: return createID_ZLV_Bus_ohne_Proxy_TypeClass();
 			case VerweisePackage.ID_ZLV_BUS_TYPE_CLASS: return createID_ZLV_Bus_TypeClass();
 			case VerweisePackage.ID_ZN_ANZEIGEFELD_ANSTOSS_TYPE_CLASS: return createID_ZN_Anzeigefeld_Anstoss_TypeClass();
 			case VerweisePackage.ID_ZN_ANZEIGEFELD_TYPE_CLASS: return createID_ZN_Anzeigefeld_TypeClass();
@@ -257,6 +282,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
+	public ID_AnhangBearbeitungsvermerk_TypeClass createID_AnhangBearbeitungsvermerk_TypeClass() {
+		ID_AnhangBearbeitungsvermerk_TypeClassImpl iD_AnhangBearbeitungsvermerk_TypeClass = new ID_AnhangBearbeitungsvermerk_TypeClassImpl();
+		return iD_AnhangBearbeitungsvermerk_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ID_Anschluss_Element_TypeClass createID_Anschluss_Element_TypeClass() {
 		ID_Anschluss_Element_TypeClassImpl iD_Anschluss_Element_TypeClass = new ID_Anschluss_Element_TypeClassImpl();
 		return iD_Anschluss_Element_TypeClass;
@@ -268,9 +304,42 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
+	public ID_ATO_TS_Instanz_ohne_Proxy_TypeClass createID_ATO_TS_Instanz_ohne_Proxy_TypeClass() {
+		ID_ATO_TS_Instanz_ohne_Proxy_TypeClassImpl iD_ATO_TS_Instanz_ohne_Proxy_TypeClass = new ID_ATO_TS_Instanz_ohne_Proxy_TypeClassImpl();
+		return iD_ATO_TS_Instanz_ohne_Proxy_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_ATO_TS_Instanz_TypeClass createID_ATO_TS_Instanz_TypeClass() {
+		ID_ATO_TS_Instanz_TypeClassImpl iD_ATO_TS_Instanz_TypeClass = new ID_ATO_TS_Instanz_TypeClassImpl();
+		return iD_ATO_TS_Instanz_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass createID_Ausgabe_Fachdaten_ohne_Proxy_TypeClass() {
 		ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClassImpl iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClass = new ID_Ausgabe_Fachdaten_ohne_Proxy_TypeClassImpl();
 		return iD_Ausgabe_Fachdaten_ohne_Proxy_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Aussenelementansteuerung_ohne_Proxy_TypeClass createID_Aussenelementansteuerung_ohne_Proxy_TypeClass() {
+		ID_Aussenelementansteuerung_ohne_Proxy_TypeClassImpl iD_Aussenelementansteuerung_ohne_Proxy_TypeClass = new ID_Aussenelementansteuerung_ohne_Proxy_TypeClassImpl();
+		return iD_Aussenelementansteuerung_ohne_Proxy_TypeClass;
 	}
 
 	/**
@@ -356,17 +425,6 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
-	public ID_Bearbeitungsvermerk_TypeClass createID_Bearbeitungsvermerk_TypeClass() {
-		ID_Bearbeitungsvermerk_TypeClassImpl iD_Bearbeitungsvermerk_TypeClass = new ID_Bearbeitungsvermerk_TypeClassImpl();
-		return iD_Bearbeitungsvermerk_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ID_Bedien_Anzeige_Element_TypeClass createID_Bedien_Anzeige_Element_TypeClass() {
 		ID_Bedien_Anzeige_Element_TypeClassImpl iD_Bedien_Anzeige_Element_TypeClass = new ID_Bedien_Anzeige_Element_TypeClassImpl();
 		return iD_Bedien_Anzeige_Element_TypeClass;
@@ -433,6 +491,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
+	public ID_Befestigung_Bauwerk_TypeClass createID_Befestigung_Bauwerk_TypeClass() {
+		ID_Befestigung_Bauwerk_TypeClassImpl iD_Befestigung_Bauwerk_TypeClass = new ID_Befestigung_Bauwerk_TypeClassImpl();
+		return iD_Befestigung_Bauwerk_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ID_Beginn_Bereich_TypeClass createID_Beginn_Bereich_TypeClass() {
 		ID_Beginn_Bereich_TypeClassImpl iD_Beginn_Bereich_TypeClass = new ID_Beginn_Bereich_TypeClassImpl();
 		return iD_Beginn_Bereich_TypeClass;
@@ -444,9 +513,20 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
-	public ID_Binaerdatei_ohne_Proxy_TypeClass createID_Binaerdatei_ohne_Proxy_TypeClass() {
-		ID_Binaerdatei_ohne_Proxy_TypeClassImpl iD_Binaerdatei_ohne_Proxy_TypeClass = new ID_Binaerdatei_ohne_Proxy_TypeClassImpl();
-		return iD_Binaerdatei_ohne_Proxy_TypeClass;
+	public ID_Bezugspunkt_Positionierung_TypeClass createID_Bezugspunkt_Positionierung_TypeClass() {
+		ID_Bezugspunkt_Positionierung_TypeClassImpl iD_Bezugspunkt_Positionierung_TypeClass = new ID_Bezugspunkt_Positionierung_TypeClassImpl();
+		return iD_Bezugspunkt_Positionierung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Binaerdaten_ohne_Proxy_TypeClass createID_Binaerdaten_ohne_Proxy_TypeClass() {
+		ID_Binaerdaten_ohne_Proxy_TypeClassImpl iD_Binaerdaten_ohne_Proxy_TypeClass = new ID_Binaerdaten_ohne_Proxy_TypeClassImpl();
+		return iD_Binaerdaten_ohne_Proxy_TypeClass;
 	}
 
 	/**
@@ -587,9 +667,9 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
-	public ID_DP_Bezugspunkt_TypeClass createID_DP_Bezugspunkt_TypeClass() {
-		ID_DP_Bezugspunkt_TypeClassImpl iD_DP_Bezugspunkt_TypeClass = new ID_DP_Bezugspunkt_TypeClassImpl();
-		return iD_DP_Bezugspunkt_TypeClass;
+	public ID_DP_Bezug_Funktional_TypeClass createID_DP_Bezug_Funktional_TypeClass() {
+		ID_DP_Bezug_Funktional_TypeClassImpl iD_DP_Bezug_Funktional_TypeClass = new ID_DP_Bezug_Funktional_TypeClassImpl();
+		return iD_DP_Bezug_Funktional_TypeClass;
 	}
 
 	/**
@@ -653,9 +733,9 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
-	public ID_Energie_Primaer_TypeClass createID_Energie_Primaer_TypeClass() {
-		ID_Energie_Primaer_TypeClassImpl iD_Energie_Primaer_TypeClass = new ID_Energie_Primaer_TypeClassImpl();
-		return iD_Energie_Primaer_TypeClass;
+	public ID_Energie_TypeClass createID_Energie_TypeClass() {
+		ID_Energie_TypeClassImpl iD_Energie_TypeClass = new ID_Energie_TypeClassImpl();
+		return iD_Energie_TypeClass;
 	}
 
 	/**
@@ -667,6 +747,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_ESTW_Zentraleinheit_TypeClass createID_ESTW_Zentraleinheit_TypeClass() {
 		ID_ESTW_Zentraleinheit_TypeClassImpl iD_ESTW_Zentraleinheit_TypeClass = new ID_ESTW_Zentraleinheit_TypeClassImpl();
 		return iD_ESTW_Zentraleinheit_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_ETCS_Kante_TypeClass createID_ETCS_Kante_TypeClass() {
+		ID_ETCS_Kante_TypeClassImpl iD_ETCS_Kante_TypeClass = new ID_ETCS_Kante_TypeClassImpl();
+		return iD_ETCS_Kante_TypeClass;
 	}
 
 	/**
@@ -700,6 +791,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_EV_Modul_TypeClass createID_EV_Modul_TypeClass() {
 		ID_EV_Modul_TypeClassImpl iD_EV_Modul_TypeClass = new ID_EV_Modul_TypeClassImpl();
 		return iD_EV_Modul_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Fachtelegramm_ohne_Proxy_TypeClass createID_Fachtelegramm_ohne_Proxy_TypeClass() {
+		ID_Fachtelegramm_ohne_Proxy_TypeClassImpl iD_Fachtelegramm_ohne_Proxy_TypeClass = new ID_Fachtelegramm_ohne_Proxy_TypeClassImpl();
+		return iD_Fachtelegramm_ohne_Proxy_TypeClass;
 	}
 
 	/**
@@ -807,9 +909,31 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
+	public ID_Fstr_DWeg_ohne_Proxy_TypeClass createID_Fstr_DWeg_ohne_Proxy_TypeClass() {
+		ID_Fstr_DWeg_ohne_Proxy_TypeClassImpl iD_Fstr_DWeg_ohne_Proxy_TypeClass = new ID_Fstr_DWeg_ohne_Proxy_TypeClassImpl();
+		return iD_Fstr_DWeg_ohne_Proxy_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ID_Fstr_DWeg_TypeClass createID_Fstr_DWeg_TypeClass() {
 		ID_Fstr_DWeg_TypeClassImpl iD_Fstr_DWeg_TypeClass = new ID_Fstr_DWeg_TypeClassImpl();
 		return iD_Fstr_DWeg_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Fstr_Fahrweg_ohne_Proxy_TypeClass createID_Fstr_Fahrweg_ohne_Proxy_TypeClass() {
+		ID_Fstr_Fahrweg_ohne_Proxy_TypeClassImpl iD_Fstr_Fahrweg_ohne_Proxy_TypeClass = new ID_Fstr_Fahrweg_ohne_Proxy_TypeClassImpl();
+		return iD_Fstr_Fahrweg_ohne_Proxy_TypeClass;
 	}
 
 	/**
@@ -873,6 +997,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
+	public ID_GEO_Kante_TypeClass createID_GEO_Kante_TypeClass() {
+		ID_GEO_Kante_TypeClassImpl iD_GEO_Kante_TypeClass = new ID_GEO_Kante_TypeClassImpl();
+		return iD_GEO_Kante_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ID_GEO_Knoten_TypeClass createID_GEO_Knoten_TypeClass() {
 		ID_GEO_Knoten_TypeClassImpl iD_GEO_Knoten_TypeClass = new ID_GEO_Knoten_TypeClassImpl();
 		return iD_GEO_Knoten_TypeClass;
@@ -898,17 +1033,6 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_GEO_Punkt_TypeClass createID_GEO_Punkt_TypeClass() {
 		ID_GEO_Punkt_TypeClassImpl iD_GEO_Punkt_TypeClass = new ID_GEO_Punkt_TypeClassImpl();
 		return iD_GEO_Punkt_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ID_Geraet_Programmiert_TypeClass createID_Geraet_Programmiert_TypeClass() {
-		ID_Geraet_Programmiert_TypeClassImpl iD_Geraet_Programmiert_TypeClass = new ID_Geraet_Programmiert_TypeClassImpl();
-		return iD_Geraet_Programmiert_TypeClass;
 	}
 
 	/**
@@ -1005,6 +1129,50 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
+	public ID_Komponente_Programmiert_TypeClass createID_Komponente_Programmiert_TypeClass() {
+		ID_Komponente_Programmiert_TypeClassImpl iD_Komponente_Programmiert_TypeClass = new ID_Komponente_Programmiert_TypeClassImpl();
+		return iD_Komponente_Programmiert_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Lageplan_Blattschnitt_TypeClass createID_Lageplan_Blattschnitt_TypeClass() {
+		ID_Lageplan_Blattschnitt_TypeClassImpl iD_Lageplan_Blattschnitt_TypeClass = new ID_Lageplan_Blattschnitt_TypeClassImpl();
+		return iD_Lageplan_Blattschnitt_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Lageplan_TypeClass createID_Lageplan_TypeClass() {
+		ID_Lageplan_TypeClassImpl iD_Lageplan_TypeClass = new ID_Lageplan_TypeClassImpl();
+		return iD_Lageplan_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Lageplan_Zustand_TypeClass createID_Lageplan_Zustand_TypeClass() {
+		ID_Lageplan_Zustand_TypeClassImpl iD_Lageplan_Zustand_TypeClass = new ID_Lageplan_Zustand_TypeClassImpl();
+		return iD_Lageplan_Zustand_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ID_LEU_Anlage_ohne_Proxy_TypeClass createID_LEU_Anlage_ohne_Proxy_TypeClass() {
 		ID_LEU_Anlage_ohne_Proxy_TypeClassImpl iD_LEU_Anlage_ohne_Proxy_TypeClass = new ID_LEU_Anlage_ohne_Proxy_TypeClassImpl();
 		return iD_LEU_Anlage_ohne_Proxy_TypeClass;
@@ -1027,9 +1195,9 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	 * @generated
 	 */
 	@Override
-	public ID_LEU_Bezugspunkt_TypeClass createID_LEU_Bezugspunkt_TypeClass() {
-		ID_LEU_Bezugspunkt_TypeClassImpl iD_LEU_Bezugspunkt_TypeClass = new ID_LEU_Bezugspunkt_TypeClassImpl();
-		return iD_LEU_Bezugspunkt_TypeClass;
+	public ID_LEU_Bezug_Funktional_TypeClass createID_LEU_Bezug_Funktional_TypeClass() {
+		ID_LEU_Bezug_Funktional_TypeClassImpl iD_LEU_Bezug_Funktional_TypeClass = new ID_LEU_Bezug_Funktional_TypeClassImpl();
+		return iD_LEU_Bezug_Funktional_TypeClass;
 	}
 
 	/**
@@ -1063,6 +1231,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_Markante_Stelle_TypeClass createID_Markante_Stelle_TypeClass() {
 		ID_Markante_Stelle_TypeClassImpl iD_Markante_Stelle_TypeClass = new ID_Markante_Stelle_TypeClassImpl();
 		return iD_Markante_Stelle_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Markanter_Punkt_Gleis_Abschluss_TypeClass createID_Markanter_Punkt_Gleis_Abschluss_TypeClass() {
+		ID_Markanter_Punkt_Gleis_Abschluss_TypeClassImpl iD_Markanter_Punkt_Gleis_Abschluss_TypeClass = new ID_Markanter_Punkt_Gleis_Abschluss_TypeClassImpl();
+		return iD_Markanter_Punkt_Gleis_Abschluss_TypeClass;
 	}
 
 	/**
@@ -1107,6 +1286,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_NB_Zone_TypeClass createID_NB_Zone_TypeClass() {
 		ID_NB_Zone_TypeClassImpl iD_NB_Zone_TypeClass = new ID_NB_Zone_TypeClassImpl();
 		return iD_NB_Zone_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Oertlichkeit_Ausgabe_TypeClass createID_Oertlichkeit_Ausgabe_TypeClass() {
+		ID_Oertlichkeit_Ausgabe_TypeClassImpl iD_Oertlichkeit_Ausgabe_TypeClass = new ID_Oertlichkeit_Ausgabe_TypeClassImpl();
+		return iD_Oertlichkeit_Ausgabe_TypeClass;
 	}
 
 	/**
@@ -1228,6 +1418,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_RBC_TypeClass createID_RBC_TypeClass() {
 		ID_RBC_TypeClassImpl iD_RBC_TypeClass = new ID_RBC_TypeClassImpl();
 		return iD_RBC_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Regelzeichnung_ohne_Proxy_TypeClass createID_Regelzeichnung_ohne_Proxy_TypeClass() {
+		ID_Regelzeichnung_ohne_Proxy_TypeClassImpl iD_Regelzeichnung_ohne_Proxy_TypeClass = new ID_Regelzeichnung_ohne_Proxy_TypeClassImpl();
+		return iD_Regelzeichnung_ohne_Proxy_TypeClass;
 	}
 
 	/**
@@ -1415,6 +1616,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_Stellwerk_TypeClass createID_Stellwerk_TypeClass() {
 		ID_Stellwerk_TypeClassImpl iD_Stellwerk_TypeClass = new ID_Stellwerk_TypeClassImpl();
 		return iD_Stellwerk_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_Strecke_Bremsweg_ohne_Proxy_TypeClass createID_Strecke_Bremsweg_ohne_Proxy_TypeClass() {
+		ID_Strecke_Bremsweg_ohne_Proxy_TypeClassImpl iD_Strecke_Bremsweg_ohne_Proxy_TypeClass = new ID_Strecke_Bremsweg_ohne_Proxy_TypeClassImpl();
+		return iD_Strecke_Bremsweg_ohne_Proxy_TypeClass;
 	}
 
 	/**
@@ -1712,6 +1924,17 @@ public class VerweiseFactoryImpl extends EFactoryImpl implements VerweiseFactory
 	public ID_ZL_TypeClass createID_ZL_TypeClass() {
 		ID_ZL_TypeClassImpl iD_ZL_TypeClass = new ID_ZL_TypeClassImpl();
 		return iD_ZL_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ID_ZLV_Bus_ohne_Proxy_TypeClass createID_ZLV_Bus_ohne_Proxy_TypeClass() {
+		ID_ZLV_Bus_ohne_Proxy_TypeClassImpl iD_ZLV_Bus_ohne_Proxy_TypeClass = new ID_ZLV_Bus_ohne_Proxy_TypeClassImpl();
+		return iD_ZLV_Bus_ohne_Proxy_TypeClass;
 	}
 
 	/**

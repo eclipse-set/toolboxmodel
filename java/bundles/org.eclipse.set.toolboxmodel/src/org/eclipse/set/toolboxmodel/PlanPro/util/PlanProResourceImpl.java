@@ -11,7 +11,6 @@ package org.eclipse.set.toolboxmodel.PlanPro.util;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -30,7 +29,7 @@ import org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot;
  */
 public class PlanProResourceImpl extends XMLResourceImpl {
 	private final ToolboxModelService toolboxModelService;
-	private org.eclipse.set.model.model1902.PlanPro.DocumentRoot sourceModel;
+	private org.eclipse.set.model.model11001.PlanPro.DocumentRoot sourceModel;
 
 	/**
 	 * Creates an instance of the resource. <!-- begin-user-doc --> <!--
@@ -70,7 +69,7 @@ public class PlanProResourceImpl extends XMLResourceImpl {
 			// After loading, transform the loaded contents (if any)
 			if (!getContents().isEmpty()) {
 				final EObject content = getContents().get(0);
-				if (content instanceof final org.eclipse.set.model.model1902.PlanPro.DocumentRoot docRoot) {
+				if (content instanceof final org.eclipse.set.model.model11001.PlanPro.DocumentRoot docRoot) {
 					sourceModel = docRoot;
 					EcoreUtil.replace(docRoot,
 							toolboxModelService.loadPlanProModel(docRoot));
@@ -100,11 +99,7 @@ public class PlanProResourceImpl extends XMLResourceImpl {
 
 	}
 
-	public List<IDReference> getInvalidIDReferences() {
-		return toolboxModelService.getInvalidIDReferences();
-	}
-
-	public org.eclipse.set.model.model1902.PlanPro.DocumentRoot getSourceModel() {
+	public org.eclipse.set.model.model11001.PlanPro.DocumentRoot getSourceModel() {
 		return sourceModel;
 	}
 } // TemporaryintegrationResourceImpl

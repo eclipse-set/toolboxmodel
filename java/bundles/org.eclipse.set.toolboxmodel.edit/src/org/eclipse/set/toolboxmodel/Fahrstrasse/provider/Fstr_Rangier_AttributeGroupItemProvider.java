@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -33,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrasseFactory;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup} object.
@@ -110,6 +111,7 @@ public class Fstr_Rangier_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG);
+			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART);
 			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS);
 		}
 		return childrenFeatures;
@@ -164,6 +166,7 @@ public class Fstr_Rangier_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Fstr_Rangier_AttributeGroup.class)) {
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG:
+			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART:
 			case FahrstrassePackage.FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -188,6 +191,11 @@ public class Fstr_Rangier_AttributeGroupItemProvider
 			(createChildParameter
 				(FahrstrassePackage.Literals.FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG,
 				 FahrstrasseFactory.eINSTANCE.createAutomatische_Einstellung_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FahrstrassePackage.Literals.FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART,
+				 FahrstrasseFactory.eINSTANCE.createFstr_Rangier_Art_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

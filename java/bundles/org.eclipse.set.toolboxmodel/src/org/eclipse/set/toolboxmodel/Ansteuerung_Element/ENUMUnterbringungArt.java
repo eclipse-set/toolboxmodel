@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -29,46 +36,6 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	ENUM_UNTERBRINGUNG_ART_ANTRIEB(0, "ENUMUnterbringung_Art_Antrieb", "Antrieb"),
 
 	/**
-	 * The '<em><b>ENUM Unterbringung Art keine</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_KEINE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_UNTERBRINGUNG_ART_KEINE(1, "ENUMUnterbringung_Art_keine", "keine"),
-
-	/**
-	 * The '<em><b>ENUM Unterbringung Art Schaltschrank Schaltkasten</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN(2, "ENUMUnterbringung_Art_Schaltschrank_Schaltkasten", "Schaltschrank_Schaltkasten"),
-
-	/**
-	 * The '<em><b>ENUM Unterbringung Art sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_UNTERBRINGUNG_ART_SONSTIGE(3, "ENUMUnterbringung_Art_sonstige", "sonstige"),
-
-	/**
-	 * The '<em><b>ENUM Unterbringung Art Tafel</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_TAFEL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_UNTERBRINGUNG_ART_TAFEL(4, "ENUMUnterbringung_Art_Tafel", "Tafel"),
-
-	/**
 	 * The '<em><b>ENUM Unterbringung Art Gebaeude</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,7 +43,17 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERBRINGUNG_ART_GEBAEUDE(5, "ENUMUnterbringung_Art_Gebaeude", "Gebaeude"),
+	ENUM_UNTERBRINGUNG_ART_GEBAEUDE(1, "ENUMUnterbringung_Art_Gebaeude", "Gebaeude"),
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art keine</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_KEINE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_UNTERBRINGUNG_ART_KEINE(2, "ENUMUnterbringung_Art_keine", "keine"),
 
 	/**
 	 * The '<em><b>ENUM Unterbringung Art Schalthaus</b></em>' literal object.
@@ -86,7 +63,37 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERBRINGUNG_ART_SCHALTHAUS(6, "ENUMUnterbringung_Art_Schalthaus", "Schalthaus");
+	ENUM_UNTERBRINGUNG_ART_SCHALTHAUS(3, "ENUMUnterbringung_Art_Schalthaus", "Schalthaus"),
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art Schaltschrank Schaltkasten</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN(4, "ENUMUnterbringung_Art_Schaltschrank_Schaltkasten", "Schaltschrank_Schaltkasten"),
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_UNTERBRINGUNG_ART_SONSTIGE(5, "ENUMUnterbringung_Art_sonstige", "sonstige"),
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art Tafel</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_TAFEL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_UNTERBRINGUNG_ART_TAFEL(6, "ENUMUnterbringung_Art_Tafel", "Tafel");
 
 	/**
 	 * The '<em><b>ENUM Unterbringung Art Antrieb</b></em>' literal value.
@@ -100,50 +107,6 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	public static final int ENUM_UNTERBRINGUNG_ART_ANTRIEB_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUM Unterbringung Art keine</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_KEINE
-	 * @model name="ENUMUnterbringung_Art_keine" literal="keine"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_UNTERBRINGUNG_ART_KEINE_VALUE = 1;
-
-	/**
-	 * The '<em><b>ENUM Unterbringung Art Schaltschrank Schaltkasten</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN
-	 * @model name="ENUMUnterbringung_Art_Schaltschrank_Schaltkasten" literal="Schaltschrank_Schaltkasten"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUM Unterbringung Art sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_SONSTIGE
-	 * @model name="ENUMUnterbringung_Art_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_UNTERBRINGUNG_ART_SONSTIGE_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Unterbringung Art Tafel</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERBRINGUNG_ART_TAFEL
-	 * @model name="ENUMUnterbringung_Art_Tafel" literal="Tafel"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_UNTERBRINGUNG_ART_TAFEL_VALUE = 4;
-
-	/**
 	 * The '<em><b>ENUM Unterbringung Art Gebaeude</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,7 +115,18 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERBRINGUNG_ART_GEBAEUDE_VALUE = 5;
+	public static final int ENUM_UNTERBRINGUNG_ART_GEBAEUDE_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art keine</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_KEINE
+	 * @model name="ENUMUnterbringung_Art_keine" literal="keine"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_UNTERBRINGUNG_ART_KEINE_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Unterbringung Art Schalthaus</b></em>' literal value.
@@ -163,7 +137,40 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERBRINGUNG_ART_SCHALTHAUS_VALUE = 6;
+	public static final int ENUM_UNTERBRINGUNG_ART_SCHALTHAUS_VALUE = 3;
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art Schaltschrank Schaltkasten</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN
+	 * @model name="ENUMUnterbringung_Art_Schaltschrank_Schaltkasten" literal="Schaltschrank_Schaltkasten"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_SONSTIGE
+	 * @model name="ENUMUnterbringung_Art_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_UNTERBRINGUNG_ART_SONSTIGE_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUM Unterbringung Art Tafel</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERBRINGUNG_ART_TAFEL
+	 * @model name="ENUMUnterbringung_Art_Tafel" literal="Tafel"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_UNTERBRINGUNG_ART_TAFEL_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>ENUM Unterbringung Art</b></em>' enumerators.
@@ -174,12 +181,12 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	private static final ENUMUnterbringungArt[] VALUES_ARRAY =
 		new ENUMUnterbringungArt[] {
 			ENUM_UNTERBRINGUNG_ART_ANTRIEB,
+			ENUM_UNTERBRINGUNG_ART_GEBAEUDE,
 			ENUM_UNTERBRINGUNG_ART_KEINE,
+			ENUM_UNTERBRINGUNG_ART_SCHALTHAUS,
 			ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN,
 			ENUM_UNTERBRINGUNG_ART_SONSTIGE,
 			ENUM_UNTERBRINGUNG_ART_TAFEL,
-			ENUM_UNTERBRINGUNG_ART_GEBAEUDE,
-			ENUM_UNTERBRINGUNG_ART_SCHALTHAUS,
 		};
 
 	/**
@@ -237,12 +244,12 @@ public enum ENUMUnterbringungArt implements Enumerator {
 	public static ENUMUnterbringungArt get(int value) {
 		switch (value) {
 			case ENUM_UNTERBRINGUNG_ART_ANTRIEB_VALUE: return ENUM_UNTERBRINGUNG_ART_ANTRIEB;
+			case ENUM_UNTERBRINGUNG_ART_GEBAEUDE_VALUE: return ENUM_UNTERBRINGUNG_ART_GEBAEUDE;
 			case ENUM_UNTERBRINGUNG_ART_KEINE_VALUE: return ENUM_UNTERBRINGUNG_ART_KEINE;
+			case ENUM_UNTERBRINGUNG_ART_SCHALTHAUS_VALUE: return ENUM_UNTERBRINGUNG_ART_SCHALTHAUS;
 			case ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN_VALUE: return ENUM_UNTERBRINGUNG_ART_SCHALTSCHRANK_SCHALTKASTEN;
 			case ENUM_UNTERBRINGUNG_ART_SONSTIGE_VALUE: return ENUM_UNTERBRINGUNG_ART_SONSTIGE;
 			case ENUM_UNTERBRINGUNG_ART_TAFEL_VALUE: return ENUM_UNTERBRINGUNG_ART_TAFEL;
-			case ENUM_UNTERBRINGUNG_ART_GEBAEUDE_VALUE: return ENUM_UNTERBRINGUNG_ART_GEBAEUDE;
-			case ENUM_UNTERBRINGUNG_ART_SCHALTHAUS_VALUE: return ENUM_UNTERBRINGUNG_ART_SCHALTHAUS;
 			default: return null;
 		}
 	}

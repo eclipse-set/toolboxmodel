@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
             xmlns:func="localhost/function"
+            xmlns:nsATO="http://www.plan-pro.org/modell/ATO/toolbox"
             xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
             xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
             xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -13,8 +14,9 @@
             xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
             xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
             xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsLayoutinformationen="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
             xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
-            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsNahbedienung="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
             xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
             xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
             xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -33,6 +35,8 @@
             targetNamespace="http://www.plan-pro.org/modell/BasisTypen/toolbox">
    <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
                schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/ATO/toolbox"
+               schemaLocation="ATO.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
                schemaLocation="Bahnsteig.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -53,10 +57,12 @@
                schemaLocation="Geodaten.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
                schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+               schemaLocation="Layoutinformationen.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
                schemaLocation="Medien_und_Trassen.xsd"/>
-   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+               schemaLocation="Nahbedienung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
                schemaLocation="Ortung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -90,9 +96,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -119,6 +123,9 @@ XML Schema for PlanPro interface.</xs:documentation>
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType ecore:name="Bremsweg_Type" name="TBremsweg">
+      <xs:annotation>
+         <xs:documentation>Bremsweg als Grundlage für die Dimensionierung der zugehörigen Strecke. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen.</xs:documentation>
+      </xs:annotation>
       <xs:restriction base="nsBasisTypen:ENUMBremsweg"/>
    </xs:simpleType>
    <xs:simpleType name="ENUMRegionalbereich">
@@ -171,7 +178,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:extension base="nsBasisTypen:CBasisAttribut">
             <xs:sequence>
                <xs:element name="Wert"
-                            type="nsBasisTypen:TPruefsumme"
+                            type="nsBasisTypen:TText"
                             minOccurs="1"
                             maxOccurs="1"
                             nillable="true"/>
@@ -179,11 +186,10 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Eigenschaften_Datei_AttributeGroup"
-                    name="CEigenschaften_Datei">
+   <xs:complexType ecore:name="Pruefmerkmale_Daten_AttributeGroup"
+                    name="CPruefmerkmale_Daten">
       <xs:annotation>
-         <xs:documentation>Basisattributgruppe zur Zuordnung von Metadaten zu einer Datei.
-</xs:documentation>
+         <xs:documentation>Basisattributgruppe zur Zuordnung von Prüfmerkmalen zu Daten bzw. einer Datei.</xs:documentation>
       </xs:annotation>
       <xs:sequence>
          <xs:element name="Datum_Auslieferung"
@@ -191,7 +197,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                       minOccurs="1"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Datum, an dem die Binaerdatei vom Hersteller ausgeliefert wurde.</xs:documentation>
+               <xs:documentation>Datum, an dem die Daten bzw. die Datei vom Hersteller ausgeliefert wurde(n).</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Pruefsumme"
@@ -199,8 +205,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                       minOccurs="1"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Prüfsumme für die im Objekt Binaerdatei enthaltene Datei.
-</xs:documentation>
+               <xs:documentation>Prüfsumme für die Daten bzw. die Datei zur Sicherstellung der Unverfälschtheit.</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Pruefsumme_Art"
@@ -216,8 +221,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                       minOccurs="1"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Version der Auslieferung vom Hersteller.
-</xs:documentation>
+               <xs:documentation>Version der Auslieferung vom Hersteller.</xs:documentation>
             </xs:annotation>
          </xs:element>
       </xs:sequence>
@@ -241,9 +245,7 @@ Die zweite Gruppe der Attributeigenschaften sind als XSDElement modellierten Inf
       </xs:annotation>
       <xs:sequence>
          <xs:element name="ID_Bearbeitungsvermerk"
-                      type="xs:anyURI"
-                      ecore:reference="nsBasisobjekte:CBearbeitungsvermerk"
-                      nillable="true"
+                      type="nsBasisTypen:TCID_Bearbeitungsvermerk"
                       minOccurs="0"
                       maxOccurs="unbounded">
             <xs:annotation>
@@ -336,7 +338,7 @@ Die zweite Gruppe der Attributeigenschaften sind als XSDElement modellierten Inf
    </xs:simpleType>
    <xs:simpleType ecore:name="LinksRechts_Type" name="TLinksRechts">
       <xs:annotation>
-         <xs:documentation>Attribute dieses Basistyps können den ENUM-Wert 'links' oder 'rechts' annehmen.</xs:documentation>
+         <xs:documentation>Attribute dieses Basistyps können den ENUM-Wert "links" oder "rechts" annehmen.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="nsBasisTypen:ENUMLinksRechts"/>
    </xs:simpleType>
@@ -346,9 +348,9 @@ Die zweite Gruppe der Attributeigenschaften sind als XSDElement modellierten Inf
 
 Die ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!
 
-Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \„HH Kennzahl 06\“ und \„HHZX Kennzahl 30\“).
+Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten "HH Kennzahl 06" und "HHZX Kennzahl 30").
 
-Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \„Üst Giften HGIF\“ und \„Üst Ritterkamp HRIT\“.
+Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit "Üst Giften HGIF" und "Üst Ritterkamp HRIT".
 
 In Stellbereichen von Bedienbezirken werden für Betriebsstellen (z. B. Bahnhöfe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.
 
@@ -407,7 +409,6 @@ DB-Regelwerk
          <xs:enumeration ecore:name="ENUMPruefsumme_Art_MD5" value="MD5"/>
          <xs:enumeration ecore:name="ENUMPruefsumme_Art_SHA1" value="SHA1"/>
          <xs:enumeration ecore:name="ENUMPruefsumme_Art_SHA256" value="SHA256"/>
-         <xs:enumeration ecore:name="ENUMPruefsumme_Art_sonstige" value="sonstige"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType ecore:name="Hersteller_Type" name="THersteller">
@@ -464,7 +465,11 @@ Beispiele:
 • ein Hauptsignal hat in der Außenanlage ein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird befüllt; 
 • ein Vorsignal hat in der Außenanlage kein Bezeichnungsschild, aber auf dem sicherungstechnischen Lageplan einen spezifischen Bezeichner, das Attribut wird befüllt; 
 • ein Bedienpunkt (fiktives Signal) existiert gar nicht in der Außenanlage, hat aber mindestens im Tabellenwerk einen spezifischen Bezeichner, das Attribut wird befüllt; 
-• ein Lf 7 hat in der Außenanlage kein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan keinen spezifischen Bezeichner, das Attribut entfällt (Hinweis: Auch wenn im Lageplan der Bezeichner </xs:documentation>
+• ein Lf 7 hat in der Außenanlage kein Bezeichnungsschild und auf dem sicherungstechnischen Lageplan keinen spezifischen Bezeichner, das Attribut entfällt (Hinweis: Auch wenn im Lageplan der Bezeichner "LF7" eingetragen wird, so ist das dennoch kein spezifischer Bezeichner, sondern ein allgemeiner Bezeichner für alle Signale Lf 7). 
+
+DB-Regelwerk
+• 819.9001
+</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="Bezeichnung_Lageplan_Kurz"
@@ -503,9 +508,9 @@ Beispiele:
 
 Die ESTW-Kennzahl kennzeichnet eine Betriebsstelle oder einen Betriebsstellenteil. Es handelt sich nicht um die Bahnhofsnummer der Zugnummernmeldeanlage (Ril 819.0731)!
 
-Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten \„HH Kennzahl 06\“ und \„HHZX Kennzahl 30\“).
+Eine Betriebsstelle kann mehrere Kennzahlen erhalten. Z.B. dann, wenn in einem Gebäude zwei ESTW-Zentraleinheiten untergebracht sind (Beispiel Hannover Hbf mit den ESTW-Zentraleinheiten "HH Kennzahl 06" und "HHZX Kennzahl 30").
 
-Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit \„Üst Giften HGIF\“ und \„Üst Ritterkamp HRIT\“.
+Eine Kennzahl kann aber auch mehrere Betriebsstellen beinhalten. Z. B dann, wenn eine ESTW-Zentraleinheit zwei Überleitstellen steuert (Beispiel ESTW-Zentraleinheit Giften HGIF Kennzahl 71 mit "Üst Giften HGIF" und "Üst Ritterkamp HRIT".
 
 In Stellbereichen von Bedienbezirken werden für Betriebsstellen (z. B. Bahnhöfe, Abzweigstellen, Anschlussstellen) Kennzahlen von 01 bis 99 vergeben. Diese Kennzahl muss im Bedienbezirk eindeutig sein.
 
@@ -614,13 +619,6 @@ oder bei der Angabe von Mehr- oder Minderlängen
          <xs:enumeration ecore:name="ENUMFahrstrom_sonstige" value="sonstige"/>
       </xs:restriction>
    </xs:simpleType>
-   <xs:simpleType ecore:name="Pruefsumme_Type" name="TPruefsumme">
-      <xs:annotation>
-         <xs:documentation>Prüfsumme für die im Objekt Binaerdatei enthaltene Datei.
-</xs:documentation>
-      </xs:annotation>
-      <xs:restriction base="nsBasisTypen:TText"/>
-   </xs:simpleType>
    <xs:simpleType ecore:name="Bezeichnung_Lageplan_Kurz_Type"
                    name="TBezeichnung_Lageplan_Kurz">
       <xs:restriction base="nsBasisTypen:TText">
@@ -637,7 +635,7 @@ oder bei der Angabe von Mehr- oder Minderlängen
          <xs:documentation>Art der Fahrstromversorgung (Stromart, Spannung, besondere Zuführung)
 </xs:documentation>
       </xs:annotation>
-      <xs:list itemType="nsBasisTypen:ENUMFahrstrom"/>
+      <xs:restriction base="nsBasisTypen:ENUMFahrstrom"/>
    </xs:simpleType>
    <xs:complexType ecore:name="Bezeichnung_Aussenanlage_TypeClass"
                     name="TCBezeichnung_Aussenanlage">
@@ -666,6 +664,20 @@ oder bei der Angabe von Mehr- oder Minderlängen
          <xs:pattern value="[^\\/?:\*\|&#34;&lt;&gt;]*"/>
       </xs:restriction>
    </xs:simpleType>
+   <xs:complexType ecore:name="ID_Bearbeitungsvermerk_TypeClass"
+                    name="TCID_Bearbeitungsvermerk">
+      <xs:sequence>
+         <xs:element name="Wert"
+                      type="nsBasisTypen:TGUID"
+                      minOccurs="1"
+                      maxOccurs="1"
+                      nillable="true"/>
+      </xs:sequence>
+      <xs:attribute name="Objektname"
+                     use="prohibited"
+                     fixed="Bearbeitungsvermerk|Proxy_Objekt"
+                     type="nsBasisTypen:TObjektname"/>
+   </xs:complexType>
    <xs:complexType ecore:name="Zeiger_TypeClass" name="TCZeiger">
       <xs:annotation>
          <xs:documentation>Typklasse, von der alle spezifischen Zeiger im Modell abgeleitet sind. Spezifische Zeiger werden verwendet, um einen Verweis von einem Objekt auf ein anderes Objekt zu modellieren. Dazu wird technisch auf die GUID des Zielobjektes referenziert.</xs:documentation>

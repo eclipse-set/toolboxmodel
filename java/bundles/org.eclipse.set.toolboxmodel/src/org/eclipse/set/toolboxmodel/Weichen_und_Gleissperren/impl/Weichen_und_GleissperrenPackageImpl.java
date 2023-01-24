@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl;
 
@@ -15,6 +22,10 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -65,13 +76,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -96,9 +111,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -108,9 +125,11 @@ import org.eclipse.set.toolboxmodel.Verweise.VerweisePackage;
 import org.eclipse.set.toolboxmodel.Verweise.impl.VerweisePackageImpl;
 
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Auffahrortung_TypeClass;
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Auswurfrichtung_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Besonderes_Fahrwegelement_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMBesonderesFahrwegelement;
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElementLage;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMGleisAbschlussArt;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMGleissperreBetriebsart;
@@ -136,9 +155,11 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Gleissperre_Vorzugs
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Gleissperrensignal_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Herzstueck_Antriebe_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Isolierfall_TypeClass;
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kreuzung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kreuzungsgleis_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Schutzschiene_TypeClass;
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Vorzugslage_Automatik_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Anlage;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Anlage_Allg_AttributeGroup;
@@ -182,6 +203,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass auffahrortung_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass austausch_Antriebe_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -314,6 +342,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass kr_KrW_Seitenzuordnung_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass kreuzung_AttributeGroupEClass = null;
 
 	/**
@@ -329,6 +364,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass schutzschiene_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stammgleis_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -461,6 +503,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum enumElektrischerAntriebLageEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum enumElementLageEEnum = null;
 
 	/**
@@ -538,14 +587,14 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType elektrischer_Antrieb_Lage_TypeEDataType = null;
+	private EDataType enumBesonderesFahrwegelementObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType enumBesonderesFahrwegelementObjectEDataType = null;
+	private EDataType enumElektrischerAntriebLageObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -643,7 +692,21 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType kr_KrW_Seitenzuordnung_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType kreuzungsgleis_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType stammgleis_TypeEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -717,32 +780,36 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
 		RegelzeichnungPackageImpl theRegelzeichnungPackage = (RegelzeichnungPackageImpl)(registeredPackage instanceof RegelzeichnungPackageImpl ? registeredPackage : RegelzeichnungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PZBPackage.eNS_URI);
@@ -757,8 +824,8 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -776,48 +843,52 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 
 		// Create package meta-data objects
 		theWeichen_und_GleissperrenPackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
 		theSignalbegriffe_StrukturPackage.createPackageContents();
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
 		theSignalbegriffe_StrukturPackage.initializePackageContents();
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -864,6 +935,26 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	@Override
 	public EAttribute getAuffahrortung_TypeClass_Wert() {
 		return (EAttribute)auffahrortung_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAustausch_Antriebe_TypeClass() {
+		return austausch_Antriebe_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAustausch_Antriebe_TypeClass_Wert() {
+		return (EAttribute)austausch_Antriebe_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1282,6 +1373,26 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
+	public EClass getKr_KrW_Seitenzuordnung_TypeClass() {
+		return kr_KrW_Seitenzuordnung_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getKr_KrW_Seitenzuordnung_TypeClass_Wert() {
+		return (EAttribute)kr_KrW_Seitenzuordnung_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getKreuzung_AttributeGroup() {
 		return kreuzung_AttributeGroupEClass;
 	}
@@ -1364,6 +1475,26 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	@Override
 	public EAttribute getSchutzschiene_TypeClass_Wert() {
 		return (EAttribute)schutzschiene_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getStammgleis_TypeClass() {
+		return stammgleis_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStammgleis_TypeClass_Wert() {
+		return (EAttribute)stammgleis_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1612,7 +1743,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Element_Allg_AttributeGroup_VorzugslageAutomatik() {
+	public EReference getW_Kr_Gsp_Element_Allg_AttributeGroup_KrKrWSeitenzuordnung() {
 		return (EReference)w_Kr_Gsp_Element_Allg_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1622,8 +1753,18 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Element_Allg_AttributeGroup_WKrGspStellart() {
+	public EReference getW_Kr_Gsp_Element_Allg_AttributeGroup_VorzugslageAutomatik() {
 		return (EReference)w_Kr_Gsp_Element_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getW_Kr_Gsp_Element_Allg_AttributeGroup_WKrGspStellart() {
+		return (EReference)w_Kr_Gsp_Element_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1642,7 +1783,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Komponente_IDRegelzeichnung() {
+	public EReference getW_Kr_Gsp_Komponente_AustauschAntriebe() {
 		return (EReference)w_Kr_Gsp_KomponenteEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1652,7 +1793,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Komponente_IDWKrGspElement() {
+	public EReference getW_Kr_Gsp_Komponente_IDRegelzeichnung() {
 		return (EReference)w_Kr_Gsp_KomponenteEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1662,7 +1803,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Komponente_BesonderesFahrwegelement() {
+	public EReference getW_Kr_Gsp_Komponente_IDWKrGspElement() {
 		return (EReference)w_Kr_Gsp_KomponenteEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1672,7 +1813,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Komponente_Entgleisungsschuh() {
+	public EReference getW_Kr_Gsp_Komponente_BesonderesFahrwegelement() {
 		return (EReference)w_Kr_Gsp_KomponenteEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1682,7 +1823,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Komponente_Kreuzung() {
+	public EReference getW_Kr_Gsp_Komponente_Entgleisungsschuh() {
 		return (EReference)w_Kr_Gsp_KomponenteEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1692,8 +1833,18 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getW_Kr_Gsp_Komponente_Zungenpaar() {
+	public EReference getW_Kr_Gsp_Komponente_Kreuzung() {
 		return (EReference)w_Kr_Gsp_KomponenteEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getW_Kr_Gsp_Komponente_Zungenpaar() {
+		return (EReference)w_Kr_Gsp_KomponenteEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1982,7 +2133,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getZungenpaar_AttributeGroup_Weichensignal() {
+	public EReference getZungenpaar_AttributeGroup_Stammgleis() {
 		return (EReference)zungenpaar_AttributeGroupEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1992,8 +2143,18 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EReference getZungenpaar_AttributeGroup_ZungenpruefkontaktAnzahl() {
+	public EReference getZungenpaar_AttributeGroup_Weichensignal() {
 		return (EReference)zungenpaar_AttributeGroupEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZungenpaar_AttributeGroup_ZungenpruefkontaktAnzahl() {
+		return (EReference)zungenpaar_AttributeGroupEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -2024,6 +2185,16 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	@Override
 	public EEnum getENUMBesonderesFahrwegelement() {
 		return enumBesonderesFahrwegelementEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMElektrischerAntriebLage() {
+		return enumElektrischerAntriebLageEEnum;
 	}
 
 	/**
@@ -2142,8 +2313,8 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EDataType getElektrischer_Antrieb_Lage_Type() {
-		return elektrischer_Antrieb_Lage_TypeEDataType;
+	public EDataType getENUMBesonderesFahrwegelementObject() {
+		return enumBesonderesFahrwegelementObjectEDataType;
 	}
 
 	/**
@@ -2152,8 +2323,8 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
-	public EDataType getENUMBesonderesFahrwegelementObject() {
-		return enumBesonderesFahrwegelementObjectEDataType;
+	public EDataType getENUMElektrischerAntriebLageObject() {
+		return enumElektrischerAntriebLageObjectEDataType;
 	}
 
 	/**
@@ -2292,8 +2463,28 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	@Override
+	public EDataType getKr_KrW_Seitenzuordnung_Type() {
+		return kr_KrW_Seitenzuordnung_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getKreuzungsgleis_Type() {
 		return kreuzungsgleis_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getStammgleis_Type() {
+		return stammgleis_TypeEDataType;
 	}
 
 	/**
@@ -2358,6 +2549,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		auffahrortung_TypeClassEClass = createEClass(AUFFAHRORTUNG_TYPE_CLASS);
 		createEAttribute(auffahrortung_TypeClassEClass, AUFFAHRORTUNG_TYPE_CLASS__WERT);
 
+		austausch_Antriebe_TypeClassEClass = createEClass(AUSTAUSCH_ANTRIEBE_TYPE_CLASS);
+		createEAttribute(austausch_Antriebe_TypeClassEClass, AUSTAUSCH_ANTRIEBE_TYPE_CLASS__WERT);
+
 		auswurfrichtung_TypeClassEClass = createEClass(AUSWURFRICHTUNG_TYPE_CLASS);
 		createEAttribute(auswurfrichtung_TypeClassEClass, AUSWURFRICHTUNG_TYPE_CLASS__WERT);
 
@@ -2417,6 +2611,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		isolierfall_TypeClassEClass = createEClass(ISOLIERFALL_TYPE_CLASS);
 		createEAttribute(isolierfall_TypeClassEClass, ISOLIERFALL_TYPE_CLASS__WERT);
 
+		kr_KrW_Seitenzuordnung_TypeClassEClass = createEClass(KR_KR_WSEITENZUORDNUNG_TYPE_CLASS);
+		createEAttribute(kr_KrW_Seitenzuordnung_TypeClassEClass, KR_KR_WSEITENZUORDNUNG_TYPE_CLASS__WERT);
+
 		kreuzung_AttributeGroupEClass = createEClass(KREUZUNG_ATTRIBUTE_GROUP);
 		createEReference(kreuzung_AttributeGroupEClass, KREUZUNG_ATTRIBUTE_GROUP__ELEKTRISCHER_ANTRIEB_ANZAHL);
 		createEReference(kreuzung_AttributeGroupEClass, KREUZUNG_ATTRIBUTE_GROUP__ELEKTRISCHER_ANTRIEB_LAGE);
@@ -2428,6 +2625,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 
 		schutzschiene_TypeClassEClass = createEClass(SCHUTZSCHIENE_TYPE_CLASS);
 		createEAttribute(schutzschiene_TypeClassEClass, SCHUTZSCHIENE_TYPE_CLASS__WERT);
+
+		stammgleis_TypeClassEClass = createEClass(STAMMGLEIS_TYPE_CLASS);
+		createEAttribute(stammgleis_TypeClassEClass, STAMMGLEIS_TYPE_CLASS__WERT);
 
 		vorzugslage_Automatik_TypeClassEClass = createEClass(VORZUGSLAGE_AUTOMATIK_TYPE_CLASS);
 		createEAttribute(vorzugslage_Automatik_TypeClassEClass, VORZUGSLAGE_AUTOMATIK_TYPE_CLASS__WERT);
@@ -2459,10 +2659,12 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		createEReference(w_Kr_Gsp_ElementEClass, WKR_GSP_ELEMENT__WEICHE_ELEMENT);
 
 		w_Kr_Gsp_Element_Allg_AttributeGroupEClass = createEClass(WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP);
+		createEReference(w_Kr_Gsp_Element_Allg_AttributeGroupEClass, WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__KR_KR_WSEITENZUORDNUNG);
 		createEReference(w_Kr_Gsp_Element_Allg_AttributeGroupEClass, WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__VORZUGSLAGE_AUTOMATIK);
 		createEReference(w_Kr_Gsp_Element_Allg_AttributeGroupEClass, WKR_GSP_ELEMENT_ALLG_ATTRIBUTE_GROUP__WKR_GSP_STELLART);
 
 		w_Kr_Gsp_KomponenteEClass = createEClass(WKR_GSP_KOMPONENTE);
+		createEReference(w_Kr_Gsp_KomponenteEClass, WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE);
 		createEReference(w_Kr_Gsp_KomponenteEClass, WKR_GSP_KOMPONENTE__ID_REGELZEICHNUNG);
 		createEReference(w_Kr_Gsp_KomponenteEClass, WKR_GSP_KOMPONENTE__IDW_KR_GSP_ELEMENT);
 		createEReference(w_Kr_Gsp_KomponenteEClass, WKR_GSP_KOMPONENTE__BESONDERES_FAHRWEGELEMENT);
@@ -2505,6 +2707,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		createEReference(zungenpaar_AttributeGroupEClass, ZUNGENPAAR_ATTRIBUTE_GROUP__GESCHWINDIGKEIT_R);
 		createEReference(zungenpaar_AttributeGroupEClass, ZUNGENPAAR_ATTRIBUTE_GROUP__HERZSTUECK_ANTRIEBE);
 		createEReference(zungenpaar_AttributeGroupEClass, ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS);
+		createEReference(zungenpaar_AttributeGroupEClass, ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS);
 		createEReference(zungenpaar_AttributeGroupEClass, ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL);
 		createEReference(zungenpaar_AttributeGroupEClass, ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL);
 
@@ -2513,6 +2716,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 
 		// Create enums
 		enumBesonderesFahrwegelementEEnum = createEEnum(ENUM_BESONDERES_FAHRWEGELEMENT);
+		enumElektrischerAntriebLageEEnum = createEEnum(ENUM_ELEKTRISCHER_ANTRIEB_LAGE);
 		enumElementLageEEnum = createEEnum(ENUM_ELEMENT_LAGE);
 		enumGleisAbschlussArtEEnum = createEEnum(ENUM_GLEIS_ABSCHLUSS_ART);
 		enumGleissperreBetriebsartEEnum = createEEnum(ENUM_GLEISSPERRE_BETRIEBSART);
@@ -2526,8 +2730,8 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		// Create data types
 		cAuswurfrichtungEDataType = createEDataType(CAUSWURFRICHTUNG);
 		elektrischer_Antrieb_Anzahl_TypeEDataType = createEDataType(ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE);
-		elektrischer_Antrieb_Lage_TypeEDataType = createEDataType(ELEKTRISCHER_ANTRIEB_LAGE_TYPE);
 		enumBesonderesFahrwegelementObjectEDataType = createEDataType(ENUM_BESONDERES_FAHRWEGELEMENT_OBJECT);
+		enumElektrischerAntriebLageObjectEDataType = createEDataType(ENUM_ELEKTRISCHER_ANTRIEB_LAGE_OBJECT);
 		enumElementLageObjectEDataType = createEDataType(ENUM_ELEMENT_LAGE_OBJECT);
 		enumGleisAbschlussArtObjectEDataType = createEDataType(ENUM_GLEIS_ABSCHLUSS_ART_OBJECT);
 		enumGleissperreBetriebsartObjectEDataType = createEDataType(ENUM_GLEISSPERRE_BETRIEBSART_OBJECT);
@@ -2541,7 +2745,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		geschwindigkeit_R_TypeEDataType = createEDataType(GESCHWINDIGKEIT_RTYPE);
 		herzstueck_Antriebe_TypeEDataType = createEDataType(HERZSTUECK_ANTRIEBE_TYPE);
 		isolierfall_TypeEDataType = createEDataType(ISOLIERFALL_TYPE);
+		kr_KrW_Seitenzuordnung_TypeEDataType = createEDataType(KR_KR_WSEITENZUORDNUNG_TYPE);
 		kreuzungsgleis_TypeEDataType = createEDataType(KREUZUNGSGLEIS_TYPE);
+		stammgleis_TypeEDataType = createEDataType(STAMMGLEIS_TYPE);
 		w_Kr_Grundform_TypeEDataType = createEDataType(WKR_GRUNDFORM_TYPE);
 		weiche_Vorzugslage_TypeEDataType = createEDataType(WEICHE_VORZUGSLAGE_TYPE);
 		zungenpruefkontakt_Anzahl_TypeEDataType = createEDataType(ZUNGENPRUEFKONTAKT_ANZAHL_TYPE);
@@ -2584,6 +2790,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 
 		// Add supertypes to classes
 		auffahrortung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		austausch_Antriebe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		auswurfrichtung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		besonderes_Fahrwegelement_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		elektrischer_Antrieb_Anzahl_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -2598,8 +2805,10 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		gleissperrensignal_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		herzstueck_Antriebe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		isolierfall_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		kr_KrW_Seitenzuordnung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		kreuzungsgleis_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		schutzschiene_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		stammgleis_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		vorzugslage_Automatik_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		w_Kr_AnlageEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		w_Kr_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -2618,6 +2827,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		initEClass(auffahrortung_TypeClassEClass, Auffahrortung_TypeClass.class, "Auffahrortung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAuffahrortung_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Auffahrortung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(austausch_Antriebe_TypeClassEClass, Austausch_Antriebe_TypeClass.class, "Austausch_Antriebe_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAustausch_Antriebe_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Austausch_Antriebe_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(auswurfrichtung_TypeClassEClass, Auswurfrichtung_TypeClass.class, "Auswurfrichtung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAuswurfrichtung_TypeClass_Wert(), this.getCAuswurfrichtung(), "wert", null, 1, 1, Auswurfrichtung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2628,13 +2840,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		initEAttribute(getElektrischer_Antrieb_Anzahl_TypeClass_Wert(), this.getElektrischer_Antrieb_Anzahl_Type(), "wert", null, 1, 1, Elektrischer_Antrieb_Anzahl_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elektrischer_Antrieb_Lage_TypeClassEClass, Elektrischer_Antrieb_Lage_TypeClass.class, "Elektrischer_Antrieb_Lage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElektrischer_Antrieb_Lage_TypeClass_Wert(), this.getElektrischer_Antrieb_Lage_Type(), "wert", null, 1, 1, Elektrischer_Antrieb_Lage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElektrischer_Antrieb_Lage_TypeClass_Wert(), this.getENUMElektrischerAntriebLageObject(), "wert", null, 1, 1, Elektrischer_Antrieb_Lage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(element_Lage_TypeClassEClass, Element_Lage_TypeClass.class, "Element_Lage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Lage_TypeClass_Wert(), this.getENUMElementLageObject(), "wert", null, 1, 1, Element_Lage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entgleisungsschuh_AttributeGroupEClass, Entgleisungsschuh_AttributeGroup.class, "Entgleisungsschuh_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntgleisungsschuh_AttributeGroup_Auswurfrichtung(), this.getAuswurfrichtung_TypeClass(), null, "auswurfrichtung", null, 1, 1, Entgleisungsschuh_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntgleisungsschuh_AttributeGroup_Auswurfrichtung(), this.getAuswurfrichtung_TypeClass(), null, "auswurfrichtung", null, 0, 1, Entgleisungsschuh_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntgleisungsschuh_AttributeGroup_Gleissperrensignal(), this.getGleissperrensignal_TypeClass(), null, "gleissperrensignal", null, 0, 1, Entgleisungsschuh_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntgleisungsschuh_AttributeGroup_Schutzschiene(), this.getSchutzschiene_TypeClass(), null, "schutzschiene", null, 1, 1, Entgleisungsschuh_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2655,7 +2867,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 
 		initEClass(gleissperre_Element_AttributeGroupEClass, Gleissperre_Element_AttributeGroup.class, "Gleissperre_Element_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGleissperre_Element_AttributeGroup_GleissperreBetriebsart(), this.getGleissperre_Betriebsart_TypeClass(), null, "gleissperreBetriebsart", null, 0, 1, Gleissperre_Element_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGleissperre_Element_AttributeGroup_GleissperreVorzugslage(), this.getGleissperre_Vorzugslage_TypeClass(), null, "gleissperreVorzugslage", null, 1, 1, Gleissperre_Element_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGleissperre_Element_AttributeGroup_GleissperreVorzugslage(), this.getGleissperre_Vorzugslage_TypeClass(), null, "gleissperreVorzugslage", null, 0, 1, Gleissperre_Element_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gleissperre_Vorzugslage_TypeClassEClass, Gleissperre_Vorzugslage_TypeClass.class, "Gleissperre_Vorzugslage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGleissperre_Vorzugslage_TypeClass_Wert(), this.getENUMGleissperreVorzugslageObject(), "wert", null, 1, 1, Gleissperre_Vorzugslage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2677,6 +2889,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		initEClass(isolierfall_TypeClassEClass, Isolierfall_TypeClass.class, "Isolierfall_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIsolierfall_TypeClass_Wert(), this.getIsolierfall_Type(), "wert", null, 1, 1, Isolierfall_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(kr_KrW_Seitenzuordnung_TypeClassEClass, Kr_KrW_Seitenzuordnung_TypeClass.class, "Kr_KrW_Seitenzuordnung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKr_KrW_Seitenzuordnung_TypeClass_Wert(), this.getKr_KrW_Seitenzuordnung_Type(), "wert", null, 1, 1, Kr_KrW_Seitenzuordnung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(kreuzung_AttributeGroupEClass, Kreuzung_AttributeGroup.class, "Kreuzung_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getKreuzung_AttributeGroup_ElektrischerAntriebAnzahl(), this.getElektrischer_Antrieb_Anzahl_TypeClass(), null, "elektrischerAntriebAnzahl", null, 1, 1, Kreuzung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKreuzung_AttributeGroup_ElektrischerAntriebLage(), this.getElektrischer_Antrieb_Lage_TypeClass(), null, "elektrischerAntriebLage", null, 0, 1, Kreuzung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2688,6 +2903,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 
 		initEClass(schutzschiene_TypeClassEClass, Schutzschiene_TypeClass.class, "Schutzschiene_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSchutzschiene_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Schutzschiene_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stammgleis_TypeClassEClass, Stammgleis_TypeClass.class, "Stammgleis_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStammgleis_TypeClass_Wert(), this.getStammgleis_Type(), "wert", null, 1, 1, Stammgleis_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vorzugslage_Automatik_TypeClassEClass, Vorzugslage_Automatik_TypeClass.class, "Vorzugslage_Automatik_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVorzugslage_Automatik_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Vorzugslage_Automatik_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2719,10 +2937,12 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		initEReference(getW_Kr_Gsp_Element_WeicheElement(), this.getWeiche_Element_AttributeGroup(), null, "weicheElement", null, 0, 1, W_Kr_Gsp_Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(w_Kr_Gsp_Element_Allg_AttributeGroupEClass, W_Kr_Gsp_Element_Allg_AttributeGroup.class, "W_Kr_Gsp_Element_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getW_Kr_Gsp_Element_Allg_AttributeGroup_KrKrWSeitenzuordnung(), this.getKr_KrW_Seitenzuordnung_TypeClass(), null, "krKrWSeitenzuordnung", null, 0, 1, W_Kr_Gsp_Element_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getW_Kr_Gsp_Element_Allg_AttributeGroup_VorzugslageAutomatik(), this.getVorzugslage_Automatik_TypeClass(), null, "vorzugslageAutomatik", null, 0, 1, W_Kr_Gsp_Element_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getW_Kr_Gsp_Element_Allg_AttributeGroup_WKrGspStellart(), this.getW_Kr_Gsp_Stellart_TypeClass(), null, "wKrGspStellart", null, 1, 1, W_Kr_Gsp_Element_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(w_Kr_Gsp_KomponenteEClass, W_Kr_Gsp_Komponente.class, "W_Kr_Gsp_Komponente", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getW_Kr_Gsp_Komponente_AustauschAntriebe(), this.getAustausch_Antriebe_TypeClass(), null, "austauschAntriebe", null, 0, 1, W_Kr_Gsp_Komponente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getW_Kr_Gsp_Komponente_IDRegelzeichnung(), theRegelzeichnungPackage.getRegelzeichnung(), null, "iDRegelzeichnung", null, 0, -1, W_Kr_Gsp_Komponente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getW_Kr_Gsp_Komponente_IDWKrGspElement(), this.getW_Kr_Gsp_Element(), null, "iDWKrGspElement", null, 1, 1, W_Kr_Gsp_Komponente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getW_Kr_Gsp_Komponente_BesonderesFahrwegelement(), this.getBesonderes_Fahrwegelement_TypeClass(), null, "besonderesFahrwegelement", null, 0, 1, W_Kr_Gsp_Komponente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2765,6 +2985,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		initEReference(getZungenpaar_AttributeGroup_GeschwindigkeitR(), this.getGeschwindigkeit_R_TypeClass(), null, "geschwindigkeitR", null, 1, 1, Zungenpaar_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZungenpaar_AttributeGroup_HerzstueckAntriebe(), this.getHerzstueck_Antriebe_TypeClass(), null, "herzstueckAntriebe", null, 0, 1, Zungenpaar_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZungenpaar_AttributeGroup_Kreuzungsgleis(), this.getKreuzungsgleis_TypeClass(), null, "kreuzungsgleis", null, 0, 1, Zungenpaar_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZungenpaar_AttributeGroup_Stammgleis(), this.getStammgleis_TypeClass(), null, "stammgleis", null, 0, 1, Zungenpaar_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZungenpaar_AttributeGroup_Weichensignal(), this.getWeichensignal_TypeClass(), null, "weichensignal", null, 0, 1, Zungenpaar_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZungenpaar_AttributeGroup_ZungenpruefkontaktAnzahl(), this.getZungenpruefkontakt_Anzahl_TypeClass(), null, "zungenpruefkontaktAnzahl", null, 1, 1, Zungenpaar_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2778,6 +2999,12 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		addEEnumLiteral(enumBesonderesFahrwegelementEEnum, ENUMBesonderesFahrwegelement.ENUM_BESONDERES_FAHRWEGELEMENT_SONSTIGE);
 		addEEnumLiteral(enumBesonderesFahrwegelementEEnum, ENUMBesonderesFahrwegelement.ENUM_BESONDERES_FAHRWEGELEMENT_WEHRKAMMERTOR);
 
+		initEEnum(enumElektrischerAntriebLageEEnum, ENUMElektrischerAntriebLage.class, "ENUMElektrischerAntriebLage");
+		addEEnumLiteral(enumElektrischerAntriebLageEEnum, ENUMElektrischerAntriebLage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE_LINKS);
+		addEEnumLiteral(enumElektrischerAntriebLageEEnum, ENUMElektrischerAntriebLage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE_MITTIG);
+		addEEnumLiteral(enumElektrischerAntriebLageEEnum, ENUMElektrischerAntriebLage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE_RECHTS);
+		addEEnumLiteral(enumElektrischerAntriebLageEEnum, ENUMElektrischerAntriebLage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE_SONSTIGE);
+
 		initEEnum(enumElementLageEEnum, ENUMElementLage.class, "ENUMElementLage");
 		addEEnumLiteral(enumElementLageEEnum, ENUMElementLage.ENUM_ELEMENT_LAGE_ABSCHNITT);
 		addEEnumLiteral(enumElementLageEEnum, ENUMElementLage.ENUM_ELEMENT_LAGE_WEICHE);
@@ -2785,6 +3012,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		addEEnumLiteral(enumElementLageEEnum, ENUMElementLage.ENUM_ELEMENT_LAGE_WEICHE_R);
 
 		initEEnum(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.class, "ENUMGleisAbschlussArt");
+		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK);
 		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_DREHSCHEIBE);
 		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_FAEHRANLEGER);
 		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_FESTPRELLBOCK);
@@ -2793,7 +3021,6 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_SCHIEBEBUEHNE);
 		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_SCHWELLENKREUZ);
 		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_SONSTIGE);
-		addEEnumLiteral(enumGleisAbschlussArtEEnum, ENUMGleisAbschlussArt.ENUM_GLEIS_ABSCHLUSS_ART_BREMSPRELLBOCK);
 
 		initEEnum(enumGleissperreBetriebsartEEnum, ENUMGleissperreBetriebsart.class, "ENUMGleissperreBetriebsart");
 		addEEnumLiteral(enumGleissperreBetriebsartEEnum, ENUMGleissperreBetriebsart.ENUM_GLEISSPERRE_BETRIEBSART_ABGELEGT);
@@ -2828,9 +3055,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		addEEnumLiteral(enumwKrArtEEnum, ENUMWKrArt.ENUMW_KR_ART_FLACHKREUZUNG);
 		addEEnumLiteral(enumwKrArtEEnum, ENUMWKrArt.ENUMW_KR_ART_IBW);
 		addEEnumLiteral(enumwKrArtEEnum, ENUMWKrArt.ENUMW_KR_ART_KLOTHOIDENWEICHE);
+		addEEnumLiteral(enumwKrArtEEnum, ENUMWKrArt.ENUMW_KR_ART_KORBBOGENWEICHE);
 		addEEnumLiteral(enumwKrArtEEnum, ENUMWKrArt.ENUMW_KR_ART_KR);
 		addEEnumLiteral(enumwKrArtEEnum, ENUMWKrArt.ENUMW_KR_ART_SONSTIGE);
-		addEEnumLiteral(enumwKrArtEEnum, ENUMWKrArt.ENUMW_KR_ART_KORBBOGENWEICHE);
 
 		initEEnum(enumwKrGspStellartEEnum, ENUMWKrGspStellart.class, "ENUMWKrGspStellart");
 		addEEnumLiteral(enumwKrGspStellartEEnum, ENUMWKrGspStellart.ENUMW_KR_GSP_STELLART_ELEKTRISCH_FERNGESTELLT);
@@ -2847,8 +3074,8 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		// Initialize data types
 		initEDataType(cAuswurfrichtungEDataType, ENUMLinksRechts.class, "CAuswurfrichtung", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(elektrischer_Antrieb_Anzahl_TypeEDataType, BigInteger.class, "Elektrischer_Antrieb_Anzahl_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(elektrischer_Antrieb_Lage_TypeEDataType, ENUMLinksRechts.class, "Elektrischer_Antrieb_Lage_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumBesonderesFahrwegelementObjectEDataType, ENUMBesonderesFahrwegelement.class, "ENUMBesonderesFahrwegelementObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumElektrischerAntriebLageObjectEDataType, ENUMElektrischerAntriebLage.class, "ENUMElektrischerAntriebLageObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumElementLageObjectEDataType, ENUMElementLage.class, "ENUMElementLageObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumGleisAbschlussArtObjectEDataType, ENUMGleisAbschlussArt.class, "ENUMGleisAbschlussArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumGleissperreBetriebsartObjectEDataType, ENUMGleissperreBetriebsart.class, "ENUMGleissperreBetriebsartObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -2862,7 +3089,9 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		initEDataType(geschwindigkeit_R_TypeEDataType, BigInteger.class, "Geschwindigkeit_R_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(herzstueck_Antriebe_TypeEDataType, BigInteger.class, "Herzstueck_Antriebe_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(isolierfall_TypeEDataType, String.class, "Isolierfall_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(kr_KrW_Seitenzuordnung_TypeEDataType, ENUMLinksRechts.class, "Kr_KrW_Seitenzuordnung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(kreuzungsgleis_TypeEDataType, ENUMLinksRechts.class, "Kreuzungsgleis_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(stammgleis_TypeEDataType, ENUMLinksRechts.class, "Stammgleis_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(w_Kr_Grundform_TypeEDataType, String.class, "W_Kr_Grundform_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(weiche_Vorzugslage_TypeEDataType, ENUMLinksRechts.class, "Weiche_Vorzugslage_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(zungenpruefkontakt_Anzahl_TypeEDataType, BigInteger.class, "Zungenpruefkontakt_Anzahl_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -2891,13 +3120,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (getEntgleisungsschuh_AttributeGroup_Auswurfrichtung(),
 		   source,
 		   new String[] {
-			   "documentation", "Entgleisungsrichtung eines Fahrzeugs, das \u00fcber den Entgleisungsschuh f\u00e4hrt. Die Entgleisungsrichtung ist in Bewegungsrichtung des Fahrzeuges auf den Entgleisungsschuhs zu sehen und ist nicht auf die Wirkrichtung der topologischen Kante bezogen. Da das zugeh\u00f6rige Objekt (W_Kr_Gsp_Komponente als Punktobjekt auf eine Fahrschiene des Gleises (Topologiekante) verortet ist, kann daraus ebenfalls die Auswurfrichtung ermittelt werden. Achtung: Die Angabe ist redundant zu den Angaben im Punktobjekt bez\u00fcglich der Attribute Seitliche Lage und Wirkrichtung! Es wird deshalb nochmals gepr\u00fcft auf dieses Attribut k\u00fcnftig zu verzichten."
+			   "documentation", "Entgleisungsrichtung eines Fahrzeugs, das \u00fcber den Entgleisungsschuh f\u00e4hrt. Die Entgleisungsrichtung ist in Bewegungsrichtung des Fahrzeuges auf den Entgleisungsschuhs zu sehen und ist nicht auf die Wirkrichtung der topologischen Kante bezogen. Da das zugeh\u00f6rige Objekt (W_Kr_Gsp_Komponente) als Punktobjekt auf eine Fahrschiene des Gleises (Topologiekante) verortet ist, kann daraus ebenfalls die Auswurfrichtung ermittelt werden. Achtung: Die Angabe ist redundant zu den Angaben im Punktobjekt bez\u00fcglich der Attribute Seitliche Lage und Wirkrichtung und soll daher zuk\u00fcnftig entfallen."
 		   });
 		addAnnotation
 		  (getEntgleisungsschuh_AttributeGroup_Gleissperrensignal(),
@@ -2915,7 +3144,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (gleis_AbschlussEClass,
 		   source,
 		   new String[] {
-			   "documentation", "St\u00e4ndig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergef\u00fchrt sein. Er wird auf den Punkt verortet, der die Grenze der m\u00f6glichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, f\u00e4llt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem erg\u00e4nzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der m\u00f6glichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet wodurch der seitliche Abschand immer 0.000 sein muss. "
+			   "documentation", "St\u00e4ndig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergef\u00fchrt sein. Er wird auf den Punkt verortet, der die Grenze der m\u00f6glichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, f\u00e4llt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem erg\u00e4nzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der m\u00f6glichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet, sodass die Angabe des seitlichen Abstands bzw. der seitlichen Lage entf\u00e4llt."
 		   });
 		addAnnotation
 		  (getGleis_Abschluss_GleisAbschlussArt(),
@@ -2933,7 +3162,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (getGleissperre_Element_AttributeGroup_GleissperreVorzugslage(),
 		   source,
 		   new String[] {
-			   "documentation", "Vorzugslage der Gleissperre (Grundstellung). Dieses Attribut enth\u00e4lt den Eintrag abgelegt oder aufgelegt. Mit dem Attribut Vorzugslage Automatik kann festgelegt werden, dass diese Vorzugslage automatisch hergestellt wird. ."
+			   "documentation", "Vorzugslage der Gleissperre (Grundstellung). Dieses Attribut enth\u00e4lt den Eintrag abgelegt oder aufgelegt. Mit dem Attribut Vorzugslage Automatik kann festgelegt werden, dass diese Vorzugslage automatisch hergestellt wird. In gro\u00dfen Rangierbahnh\u00f6fen wird u. U. auf die Festlegung einer Vorzugslage verzichtet."
 		   });
 		addAnnotation
 		  (getGZ_Freimeldung_L_AttributeGroup_ElementLage(),
@@ -3056,6 +3285,12 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 			   "documentation", "Verweis auf die Weichenlaufkette, in der das Weichenelement enthalten ist. "
 		   });
 		addAnnotation
+		  (getW_Kr_Gsp_Element_Allg_AttributeGroup_KrKrWSeitenzuordnung(),
+		   source,
+		   new String[] {
+			   "documentation", "Bei unsymmetrischen Kreuzungen (Kr) und Kreuzungsweichen (KrW): Zuordnung der Seite Links/Rechts gem\u00e4\u00df Ril 800.0120. Die Angabe wird nachfolgend f\u00fcr das korrekte Zeichnen der Weichendreiecke in ma\u00dfst\u00e4blichen Lagepl\u00e4nen ben\u00f6tigt."
+		   });
+		addAnnotation
 		  (getW_Kr_Gsp_Element_Allg_AttributeGroup_VorzugslageAutomatik(),
 		   source,
 		   new String[] {
@@ -3072,6 +3307,12 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		   source,
 		   new String[] {
 			   "documentation", "Einzelner Teil der Weichenanlage (Zungenpaar) oder konstruktiver Mittelpunkt einer Kreuzung in Form von 2 Kreuzungsseiten. Mit Hilfe der W_Kr_Gsp_Komponente als punktf\u00f6rmiges Objekt wird die Verkn\u00fcpfung mit dem Knoten im Topologischen Modell hergestellt. Als Zuordnungspunkte f\u00fcr die Topologie und die Topographie werden Weichenknoten definiert. Die Verortung der Weichenkomponente ist in f\u00fcr die typischen Anwendungsf\u00e4lle in der Modellierung Weichen dargestellt. Bei einfachen Weichen entspricht der Weichenknoten dem Weichenanfang. Bei EKW und DKW entspricht der Weichenknoten dem Anfang der entsprechenden Zungenpaare (auch hier einheitlich als Weichenanfang bezeichnet). Bei einer Kreuzung wird der Mittelpunkt der Kreuzung als Weichenknoten verwendet. Beide Kreuzungsseiten werden jeweils auf die beiden sich kreuzenden TOP-Kanten verortet. Der Mittelpunkt einer Kreuzung ist kein TOP-Knoten und kein GEO-Knoten. Bei Gleissperren wird die Lage des Entgleisungsschuhs verortet. \u00dcber die Seitliche Lage im Punkt Objekt wird die Schiene bestimmt, an der der Entgleisungsschuh angebracht ist. Die seitliche Lage wird im Bezug auf die Richtung der TOP_Kante angegeben und stellt nicht die Entgleisungsrichtung dar! Wenn die Weichenkomponente mit einem nicht mechanisch mit der Weiche verbundenen (Weichen-)Signal (z. B. R\u00fcckfallweichensignal, Weichenlagemelder) ausger\u00fcstet werden soll, erfolgt die Modellierung dieses Signals als ein gesondertes Objekt Signal. Auf dieses Signal wird von W Kr Anlage (wenn die Anlage ein Signal hat) bzw. W Kr Gsp Element (wenn mehrere Elemete vorhanden sind und diese unterschiedliche Signale haben) verwiesen. Der Weichelagemelder einer DKW wird von den beiden W_Kr_Gsp_Element gesteuert, aber in einem Signal angezeigt. Er wird deshalb nur als ein Signal in der Weichenanlage modelliert. Ein mit der Weichenkomponente mechanisch verbundenes Weichensignal wird gem\u00e4\u00df Regelzeichnung errichtet, wenn das Attribut Weichensignal gesetzt ist. Es wird dann kein gesondertes Signal modelliert. Siehe auch Modellierung Weichen. Die im Glossar mit (E) gekennzeichneten Attribute Radius_L und Radius_R sollen nicht mehr bef\u00fcllt werden, da ein k\u00fcnftiger Entfall vorgesehen ist."
+		   });
+		addAnnotation
+		  (getW_Kr_Gsp_Komponente_AustauschAntriebe(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe, ob die vorhandenen Antriebe ausgetauscht werden soll (true). Der Wert \"false\" wird nicht verwendet."
 		   });
 		addAnnotation
 		  (getW_Kr_Gsp_Komponente_IDRegelzeichnung(),
@@ -3206,6 +3447,12 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 			   "documentation", "Lage der TOP Kante, die bei EKW und DKW vom zugeh\u00f6rigen Zungenpaar in Richtung des Kreuzungsmittelpunktes f\u00fchrt. Das Attribut muss bei EKW und DKW angegeben werden, um eine lagerichtige Zuordnung der Kanteneigenschaften in dem Ausgabetabellen sicherzustellen. "
 		   });
 		addAnnotation
+		  (getZungenpaar_AttributeGroup_Stammgleis(),
+		   source,
+		   new String[] {
+			   "documentation", "Lage der TOP Kante, die das Stammgleis repr\u00e4sentiert (Blickrichtung von der Weichenspitze zum Weichenstumpf bzw. Kreuzungsmittelpunkt)."
+		   });
+		addAnnotation
 		  (getZungenpaar_AttributeGroup_Weichensignal(),
 		   source,
 		   new String[] {
@@ -3236,6 +3483,20 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		   });
 		addAnnotation
 		  (getAuffahrortung_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (austausch_Antriebe_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCAustausch_Antriebe",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getAustausch_Antriebe_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -3297,13 +3558,6 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		   new String[] {
 			   "kind", "element",
 			   "name", "Wert"
-		   });
-		addAnnotation
-		  (elektrischer_Antrieb_Lage_TypeEDataType,
-		   source,
-		   new String[] {
-			   "name", "TElektrischer_Antrieb_Lage",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TLinksRechts"
 		   });
 		addAnnotation
 		  (elektrischer_Antrieb_Lage_TypeClassEClass,
@@ -3373,6 +3627,19 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		   new String[] {
 			   "name", "ENUMBesonderes_Fahrwegelement:Object",
 			   "baseType", "ENUMBesonderes_Fahrwegelement"
+		   });
+		addAnnotation
+		  (enumElektrischerAntriebLageEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMElektrischer_Antrieb_Lage"
+		   });
+		addAnnotation
+		  (enumElektrischerAntriebLageObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMElektrischer_Antrieb_Lage:Object",
+			   "baseType", "ENUMElektrischer_Antrieb_Lage"
 		   });
 		addAnnotation
 		  (enumElementLageEEnum,
@@ -3711,6 +3978,27 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (kr_KrW_Seitenzuordnung_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TKr_KrW_Seitenzuordnung",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TLinksRechts"
+		   });
+		addAnnotation
+		  (kr_KrW_Seitenzuordnung_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCKr_KrW_Seitenzuordnung",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getKr_KrW_Seitenzuordnung_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (kreuzung_AttributeGroupEClass,
 		   source,
 		   new String[] {
@@ -3775,6 +4063,27 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		   });
 		addAnnotation
 		  (getSchutzschiene_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (stammgleis_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TStammgleis",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TLinksRechts"
+		   });
+		addAnnotation
+		  (stammgleis_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCStammgleis",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getStammgleis_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -3957,6 +4266,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (getW_Kr_Gsp_Element_Allg_AttributeGroup_KrKrWSeitenzuordnung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Kr_KrW_Seitenzuordnung"
+		   });
+		addAnnotation
 		  (getW_Kr_Gsp_Element_Allg_AttributeGroup_VorzugslageAutomatik(),
 		   source,
 		   new String[] {
@@ -3976,6 +4292,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		   new String[] {
 			   "name", "CW_Kr_Gsp_Komponente",
 			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getW_Kr_Gsp_Komponente_AustauschAntriebe(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Austausch_Antriebe"
 		   });
 		addAnnotation
 		  (getW_Kr_Gsp_Komponente_IDRegelzeichnung(),
@@ -4223,6 +4546,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 			   "name", "Kreuzungsgleis"
 		   });
 		addAnnotation
+		  (getZungenpaar_AttributeGroup_Stammgleis(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Stammgleis"
+		   });
+		addAnnotation
 		  (getZungenpaar_AttributeGroup_Weichensignal(),
 		   source,
 		   new String[] {
@@ -4278,7 +4608,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (gleis_AbschlussEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getGleis_Abschluss_GleisAbschlussArt(),
@@ -4293,12 +4623,6 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>Betrieb</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
-		  (getGleissperre_Element_AttributeGroup_GleissperreVorzugslage(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>aufgelegt</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
-		   });
-		addAnnotation
 		  (getKreuzung_AttributeGroup_ElektrischerAntriebAnzahl(),
 		   source,
 		   new String[] {
@@ -4308,7 +4632,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (w_Kr_AnlageEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getW_Kr_Anlage_Allg_AttributeGroup_Isolierfall(),
@@ -4326,7 +4650,7 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (w_Kr_Gsp_ElementEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getW_Kr_Gsp_Element_Allg_AttributeGroup_VorzugslageAutomatik(),
@@ -4344,7 +4668,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (w_Kr_Gsp_KomponenteEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+		   });
+		addAnnotation
+		  (getW_Kr_Gsp_Komponente_AustauschAntriebe(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                          \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                               \r\n    <ProposedValue>true</ProposedValue>\r\n                            \r\n  </WorkflowInformation>\r\n                       \r\n"
 		   });
 		addAnnotation
 		  (getWeiche_Element_AttributeGroup_Auffahrortung(),
@@ -4368,13 +4698,13 @@ public class Weichen_und_GleissperrenPackageImpl extends EPackageImpl implements
 		  (weichenlaufketteEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (weichenlaufkette_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getZungenpaar_AttributeGroup_ElektrischerAntriebAnzahl(),

@@ -1,8 +1,14 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -19,6 +25,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getGEOPunktAllg <em>GEO Punkt Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKante <em>IDGEO Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKnoten <em>IDGEO Knoten</em>}</li>
  * </ul>
  *
@@ -49,6 +56,61 @@ public interface GEO_Punkt extends Basis_Objekt {
 	 * @generated
 	 */
 	void setGEOPunktAllg(GEO_Punkt_Allg_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>IDGEO Kante</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf eine GEO_Kante, wenn der GEO_Punkt als Stützpunkt einer Polylinie fungiert. Eine Polylinie kann durch bis zu 999
+	 * GEO_Punkte beschrieben werden. Es ist jedoch auch zulässig, eine virtuelle Polylinie ohne GEO_Punkte
+	 * darzustellen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>IDGEO Kante</em>' reference.
+	 * @see #isSetIDGEOKante()
+	 * @see #unsetIDGEOKante()
+	 * @see #setIDGEOKante(GEO_Kante)
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGEO_Punkt_IDGEOKante()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_GEO_Kante'"
+	 * @generated
+	 */
+	GEO_Kante getIDGEOKante();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKante <em>IDGEO Kante</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IDGEO Kante</em>' reference.
+	 * @see #isSetIDGEOKante()
+	 * @see #unsetIDGEOKante()
+	 * @see #getIDGEOKante()
+	 * @generated
+	 */
+	void setIDGEOKante(GEO_Kante value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKante <em>IDGEO Kante</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDGEOKante()
+	 * @see #getIDGEOKante()
+	 * @see #setIDGEOKante(GEO_Kante)
+	 * @generated
+	 */
+	void unsetIDGEOKante();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt#getIDGEOKante <em>IDGEO Kante</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>IDGEO Kante</em>' reference is set.
+	 * @see #unsetIDGEOKante()
+	 * @see #getIDGEOKante()
+	 * @see #setIDGEOKante(GEO_Kante)
+	 * @generated
+	 */
+	boolean isSetIDGEOKante();
 
 	/**
 	 * Returns the value of the '<em><b>IDGEO Knoten</b></em>' reference.

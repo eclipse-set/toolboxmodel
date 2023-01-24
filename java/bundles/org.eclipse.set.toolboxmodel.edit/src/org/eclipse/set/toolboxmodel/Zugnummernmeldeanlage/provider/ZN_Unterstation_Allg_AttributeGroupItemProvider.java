@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageFactory;
@@ -87,8 +88,10 @@ public class ZN_Unterstation_Allg_AttributeGroupItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__BF_KENNUNG);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION);
+			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG);
+			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR);
 		}
 		return childrenFeatures;
@@ -144,8 +147,10 @@ public class ZN_Unterstation_Allg_AttributeGroupItemProvider
 		switch (notification.getFeatureID(ZN_Unterstation_Allg_AttributeGroup.class)) {
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__BF_KENNUNG:
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION:
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM:
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE:
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG:
+			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR:
 			case ZugnummernmeldeanlagePackage.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -178,6 +183,11 @@ public class ZN_Unterstation_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM,
+				 ZugnummernmeldeanlageFactory.eINSTANCE.createKUs_Zeittelegramm_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE,
 				 ZugnummernmeldeanlageFactory.eINSTANCE.createZBS_Adresse_TypeClass()));
 
@@ -185,6 +195,11 @@ public class ZN_Unterstation_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG,
 				 ZugnummernmeldeanlageFactory.eINSTANCE.createZBS_Anbindung_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ZugnummernmeldeanlagePackage.Literals.ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR,
+				 ZugnummernmeldeanlageFactory.eINSTANCE.createZeitsynchronisation_Funkuhr_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

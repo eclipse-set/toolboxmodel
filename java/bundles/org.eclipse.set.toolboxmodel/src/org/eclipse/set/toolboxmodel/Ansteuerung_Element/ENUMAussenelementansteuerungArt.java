@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -22,24 +29,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	/**
-	 * The '<em><b>ENUM Aussenelementansteuerung Art Fe Ak</b></em>' literal object.
+	 * The '<em><b>ENUM Aussenelementansteuerung Art BUE Anschaltung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK_VALUE
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK(0, "ENUMAussenelementansteuerung_Art_FeAk", "FeAk"),
-
-	/**
-	 * The '<em><b>ENUM Aussenelementansteuerung Art GFK</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK(1, "ENUMAussenelementansteuerung_Art_GFK", "GFK"),
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG(0, "ENUMAussenelementansteuerung_Art_BUE_Anschaltung", "BUE_Anschaltung"),
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art ESTW A</b></em>' literal object.
@@ -49,7 +46,37 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A(2, "ENUMAussenelementansteuerung_Art_ESTW_A", "ESTW_A"),
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A(1, "ENUMAussenelementansteuerung_Art_ESTW_A", "ESTW_A"),
+
+	/**
+	 * The '<em><b>ENUM Aussenelementansteuerung Art Fe Ak</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK(2, "ENUMAussenelementansteuerung_Art_FeAk", "FeAk"),
+
+	/**
+	 * The '<em><b>ENUM Aussenelementansteuerung Art Fe AS</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS(3, "ENUMAussenelementansteuerung_Art_FeAS", "FeAS"),
+
+	/**
+	 * The '<em><b>ENUM Aussenelementansteuerung Art GFK</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK(4, "ENUMAussenelementansteuerung_Art_GFK", "GFK"),
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art Gleisfreimelde Innenanlage</b></em>' literal object.
@@ -59,7 +86,7 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE(3, "ENUMAussenelementansteuerung_Art_Gleisfreimelde_Innenanlage", "Gleisfreimelde_Innenanlage"),
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE(5, "ENUMAussenelementansteuerung_Art_Gleisfreimelde_Innenanlage", "Gleisfreimelde_Innenanlage"),
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art Objektcontroller</b></em>' literal object.
@@ -69,17 +96,7 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER(4, "ENUMAussenelementansteuerung_Art_Objektcontroller", "Objektcontroller"),
-
-	/**
-	 * The '<em><b>ENUM Aussenelementansteuerung Art Relaisstellwerk</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK(5, "ENUMAussenelementansteuerung_Art_Relaisstellwerk", "Relaisstellwerk"),
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER(6, "ENUMAussenelementansteuerung_Art_Objektcontroller", "Objektcontroller"),
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art sonstige</b></em>' literal object.
@@ -89,7 +106,7 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE(6, "ENUMAussenelementansteuerung_Art_sonstige", "sonstige"),
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE(7, "ENUMAussenelementansteuerung_Art_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art virtuelle Aussenelementansteuerung</b></em>' literal object.
@@ -99,29 +116,18 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG(7, "ENUMAussenelementansteuerung_Art_virtuelle_Aussenelementansteuerung", "virtuelle_Aussenelementansteuerung");
+	ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG(8, "ENUMAussenelementansteuerung_Art_virtuelle_Aussenelementansteuerung", "virtuelle_Aussenelementansteuerung");
 
 	/**
-	 * The '<em><b>ENUM Aussenelementansteuerung Art Fe Ak</b></em>' literal value.
+	 * The '<em><b>ENUM Aussenelementansteuerung Art BUE Anschaltung</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK
-	 * @model name="ENUMAussenelementansteuerung_Art_FeAk" literal="FeAk"
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG
+	 * @model name="ENUMAussenelementansteuerung_Art_BUE_Anschaltung" literal="BUE_Anschaltung"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK_VALUE = 0;
-
-	/**
-	 * The '<em><b>ENUM Aussenelementansteuerung Art GFK</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK
-	 * @model name="ENUMAussenelementansteuerung_Art_GFK" literal="GFK"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK_VALUE = 1;
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art ESTW A</b></em>' literal value.
@@ -132,7 +138,40 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A_VALUE = 2;
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUM Aussenelementansteuerung Art Fe Ak</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK
+	 * @model name="ENUMAussenelementansteuerung_Art_FeAk" literal="FeAk"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUM Aussenelementansteuerung Art Fe AS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS
+	 * @model name="ENUMAussenelementansteuerung_Art_FeAS" literal="FeAS"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS_VALUE = 3;
+
+	/**
+	 * The '<em><b>ENUM Aussenelementansteuerung Art GFK</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK
+	 * @model name="ENUMAussenelementansteuerung_Art_GFK" literal="GFK"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art Gleisfreimelde Innenanlage</b></em>' literal value.
@@ -143,7 +182,7 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE_VALUE = 3;
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art Objektcontroller</b></em>' literal value.
@@ -154,18 +193,7 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER_VALUE = 4;
-
-	/**
-	 * The '<em><b>ENUM Aussenelementansteuerung Art Relaisstellwerk</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK
-	 * @model name="ENUMAussenelementansteuerung_Art_Relaisstellwerk" literal="Relaisstellwerk"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK_VALUE = 5;
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art sonstige</b></em>' literal value.
@@ -176,7 +204,7 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE_VALUE = 6;
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUM Aussenelementansteuerung Art virtuelle Aussenelementansteuerung</b></em>' literal value.
@@ -187,7 +215,7 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG_VALUE = 7;
+	public static final int ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG_VALUE = 8;
 
 	/**
 	 * An array of all the '<em><b>ENUM Aussenelementansteuerung Art</b></em>' enumerators.
@@ -197,12 +225,13 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 */
 	private static final ENUMAussenelementansteuerungArt[] VALUES_ARRAY =
 		new ENUMAussenelementansteuerungArt[] {
-			ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK,
-			ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK,
+			ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG,
 			ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A,
+			ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK,
+			ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS,
+			ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK,
 			ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE,
 			ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER,
-			ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK,
 			ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE,
 			ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG,
 		};
@@ -261,12 +290,13 @@ public enum ENUMAussenelementansteuerungArt implements Enumerator {
 	 */
 	public static ENUMAussenelementansteuerungArt get(int value) {
 		switch (value) {
-			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK;
-			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK;
+			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_BUE_ANSCHALTUNG;
 			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_ESTW_A;
+			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AK;
+			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_FE_AS;
+			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_GFK;
 			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_GLEISFREIMELDE_INNENANLAGE;
 			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJEKTCONTROLLER;
-			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_RELAISSTELLWERK;
 			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_SONSTIGE;
 			case ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG_VALUE: return ENUM_AUSSENELEMENTANSTEUERUNG_ART_VIRTUELLE_AUSSENELEMENTANSTEUERUNG;
 			default: return null;

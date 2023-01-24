@@ -1,8 +1,13 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis.impl;
-
-import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -39,7 +44,7 @@ public class Fahrstrom_TypeClassImpl extends BasisAttribut_AttributeGroupImpl im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final List<ENUMFahrstrom> WERT_EDEFAULT = null;
+	protected static final ENUMFahrstrom WERT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
@@ -49,7 +54,7 @@ public class Fahrstrom_TypeClassImpl extends BasisAttribut_AttributeGroupImpl im
 	 * @generated
 	 * @ordered
 	 */
-	protected List<ENUMFahrstrom> wert = WERT_EDEFAULT;
+	protected ENUMFahrstrom wert = WERT_EDEFAULT;
 
 	/**
 	 * This is true if the Wert attribute has been set.
@@ -85,7 +90,7 @@ public class Fahrstrom_TypeClassImpl extends BasisAttribut_AttributeGroupImpl im
 	 * @generated
 	 */
 	@Override
-	public List<ENUMFahrstrom> getWert() {
+	public ENUMFahrstrom getWert() {
 		return wert;
 	}
 
@@ -95,8 +100,8 @@ public class Fahrstrom_TypeClassImpl extends BasisAttribut_AttributeGroupImpl im
 	 * @generated
 	 */
 	@Override
-	public void setWert(List<ENUMFahrstrom> newWert) {
-		List<ENUMFahrstrom> oldWert = wert;
+	public void setWert(ENUMFahrstrom newWert) {
+		ENUMFahrstrom oldWert = wert;
 		wert = newWert;
 		boolean oldWertESet = wertESet;
 		wertESet = true;
@@ -111,7 +116,7 @@ public class Fahrstrom_TypeClassImpl extends BasisAttribut_AttributeGroupImpl im
 	 */
 	@Override
 	public void unsetWert() {
-		List<ENUMFahrstrom> oldWert = wert;
+		ENUMFahrstrom oldWert = wert;
 		boolean oldWertESet = wertESet;
 		wert = WERT_EDEFAULT;
 		wertESet = false;
@@ -149,12 +154,11 @@ public class Fahrstrom_TypeClassImpl extends BasisAttribut_AttributeGroupImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case GleisPackage.FAHRSTROM_TYPE_CLASS__WERT:
-				setWert((List<ENUMFahrstrom>)newValue);
+				setWert((ENUMFahrstrom)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.impl;
 
@@ -10,13 +17,18 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung;
 import org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
@@ -30,9 +42,9 @@ import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_BefestigungImpl#getIDRegelzeichnung <em>ID Regelzeichnung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_BefestigungImpl#getIDRegelzeichnungVsigTafel <em>ID Regelzeichnung Vsig Tafel</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_BefestigungImpl#getIDSignalBefestigung <em>ID Signal Befestigung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_BefestigungImpl#getSignalBefestigungAllg <em>Signal Befestigung Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_BefestigungImpl#getIDBefestigungBauwerk <em>ID Befestigung Bauwerk</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_BefestigungImpl#getIDSignalBefestigung <em>ID Signal Befestigung</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,23 +61,33 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	protected EList<Regelzeichnung> iDRegelzeichnung;
 
 	/**
-	 * The cached value of the '{@link #getIDRegelzeichnungVsigTafel() <em>ID Regelzeichnung Vsig Tafel</em>}' reference.
+	 * The cached value of the '{@link #getSignalBefestigungAllg() <em>Signal Befestigung Allg</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIDRegelzeichnungVsigTafel()
+	 * @see #getSignalBefestigungAllg()
 	 * @generated
 	 * @ordered
 	 */
-	protected Regelzeichnung iDRegelzeichnungVsigTafel;
+	protected Signal_Befestigung_Allg_AttributeGroup signalBefestigungAllg;
 
 	/**
-	 * This is true if the ID Regelzeichnung Vsig Tafel reference has been set.
+	 * The cached value of the '{@link #getIDBefestigungBauwerk() <em>ID Befestigung Bauwerk</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDBefestigungBauwerk()
+	 * @generated
+	 * @ordered
+	 */
+	protected Basis_Objekt iDBefestigungBauwerk;
+
+	/**
+	 * This is true if the ID Befestigung Bauwerk reference has been set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean iDRegelzeichnungVsigTafelESet;
+	protected boolean iDBefestigungBauwerkESet;
 
 	/**
 	 * The cached value of the '{@link #getIDSignalBefestigung() <em>ID Signal Befestigung</em>}' reference.
@@ -85,16 +107,6 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	 * @ordered
 	 */
 	protected boolean iDSignalBefestigungESet;
-
-	/**
-	 * The cached value of the '{@link #getSignalBefestigungAllg() <em>Signal Befestigung Allg</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSignalBefestigungAllg()
-	 * @generated
-	 * @ordered
-	 */
-	protected Signal_Befestigung_Allg_AttributeGroup signalBefestigungAllg;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,16 +146,61 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	 * @generated
 	 */
 	@Override
-	public Regelzeichnung getIDRegelzeichnungVsigTafel() {
-		if (iDRegelzeichnungVsigTafel != null && iDRegelzeichnungVsigTafel.eIsProxy()) {
-			InternalEObject oldIDRegelzeichnungVsigTafel = (InternalEObject)iDRegelzeichnungVsigTafel;
-			iDRegelzeichnungVsigTafel = (Regelzeichnung)eResolveProxy(oldIDRegelzeichnungVsigTafel);
-			if (iDRegelzeichnungVsigTafel != oldIDRegelzeichnungVsigTafel) {
+	public Signal_Befestigung_Allg_AttributeGroup getSignalBefestigungAllg() {
+		return signalBefestigungAllg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup newSignalBefestigungAllg, NotificationChain msgs) {
+		Signal_Befestigung_Allg_AttributeGroup oldSignalBefestigungAllg = signalBefestigungAllg;
+		signalBefestigungAllg = newSignalBefestigungAllg;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, oldSignalBefestigungAllg, newSignalBefestigungAllg);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup newSignalBefestigungAllg) {
+		if (newSignalBefestigungAllg != signalBefestigungAllg) {
+			NotificationChain msgs = null;
+			if (signalBefestigungAllg != null)
+				msgs = ((InternalEObject)signalBefestigungAllg).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, null, msgs);
+			if (newSignalBefestigungAllg != null)
+				msgs = ((InternalEObject)newSignalBefestigungAllg).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, null, msgs);
+			msgs = basicSetSignalBefestigungAllg(newSignalBefestigungAllg, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, newSignalBefestigungAllg, newSignalBefestigungAllg));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Basis_Objekt getIDBefestigungBauwerk() {
+		if (iDBefestigungBauwerk != null && iDBefestigungBauwerk.eIsProxy()) {
+			InternalEObject oldIDBefestigungBauwerk = (InternalEObject)iDBefestigungBauwerk;
+			iDBefestigungBauwerk = (Basis_Objekt)eResolveProxy(oldIDBefestigungBauwerk);
+			if (iDBefestigungBauwerk != oldIDBefestigungBauwerk) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL, oldIDRegelzeichnungVsigTafel, iDRegelzeichnungVsigTafel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SignalePackage.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK, oldIDBefestigungBauwerk, iDBefestigungBauwerk));
 			}
 		}
-		return iDRegelzeichnungVsigTafel;
+		return iDBefestigungBauwerk;
 	}
 
 	/**
@@ -151,8 +208,8 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Regelzeichnung basicGetIDRegelzeichnungVsigTafel() {
-		return iDRegelzeichnungVsigTafel;
+	public Basis_Objekt basicGetIDBefestigungBauwerk() {
+		return iDBefestigungBauwerk;
 	}
 
 	/**
@@ -161,13 +218,13 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	 * @generated
 	 */
 	@Override
-	public void setIDRegelzeichnungVsigTafel(Regelzeichnung newIDRegelzeichnungVsigTafel) {
-		Regelzeichnung oldIDRegelzeichnungVsigTafel = iDRegelzeichnungVsigTafel;
-		iDRegelzeichnungVsigTafel = newIDRegelzeichnungVsigTafel;
-		boolean oldIDRegelzeichnungVsigTafelESet = iDRegelzeichnungVsigTafelESet;
-		iDRegelzeichnungVsigTafelESet = true;
+	public void setIDBefestigungBauwerk(Basis_Objekt newIDBefestigungBauwerk) {
+		Basis_Objekt oldIDBefestigungBauwerk = iDBefestigungBauwerk;
+		iDBefestigungBauwerk = newIDBefestigungBauwerk;
+		boolean oldIDBefestigungBauwerkESet = iDBefestigungBauwerkESet;
+		iDBefestigungBauwerkESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL, oldIDRegelzeichnungVsigTafel, iDRegelzeichnungVsigTafel, !oldIDRegelzeichnungVsigTafelESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK, oldIDBefestigungBauwerk, iDBefestigungBauwerk, !oldIDBefestigungBauwerkESet));
 	}
 
 	/**
@@ -176,13 +233,13 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	 * @generated
 	 */
 	@Override
-	public void unsetIDRegelzeichnungVsigTafel() {
-		Regelzeichnung oldIDRegelzeichnungVsigTafel = iDRegelzeichnungVsigTafel;
-		boolean oldIDRegelzeichnungVsigTafelESet = iDRegelzeichnungVsigTafelESet;
-		iDRegelzeichnungVsigTafel = null;
-		iDRegelzeichnungVsigTafelESet = false;
+	public void unsetIDBefestigungBauwerk() {
+		Basis_Objekt oldIDBefestigungBauwerk = iDBefestigungBauwerk;
+		boolean oldIDBefestigungBauwerkESet = iDBefestigungBauwerkESet;
+		iDBefestigungBauwerk = null;
+		iDBefestigungBauwerkESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL, oldIDRegelzeichnungVsigTafel, null, oldIDRegelzeichnungVsigTafelESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, SignalePackage.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK, oldIDBefestigungBauwerk, null, oldIDBefestigungBauwerkESet));
 	}
 
 	/**
@@ -191,8 +248,8 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	 * @generated
 	 */
 	@Override
-	public boolean isSetIDRegelzeichnungVsigTafel() {
-		return iDRegelzeichnungVsigTafelESet;
+	public boolean isSetIDBefestigungBauwerk() {
+		return iDBefestigungBauwerkESet;
 	}
 
 	/**
@@ -268,51 +325,6 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 	 * @generated
 	 */
 	@Override
-	public Signal_Befestigung_Allg_AttributeGroup getSignalBefestigungAllg() {
-		return signalBefestigungAllg;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup newSignalBefestigungAllg, NotificationChain msgs) {
-		Signal_Befestigung_Allg_AttributeGroup oldSignalBefestigungAllg = signalBefestigungAllg;
-		signalBefestigungAllg = newSignalBefestigungAllg;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, oldSignalBefestigungAllg, newSignalBefestigungAllg);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup newSignalBefestigungAllg) {
-		if (newSignalBefestigungAllg != signalBefestigungAllg) {
-			NotificationChain msgs = null;
-			if (signalBefestigungAllg != null)
-				msgs = ((InternalEObject)signalBefestigungAllg).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, null, msgs);
-			if (newSignalBefestigungAllg != null)
-				msgs = ((InternalEObject)newSignalBefestigungAllg).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, null, msgs);
-			msgs = basicSetSignalBefestigungAllg(newSignalBefestigungAllg, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG, newSignalBefestigungAllg, newSignalBefestigungAllg));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
@@ -332,14 +344,14 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 		switch (featureID) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG:
 				return getIDRegelzeichnung();
-			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL:
-				if (resolve) return getIDRegelzeichnungVsigTafel();
-				return basicGetIDRegelzeichnungVsigTafel();
+			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
+				return getSignalBefestigungAllg();
+			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK:
+				if (resolve) return getIDBefestigungBauwerk();
+				return basicGetIDBefestigungBauwerk();
 			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG:
 				if (resolve) return getIDSignalBefestigung();
 				return basicGetIDSignalBefestigung();
-			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
-				return getSignalBefestigungAllg();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -358,14 +370,14 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 				getIDRegelzeichnung().clear();
 				getIDRegelzeichnung().addAll((Collection<? extends Regelzeichnung>)newValue);
 				return;
-			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL:
-				setIDRegelzeichnungVsigTafel((Regelzeichnung)newValue);
+			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
+				setSignalBefestigungAllg((Signal_Befestigung_Allg_AttributeGroup)newValue);
+				return;
+			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK:
+				setIDBefestigungBauwerk((Basis_Objekt)newValue);
 				return;
 			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG:
 				setIDSignalBefestigung((Signal_Befestigung)newValue);
-				return;
-			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
-				setSignalBefestigungAllg((Signal_Befestigung_Allg_AttributeGroup)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -384,14 +396,14 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG:
 				getIDRegelzeichnung().clear();
 				return;
-			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL:
-				unsetIDRegelzeichnungVsigTafel();
+			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
+				setSignalBefestigungAllg((Signal_Befestigung_Allg_AttributeGroup)null);
+				return;
+			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK:
+				unsetIDBefestigungBauwerk();
 				return;
 			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG:
 				unsetIDSignalBefestigung();
-				return;
-			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
-				setSignalBefestigungAllg((Signal_Befestigung_Allg_AttributeGroup)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -409,12 +421,12 @@ public class Signal_BefestigungImpl extends Punkt_ObjektImpl implements Signal_B
 		switch (featureID) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG:
 				return iDRegelzeichnung != null && !iDRegelzeichnung.isEmpty();
-			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_REGELZEICHNUNG_VSIG_TAFEL:
-				return isSetIDRegelzeichnungVsigTafel();
-			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG:
-				return isSetIDSignalBefestigung();
 			case SignalePackage.SIGNAL_BEFESTIGUNG__SIGNAL_BEFESTIGUNG_ALLG:
 				return signalBefestigungAllg != null;
+			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_BEFESTIGUNG_BAUWERK:
+				return isSetIDBefestigungBauwerk();
+			case SignalePackage.SIGNAL_BEFESTIGUNG__ID_SIGNAL_BEFESTIGUNG:
+				return isSetIDSignalBefestigung();
 			default:
 				return super.eIsSet(featureID);
 		}

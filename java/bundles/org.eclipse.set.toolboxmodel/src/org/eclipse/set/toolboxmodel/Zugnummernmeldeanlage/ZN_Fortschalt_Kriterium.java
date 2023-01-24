@@ -1,10 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -144,7 +150,7 @@ public interface ZN_Fortschalt_Kriterium extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf das ZN Anzeigefeld in der Bedienoberfläche, in das die Zugnummer fortgeschaltet wird. 
+	 * Verweis auf das ZN Anzeigefeld in der Bedienoberfläche, in das die Zugnummer fortgeschaltet wird. Die Angabe erfolgt nur bei besonderen Schaltkriterien. Eine Fortschaltung ist in mehrere Richtungen möglich.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDZN Fortschalt Krit Ziel</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlagePackage#getZN_Fortschalt_Kriterium_IDZNFortschaltKritZiel()

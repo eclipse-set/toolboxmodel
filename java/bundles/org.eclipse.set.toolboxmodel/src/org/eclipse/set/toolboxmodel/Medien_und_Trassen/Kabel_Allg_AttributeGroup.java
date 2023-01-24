@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen;
 
@@ -13,14 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderReserve <em>Ader Reserve</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAnzahlVerseilelemente <em>Anzahl Verseilelemente</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getInduktionsschutz <em>Induktionsschutz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getKabelArt <em>Kabel Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getKabelLaenge <em>Kabel Laenge</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getKabelTyp <em>Kabel Typ</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getVerseilart <em>Verseilart</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderDurchmesser <em>Ader Durchmesser</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderQuerschnitt <em>Ader Querschnitt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getNagetierschutz <em>Nagetierschutz</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup()
@@ -29,57 +33,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Kabel_Allg_AttributeGroup extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Ader Reserve</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Induktionsschutz</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Anzahl der Reserveadern. Bsp.: 3x4x1,4 (4).
-	 * Die unter Anzahl_Verseilelemente angebbare Aderanzahl muss auch als Reserve angebbar sein (freigeschaltetes Kabel).
+	 * Induktionsschutz-Klasse rx (16,7 Hz).
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ader Reserve</em>' containment reference.
-	 * @see #setAderReserve(Ader_Reserve_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup_AderReserve()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Ader_Reserve'"
+	 * @return the value of the '<em>Induktionsschutz</em>' containment reference.
+	 * @see #setInduktionsschutz(Induktionsschutz_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup_Induktionsschutz()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Induktionsschutz'"
 	 * @generated
 	 */
-	Ader_Reserve_TypeClass getAderReserve();
+	Induktionsschutz_TypeClass getInduktionsschutz();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderReserve <em>Ader Reserve</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getInduktionsschutz <em>Induktionsschutz</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ader Reserve</em>' containment reference.
-	 * @see #getAderReserve()
+	 * @param value the new value of the '<em>Induktionsschutz</em>' containment reference.
+	 * @see #getInduktionsschutz()
 	 * @generated
 	 */
-	void setAderReserve(Ader_Reserve_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Anzahl Verseilelemente</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Anzahl der Verseilelemente. Bsp.: 3x4x1,4.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Anzahl Verseilelemente</em>' containment reference.
-	 * @see #setAnzahlVerseilelemente(Anzahl_Verseilelemente_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup_AnzahlVerseilelemente()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Anzahl_Verseilelemente'"
-	 * @generated
-	 */
-	Anzahl_Verseilelemente_TypeClass getAnzahlVerseilelemente();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAnzahlVerseilelemente <em>Anzahl Verseilelemente</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anzahl Verseilelemente</em>' containment reference.
-	 * @see #getAnzahlVerseilelemente()
-	 * @generated
-	 */
-	void setAnzahlVerseilelemente(Anzahl_Verseilelemente_TypeClass value);
+	void setInduktionsschutz(Induktionsschutz_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Kabel Art</b></em>' containment reference.
@@ -160,81 +137,29 @@ public interface Kabel_Allg_AttributeGroup extends EObject {
 	void setKabelTyp(Kabel_Typ_TypeClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Verseilart</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Nagetierschutz</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verseilart (4 = Viererverseilung; 1 = adrige Verseilung). Bsp.: 3x4x1,4.
+	 * Angabe, ob das Kabel mit einem Nagetierschutz zu versehen ist (true). Der Wert false wird nicht verwendet.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Verseilart</em>' containment reference.
-	 * @see #setVerseilart(Verseilart_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup_Verseilart()
+	 * @return the value of the '<em>Nagetierschutz</em>' containment reference.
+	 * @see #setNagetierschutz(Nagetierschutz_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup_Nagetierschutz()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Verseilart'"
+	 *        extendedMetaData="kind='element' name='Nagetierschutz'"
 	 * @generated
 	 */
-	Verseilart_TypeClass getVerseilart();
+	Nagetierschutz_TypeClass getNagetierschutz();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getVerseilart <em>Verseilart</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getNagetierschutz <em>Nagetierschutz</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Verseilart</em>' containment reference.
-	 * @see #getVerseilart()
+	 * @param value the new value of the '<em>Nagetierschutz</em>' containment reference.
+	 * @see #getNagetierschutz()
 	 * @generated
 	 */
-	void setVerseilart(Verseilart_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Ader Durchmesser</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Bei Signalkabeln: Durchmesser der Kabeladern in mm. Bsp.: 3x4x1,4.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ader Durchmesser</em>' containment reference.
-	 * @see #setAderDurchmesser(Ader_Durchmesser_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup_AderDurchmesser()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Ader_Durchmesser'"
-	 * @generated
-	 */
-	Ader_Durchmesser_TypeClass getAderDurchmesser();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderDurchmesser <em>Ader Durchmesser</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ader Durchmesser</em>' containment reference.
-	 * @see #getAderDurchmesser()
-	 * @generated
-	 */
-	void setAderDurchmesser(Ader_Durchmesser_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Ader Querschnitt</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Bei Kabeln zur rein elektrischen Energieübertragung: Querschnitt der Kabeladern in Quadratmillimetern. Bsp.: 2x1,5.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ader Querschnitt</em>' containment reference.
-	 * @see #setAderQuerschnitt(Ader_Querschnitt_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_Allg_AttributeGroup_AderQuerschnitt()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Ader_Querschnitt'"
-	 * @generated
-	 */
-	Ader_Querschnitt_TypeClass getAderQuerschnitt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderQuerschnitt <em>Ader Querschnitt</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ader Querschnitt</em>' containment reference.
-	 * @see #getAderQuerschnitt()
-	 * @generated
-	 */
-	void setAderQuerschnitt(Ader_Querschnitt_TypeClass value);
+	void setNagetierschutz(Nagetierschutz_TypeClass value);
 
 } // Kabel_Allg_AttributeGroup

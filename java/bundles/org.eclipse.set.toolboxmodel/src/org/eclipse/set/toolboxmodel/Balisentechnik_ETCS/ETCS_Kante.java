@@ -1,11 +1,19 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
 
 /**
@@ -25,6 +33,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDETCSKnotenA <em>IDETCS Knoten A</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDETCSKnotenB <em>IDETCS Knoten B</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDRBC <em>IDRBC</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDStrecke <em>ID Strecke</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDTOPKante <em>IDTOP Kante</em>}</li>
  * </ul>
  *
@@ -177,6 +186,59 @@ public interface ETCS_Kante extends Basis_Objekt {
 	 * @generated
 	 */
 	EList<RBC> getIDRBC();
+
+	/**
+	 * Returns the value of the '<em><b>ID Strecke</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf die Strecke, der die STCS-Kante zugeordnet wird. Die Angabe lässt sich durch Auswertung der topologischen Verortung der Strecke(n) sowie der Verortung der ETCS_Knoten ermitteln. Eine Abspeicherung kann zur Erleichterung weiterer Anwendungen (z. B. DiB) erfolgen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ID Strecke</em>' reference.
+	 * @see #isSetIDStrecke()
+	 * @see #unsetIDStrecke()
+	 * @see #setIDStrecke(Strecke)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_Kante_IDStrecke()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_Strecke'"
+	 * @generated
+	 */
+	Strecke getIDStrecke();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDStrecke <em>ID Strecke</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID Strecke</em>' reference.
+	 * @see #isSetIDStrecke()
+	 * @see #unsetIDStrecke()
+	 * @see #getIDStrecke()
+	 * @generated
+	 */
+	void setIDStrecke(Strecke value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDStrecke <em>ID Strecke</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDStrecke()
+	 * @see #getIDStrecke()
+	 * @see #setIDStrecke(Strecke)
+	 * @generated
+	 */
+	void unsetIDStrecke();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante#getIDStrecke <em>ID Strecke</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>ID Strecke</em>' reference is set.
+	 * @see #unsetIDStrecke()
+	 * @see #getIDStrecke()
+	 * @see #setIDStrecke(Strecke)
+	 * @generated
+	 */
+	boolean isSetIDStrecke();
 
 	/**
 	 * Returns the value of the '<em><b>IDTOP Kante</b></em>' reference list.

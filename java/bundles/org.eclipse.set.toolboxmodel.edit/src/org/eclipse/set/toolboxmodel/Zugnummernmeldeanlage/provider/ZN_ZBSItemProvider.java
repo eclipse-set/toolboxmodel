@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageFactory;
@@ -98,7 +99,8 @@ public class ZN_ZBSItemProvider extends Basis_ObjektItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_ZBS__ZNZBS_ALLG);
+			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_ZBS__IP_ADRESSE);
+			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZN_ZBS__ZBS_SCHNITTSTELLE);
 		}
 		return childrenFeatures;
 	}
@@ -151,7 +153,8 @@ public class ZN_ZBSItemProvider extends Basis_ObjektItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ZN_ZBS.class)) {
-			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG:
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE:
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -173,8 +176,13 @@ public class ZN_ZBSItemProvider extends Basis_ObjektItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ZugnummernmeldeanlagePackage.Literals.ZN_ZBS__ZNZBS_ALLG,
-				 ZugnummernmeldeanlageFactory.eINSTANCE.createZN_ZBS_Allg_AttributeGroup()));
+				(ZugnummernmeldeanlagePackage.Literals.ZN_ZBS__IP_ADRESSE,
+				 ZugnummernmeldeanlageFactory.eINSTANCE.createIP_Adresse_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ZugnummernmeldeanlagePackage.Literals.ZN_ZBS__ZBS_SCHNITTSTELLE,
+				 ZugnummernmeldeanlageFactory.eINSTANCE.createZBS_Schnittstelle_TypeClass()));
 	}
 
 	/**

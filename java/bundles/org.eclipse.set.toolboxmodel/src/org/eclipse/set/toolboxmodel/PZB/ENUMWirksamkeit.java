@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB;
 
@@ -29,24 +36,14 @@ public enum ENUMWirksamkeit implements Enumerator {
 	ENUM_WIRKSAMKEIT_SCHALTBAR_VON_SIGNAL(0, "ENUMWirksamkeit_schaltbar_von_Signal", "schaltbar_von_Signal"),
 
 	/**
-	 * The '<em><b>ENUM Wirksamkeit staendig wirksam wenn Fahrstrasse eingestellt</b></em>' literal object.
+	 * The '<em><b>ENUM Wirksamkeit sonstige</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT_VALUE
+	 * @see #ENUM_WIRKSAMKEIT_SONSTIGE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT(1, "ENUMWirksamkeit_staendig_wirksam_wenn_Fahrstrasse_eingestellt", "staendig_wirksam_wenn_Fahrstrasse_eingestellt"),
-
-	/**
-	 * The '<em><b>ENUM Wirksamkeit unwirksam wenn Fahrstrasse eingestellt</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_WIRKSAMKEIT_UNWIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_WIRKSAMKEIT_UNWIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT(2, "ENUMWirksamkeit_unwirksam_wenn_Fahrstrasse_eingestellt", "unwirksam_wenn_Fahrstrasse_eingestellt"),
+	ENUM_WIRKSAMKEIT_SONSTIGE(1, "ENUMWirksamkeit_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUM Wirksamkeit staendig wirksam</b></em>' literal object.
@@ -56,17 +53,7 @@ public enum ENUMWirksamkeit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM(3, "ENUMWirksamkeit_staendig_wirksam", "staendig_wirksam"),
-
-	/**
-	 * The '<em><b>ENUM Wirksamkeit sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_WIRKSAMKEIT_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_WIRKSAMKEIT_SONSTIGE(4, "ENUMWirksamkeit_sonstige", "sonstige");
+	ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM(2, "ENUMWirksamkeit_staendig_wirksam", "staendig_wirksam");
 
 	/**
 	 * The '<em><b>ENUM Wirksamkeit schaltbar von Signal</b></em>' literal value.
@@ -80,26 +67,15 @@ public enum ENUMWirksamkeit implements Enumerator {
 	public static final int ENUM_WIRKSAMKEIT_SCHALTBAR_VON_SIGNAL_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUM Wirksamkeit staendig wirksam wenn Fahrstrasse eingestellt</b></em>' literal value.
+	 * The '<em><b>ENUM Wirksamkeit sonstige</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT
-	 * @model name="ENUMWirksamkeit_staendig_wirksam_wenn_Fahrstrasse_eingestellt" literal="staendig_wirksam_wenn_Fahrstrasse_eingestellt"
+	 * @see #ENUM_WIRKSAMKEIT_SONSTIGE
+	 * @model name="ENUMWirksamkeit_sonstige" literal="sonstige"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT_VALUE = 1;
-
-	/**
-	 * The '<em><b>ENUM Wirksamkeit unwirksam wenn Fahrstrasse eingestellt</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_WIRKSAMKEIT_UNWIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT
-	 * @model name="ENUMWirksamkeit_unwirksam_wenn_Fahrstrasse_eingestellt" literal="unwirksam_wenn_Fahrstrasse_eingestellt"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_WIRKSAMKEIT_UNWIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT_VALUE = 2;
+	public static final int ENUM_WIRKSAMKEIT_SONSTIGE_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Wirksamkeit staendig wirksam</b></em>' literal value.
@@ -110,18 +86,7 @@ public enum ENUMWirksamkeit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Wirksamkeit sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_WIRKSAMKEIT_SONSTIGE
-	 * @model name="ENUMWirksamkeit_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_WIRKSAMKEIT_SONSTIGE_VALUE = 4;
+	public static final int ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>ENUM Wirksamkeit</b></em>' enumerators.
@@ -132,10 +97,8 @@ public enum ENUMWirksamkeit implements Enumerator {
 	private static final ENUMWirksamkeit[] VALUES_ARRAY =
 		new ENUMWirksamkeit[] {
 			ENUM_WIRKSAMKEIT_SCHALTBAR_VON_SIGNAL,
-			ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT,
-			ENUM_WIRKSAMKEIT_UNWIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT,
-			ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM,
 			ENUM_WIRKSAMKEIT_SONSTIGE,
+			ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM,
 		};
 
 	/**
@@ -193,10 +156,8 @@ public enum ENUMWirksamkeit implements Enumerator {
 	public static ENUMWirksamkeit get(int value) {
 		switch (value) {
 			case ENUM_WIRKSAMKEIT_SCHALTBAR_VON_SIGNAL_VALUE: return ENUM_WIRKSAMKEIT_SCHALTBAR_VON_SIGNAL;
-			case ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT_VALUE: return ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT;
-			case ENUM_WIRKSAMKEIT_UNWIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT_VALUE: return ENUM_WIRKSAMKEIT_UNWIRKSAM_WENN_FAHRSTRASSE_EINGESTELLT;
-			case ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_VALUE: return ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM;
 			case ENUM_WIRKSAMKEIT_SONSTIGE_VALUE: return ENUM_WIRKSAMKEIT_SONSTIGE;
+			case ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM_VALUE: return ENUM_WIRKSAMKEIT_STAENDIG_WIRKSAM;
 			default: return null;
 		}
 	}

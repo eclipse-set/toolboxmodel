@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl;
 
@@ -6,19 +13,22 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Bezeichnung_AttributeGroup;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Bedienung.Bedien_Bezirk;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
 /**
@@ -30,6 +40,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZentraleinheitImpl#getBezeichnung <em>Bezeichnung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZentraleinheitImpl#getESTWZEEnergieversorgung <em>ESTWZE Energieversorgung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZentraleinheitImpl#getESTWZentraleinheitAllg <em>ESTW Zentraleinheit Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZentraleinheitImpl#getIDOertlichkeitNamensgebend <em>ID Oertlichkeit Namensgebend</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZentraleinheitImpl#getIDUnterbringung <em>ID Unterbringung</em>}</li>
@@ -49,6 +60,16 @@ public class ESTW_ZentraleinheitImpl extends Basis_ObjektImpl implements ESTW_Ze
 	 * @ordered
 	 */
 	protected ESTW_Zentraleinheit_Bezeichnung_AttributeGroup bezeichnung;
+
+	/**
+	 * The cached value of the '{@link #getESTWZEEnergieversorgung() <em>ESTWZE Energieversorgung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getESTWZEEnergieversorgung()
+	 * @generated
+	 * @ordered
+	 */
+	protected ESTW_ZE_Energieversorgung_AttributeGroup eSTWZEEnergieversorgung;
 
 	/**
 	 * The cached value of the '{@link #getESTWZentraleinheitAllg() <em>ESTW Zentraleinheit Allg</em>}' containment reference.
@@ -198,6 +219,51 @@ public class ESTW_ZentraleinheitImpl extends Basis_ObjektImpl implements ESTW_Ze
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__BEZEICHNUNG, newBezeichnung, newBezeichnung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ESTW_ZE_Energieversorgung_AttributeGroup getESTWZEEnergieversorgung() {
+		return eSTWZEEnergieversorgung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetESTWZEEnergieversorgung(ESTW_ZE_Energieversorgung_AttributeGroup newESTWZEEnergieversorgung, NotificationChain msgs) {
+		ESTW_ZE_Energieversorgung_AttributeGroup oldESTWZEEnergieversorgung = eSTWZEEnergieversorgung;
+		eSTWZEEnergieversorgung = newESTWZEEnergieversorgung;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG, oldESTWZEEnergieversorgung, newESTWZEEnergieversorgung);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setESTWZEEnergieversorgung(ESTW_ZE_Energieversorgung_AttributeGroup newESTWZEEnergieversorgung) {
+		if (newESTWZEEnergieversorgung != eSTWZEEnergieversorgung) {
+			NotificationChain msgs = null;
+			if (eSTWZEEnergieversorgung != null)
+				msgs = ((InternalEObject)eSTWZEEnergieversorgung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG, null, msgs);
+			if (newESTWZEEnergieversorgung != null)
+				msgs = ((InternalEObject)newESTWZEEnergieversorgung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG, null, msgs);
+			msgs = basicSetESTWZEEnergieversorgung(newESTWZEEnergieversorgung, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG, newESTWZEEnergieversorgung, newESTWZEEnergieversorgung));
 	}
 
 	/**
@@ -523,6 +589,8 @@ public class ESTW_ZentraleinheitImpl extends Basis_ObjektImpl implements ESTW_Ze
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__BEZEICHNUNG:
 				return basicSetBezeichnung(null, msgs);
+			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG:
+				return basicSetESTWZEEnergieversorgung(null, msgs);
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG:
 				return basicSetESTWZentraleinheitAllg(null, msgs);
 			default:
@@ -540,6 +608,8 @@ public class ESTW_ZentraleinheitImpl extends Basis_ObjektImpl implements ESTW_Ze
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__BEZEICHNUNG:
 				return getBezeichnung();
+			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG:
+				return getESTWZEEnergieversorgung();
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG:
 				return getESTWZentraleinheitAllg();
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ID_OERTLICHKEIT_NAMENSGEBEND:
@@ -569,6 +639,9 @@ public class ESTW_ZentraleinheitImpl extends Basis_ObjektImpl implements ESTW_Ze
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__BEZEICHNUNG:
 				setBezeichnung((ESTW_Zentraleinheit_Bezeichnung_AttributeGroup)newValue);
+				return;
+			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG:
+				setESTWZEEnergieversorgung((ESTW_ZE_Energieversorgung_AttributeGroup)newValue);
 				return;
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG:
 				setESTWZentraleinheitAllg((ESTW_Zentraleinheit_Allg_AttributeGroup)newValue);
@@ -602,6 +675,9 @@ public class ESTW_ZentraleinheitImpl extends Basis_ObjektImpl implements ESTW_Ze
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__BEZEICHNUNG:
 				setBezeichnung((ESTW_Zentraleinheit_Bezeichnung_AttributeGroup)null);
 				return;
+			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG:
+				setESTWZEEnergieversorgung((ESTW_ZE_Energieversorgung_AttributeGroup)null);
+				return;
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG:
 				setESTWZentraleinheitAllg((ESTW_Zentraleinheit_Allg_AttributeGroup)null);
 				return;
@@ -633,6 +709,8 @@ public class ESTW_ZentraleinheitImpl extends Basis_ObjektImpl implements ESTW_Ze
 		switch (featureID) {
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__BEZEICHNUNG:
 				return bezeichnung != null;
+			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG:
+				return eSTWZEEnergieversorgung != null;
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG:
 				return eSTWZentraleinheitAllg != null;
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT__ID_OERTLICHKEIT_NAMENSGEBEND:

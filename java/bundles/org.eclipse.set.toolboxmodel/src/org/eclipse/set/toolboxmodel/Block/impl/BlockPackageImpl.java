@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block.impl;
 
@@ -15,6 +22,10 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -62,7 +73,6 @@ import org.eclipse.set.toolboxmodel.Block.ENUMBetriebsfuehrung;
 import org.eclipse.set.toolboxmodel.Block.ENUMBlockBauform;
 import org.eclipse.set.toolboxmodel.Block.ENUMSchaltung;
 import org.eclipse.set.toolboxmodel.Block.ENUMStreckeArt;
-import org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Erlaubnis_Staendig_Vorhanden_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Erlaubnisabgabespeicherung_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Erlaubnisholen_TypeClass;
@@ -70,7 +80,8 @@ import org.eclipse.set.toolboxmodel.Block.Rueckblockwecker_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Schaltung_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Schutzuebertrager_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Strecke_Art_TypeClass;
-import org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass;
+import org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Vorblockwecker_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Zugbeeinflussung_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Zusatzinformation_TypeClass;
@@ -93,13 +104,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -124,9 +139,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -243,13 +260,6 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entwurfsgeschwindigkeit_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass erlaubnis_Staendig_Vorhanden_TypeClassEClass = null;
 
 	/**
@@ -299,7 +309,14 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass traktion_Art_TypeClassEClass = null;
+	private EClass streckengeschwindigkeit_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass traktion_Art_Elektrisch_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -355,13 +372,6 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType entwurfsgeschwindigkeit_TypeEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EDataType enumBetriebsfuehrungObjectEDataType = null;
 
 	/**
@@ -384,6 +394,13 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	private EDataType enumStreckeArtObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType streckengeschwindigkeit_TypeEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -443,30 +460,34 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
-		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
-		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
 		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
+		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
+		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -483,8 +504,8 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -502,16 +523,18 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 
 		// Create package meta-data objects
 		theBlockPackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
+		theOrtungPackage.createPackageContents();
+		theGleisPackage.createPackageContents();
 		theBahnsteigPackage.createPackageContents();
 		theFahrstrassePackage.createPackageContents();
-		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
-		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -519,23 +542,25 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBlockPackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
+		theOrtungPackage.initializePackageContents();
+		theGleisPackage.initializePackageContents();
 		theBahnsteigPackage.initializePackageContents();
 		theFahrstrassePackage.initializePackageContents();
-		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
-		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -543,7 +568,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -958,6 +983,16 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getBlock_Strecke_IDStreckeBremsweg() {
+		return (EReference)block_StreckeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getBlock_Strecke_Allg_AttributeGroup() {
 		return block_Strecke_Allg_AttributeGroupEClass;
 	}
@@ -988,7 +1023,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBlock_Strecke_Allg_AttributeGroup_Entwurfsgeschwindigkeit() {
+	public EReference getBlock_Strecke_Allg_AttributeGroup_StreckeArt() {
 		return (EReference)block_Strecke_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -998,7 +1033,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBlock_Strecke_Allg_AttributeGroup_StreckeArt() {
+	public EReference getBlock_Strecke_Allg_AttributeGroup_Streckengeschwindigkeit() {
 		return (EReference)block_Strecke_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1008,7 +1043,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBlock_Strecke_Allg_AttributeGroup_TraktionArt() {
+	public EReference getBlock_Strecke_Allg_AttributeGroup_TraktionArtElektrisch() {
 		return (EReference)block_Strecke_Allg_AttributeGroupEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1050,26 +1085,6 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	@Override
 	public EAttribute getBremsweg_TypeClass_Wert() {
 		return (EAttribute)bremsweg_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getEntwurfsgeschwindigkeit_TypeClass() {
-		return entwurfsgeschwindigkeit_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEntwurfsgeschwindigkeit_TypeClass_Wert() {
-		return (EAttribute)entwurfsgeschwindigkeit_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1218,8 +1233,8 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getTraktion_Art_TypeClass() {
-		return traktion_Art_TypeClassEClass;
+	public EClass getStreckengeschwindigkeit_TypeClass() {
+		return streckengeschwindigkeit_TypeClassEClass;
 	}
 
 	/**
@@ -1228,8 +1243,28 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTraktion_Art_TypeClass_Wert() {
-		return (EAttribute)traktion_Art_TypeClassEClass.getEStructuralFeatures().get(0);
+	public EAttribute getStreckengeschwindigkeit_TypeClass_Wert() {
+		return (EAttribute)streckengeschwindigkeit_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTraktion_Art_Elektrisch_TypeClass() {
+		return traktion_Art_Elektrisch_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTraktion_Art_Elektrisch_TypeClass_Wert() {
+		return (EAttribute)traktion_Art_Elektrisch_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1338,16 +1373,6 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	 * @generated
 	 */
 	@Override
-	public EDataType getEntwurfsgeschwindigkeit_Type() {
-		return entwurfsgeschwindigkeit_TypeEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EDataType getENUMBetriebsfuehrungObject() {
 		return enumBetriebsfuehrungObjectEDataType;
 	}
@@ -1380,6 +1405,16 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 	@Override
 	public EDataType getENUMStreckeArtObject() {
 		return enumStreckeArtObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getStreckengeschwindigkeit_Type() {
+		return streckengeschwindigkeit_TypeEDataType;
 	}
 
 	/**
@@ -1468,21 +1503,19 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		createEReference(block_StreckeEClass, BLOCK_STRECKE__ID_BETRIEBSSTELLE_NACHBAR);
 		createEReference(block_StreckeEClass, BLOCK_STRECKE__ID_KNOTENBAHNHOF);
 		createEReference(block_StreckeEClass, BLOCK_STRECKE__ID_STRECKE);
+		createEReference(block_StreckeEClass, BLOCK_STRECKE__ID_STRECKE_BREMSWEG);
 
 		block_Strecke_Allg_AttributeGroupEClass = createEClass(BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP);
 		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BETRIEBSFUEHRUNG);
 		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG);
-		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT);
 		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART);
-		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART);
+		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT);
+		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH);
 		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART);
 		createEReference(block_Strecke_Allg_AttributeGroupEClass, BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION);
 
 		bremsweg_TypeClassEClass = createEClass(BREMSWEG_TYPE_CLASS);
 		createEAttribute(bremsweg_TypeClassEClass, BREMSWEG_TYPE_CLASS__WERT);
-
-		entwurfsgeschwindigkeit_TypeClassEClass = createEClass(ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS);
-		createEAttribute(entwurfsgeschwindigkeit_TypeClassEClass, ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS__WERT);
 
 		erlaubnis_Staendig_Vorhanden_TypeClassEClass = createEClass(ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS);
 		createEAttribute(erlaubnis_Staendig_Vorhanden_TypeClassEClass, ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS__WERT);
@@ -1505,8 +1538,11 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		strecke_Art_TypeClassEClass = createEClass(STRECKE_ART_TYPE_CLASS);
 		createEAttribute(strecke_Art_TypeClassEClass, STRECKE_ART_TYPE_CLASS__WERT);
 
-		traktion_Art_TypeClassEClass = createEClass(TRAKTION_ART_TYPE_CLASS);
-		createEAttribute(traktion_Art_TypeClassEClass, TRAKTION_ART_TYPE_CLASS__WERT);
+		streckengeschwindigkeit_TypeClassEClass = createEClass(STRECKENGESCHWINDIGKEIT_TYPE_CLASS);
+		createEAttribute(streckengeschwindigkeit_TypeClassEClass, STRECKENGESCHWINDIGKEIT_TYPE_CLASS__WERT);
+
+		traktion_Art_Elektrisch_TypeClassEClass = createEClass(TRAKTION_ART_ELEKTRISCH_TYPE_CLASS);
+		createEAttribute(traktion_Art_Elektrisch_TypeClassEClass, TRAKTION_ART_ELEKTRISCH_TYPE_CLASS__WERT);
 
 		vorblockwecker_TypeClassEClass = createEClass(VORBLOCKWECKER_TYPE_CLASS);
 		createEAttribute(vorblockwecker_TypeClassEClass, VORBLOCKWECKER_TYPE_CLASS__WERT);
@@ -1524,11 +1560,11 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		enumStreckeArtEEnum = createEEnum(ENUM_STRECKE_ART);
 
 		// Create data types
-		entwurfsgeschwindigkeit_TypeEDataType = createEDataType(ENTWURFSGESCHWINDIGKEIT_TYPE);
 		enumBetriebsfuehrungObjectEDataType = createEDataType(ENUM_BETRIEBSFUEHRUNG_OBJECT);
 		enumBlockBauformObjectEDataType = createEDataType(ENUM_BLOCK_BAUFORM_OBJECT);
 		enumSchaltungObjectEDataType = createEDataType(ENUM_SCHALTUNG_OBJECT);
 		enumStreckeArtObjectEDataType = createEDataType(ENUM_STRECKE_ART_OBJECT);
+		streckengeschwindigkeit_TypeEDataType = createEDataType(STRECKENGESCHWINDIGKEIT_TYPE);
 		zusatzinformation_TypeEDataType = createEDataType(ZUSATZINFORMATION_TYPE);
 	}
 
@@ -1578,7 +1614,6 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		block_ElementEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		block_StreckeEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		bremsweg_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		entwurfsgeschwindigkeit_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		erlaubnis_Staendig_Vorhanden_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		erlaubnisabgabespeicherung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		erlaubnisholen_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -1586,7 +1621,8 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		schaltung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		schutzuebertrager_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		strecke_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		traktion_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		streckengeschwindigkeit_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		traktion_Art_Elektrisch_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		vorblockwecker_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		zugbeeinflussung_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		zusatzinformation_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -1602,7 +1638,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		initEAttribute(getBetriebsfuehrung_TypeClass_Wert(), this.getENUMBetriebsfuehrungObject(), "wert", null, 1, 1, Betriebsfuehrung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(block_AnlageEClass, Block_Anlage.class, "Block_Anlage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBlock_Anlage_BlockAnlageAllg(), this.getBlock_Anlage_Allg_AttributeGroup(), null, "blockAnlageAllg", null, 1, 1, Block_Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Anlage_BlockAnlageAllg(), this.getBlock_Anlage_Allg_AttributeGroup(), null, "blockAnlageAllg", null, 0, 1, Block_Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Anlage_IDBlockElementA(), this.getBlock_Element(), null, "iDBlockElementA", null, 1, 1, Block_Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Anlage_IDBlockElementB(), this.getBlock_Element(), null, "iDBlockElementB", null, 0, 1, Block_Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Anlage_IDGleisBezeichnung(), theGleisPackage.getGleis_Bezeichnung(), null, "iDGleisBezeichnung", null, 1, 1, Block_Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1619,7 +1655,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		initEReference(getBlock_Element_BlockElementErlaubnis(), this.getBlock_Element_Erlaubnis_AttributeGroup(), null, "blockElementErlaubnis", null, 0, 1, Block_Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Element_IDBlockStrecke(), this.getBlock_Strecke(), null, "iDBlockStrecke", null, 1, 1, Block_Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Element_IDRaeumungspruefung(), theOrtungPackage.getSchaltmittel_Zuordnung(), null, "iDRaeumungspruefung", null, 0, 1, Block_Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBlock_Element_IDSignal(), theSignalePackage.getSignal(), null, "iDSignal", null, 0, 1, Block_Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Element_IDSignal(), theSignalePackage.getSignal(), null, "iDSignal", null, 1, 1, Block_Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Element_IDZugschlussmeldung(), theBedienungPackage.getBedien_Anzeige_Element(), null, "iDZugschlussmeldung", null, 0, 1, Block_Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(block_Element_Allg_AttributeGroupEClass, Block_Element_Allg_AttributeGroup.class, "Block_Element_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1639,21 +1675,19 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		initEReference(getBlock_Strecke_IDBetriebsstelleNachbar(), theGeodatenPackage.getOertlichkeit(), null, "iDBetriebsstelleNachbar", null, 1, 1, Block_Strecke.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Strecke_IDKnotenbahnhof(), theGeodatenPackage.getOertlichkeit(), null, "iDKnotenbahnhof", null, 0, 1, Block_Strecke.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Strecke_IDStrecke(), theGeodatenPackage.getStrecke(), null, "iDStrecke", null, 1, 1, Block_Strecke.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Strecke_IDStreckeBremsweg(), theGeodatenPackage.getStrecke_Bremsweg(), null, "iDStreckeBremsweg", null, 0, 1, Block_Strecke.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(block_Strecke_Allg_AttributeGroupEClass, Block_Strecke_Allg_AttributeGroup.class, "Block_Strecke_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBlock_Strecke_Allg_AttributeGroup_Betriebsfuehrung(), this.getBetriebsfuehrung_TypeClass(), null, "betriebsfuehrung", null, 1, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBlock_Strecke_Allg_AttributeGroup_Bremsweg(), this.getBremsweg_TypeClass(), null, "bremsweg", null, 1, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBlock_Strecke_Allg_AttributeGroup_Entwurfsgeschwindigkeit(), this.getEntwurfsgeschwindigkeit_TypeClass(), null, "entwurfsgeschwindigkeit", null, 1, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Strecke_Allg_AttributeGroup_Bremsweg(), this.getBremsweg_TypeClass(), null, "bremsweg", null, 0, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Strecke_Allg_AttributeGroup_StreckeArt(), this.getStrecke_Art_TypeClass(), null, "streckeArt", null, 0, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBlock_Strecke_Allg_AttributeGroup_TraktionArt(), this.getTraktion_Art_TypeClass(), null, "traktionArt", null, 0, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBlock_Strecke_Allg_AttributeGroup_ZugbeeinflussungArt(), this.getZugbeeinflussung_Art_TypeClass(), null, "zugbeeinflussungArt", null, 0, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Strecke_Allg_AttributeGroup_Streckengeschwindigkeit(), this.getStreckengeschwindigkeit_TypeClass(), null, "streckengeschwindigkeit", null, 1, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Strecke_Allg_AttributeGroup_TraktionArtElektrisch(), this.getTraktion_Art_Elektrisch_TypeClass(), null, "traktionArtElektrisch", null, 0, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Strecke_Allg_AttributeGroup_ZugbeeinflussungArt(), this.getZugbeeinflussung_Art_TypeClass(), null, "zugbeeinflussungArt", null, 0, -1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_Strecke_Allg_AttributeGroup_Zusatzinformation(), this.getZusatzinformation_TypeClass(), null, "zusatzinformation", null, 0, 1, Block_Strecke_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bremsweg_TypeClassEClass, Bremsweg_TypeClass.class, "Bremsweg_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBremsweg_TypeClass_Wert(), theBasisTypenPackage.getBremsweg_Type(), "wert", null, 1, 1, Bremsweg_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(entwurfsgeschwindigkeit_TypeClassEClass, Entwurfsgeschwindigkeit_TypeClass.class, "Entwurfsgeschwindigkeit_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEntwurfsgeschwindigkeit_TypeClass_Wert(), this.getEntwurfsgeschwindigkeit_Type(), "wert", null, 1, 1, Entwurfsgeschwindigkeit_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(erlaubnis_Staendig_Vorhanden_TypeClassEClass, Erlaubnis_Staendig_Vorhanden_TypeClass.class, "Erlaubnis_Staendig_Vorhanden_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getErlaubnis_Staendig_Vorhanden_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Erlaubnis_Staendig_Vorhanden_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1676,8 +1710,11 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		initEClass(strecke_Art_TypeClassEClass, Strecke_Art_TypeClass.class, "Strecke_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStrecke_Art_TypeClass_Wert(), this.getENUMStreckeArtObject(), "wert", null, 1, 1, Strecke_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(traktion_Art_TypeClassEClass, Traktion_Art_TypeClass.class, "Traktion_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTraktion_Art_TypeClass_Wert(), theBasisTypenPackage.getFahrstrom_Type(), "wert", null, 1, 1, Traktion_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(streckengeschwindigkeit_TypeClassEClass, Streckengeschwindigkeit_TypeClass.class, "Streckengeschwindigkeit_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStreckengeschwindigkeit_TypeClass_Wert(), this.getStreckengeschwindigkeit_Type(), "wert", null, 1, 1, Streckengeschwindigkeit_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(traktion_Art_Elektrisch_TypeClassEClass, Traktion_Art_Elektrisch_TypeClass.class, "Traktion_Art_Elektrisch_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTraktion_Art_Elektrisch_TypeClass_Wert(), theBasisTypenPackage.getFahrstrom_Type(), "wert", null, 1, 1, Traktion_Art_Elektrisch_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vorblockwecker_TypeClassEClass, Vorblockwecker_TypeClass.class, "Vorblockwecker_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVorblockwecker_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Vorblockwecker_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1700,42 +1737,44 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		initEEnum(enumBlockBauformEEnum, ENUMBlockBauform.class, "ENUMBlockBauform");
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_AB64);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_AB70);
+		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_BLOCKANPASSUNG_RB);
+		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_DB_BLOCK);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ELEKTRONISCHER_BLOCK_EBL2000);
-		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_SONSTIGE);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ESTW_ZENTRALBLOCK);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ESTW_ZENTRALBLOCK_MIT_SB_ABSCHLUSS_MCL84);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ESTW_ZENTRALBLOCK_MIT_SB_ABSCHLUSS_SBL60);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ESTW_ZENTRALBLOCK_MIT_SB_ABSCHLUSS_SBS59);
-		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ZENTRALBLOCK_ZSB2000);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ESTW_ZENTRALBLOCK_MIT_SB_ABSCHLUSS_SBS60);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_FELDERBLOCK);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_FIRMENNEUTRALE_BLOCKSCHNITTSTELLE);
-		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_DB_BLOCK);
-		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ZENTRALBLOCK_ZBS65);
-		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ZENTRALBLOCK_ZBS600);
+		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ILS_ADAPTER);
+		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_SONSTIGE);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_SELBSTBLOCK_SBL60);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_SELBSTBLOCK_SBS59);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_SELBSTBLOCK_SBS60);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_RELAISBLOCK_RBII60);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_RELAISBLOCK_RBII_SP64B);
 		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_RELAISBLOCK_RBIII_SP68);
+		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ZENTRALBLOCK_ZSB2000);
+		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ZENTRALBLOCK_ZBS600);
+		addEEnumLiteral(enumBlockBauformEEnum, ENUMBlockBauform.ENUM_BLOCK_BAUFORM_ZENTRALBLOCK_ZBS65);
 
 		initEEnum(enumSchaltungEEnum, ENUMSchaltung.class, "ENUMSchaltung");
 		addEEnumLiteral(enumSchaltungEEnum, ENUMSchaltung.ENUM_SCHALTUNG_3DRAHTSCHALTUNG);
-		addEEnumLiteral(enumSchaltungEEnum, ENUMSchaltung.ENUM_SCHALTUNG_SONSTIGE);
 		addEEnumLiteral(enumSchaltungEEnum, ENUMSchaltung.ENUM_SCHALTUNG_6DRAHTSCHALTUNG);
 		addEEnumLiteral(enumSchaltungEEnum, ENUMSchaltung.ENUM_SCHALTUNG_9DRAHTSCHALTUNG);
+		addEEnumLiteral(enumSchaltungEEnum, ENUMSchaltung.ENUM_SCHALTUNG_SONSTIGE);
 
 		initEEnum(enumStreckeArtEEnum, ENUMStreckeArt.class, "ENUMStreckeArt");
 		addEEnumLiteral(enumStreckeArtEEnum, ENUMStreckeArt.ENUM_STRECKE_ART_HAUPTBAHN);
 		addEEnumLiteral(enumStreckeArtEEnum, ENUMStreckeArt.ENUM_STRECKE_ART_NEBENBAHN);
 
 		// Initialize data types
-		initEDataType(entwurfsgeschwindigkeit_TypeEDataType, BigInteger.class, "Entwurfsgeschwindigkeit_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumBetriebsfuehrungObjectEDataType, ENUMBetriebsfuehrung.class, "ENUMBetriebsfuehrungObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumBlockBauformObjectEDataType, ENUMBlockBauform.class, "ENUMBlockBauformObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumSchaltungObjectEDataType, ENUMSchaltung.class, "ENUMSchaltungObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumStreckeArtObjectEDataType, ENUMStreckeArt.class, "ENUMStreckeArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(streckengeschwindigkeit_TypeEDataType, BigInteger.class, "Streckengeschwindigkeit_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(zusatzinformation_TypeEDataType, String.class, "Zusatzinformation_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
@@ -1762,7 +1801,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (block_AnlageEClass,
@@ -1894,13 +1933,19 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		  (getBlock_Strecke_IDKnotenbahnhof(),
 		   source,
 		   new String[] {
-			   "documentation", "Verweis auf die \u00d6rtlichkeit des n\u00e4chsten Knotenbahnhofs."
+			   "documentation", "Verweis auf die \u00d6rtlichkeit des n\u00e4chsten Knotenbahnhofs oder am Streckenende zur besseren Orientierung. Das Attribut ist nicht zu bef\u00fcllen, wenn ID_Betriebsstelle_Nachbar bereits auf einen Knotenbahnhof oder die \u00d6rtlichkeit am Streckenende verweist."
 		   });
 		addAnnotation
 		  (getBlock_Strecke_IDStrecke(),
 		   source,
 		   new String[] {
 			   "documentation", "Zuordnung auf die Strecke. "
+		   });
+		addAnnotation
+		  (getBlock_Strecke_IDStreckeBremsweg(),
+		   source,
+		   new String[] {
+			   "documentation", "Verweis auf das Bereichsobjekt Strecke_Bremsweg zur Angabe des Bremswegs der Strecke. Es besteht \u00fcbergangsweise noch die M\u00f6glichkeit, das Attribut Bremsweg zu bef\u00fcllen."
 		   });
 		addAnnotation
 		  (getBlock_Strecke_Allg_AttributeGroup_Betriebsfuehrung(),
@@ -1912,13 +1957,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		  (getBlock_Strecke_Allg_AttributeGroup_Bremsweg(),
 		   source,
 		   new String[] {
-			   "documentation", "Bremsweg als Grundlage f\u00fcr die Dimesionierung der zugeh\u00f6rigen Strecke. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen."
-		   });
-		addAnnotation
-		  (getBlock_Strecke_Allg_AttributeGroup_Entwurfsgeschwindigkeit(),
-		   source,
-		   new String[] {
-			   "documentation", "Entwurfsgeschwindigkeit f\u00fcr die Dimensionierung der zugeh\u00f6rigen Strecke."
+			   "documentation", "Bremsweg als Grundlage f\u00fcr die Dimesionierung der zugeh\u00f6rigen Strecke. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. Das Attribut wird zuk\u00fcnftig durch einen Verweis auf das Objekt Strecke_Bremsweg ersetzt. Zur Unterst\u00fctzung der Migration wird das Attribut jedoch zun\u00e4chst optional beibehalten."
 		   });
 		addAnnotation
 		  (getBlock_Strecke_Allg_AttributeGroup_StreckeArt(),
@@ -1927,16 +1966,22 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 			   "documentation", "Rechtliche Klassifizierung der Strecke (Haupt-/Nebenbahn). DB-Regelwerk Angabe auf dem LP"
 		   });
 		addAnnotation
-		  (getBlock_Strecke_Allg_AttributeGroup_TraktionArt(),
+		  (getBlock_Strecke_Allg_AttributeGroup_Streckengeschwindigkeit(),
 		   source,
 		   new String[] {
-			   "documentation", "Art der Fahrstromversorgung (Stromart, Spannung, besondere Zuf\u00fchrung). DB-Regelwerk Angabe auf dem LP"
+			   "documentation", "VzG-Geschwindigkeit der zugeh\u00f6rigen Strecke."
+		   });
+		addAnnotation
+		  (getBlock_Strecke_Allg_AttributeGroup_TraktionArtElektrisch(),
+		   source,
+		   new String[] {
+			   "documentation", "Art der Fahrstromversorgung (Stromart, Spannung, besondere Zuf\u00fchrung). Die Angabe entf\u00e4llt bei nicht elektrifizierten Strecken. Auf die Angabe verschiedener nicht-elektrischer Traktionsarten (Diesel, Batterie, Wasserstoff etc.) wird verzichtet. DB-Regelwerk Angabe auf dem LP"
 		   });
 		addAnnotation
 		  (getBlock_Strecke_Allg_AttributeGroup_ZugbeeinflussungArt(),
 		   source,
 		   new String[] {
-			   "documentation", "Vorhandenes bzw. vorgesehenes Zugbeeinflussungssystem. DB-Regelwerk Angabe auf dem LP"
+			   "documentation", "Vorhandenes bzw. vorgesehenes Zugbeeinflussungssystem. Bei Mehrfachausr\u00fcstung ist das Attribut mehrfach einzubinden. DB-Regelwerk Angabe auf dem LP"
 		   });
 		addAnnotation
 		  (getBlock_Strecke_Allg_AttributeGroup_Zusatzinformation(),
@@ -2221,6 +2266,13 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 			   "name", "ID_Strecke"
 		   });
 		addAnnotation
+		  (getBlock_Strecke_IDStreckeBremsweg(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_Strecke_Bremsweg"
+		   });
+		addAnnotation
 		  (block_Strecke_Allg_AttributeGroupEClass,
 		   source,
 		   new String[] {
@@ -2242,13 +2294,6 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 			   "name", "Bremsweg"
 		   });
 		addAnnotation
-		  (getBlock_Strecke_Allg_AttributeGroup_Entwurfsgeschwindigkeit(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Entwurfsgeschwindigkeit"
-		   });
-		addAnnotation
 		  (getBlock_Strecke_Allg_AttributeGroup_StreckeArt(),
 		   source,
 		   new String[] {
@@ -2256,11 +2301,18 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 			   "name", "Strecke_Art"
 		   });
 		addAnnotation
-		  (getBlock_Strecke_Allg_AttributeGroup_TraktionArt(),
+		  (getBlock_Strecke_Allg_AttributeGroup_Streckengeschwindigkeit(),
 		   source,
 		   new String[] {
 			   "kind", "element",
-			   "name", "Traktion_Art"
+			   "name", "Streckengeschwindigkeit"
+		   });
+		addAnnotation
+		  (getBlock_Strecke_Allg_AttributeGroup_TraktionArtElektrisch(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Traktion_Art_Elektrisch"
 		   });
 		addAnnotation
 		  (getBlock_Strecke_Allg_AttributeGroup_ZugbeeinflussungArt(),
@@ -2285,27 +2337,6 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		   });
 		addAnnotation
 		  (getBremsweg_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
-		  (entwurfsgeschwindigkeit_TypeEDataType,
-		   source,
-		   new String[] {
-			   "name", "TEntwurfsgeschwindigkeit",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TGeschwindigkeit"
-		   });
-		addAnnotation
-		  (entwurfsgeschwindigkeit_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCEntwurfsgeschwindigkeit",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getEntwurfsgeschwindigkeit_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -2462,14 +2493,35 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 			   "name", "Wert"
 		   });
 		addAnnotation
-		  (traktion_Art_TypeClassEClass,
+		  (streckengeschwindigkeit_TypeEDataType,
 		   source,
 		   new String[] {
-			   "name", "TCTraktion_Art",
+			   "name", "TStreckengeschwindigkeit",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TGeschwindigkeit"
+		   });
+		addAnnotation
+		  (streckengeschwindigkeit_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCStreckengeschwindigkeit",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (getTraktion_Art_TypeClass_Wert(),
+		  (getStreckengeschwindigkeit_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (traktion_Art_Elektrisch_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCTraktion_Art_Elektrisch",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getTraktion_Art_Elektrisch_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -2539,13 +2591,13 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		  (block_AnlageEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (block_ElementEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getBlock_Element_Allg_AttributeGroup_BlockBauform(),
@@ -2599,7 +2651,7 @@ public class BlockPackageImpl extends EPackageImpl implements BlockPackage {
 		  (block_StreckeEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getBlock_Strecke_Allg_AttributeGroup_Betriebsfuehrung(),

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -33,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup} object.
@@ -133,10 +134,11 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_AbstandGrenzeBereichC());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BaselineSRS());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BaselineSystemVersion());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BgrenzeNachL2BedEinstieg());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_EinstiegOhneRueckwSig());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_Prioritaet());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_ZUBBereichsgrenzeNachL2VonESG());
 		}
 		return childrenFeatures;
 	}
@@ -190,10 +192,11 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(ZUB_Bereichsgrenze_Nach_L2_AttributeGroup.class)) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ABSTAND_GRENZE_BEREICH_C:
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS:
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BGRENZE_NACH_L2_BED_EINSTIEG:
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__EINSTIEG_OHNE_RUECKW_SIG:
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__PRIORITAET:
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -220,8 +223,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BaselineSRS(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createBaseline_SRS_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_BaselineSystemVersion(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createBaseline_System_Version_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -237,6 +240,11 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupItemProvider
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_Prioritaet(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createPrioritaet_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_Bereichsgrenze_Nach_L2_AttributeGroup_ZUBBereichsgrenzeNachL2VonESG(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup()));
 	}
 
 	/**

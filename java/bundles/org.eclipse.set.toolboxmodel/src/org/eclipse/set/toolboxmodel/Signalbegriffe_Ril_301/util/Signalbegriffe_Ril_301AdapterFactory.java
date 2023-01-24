@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.util;
 
@@ -80,6 +87,10 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBSWdh(BSWdh object) {
 				return createBSWdhAdapter();
+			}
+			@Override
+			public Adapter caseBSZBSBer(BSZBSBer object) {
+				return createBSZBSBerAdapter();
 			}
 			@Override
 			public Adapter caseBSZusatz(BSZusatz object) {
@@ -318,6 +329,10 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 				return createLf12Adapter();
 			}
 			@Override
+			public Adapter caseLf1Wdh(Lf1Wdh object) {
+				return createLf1WdhAdapter();
+			}
+			@Override
 			public Adapter caseLf2(Lf2 object) {
 				return createLf2Adapter();
 			}
@@ -348,10 +363,6 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseLf7(Lf7 object) {
 				return createLf7Adapter();
-			}
-			@Override
-			public Adapter caseLfPf(LfPf object) {
-				return createLfPfAdapter();
 			}
 			@Override
 			public Adapter caseLfPfL(LfPfL object) {
@@ -470,10 +481,6 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 				return createNe7bAdapter();
 			}
 			@Override
-			public Adapter caseNISESHM(NISESHM object) {
-				return createNISESHMAdapter();
-			}
-			@Override
 			public Adapter caseOzAutoET(OzAutoET object) {
 				return createOzAutoETAdapter();
 			}
@@ -498,8 +505,16 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 				return createOzFakAdapter();
 			}
 			@Override
+			public Adapter caseOzGSMR(OzGSMR object) {
+				return createOzGSMRAdapter();
+			}
+			@Override
 			public Adapter caseOzHET(OzHET object) {
 				return createOzHETAdapter();
+			}
+			@Override
+			public Adapter caseOzHM(OzHM object) {
+				return createOzHMAdapter();
 			}
 			@Override
 			public Adapter caseOzICE(OzICE object) {
@@ -852,6 +867,20 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBSWdhAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.BSZBSBer <em>BSZBS Ber</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.BSZBSBer
+	 * @generated
+	 */
+	public Adapter createBSZBSBerAdapter() {
 		return null;
 	}
 
@@ -1682,6 +1711,20 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Lf1Wdh <em>Lf1 Wdh</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Lf1Wdh
+	 * @generated
+	 */
+	public Adapter createLf1WdhAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Lf2 <em>Lf2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1790,20 +1833,6 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLf7Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.LfPf <em>Lf Pf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.LfPf
-	 * @generated
-	 */
-	public Adapter createLfPfAdapter() {
 		return null;
 	}
 
@@ -2214,20 +2243,6 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.NISESHM <em>NISESHM</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.NISESHM
-	 * @generated
-	 */
-	public Adapter createNISESHMAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzAutoET <em>Oz Auto ET</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2312,6 +2327,20 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzGSMR <em>Oz GSMR</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzGSMR
+	 * @generated
+	 */
+	public Adapter createOzGSMRAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzHET <em>Oz HET</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2322,6 +2351,20 @@ public class Signalbegriffe_Ril_301AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOzHETAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzHM <em>Oz HM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzHM
+	 * @generated
+	 */
+	public Adapter createOzHMAdapter() {
 		return null;
 	}
 

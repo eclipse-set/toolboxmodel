@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungFactory;
@@ -59,34 +60,12 @@ public class ZL_Fstr_AnstossItemProvider extends Basis_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIDEinschaltpunktPropertyDescriptor(object);
 			addIDVorsignalPropertyDescriptor(object);
 			addIDZLFstrPropertyDescriptor(object);
+			addIDEinschaltpunktPropertyDescriptor(object);
 			addIDZNAnzeigefeldAnstossPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Einschaltpunkt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDEinschaltpunktPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ZL_Fstr_Anstoss_iDEinschaltpunkt_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ZL_Fstr_Anstoss_iDEinschaltpunkt_feature", "_UI_ZL_Fstr_Anstoss_type"),
-				 ZuglenkungPackage.Literals.ZL_FSTR_ANSTOSS__ID_EINSCHALTPUNKT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -125,6 +104,28 @@ public class ZL_Fstr_AnstossItemProvider extends Basis_ObjektItemProvider {
 				 getString("_UI_ZL_Fstr_Anstoss_iDZLFstr_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ZL_Fstr_Anstoss_iDZLFstr_feature", "_UI_ZL_Fstr_Anstoss_type"),
 				 ZuglenkungPackage.Literals.ZL_FSTR_ANSTOSS__IDZL_FSTR,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the ID Einschaltpunkt feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDEinschaltpunktPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ZL_Fstr_Anstoss_iDEinschaltpunkt_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ZL_Fstr_Anstoss_iDEinschaltpunkt_feature", "_UI_ZL_Fstr_Anstoss_type"),
+				 ZuglenkungPackage.Literals.ZL_FSTR_ANSTOSS__ID_EINSCHALTPUNKT,
 				 true,
 				 false,
 				 true,

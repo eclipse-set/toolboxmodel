@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz;
 
@@ -27,7 +34,7 @@ public interface Fla_Schutz_Weitergabe_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung im linken Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 "Weitergabe über Weiche, Kreuzung" und 7 "wie Fahrt über deren Strang" mit Ausfüllung "L" (Links)
+	 * Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung wie bei Fahrt über den linken Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 "Weitergabe über Weiche, Kreuzung" und 7 "wie Fahrt über deren Strang" mit Ausfüllung "L" (Links)
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Fla Weitergabe L</em>' reference.
 	 * @see #isSetIDFlaWeitergabeL()
@@ -80,7 +87,7 @@ public interface Fla_Schutz_Weitergabe_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung im rechten Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 "Weitergabe über Weiche, Kreuzung" und 7 "wie Fahrt über deren Strang" mit Ausfüllung "R" (Rechts)
+	 * Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung wie bei Fahrt über den rechten Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 "Weitergabe über Weiche, Kreuzung" und 7 "wie Fahrt über deren Strang" mit Ausfüllung "R" (Rechts)
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Fla Weitergabe R</em>' reference.
 	 * @see #isSetIDFlaWeitergabeR()

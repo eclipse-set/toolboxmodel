@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup} object.
@@ -85,7 +86,7 @@ public class RBC_Allg_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_Allg_AttributeGroup_RBCSRSUnterversion());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_Allg_AttributeGroup_RBCETCSSystemVersion());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_Allg_AttributeGroup_RBCSRSVersion());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_Allg_AttributeGroup_Rufnummer());
 		}
@@ -140,7 +141,7 @@ public class RBC_Allg_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RBC_Allg_AttributeGroup.class)) {
-			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_UNTERVERSION:
+			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCETCS_SYSTEM_VERSION:
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RBCSRS_VERSION:
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP__RUFNUMMER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -164,8 +165,8 @@ public class RBC_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_Allg_AttributeGroup_RBCSRSUnterversion(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createRBC_SRS_Unterversion_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_Allg_AttributeGroup_RBCETCSSystemVersion(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createRBC_ETCS_System_Version_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

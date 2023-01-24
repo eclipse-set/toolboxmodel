@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -68,9 +75,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case Balisentechnik_ETCSPackage.ABSTAND_BES_LANGER_EINFAHRWEG_TYPE_CLASS: return createAbstand_Bes_Langer_Einfahrweg_TypeClass();
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EH_EM_FOLGESIGNAL_TYPE_CLASS: return createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass();
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EP_TPI_TYPE_CLASS: return createAbstand_Datenpunkt_EP_TPI_TypeClass();
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_TPI_FOLGESIGNAL_TYPE_CLASS: return createAbstand_Datenpunkt_TPI_Folgesignal_TypeClass();
+			case Balisentechnik_ETCSPackage.ABSTAND_EINMESSPUNKT_TYPE_CLASS: return createAbstand_Einmesspunkt_TypeClass();
 			case Balisentechnik_ETCSPackage.ABSTAND_GRENZE_BEREICH_CTYPE_CLASS: return createAbstand_Grenze_Bereich_C_TypeClass();
+			case Balisentechnik_ETCSPackage.ABSTAND_REDUZIERT_TYPE_CLASS: return createAbstand_Reduziert_TypeClass();
 			case Balisentechnik_ETCSPackage.ANLAGENTEIL_SONSTIGE_TYPE_CLASS: return createAnlagenteil_Sonstige_TypeClass();
 			case Balisentechnik_ETCSPackage.ANORDNUNG_IM_DP_TYPE_CLASS: return createAnordnung_Im_DP_TypeClass();
+			case Balisentechnik_ETCSPackage.ANWENDUNG_ESG_TYPE_CLASS: return createAnwendung_ESG_TypeClass();
+			case Balisentechnik_ETCSPackage.ANWENDUNG_GNT_TYPE_CLASS: return createAnwendung_GNT_TypeClass();
 			case Balisentechnik_ETCSPackage.ANWENDUNG_SONST_TYPE_CLASS: return createAnwendung_Sonst_TypeClass();
 			case Balisentechnik_ETCSPackage.ANWENDUNGSSYSTEM_TYPE_CLASS: return createAnwendungssystem_TypeClass();
 			case Balisentechnik_ETCSPackage.ANZAHL_VOLL_LEU_KALKULIERT_TYPE_CLASS: return createAnzahl_Voll_LEU_Kalkuliert_TypeClass();
@@ -81,7 +96,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.AUSSTIEG_ETCS_SPERRE_TYPE_CLASS: return createAusstieg_ETCS_Sperre_TypeClass();
 			case Balisentechnik_ETCSPackage.BALISE: return createBalise();
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP: return createBalise_Allg_AttributeGroup();
-			case Balisentechnik_ETCSPackage.BASELINE_SRS_TYPE_CLASS: return createBaseline_SRS_TypeClass();
+			case Balisentechnik_ETCSPackage.BALISE_GERAETESTAND_TYPE_CLASS: return createBalise_Geraetestand_TypeClass();
+			case Balisentechnik_ETCSPackage.BALISENHALTER_TYPE_CLASS: return createBalisenhalter_TypeClass();
+			case Balisentechnik_ETCSPackage.BASELINE_SYSTEM_VERSION_TYPE_CLASS: return createBaseline_System_Version_TypeClass();
 			case Balisentechnik_ETCSPackage.BEDINGUNG_BESONDERE_ATTRIBUTE_GROUP: return createBedingung_Besondere_AttributeGroup();
 			case Balisentechnik_ETCSPackage.BEDINGUNG_PZB_ATTRIBUTE_GROUP: return createBedingung_PZB_AttributeGroup();
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP: return createBedingung_Signal_AttributeGroup();
@@ -101,10 +118,10 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.BGRENZE_NACH_LZB_BED_EINSTIEG_ATTRIBUTE_GROUP: return createBgrenze_Nach_LZB_Bed_Einstieg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.BGRENZE_NACH_OHNE_BED_EINSTIEG_ATTRIBUTE_GROUP: return createBgrenze_Nach_Ohne_Bed_Einstieg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.BGRENZE_NACH_PZB_BED_EINSTIEG_ATTRIBUTE_GROUP: return createBgrenze_Nach_PZB_Bed_Einstieg_AttributeGroup();
+			case Balisentechnik_ETCSPackage.BGRENZE_NACH_ZBS_BED_EINSTIEG_ATTRIBUTE_GROUP: return createBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.BGRENZE_RBC_WECHSEL_BTS_KETTE_ATTRIBUTE_GROUP: return createBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup();
-			case Balisentechnik_ETCSPackage.BINAERDATEI: return createBinaerdatei();
-			case Balisentechnik_ETCSPackage.BINAERDATEI_ALLG_ATTRIBUTE_GROUP: return createBinaerdatei_Allg_AttributeGroup();
-			case Balisentechnik_ETCSPackage.BREMSWEG_TYPE_CLASS: return createBremsweg_TypeClass();
+			case Balisentechnik_ETCSPackage.BINAERDATEN: return createBinaerdaten();
+			case Balisentechnik_ETCSPackage.BINAERDATEN_DATEI_ATTRIBUTE_GROUP: return createBinaerdaten_Datei_AttributeGroup();
 			case Balisentechnik_ETCSPackage.DLEVELTR_TYPE_CLASS: return createD_LEVELTR_TypeClass();
 			case Balisentechnik_ETCSPackage.DATEINAME_TYPE_CLASS: return createDateiname_TypeClass();
 			case Balisentechnik_ETCSPackage.DATEITYP_BINAERDATEI_TYPE_CLASS: return createDateityp_Binaerdatei_TypeClass();
@@ -112,13 +129,15 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.DATENPUNKT: return createDatenpunkt();
 			case Balisentechnik_ETCSPackage.DATENPUNKT_ALLG_ATTRIBUTE_GROUP: return createDatenpunkt_Allg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.DATENPUNKT_BESCHREIBUNG_TYPE_CLASS: return createDatenpunkt_Beschreibung_TypeClass();
+			case Balisentechnik_ETCSPackage.DATENPUNKT_EINMESSPUNKT_ATTRIBUTE_GROUP: return createDatenpunkt_Einmesspunkt_AttributeGroup();
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LAENGE_TYPE_CLASS: return createDatenpunkt_Laenge_TypeClass();
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK: return createDatenpunkt_Link();
 			case Balisentechnik_ETCSPackage.DELTA_VGES_TYPE_CLASS: return createDelta_VGES_TypeClass();
 			case Balisentechnik_ETCSPackage.DELTA_VLES_TYPE_CLASS: return createDelta_VLES_TypeClass();
 			case Balisentechnik_ETCSPackage.DELTA_VZES_TYPE_CLASS: return createDelta_VZES_TypeClass();
-			case Balisentechnik_ETCSPackage.DP_BEZUG_BETRIEBLICH_ART_TYPE_CLASS: return createDP_Bezug_Betrieblich_Art_TypeClass();
-			case Balisentechnik_ETCSPackage.DP_BEZUG_BETRIEBLICH_ATTRIBUTE_GROUP: return createDP_Bezug_Betrieblich_AttributeGroup();
+			case Balisentechnik_ETCSPackage.DP_ATO_TYPE_CLASS: return createDP_ATO_TypeClass();
+			case Balisentechnik_ETCSPackage.DP_BEZUG_FUNKTIONAL_ART_TYPE_CLASS: return createDP_Bezug_Funktional_Art_TypeClass();
+			case Balisentechnik_ETCSPackage.DP_BEZUG_FUNKTIONAL_ATTRIBUTE_GROUP: return createDP_Bezug_Funktional_AttributeGroup();
 			case Balisentechnik_ETCSPackage.DP_ETCS_ADRESSE_ATTRIBUTE_GROUP: return createDP_ETCS_Adresse_AttributeGroup();
 			case Balisentechnik_ETCSPackage.DP_LINK_ART_TYPE_CLASS: return createDP_Link_Art_TypeClass();
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP: return createDP_Telegramm_AttributeGroup();
@@ -138,6 +157,7 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.DP_TYP_TRANS_TYPE_CLASS: return createDP_Typ_Trans_TypeClass();
 			case Balisentechnik_ETCSPackage.DP_TYP_VLA_TYPE_CLASS: return createDP_Typ_V_La_TypeClass();
 			case Balisentechnik_ETCSPackage.DP_TYP_ZBS_TYPE_CLASS: return createDP_Typ_ZBS_TypeClass();
+			case Balisentechnik_ETCSPackage.DP_VERLINKT_TYPE_CLASS: return createDP_Verlinkt_TypeClass();
 			case Balisentechnik_ETCSPackage.DUNKELSCHALTANSTOSS_TYPE_CLASS: return createDunkelschaltanstoss_TypeClass();
 			case Balisentechnik_ETCSPackage.DWEG_INTERVALL_200_TYPE_CLASS: return createDWeg_Intervall_200_TypeClass();
 			case Balisentechnik_ETCSPackage.DWEG_INTERVALL_50_200_TYPE_CLASS: return createDWeg_Intervall_50_200_TypeClass();
@@ -153,25 +173,23 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.ESG_INDIVIDUELLE_MERKMALE_ATTRIBUTE_GROUP: return createESG_Individuelle_Merkmale_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ESG_SPEZIFISCHE_MERKMALE_ATTRIBUTE_GROUP: return createESG_Spezifische_Merkmale_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP: return createETCS_Adresse_AttributeGroup();
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_KENNUNG_TYPE_CLASS: return createETCS_Adresse_Kennung_TypeClass();
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_BG_TYPE_CLASS: return createETCS_Adresse_NID_BG_TypeClass();
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_CTYPE_CLASS: return createETCS_Adresse_NID_C_TypeClass();
+			case Balisentechnik_ETCSPackage.ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND_TYPE_CLASS: return createETCS_Gefahrpunktabstand_Abweichend_TypeClass();
 			case Balisentechnik_ETCSPackage.ETCS_KANTE: return createETCS_Kante();
 			case Balisentechnik_ETCSPackage.ETCS_KANTE_BEZEICHNUNG_ATTRIBUTE_GROUP: return createETCS_Kante_Bezeichnung_AttributeGroup();
-			case Balisentechnik_ETCSPackage.ETCS_KENNUNG_TYPE_CLASS: return createETCS_Kennung_TypeClass();
 			case Balisentechnik_ETCSPackage.ETCS_KNOTEN: return createETCS_Knoten();
 			case Balisentechnik_ETCSPackage.ETCS_KNOTEN_ART_SONSTIGE_TYPE_CLASS: return createETCS_Knoten_Art_Sonstige_TypeClass();
 			case Balisentechnik_ETCSPackage.ETCS_PAKETNUMMER_TYPE_CLASS: return createETCS_Paketnummer_TypeClass();
 			case Balisentechnik_ETCSPackage.ETCS_PAR_ERLAEUTERUNG_TYPE_CLASS: return createETCS_Par_Erlaeuterung_TypeClass();
 			case Balisentechnik_ETCSPackage.ETCS_PARAMETERNAME_TYPE_CLASS: return createETCS_Parametername_TypeClass();
 			case Balisentechnik_ETCSPackage.ETCS_PARAMETERWERT_TYPE_CLASS: return createETCS_Parameterwert_TypeClass();
+			case Balisentechnik_ETCSPackage.ETCS_RICHTUNGSANZEIGE: return createETCS_Richtungsanzeige();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL: return createETCS_Signal();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL_ALLG_ATTRIBUTE_GROUP: return createETCS_Signal_Allg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL_DWEG_ATTRIBUTE_GROUP: return createETCS_Signal_DWeg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL_TBV_ATTRIBUTE_GROUP: return createETCS_Signal_TBV_AttributeGroup();
+			case Balisentechnik_ETCSPackage.ETCS_SYSTEM_VERSION_TYPE_CLASS: return createETCS_System_Version_TypeClass();
 			case Balisentechnik_ETCSPackage.ETCS_WKR: return createETCS_W_Kr();
 			case Balisentechnik_ETCSPackage.ETCS_WKR_MUKA_ATTRIBUTE_GROUP: return createETCS_W_Kr_MUKA_AttributeGroup();
-			case Balisentechnik_ETCSPackage.ETCS_WORTSGESTELLT_TYPE_CLASS: return createETCS_W_Ortsgestellt_TypeClass();
 			case Balisentechnik_ETCSPackage.EV_MODUL: return createEV_Modul();
 			case Balisentechnik_ETCSPackage.EV_MODUL_ART_TYPE_CLASS: return createEV_Modul_Art_TypeClass();
 			case Balisentechnik_ETCSPackage.EV_MODUL_AUSGANG_ATTRIBUTE_GROUP: return createEV_Modul_Ausgang_AttributeGroup();
@@ -199,12 +217,12 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP: return createFT_ZBS_Merkmale_AttributeGroup();
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_LA_ATTRIBUTE_GROUP: return createFT_ZBS_Merkmale_La_AttributeGroup();
 			case Balisentechnik_ETCSPackage.FT_ZBS_TYP_TYPE_CLASS: return createFT_ZBS_Typ_TypeClass();
-			case Balisentechnik_ETCSPackage.GNT_MERKMALE_ATTRIBUTE_GROUP: return createGNT_Merkmale_AttributeGroup();
+			case Balisentechnik_ETCSPackage.FW_TEIL_NUMMER_TYPE_CLASS: return createFW_Teil_Nummer_TypeClass();
 			case Balisentechnik_ETCSPackage.GRUPPEN_ID_TYPE_CLASS: return createGruppen_ID_TypeClass();
 			case Balisentechnik_ETCSPackage.HARTER_AUSSTIEG_AUS_L2_TYPE_CLASS: return createHarter_Ausstieg_Aus_L2_TypeClass();
 			case Balisentechnik_ETCSPackage.HERSTELLER_TYPE_CLASS: return createHersteller_TypeClass();
 			case Balisentechnik_ETCSPackage.HINWEIS_BALISENBEFESTIGUNG_TYPE_CLASS: return createHinweis_Balisenbefestigung_TypeClass();
-			case Balisentechnik_ETCSPackage.INDIVIDUELL_TYPE_CLASS: return createIndividuell_TypeClass();
+			case Balisentechnik_ETCSPackage.INDIVIDUALISIERUNG_WEITERE_TYPE_CLASS: return createIndividualisierung_Weitere_TypeClass();
 			case Balisentechnik_ETCSPackage.IST_BEFAHREN_TYPE_CLASS: return createIst_Befahren_TypeClass();
 			case Balisentechnik_ETCSPackage.KM_BTS_1TYPE_CLASS: return createKm_BTS_1_TypeClass();
 			case Balisentechnik_ETCSPackage.KM_BTS_2TYPE_CLASS: return createKm_BTS_2_TypeClass();
@@ -214,15 +232,20 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.LACKLEVELTR_TYPE_CLASS: return createL_ACKLEVELTR_TypeClass();
 			case Balisentechnik_ETCSPackage.LAENGE_1TYPE_CLASS: return createLaenge_1_TypeClass();
 			case Balisentechnik_ETCSPackage.LAENGE_AUSFUEHRUNGSBEREICH_TYPE_CLASS: return createLaenge_Ausfuehrungsbereich_TypeClass();
+			case Balisentechnik_ETCSPackage.LAENGE_GESTUFTE_VSIGNALISIERUNG_TYPE_CLASS: return createLaenge_Gestufte_V_Signalisierung_TypeClass();
+			case Balisentechnik_ETCSPackage.LAENGE_SOLL_MIND_150_TYPE_CLASS: return createLaenge_Soll_Mind_150_TypeClass();
+			case Balisentechnik_ETCSPackage.LEISTUNGSBEDARF_TYPE_CLASS: return createLeistungsbedarf_TypeClass();
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE: return createLEU_Anlage();
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE_ALLG_ATTRIBUTE_GROUP: return createLEU_Anlage_Allg_AttributeGroup();
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE_ART_TYPE_CLASS: return createLEU_Anlage_Art_TypeClass();
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP: return createLEU_Anlage_Bezeichnung_AttributeGroup();
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE_MODULEIGENSCHAFTEN_ATTRIBUTE_GROUP: return createLEU_Anlage_Moduleigenschaften_AttributeGroup();
 			case Balisentechnik_ETCSPackage.LEU_AUSGANG_NR_TYPE_CLASS: return createLEU_Ausgang_Nr_TypeClass();
 			case Balisentechnik_ETCSPackage.LEU_MODUL: return createLEU_Modul();
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP: return createLEU_Modul_Allg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ART_TYPE_CLASS: return createLEU_Modul_Art_TypeClass();
 			case Balisentechnik_ETCSPackage.LEU_MODUL_AUSGANG_ATTRIBUTE_GROUP: return createLEU_Modul_Ausgang_AttributeGroup();
 			case Balisentechnik_ETCSPackage.LEU_MODUL_BEZEICHNUNG_ATTRIBUTE_GROUP: return createLEU_Modul_Bezeichnung_AttributeGroup();
+			case Balisentechnik_ETCSPackage.LEU_MODUL_GERAETESTAND_TYPE_CLASS: return createLEU_Modul_Geraetestand_TypeClass();
 			case Balisentechnik_ETCSPackage.LEU_MODUL_TYP_TYPE_CLASS: return createLEU_Modul_Typ_TypeClass();
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN: return createLEU_Schaltkasten();
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_BEZEICHNUNG_ATTRIBUTE_GROUP: return createLEU_Schaltkasten_Bezeichnung_AttributeGroup();
@@ -231,24 +254,33 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_TYP_TYPE_CLASS: return createLEU_Schaltkasten_Typ_TypeClass();
 			case Balisentechnik_ETCSPackage.LEU_STEUERNDE_ATTRIBUTE_GROUP: return createLEU_Steuernde_AttributeGroup();
 			case Balisentechnik_ETCSPackage.LFD_NR_AM_BEZUGSPUNKT_TYPE_CLASS: return createLfd_Nr_Am_Bezugspunkt_TypeClass();
-			case Balisentechnik_ETCSPackage.LFD_NR_IN_TELEGR_SPEC_TYPE_CLASS: return createLfdNr_in_Telegr_Spec_TypeClass();
 			case Balisentechnik_ETCSPackage.LINK_DISTANZ_TYPE_CLASS: return createLink_Distanz_TypeClass();
 			case Balisentechnik_ETCSPackage.LLA_TYPE_CLASS: return createLLA_TypeClass();
 			case Balisentechnik_ETCSPackage.LM_GTYPE_CLASS: return createLM_G_TypeClass();
+			case Balisentechnik_ETCSPackage.LT_BINAERDATEI_HILFE_ATTRIBUTE_GROUP: return createLT_Binaerdatei_Hilfe_AttributeGroup();
+			case Balisentechnik_ETCSPackage.LT_BINAERDATEN_ATTRIBUTE_GROUP: return createLT_Binaerdaten_AttributeGroup();
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM: return createLuft_Telegramm();
 			case Balisentechnik_ETCSPackage.MLEVELTR_TYPE_CLASS: return createM_LEVELTR_TypeClass();
 			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIG_1TYPE_CLASS: return createMassgebende_Neig_1_TypeClass();
 			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIG_SCHUTZSTRECKE_TYPE_CLASS: return createMassgebende_Neig_Schutzstrecke_TypeClass();
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_150_TYPE_CLASS: return createMassgebende_Neigung_Mind_150_TypeClass();
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_150_TYPE_CLASS: return createMassgebende_Neigung_Mind_Sig_150_TypeClass();
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_TYPE_CLASS: return createMassgebende_Neigung_Mind_Sig_TypeClass();
 			case Balisentechnik_ETCSPackage.MASTSCHILD_TYPE_CLASS: return createMastschild_TypeClass();
 			case Balisentechnik_ETCSPackage.MAX_LEISTUNG_TYPE_CLASS: return createMax_Leistung_TypeClass();
 			case Balisentechnik_ETCSPackage.MAX_UNTERBRECHUNGSZEIT_TYPE_CLASS: return createMax_Unterbrechungszeit_TypeClass();
-			case Balisentechnik_ETCSPackage.METALLTEIL_TYPE_CLASS: return createMetallteil_TypeClass();
+			case Balisentechnik_ETCSPackage.METALLTEIL_ATTRIBUTE_GROUP: return createMetallteil_AttributeGroup();
+			case Balisentechnik_ETCSPackage.METALLTEIL_KATEGORIE_TYPE_CLASS: return createMetallteil_Kategorie_TypeClass();
+			case Balisentechnik_ETCSPackage.METALLTEIL_LAENGE_TYPE_CLASS: return createMetallteil_Laenge_TypeClass();
 			case Balisentechnik_ETCSPackage.MODULNUMMER_TYPE_CLASS: return createModulnummer_TypeClass();
+			case Balisentechnik_ETCSPackage.MONTAGEABWEICHUNG_TYPE_CLASS: return createMontageabweichung_TypeClass();
 			case Balisentechnik_ETCSPackage.NEIGUNG_TYPE_CLASS: return createNeigung_TypeClass();
 			case Balisentechnik_ETCSPackage.NENNLEISTUNG_TYPE_CLASS: return createNennleistung_TypeClass();
+			case Balisentechnik_ETCSPackage.NID_BG_TYPE_CLASS: return createNID_BG_TypeClass();
 			case Balisentechnik_ETCSPackage.NID_CTYPE_CLASS: return createNID_C_TypeClass();
 			case Balisentechnik_ETCSPackage.NID_RBC_TYPE_CLASS: return createNID_RBC_TypeClass();
 			case Balisentechnik_ETCSPackage.NID_STM_TYPE_CLASS: return createNID_STM_TypeClass();
+			case Balisentechnik_ETCSPackage.NID_TSR_TYPE_CLASS: return createNID_TSR_TypeClass();
 			case Balisentechnik_ETCSPackage.NUMMER_SCHALTKASTEN_TYPE_CLASS: return createNummer_Schaltkasten_TypeClass();
 			case Balisentechnik_ETCSPackage.OBERSTROMBEGRENZUNG_GUETERZUG_TYPE_CLASS: return createOberstrombegrenzung_Gueterzug_TypeClass();
 			case Balisentechnik_ETCSPackage.OBERSTROMBEGRENZUNG_REISEZUG_TYPE_CLASS: return createOberstrombegrenzung_Reisezug_TypeClass();
@@ -259,9 +291,10 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.PRIORITAET_TYPE_CLASS: return createPrioritaet_TypeClass();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP: return createProg_Datei_Einzel_AttributeGroup();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE: return createProg_Datei_Gruppe();
+			case Balisentechnik_ETCSPackage.PROJEKTIERUNGSFALL_TYPE_CLASS: return createProjektierungsfall_TypeClass();
 			case Balisentechnik_ETCSPackage.RBC: return createRBC();
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP: return createRBC_Allg_AttributeGroup();
-			case Balisentechnik_ETCSPackage.RBC_SRS_UNTERVERSION_TYPE_CLASS: return createRBC_SRS_Unterversion_TypeClass();
+			case Balisentechnik_ETCSPackage.RBC_ETCS_SYSTEM_VERSION_TYPE_CLASS: return createRBC_ETCS_System_Version_TypeClass();
 			case Balisentechnik_ETCSPackage.RBC_SRS_VERSION_TYPE_CLASS: return createRBC_SRS_Version_TypeClass();
 			case Balisentechnik_ETCSPackage.REKURSION_2NR_TYPE_CLASS: return createRekursion_2_Nr_TypeClass();
 			case Balisentechnik_ETCSPackage.REKURSION_NR_TYPE_CLASS: return createRekursion_Nr_TypeClass();
@@ -269,11 +302,12 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.SBE_TYPE_CLASS: return createSBE_TypeClass();
 			case Balisentechnik_ETCSPackage.SCHUTZSTRECKE_ERFORDERLICH_TYPE_CLASS: return createSchutzstrecke_Erforderlich_TypeClass();
 			case Balisentechnik_ETCSPackage.SCHUTZSTRECKE_VORHANDEN_TYPE_CLASS: return createSchutzstrecke_Vorhanden_TypeClass();
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_150_TYPE_CLASS: return createSolllaenge_Mind_Sig_150_TypeClass();
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_TYPE_CLASS: return createSolllaenge_Mind_Sig_TypeClass();
 			case Balisentechnik_ETCSPackage.SONSTIGE_STANDORTANGABE_TYPE_CLASS: return createSonstige_Standortangabe_TypeClass();
 			case Balisentechnik_ETCSPackage.SPANNUNG_ART_TYPE_CLASS: return createSpannung_Art_TypeClass();
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_OBERE_TYPE_CLASS: return createSpannung_Toleranz_Obere_TypeClass();
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_UNTERE_TYPE_CLASS: return createSpannung_Toleranz_Untere_TypeClass();
-			case Balisentechnik_ETCSPackage.SRS_UNTERVERSION_TYPE_CLASS: return createSRS_Unterversion_TypeClass();
 			case Balisentechnik_ETCSPackage.SRS_VERSION_TYPE_CLASS: return createSRS_Version_TypeClass();
 			case Balisentechnik_ETCSPackage.STANDORTANGABE_BALISENSCHILD_TYPE_CLASS: return createStandortangabe_Balisenschild_TypeClass();
 			case Balisentechnik_ETCSPackage.START_WELEMENT_ATTRIBUTE_GROUP: return createStart_W_Element_AttributeGroup();
@@ -283,24 +317,36 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.TBV_MELDEPUNKT_TYPE_CLASS: return createTBV_Meldepunkt_TypeClass();
 			case Balisentechnik_ETCSPackage.TBV_TUNNELBEREICH_LAENGE_TYPE_CLASS: return createTBV_Tunnelbereich_Laenge_TypeClass();
 			case Balisentechnik_ETCSPackage.TBV_TUNNELSIGNAL_TYPE_CLASS: return createTBV_Tunnelsignal_TypeClass();
+			case Balisentechnik_ETCSPackage.TELEGRAMM_INDEX_TYPE_CLASS: return createTelegramm_Index_TypeClass();
 			case Balisentechnik_ETCSPackage.TELEGRAMMNUMMER_TYPE_CLASS: return createTelegrammnummer_TypeClass();
 			case Balisentechnik_ETCSPackage.TEXT_BEDINGUNG_TYPE_CLASS: return createText_Bedingung_TypeClass();
+			case Balisentechnik_ETCSPackage.TEXTMELDUNG_TYPE_CLASS: return createTextmeldung_TypeClass();
 			case Balisentechnik_ETCSPackage.UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE_CLASS: return createUeberbrueckung_EV_Unterbrechung_TypeClass();
+			case Balisentechnik_ETCSPackage.UEBERWACHUNG_LAENGE_TYPE_CLASS: return createUeberwachung_Laenge_TypeClass();
 			case Balisentechnik_ETCSPackage.UMFAHRSTRASSE_TYPE_CLASS: return createUmfahrstrasse_TypeClass();
 			case Balisentechnik_ETCSPackage.UNTERGRUPPEN_ID_TYPE_CLASS: return createUntergruppen_ID_TypeClass();
 			case Balisentechnik_ETCSPackage.VBEFEHL_RTYPE_CLASS: return createV_Befehl_R_TypeClass();
 			case Balisentechnik_ETCSPackage.VBEFEHL_ZTYPE_CLASS: return createV_Befehl_Z_TypeClass();
 			case Balisentechnik_ETCSPackage.VFREI_TYPE_CLASS: return createV_Frei_TypeClass();
+			case Balisentechnik_ETCSPackage.VSTART_TYPE_CLASS: return createV_Start_TypeClass();
+			case Balisentechnik_ETCSPackage.VZIEL_TYPE_CLASS: return createV_Ziel_TypeClass();
 			case Balisentechnik_ETCSPackage.VZUL_STRECKE_TYPE_CLASS: return createV_Zul_Strecke_TypeClass();
+			case Balisentechnik_ETCSPackage.VBC_KENNUNG_TYPE_CLASS: return createVBC_Kennung_TypeClass();
+			case Balisentechnik_ETCSPackage.VBC_NID_CTYPE_CLASS: return createVBC_NID_C_TypeClass();
+			case Balisentechnik_ETCSPackage.VBC_SETZEN_TYPE_CLASS: return createVBC_Setzen_TypeClass();
+			case Balisentechnik_ETCSPackage.VBC_TIMER_TYPE_CLASS: return createVBC_Timer_TypeClass();
 			case Balisentechnik_ETCSPackage.VERBOT_ANHALTEN_TYPE_CLASS: return createVerbot_Anhalten_TypeClass();
 			case Balisentechnik_ETCSPackage.VERBOT_REGENERATIVE_BREMSE_TYPE_CLASS: return createVerbot_Regenerative_Bremse_TypeClass();
 			case Balisentechnik_ETCSPackage.VERBOT_WB_ART_TYPE_CLASS: return createVerbot_WB_Art_TypeClass();
+			case Balisentechnik_ETCSPackage.VERKUERZTER_ABSTAND_TYPE_CLASS: return createVerkuerzter_Abstand_TypeClass();
 			case Balisentechnik_ETCSPackage.VERWENDUNG_ALS_RUECKFALL_TYPE_CLASS: return createVerwendung_Als_Rueckfall_TypeClass();
+			case Balisentechnik_ETCSPackage.VERWENDUNG_HILFE_TYPE_CLASS: return createVerwendung_Hilfe_TypeClass();
 			case Balisentechnik_ETCSPackage.VERWENDUNG_TYPE_CLASS: return createVerwendung_TypeClass();
 			case Balisentechnik_ETCSPackage.VGR_1TYPE_CLASS: return createVGR_1_TypeClass();
 			case Balisentechnik_ETCSPackage.VGR_2TYPE_CLASS: return createVGR_2_TypeClass();
 			case Balisentechnik_ETCSPackage.VGR_TYPE_CLASS: return createVGR_TypeClass();
 			case Balisentechnik_ETCSPackage.VLA_TYPE_CLASS: return createVLA_TypeClass();
+			case Balisentechnik_ETCSPackage.VORSIGNALABSTAND_TYPE_CLASS: return createVorsignalabstand_TypeClass();
 			case Balisentechnik_ETCSPackage.VZ_TYPE_CLASS: return createVZ_TypeClass();
 			case Balisentechnik_ETCSPackage.WANSCHLUSS_TYPE_CLASS: return createW_Anschluss_TypeClass();
 			case Balisentechnik_ETCSPackage.WLAGE_TYPE_CLASS: return createW_Lage_TypeClass();
@@ -312,6 +358,10 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.ZBS_LA_BEREICH_NEIGUNG_TYPE_CLASS: return createZBS_La_Bereich_Neigung_TypeClass();
 			case Balisentechnik_ETCSPackage.ZBS_MERKMALE_ATTRIBUTE_GROUP: return createZBS_Merkmale_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZBS_REAKTION_TYPE_CLASS: return createZBS_Reaktion_TypeClass();
+			case Balisentechnik_ETCSPackage.ZBS_SCHUTZSTRECKE: return createZBS_Schutzstrecke();
+			case Balisentechnik_ETCSPackage.ZBS_SCHUTZSTRECKE_ALLG_ATTRIBUTE_GROUP: return createZBS_Schutzstrecke_Allg_AttributeGroup();
+			case Balisentechnik_ETCSPackage.ZBS_SIGNAL: return createZBS_Signal();
+			case Balisentechnik_ETCSPackage.ZBS_SIGNAL_SIGNALABSTAND_ATTRIBUTE_GROUP: return createZBS_Signal_Signalabstand_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZIEL_DP_AUSRICHTUNG_TYPE_CLASS: return createZiel_DP_Ausrichtung_TypeClass();
 			case Balisentechnik_ETCSPackage.ZIEL_IST_FAHRWEGENDE_TYPE_CLASS: return createZiel_Ist_Fahrwegende_TypeClass();
 			case Balisentechnik_ETCSPackage.ZIEL_WELEMENT_ATTRIBUTE_GROUP: return createZiel_W_Element_AttributeGroup();
@@ -320,12 +370,14 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_ALLG_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Allg_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_BEZEICHNUNG_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Bezeichnung_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_ESG_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_ESG_AttributeGroup();
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_GNT_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_GNT_AttributeGroup();
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_GNT_TYPE_CLASS: return createZUB_Bereichsgrenze_Nach_GNT_TypeClass();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_L2_AttributeGroup();
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_LZB_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_LZB_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_OHNE_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_Ohne_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_PZB_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_PZB_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_SONSTIGE_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup();
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_ZBS_ATTRIBUTE_GROUP: return createZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_BGRENZE_RBC_WECHSEL_ATTRIBUTE_GROUP: return createZUB_Bgrenze_RBC_Wechsel_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP: return createZUB_SE_Ausruestung_AttributeGroup();
 			case Balisentechnik_ETCSPackage.ZUB_STRECKENEIGENSCHAFT: return createZUB_Streckeneigenschaft();
@@ -347,8 +399,12 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createENUMArtBedingungFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUM_AUSSTIEG_ETCS_SPERRE:
 				return createENUMAusstiegETCSSperreFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_BETRIEBLICH_ART:
-				return createENUMDPBezugBetrieblichArtFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUM_BALISENHALTER:
+				return createENUMBalisenhalterFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUMDPATO:
+				return createENUMDPATOFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_FUNKTIONAL_ART:
+				return createENUMDPBezugFunktionalArtFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_LINK_ART:
 				return createENUMDPLinkArtFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_TYP_ART:
@@ -375,8 +431,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createENUMFTHinweisFunktionFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMFTZBS_TYP:
 				return createENUMFTZBSTypFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ENUMLEU_MODUL_ART:
-				return createENUMLEUModulArtFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUMLEU_ART:
+				return createENUMLEUArtFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMMLEVELTR:
 				return createENUMMLEVELTRFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMNIDSTM:
@@ -399,6 +455,16 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createENUMWAnschlussFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMZBS_REAKTION:
 				return createENUMZBSReaktionFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_BES_LANGER_EINFAHRWEG_TYPE:
+				return createAbstand_Bes_Langer_Einfahrweg_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EH_EM_FOLGESIGNAL_TYPE:
+				return createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EP_TPI_TYPE:
+				return createAbstand_Datenpunkt_EP_TPI_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_TPI_FOLGESIGNAL_TYPE:
+				return createAbstand_Datenpunkt_TPI_Folgesignal_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_EINMESSPUNKT_TYPE:
+				return createAbstand_Einmesspunkt_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ABSTAND_GRENZE_BEREICH_CTYPE:
 				return createAbstand_Grenze_Bereich_C_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ANLAGENTEIL_SONSTIGE_TYPE:
@@ -413,8 +479,10 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createAnzeigetext_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.AUSGANG_NR_TYPE:
 				return createAusgang_Nr_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.BASELINE_SRS_TYPE:
-				return createBaseline_SRS_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.BALISE_GERAETESTAND_TYPE:
+				return createBalise_Geraetestand_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.BASELINE_SYSTEM_VERSION_TYPE:
+				return createBaseline_System_Version_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.BEDINGUNG_WEICHENLAGE_TYPE:
 				return createBedingung_Weichenlage_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.BEZ_STRECKE_BTS_1TYPE:
@@ -463,8 +531,12 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createENUMArtBedingungObjectFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUM_AUSSTIEG_ETCS_SPERRE_OBJECT:
 				return createENUMAusstiegETCSSperreObjectFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_BETRIEBLICH_ART_OBJECT:
-				return createENUMDPBezugBetrieblichArtObjectFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUM_BALISENHALTER_OBJECT:
+				return createENUMBalisenhalterObjectFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUMDPATO_OBJECT:
+				return createENUMDPATOObjectFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_FUNKTIONAL_ART_OBJECT:
+				return createENUMDPBezugFunktionalArtObjectFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_LINK_ART_OBJECT:
 				return createENUMDPLinkArtObjectFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_TYP_ART_OBJECT:
@@ -491,8 +563,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createENUMFTHinweisFunktionObjectFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMFTZBS_TYP_OBJECT:
 				return createENUMFTZBSTypObjectFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ENUMLEU_MODUL_ART_OBJECT:
-				return createENUMLEUModulArtObjectFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ENUMLEU_ART_OBJECT:
+				return createENUMLEUArtObjectFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMMLEVELTR_OBJECT:
 				return createENUMMLEVELTRObjectFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ENUMNIDSTM_OBJECT:
@@ -521,14 +593,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createESG_Ind_Parameter_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ESG_IND_PARAMETERWERT_TYPE:
 				return createESG_Ind_Parameterwert_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_KENNUNG_TYPE:
-				return createETCS_Adresse_Kennung_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_BG_TYPE:
-				return createETCS_Adresse_NID_BG_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_CTYPE:
-				return createETCS_Adresse_NID_C_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.ETCS_KENNUNG_TYPE:
-				return createETCS_Kennung_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND_TYPE:
+				return createETCS_Gefahrpunktabstand_Abweichend_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ETCS_PAKETNUMMER_TYPE:
 				return createETCS_Paketnummer_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ETCS_PAR_ERLAEUTERUNG_TYPE:
@@ -537,6 +603,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createETCS_Parametername_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.ETCS_PARAMETERWERT_TYPE:
 				return createETCS_Parameterwert_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.ETCS_SYSTEM_VERSION_TYPE:
+				return createETCS_System_Version_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.EV_MODUL_TYP_TYPE:
 				return createEV_Modul_Typ_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.FABRIKAT_TYPE:
@@ -547,10 +615,14 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createFT_ESG_Typ_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.FT_ETCS_L2_TYP_TYPE:
 				return createFT_ETCS_L2_Typ_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.FW_TEIL_NUMMER_TYPE:
+				return createFW_Teil_Nummer_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.GRUPPEN_ID_TYPE:
 				return createGruppen_ID_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.HINWEIS_BALISENBEFESTIGUNG_TYPE:
 				return createHinweis_Balisenbefestigung_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.INDIVIDUALISIERUNG_WEITERE_TYPE:
+				return createIndividualisierung_Weitere_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.KM_BTS_1TYPE:
 				return createKm_BTS_1_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.KM_BTS_2TYPE:
@@ -565,16 +637,22 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createLaenge_1_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.LAENGE_AUSFUEHRUNGSBEREICH_TYPE:
 				return createLaenge_Ausfuehrungsbereich_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.LAENGE_GESTUFTE_VSIGNALISIERUNG_TYPE:
+				return createLaenge_Gestufte_V_Signalisierung_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.LAENGE_SOLL_MIND_150_TYPE:
+				return createLaenge_Soll_Mind_150_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.LEISTUNGSBEDARF_TYPE:
+				return createLeistungsbedarf_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.LEU_AUSGANG_NR_TYPE:
 				return createLEU_Ausgang_Nr_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.LEU_MODUL_GERAETESTAND_TYPE:
+				return createLEU_Modul_Geraetestand_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.LEU_MODUL_TYP_TYPE:
 				return createLEU_Modul_Typ_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_TYP_TYPE:
 				return createLEU_Schaltkasten_Typ_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.LFD_NR_AM_BEZUGSPUNKT_TYPE:
 				return createLfd_Nr_Am_Bezugspunkt_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.LFD_NR_IN_TELEGR_SPEC_TYPE:
-				return createLfdNr_in_Telegr_Spec_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.LINK_DISTANZ_TYPE:
 				return createLink_Distanz_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.LLA_TYPE:
@@ -583,22 +661,36 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createMassgebende_Neig_1_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIG_SCHUTZSTRECKE_TYPE:
 				return createMassgebende_Neig_Schutzstrecke_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_150_TYPE:
+				return createMassgebende_Neigung_Mind_150_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_150_TYPE:
+				return createMassgebende_Neigung_Mind_Sig_150_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_TYPE:
+				return createMassgebende_Neigung_Mind_Sig_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.MAX_LEISTUNG_TYPE:
 				return createMax_Leistung_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.MAX_UNTERBRECHUNGSZEIT_TYPE:
 				return createMax_Unterbrechungszeit_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.METALLTEIL_TYPE:
-				return createMetallteil_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.METALLTEIL_KATEGORIE_TYPE:
+				return createMetallteil_Kategorie_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.METALLTEIL_LAENGE_TYPE:
+				return createMetallteil_Laenge_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.MODULNUMMER_TYPE:
 				return createModulnummer_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.MONTAGEABWEICHUNG_TYPE:
+				return createMontageabweichung_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.NEIGUNG_TYPE:
 				return createNeigung_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.NENNLEISTUNG_TYPE:
 				return createNennleistung_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.NID_BG_TYPE:
+				return createNID_BG_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.NID_CTYPE:
 				return createNID_C_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.NID_RBC_TYPE:
 				return createNID_RBC_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.NID_TSR_TYPE:
+				return createNID_TSR_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.NUMMER_SCHALTKASTEN_TYPE:
 				return createNummer_Schaltkasten_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.OBERSTROMBEGRENZUNG_GUETERZUG_TYPE:
@@ -611,8 +703,10 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createPosition_Sonstige_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.PRIORITAET_TYPE:
 				return createPrioritaet_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.RBC_SRS_UNTERVERSION_TYPE:
-				return createRBC_SRS_Unterversion_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.PROJEKTIERUNGSFALL_TYPE:
+				return createProjektierungsfall_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.RBC_ETCS_SYSTEM_VERSION_TYPE:
+				return createRBC_ETCS_System_Version_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.RBC_SRS_VERSION_TYPE:
 				return createRBC_SRS_Version_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.REKURSION_2NR_TYPE:
@@ -625,26 +719,34 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createSchutzstrecke_Erforderlich_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.SCHUTZSTRECKE_VORHANDEN_TYPE:
 				return createSchutzstrecke_Vorhanden_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_150_TYPE:
+				return createSolllaenge_Mind_Sig_150_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_TYPE:
+				return createSolllaenge_Mind_Sig_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.SONSTIGE_STANDORTANGABE_TYPE:
 				return createSonstige_Standortangabe_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_OBERE_TYPE:
 				return createSpannung_Toleranz_Obere_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_UNTERE_TYPE:
 				return createSpannung_Toleranz_Untere_TypeFromString(eDataType, initialValue);
-			case Balisentechnik_ETCSPackage.SRS_UNTERVERSION_TYPE:
-				return createSRS_Unterversion_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.SRS_VERSION_TYPE:
 				return createSRS_Version_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.SYSTEM_VOR_GRENZE_BESONDERS_TYPE:
 				return createSystem_Vor_Grenze_Besonders_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.TBV_TUNNELBEREICH_LAENGE_TYPE:
 				return createTBV_Tunnelbereich_Laenge_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.TELEGRAMM_INDEX_TYPE:
+				return createTelegramm_Index_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.TELEGRAMMNUMMER_TYPE:
 				return createTelegrammnummer_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.TEXT_BEDINGUNG_TYPE:
 				return createText_Bedingung_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.TEXTMELDUNG_TYPE:
+				return createTextmeldung_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE:
 				return createUeberbrueckung_EV_Unterbrechung_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.UEBERWACHUNG_LAENGE_TYPE:
+				return createUeberwachung_Laenge_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.UNTERGRUPPEN_ID_TYPE:
 				return createUntergruppen_ID_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VBEFEHL_RTYPE:
@@ -653,10 +755,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createV_Befehl_Z_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VFREI_TYPE:
 				return createV_Frei_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VSTART_TYPE:
+				return createV_Start_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VZIEL_TYPE:
+				return createV_Ziel_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VZUL_STRECKE_TYPE:
 				return createV_Zul_Strecke_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VBC_KENNUNG_TYPE:
+				return createVBC_Kennung_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VBC_NID_CTYPE:
+				return createVBC_NID_C_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VBC_TIMER_TYPE:
+				return createVBC_Timer_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VERBOT_ANHALTEN_TYPE:
 				return createVerbot_Anhalten_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VERKUERZTER_ABSTAND_TYPE:
+				return createVerkuerzter_Abstand_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VERWENDUNG_HILFE_TYPE:
+				return createVerwendung_Hilfe_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VERWENDUNG_TYPE:
 				return createVerwendung_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VGR_1TYPE:
@@ -667,6 +783,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return createVGR_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VLA_TYPE:
 				return createVLA_TypeFromString(eDataType, initialValue);
+			case Balisentechnik_ETCSPackage.VORSIGNALABSTAND_TYPE:
+				return createVorsignalabstand_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.VZ_TYPE:
 				return createVZ_TypeFromString(eDataType, initialValue);
 			case Balisentechnik_ETCSPackage.WIRKRICHTUNG_IN_DATENPUNKT_TYPE:
@@ -698,8 +816,12 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertENUMArtBedingungToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUM_AUSSTIEG_ETCS_SPERRE:
 				return convertENUMAusstiegETCSSperreToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_BETRIEBLICH_ART:
-				return convertENUMDPBezugBetrieblichArtToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUM_BALISENHALTER:
+				return convertENUMBalisenhalterToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUMDPATO:
+				return convertENUMDPATOToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_FUNKTIONAL_ART:
+				return convertENUMDPBezugFunktionalArtToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_LINK_ART:
 				return convertENUMDPLinkArtToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_TYP_ART:
@@ -726,8 +848,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertENUMFTHinweisFunktionToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMFTZBS_TYP:
 				return convertENUMFTZBSTypToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ENUMLEU_MODUL_ART:
-				return convertENUMLEUModulArtToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUMLEU_ART:
+				return convertENUMLEUArtToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMMLEVELTR:
 				return convertENUMMLEVELTRToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMNIDSTM:
@@ -750,6 +872,16 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertENUMWAnschlussToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMZBS_REAKTION:
 				return convertENUMZBSReaktionToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_BES_LANGER_EINFAHRWEG_TYPE:
+				return convertAbstand_Bes_Langer_Einfahrweg_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EH_EM_FOLGESIGNAL_TYPE:
+				return convertAbstand_Datenpunkt_EH_EM_Folgesignal_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EP_TPI_TYPE:
+				return convertAbstand_Datenpunkt_EP_TPI_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_TPI_FOLGESIGNAL_TYPE:
+				return convertAbstand_Datenpunkt_TPI_Folgesignal_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ABSTAND_EINMESSPUNKT_TYPE:
+				return convertAbstand_Einmesspunkt_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ABSTAND_GRENZE_BEREICH_CTYPE:
 				return convertAbstand_Grenze_Bereich_C_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ANLAGENTEIL_SONSTIGE_TYPE:
@@ -764,8 +896,10 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertAnzeigetext_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.AUSGANG_NR_TYPE:
 				return convertAusgang_Nr_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.BASELINE_SRS_TYPE:
-				return convertBaseline_SRS_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.BALISE_GERAETESTAND_TYPE:
+				return convertBalise_Geraetestand_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.BASELINE_SYSTEM_VERSION_TYPE:
+				return convertBaseline_System_Version_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.BEDINGUNG_WEICHENLAGE_TYPE:
 				return convertBedingung_Weichenlage_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.BEZ_STRECKE_BTS_1TYPE:
@@ -814,8 +948,12 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertENUMArtBedingungObjectToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUM_AUSSTIEG_ETCS_SPERRE_OBJECT:
 				return convertENUMAusstiegETCSSperreObjectToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_BETRIEBLICH_ART_OBJECT:
-				return convertENUMDPBezugBetrieblichArtObjectToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUM_BALISENHALTER_OBJECT:
+				return convertENUMBalisenhalterObjectToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUMDPATO_OBJECT:
+				return convertENUMDPATOObjectToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_FUNKTIONAL_ART_OBJECT:
+				return convertENUMDPBezugFunktionalArtObjectToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_LINK_ART_OBJECT:
 				return convertENUMDPLinkArtObjectToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMDP_TYP_ART_OBJECT:
@@ -842,8 +980,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertENUMFTHinweisFunktionObjectToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMFTZBS_TYP_OBJECT:
 				return convertENUMFTZBSTypObjectToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ENUMLEU_MODUL_ART_OBJECT:
-				return convertENUMLEUModulArtObjectToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ENUMLEU_ART_OBJECT:
+				return convertENUMLEUArtObjectToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMMLEVELTR_OBJECT:
 				return convertENUMMLEVELTRObjectToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ENUMNIDSTM_OBJECT:
@@ -872,14 +1010,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertESG_Ind_Parameter_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ESG_IND_PARAMETERWERT_TYPE:
 				return convertESG_Ind_Parameterwert_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_KENNUNG_TYPE:
-				return convertETCS_Adresse_Kennung_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_BG_TYPE:
-				return convertETCS_Adresse_NID_BG_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_CTYPE:
-				return convertETCS_Adresse_NID_C_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.ETCS_KENNUNG_TYPE:
-				return convertETCS_Kennung_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND_TYPE:
+				return convertETCS_Gefahrpunktabstand_Abweichend_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ETCS_PAKETNUMMER_TYPE:
 				return convertETCS_Paketnummer_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ETCS_PAR_ERLAEUTERUNG_TYPE:
@@ -888,6 +1020,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertETCS_Parametername_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.ETCS_PARAMETERWERT_TYPE:
 				return convertETCS_Parameterwert_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.ETCS_SYSTEM_VERSION_TYPE:
+				return convertETCS_System_Version_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.EV_MODUL_TYP_TYPE:
 				return convertEV_Modul_Typ_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.FABRIKAT_TYPE:
@@ -898,10 +1032,14 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertFT_ESG_Typ_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.FT_ETCS_L2_TYP_TYPE:
 				return convertFT_ETCS_L2_Typ_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.FW_TEIL_NUMMER_TYPE:
+				return convertFW_Teil_Nummer_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.GRUPPEN_ID_TYPE:
 				return convertGruppen_ID_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.HINWEIS_BALISENBEFESTIGUNG_TYPE:
 				return convertHinweis_Balisenbefestigung_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.INDIVIDUALISIERUNG_WEITERE_TYPE:
+				return convertIndividualisierung_Weitere_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.KM_BTS_1TYPE:
 				return convertKm_BTS_1_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.KM_BTS_2TYPE:
@@ -916,16 +1054,22 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertLaenge_1_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.LAENGE_AUSFUEHRUNGSBEREICH_TYPE:
 				return convertLaenge_Ausfuehrungsbereich_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.LAENGE_GESTUFTE_VSIGNALISIERUNG_TYPE:
+				return convertLaenge_Gestufte_V_Signalisierung_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.LAENGE_SOLL_MIND_150_TYPE:
+				return convertLaenge_Soll_Mind_150_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.LEISTUNGSBEDARF_TYPE:
+				return convertLeistungsbedarf_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.LEU_AUSGANG_NR_TYPE:
 				return convertLEU_Ausgang_Nr_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.LEU_MODUL_GERAETESTAND_TYPE:
+				return convertLEU_Modul_Geraetestand_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.LEU_MODUL_TYP_TYPE:
 				return convertLEU_Modul_Typ_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_TYP_TYPE:
 				return convertLEU_Schaltkasten_Typ_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.LFD_NR_AM_BEZUGSPUNKT_TYPE:
 				return convertLfd_Nr_Am_Bezugspunkt_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.LFD_NR_IN_TELEGR_SPEC_TYPE:
-				return convertLfdNr_in_Telegr_Spec_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.LINK_DISTANZ_TYPE:
 				return convertLink_Distanz_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.LLA_TYPE:
@@ -934,22 +1078,36 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertMassgebende_Neig_1_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIG_SCHUTZSTRECKE_TYPE:
 				return convertMassgebende_Neig_Schutzstrecke_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_150_TYPE:
+				return convertMassgebende_Neigung_Mind_150_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_150_TYPE:
+				return convertMassgebende_Neigung_Mind_Sig_150_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_TYPE:
+				return convertMassgebende_Neigung_Mind_Sig_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.MAX_LEISTUNG_TYPE:
 				return convertMax_Leistung_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.MAX_UNTERBRECHUNGSZEIT_TYPE:
 				return convertMax_Unterbrechungszeit_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.METALLTEIL_TYPE:
-				return convertMetallteil_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.METALLTEIL_KATEGORIE_TYPE:
+				return convertMetallteil_Kategorie_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.METALLTEIL_LAENGE_TYPE:
+				return convertMetallteil_Laenge_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.MODULNUMMER_TYPE:
 				return convertModulnummer_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.MONTAGEABWEICHUNG_TYPE:
+				return convertMontageabweichung_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.NEIGUNG_TYPE:
 				return convertNeigung_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.NENNLEISTUNG_TYPE:
 				return convertNennleistung_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.NID_BG_TYPE:
+				return convertNID_BG_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.NID_CTYPE:
 				return convertNID_C_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.NID_RBC_TYPE:
 				return convertNID_RBC_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.NID_TSR_TYPE:
+				return convertNID_TSR_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.NUMMER_SCHALTKASTEN_TYPE:
 				return convertNummer_Schaltkasten_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.OBERSTROMBEGRENZUNG_GUETERZUG_TYPE:
@@ -962,8 +1120,10 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertPosition_Sonstige_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.PRIORITAET_TYPE:
 				return convertPrioritaet_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.RBC_SRS_UNTERVERSION_TYPE:
-				return convertRBC_SRS_Unterversion_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.PROJEKTIERUNGSFALL_TYPE:
+				return convertProjektierungsfall_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.RBC_ETCS_SYSTEM_VERSION_TYPE:
+				return convertRBC_ETCS_System_Version_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.RBC_SRS_VERSION_TYPE:
 				return convertRBC_SRS_Version_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.REKURSION_2NR_TYPE:
@@ -976,26 +1136,34 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertSchutzstrecke_Erforderlich_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.SCHUTZSTRECKE_VORHANDEN_TYPE:
 				return convertSchutzstrecke_Vorhanden_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_150_TYPE:
+				return convertSolllaenge_Mind_Sig_150_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_TYPE:
+				return convertSolllaenge_Mind_Sig_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.SONSTIGE_STANDORTANGABE_TYPE:
 				return convertSonstige_Standortangabe_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_OBERE_TYPE:
 				return convertSpannung_Toleranz_Obere_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_UNTERE_TYPE:
 				return convertSpannung_Toleranz_Untere_TypeToString(eDataType, instanceValue);
-			case Balisentechnik_ETCSPackage.SRS_UNTERVERSION_TYPE:
-				return convertSRS_Unterversion_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.SRS_VERSION_TYPE:
 				return convertSRS_Version_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.SYSTEM_VOR_GRENZE_BESONDERS_TYPE:
 				return convertSystem_Vor_Grenze_Besonders_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.TBV_TUNNELBEREICH_LAENGE_TYPE:
 				return convertTBV_Tunnelbereich_Laenge_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.TELEGRAMM_INDEX_TYPE:
+				return convertTelegramm_Index_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.TELEGRAMMNUMMER_TYPE:
 				return convertTelegrammnummer_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.TEXT_BEDINGUNG_TYPE:
 				return convertText_Bedingung_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.TEXTMELDUNG_TYPE:
+				return convertTextmeldung_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE:
 				return convertUeberbrueckung_EV_Unterbrechung_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.UEBERWACHUNG_LAENGE_TYPE:
+				return convertUeberwachung_Laenge_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.UNTERGRUPPEN_ID_TYPE:
 				return convertUntergruppen_ID_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VBEFEHL_RTYPE:
@@ -1004,10 +1172,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertV_Befehl_Z_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VFREI_TYPE:
 				return convertV_Frei_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VSTART_TYPE:
+				return convertV_Start_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VZIEL_TYPE:
+				return convertV_Ziel_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VZUL_STRECKE_TYPE:
 				return convertV_Zul_Strecke_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VBC_KENNUNG_TYPE:
+				return convertVBC_Kennung_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VBC_NID_CTYPE:
+				return convertVBC_NID_C_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VBC_TIMER_TYPE:
+				return convertVBC_Timer_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VERBOT_ANHALTEN_TYPE:
 				return convertVerbot_Anhalten_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VERKUERZTER_ABSTAND_TYPE:
+				return convertVerkuerzter_Abstand_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VERWENDUNG_HILFE_TYPE:
+				return convertVerwendung_Hilfe_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VERWENDUNG_TYPE:
 				return convertVerwendung_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VGR_1TYPE:
@@ -1018,6 +1200,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 				return convertVGR_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VLA_TYPE:
 				return convertVLA_TypeToString(eDataType, instanceValue);
+			case Balisentechnik_ETCSPackage.VORSIGNALABSTAND_TYPE:
+				return convertVorsignalabstand_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.VZ_TYPE:
 				return convertVZ_TypeToString(eDataType, instanceValue);
 			case Balisentechnik_ETCSPackage.WIRKRICHTUNG_IN_DATENPUNKT_TYPE:
@@ -1043,9 +1227,75 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Abstand_Bes_Langer_Einfahrweg_TypeClass createAbstand_Bes_Langer_Einfahrweg_TypeClass() {
+		Abstand_Bes_Langer_Einfahrweg_TypeClassImpl abstand_Bes_Langer_Einfahrweg_TypeClass = new Abstand_Bes_Langer_Einfahrweg_TypeClassImpl();
+		return abstand_Bes_Langer_Einfahrweg_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass() {
+		Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassImpl abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass = new Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClassImpl();
+		return abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Abstand_Datenpunkt_EP_TPI_TypeClass createAbstand_Datenpunkt_EP_TPI_TypeClass() {
+		Abstand_Datenpunkt_EP_TPI_TypeClassImpl abstand_Datenpunkt_EP_TPI_TypeClass = new Abstand_Datenpunkt_EP_TPI_TypeClassImpl();
+		return abstand_Datenpunkt_EP_TPI_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Abstand_Datenpunkt_TPI_Folgesignal_TypeClass createAbstand_Datenpunkt_TPI_Folgesignal_TypeClass() {
+		Abstand_Datenpunkt_TPI_Folgesignal_TypeClassImpl abstand_Datenpunkt_TPI_Folgesignal_TypeClass = new Abstand_Datenpunkt_TPI_Folgesignal_TypeClassImpl();
+		return abstand_Datenpunkt_TPI_Folgesignal_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Abstand_Einmesspunkt_TypeClass createAbstand_Einmesspunkt_TypeClass() {
+		Abstand_Einmesspunkt_TypeClassImpl abstand_Einmesspunkt_TypeClass = new Abstand_Einmesspunkt_TypeClassImpl();
+		return abstand_Einmesspunkt_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Abstand_Grenze_Bereich_C_TypeClass createAbstand_Grenze_Bereich_C_TypeClass() {
 		Abstand_Grenze_Bereich_C_TypeClassImpl abstand_Grenze_Bereich_C_TypeClass = new Abstand_Grenze_Bereich_C_TypeClassImpl();
 		return abstand_Grenze_Bereich_C_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Abstand_Reduziert_TypeClass createAbstand_Reduziert_TypeClass() {
+		Abstand_Reduziert_TypeClassImpl abstand_Reduziert_TypeClass = new Abstand_Reduziert_TypeClassImpl();
+		return abstand_Reduziert_TypeClass;
 	}
 
 	/**
@@ -1068,6 +1318,28 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public Anordnung_Im_DP_TypeClass createAnordnung_Im_DP_TypeClass() {
 		Anordnung_Im_DP_TypeClassImpl anordnung_Im_DP_TypeClass = new Anordnung_Im_DP_TypeClassImpl();
 		return anordnung_Im_DP_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Anwendung_ESG_TypeClass createAnwendung_ESG_TypeClass() {
+		Anwendung_ESG_TypeClassImpl anwendung_ESG_TypeClass = new Anwendung_ESG_TypeClassImpl();
+		return anwendung_ESG_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Anwendung_GNT_TypeClass createAnwendung_GNT_TypeClass() {
+		Anwendung_GNT_TypeClassImpl anwendung_GNT_TypeClass = new Anwendung_GNT_TypeClassImpl();
+		return anwendung_GNT_TypeClass;
 	}
 
 	/**
@@ -1186,9 +1458,31 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public Baseline_SRS_TypeClass createBaseline_SRS_TypeClass() {
-		Baseline_SRS_TypeClassImpl baseline_SRS_TypeClass = new Baseline_SRS_TypeClassImpl();
-		return baseline_SRS_TypeClass;
+	public Balise_Geraetestand_TypeClass createBalise_Geraetestand_TypeClass() {
+		Balise_Geraetestand_TypeClassImpl balise_Geraetestand_TypeClass = new Balise_Geraetestand_TypeClassImpl();
+		return balise_Geraetestand_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Balisenhalter_TypeClass createBalisenhalter_TypeClass() {
+		Balisenhalter_TypeClassImpl balisenhalter_TypeClass = new Balisenhalter_TypeClassImpl();
+		return balisenhalter_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Baseline_System_Version_TypeClass createBaseline_System_Version_TypeClass() {
+		Baseline_System_Version_TypeClassImpl baseline_System_Version_TypeClass = new Baseline_System_Version_TypeClassImpl();
+		return baseline_System_Version_TypeClass;
 	}
 
 	/**
@@ -1406,6 +1700,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup createBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup() {
+		Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupImpl bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup = new Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupImpl();
+		return bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup createBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup() {
 		Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroupImpl bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup = new Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroupImpl();
 		return bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup;
@@ -1417,9 +1722,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public Binaerdatei createBinaerdatei() {
-		BinaerdateiImpl binaerdatei = new BinaerdateiImpl();
-		return binaerdatei;
+	public Binaerdaten createBinaerdaten() {
+		BinaerdatenImpl binaerdaten = new BinaerdatenImpl();
+		return binaerdaten;
 	}
 
 	/**
@@ -1428,20 +1733,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public Binaerdatei_Allg_AttributeGroup createBinaerdatei_Allg_AttributeGroup() {
-		Binaerdatei_Allg_AttributeGroupImpl binaerdatei_Allg_AttributeGroup = new Binaerdatei_Allg_AttributeGroupImpl();
-		return binaerdatei_Allg_AttributeGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Bremsweg_TypeClass createBremsweg_TypeClass() {
-		Bremsweg_TypeClassImpl bremsweg_TypeClass = new Bremsweg_TypeClassImpl();
-		return bremsweg_TypeClass;
+	public Binaerdaten_Datei_AttributeGroup createBinaerdaten_Datei_AttributeGroup() {
+		Binaerdaten_Datei_AttributeGroupImpl binaerdaten_Datei_AttributeGroup = new Binaerdaten_Datei_AttributeGroupImpl();
+		return binaerdaten_Datei_AttributeGroup;
 	}
 
 	/**
@@ -1527,6 +1821,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Datenpunkt_Einmesspunkt_AttributeGroup createDatenpunkt_Einmesspunkt_AttributeGroup() {
+		Datenpunkt_Einmesspunkt_AttributeGroupImpl datenpunkt_Einmesspunkt_AttributeGroup = new Datenpunkt_Einmesspunkt_AttributeGroupImpl();
+		return datenpunkt_Einmesspunkt_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Datenpunkt_Laenge_TypeClass createDatenpunkt_Laenge_TypeClass() {
 		Datenpunkt_Laenge_TypeClassImpl datenpunkt_Laenge_TypeClass = new Datenpunkt_Laenge_TypeClassImpl();
 		return datenpunkt_Laenge_TypeClass;
@@ -1582,9 +1887,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public DP_Bezug_Betrieblich_Art_TypeClass createDP_Bezug_Betrieblich_Art_TypeClass() {
-		DP_Bezug_Betrieblich_Art_TypeClassImpl dP_Bezug_Betrieblich_Art_TypeClass = new DP_Bezug_Betrieblich_Art_TypeClassImpl();
-		return dP_Bezug_Betrieblich_Art_TypeClass;
+	public DP_ATO_TypeClass createDP_ATO_TypeClass() {
+		DP_ATO_TypeClassImpl dP_ATO_TypeClass = new DP_ATO_TypeClassImpl();
+		return dP_ATO_TypeClass;
 	}
 
 	/**
@@ -1593,9 +1898,20 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public DP_Bezug_Betrieblich_AttributeGroup createDP_Bezug_Betrieblich_AttributeGroup() {
-		DP_Bezug_Betrieblich_AttributeGroupImpl dP_Bezug_Betrieblich_AttributeGroup = new DP_Bezug_Betrieblich_AttributeGroupImpl();
-		return dP_Bezug_Betrieblich_AttributeGroup;
+	public DP_Bezug_Funktional_Art_TypeClass createDP_Bezug_Funktional_Art_TypeClass() {
+		DP_Bezug_Funktional_Art_TypeClassImpl dP_Bezug_Funktional_Art_TypeClass = new DP_Bezug_Funktional_Art_TypeClassImpl();
+		return dP_Bezug_Funktional_Art_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DP_Bezug_Funktional_AttributeGroup createDP_Bezug_Funktional_AttributeGroup() {
+		DP_Bezug_Funktional_AttributeGroupImpl dP_Bezug_Funktional_AttributeGroup = new DP_Bezug_Funktional_AttributeGroupImpl();
+		return dP_Bezug_Funktional_AttributeGroup;
 	}
 
 	/**
@@ -1813,6 +2129,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public DP_Verlinkt_TypeClass createDP_Verlinkt_TypeClass() {
+		DP_Verlinkt_TypeClassImpl dP_Verlinkt_TypeClass = new DP_Verlinkt_TypeClassImpl();
+		return dP_Verlinkt_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Dunkelschaltanstoss_TypeClass createDunkelschaltanstoss_TypeClass() {
 		Dunkelschaltanstoss_TypeClassImpl dunkelschaltanstoss_TypeClass = new Dunkelschaltanstoss_TypeClassImpl();
 		return dunkelschaltanstoss_TypeClass;
@@ -1978,31 +2305,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public ETCS_Adresse_Kennung_TypeClass createETCS_Adresse_Kennung_TypeClass() {
-		ETCS_Adresse_Kennung_TypeClassImpl etcS_Adresse_Kennung_TypeClass = new ETCS_Adresse_Kennung_TypeClassImpl();
-		return etcS_Adresse_Kennung_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETCS_Adresse_NID_BG_TypeClass createETCS_Adresse_NID_BG_TypeClass() {
-		ETCS_Adresse_NID_BG_TypeClassImpl etcS_Adresse_NID_BG_TypeClass = new ETCS_Adresse_NID_BG_TypeClassImpl();
-		return etcS_Adresse_NID_BG_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETCS_Adresse_NID_C_TypeClass createETCS_Adresse_NID_C_TypeClass() {
-		ETCS_Adresse_NID_C_TypeClassImpl etcS_Adresse_NID_C_TypeClass = new ETCS_Adresse_NID_C_TypeClassImpl();
-		return etcS_Adresse_NID_C_TypeClass;
+	public ETCS_Gefahrpunktabstand_Abweichend_TypeClass createETCS_Gefahrpunktabstand_Abweichend_TypeClass() {
+		ETCS_Gefahrpunktabstand_Abweichend_TypeClassImpl etcS_Gefahrpunktabstand_Abweichend_TypeClass = new ETCS_Gefahrpunktabstand_Abweichend_TypeClassImpl();
+		return etcS_Gefahrpunktabstand_Abweichend_TypeClass;
 	}
 
 	/**
@@ -2025,17 +2330,6 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public ETCS_Kante_Bezeichnung_AttributeGroup createETCS_Kante_Bezeichnung_AttributeGroup() {
 		ETCS_Kante_Bezeichnung_AttributeGroupImpl etcS_Kante_Bezeichnung_AttributeGroup = new ETCS_Kante_Bezeichnung_AttributeGroupImpl();
 		return etcS_Kante_Bezeichnung_AttributeGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETCS_Kennung_TypeClass createETCS_Kennung_TypeClass() {
-		ETCS_Kennung_TypeClassImpl etcS_Kennung_TypeClass = new ETCS_Kennung_TypeClassImpl();
-		return etcS_Kennung_TypeClass;
 	}
 
 	/**
@@ -2110,6 +2404,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public ETCS_Richtungsanzeige createETCS_Richtungsanzeige() {
+		ETCS_RichtungsanzeigeImpl etcS_Richtungsanzeige = new ETCS_RichtungsanzeigeImpl();
+		return etcS_Richtungsanzeige;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ETCS_Signal createETCS_Signal() {
 		ETCS_SignalImpl etcS_Signal = new ETCS_SignalImpl();
 		return etcS_Signal;
@@ -2154,6 +2459,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public ETCS_System_Version_TypeClass createETCS_System_Version_TypeClass() {
+		ETCS_System_Version_TypeClassImpl etcS_System_Version_TypeClass = new ETCS_System_Version_TypeClassImpl();
+		return etcS_System_Version_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ETCS_W_Kr createETCS_W_Kr() {
 		ETCS_W_KrImpl etcS_W_Kr = new ETCS_W_KrImpl();
 		return etcS_W_Kr;
@@ -2168,17 +2484,6 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public ETCS_W_Kr_MUKA_AttributeGroup createETCS_W_Kr_MUKA_AttributeGroup() {
 		ETCS_W_Kr_MUKA_AttributeGroupImpl etcS_W_Kr_MUKA_AttributeGroup = new ETCS_W_Kr_MUKA_AttributeGroupImpl();
 		return etcS_W_Kr_MUKA_AttributeGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETCS_W_Ortsgestellt_TypeClass createETCS_W_Ortsgestellt_TypeClass() {
-		ETCS_W_Ortsgestellt_TypeClassImpl etcS_W_Ortsgestellt_TypeClass = new ETCS_W_Ortsgestellt_TypeClassImpl();
-		return etcS_W_Ortsgestellt_TypeClass;
 	}
 
 	/**
@@ -2484,9 +2789,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public GNT_Merkmale_AttributeGroup createGNT_Merkmale_AttributeGroup() {
-		GNT_Merkmale_AttributeGroupImpl gnT_Merkmale_AttributeGroup = new GNT_Merkmale_AttributeGroupImpl();
-		return gnT_Merkmale_AttributeGroup;
+	public FW_Teil_Nummer_TypeClass createFW_Teil_Nummer_TypeClass() {
+		FW_Teil_Nummer_TypeClassImpl fW_Teil_Nummer_TypeClass = new FW_Teil_Nummer_TypeClassImpl();
+		return fW_Teil_Nummer_TypeClass;
 	}
 
 	/**
@@ -2539,9 +2844,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public Individuell_TypeClass createIndividuell_TypeClass() {
-		Individuell_TypeClassImpl individuell_TypeClass = new Individuell_TypeClassImpl();
-		return individuell_TypeClass;
+	public Individualisierung_Weitere_TypeClass createIndividualisierung_Weitere_TypeClass() {
+		Individualisierung_Weitere_TypeClassImpl individualisierung_Weitere_TypeClass = new Individualisierung_Weitere_TypeClassImpl();
+		return individualisierung_Weitere_TypeClass;
 	}
 
 	/**
@@ -2649,6 +2954,39 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Laenge_Gestufte_V_Signalisierung_TypeClass createLaenge_Gestufte_V_Signalisierung_TypeClass() {
+		Laenge_Gestufte_V_Signalisierung_TypeClassImpl laenge_Gestufte_V_Signalisierung_TypeClass = new Laenge_Gestufte_V_Signalisierung_TypeClassImpl();
+		return laenge_Gestufte_V_Signalisierung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Laenge_Soll_Mind_150_TypeClass createLaenge_Soll_Mind_150_TypeClass() {
+		Laenge_Soll_Mind_150_TypeClassImpl laenge_Soll_Mind_150_TypeClass = new Laenge_Soll_Mind_150_TypeClassImpl();
+		return laenge_Soll_Mind_150_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Leistungsbedarf_TypeClass createLeistungsbedarf_TypeClass() {
+		Leistungsbedarf_TypeClassImpl leistungsbedarf_TypeClass = new Leistungsbedarf_TypeClassImpl();
+		return leistungsbedarf_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public LEU_Anlage createLEU_Anlage() {
 		LEU_AnlageImpl leU_Anlage = new LEU_AnlageImpl();
 		return leU_Anlage;
@@ -2660,9 +2998,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public LEU_Anlage_Bezeichnung_AttributeGroup createLEU_Anlage_Bezeichnung_AttributeGroup() {
-		LEU_Anlage_Bezeichnung_AttributeGroupImpl leU_Anlage_Bezeichnung_AttributeGroup = new LEU_Anlage_Bezeichnung_AttributeGroupImpl();
-		return leU_Anlage_Bezeichnung_AttributeGroup;
+	public LEU_Anlage_Allg_AttributeGroup createLEU_Anlage_Allg_AttributeGroup() {
+		LEU_Anlage_Allg_AttributeGroupImpl leU_Anlage_Allg_AttributeGroup = new LEU_Anlage_Allg_AttributeGroupImpl();
+		return leU_Anlage_Allg_AttributeGroup;
 	}
 
 	/**
@@ -2671,9 +3009,20 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public LEU_Anlage_Moduleigenschaften_AttributeGroup createLEU_Anlage_Moduleigenschaften_AttributeGroup() {
-		LEU_Anlage_Moduleigenschaften_AttributeGroupImpl leU_Anlage_Moduleigenschaften_AttributeGroup = new LEU_Anlage_Moduleigenschaften_AttributeGroupImpl();
-		return leU_Anlage_Moduleigenschaften_AttributeGroup;
+	public LEU_Anlage_Art_TypeClass createLEU_Anlage_Art_TypeClass() {
+		LEU_Anlage_Art_TypeClassImpl leU_Anlage_Art_TypeClass = new LEU_Anlage_Art_TypeClassImpl();
+		return leU_Anlage_Art_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LEU_Anlage_Bezeichnung_AttributeGroup createLEU_Anlage_Bezeichnung_AttributeGroup() {
+		LEU_Anlage_Bezeichnung_AttributeGroupImpl leU_Anlage_Bezeichnung_AttributeGroup = new LEU_Anlage_Bezeichnung_AttributeGroupImpl();
+		return leU_Anlage_Bezeichnung_AttributeGroup;
 	}
 
 	/**
@@ -2740,6 +3089,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public LEU_Modul_Bezeichnung_AttributeGroup createLEU_Modul_Bezeichnung_AttributeGroup() {
 		LEU_Modul_Bezeichnung_AttributeGroupImpl leU_Modul_Bezeichnung_AttributeGroup = new LEU_Modul_Bezeichnung_AttributeGroupImpl();
 		return leU_Modul_Bezeichnung_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LEU_Modul_Geraetestand_TypeClass createLEU_Modul_Geraetestand_TypeClass() {
+		LEU_Modul_Geraetestand_TypeClassImpl leU_Modul_Geraetestand_TypeClass = new LEU_Modul_Geraetestand_TypeClassImpl();
+		return leU_Modul_Geraetestand_TypeClass;
 	}
 
 	/**
@@ -2836,17 +3196,6 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public LfdNr_in_Telegr_Spec_TypeClass createLfdNr_in_Telegr_Spec_TypeClass() {
-		LfdNr_in_Telegr_Spec_TypeClassImpl lfdNr_in_Telegr_Spec_TypeClass = new LfdNr_in_Telegr_Spec_TypeClassImpl();
-		return lfdNr_in_Telegr_Spec_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Link_Distanz_TypeClass createLink_Distanz_TypeClass() {
 		Link_Distanz_TypeClassImpl link_Distanz_TypeClass = new Link_Distanz_TypeClassImpl();
 		return link_Distanz_TypeClass;
@@ -2872,6 +3221,28 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public LM_G_TypeClass createLM_G_TypeClass() {
 		LM_G_TypeClassImpl lM_G_TypeClass = new LM_G_TypeClassImpl();
 		return lM_G_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LT_Binaerdatei_Hilfe_AttributeGroup createLT_Binaerdatei_Hilfe_AttributeGroup() {
+		LT_Binaerdatei_Hilfe_AttributeGroupImpl lT_Binaerdatei_Hilfe_AttributeGroup = new LT_Binaerdatei_Hilfe_AttributeGroupImpl();
+		return lT_Binaerdatei_Hilfe_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LT_Binaerdaten_AttributeGroup createLT_Binaerdaten_AttributeGroup() {
+		LT_Binaerdaten_AttributeGroupImpl lT_Binaerdaten_AttributeGroup = new LT_Binaerdaten_AttributeGroupImpl();
+		return lT_Binaerdaten_AttributeGroup;
 	}
 
 	/**
@@ -2924,6 +3295,39 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Massgebende_Neigung_Mind_150_TypeClass createMassgebende_Neigung_Mind_150_TypeClass() {
+		Massgebende_Neigung_Mind_150_TypeClassImpl massgebende_Neigung_Mind_150_TypeClass = new Massgebende_Neigung_Mind_150_TypeClassImpl();
+		return massgebende_Neigung_Mind_150_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Massgebende_Neigung_Mind_Sig_150_TypeClass createMassgebende_Neigung_Mind_Sig_150_TypeClass() {
+		Massgebende_Neigung_Mind_Sig_150_TypeClassImpl massgebende_Neigung_Mind_Sig_150_TypeClass = new Massgebende_Neigung_Mind_Sig_150_TypeClassImpl();
+		return massgebende_Neigung_Mind_Sig_150_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Massgebende_Neigung_Mind_Sig_TypeClass createMassgebende_Neigung_Mind_Sig_TypeClass() {
+		Massgebende_Neigung_Mind_Sig_TypeClassImpl massgebende_Neigung_Mind_Sig_TypeClass = new Massgebende_Neigung_Mind_Sig_TypeClassImpl();
+		return massgebende_Neigung_Mind_Sig_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Mastschild_TypeClass createMastschild_TypeClass() {
 		Mastschild_TypeClassImpl mastschild_TypeClass = new Mastschild_TypeClassImpl();
 		return mastschild_TypeClass;
@@ -2957,9 +3361,31 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public Metallteil_TypeClass createMetallteil_TypeClass() {
-		Metallteil_TypeClassImpl metallteil_TypeClass = new Metallteil_TypeClassImpl();
-		return metallteil_TypeClass;
+	public Metallteil_AttributeGroup createMetallteil_AttributeGroup() {
+		Metallteil_AttributeGroupImpl metallteil_AttributeGroup = new Metallteil_AttributeGroupImpl();
+		return metallteil_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Metallteil_Kategorie_TypeClass createMetallteil_Kategorie_TypeClass() {
+		Metallteil_Kategorie_TypeClassImpl metallteil_Kategorie_TypeClass = new Metallteil_Kategorie_TypeClassImpl();
+		return metallteil_Kategorie_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Metallteil_Laenge_TypeClass createMetallteil_Laenge_TypeClass() {
+		Metallteil_Laenge_TypeClassImpl metallteil_Laenge_TypeClass = new Metallteil_Laenge_TypeClassImpl();
+		return metallteil_Laenge_TypeClass;
 	}
 
 	/**
@@ -2971,6 +3397,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public Modulnummer_TypeClass createModulnummer_TypeClass() {
 		Modulnummer_TypeClassImpl modulnummer_TypeClass = new Modulnummer_TypeClassImpl();
 		return modulnummer_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Montageabweichung_TypeClass createMontageabweichung_TypeClass() {
+		Montageabweichung_TypeClassImpl montageabweichung_TypeClass = new Montageabweichung_TypeClassImpl();
+		return montageabweichung_TypeClass;
 	}
 
 	/**
@@ -2993,6 +3430,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public Nennleistung_TypeClass createNennleistung_TypeClass() {
 		Nennleistung_TypeClassImpl nennleistung_TypeClass = new Nennleistung_TypeClassImpl();
 		return nennleistung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NID_BG_TypeClass createNID_BG_TypeClass() {
+		NID_BG_TypeClassImpl niD_BG_TypeClass = new NID_BG_TypeClassImpl();
+		return niD_BG_TypeClass;
 	}
 
 	/**
@@ -3026,6 +3474,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public NID_STM_TypeClass createNID_STM_TypeClass() {
 		NID_STM_TypeClassImpl niD_STM_TypeClass = new NID_STM_TypeClassImpl();
 		return niD_STM_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NID_TSR_TypeClass createNID_TSR_TypeClass() {
+		NID_TSR_TypeClassImpl niD_TSR_TypeClass = new NID_TSR_TypeClassImpl();
+		return niD_TSR_TypeClass;
 	}
 
 	/**
@@ -3144,6 +3603,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Projektierungsfall_TypeClass createProjektierungsfall_TypeClass() {
+		Projektierungsfall_TypeClassImpl projektierungsfall_TypeClass = new Projektierungsfall_TypeClassImpl();
+		return projektierungsfall_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public RBC createRBC() {
 		RBCImpl rbc = new RBCImpl();
 		return rbc;
@@ -3166,9 +3636,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public RBC_SRS_Unterversion_TypeClass createRBC_SRS_Unterversion_TypeClass() {
-		RBC_SRS_Unterversion_TypeClassImpl rbC_SRS_Unterversion_TypeClass = new RBC_SRS_Unterversion_TypeClassImpl();
-		return rbC_SRS_Unterversion_TypeClass;
+	public RBC_ETCS_System_Version_TypeClass createRBC_ETCS_System_Version_TypeClass() {
+		RBC_ETCS_System_Version_TypeClassImpl rbC_ETCS_System_Version_TypeClass = new RBC_ETCS_System_Version_TypeClassImpl();
+		return rbC_ETCS_System_Version_TypeClass;
 	}
 
 	/**
@@ -3254,6 +3724,28 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Solllaenge_Mind_Sig_150_TypeClass createSolllaenge_Mind_Sig_150_TypeClass() {
+		Solllaenge_Mind_Sig_150_TypeClassImpl solllaenge_Mind_Sig_150_TypeClass = new Solllaenge_Mind_Sig_150_TypeClassImpl();
+		return solllaenge_Mind_Sig_150_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Solllaenge_Mind_Sig_TypeClass createSolllaenge_Mind_Sig_TypeClass() {
+		Solllaenge_Mind_Sig_TypeClassImpl solllaenge_Mind_Sig_TypeClass = new Solllaenge_Mind_Sig_TypeClassImpl();
+		return solllaenge_Mind_Sig_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Sonstige_Standortangabe_TypeClass createSonstige_Standortangabe_TypeClass() {
 		Sonstige_Standortangabe_TypeClassImpl sonstige_Standortangabe_TypeClass = new Sonstige_Standortangabe_TypeClassImpl();
 		return sonstige_Standortangabe_TypeClass;
@@ -3290,17 +3782,6 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public Spannung_Toleranz_Untere_TypeClass createSpannung_Toleranz_Untere_TypeClass() {
 		Spannung_Toleranz_Untere_TypeClassImpl spannung_Toleranz_Untere_TypeClass = new Spannung_Toleranz_Untere_TypeClassImpl();
 		return spannung_Toleranz_Untere_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SRS_Unterversion_TypeClass createSRS_Unterversion_TypeClass() {
-		SRS_Unterversion_TypeClassImpl srS_Unterversion_TypeClass = new SRS_Unterversion_TypeClassImpl();
-		return srS_Unterversion_TypeClass;
 	}
 
 	/**
@@ -3408,6 +3889,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Telegramm_Index_TypeClass createTelegramm_Index_TypeClass() {
+		Telegramm_Index_TypeClassImpl telegramm_Index_TypeClass = new Telegramm_Index_TypeClassImpl();
+		return telegramm_Index_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Telegrammnummer_TypeClass createTelegrammnummer_TypeClass() {
 		Telegrammnummer_TypeClassImpl telegrammnummer_TypeClass = new Telegrammnummer_TypeClassImpl();
 		return telegrammnummer_TypeClass;
@@ -3430,9 +3922,31 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Textmeldung_TypeClass createTextmeldung_TypeClass() {
+		Textmeldung_TypeClassImpl textmeldung_TypeClass = new Textmeldung_TypeClassImpl();
+		return textmeldung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Ueberbrueckung_EV_Unterbrechung_TypeClass createUeberbrueckung_EV_Unterbrechung_TypeClass() {
 		Ueberbrueckung_EV_Unterbrechung_TypeClassImpl ueberbrueckung_EV_Unterbrechung_TypeClass = new Ueberbrueckung_EV_Unterbrechung_TypeClassImpl();
 		return ueberbrueckung_EV_Unterbrechung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Ueberwachung_Laenge_TypeClass createUeberwachung_Laenge_TypeClass() {
+		Ueberwachung_Laenge_TypeClassImpl ueberwachung_Laenge_TypeClass = new Ueberwachung_Laenge_TypeClassImpl();
+		return ueberwachung_Laenge_TypeClass;
 	}
 
 	/**
@@ -3496,9 +4010,75 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public V_Start_TypeClass createV_Start_TypeClass() {
+		V_Start_TypeClassImpl v_Start_TypeClass = new V_Start_TypeClassImpl();
+		return v_Start_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public V_Ziel_TypeClass createV_Ziel_TypeClass() {
+		V_Ziel_TypeClassImpl v_Ziel_TypeClass = new V_Ziel_TypeClassImpl();
+		return v_Ziel_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public V_Zul_Strecke_TypeClass createV_Zul_Strecke_TypeClass() {
 		V_Zul_Strecke_TypeClassImpl v_Zul_Strecke_TypeClass = new V_Zul_Strecke_TypeClassImpl();
 		return v_Zul_Strecke_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VBC_Kennung_TypeClass createVBC_Kennung_TypeClass() {
+		VBC_Kennung_TypeClassImpl vbC_Kennung_TypeClass = new VBC_Kennung_TypeClassImpl();
+		return vbC_Kennung_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VBC_NID_C_TypeClass createVBC_NID_C_TypeClass() {
+		VBC_NID_C_TypeClassImpl vbC_NID_C_TypeClass = new VBC_NID_C_TypeClassImpl();
+		return vbC_NID_C_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VBC_Setzen_TypeClass createVBC_Setzen_TypeClass() {
+		VBC_Setzen_TypeClassImpl vbC_Setzen_TypeClass = new VBC_Setzen_TypeClassImpl();
+		return vbC_Setzen_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VBC_Timer_TypeClass createVBC_Timer_TypeClass() {
+		VBC_Timer_TypeClassImpl vbC_Timer_TypeClass = new VBC_Timer_TypeClassImpl();
+		return vbC_Timer_TypeClass;
 	}
 
 	/**
@@ -3540,9 +4120,31 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public Verkuerzter_Abstand_TypeClass createVerkuerzter_Abstand_TypeClass() {
+		Verkuerzter_Abstand_TypeClassImpl verkuerzter_Abstand_TypeClass = new Verkuerzter_Abstand_TypeClassImpl();
+		return verkuerzter_Abstand_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Verwendung_Als_Rueckfall_TypeClass createVerwendung_Als_Rueckfall_TypeClass() {
 		Verwendung_Als_Rueckfall_TypeClassImpl verwendung_Als_Rueckfall_TypeClass = new Verwendung_Als_Rueckfall_TypeClassImpl();
 		return verwendung_Als_Rueckfall_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Verwendung_Hilfe_TypeClass createVerwendung_Hilfe_TypeClass() {
+		Verwendung_Hilfe_TypeClassImpl verwendung_Hilfe_TypeClass = new Verwendung_Hilfe_TypeClassImpl();
+		return verwendung_Hilfe_TypeClass;
 	}
 
 	/**
@@ -3598,6 +4200,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public VLA_TypeClass createVLA_TypeClass() {
 		VLA_TypeClassImpl vlA_TypeClass = new VLA_TypeClassImpl();
 		return vlA_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Vorsignalabstand_TypeClass createVorsignalabstand_TypeClass() {
+		Vorsignalabstand_TypeClassImpl vorsignalabstand_TypeClass = new Vorsignalabstand_TypeClassImpl();
+		return vorsignalabstand_TypeClass;
 	}
 
 	/**
@@ -3727,6 +4340,50 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
+	public ZBS_Schutzstrecke createZBS_Schutzstrecke() {
+		ZBS_SchutzstreckeImpl zbS_Schutzstrecke = new ZBS_SchutzstreckeImpl();
+		return zbS_Schutzstrecke;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZBS_Schutzstrecke_Allg_AttributeGroup createZBS_Schutzstrecke_Allg_AttributeGroup() {
+		ZBS_Schutzstrecke_Allg_AttributeGroupImpl zbS_Schutzstrecke_Allg_AttributeGroup = new ZBS_Schutzstrecke_Allg_AttributeGroupImpl();
+		return zbS_Schutzstrecke_Allg_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZBS_Signal createZBS_Signal() {
+		ZBS_SignalImpl zbS_Signal = new ZBS_SignalImpl();
+		return zbS_Signal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZBS_Signal_Signalabstand_AttributeGroup createZBS_Signal_Signalabstand_AttributeGroup() {
+		ZBS_Signal_Signalabstand_AttributeGroupImpl zbS_Signal_Signalabstand_AttributeGroup = new ZBS_Signal_Signalabstand_AttributeGroupImpl();
+		return zbS_Signal_Signalabstand_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Ziel_DP_Ausrichtung_TypeClass createZiel_DP_Ausrichtung_TypeClass() {
 		Ziel_DP_Ausrichtung_TypeClassImpl ziel_DP_Ausrichtung_TypeClass = new Ziel_DP_Ausrichtung_TypeClassImpl();
 		return ziel_DP_Ausrichtung_TypeClass;
@@ -3815,9 +4472,9 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	@Override
-	public ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup createZUB_Bereichsgrenze_Nach_GNT_AttributeGroup() {
-		ZUB_Bereichsgrenze_Nach_GNT_AttributeGroupImpl zuB_Bereichsgrenze_Nach_GNT_AttributeGroup = new ZUB_Bereichsgrenze_Nach_GNT_AttributeGroupImpl();
-		return zuB_Bereichsgrenze_Nach_GNT_AttributeGroup;
+	public ZUB_Bereichsgrenze_Nach_GNT_TypeClass createZUB_Bereichsgrenze_Nach_GNT_TypeClass() {
+		ZUB_Bereichsgrenze_Nach_GNT_TypeClassImpl zuB_Bereichsgrenze_Nach_GNT_TypeClass = new ZUB_Bereichsgrenze_Nach_GNT_TypeClassImpl();
+		return zuB_Bereichsgrenze_Nach_GNT_TypeClass;
 	}
 
 	/**
@@ -3829,6 +4486,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public ZUB_Bereichsgrenze_Nach_L2_AttributeGroup createZUB_Bereichsgrenze_Nach_L2_AttributeGroup() {
 		ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl zuB_Bereichsgrenze_Nach_L2_AttributeGroup = new ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl();
 		return zuB_Bereichsgrenze_Nach_L2_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup createZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup() {
+		ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupImpl zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup = new ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupImpl();
+		return zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup;
 	}
 
 	/**
@@ -3873,6 +4541,17 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	public ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup createZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup() {
 		ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroupImpl zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroup = new ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroupImpl();
 		return zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup createZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup() {
+		ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroupImpl zuB_Bereichsgrenze_Nach_ZBS_AttributeGroup = new ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroupImpl();
+		return zuB_Bereichsgrenze_Nach_ZBS_AttributeGroup;
 	}
 
 	/**
@@ -3964,8 +4643,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ENUMDPBezugBetrieblichArt createENUMDPBezugBetrieblichArtFromString(EDataType eDataType, String initialValue) {
-		ENUMDPBezugBetrieblichArt result = ENUMDPBezugBetrieblichArt.get(initialValue);
+	public ENUMBalisenhalter createENUMBalisenhalterFromString(EDataType eDataType, String initialValue) {
+		ENUMBalisenhalter result = ENUMBalisenhalter.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -3975,7 +4654,47 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertENUMDPBezugBetrieblichArtToString(EDataType eDataType, Object instanceValue) {
+	public String convertENUMBalisenhalterToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMDPATO createENUMDPATOFromString(EDataType eDataType, String initialValue) {
+		ENUMDPATO result = ENUMDPATO.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMDPATOToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMDPBezugFunktionalArt createENUMDPBezugFunktionalArtFromString(EDataType eDataType, String initialValue) {
+		ENUMDPBezugFunktionalArt result = ENUMDPBezugFunktionalArt.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMDPBezugFunktionalArtToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -4244,8 +4963,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ENUMLEUModulArt createENUMLEUModulArtFromString(EDataType eDataType, String initialValue) {
-		ENUMLEUModulArt result = ENUMLEUModulArt.get(initialValue);
+	public ENUMLEUArt createENUMLEUArtFromString(EDataType eDataType, String initialValue) {
+		ENUMLEUArt result = ENUMLEUArt.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -4255,7 +4974,7 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertENUMLEUModulArtToString(EDataType eDataType, Object instanceValue) {
+	public String convertENUMLEUArtToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -4484,6 +5203,96 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigDecimal createAbstand_Bes_Langer_Einfahrweg_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAbstand_Bes_Langer_Einfahrweg_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAbstand_Datenpunkt_EH_EM_Folgesignal_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createAbstand_Datenpunkt_EP_TPI_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAbstand_Datenpunkt_EP_TPI_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createAbstand_Datenpunkt_TPI_Folgesignal_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAbstand_Datenpunkt_TPI_Folgesignal_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createAbstand_Einmesspunkt_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAbstand_Einmesspunkt_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BigDecimal createAbstand_Grenze_Bereich_C_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
 	}
@@ -4610,8 +5419,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger createBaseline_SRS_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	public String createBalise_Geraetestand_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
 
 	/**
@@ -4619,8 +5428,26 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertBaseline_SRS_TypeToString(EDataType eDataType, Object instanceValue) {
-		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	public String convertBalise_Geraetestand_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createBaseline_System_Version_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBaseline_System_Version_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
 	/**
@@ -5060,8 +5887,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ENUMDPBezugBetrieblichArt createENUMDPBezugBetrieblichArtObjectFromString(EDataType eDataType, String initialValue) {
-		return createENUMDPBezugBetrieblichArtFromString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMDPBezugBetrieblichArt(), initialValue);
+	public ENUMBalisenhalter createENUMBalisenhalterObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMBalisenhalterFromString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMBalisenhalter(), initialValue);
 	}
 
 	/**
@@ -5069,8 +5896,44 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertENUMDPBezugBetrieblichArtObjectToString(EDataType eDataType, Object instanceValue) {
-		return convertENUMDPBezugBetrieblichArtToString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMDPBezugBetrieblichArt(), instanceValue);
+	public String convertENUMBalisenhalterObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMBalisenhalterToString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMBalisenhalter(), instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMDPATO createENUMDPATOObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMDPATOFromString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMDPATO(), initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMDPATOObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMDPATOToString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMDPATO(), instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMDPBezugFunktionalArt createENUMDPBezugFunktionalArtObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMDPBezugFunktionalArtFromString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMDPBezugFunktionalArt(), initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMDPBezugFunktionalArtObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMDPBezugFunktionalArtToString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMDPBezugFunktionalArt(), instanceValue);
 	}
 
 	/**
@@ -5312,8 +6175,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ENUMLEUModulArt createENUMLEUModulArtObjectFromString(EDataType eDataType, String initialValue) {
-		return createENUMLEUModulArtFromString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMLEUModulArt(), initialValue);
+	public ENUMLEUArt createENUMLEUArtObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMLEUArtFromString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMLEUArt(), initialValue);
 	}
 
 	/**
@@ -5321,8 +6184,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertENUMLEUModulArtObjectToString(EDataType eDataType, Object instanceValue) {
-		return convertENUMLEUModulArtToString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMLEUModulArt(), instanceValue);
+	public String convertENUMLEUArtObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMLEUArtToString(Balisentechnik_ETCSPackage.eINSTANCE.getENUMLEUArt(), instanceValue);
 	}
 
 	/**
@@ -5582,8 +6445,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger createETCS_Adresse_Kennung_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	public BigDecimal createETCS_Gefahrpunktabstand_Abweichend_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
 	}
 
 	/**
@@ -5591,62 +6454,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertETCS_Adresse_Kennung_TypeToString(EDataType eDataType, Object instanceValue) {
-		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BigInteger createETCS_Adresse_NID_BG_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertETCS_Adresse_NID_BG_TypeToString(EDataType eDataType, Object instanceValue) {
-		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BigInteger createETCS_Adresse_NID_C_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertETCS_Adresse_NID_C_TypeToString(EDataType eDataType, Object instanceValue) {
-		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BigInteger createETCS_Kennung_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertETCS_Kennung_TypeToString(EDataType eDataType, Object instanceValue) {
-		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	public String convertETCS_Gefahrpunktabstand_Abweichend_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
 	}
 
 	/**
@@ -5719,6 +6528,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 */
 	public String convertETCS_Parameterwert_TypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createETCS_System_Version_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertETCS_System_Version_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
 	/**
@@ -5816,6 +6643,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigInteger createFW_Teil_Nummer_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFW_Teil_Nummer_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String createGruppen_ID_TypeFromString(EDataType eDataType, String initialValue) {
 		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
@@ -5844,6 +6689,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	public String convertHinweis_Balisenbefestigung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createIndividualisierung_Weitere_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIndividualisierung_Weitere_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
@@ -5978,6 +6841,60 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigDecimal createLaenge_Gestufte_V_Signalisierung_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLaenge_Gestufte_V_Signalisierung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createLaenge_Soll_Mind_150_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLaenge_Soll_Mind_150_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createLeistungsbedarf_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLeistungsbedarf_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BigInteger createLEU_Ausgang_Nr_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
 	}
@@ -5989,6 +6906,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 */
 	public String convertLEU_Ausgang_Nr_TypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createLEU_Modul_Geraetestand_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLEU_Modul_Geraetestand_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
 	/**
@@ -6042,24 +6977,6 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	public String convertLfd_Nr_Am_Bezugspunkt_TypeToString(EDataType eDataType, Object instanceValue) {
-		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BigInteger createLfdNr_in_Telegr_Spec_TypeFromString(EDataType eDataType, String initialValue) {
-		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertLfdNr_in_Telegr_Spec_TypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
 	}
 
@@ -6140,6 +7057,60 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigDecimal createMassgebende_Neigung_Mind_150_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.DECIMAL, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMassgebende_Neigung_Mind_150_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.DECIMAL, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createMassgebende_Neigung_Mind_Sig_150_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.DECIMAL, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMassgebende_Neigung_Mind_Sig_150_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.DECIMAL, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createMassgebende_Neigung_Mind_Sig_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.DECIMAL, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMassgebende_Neigung_Mind_Sig_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.DECIMAL, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BigInteger createMax_Leistung_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
 	}
@@ -6176,7 +7147,7 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger createMetallteil_TypeFromString(EDataType eDataType, String initialValue) {
+	public BigInteger createMetallteil_Kategorie_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
 	}
 
@@ -6185,8 +7156,26 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMetallteil_TypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertMetallteil_Kategorie_TypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createMetallteil_Laenge_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMetallteil_Laenge_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
 	}
 
 	/**
@@ -6205,6 +7194,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 */
 	public String convertModulnummer_TypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createMontageabweichung_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMontageabweichung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
 	}
 
 	/**
@@ -6248,6 +7255,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigInteger createNID_BG_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNID_BG_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BigInteger createNID_C_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
 	}
@@ -6276,6 +7301,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	public String convertNID_RBC_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createNID_TSR_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNID_TSR_TypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
 	}
 
@@ -6392,25 +7435,7 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createRBC_SRS_Unterversion_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertRBC_SRS_Unterversion_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BigInteger createRBC_SRS_Version_TypeFromString(EDataType eDataType, String initialValue) {
+	public BigInteger createProjektierungsfall_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
 	}
 
@@ -6419,8 +7444,44 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertRBC_SRS_Version_TypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertProjektierungsfall_TypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createRBC_ETCS_System_Version_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRBC_ETCS_System_Version_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createRBC_SRS_Version_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRBC_SRS_Version_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
 	}
 
 	/**
@@ -6518,6 +7579,42 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigDecimal createSolllaenge_Mind_Sig_150_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSolllaenge_Mind_Sig_150_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createSolllaenge_Mind_Sig_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSolllaenge_Mind_Sig_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String createSonstige_Standortangabe_TypeFromString(EDataType eDataType, String initialValue) {
 		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
@@ -6572,26 +7669,8 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createSRS_Unterversion_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertSRS_Unterversion_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String createSRS_Version_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, initialValue);
 	}
 
 	/**
@@ -6600,7 +7679,7 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * @generated
 	 */
 	public String convertSRS_Version_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
 	}
 
 	/**
@@ -6644,6 +7723,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String createTelegramm_Index_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTelegramm_Index_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BigInteger createTelegrammnummer_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
 	}
@@ -6680,6 +7777,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String createTextmeldung_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTextmeldung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BigDecimal createUeberbrueckung_EV_Unterbrechung_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.SEKUNDE_TYPE, initialValue);
 	}
@@ -6691,6 +7806,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 */
 	public String convertUeberbrueckung_EV_Unterbrechung_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.SEKUNDE_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createUeberwachung_Laenge_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUeberwachung_Laenge_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
 	}
 
 	/**
@@ -6770,6 +7903,42 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigInteger createV_Start_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertV_Start_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createV_Ziel_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertV_Ziel_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BigInteger createV_Zul_Strecke_TypeFromString(EDataType eDataType, String initialValue) {
 		return (BigInteger)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, initialValue);
 	}
@@ -6788,6 +7957,60 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigInteger createVBC_Kennung_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVBC_Kennung_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createVBC_NID_C_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVBC_NID_C_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createVBC_Timer_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVBC_Timer_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String createVerbot_Anhalten_TypeFromString(EDataType eDataType, String initialValue) {
 		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
@@ -6799,6 +8022,42 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 */
 	public String convertVerbot_Anhalten_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createVerkuerzter_Abstand_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVerkuerzter_Abstand_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createVerwendung_Hilfe_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVerwendung_Hilfe_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
 	}
 
 	/**
@@ -6889,6 +8148,24 @@ public class Balisentechnik_ETCSFactoryImpl extends EFactoryImpl implements Bali
 	 */
 	public String convertVLA_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.GESCHWINDIGKEIT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createVorsignalabstand_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.METER_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVorsignalabstand_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
 	}
 
 	/**

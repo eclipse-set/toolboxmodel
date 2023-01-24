@@ -6,6 +6,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.eclipse.set.toolboxmodel.ATO.ATO_Segment_Profile;
+import org.eclipse.set.toolboxmodel.ATO.ATO_TS_Instanz;
+import org.eclipse.set.toolboxmodel.ATO.ATO_Timing_Point;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich;
@@ -42,11 +45,12 @@ import org.eclipse.set.toolboxmodel.Bahnuebergang.Schrankenantrieb;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Verkehrszeichen;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Link;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Knoten;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Richtungsanzeige;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.EV_Modul;
@@ -59,6 +63,8 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Schaltkasten;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Gruppe;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Streckeneigenschaft;
 
@@ -109,6 +115,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Hoehenlinie;
 import org.eclipse.set.toolboxmodel.Geodaten.Hoehenpunkt;
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Knoten;
@@ -129,13 +136,11 @@ import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Verteilpunkt;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Knoten;
-
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Bedien_Anzeige_Element;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone_Element;
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone_Grenze;
-
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Bedien_Anzeige_Element;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone_Element;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone_Grenze;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Element;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente;
@@ -176,6 +181,7 @@ import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Signalgruppe;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Signalgruppe_Zuordnung;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_US_Zuordnung;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Akustik;
@@ -196,6 +202,9 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getAnhang <em>Anhang</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOSegmentProfile <em>ATO Segment Profile</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOTimingPoint <em>ATO Timing Point</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getATOTSInstanz <em>ATOTS Instanz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getAussenelementansteuerung <em>Aussenelementansteuerung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBahnsteigAnlage <em>Bahnsteig Anlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBahnsteigDach <em>Bahnsteig Dach</em>}</li>
@@ -214,7 +223,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBedienPlatz <em>Bedien Platz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBedienStandort <em>Bedien Standort</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBedienZentrale <em>Bedien Zentrale</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBinaerdatei <em>Binaerdatei</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBinaerdaten <em>Binaerdaten</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBlockAnlage <em>Block Anlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBlockElement <em>Block Element</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getBlockStrecke <em>Block Strecke</em>}</li>
@@ -238,6 +247,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getESTWZentraleinheit <em>ESTW Zentraleinheit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSKante <em>ETCS Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSKnoten <em>ETCS Knoten</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSRichtungsanzeige <em>ETCS Richtungsanzeige</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSSignal <em>ETCS Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getETCSWKr <em>ETCSW Kr</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getEVModul <em>EV Modul</em>}</li>
@@ -316,6 +326,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStellBereich <em>Stell Bereich</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStellelement <em>Stellelement</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStrecke <em>Strecke</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStreckeBremsweg <em>Strecke Bremsweg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getStreckePunkt <em>Strecke Punkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getTechnikStandort <em>Technik Standort</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getTechnischerBereich <em>Technischer Bereich</em>}</li>
@@ -334,6 +345,8 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getWKrGspKomponente <em>WKr Gsp Komponente</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getWeichenlaufkette <em>Weichenlaufkette</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getWeichenlaufketteZuordnung <em>Weichenlaufkette Zuordnung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZBSSchutzstrecke <em>ZBS Schutzstrecke</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZBSSignal <em>ZBS Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZL <em>ZL</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLDLPAbschnitt <em>ZLDLP Abschnitt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLDLPFstr <em>ZLDLP Fstr</em>}</li>
@@ -342,6 +355,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLSignalgruppe <em>ZL Signalgruppe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLSignalgruppeZuordnung <em>ZL Signalgruppe Zuordnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLVBus <em>ZLV Bus</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLVBusBesondereAnlage <em>ZLV Bus Besondere Anlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZLVBusUSZuordnung <em>ZLV Bus US Zuordnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZN <em>ZN</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.Container_AttributeGroup#getZNAkustik <em>ZN Akustik</em>}</li>
@@ -376,6 +390,56 @@ public interface Container_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	EList<Anhang> getAnhang();
+
+	/**
+	 * Returns the value of the '<em><b>ATO Segment Profile</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.ATO.ATO_Segment_Profile}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Infrastrukturabschnitte mit definiertem Beginn und Ende sowie zugehörigen Infrastrukturangaben bzw. Eigenschaften für den atomatischen Bahnbetrieb (ATO). Die Definition der Richtung wird aus der zugehörigen ETCS-Kante übernommen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ATO Segment Profile</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ATOSegmentProfile()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ATO_Segment_Profile'"
+	 * @generated
+	 */
+	EList<ATO_Segment_Profile> getATOSegmentProfile();
+
+	/**
+	 * Returns the value of the '<em><b>ATO Timing Point</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.ATO.ATO_Timing_Point}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Definierter Punkt in den Infrastrukturdaten für ATO (Segment Profile), an dem betriebliche Vorgaben definiert werden können. Diese betrieblichen Vorgaben werden entweder direkt aus dem Fahrplan abgeleitet oder durch dispositive Handlungen definiert, z. B. Betriebshalte oder Verkehrshalte einfügen oder auslassen, Beschleunigen oder Verlangsamung der Fahrt (frühere/spätere Zeit für die Erreichung des Timing Points) und über das Journey Profile an ATO-OB kommandiert. 
+	 * Darüber hinaus kann an einem Timing Point die geplante betriebliche Fahrplanlage eines Zuges mit der tatsächlichen betrieblichen Lage des Zuges verglichen werden.
+	 * Die Position des TP im Segment Profile muss über die Topologie ermittelt werden. Der TP besitzt keine Wirkrichtung.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ATO Timing Point</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ATOTimingPoint()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ATO_Timing_Point'"
+	 * @generated
+	 */
+	EList<ATO_Timing_Point> getATOTimingPoint();
+
+	/**
+	 * Returns the value of the '<em><b>ATOTS Instanz</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.ATO.ATO_TS_Instanz}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Zentrale Komponente für einen ATO-Infrastrukturbereich, die für die gesamten ATO-relevanten Infrastrukturdaten, insbesondere Segment Profiles und deren Verteilung an die ATO-Fahrzeugkomponenten (ATO-OB), verantwortlich ist.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ATOTS Instanz</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ATOTSInstanz()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ATO_TS_Instanz'"
+	 * @generated
+	 */
+	EList<ATO_TS_Instanz> getATOTSInstanz();
 
 	/**
 	 * Returns the value of the '<em><b>Aussenelementansteuerung</b></em>' containment reference list.
@@ -431,7 +495,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Parallel zum Gleis verlaufende Kante eines Bahnsteigs, die für den Fahrgastwechsel nutzbar ist. Für die LST-Planung sind Beginn und Ende der genutzten Bahnsteigkante z. B. für die Zugbeeinflussung (PZB 90) sowie die Festlegung von Signalstandorten und Gefahrpunkten maßgebend. Die Baulänge der Bahnsteigkante wird im Datenmodell durch die Länge des Bereichsobjekts Bahnsteig_Kante abgebildet. Eventuell daran anschließende Tiefbauobjekte (auch stillgelegte Bahnsteigbereiche) können als Ingenieurbauwerke (momentan noch nicht modelliert) abgebildet werden. DB-Regelwerk Darstellung einer Doppellinie im sicherungstechnischen Lageplan
+	 * Parallel zum Gleis verlaufende Kante eines Bahnsteigs, die für den Fahrgastwechsel nutzbar ist (Nettobaulänge). Für die LST-Planung sind Beginn und Ende z. B. für die Zugbeeinflussung (PZB 90) sowie die Festlegung von Signalstandorten und Gefahrpunkten maßgebend. Die Nettobaulänge der Bahnsteigkante wird im Datenmodell durch die Länge des Bereichsobjekts Bahnsteig_Kante abgebildet. Eventuell daran anschließende Tiefbauobjekte (auch stillgelegte Bahnsteigbereiche) können als Ingenieurbauwerke (Technischer_Bereich) abgebildet werden. DB-Regelwerk Darstellung einer Doppellinie im sicherungstechnischen Lageplan, Ril 413.0507
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bahnsteig Kante</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_BahnsteigKante()
@@ -463,7 +527,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Bauelement zur Übertragung von Telegrammen an ETCS-Fahrzeugeinrichtungen. Gesteuerte Balisen sind anhand des Verweises LEU_Ausgang.ID_Balise auf diese Balise zu erkennen.
+	 * Bauelement zur Übertragung von Telegrammen an ETCS-Fahrzeugeinrichtungen. Gesteuerte Balisen sind anhand des Verweises LEU_Modul.LEU_Modul_Ausgang.ID_Balise auf diese Balise zu erkennen. Bei Erstellung des PT 1 ESG sind neben dem Datenpunkt auch die entsprechende Anzahl von Balisen anzulegen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Balise</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Balise()
@@ -511,7 +575,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zuordnung von Stellelementen zu einer örtlichen Bedieneinrichtung und Abbildung von Meldern, Tasten und Schaltern einer örtlichen Bedieneinrichtung. 
+	 * Zuordnung von Stellelementen zu einer örtlichen Bedieneinrichtung und Abbildung von Meldern, Tasten und Schaltern einer örtlichen Bedieneinrichtung.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bedien Anzeige Element</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_BedienAnzeigeElement()
@@ -543,7 +607,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Abbildung einer örtlichen Bedieneinrichtung (Stelltafel, Bedienpult etc.) als physisches Element der Außenanlage. Bedienbare Elemente, die nicht von einer ESTW-Bedienoberfläche bedient werden, sind durch eine entsprechende Bedieneinrichtung umstellbar. Weiterhin sind in der Bedieneinrichtung Tasten für die Kommunikation zwischen özF und Bediener untergebracht. Im Objekt Bedien_Einrichtung_Oertlich wird die physische Ausbildung der Bedieneinrichtung abgebildet. Die dazugehörigen Melder, Schalter und Taster sind im Objekt Bedien Anzeige Element modelliert. Die logischen Funktionen einer Bedieneinrichtung für Nahbedienbereiche und Bahnübergänge befinden sich in den Objekten „BUE Bedien Anzeige Element“ oder „NB Bedien Anzeige Element“. Die Bedien_Einrichtung_Oertlich kommt zur Anwendung bei: Nahbedienbereichen Bahnübergängen (HET, UT, etc.) Gefahrschaltern (Berliner S-Bahn) (noch nicht abschließend modelliert) Schlüsselschaltern- und Tastern (Zustimmung, Gleisfreimeldung, Zugschlussmeldung, etc.) ZP 10/9 –Bediensäulen örtliche Abgabe von Zugschlussmeldungen und Bedieneinrichtungen an Schnittstellen zum Zugleitbetrieb. Bedieneinrichtungen von elektrisch ortsgestellten Weichen (EOW) werden mit diesem Objekt nicht modelliert. 
+	 * Abbildung einer örtlichen Bedieneinrichtung (Stelltafel, Bedienpult etc.) als physisches Element der Außenanlage. Bedienbare Elemente, die nicht von einer ESTW-Bedienoberfläche bedient werden, sind durch eine entsprechende Bedieneinrichtung umstellbar. Weiterhin sind in der Bedieneinrichtung Tasten für die Kommunikation zwischen özF und Bediener untergebracht. Im Objekt Bedien_Einrichtung_Oertlich wird die physische Ausbildung der Bedieneinrichtung abgebildet. Die dazugehörigen Melder, Schalter und Taster sind im Objekt Bedien Anzeige Element modelliert. Die logischen Funktionen einer Bedieneinrichtung für Nahstellbereiche und Bahnübergänge befinden sich in den Objekten „BUE Bedien Anzeige Element“ oder „NB Bedien Anzeige Element“. Die Bedien_Einrichtung_Oertlich kommt zur Anwendung bei: Nahstellbereichen, Bahnübergängen (HET, UT, etc.), Schlüsselschaltern- und Tastern (Zustimmung, Gleisfreimeldung, Zugschlussmeldung, etc.), ZP 10/9-Bediensäulen, örtlicher Abgabe von Zugschlussmeldungen und Bedieneinrichtungen an Schnittstellen zum Zugleitbetrieb. Bedieneinrichtungen von elektrisch ortsgestellten Weichen (EOW) werden mit diesem Objekt nicht modelliert.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bedien Einrichtung Oertlich</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_BedienEinrichtungOertlich()
@@ -591,7 +655,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zusammenfassung der Eigenschaften, die sich jeweils nur auf ein Bild der Bedienoberfläche beziehen. Eigenschaften, die alle Bilder betreffen, sind unter Bedien Oberflaeche eingebunden. 
+	 * Zusammenfassung der Eigenschaften, die sich jeweils nur auf ein Bild der Bedienoberfläche beziehen. Eigenschaften, die alle Bilder betreffen, sind unter Bedien Oberflaeche eingebunden.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bedien Oberflaeche Bild</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_BedienOberflaecheBild()
@@ -666,20 +730,20 @@ public interface Container_AttributeGroup extends EObject {
 	EList<Bedien_Zentrale> getBedienZentrale();
 
 	/**
-	 * Returns the value of the '<em><b>Binaerdatei</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei}.
+	 * Returns the value of the '<em><b>Binaerdaten</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Binärdatei mit betriebssystemnahen Metadaten (z. B. Dateiname, Dateityp).
+	 * Binärdatenstrom oder Binärdatei mit zugehörigen betriebssystemnahen Metadaten (z. B. Dateiname, Dateityp).
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Binaerdatei</em>' containment reference list.
-	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Binaerdatei()
+	 * @return the value of the '<em>Binaerdaten</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Binaerdaten()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Binaerdatei'"
+	 *        extendedMetaData="kind='element' name='Binaerdaten'"
 	 * @generated
 	 */
-	EList<Binaerdatei> getBinaerdatei();
+	EList<Binaerdaten> getBinaerdaten();
 
 	/**
 	 * Returns the value of the '<em><b>Block Anlage</b></em>' containment reference list.
@@ -735,7 +799,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Zurzeit beschränken sich die Angaben auf den im Lageplan darzustellenden Teil des BÜ. Zu einem späteren Zeitpunkt werden die spezifischen BÜ-Sicherungsanlagen wie Lichtzeichen, Andreaskreuze, Schrankenantriebe, Belag im BÜ-Bereich etc. in das Modell aufgenommen. Gleiches gilt für die Einschaltstreckenberechnung sowie die Beeinflussungsberechnung. Das Objekt wird auf den Kreuzungspunkt (in der Mitte der kreuzenden Straße) verortet; damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815 819.12xx Die konkreten Bezüge zum Regelwerk werden in den einzelnen Attributen angegeben. 
+	 * Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Das Objekt wird auf den Kreuzungspunkt gem. Ril 815.2000 verortet, wobei die punktförmige Verortung auf alle zum BÜ gehörigen Gleisachsen erfolgen soll. Damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815, 819.12xx. Die konkreten Bezüge zum Regelwerk werden für die einzelnen Attributen angegeben.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>BUE Anlage</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_BUEAnlage()
@@ -847,7 +911,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Logisches Objekt zur Zuordnung zwischen BUE Einschaltung und zugehörigem BUE Gleisbezogener Gefahrraum. Im Regelfall wirkt eine BUE_Einschaltung direkt auf einen gleisbezogenen Gefahrraum; das Zuordnungsobjekt wäre nicht erforderlich. Liegt jedoch zwischen BUE_Einschaltung und dem BÜ eine Weichenverbindung, wird eine Zuordnung der BUE_Einschaltung auf mehrere gleisbezogene Gefahrräume notwendig. Diese Verbindung stellt das Zuordnungsobjekt her. Zur Vereinheitlichung wurde auf eine Choice zwischen direktem Verweis von BUE_Einschaltung auf BUE_Gleisbezogener_Gefahrraum und den Verweisen durch das Zuordnungsobjekt verzichtet. DB-Regelwerk Dieser Anwendungsfall ist im Regelwerk der DB AG nicht explizit beschrieben. 
+	 * Logisches Objekt zur Zuordnung zwischen BUE Einschaltung und zugehörigem BUE Gleisbezogener Gefahrraum. Im Regelfall wirkt eine BUE_Einschaltung direkt auf einen gleisbezogenen Gefahrraum; das Zuordnungsobjekt wäre nicht erforderlich. Liegt jedoch zwischen BUE_Einschaltung und dem BÜ eine Weichenverbindung, wird eine Zuordnung der BUE_Einschaltung auf mehrere gleisbezogene Gefahrräume notwendig. Diese Verbindung stellt das Zuordnungsobjekt her. Zur Vereinheitlichung wurde auf eine Choice zwischen direktem Verweis von BUE_Einschaltung auf BUE_Gleisbezogener_Gefahrraum und den Verweisen durch das Zuordnungsobjekt verzichtet. DB-Regelwerk Dieser Anwendungsfall ist im Regelwerk der DB AG nicht explizit beschrieben.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>BUE Einschaltung Zuordnung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_BUEEinschaltungZuordnung()
@@ -975,7 +1039,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Beeinflussungspunkt bestehend aus einer Einzelbalise oder Balisengruppe und ggf. einer LEU. In europäischen Spezifikationen wird der Begriff "Balisengruppe" auch synonym für "Datenpunkt" verwendet. Ein ungesteuerter Datenpunkt besteht ausschließlich aus ungesteuerten Balisen (Festdatenbalisen). Die Attributgruppe darf nur ausgewählt werden, wenn ausschließlich ESG-Telegramme enthalten sind.
+	 * Beeinflussungspunkt bestehend aus einer Einzelbalise oder Balisengruppe und ggf. einer LEU. In europäischen Spezifikationen wird der Begriff "Balisengruppe" auch synonym für "Datenpunkt" verwendet. Ein ungesteuerter Datenpunkt besteht ausschließlich aus ungesteuerten Balisen (Festdatenbalisen). Die Attributgruppe DP_Typ_GESG darf nur ausgewählt werden, wenn ausschließlich ESG-Telegramme enthalten sind.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Datenpunkt</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Datenpunkt()
@@ -1050,12 +1114,29 @@ public interface Container_AttributeGroup extends EObject {
 	EList<ETCS_Knoten> getETCSKnoten();
 
 	/**
+	 * Returns the value of the '<em><b>ETCS Richtungsanzeige</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Richtungsanzeige}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Abbildung der Vorgaben zur Richtungsanzeige bei ETCS L2. DB-Regelwerk Ril 819.1344, 4.3.3 (74)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ETCS Richtungsanzeige</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ETCSRichtungsanzeige()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ETCS_Richtungsanzeige'"
+	 * @generated
+	 */
+	EList<ETCS_Richtungsanzeige> getETCSRichtungsanzeige();
+
+	/**
 	 * Returns the value of the '<em><b>ETCS Signal</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zusatzangaben für Signale im Zusammenhang mit ETCS L2.
+	 * Zusatzangaben für reale Signale im Zusammenhang mit ETCS L2.
+	 * Die Signalart "sonstiges Lichtsperrsignal" (sLs) für Lichtsperrsignale, an denen keine Zugstraßen beginnen oder enden, muss aus dem Fehlen entsprechender Zugstraßen abgeleitet werden.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ETCS Signal</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ETCSSignal()
@@ -1167,7 +1248,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Technische Anlage, die einen Gleisabschnitt auf Freisein von Schienenfahrzeugen überwacht; entspricht im gewöhnlichen Sprachgebrauch dem Freimeldeabschnitt. Eine FMA_Anlage wird alleinstehend zur Fahrwegfreiprüfung bzw. zur Freiprüfung des Flankenschutzraumes genutzt sowie in Auswertung der Reihenfolge von Belegung und Wieder-Frei-Werden zur Erfassung einer Fahrt und damit zur Auflösung von Teilfahrstraßen. Auch andere Schaltvorgänge können durch eine FMA_Anlage ausgelöst werden. Die FMA_Anlage hat mindestens eine Außenanlage (z. B. Drosselspule, Achszählpunkt) und beansprucht Anteile an einer Gleisfreimelde-Innenanlage (z. B. Motorrelaisgruppe, Achszählrechner). DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Gleisfreimeldepläne (Achszählübersichtsplan, Gleisisolierplan); Freimeldetabelle. 
+	 * Technische Anlage, die einen Gleisabschnitt auf Freisein von Schienenfahrzeugen überwacht; entspricht im gewöhnlichen Sprachgebrauch dem Freimeldeabschnitt. Eine FMA_Anlage wird alleinstehend zur Fahrwegfreiprüfung bzw. zur Freiprüfung des Flankenschutzraumes genutzt sowie in Auswertung der Reihenfolge von Belegung und Wieder-Frei-Werden zur Erfassung einer Fahrt und damit zur Auflösung von Teilfahrstraßen. Auch andere Schaltvorgänge können durch eine FMA_Anlage ausgelöst werden. Die FMA_Anlage hat mindestens eine Außenanlage (z. B. Drosselspule, Achszählpunkt) und beansprucht Anteile an einer Gleisfreimelde-Innenanlage (z. B. Motorrelaisgruppe, Achszählrechner). DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Gleisfreimeldepläne (Achszählübersichtsplan, Gleisisolierplan); Freimeldetabelle.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>FMA Anlage</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_FMAAnlage()
@@ -1183,7 +1264,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Ergänzung einer FMA Komponente bei Gleisstromkreisen um die Bauelemente zur Ein- und Ausspeisung. FMA_Elemente werden rechts und/oder links der FMA_Komponente direkt den angrenzenden FMA_Anlagen zugewiesen. Das Objekt ist bei Achszählpunkten nicht erforderlich. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisisolierplan, Freimeldetabelle. 
+	 * Ergänzung einer FMA Komponente bei Gleisstromkreisen um die Bauelemente zur Ein- und Ausspeisung. FMA_Elemente werden rechts und/oder links der FMA_Komponente direkt den angrenzenden FMA_Anlagen zugewiesen. Das Objekt ist bei Achszählpunkten nicht erforderlich. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisisolierplan, Freimeldetabelle.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>FMA Element</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_FMAElement()
@@ -1199,7 +1280,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Freimeldeabschnittsgrenze (Isolierstoß, elektrischer Stoß, Achszählpunkt). Die FMA_Komponente wird dem Punkt im Gleis zugeordnet, bis zu dem die Erkennung einer Belegung gemäß Anwendungsrichtlinien als gesichert gilt. Die zu den zugehörigen Gleisabschnitten gehörenden Bereichsobjekte Gleis Abschnitt müssen deshalb exakt an diesem Punktobjekt enden. Zur Ermittlung der seitlichen Lage einer FMA_Komponente siehe Modellierung Gleisfreimeldung. Eine FMA_Komponente kann nur an einer Seite mindestens einen Freimeldeabschnitt oder beidseitig jeweils mindestens einen Freimeldeabschnitt begrenzen. Bei überlappenden Freimeldeabschnittsgrenzen (z.B. am Übergang von FTGS- zu Achszähl- Gleisfreimeldeanlagen) ist jede Freimeldeabschnittsgrenze für sich als FMA_Komponente zu erfassen. Direkt auf Höhe, rechts und/oder links der Freimeldeabschnittsgrenze können sich technische Anlagen für die Gleisfreimeldung befinden, siehe dazu FMA Element. Das Befahren einer FMA_Komponente kann auch weitere Schaltvorgänge auslösen, siehe dazu Schaltmittel Zuordnung. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Achszählübersichtsplan; Freimeldetabelle; Achszähltabelle. 
+	 * Freimeldeabschnittsgrenze (Isolierstoß, elektrischer Stoß, Achszählpunkt). Die FMA_Komponente wird dem Punkt im Gleis zugeordnet, bis zu dem die Erkennung einer Belegung gemäß Anwendungsrichtlinien als gesichert gilt. Die zu den zugehörigen Gleisabschnitten gehörenden Bereichsobjekte Gleis Abschnitt müssen deshalb exakt an diesem Punktobjekt enden. Zur Ermittlung der seitlichen Lage einer FMA_Komponente siehe Modellierung Gleisfreimeldung. Eine FMA_Komponente kann nur an einer Seite mindestens einen Freimeldeabschnitt oder beidseitig jeweils mindestens einen Freimeldeabschnitt begrenzen. Bei überlappenden Freimeldeabschnittsgrenzen (z.B. am Übergang von FTGS- zu Achszähl- Gleisfreimeldeanlagen) ist jede Freimeldeabschnittsgrenze für sich als FMA_Komponente zu erfassen. Direkt auf Höhe, rechts und/oder links der Freimeldeabschnittsgrenze können sich technische Anlagen für die Gleisfreimeldung befinden, siehe dazu FMA Element. Das Befahren einer FMA_Komponente kann auch weitere Schaltvorgänge auslösen, siehe dazu Schaltmittel Zuordnung. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan; Achszählübersichtsplan; Freimeldetabelle; Achszähltabelle.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>FMA Komponente</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_FMAKomponente()
@@ -1279,7 +1360,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen über den zugrunde liegenden Fstr Fahrweg ist nicht möglich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Außerdem muss für Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden und ob sie Flankenschutz anfordern sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese über Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spaltenüberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"
+	 * Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen über den zugrunde liegenden Fstr Fahrweg ist nicht möglich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Außerdem muss für Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese über Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spaltenüberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: "Weichen, Kreuzungen, Gleissperren"
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fstr DWeg WKr</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_FstrDWegWKr()
@@ -1311,7 +1392,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Nichthaltfallabschnitt (auch: Haltfallverhinderungsabschnitt). Im Gegensatz zur bisherigen Praxis der LST-Planung, den Haltfallabschnitt zu planen, werden im Datenmodell nur die Nichthaltfallabschnitte für jede Zugstraße geplant. In der Regel ist es einer, selten mehrere. DB-Regelwerk Haltfallabschnitt bisher: Zugstraßentabelle, Spalte 6: Signalhaltfall
+	 * Nichthaltfallabschnitt (auch: Haltfallverhinderungsabschnitt). Im Gegensatz zur bisherigen Praxis der LST-Planung, den Haltfallabschnitt zu planen, werden im Datenmodell nur die Nichthaltfallabschnitte für jeden Fahrweg geplant. In der Regel ist es einer, selten mehrere. DB-Regelwerk Haltfallabschnitt bisher: Zugstraßentabelle, Spalte 6: Signalhaltfall
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fstr Nichthaltfall</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_FstrNichthaltfall()
@@ -1375,7 +1456,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zug- oder Rangierstraße. Jeder Zugstraße ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstraßen mit mehreren Durchrutschwegen, so werden dafür mehrere Zugstraßen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstraßen geplant. Der hiermit verknüpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstraße (Fstr_Art==ZB) über die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstraßen (Fstr_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der Länge Null entstehen, wenn die zweite Teilblockfahrstraße nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstraße. Fahrstraßen über eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstraßen (Fstr_Art==ZT/ZTU/RT/RTU) geplant. Kann die erste Teilfahrstraße mit mehreren weiteren Teilfahrstraßen fortgesetzt werden, so muss für jede geplante Kombination eine eigene Instanz der ersten Teilfahrstraße angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Die Verknüpfung zur zweiten Teilfahrstraße geschieht über Fstr_Zug_Rangier.ID Fstr Folgeabhaengigkeit. Eine Mittelweichenteilfahrstraße besitzt keinen Durchrutschweg. Eine explizite Verknüpfung von Mittelweichenteilfahrstraßen untereinander und mit der Zugstraße erfolgt nicht, da sich diese über die Topologie und insbesondere über Start und Ziel ergeben. Eine Rangierstraße besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstraße werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschließen. Gruppenausfahrten werden als Zugstraßen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstraße ist somit eindeutig erkennbar. DB-Regelwerk Zugstraßentabelle (eine Zeile), Rangierstraßentabelle (eine Zeile), Mittelweichenteilfahrstraßentabelle (eine Zeile). 
+	 * Zug- oder Rangierstraße. Jeder Zugstraße ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstraßen mit mehreren Durchrutschwegen, so werden dafür mehrere Zugstraßen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstraßen geplant. Der hiermit verknüpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstraße (Fstr_Zug_Art==ZB) über die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstraßen (Fstr_Zug_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der Länge Null entstehen, wenn die zweite Teilblockfahrstraße nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstraße. Fahrstraßen über eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstraßen (Fstr_Zug_Art==ZT/ZTU; Fstr_Rangier_Art==RT/RTU) geplant. Kann die erste Teilfahrstraße mit mehreren weiteren Teilfahrstraßen fortgesetzt werden, so muss für jede geplante Kombination eine eigene Instanz der ersten Teilfahrstraße angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Eine Mittelweichenteilfahrstraße besitzt keinen Durchrutschweg. Eine explizite Verknüpfung von Mittelweichenteilfahrstraßen untereinander und mit der Zugstraße erfolgt nicht, da sich diese über die Topologie und insbesondere über Start und Ziel ergeben. Eine Rangierstraße besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstraße werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschließen. Gruppenausfahrten werden als Zugstraßen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstraße ist somit eindeutig erkennbar. DB-Regelwerk Zugstraßentabelle (eine Zeile), Rangierstraßentabelle (eine Zeile), Mittelweichenteilfahrstraßentabelle (eine Zeile).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fstr Zug Rangier</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_FstrZugRangier()
@@ -1535,7 +1616,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Ständig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergeführt sein. Er wird auf den Punkt verortet, der die Grenze der möglichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, fällt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem ergänzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der möglichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet wodurch der seitliche Abschand immer 0.000 sein muss. 
+	 * Ständig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergeführt sein. Er wird auf den Punkt verortet, der die Grenze der möglichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, fällt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem ergänzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der möglichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet, sodass die Angabe des seitlichen Abstands bzw. der seitlichen Lage entfällt.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gleis Abschluss</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_GleisAbschluss()
@@ -1567,7 +1648,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Klassifizierung des Gleises aus betrieblicher Sicht. Es erfolgt die Unterscheidung in Haupt- und Nebengleise in einem Bahnhof, sowie die Abgrenzung von Strecken und Anschlussgleisen. 
+	 * Klassifizierung des Gleises aus betrieblicher Sicht. Es erfolgt die Unterscheidung in Haupt- und Nebengleise in einem Bahnhof, sowie die Abgrenzung von Strecken und Anschlussgleisen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gleis Art</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_GleisArt()
@@ -1583,7 +1664,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der während einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten. 
+	 * Markierung eines Gleisbereiches als Baubereich. Mit diesem Objekt wird der Bereich markiert, der während einer Planung als Baubereich verwendet wird. Die Topologie des Baubereiches und die verorteten Objekte bleiben erhalten.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gleis Baubereich</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_GleisBaubereich()
@@ -1599,7 +1680,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Träger der betrieblichen Bezeichnung eines Gleises. Ein Gleis erhält dann eine Bezeichnung, wenn es für die betriebliche Nutzung benötigt wird. Topologische Knoten (z. B. Weichen) unterbrechen nicht die Gleisbezeichnung. Für die durchgehenden Hauptgleise in einem Bahnhof wird das Bereichsobjekt für das Gleis in der Regel von einem Einfahrsignal bis zum Einfahrsignal der Gegenrichtung modelliert. Wenn das Gleis hinsichtlich der betrieblichen Bezeichnung geteilt ist (z.B. Gleis 1 und Gleis 21) sind getrennte Bereichsobjekte für diese Gleise anzulegen. Weitere Bezeichnungen von Bahnhofsgleisen werden in der Regel zwischen topologischen Knoten gebildet, wobei auch weitere Knoten enthalten sein können. Gleise, die aus betrieblicher Sicht keine Bezeichnung benötigen (z. B. Gleisverbindungen), erhalten keine Gleisbezeichnung. Streckengleise werden in der Regel zwischen den Bahnhofsgrenzen (ggf. auch andere Zugmeldestellen) durchgehend bezeichnet. Die Klammersetzung der Bezeichung von Streckengleisen ist Bestandteil der Bezeichung das Steckengleises. Die Attributgruppe Gleis_Bezeichnung_Allg soll nach Version 1.8.0 entfernt und daher nicht mehr verwendet werden.
+	 * Träger der betrieblichen Bezeichnung eines Gleises. Ein Gleis erhält dann eine Bezeichnung, wenn es für die betriebliche Nutzung benötigt wird. Topologische Knoten (z. B. Weichen) unterbrechen nicht die Gleisbezeichnung. Für die durchgehenden Hauptgleise in einem Bahnhof wird das Bereichsobjekt für das Gleis in der Regel von einem Einfahrsignal bis zum Einfahrsignal der Gegenrichtung modelliert. Wenn das Gleis hinsichtlich der betrieblichen Bezeichnung geteilt ist (z.B. Gleis 1 und Gleis 21) sind getrennte Bereichsobjekte für diese Gleise anzulegen. Weitere Bezeichnungen von Bahnhofsgleisen werden in der Regel zwischen topologischen Knoten gebildet, wobei auch weitere Knoten enthalten sein können. Gleise, die aus betrieblicher Sicht keine Bezeichnung benötigen (z. B. Gleisverbindungen), erhalten keine Gleisbezeichnung. Streckengleise werden in der Regel zwischen den Bahnhofsgrenzen (ggf. auch andere Zugmeldestellen) durchgehend bezeichnet. Die Klammersetzung der Bezeichnung von Streckengleisen ist Bestandteil der Bezeichnung das Steckengleises.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gleis Bezeichnung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_GleisBezeichnung()
@@ -1679,7 +1760,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Örtliche Höhe des Bezugspunkts gemäß des Höhensystems. Liegt der Höhenpunkt innerhalb des zugehörigen Gleises, wird dieser mit einem Seitlichen Abstand im Punkt_Objekt von 0.000 angegeben und gibt die Höhe des Gleises in Meter gemäß Höhensystem an. Wird eine seitlicher Abstand ungleich 0.000 angegeben, so handelt es sich um einen sonstigen Höhenpunkt, der nicht die Höhenlage des Gleises angibt. 
+	 * Örtliche Höhe des Bezugspunkts in Metern gemäß Höhensystem. Liegt der Höhenpunkt innerhalb des zugehörigen Gleises, entfällt die Angabe eines seitlichen Abstands bzw. einer seitlichen Lage. Wird ein seitlicher Abstand ungleich 0.000 angegeben, so handelt es sich um einen sonstigen Höhenpunkt, der nicht die Höhenlage des Gleises angibt. Ein Höhenpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Hoehenpunkt</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Hoehenpunkt()
@@ -1819,11 +1900,11 @@ public interface Container_AttributeGroup extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>NB</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienbereich.NB}.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienung.NB}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Nahbedienbereich. Teilbereich innerhalb eines ESTW-Stellbereichs, für den zeitweise die Zuständigkeit vom Fahrdienstleiter an einen örtlichen Bediener zur Durchführung von Rangierbewegungen abgegeben werden kann. Die Kommunikation zwischen Fahrdienstleiter und Bediener erfolgt über entsprechende Bedieneinrichtung(en). Mit Abgabe der Nahbedienung hat der Fahrdienstleiter auf diesen Bereich keinen Zugriff; die Verantwortung liegt beim örtlichen Bediener. Mit Rückgabe der Nahbedienung geht die Verantwortung vom Bediener wieder an den Fahrdienstleiter. Für die Rückgabe der Nahbedienung können bestimmte Voraussetzungen erforderlich sein. Für die Abgabe bzw. Rückgabe der Nahbedienung werden in der Literatur auch die Begriffe "Einschalten" und "Ausschalten" verwendet. Der Nahbedienbereich muss vom übrigen Stellwerksbereich durch Flankenschutzmaßnahmen abgegrenzt werden. Jeder Nahbedienbereich hat immer mindestens eine NB Zone. DB-Regelwerk Für die Planung von Nahbedienbereichen exisitert bei der DB AG kein Regelwerk.
+	 * Nahstellbereich. Teilbereich innerhalb eines ESTW-Stellbereichs, für den zeitweise die Zuständigkeit vom Fahrdienstleiter an einen örtlichen Bediener zur Durchführung von Rangierbewegungen abgegeben werden kann. Die Kommunikation zwischen Fahrdienstleiter und Bediener erfolgt über entsprechende Bedieneinrichtung(en). Mit Abgabe der Nahbedienung hat der Fahrdienstleiter auf diesen Bereich keinen Zugriff; die Verantwortung liegt beim örtlichen Bediener. Mit Rückgabe der Nahbedienung geht die Verantwortung vom Bediener wieder an den Fahrdienstleiter. Für die Rückgabe der Nahbedienung können bestimmte Voraussetzungen erforderlich sein. Für die Abgabe bzw. Rückgabe der Nahbedienung werden in der Literatur auch die Begriffe "Einschalten" und "Ausschalten" verwendet. Der Nahstellbereich muss vom übrigen Stellwerksbereich durch Flankenschutzmaßnahmen abgegrenzt werden. Jeder Nahstellbereich hat immer mindestens eine NB Zone. Bei einem Nahstellbereich mit der Funktionalität eines abgesetzten "Rangierstellwerkes" (NB-R) können Weichen mit elektrischem Antrieb umgestellt und innerhalb des NB Fahrten mit Rangierstraßen durchgeführt werden. DB-Regelwerk Für die Planung von Nahstellbereichen exisitert bei der DB AG kein Regelwerk.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>NB</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_NB()
@@ -1835,7 +1916,7 @@ public interface Container_AttributeGroup extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>NB Bedien Anzeige Element</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Bedien_Anzeige_Element}.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienung.NB_Bedien_Anzeige_Element}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -1851,11 +1932,11 @@ public interface Container_AttributeGroup extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>NB Zone</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone}.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Nahbedienbereichszone. Jeder Nahbedienbereich hat mindestens eine Zone; es sind auch mehrere Zonen möglich. Die Zonen können voneinander unabhängig nebeneinander liegen, sich überlappen oder eine Zone kann eine kleinere "Teilmenge" einer größeren Zone sein. Als spezieller Fall ist auch die Vereinigung von zwei nebeneinander liegenden Zonen möglich. Für jede Zone werden eigene Grenzen zum angrenzenden Bereich (ESTW, NB, Ortstellbereich) festgelegt. DB-Regelwerk Für die Planung von Nahbedienzonen exisitert bei der DB AG kein Regelwerk. Die Angabe findet sich in der Nahbedienungstabelle, Spalte 1.
+	 * Nahstellbereichszone. Jeder Nahstellbereich hat mindestens eine Zone; es sind auch mehrere Zonen möglich. Die Zonen können voneinander unabhängig nebeneinander liegen, sich überlappen oder eine Zone kann eine kleinere "Teilmenge" einer größeren Zone sein. Als spezieller Fall ist auch die Vereinigung von zwei nebeneinander liegenden Zonen möglich. Für jede Zone werden eigene Grenzen zum angrenzenden Bereich (ESTW, NB, Ortstellbereich) festgelegt. DB-Regelwerk Für die Planung von Nahbedienzonen exisitert bei der DB AG kein Regelwerk. Die Angabe findet sich in der Nahbedienungstabelle, Spalte 1.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>NB Zone</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_NBZone()
@@ -1867,7 +1948,7 @@ public interface Container_AttributeGroup extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>NB Zone Element</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone_Element}.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone_Element}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -1883,7 +1964,7 @@ public interface Container_AttributeGroup extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>NB Zone Grenze</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienbereich.NB_Zone_Grenze}.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Nahbedienung.NB_Zone_Grenze}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -1935,7 +2016,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Hilfsobjekt zur Sättigung von Verweisen an der äußeren Grenze des Betrachtungsbereichs einer Einzelplanung. Die Validierung einer XML-Datei ist nur gesamthaft möglich. Somit müssen Planungs- und Betrachtungsbereich gleichermaßen valide sein. An der äußeren Grenze des Betrachtungsbereichs sind jedoch u. U. nicht mehr alle Zielobjekte von Verweisen vorhanden, da der Betrachtungsbereich nicht beliebig ausgeweitet werden kann und soll. Unter der Maßgabe einer validen XML besteht jedoch ein Zwang zur Sättigung von Verweisen. Das Proxy_Objekt schafft diesbezüglich eine Lösung für alle Objekte des LST-Datenmodells. In den Bestandsdaten der LST-Datenbank dürfen keine Proxyobjekte vorhanden sein. 
+	 * Hilfsobjekt zur Sättigung von Verweisen an der äußeren Grenze des Betrachtungsbereichs einer Einzelplanung. Die Validierung einer XML-Datei ist nur gesamthaft möglich. Somit müssen Planungs- und Betrachtungsbereich gleichermaßen valide sein. An der äußeren Grenze des Betrachtungsbereichs sind jedoch u. U. nicht mehr alle Zielobjekte von Verweisen vorhanden, da der Betrachtungsbereich nicht beliebig ausgeweitet werden kann und soll. Unter der Maßgabe einer validen XML besteht jedoch ein Zwang zur Sättigung von Verweisen. Das Proxy_Objekt schafft diesbezüglich eine Lösung für alle Objekte des LST-Datenmodells. In den Bestandsdaten der LST-Datenbank dürfen keine Proxyobjekte vorhanden sein.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Proxy Objekt</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ProxyObjekt()
@@ -1967,7 +2048,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zuordnung von PZB Element zu einem Signal, einer Fahrstraße oder auch anderen Objekten, die im Bezug zum PZB_Element stehen. Der Verweis von einem PZB Element über das Zuordnungsobjekt auf ein Signal ist dabei immer gefüllt. Die Verknüpfung mit einer Fahrstraße (nur Zugstraßen sind relevant) oder weiteren Objekten (INA-Berechnungsrelevante Objekte) ist fallbezogen notwendig. Beispiele für die Zuordnung sind unter ID Fstr Zug Rangier zu finden. DB-Regelwerk Eintrag in der Gleismagnettabelle; die Zuordnung zu einzelnen Fahrstraßen wird heute über Fußnoten gelöst. 
+	 * Zuordnung von PZB Element zu einem Signal, einer Fahrstraße oder auch anderen Objekten, die im Bezug zum PZB_Element stehen. Der Verweis von einem PZB Element über das Zuordnungsobjekt auf ein Signal ist dabei immer gefüllt. Die Verknüpfung mit einer Fahrstraße (nur Zugstraßen sind relevant) oder weiteren Objekten (INA-Berechnungsrelevante Objekte) ist fallbezogen notwendig. Beispiele für die Zuordnung sind unter ID Fstr Zug Rangier zu finden. DB-Regelwerk Eintrag in der Gleismagnettabelle; die Zuordnung zu einzelnen Fahrstraßen wird heute über Fußnoten gelöst.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>PZB Element Zuordnung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_PZBElementZuordnung()
@@ -2015,7 +2096,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Regelzeichnungen werden verwendet, um einheitliche Bauausführungen für bestimmte Objekte sicherzustellen. Die für die LST-Anwendungen im Datenmodell benötigten Regelzeichnungen werden in einer Regelzeichnungstabelle aufgelistet. Regelzeichnungen können neben dem Bild eine beliebige Anzahl von Parametern haben, die die Bausausführung für einen konkreten Anwendungsfall genauer spezifizieren. Die Gültigkeit der Parameter für eine konkrete Anwendung in einer Regelzeichnung kann nur mit dem Prüf- und Testtool bestimmt werden.
+	 * Regelzeichnungen werden verwendet, um einheitliche Bauausführungen für bestimmte Objekte sicherzustellen. Die für die LST-Anwendungen im Datenmodell benötigten Regelzeichnungen werden in einer Regelzeichnungstabelle aufgelistet. Regelzeichnungen können neben dem Bild eine beliebige Anzahl von Parametern haben, die die Bausausführung für einen konkreten Anwendungsfall genauer spezifizieren. Die Gültigkeit der Parameter für eine konkrete Anwendung in einer Regelzeichnung kann nur mit Hilfe der Plausibilitäts- und Zulässigkeitsprüfung (PlaZ) bestimmt werden. DB-Regelwerk Für die Anwendung der Regelzeichnugen für Weichen, Kreuzungen und Gleissperren ist das Regelwerk 819.0401Z01 bis 819.0401Z03 zu beachten.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Regelzeichnung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Regelzeichnung()
@@ -2063,7 +2144,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Zuordnungsobjekt für die punktuelle Auslösung von Schaltvorgängen. Beispiel: BÜSA, Rangier- und Ablaufanlagen. Schaltmittel sind oftmals separate Zugeinwirkungen (z. B. Radsensoren), es können aber auch Freimeldeabschnitte (FMA_Anlagen) oder Achszählpunkte (FMA_Komponenten) für den Zweck eines Schaltmittels mitverwendet werden (Doppelausnutzung). Ein Schaltmittel wiederum kann für unterschiedliche Funktionen vorgesehen sein. Das Zuordnungsobjekt Schaltmittel erfasst jeweils eine konkrete Anforderung (Verweis, der auf das anfordernde Objekt gerichtet ist, z.B. Bahnübergang EIN, Bahnübergang AUS, Fahrstraße verschließen und ordnet diese Funktion dann einer konkreten Anlage (Zugeinwirkung, Freimeldeabschnitt oder Achszählpunkt) sowie eine Beschriftung dieser Anlage im sicherungstechnischen Lageplan zu. Die Funktion "Fahrstraße verschließen (ID_Anforderung = Fstr_Fahrweg)" ist vorgesehen für den Anrückverschluss von Zugstraßen. Weitere Anwendungen sind aktuell nicht im Modell verankert. Der Verweis auf die Anforderung ist nicht erforderlich, wenn sich die Zuordnung eindeutig aus der Topologie ergibt (Beispiel: separates Schaltmittel für die Funktion "Zweites Haltfallkriterium"). In diesem Fall wird nur der Verweis auf die Anlage sowie die Beschriftung im Lageplan angegeben. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan. 
+	 * Zuordnungsobjekt für die punktuelle Auslösung von Schaltvorgängen. Beispiel: BÜSA, Rangier- und Ablaufanlagen. Schaltmittel sind oftmals separate Zugeinwirkungen (z. B. Radsensoren), es können aber auch Freimeldeabschnitte (FMA_Anlagen) oder Achszählpunkte (FMA_Komponenten) für den Zweck eines Schaltmittels mitverwendet werden (Doppelausnutzung). Ein Schaltmittel wiederum kann für unterschiedliche Funktionen vorgesehen sein. Das Zuordnungsobjekt Schaltmittel erfasst jeweils eine konkrete Anforderung (Verweis, der auf das anfordernde Objekt gerichtet ist, z.B. Bahnübergang EIN, Bahnübergang AUS, Fahrstraße verschließen und ordnet diese Funktion dann einer konkreten Anlage (Zugeinwirkung, Freimeldeabschnitt oder Achszählpunkt) sowie eine Beschriftung dieser Anlage im sicherungstechnischen Lageplan zu. Die Funktion "Fahrstraße verschließen (ID_Anforderung = Fstr_Fahrweg)" ist vorgesehen für den Anrückverschluss von Zugstraßen. Weitere Anwendungen sind aktuell nicht im Modell verankert. Der Verweis auf die Anforderung ist nicht erforderlich, wenn sich die Zuordnung eindeutig aus der Topologie ergibt (Beispiel: separates Schaltmittel für die Funktion "Zweites Haltfallkriterium"). In diesem Fall wird nur der Verweis auf die Anlage sowie die Beschriftung im Lageplan angegeben. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Schaltmittel Zuordnung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_SchaltmittelZuordnung()
@@ -2191,7 +2272,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Abbildung des Fahrtankünders (Weißes Dreieck) sowie Zuordnung der Startsignale, für die eine Fahrtankündigung erfolgen soll. Ein physischer Fahrtankünder (Anzeiger) wird als Signal abgebildet, wobei hierbei nur die Attributgruppen Bezeichnung sowie Signal_Real zu nutzen sind (nicht: Signal_Real_Aktiv, da kein Anschluss mittels ID_Stellelement an ein Stellwerk). Erfolgt die Fahrtankündigung ausschließlich auf mobilen Endgeräten, so entfällt das Anlegen des Signals für den Fahrtankünder. 
+	 * Abbildung des Fahrtankünders (Weißes Dreieck) sowie Zuordnung der Startsignale, für die eine Fahrtankündigung erfolgen soll. Ein physischer Fahrtankünder (Anzeiger) wird als Signal abgebildet, wobei hierbei nur die Attributgruppen Bezeichnung sowie Signal_Real zu nutzen sind (nicht: Signal_Real_Aktiv, da kein Anschluss mittels ID_Stellelement an ein Stellwerk). Erfolgt die Fahrtankündigung ausschließlich auf mobilen Endgeräten, so entfällt das Anlegen des Signals für den Fahrtankünder.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Signal Fank Zuordnung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_SignalFankZuordnung()
@@ -2298,6 +2379,22 @@ public interface Container_AttributeGroup extends EObject {
 	EList<Strecke> getStrecke();
 
 	/**
+	 * Returns the value of the '<em><b>Strecke Bremsweg</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Bremswegabstand der Strecke als Eingangsgröße für die LST-Planung. Die Vorgabe erfolgt in der BAst.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Strecke Bremsweg</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_StreckeBremsweg()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Strecke_Bremsweg'"
+	 * @generated
+	 */
+	EList<Strecke_Bremsweg> getStreckeBremsweg();
+
+	/**
 	 * Returns the value of the '<em><b>Strecke Punkt</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt}.
 	 * <!-- begin-user-doc -->
@@ -2383,7 +2480,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Knoten des topologischen Knoten-Kanten-Modells. Der TOP_Knoten verweist auf einen GEO_Knoten. Die Anzahl der an den TOP_Knoten anschließenden topologischen Kanten ist je nach Art des TOP_Knoten unterschiedlich und muss mit der Anzahl der an den zugehörigen GEO Knoten anschließenden GEO_Kanten übereinstimmen: eine TOP-Kante: Gleisende, Digitalisierungsende, Betrachtungsende; drei TOP-Kanten: verzweigendes Fahrwegelement (siehe Modellierung Weichen). Weitere Fälle mit 0..2 anschließenden TOP-Kanten treten am Verbindungsknoten auf (siehe entsprechende Beschreibung). (E) Das die Attributgruppe Art Besonders zum Entfall vorgesehen ist, wird nach der Version 1.8.0 auch die Attributgruppe TOP_Knoten_Allg aufgelöst. 
+	 * Knoten des topologischen Knoten-Kanten-Modells. Der TOP_Knoten verweist auf einen GEO_Knoten. Die Anzahl der an den TOP_Knoten anschließenden topologischen Kanten ist je nach Art des TOP_Knoten unterschiedlich und muss mit der Anzahl der an den zugehörigen GEO Knoten anschließenden GEO_Kanten übereinstimmen: eine TOP-Kante: Gleisende, Digitalisierungsende, Betrachtungsende; drei TOP-Kanten: verzweigendes Fahrwegelement (siehe Modellierung Weichen). Weitere Fälle mit 0..2 anschließenden TOP-Kanten treten am Verbindungsknoten auf (siehe entsprechende Beschreibung). Im Fall eines Meridiansprungs werden zwei TOP_Knoten angelegt, die mit einer TOP_Kante der Länge Null verbunden werden. an die beiden TOP_Knoten schließen also genau zwei TOP_Kanten an.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>TOP Knoten</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_TOPKnoten()
@@ -2415,7 +2512,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Knoten des topologischen Knoten-Kanten-Modells zur Darstellung des Kabelgefäßsystems (Kabeltrasse) oder gleichartiger Medientrassen. Der Trasse_Knoten verweist auf einen GEO_Knoten. Die Anzahl der an den Trasse_Knoten anschließenden topologischen Kanten ist je nach Art des Trasse_Knoten unterschiedlich und muss mit der Anzahl der an den zugehörigen GEO Knoten anschließenden GEO_Kanten übereinstimmen. 
+	 * Knoten des topologischen Knoten-Kanten-Modells zur Darstellung des Kabelgefäßsystems (Kabeltrasse) oder gleichartiger Medientrassen. Der Trasse_Knoten verweist auf einen GEO_Knoten. Die Anzahl der an den Trasse_Knoten anschließenden topologischen Kanten ist je nach Art des Trasse_Knoten unterschiedlich und muss mit der Anzahl der an den zugehörigen GEO Knoten anschließenden GEO_Kanten übereinstimmen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trasse Knoten</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_TrasseKnoten()
@@ -2431,7 +2528,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Örtlicher Höhenunterschied beider Schienen eines Gleises in Querrichtung. Die Überhöhung ist eine Querneigung eines Gleises in einem Bogen an einem Punkt im Gleis. Durch die seitliche Lage (als Attribut des Punkt_Objektes - links oder rechts) wird die höhere Seite der beiden Schienen beschrieben. Hinweis: Die Angabe erfolgt derzeit noch in mm! Es ist zur Vereinheitlichung im Modell vorgesehen, diesen Wert künftig (nach der Version 1.7.0) in Meter anzugeben.
+	 * Örtlicher Höhenunterschied beider Schienen eines Gleises in Querrichtung. Die Überhöhung ist eine Querneigung eines Gleises in einem Bogen an einem Punkt im Gleis. Es wird immer die bogenäußere Schiene überhöht. Ein Höhenpunkt, der unmittelbar auf einem Anfang oder Ende eines Weichenschenkels liegt (TOP_Kante, mit Anschluss_A oder Anschluss_B als Links oder Rechts) ist auf die TOP_Kante der Spitze dieser Weiche zu verorten.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ueberhoehung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Ueberhoehung()
@@ -2463,7 +2560,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Physikalischer/logischer Übertragungsweg zwischen zwei Objekten für eine erforderliche Informationsübertragung. Die Angabe erfolgt, wenn der Übertragungsweg vom Betreiber beigestellt wird oder die Informationsübertragung vom Lieferanten zusätzlich zu schalten ist. Es geht um die Erfassung der physikalischen/logischen Verbindung zweier Objekte, die entweder einer funktionalen Verbindung zwischen den Objekten des Modells selbst dient, z.B. der ESTW-Bus zwischen zwei Aussenelementansteuerungen; einer funktionalen Verbindung eines Objektes des Modells zu einer nicht im Modell befindlichen Komponente dient, z.B. der Anbindung der KUS über die ZN_ZBS an die Leittechnik der BZ; einer funktionalen Verbindung zwischen zwei Komponenten, die nicht im Modell abgebildet sind, aber über diese angebunden werden und darum für die SBI dokumentiert werden müssen, z.B. die Verbindung von der LZB-Zentrale in der ESTW Zentraleinheit zum LZB-Bedienplatz in der Bedien Zentrale. Je nach Art und Anwendungsfall kann ein Objekt nur eine oder auch mehrere Verbindungen zu einem oder mehreren anderen Objekten haben. Der Anschluss von stellwerkstypischen Elementen an das Stellwerk (Kabelanlage) wird nicht mit diesem Objekt abgebildet. 
+	 * Physikalischer/logischer Übertragungsweg zwischen zwei Objekten für eine erforderliche Informationsübertragung. Die Angabe erfolgt, wenn der Übertragungsweg vom Betreiber beigestellt wird oder die Informationsübertragung vom Lieferanten zusätzlich zu schalten ist. Es geht um die Erfassung der physikalischen/logischen Verbindung zweier Objekte, die entweder einer funktionalen Verbindung zwischen den Objekten des Modells selbst dient, z.B. der ESTW-Bus zwischen zwei Aussenelementansteuerungen; einer funktionalen Verbindung eines Objektes des Modells zu einer nicht im Modell befindlichen Komponente dient, z.B. der Anbindung der KUS über die ZN_ZBS an die Leittechnik der BZ; einer funktionalen Verbindung zwischen zwei Komponenten, die nicht im Modell abgebildet sind, aber über diese angebunden werden und darum für die SBI dokumentiert werden müssen, z.B. die Verbindung von der LZB-Zentrale in der ESTW Zentraleinheit zum LZB-Bedienplatz in der Bedien Zentrale. Je nach Art und Anwendungsfall kann ein Objekt nur eine oder auch mehrere Verbindungen zu einem oder mehreren anderen Objekten haben. Der Anschluss von stellwerkstypischen Elementen an das Stellwerk (Kabelanlage) wird nicht mit diesem Objekt abgebildet.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Uebertragungsweg</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Uebertragungsweg()
@@ -2479,7 +2576,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Ort der Anordnung von nicht an das Gleis gebundenen Komponenten. Die Verortung der U. erfolgt entweder analog zum Punkt Objekt, mit einem GEO Punkt oder durch einen beschreibenden Text. Eine U. beschreibt in der Regel die Umhausung der Komponente. Ist sie nicht eingehaust, wird als Unterbringung Art "keine" angegeben. In diesen Fällen hat die Komponente dennoch eine Unterbringung Befestigung. Das ist z. B. der Fall, wenn eine wetterfeste Komponente (z. B. Schlüsselschalter) ohne Einhausung direkt an einem Pfosten befestigt ist. In einer U. können mehrere LST-Objekte untergebracht sein. Eine U. ist z. B. ein Betonschalthaus oder ein Schaltkasten. DB-Regelwerk Darstellung des Gebäudes im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erläuterungsbericht
+	 * Ort der Anordnung von nicht an das Gleis gebundenen Komponenten. Die Verortung der U. erfolgt entweder analog zum Punkt Objekt, mit einem GEO Punkt, einem Polygonzug oder durch einen beschreibenden Text. Eine U. beschreibt in der Regel die Umhausung der Komponente. Ist sie nicht eingehaust, wird als Unterbringung Art "keine" angegeben. In diesen Fällen hat die Komponente dennoch eine Unterbringung Befestigung. Das ist z. B. der Fall, wenn eine wetterfeste Komponente (z. B. Schlüsselschalter) ohne Einhausung direkt an einem Pfosten befestigt ist. In einer U. können mehrere LST-Objekte untergebracht sein. Eine U. ist z. B. ein Betonschalthaus oder ein Schaltkasten. DB-Regelwerk Darstellung des Gebäudes im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erläuterungsbericht
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Unterbringung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Unterbringung()
@@ -2586,12 +2683,44 @@ public interface Container_AttributeGroup extends EObject {
 	EList<Weichenlaufkette_Zuordnung> getWeichenlaufketteZuordnung();
 
 	/**
+	 * Returns the value of the '<em><b>ZBS Schutzstrecke</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Abbildung der ZBS-Schutzstrecke. Modellseitig werden für die Abbildung einer Schutzstrecke die Objekte Fstr_DWeg und ZBS_Schutzstrecke benötigt mit entsprechender Aufteilung der Planungsinformationen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ZBS Schutzstrecke</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ZBSSchutzstrecke()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ZBS_Schutzstrecke'"
+	 * @generated
+	 */
+	EList<ZBS_Schutzstrecke> getZBSSchutzstrecke();
+
+	/**
+	 * Returns the value of the '<em><b>ZBS Signal</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Zusatzangaben für Signale im Zusammenhang mit ZBS.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ZBS Signal</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ZBSSignal()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ZBS_Signal'"
+	 * @generated
+	 */
+	EList<ZBS_Signal> getZBSSignal();
+
+	/**
 	 * Returns the value of the '<em><b>ZL</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Anlage zur automatischen Einstellung von Fahrstraßen aufgrund von Zuglaufinformationen. Die Zuglenkung ist eine Anlage, die der Unterstützung des Betriebsablaufes dient. Aufgabe der Zuglenkung ist es, auf der Basis von Zuglaufinformationen und zugbezogenen Vorgaben für die Benutzung von Strecken- und Bahnhofsgleisen ohne unmittelbare Mitwirkung des Bedieners Stellkommandos an das zuständige Stellwerk auszugeben, ihre Ausführung zu überwachen und sich aus Meldungen des Stellwerkes ergebenden Handlungsbedarf an den Bediener weiterzugeben. Zuglaufinformationen erhält die Zuglenkung von der Zuglaufverfolgung (ZLV), die vorgesehene Benutzung der Strecken- und Bahnhofsgleise sowie Wartebedingungen einschließlich besonderer Bedingungen für die Regelung der Reihenfolge der Züge aus einem sogenannten Lenkplan, der in Form einer Gleisbenutzungstabelle (GBT) darstellbar ist. Alle Signale und Fahrstraßen, die mit der Zuglenkung behandelt werden, werden in dem Objekt Zuglenkung_Element aufgenommen und bekommen dort zusätzliche Eigenschaften für die Nutzung in der ZL. Angaben zur Verwendung der Signale und zugehörigen Gleisabschnitte für die Lenkplanerstellung erfolgen in der Gleisbenutzungstabelle. DB-Regelwerk 819.0732 Gleisbenutzungstabelle Weitere Angaben finden sich im Lastenheft, das dem LST-Fachplaner nicht zur Verfügung steht.
+	 * Anlage zur automatischen Einstellung von Fahrstraßen aufgrund von Zuglaufinformationen. Die Zuglenkung ist eine Anlage, die der Unterstützung des Betriebsablaufes dient. Aufgabe der Zuglenkung ist es, auf der Basis von Zuglaufinformationen und zugbezogenen Vorgaben für die Benutzung von Strecken- und Bahnhofsgleisen ohne unmittelbare Mitwirkung des Bedieners Stellkommandos an das zuständige Stellwerk auszugeben, ihre Ausführung zu überwachen und sich aus Meldungen des Stellwerkes ergebenden Handlungsbedarf an den Bediener weiterzugeben. Zuglaufinformationen erhält die Zuglenkung von der Zuglaufverfolgung (ZLV), die vorgesehene Benutzung der Strecken- und Bahnhofsgleise sowie Wartebedingungen einschließlich besonderer Bedingungen für die Regelung der Reihenfolge der Züge aus einem sogenannten Lenkplan, der in Form einer Gleisbenutzungstabelle (GBT) darstellbar ist. DB-Regelwerk 819.0732 Gleisbenutzungstabelle Weitere Angaben finden sich im Lastenheft, das dem LST-Fachplaner nicht zur Verfügung steht.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZL</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ZL()
@@ -2712,6 +2841,22 @@ public interface Container_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	EList<ZLV_Bus> getZLVBus();
+
+	/**
+	 * Returns the value of the '<em><b>ZLV Bus Besondere Anlage</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Besondere Anlage, die an einen ZLV-Bus angeschlossen ist.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ZLV Bus Besondere Anlage</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ZLVBusBesondereAnlage()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ZLV_Bus_Besondere_Anlage'"
+	 * @generated
+	 */
+	EList<ZLV_Bus_Besondere_Anlage> getZLVBusBesondereAnlage();
 
 	/**
 	 * Returns the value of the '<em><b>ZLV Bus US Zuordnung</b></em>' containment reference list.
@@ -2863,7 +3008,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Grenze des Ausrüstungsbereichs eines Zugbeeinflussungssystems oder RBC-Grenze bei L2. Auch im Lastenheft bzw. Planungsregelwerk als Ausstieg definierte Bereichsgrenzen werden im Datenmodell generell als Einstieg abgebildet. Später Einstieg wird nicht abgebildet
+	 * Grenze des Ausrüstungsbereichs eines Zugbeeinflussungssystems oder RBC-Grenze bei L2. Auch im Lastenheft bzw. Planungsregelwerk als Ausstieg definierte Bereichsgrenzen werden im Datenmodell generell als Einstieg abgebildet. Später Einstieg wird nicht abgebildet. Bei bedingtem Einstieg und Oder-Verknüpfung von Weichenlagen müssen verschiedene Instanzen von ZUB_Bereichsgrenze angelegt werden.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZUB Bereichsgrenze</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_ZUBBereichsgrenze()
@@ -2897,7 +3042,7 @@ public interface Container_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Technische Anlage, die durch die punktuelle Einwirkung eines Zuges einen Schaltvorgang auslösen kann. Bei BÜSA werden Ein- und Ausschaltpunkte sowie Kontakte für die Wirksamkeitsschaltung in Abhängigkeit vom Hersteller auf verschiedene Art ausgebildet: Die Hersteller Scheidt\u0026amp;Bachmann sowie PintschBamag verwenden als Zugeinwirkung Fahrzeugsensoren in Form von 8-förmig verlegten Schleifen im Gleis. Einschaltpunkte und Kontakte für die Wirksamkeitsschaltung werden im Regelfall aus zwei Schleifen, Ausschaltpunkte aus einer Schleife gebildet. Nur im Ausnahmefall werden beim Hersteller PintschBamag Einschaltpunkte mit drei Schleifen errichtet. Der Hersteller Siemens AG verwendet dagegen Achszählern vergleichbare sogenannte Doppelsensoren. Für das Modell werden, unabhängig von der herstellerspezifischen Ausbildung, Ein-und Ausschaltpunkte sowie Kontakte der Wirksamkeitsschaltung grundsätzlich als EINE Zugeinwirkung betrachtet. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan. 
+	 * Technische Anlage, die durch die punktuelle Einwirkung eines Zuges einen Schaltvorgang auslösen kann. Bei BÜSA werden Ein- und Ausschaltpunkte sowie Kontakte für die Wirksamkeitsschaltung in Abhängigkeit vom Hersteller auf verschiedene Art ausgebildet: Die Hersteller Scheidt\u0026amp;Bachmann sowie PintschBamag verwenden als Zugeinwirkung Fahrzeugsensoren in Form von 8-förmig verlegten Schleifen im Gleis. Einschaltpunkte und Kontakte für die Wirksamkeitsschaltung werden im Regelfall aus zwei Schleifen, Ausschaltpunkte aus einer Schleife gebildet. Nur im Ausnahmefall werden beim Hersteller PintschBamag Einschaltpunkte mit drei Schleifen errichtet. Der Hersteller Siemens AG verwendet dagegen Achszählern vergleichbare sogenannte Doppelsensoren. Für das Modell werden, unabhängig von der herstellerspezifischen Ausbildung, Ein-und Ausschaltpunkte sowie Kontakte der Wirksamkeitsschaltung grundsätzlich als EINE Zugeinwirkung betrachtet. DB-Regelwerk Typspezifische Planungshinweise und Technische Mitteilungen; Planungsdaten: Sicherungstechnischer Lageplan, BÜ-Lageplan, Gleisfreimeldeplan.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Zugeinwirkung</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getContainer_AttributeGroup_Zugeinwirkung()

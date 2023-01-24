@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.impl;
 
@@ -11,7 +18,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.set.toolboxmodel.Signale.Dunkelschaltung_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Richtpunkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Richtpunktentfernung_TypeClass;
 import org.eclipse.set.toolboxmodel.Signale.Signal_Art_TypeClass;
@@ -29,7 +35,6 @@ import org.eclipse.set.toolboxmodel.Signale.Streuscheibe_Betriebsstellung_TypeCl
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Real_Aktiv_Schirm_AttributeGroupImpl#getDunkelschaltung <em>Dunkelschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Real_Aktiv_Schirm_AttributeGroupImpl#getRichtpunkt <em>Richtpunkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Real_Aktiv_Schirm_AttributeGroupImpl#getRichtpunktentfernung <em>Richtpunktentfernung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.impl.Signal_Real_Aktiv_Schirm_AttributeGroupImpl#getSignalArt <em>Signal Art</em>}</li>
@@ -41,16 +46,6 @@ import org.eclipse.set.toolboxmodel.Signale.Streuscheibe_Betriebsstellung_TypeCl
  * @generated
  */
 public class Signal_Real_Aktiv_Schirm_AttributeGroupImpl extends MinimalEObjectImpl.Container implements Signal_Real_Aktiv_Schirm_AttributeGroup {
-	/**
-	 * The cached value of the '{@link #getDunkelschaltung() <em>Dunkelschaltung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDunkelschaltung()
-	 * @generated
-	 * @ordered
-	 */
-	protected Dunkelschaltung_TypeClass dunkelschaltung;
-
 	/**
 	 * The cached value of the '{@link #getRichtpunkt() <em>Richtpunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -128,51 +123,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	protected EClass eStaticClass() {
 		return SignalePackage.Literals.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Dunkelschaltung_TypeClass getDunkelschaltung() {
-		return dunkelschaltung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDunkelschaltung(Dunkelschaltung_TypeClass newDunkelschaltung, NotificationChain msgs) {
-		Dunkelschaltung_TypeClass oldDunkelschaltung = dunkelschaltung;
-		dunkelschaltung = newDunkelschaltung;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG, oldDunkelschaltung, newDunkelschaltung);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDunkelschaltung(Dunkelschaltung_TypeClass newDunkelschaltung) {
-		if (newDunkelschaltung != dunkelschaltung) {
-			NotificationChain msgs = null;
-			if (dunkelschaltung != null)
-				msgs = ((InternalEObject)dunkelschaltung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG, null, msgs);
-			if (newDunkelschaltung != null)
-				msgs = ((InternalEObject)newDunkelschaltung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG, null, msgs);
-			msgs = basicSetDunkelschaltung(newDunkelschaltung, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG, newDunkelschaltung, newDunkelschaltung));
 	}
 
 	/**
@@ -453,8 +403,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG:
-				return basicSetDunkelschaltung(null, msgs);
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT:
 				return basicSetRichtpunkt(null, msgs);
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG:
@@ -480,8 +428,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG:
-				return getDunkelschaltung();
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT:
 				return getRichtpunkt();
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG:
@@ -507,9 +453,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG:
-				setDunkelschaltung((Dunkelschaltung_TypeClass)newValue);
-				return;
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT:
 				setRichtpunkt((Richtpunkt_TypeClass)newValue);
 				return;
@@ -542,9 +485,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG:
-				setDunkelschaltung((Dunkelschaltung_TypeClass)null);
-				return;
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT:
 				setRichtpunkt((Richtpunkt_TypeClass)null);
 				return;
@@ -577,8 +517,6 @@ public class Signal_Real_Aktiv_Schirm_AttributeGroupImpl extends MinimalEObjectI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__DUNKELSCHALTUNG:
-				return dunkelschaltung != null;
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKT:
 				return richtpunkt != null;
 			case SignalePackage.SIGNAL_REAL_AKTIV_SCHIRM_ATTRIBUTE_GROUP__RICHTPUNKTENTFERNUNG:

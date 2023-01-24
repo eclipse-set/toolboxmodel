@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -75,6 +76,29 @@ public class FlankenschutzItemProviderAdapterFactory extends FlankenschutzAdapte
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EKW_Kr_Anteil_TypeClassItemProvider ekW_Kr_Anteil_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEKW_Kr_Anteil_TypeClassAdapter() {
+		if (ekW_Kr_Anteil_TypeClassItemProvider == null) {
+			ekW_Kr_Anteil_TypeClassItemProvider = new EKW_Kr_Anteil_TypeClassItemProvider(this);
+		}
+
+		return ekW_Kr_Anteil_TypeClassItemProvider;
 	}
 
 	/**
@@ -550,6 +574,7 @@ public class FlankenschutzItemProviderAdapterFactory extends FlankenschutzAdapte
 	 */
 	@Override
 	public void dispose() {
+		if (ekW_Kr_Anteil_TypeClassItemProvider != null) ekW_Kr_Anteil_TypeClassItemProvider.dispose();
 		if (fahrt_Ueber_TypeClassItemProvider != null) fahrt_Ueber_TypeClassItemProvider.dispose();
 		if (fla_Freimelde_ZuordnungItemProvider != null) fla_Freimelde_ZuordnungItemProvider.dispose();
 		if (fla_Raum_Freimeldung_TypeClassItemProvider != null) fla_Raum_Freimeldung_TypeClassItemProvider.dispose();

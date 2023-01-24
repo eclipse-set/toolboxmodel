@@ -1,11 +1,21 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Bahnsteig.Bahnsteig_Kante;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +28,6 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDAnhangINA <em>ID Anhang INA</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDBahnsteigKante <em>ID Bahnsteig Kante</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDMarkanterPunkt <em>ID Markanter Punkt</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.PZB.PZBPackage#getPZB_Element_Zuordnung_INA_AttributeGroup()
@@ -27,57 +36,20 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
  */
 public interface PZB_Element_Zuordnung_INA_AttributeGroup extends EObject {
 	/**
-	 * Returns the value of the '<em><b>ID Anhang INA</b></em>' reference.
+	 * Returns the value of the '<em><b>ID Anhang INA</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Verweis auf die zugehörigen Dokumente zur INA-Berechnung. Dazu gehören Erhebungsbogen, Wirkbereichsbogen und ggf. die Berechnungsblätter selbst. Diese werden für jedes Signal gesondert erstellt. DB-Regelwerk 819.1310A02 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Anhang INA</em>' reference.
-	 * @see #isSetIDAnhangINA()
-	 * @see #unsetIDAnhangINA()
-	 * @see #setIDAnhangINA(Anhang)
+	 * @return the value of the '<em>ID Anhang INA</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.PZB.PZBPackage#getPZB_Element_Zuordnung_INA_AttributeGroup_IDAnhangINA()
-	 * @model unsettable="true" required="true"
+	 * @model required="true"
 	 *        extendedMetaData="kind='element' name='ID_Anhang_INA'"
 	 * @generated
 	 */
-	Anhang getIDAnhangINA();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDAnhangINA <em>ID Anhang INA</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Anhang INA</em>' reference.
-	 * @see #isSetIDAnhangINA()
-	 * @see #unsetIDAnhangINA()
-	 * @see #getIDAnhangINA()
-	 * @generated
-	 */
-	void setIDAnhangINA(Anhang value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDAnhangINA <em>ID Anhang INA</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDAnhangINA()
-	 * @see #getIDAnhangINA()
-	 * @see #setIDAnhangINA(Anhang)
-	 * @generated
-	 */
-	void unsetIDAnhangINA();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDAnhangINA <em>ID Anhang INA</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Anhang INA</em>' reference is set.
-	 * @see #unsetIDAnhangINA()
-	 * @see #getIDAnhangINA()
-	 * @see #setIDAnhangINA(Anhang)
-	 * @generated
-	 */
-	boolean isSetIDAnhangINA();
+	EList<Anhang> getIDAnhangINA();
 
 	/**
 	 * Returns the value of the '<em><b>ID Bahnsteig Kante</b></em>' reference.
@@ -131,58 +103,5 @@ public interface PZB_Element_Zuordnung_INA_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	boolean isSetIDBahnsteigKante();
-
-	/**
-	 * Returns the value of the '<em><b>ID Markanter Punkt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * ID des Markanten Punktes, welcher die maßgebende Gefahrenstelle für die INA-Berechnung ist. DB-Regelwerk 819.1310A02 2 (11) und (12) 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Markanter Punkt</em>' reference.
-	 * @see #isSetIDMarkanterPunkt()
-	 * @see #unsetIDMarkanterPunkt()
-	 * @see #setIDMarkanterPunkt(Markanter_Punkt)
-	 * @see org.eclipse.set.toolboxmodel.PZB.PZBPackage#getPZB_Element_Zuordnung_INA_AttributeGroup_IDMarkanterPunkt()
-	 * @model unsettable="true" required="true"
-	 *        extendedMetaData="kind='element' name='ID_Markanter_Punkt'"
-	 * @generated
-	 */
-	Markanter_Punkt getIDMarkanterPunkt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDMarkanterPunkt <em>ID Markanter Punkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Markanter Punkt</em>' reference.
-	 * @see #isSetIDMarkanterPunkt()
-	 * @see #unsetIDMarkanterPunkt()
-	 * @see #getIDMarkanterPunkt()
-	 * @generated
-	 */
-	void setIDMarkanterPunkt(Markanter_Punkt value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDMarkanterPunkt <em>ID Markanter Punkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDMarkanterPunkt()
-	 * @see #getIDMarkanterPunkt()
-	 * @see #setIDMarkanterPunkt(Markanter_Punkt)
-	 * @generated
-	 */
-	void unsetIDMarkanterPunkt();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDMarkanterPunkt <em>ID Markanter Punkt</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Markanter Punkt</em>' reference is set.
-	 * @see #unsetIDMarkanterPunkt()
-	 * @see #getIDMarkanterPunkt()
-	 * @see #setIDMarkanterPunkt(Markanter_Punkt)
-	 * @generated
-	 */
-	boolean isSetIDMarkanterPunkt();
 
 } // PZB_Element_Zuordnung_INA_AttributeGroup

@@ -1,8 +1,13 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
-
-import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -37,7 +42,7 @@ public class RBC_SRS_Version_TypeClassImpl extends BasisAttribut_AttributeGroupI
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BigInteger WERT_EDEFAULT = null;
+	protected static final String WERT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
@@ -47,7 +52,7 @@ public class RBC_SRS_Version_TypeClassImpl extends BasisAttribut_AttributeGroupI
 	 * @generated
 	 * @ordered
 	 */
-	protected BigInteger wert = WERT_EDEFAULT;
+	protected String wert = WERT_EDEFAULT;
 
 	/**
 	 * This is true if the Wert attribute has been set.
@@ -83,7 +88,7 @@ public class RBC_SRS_Version_TypeClassImpl extends BasisAttribut_AttributeGroupI
 	 * @generated
 	 */
 	@Override
-	public BigInteger getWert() {
+	public String getWert() {
 		return wert;
 	}
 
@@ -93,8 +98,8 @@ public class RBC_SRS_Version_TypeClassImpl extends BasisAttribut_AttributeGroupI
 	 * @generated
 	 */
 	@Override
-	public void setWert(BigInteger newWert) {
-		BigInteger oldWert = wert;
+	public void setWert(String newWert) {
+		String oldWert = wert;
 		wert = newWert;
 		boolean oldWertESet = wertESet;
 		wertESet = true;
@@ -109,7 +114,7 @@ public class RBC_SRS_Version_TypeClassImpl extends BasisAttribut_AttributeGroupI
 	 */
 	@Override
 	public void unsetWert() {
-		BigInteger oldWert = wert;
+		String oldWert = wert;
 		boolean oldWertESet = wertESet;
 		wert = WERT_EDEFAULT;
 		wertESet = false;
@@ -151,7 +156,7 @@ public class RBC_SRS_Version_TypeClassImpl extends BasisAttribut_AttributeGroupI
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.RBC_SRS_VERSION_TYPE_CLASS__WERT:
-				setWert((BigInteger)newValue);
+				setWert((String)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);

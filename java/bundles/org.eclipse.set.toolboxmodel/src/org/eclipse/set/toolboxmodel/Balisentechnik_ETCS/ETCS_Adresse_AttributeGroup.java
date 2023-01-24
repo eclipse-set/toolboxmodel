@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -13,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_AttributeGroup#getETCSKennung <em>ETCS Kennung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_AttributeGroup#getNIDC <em>NIDC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_AttributeGroup#getNIDRBC <em>NIDRBC</em>}</li>
  * </ul>
@@ -23,32 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ETCS_Adresse_AttributeGroup extends EObject {
-	/**
-	 * Returns the value of the '<em><b>ETCS Kennung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Art des Teilnehmers. Bestandteil der ETCS-Adressierung gemäß FFFIS EuroRadio (Verwendung zusammen mit ETCS ID).
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ETCS Kennung</em>' containment reference.
-	 * @see #setETCSKennung(ETCS_Kennung_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_Adresse_AttributeGroup_ETCSKennung()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='ETCS_Kennung'"
-	 * @generated
-	 */
-	ETCS_Kennung_TypeClass getETCSKennung();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_AttributeGroup#getETCSKennung <em>ETCS Kennung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ETCS Kennung</em>' containment reference.
-	 * @see #getETCSKennung()
-	 * @generated
-	 */
-	void setETCSKennung(ETCS_Kennung_TypeClass value);
-
 	/**
 	 * Returns the value of the '<em><b>NIDC</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

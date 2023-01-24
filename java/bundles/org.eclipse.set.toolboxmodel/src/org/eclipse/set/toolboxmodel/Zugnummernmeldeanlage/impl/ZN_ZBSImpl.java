@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl;
 
@@ -6,14 +13,17 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.IP_Adresse_TypeClass;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZBS_Schnittstelle_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS;
-import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlagePackage;
 
 /**
@@ -25,7 +35,8 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageP
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_ZBSImpl#getIDESTWZentraleinheit <em>IDESTW Zentraleinheit</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_ZBSImpl#getZNZBSAllg <em>ZNZBS Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_ZBSImpl#getIPAdresse <em>IP Adresse</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl.ZN_ZBSImpl#getZBSSchnittstelle <em>ZBS Schnittstelle</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,14 +62,24 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 	protected boolean iDESTWZentraleinheitESet;
 
 	/**
-	 * The cached value of the '{@link #getZNZBSAllg() <em>ZNZBS Allg</em>}' containment reference.
+	 * The cached value of the '{@link #getIPAdresse() <em>IP Adresse</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getZNZBSAllg()
+	 * @see #getIPAdresse()
 	 * @generated
 	 * @ordered
 	 */
-	protected ZN_ZBS_Allg_AttributeGroup zNZBSAllg;
+	protected IP_Adresse_TypeClass iPAdresse;
+
+	/**
+	 * The cached value of the '{@link #getZBSSchnittstelle() <em>ZBS Schnittstelle</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZBSSchnittstelle()
+	 * @generated
+	 * @ordered
+	 */
+	protected ZBS_Schnittstelle_TypeClass zBSSchnittstelle;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,8 +173,8 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 	 * @generated
 	 */
 	@Override
-	public ZN_ZBS_Allg_AttributeGroup getZNZBSAllg() {
-		return zNZBSAllg;
+	public IP_Adresse_TypeClass getIPAdresse() {
+		return iPAdresse;
 	}
 
 	/**
@@ -161,11 +182,11 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetZNZBSAllg(ZN_ZBS_Allg_AttributeGroup newZNZBSAllg, NotificationChain msgs) {
-		ZN_ZBS_Allg_AttributeGroup oldZNZBSAllg = zNZBSAllg;
-		zNZBSAllg = newZNZBSAllg;
+	public NotificationChain basicSetIPAdresse(IP_Adresse_TypeClass newIPAdresse, NotificationChain msgs) {
+		IP_Adresse_TypeClass oldIPAdresse = iPAdresse;
+		iPAdresse = newIPAdresse;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG, oldZNZBSAllg, newZNZBSAllg);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE, oldIPAdresse, newIPAdresse);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -177,18 +198,63 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 	 * @generated
 	 */
 	@Override
-	public void setZNZBSAllg(ZN_ZBS_Allg_AttributeGroup newZNZBSAllg) {
-		if (newZNZBSAllg != zNZBSAllg) {
+	public void setIPAdresse(IP_Adresse_TypeClass newIPAdresse) {
+		if (newIPAdresse != iPAdresse) {
 			NotificationChain msgs = null;
-			if (zNZBSAllg != null)
-				msgs = ((InternalEObject)zNZBSAllg).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG, null, msgs);
-			if (newZNZBSAllg != null)
-				msgs = ((InternalEObject)newZNZBSAllg).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG, null, msgs);
-			msgs = basicSetZNZBSAllg(newZNZBSAllg, msgs);
+			if (iPAdresse != null)
+				msgs = ((InternalEObject)iPAdresse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE, null, msgs);
+			if (newIPAdresse != null)
+				msgs = ((InternalEObject)newIPAdresse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE, null, msgs);
+			msgs = basicSetIPAdresse(newIPAdresse, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG, newZNZBSAllg, newZNZBSAllg));
+			eNotify(new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE, newIPAdresse, newIPAdresse));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ZBS_Schnittstelle_TypeClass getZBSSchnittstelle() {
+		return zBSSchnittstelle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetZBSSchnittstelle(ZBS_Schnittstelle_TypeClass newZBSSchnittstelle, NotificationChain msgs) {
+		ZBS_Schnittstelle_TypeClass oldZBSSchnittstelle = zBSSchnittstelle;
+		zBSSchnittstelle = newZBSSchnittstelle;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE, oldZBSSchnittstelle, newZBSSchnittstelle);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setZBSSchnittstelle(ZBS_Schnittstelle_TypeClass newZBSSchnittstelle) {
+		if (newZBSSchnittstelle != zBSSchnittstelle) {
+			NotificationChain msgs = null;
+			if (zBSSchnittstelle != null)
+				msgs = ((InternalEObject)zBSSchnittstelle).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE, null, msgs);
+			if (newZBSSchnittstelle != null)
+				msgs = ((InternalEObject)newZBSSchnittstelle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE, null, msgs);
+			msgs = basicSetZBSSchnittstelle(newZBSSchnittstelle, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE, newZBSSchnittstelle, newZBSSchnittstelle));
 	}
 
 	/**
@@ -199,8 +265,10 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG:
-				return basicSetZNZBSAllg(null, msgs);
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE:
+				return basicSetIPAdresse(null, msgs);
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE:
+				return basicSetZBSSchnittstelle(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -217,8 +285,10 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 			case ZugnummernmeldeanlagePackage.ZN_ZBS__IDESTW_ZENTRALEINHEIT:
 				if (resolve) return getIDESTWZentraleinheit();
 				return basicGetIDESTWZentraleinheit();
-			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG:
-				return getZNZBSAllg();
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE:
+				return getIPAdresse();
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE:
+				return getZBSSchnittstelle();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -235,8 +305,11 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 			case ZugnummernmeldeanlagePackage.ZN_ZBS__IDESTW_ZENTRALEINHEIT:
 				setIDESTWZentraleinheit((ESTW_Zentraleinheit)newValue);
 				return;
-			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG:
-				setZNZBSAllg((ZN_ZBS_Allg_AttributeGroup)newValue);
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE:
+				setIPAdresse((IP_Adresse_TypeClass)newValue);
+				return;
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE:
+				setZBSSchnittstelle((ZBS_Schnittstelle_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -255,8 +328,11 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 			case ZugnummernmeldeanlagePackage.ZN_ZBS__IDESTW_ZENTRALEINHEIT:
 				unsetIDESTWZentraleinheit();
 				return;
-			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG:
-				setZNZBSAllg((ZN_ZBS_Allg_AttributeGroup)null);
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE:
+				setIPAdresse((IP_Adresse_TypeClass)null);
+				return;
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE:
+				setZBSSchnittstelle((ZBS_Schnittstelle_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -274,8 +350,10 @@ public class ZN_ZBSImpl extends Basis_ObjektImpl implements ZN_ZBS {
 		switch (featureID) {
 			case ZugnummernmeldeanlagePackage.ZN_ZBS__IDESTW_ZENTRALEINHEIT:
 				return isSetIDESTWZentraleinheit();
-			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZNZBS_ALLG:
-				return zNZBSAllg != null;
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__IP_ADRESSE:
+				return iPAdresse != null;
+			case ZugnummernmeldeanlagePackage.ZN_ZBS__ZBS_SCHNITTSTELLE:
+				return zBSSchnittstelle != null;
 			default:
 				return super.eIsSet(featureID);
 		}

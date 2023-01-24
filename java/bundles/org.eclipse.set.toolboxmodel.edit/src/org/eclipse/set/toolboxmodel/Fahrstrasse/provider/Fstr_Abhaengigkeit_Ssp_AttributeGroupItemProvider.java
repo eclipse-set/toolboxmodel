@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -33,7 +34,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrasseFactory;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_AttributeGroup} object.
@@ -109,7 +110,7 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS);
+			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS);
 		}
 		return childrenFeatures;
 	}
@@ -162,7 +163,7 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Fstr_Abhaengigkeit_Ssp_AttributeGroup.class)) {
-			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS:
+			case FahrstrassePackage.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -184,8 +185,8 @@ public class Fstr_Abhaengigkeit_Ssp_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FahrstrassePackage.Literals.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS,
-				 FahrstrasseFactory.eINSTANCE.createAufloesung_Ssp_Zielgeis_TypeClass()));
+				(FahrstrassePackage.Literals.FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS,
+				 FahrstrasseFactory.eINSTANCE.createAufloesung_Ssp_Zielgleis_TypeClass()));
 	}
 
 	/**

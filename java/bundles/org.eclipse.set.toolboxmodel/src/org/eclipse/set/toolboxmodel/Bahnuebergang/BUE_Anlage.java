@@ -1,8 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
+
 import org.eclipse.set.toolboxmodel.BasisTypen.Bezeichnung_Element_AttributeGroup;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
@@ -13,7 +21,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Zurzeit beschränken sich die Angaben auf den im Lageplan darzustellenden Teil des BÜ. Zu einem späteren Zeitpunkt werden die spezifischen BÜ-Sicherungsanlagen wie Lichtzeichen, Andreaskreuze, Schrankenantriebe, Belag im BÜ-Bereich etc. in das Modell aufgenommen. Gleiches gilt für die Einschaltstreckenberechnung sowie die Beeinflussungsberechnung. Das Objekt wird auf den Kreuzungspunkt (in der Mitte der kreuzenden Straße) verortet; damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815 819.12xx Die konkreten Bezüge zum Regelwerk werden in den einzelnen Attributen angegeben. 
+ * Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Das Objekt wird auf den Kreuzungspunkt gem. Ril 815.2000 verortet, wobei die punktförmige Verortung auf alle zum BÜ gehörigen Gleisachsen erfolgen soll. Damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815, 819.12xx. Die konkreten Bezüge zum Regelwerk werden für die einzelnen Attributen angegeben.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -22,6 +30,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getBezeichnung <em>Bezeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getBUEAnlageAllg <em>BUE Anlage Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDAEABUEAnschaltung <em>IDAEABUE Anschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDBUESchnittstelle <em>IDBUE Schnittstelle</em>}</li>
  * </ul>
  *
@@ -78,6 +87,59 @@ public interface BUE_Anlage extends Punkt_Objekt {
 	 * @generated
 	 */
 	void setBUEAnlageAllg(BUE_Anlage_Allg_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>IDAEABUE Anschaltung</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf die Aussenelementansteuerung, von der die BÜ-Anlage gesteuert/geschaltet wird.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>IDAEABUE Anschaltung</em>' reference.
+	 * @see #isSetIDAEABUEAnschaltung()
+	 * @see #unsetIDAEABUEAnschaltung()
+	 * @see #setIDAEABUEAnschaltung(Aussenelementansteuerung)
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage#getBUE_Anlage_IDAEABUEAnschaltung()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_AEA_BUE_Anschaltung'"
+	 * @generated
+	 */
+	Aussenelementansteuerung getIDAEABUEAnschaltung();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDAEABUEAnschaltung <em>IDAEABUE Anschaltung</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IDAEABUE Anschaltung</em>' reference.
+	 * @see #isSetIDAEABUEAnschaltung()
+	 * @see #unsetIDAEABUEAnschaltung()
+	 * @see #getIDAEABUEAnschaltung()
+	 * @generated
+	 */
+	void setIDAEABUEAnschaltung(Aussenelementansteuerung value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDAEABUEAnschaltung <em>IDAEABUE Anschaltung</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDAEABUEAnschaltung()
+	 * @see #getIDAEABUEAnschaltung()
+	 * @see #setIDAEABUEAnschaltung(Aussenelementansteuerung)
+	 * @generated
+	 */
+	void unsetIDAEABUEAnschaltung();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Anlage#getIDAEABUEAnschaltung <em>IDAEABUE Anschaltung</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>IDAEABUE Anschaltung</em>' reference is set.
+	 * @see #unsetIDAEABUEAnschaltung()
+	 * @see #getIDAEABUEAnschaltung()
+	 * @see #setIDAEABUEAnschaltung(Aussenelementansteuerung)
+	 * @generated
+	 */
+	boolean isSetIDAEABUEAnschaltung();
 
 	/**
 	 * Returns the value of the '<em><b>IDBUE Schnittstelle</b></em>' reference.

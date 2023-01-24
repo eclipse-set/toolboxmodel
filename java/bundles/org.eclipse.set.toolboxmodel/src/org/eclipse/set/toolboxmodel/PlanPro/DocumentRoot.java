@@ -73,6 +73,9 @@ public interface DocumentRoot extends EObject {
 	 * Returns the value of the '<em><b>Plan Pro Schnittstelle</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Oberstes Objekt, das in jeder Datei vorhanden ist. Damit jede Ausgabe in Form einer XML-Datei über die Identität von ~ eindeutig zu identifizieren ist, muss bei jeder Erzeugung einer XML-Ausgabe für eine Planung eine neue GUID für das Objekt PlanPro_Schnittstelle vergeben werden.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plan Pro Schnittstelle</em>' containment reference.
 	 * @see #setPlanProSchnittstelle(PlanPro_Schnittstelle)
 	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getDocumentRoot_PlanProSchnittstelle()

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -19,14 +26,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMSignalBefestigungsart implements Enumerator {
 	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Bahnsteig</b></em>' literal object.
+	 * The '<em><b>ENUM Signal Befestigungsart andere</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG_VALUE
+	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG(0, "ENUMSignal_Befestigungsart_Bahnsteig", "Bahnsteig"),
+	ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE(0, "ENUMSignal_Befestigungsart_andere", "andere"),
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Fundament</b></em>' literal object.
@@ -39,44 +46,14 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	ENUM_SIGNAL_BEFESTIGUNGSART_FUNDAMENT(1, "ENUMSignal_Befestigungsart_Fundament", "Fundament"),
 
 	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Konstruktionsteil</b></em>' literal object.
+	 * The '<em><b>ENUM Signal Befestigungsart Mast</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL_VALUE
+	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_MAST_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL(2, "ENUMSignal_Befestigungsart_Konstruktionsteil", "Konstruktionsteil"),
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart OL Kettenwerk</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK(3, "ENUMSignal_Befestigungsart_OL_Kettenwerk", "OL_Kettenwerk"),
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart OL Mast</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST(4, "ENUMSignal_Befestigungsart_OL_Mast", "OL_Mast"),
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Prellbock</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK(5, "ENUMSignal_Befestigungsart_Prellbock", "Prellbock"),
+	ENUM_SIGNAL_BEFESTIGUNGSART_MAST(2, "ENUMSignal_Befestigungsart_Mast", "Mast"),
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Signalausleger</b></em>' literal object.
@@ -86,7 +63,7 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER(6, "ENUMSignal_Befestigungsart_Signalausleger", "Signalausleger"),
+	ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER(3, "ENUMSignal_Befestigungsart_Signalausleger", "Signalausleger"),
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Signalbruecke</b></em>' literal object.
@@ -96,7 +73,7 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE(7, "ENUMSignal_Befestigungsart_Signalbruecke", "Signalbruecke"),
+	ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE(4, "ENUMSignal_Befestigungsart_Signalbruecke", "Signalbruecke"),
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Sonderkonstruktion</b></em>' literal object.
@@ -106,58 +83,18 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION(8, "ENUMSignal_Befestigungsart_Sonderkonstruktion", "Sonderkonstruktion"),
+	ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION(5, "ENUMSignal_Befestigungsart_Sonderkonstruktion", "Sonderkonstruktion");
 
 	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Dach</b></em>' literal object.
+	 * The '<em><b>ENUM Signal Befestigungsart andere</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_DACH_VALUE
+	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE
+	 * @model name="ENUMSignal_Befestigungsart_andere" literal="andere"
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_DACH(9, "ENUMSignal_Befestigungsart_Dach", "Dach"),
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Mast</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_MAST_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_MAST(10, "ENUMSignal_Befestigungsart_Mast", "Mast"),
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Pfahl</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL(11, "ENUMSignal_Befestigungsart_Pfahl", "Pfahl"),
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Wand</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_WAND_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_BEFESTIGUNGSART_WAND(12, "ENUMSignal_Befestigungsart_Wand", "Wand");
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Bahnsteig</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG
-	 * @model name="ENUMSignal_Befestigungsart_Bahnsteig" literal="Bahnsteig"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG_VALUE = 0;
+	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Fundament</b></em>' literal value.
@@ -171,48 +108,15 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_FUNDAMENT_VALUE = 1;
 
 	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Konstruktionsteil</b></em>' literal value.
+	 * The '<em><b>ENUM Signal Befestigungsart Mast</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL
-	 * @model name="ENUMSignal_Befestigungsart_Konstruktionsteil" literal="Konstruktionsteil"
+	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_MAST
+	 * @model name="ENUMSignal_Befestigungsart_Mast" literal="Mast"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart OL Kettenwerk</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK
-	 * @model name="ENUMSignal_Befestigungsart_OL_Kettenwerk" literal="OL_Kettenwerk"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart OL Mast</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST
-	 * @model name="ENUMSignal_Befestigungsart_OL_Mast" literal="OL_Mast"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST_VALUE = 4;
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Prellbock</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK
-	 * @model name="ENUMSignal_Befestigungsart_Prellbock" literal="Prellbock"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK_VALUE = 5;
+	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_MAST_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Signalausleger</b></em>' literal value.
@@ -223,7 +127,7 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER_VALUE = 6;
+	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Signalbruecke</b></em>' literal value.
@@ -234,7 +138,7 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE_VALUE = 7;
+	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUM Signal Befestigungsart Sonderkonstruktion</b></em>' literal value.
@@ -245,51 +149,7 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION_VALUE = 8;
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Dach</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_DACH
-	 * @model name="ENUMSignal_Befestigungsart_Dach" literal="Dach"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_DACH_VALUE = 9;
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Mast</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_MAST
-	 * @model name="ENUMSignal_Befestigungsart_Mast" literal="Mast"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_MAST_VALUE = 10;
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Pfahl</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL
-	 * @model name="ENUMSignal_Befestigungsart_Pfahl" literal="Pfahl"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL_VALUE = 11;
-
-	/**
-	 * The '<em><b>ENUM Signal Befestigungsart Wand</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_BEFESTIGUNGSART_WAND
-	 * @model name="ENUMSignal_Befestigungsart_Wand" literal="Wand"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_WAND_VALUE = 12;
+	public static final int ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>ENUM Signal Befestigungsart</b></em>' enumerators.
@@ -299,19 +159,12 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 */
 	private static final ENUMSignalBefestigungsart[] VALUES_ARRAY =
 		new ENUMSignalBefestigungsart[] {
-			ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG,
+			ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE,
 			ENUM_SIGNAL_BEFESTIGUNGSART_FUNDAMENT,
-			ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL,
-			ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK,
-			ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST,
-			ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK,
+			ENUM_SIGNAL_BEFESTIGUNGSART_MAST,
 			ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER,
 			ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE,
 			ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION,
-			ENUM_SIGNAL_BEFESTIGUNGSART_DACH,
-			ENUM_SIGNAL_BEFESTIGUNGSART_MAST,
-			ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL,
-			ENUM_SIGNAL_BEFESTIGUNGSART_WAND,
 		};
 
 	/**
@@ -368,19 +221,12 @@ public enum ENUMSignalBefestigungsart implements Enumerator {
 	 */
 	public static ENUMSignalBefestigungsart get(int value) {
 		switch (value) {
-			case ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_BAHNSTEIG;
+			case ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_ANDERE;
 			case ENUM_SIGNAL_BEFESTIGUNGSART_FUNDAMENT_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_FUNDAMENT;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_KONSTRUKTIONSTEIL;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_OL_KETTENWERK;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_OL_MAST;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_PRELLBOCK;
+			case ENUM_SIGNAL_BEFESTIGUNGSART_MAST_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_MAST;
 			case ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALAUSLEGER;
 			case ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_SIGNALBRUECKE;
 			case ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_SONDERKONSTRUKTION;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_DACH_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_DACH;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_MAST_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_MAST;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_PFAHL;
-			case ENUM_SIGNAL_BEFESTIGUNGSART_WAND_VALUE: return ENUM_SIGNAL_BEFESTIGUNGSART_WAND;
 			default: return null;
 		}
 	}

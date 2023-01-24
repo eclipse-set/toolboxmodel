@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.util;
 
@@ -75,8 +82,8 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	protected FahrstrasseSwitch<Adapter> modelSwitch =
 		new FahrstrasseSwitch<Adapter>() {
 			@Override
-			public Adapter caseAufloesung_Ssp_Zielgeis_TypeClass(Aufloesung_Ssp_Zielgeis_TypeClass object) {
-				return createAufloesung_Ssp_Zielgeis_TypeClassAdapter();
+			public Adapter caseAufloesung_Ssp_Zielgleis_TypeClass(Aufloesung_Ssp_Zielgleis_TypeClass object) {
+				return createAufloesung_Ssp_Zielgleis_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseAufloesung_Verzoegerung_TypeClass(Aufloesung_Verzoegerung_TypeClass object) {
@@ -139,16 +146,8 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 				return createFstr_Aneinander_ZuordnungAdapter();
 			}
 			@Override
-			public Adapter caseFstr_Art_TypeClass(Fstr_Art_TypeClass object) {
-				return createFstr_Art_TypeClassAdapter();
-			}
-			@Override
 			public Adapter caseFstr_Bedienstring_TypeClass(Fstr_Bedienstring_TypeClass object) {
 				return createFstr_Bedienstring_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseFstr_Bildezeit_TypeClass(Fstr_Bildezeit_TypeClass object) {
-				return createFstr_Bildezeit_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseFstr_DWeg(Fstr_DWeg object) {
@@ -171,20 +170,12 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 				return createFstr_DWeg_W_KrAdapter();
 			}
 			@Override
-			public Adapter caseFstr_DWeg_W_Kr_Allg_AttributeGroup(Fstr_DWeg_W_Kr_Allg_AttributeGroup object) {
-				return createFstr_DWeg_W_Kr_Allg_AttributeGroupAdapter();
-			}
-			@Override
-			public Adapter caseFstr_DWeg_W_Kr_Allg_child_AttributeGroup(Fstr_DWeg_W_Kr_Allg_child_AttributeGroup object) {
-				return createFstr_DWeg_W_Kr_Allg_child_AttributeGroupAdapter();
-			}
-			@Override
-			public Adapter caseFstr_DWeg_W_Kr_TypeClass(Fstr_DWeg_W_Kr_TypeClass object) {
-				return createFstr_DWeg_W_Kr_TypeClassAdapter();
-			}
-			@Override
 			public Adapter caseFstr_Fahrweg(Fstr_Fahrweg object) {
 				return createFstr_FahrwegAdapter();
+			}
+			@Override
+			public Adapter caseFstr_Mittel_Art_TypeClass(Fstr_Mittel_Art_TypeClass object) {
+				return createFstr_Mittel_Art_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseFstr_Mittel_AttributeGroup(Fstr_Mittel_AttributeGroup object) {
@@ -197,6 +188,10 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseFstr_Nichthaltfall(Fstr_Nichthaltfall object) {
 				return createFstr_NichthaltfallAdapter();
+			}
+			@Override
+			public Adapter caseFstr_Rangier_Art_TypeClass(Fstr_Rangier_Art_TypeClass object) {
+				return createFstr_Rangier_Art_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseFstr_Rangier_AttributeGroup(Fstr_Rangier_AttributeGroup object) {
@@ -229,6 +224,10 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseFstr_Vsigabstand_Verkuerzt_TypeClass(Fstr_Vsigabstand_Verkuerzt_TypeClass object) {
 				return createFstr_Vsigabstand_Verkuerzt_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseFstr_Zug_Art_TypeClass(Fstr_Zug_Art_TypeClass object) {
+				return createFstr_Zug_Art_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseFstr_Zug_AttributeGroup(Fstr_Zug_AttributeGroup object) {
@@ -271,6 +270,10 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 				return createSonstiger_PunktAdapter();
 			}
 			@Override
+			public Adapter caseStart_Signal_Charakter_TypeClass(Start_Signal_Charakter_TypeClass object) {
+				return createStart_Signal_Charakter_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseBasisAttribut_AttributeGroup(BasisAttribut_AttributeGroup object) {
 				return createBasisAttribut_AttributeGroupAdapter();
 			}
@@ -311,16 +314,16 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass <em>Aufloesung Ssp Zielgeis Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass <em>Aufloesung Ssp Zielgleis Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass
 	 * @generated
 	 */
-	public Adapter createAufloesung_Ssp_Zielgeis_TypeClassAdapter() {
+	public Adapter createAufloesung_Ssp_Zielgleis_TypeClassAdapter() {
 		return null;
 	}
 
@@ -535,20 +538,6 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass <em>Fstr Art Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass
-	 * @generated
-	 */
-	public Adapter createFstr_Art_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bedienstring_TypeClass <em>Fstr Bedienstring Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -559,20 +548,6 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFstr_Bedienstring_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass <em>Fstr Bildezeit Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass
-	 * @generated
-	 */
-	public Adapter createFstr_Bildezeit_TypeClassAdapter() {
 		return null;
 	}
 
@@ -647,48 +622,6 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup <em>Fstr DWeg WKr Allg Attribute Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup
-	 * @generated
-	 */
-	public Adapter createFstr_DWeg_W_Kr_Allg_AttributeGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_child_AttributeGroup <em>Fstr DWeg WKr Allg child Attribute Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_child_AttributeGroup
-	 * @generated
-	 */
-	public Adapter createFstr_DWeg_W_Kr_Allg_child_AttributeGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass <em>Fstr DWeg WKr Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass
-	 * @generated
-	 */
-	public Adapter createFstr_DWeg_W_Kr_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg <em>Fstr Fahrweg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -699,6 +632,20 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFstr_FahrwegAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass <em>Fstr Mittel Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass
+	 * @generated
+	 */
+	public Adapter createFstr_Mittel_Art_TypeClassAdapter() {
 		return null;
 	}
 
@@ -741,6 +688,20 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFstr_NichthaltfallAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass <em>Fstr Rangier Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass
+	 * @generated
+	 */
+	public Adapter createFstr_Rangier_Art_TypeClassAdapter() {
 		return null;
 	}
 
@@ -853,6 +814,20 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFstr_Vsigabstand_Verkuerzt_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass <em>Fstr Zug Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass
+	 * @generated
+	 */
+	public Adapter createFstr_Zug_Art_TypeClassAdapter() {
 		return null;
 	}
 
@@ -993,6 +968,20 @@ public class FahrstrasseAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSonstiger_PunktAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass <em>Start Signal Charakter Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass
+	 * @generated
+	 */
+	public Adapter createStart_Signal_Charakter_TypeClassAdapter() {
 		return null;
 	}
 

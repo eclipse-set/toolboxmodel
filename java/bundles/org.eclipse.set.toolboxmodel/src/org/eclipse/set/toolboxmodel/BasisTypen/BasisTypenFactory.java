@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen;
 
@@ -76,13 +83,13 @@ public interface BasisTypenFactory extends EFactory {
 	Datum_Auslieferung_TypeClass createDatum_Auslieferung_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>Eigenschaften Datei Attribute Group</em>'.
+	 * Returns a new object of class '<em>ID Bearbeitungsvermerk Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Eigenschaften Datei Attribute Group</em>'.
+	 * @return a new object of class '<em>ID Bearbeitungsvermerk Type Class</em>'.
 	 * @generated
 	 */
-	Eigenschaften_Datei_AttributeGroup createEigenschaften_Datei_AttributeGroup();
+	ID_Bearbeitungsvermerk_TypeClass createID_Bearbeitungsvermerk_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Kennzahl Type Class</em>'.
@@ -101,6 +108,15 @@ public interface BasisTypenFactory extends EFactory {
 	 * @generated
 	 */
 	Oertlicher_Elementname_TypeClass createOertlicher_Elementname_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Pruefmerkmale Daten Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pruefmerkmale Daten Attribute Group</em>'.
+	 * @generated
+	 */
+	Pruefmerkmale_Daten_AttributeGroup createPruefmerkmale_Daten_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>Pruefsumme Art Type Class</em>'.

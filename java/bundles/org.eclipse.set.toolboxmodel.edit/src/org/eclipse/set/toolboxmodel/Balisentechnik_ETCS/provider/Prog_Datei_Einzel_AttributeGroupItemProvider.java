@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -35,7 +36,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_Attrib
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenFactory;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_AttributeGroup} object.
@@ -112,9 +113,10 @@ public class Prog_Datei_Einzel_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_Anzeigetext());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_EigenschaftenBinaerdatei());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_EinzeldateiArt());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_Konfigurationskennung());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleBinaerdatei());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleProgKomponente());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_Verwendung());
 		}
 		return childrenFeatures;
@@ -169,9 +171,10 @@ public class Prog_Datei_Einzel_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Prog_Datei_Einzel_AttributeGroup.class)) {
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__ANZEIGETEXT:
-			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EIGENSCHAFTEN_BINAERDATEI:
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__EINZELDATEI_ART:
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__KONFIGURATIONSKENNUNG:
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_BINAERDATEI:
+			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__PRUEFMERKMALE_PROG_KOMPONENTE:
 			case Balisentechnik_ETCSPackage.PROG_DATEI_EINZEL_ATTRIBUTE_GROUP__VERWENDUNG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -199,11 +202,6 @@ public class Prog_Datei_Einzel_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_EigenschaftenBinaerdatei(),
-				 BasisTypenFactory.eINSTANCE.createEigenschaften_Datei_AttributeGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_EinzeldateiArt(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createEinzeldatei_Art_TypeClass()));
 
@@ -214,8 +212,41 @@ public class Prog_Datei_Einzel_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleBinaerdatei(),
+				 BasisTypenFactory.eINSTANCE.createPruefmerkmale_Daten_AttributeGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleProgKomponente(),
+				 BasisTypenFactory.eINSTANCE.createPruefmerkmale_Daten_AttributeGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_Verwendung(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createVerwendung_TypeClass()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleBinaerdatei() ||
+			childFeature == Balisentechnik_ETCSPackage.eINSTANCE.getProg_Datei_Einzel_AttributeGroup_PruefmerkmaleProgKomponente();
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

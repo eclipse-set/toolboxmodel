@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block;
 
@@ -130,15 +137,6 @@ public interface BlockFactory extends EFactory {
 	Bremsweg_TypeClass createBremsweg_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>Entwurfsgeschwindigkeit Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entwurfsgeschwindigkeit Type Class</em>'.
-	 * @generated
-	 */
-	Entwurfsgeschwindigkeit_TypeClass createEntwurfsgeschwindigkeit_TypeClass();
-
-	/**
 	 * Returns a new object of class '<em>Erlaubnis Staendig Vorhanden Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,13 +200,22 @@ public interface BlockFactory extends EFactory {
 	Strecke_Art_TypeClass createStrecke_Art_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>Traktion Art Type Class</em>'.
+	 * Returns a new object of class '<em>Streckengeschwindigkeit Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traktion Art Type Class</em>'.
+	 * @return a new object of class '<em>Streckengeschwindigkeit Type Class</em>'.
 	 * @generated
 	 */
-	Traktion_Art_TypeClass createTraktion_Art_TypeClass();
+	Streckengeschwindigkeit_TypeClass createStreckengeschwindigkeit_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Traktion Art Elektrisch Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traktion Art Elektrisch Type Class</em>'.
+	 * @generated
+	 */
+	Traktion_Art_Elektrisch_TypeClass createTraktion_Art_Elektrisch_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Vorblockwecker Type Class</em>'.

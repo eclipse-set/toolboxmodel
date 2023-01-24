@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis;
 
@@ -29,6 +36,16 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	ENUM_LICHTRAUMPROFIL_1SMDR(0, "ENUMLichtraumprofil_1SMDR", "1SMDR"),
 
 	/**
+	 * The '<em><b>ENUM Lichtraumprofil GC</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_LICHTRAUMPROFIL_GC_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_LICHTRAUMPROFIL_GC(1, "ENUMLichtraumprofil_GC", "GC"),
+
+	/**
 	 * The '<em><b>ENUM Lichtraumprofil SBahn 80003</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +53,7 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_LICHTRAUMPROFIL_SBAHN_80003(1, "ENUMLichtraumprofil_SBahn_80003", "SBahn_80003"),
+	ENUM_LICHTRAUMPROFIL_SBAHN_80003(2, "ENUMLichtraumprofil_SBahn_80003", "SBahn_80003"),
 
 	/**
 	 * The '<em><b>ENUM Lichtraumprofil SBahn Berlin</b></em>' literal object.
@@ -46,7 +63,7 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN(2, "ENUMLichtraumprofil_SBahn_Berlin", "SBahn_Berlin"),
+	ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN(3, "ENUMLichtraumprofil_SBahn_Berlin", "SBahn_Berlin"),
 
 	/**
 	 * The '<em><b>ENUM Lichtraumprofil sonstige</b></em>' literal object.
@@ -56,17 +73,7 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_LICHTRAUMPROFIL_SONSTIGE(3, "ENUMLichtraumprofil_sonstige", "sonstige"),
-
-	/**
-	 * The '<em><b>ENUM Lichtraumprofil GC</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_LICHTRAUMPROFIL_GC_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_LICHTRAUMPROFIL_GC(4, "ENUMLichtraumprofil_GC", "GC");
+	ENUM_LICHTRAUMPROFIL_SONSTIGE(4, "ENUMLichtraumprofil_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUM Lichtraumprofil 1SMDR</b></em>' literal value.
@@ -80,6 +87,17 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	public static final int ENUM_LICHTRAUMPROFIL_1SMDR_VALUE = 0;
 
 	/**
+	 * The '<em><b>ENUM Lichtraumprofil GC</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_LICHTRAUMPROFIL_GC
+	 * @model name="ENUMLichtraumprofil_GC" literal="GC"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_LICHTRAUMPROFIL_GC_VALUE = 1;
+
+	/**
 	 * The '<em><b>ENUM Lichtraumprofil SBahn 80003</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,7 +106,7 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_LICHTRAUMPROFIL_SBAHN_80003_VALUE = 1;
+	public static final int ENUM_LICHTRAUMPROFIL_SBAHN_80003_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Lichtraumprofil SBahn Berlin</b></em>' literal value.
@@ -99,7 +117,7 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN_VALUE = 2;
+	public static final int ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Lichtraumprofil sonstige</b></em>' literal value.
@@ -110,18 +128,7 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_LICHTRAUMPROFIL_SONSTIGE_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Lichtraumprofil GC</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_LICHTRAUMPROFIL_GC
-	 * @model name="ENUMLichtraumprofil_GC" literal="GC"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_LICHTRAUMPROFIL_GC_VALUE = 4;
+	public static final int ENUM_LICHTRAUMPROFIL_SONSTIGE_VALUE = 4;
 
 	/**
 	 * An array of all the '<em><b>ENUM Lichtraumprofil</b></em>' enumerators.
@@ -132,10 +139,10 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	private static final ENUMLichtraumprofil[] VALUES_ARRAY =
 		new ENUMLichtraumprofil[] {
 			ENUM_LICHTRAUMPROFIL_1SMDR,
+			ENUM_LICHTRAUMPROFIL_GC,
 			ENUM_LICHTRAUMPROFIL_SBAHN_80003,
 			ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN,
 			ENUM_LICHTRAUMPROFIL_SONSTIGE,
-			ENUM_LICHTRAUMPROFIL_GC,
 		};
 
 	/**
@@ -193,10 +200,10 @@ public enum ENUMLichtraumprofil implements Enumerator {
 	public static ENUMLichtraumprofil get(int value) {
 		switch (value) {
 			case ENUM_LICHTRAUMPROFIL_1SMDR_VALUE: return ENUM_LICHTRAUMPROFIL_1SMDR;
+			case ENUM_LICHTRAUMPROFIL_GC_VALUE: return ENUM_LICHTRAUMPROFIL_GC;
 			case ENUM_LICHTRAUMPROFIL_SBAHN_80003_VALUE: return ENUM_LICHTRAUMPROFIL_SBAHN_80003;
 			case ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN_VALUE: return ENUM_LICHTRAUMPROFIL_SBAHN_BERLIN;
 			case ENUM_LICHTRAUMPROFIL_SONSTIGE_VALUE: return ENUM_LICHTRAUMPROFIL_SONSTIGE;
-			case ENUM_LICHTRAUMPROFIL_GC_VALUE: return ENUM_LICHTRAUMPROFIL_GC;
 			default: return null;
 		}
 	}

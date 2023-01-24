@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Punkt_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt} object.
@@ -59,32 +60,9 @@ public class DatenpunktItemProvider extends Punkt_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIDEinmesspunktPropertyDescriptor(object);
 			addIDRBCPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Einmesspunkt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDEinmesspunktPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Datenpunkt_iDEinmesspunkt_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Datenpunkt_iDEinmesspunkt_feature", "_UI_Datenpunkt_type"),
-				 Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_IDEinmesspunkt(),
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -122,7 +100,8 @@ public class DatenpunktItemProvider extends Punkt_ObjektItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DatenpunktAllg());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DPBezugBetrieblich());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DatenpunktEinmesspunkt());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DPBezugFunktional());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DPETCSAdresse());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DPTyp());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_LEUSteuernde());
@@ -181,7 +160,8 @@ public class DatenpunktItemProvider extends Punkt_ObjektItemProvider {
 
 		switch (notification.getFeatureID(Datenpunkt.class)) {
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_ALLG:
-			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_BETRIEBLICH:
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DATENPUNKT_EINMESSPUNKT:
+			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_BEZUG_FUNKTIONAL:
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DPETCS_ADRESSE:
 			case Balisentechnik_ETCSPackage.DATENPUNKT__DP_TYP:
 			case Balisentechnik_ETCSPackage.DATENPUNKT__LEU_STEUERNDE:
@@ -213,8 +193,13 @@ public class DatenpunktItemProvider extends Punkt_ObjektItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DPBezugBetrieblich(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createDP_Bezug_Betrieblich_AttributeGroup()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DatenpunktEinmesspunkt(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createDatenpunkt_Einmesspunkt_AttributeGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDatenpunkt_DPBezugFunktional(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createDP_Bezug_Funktional_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter

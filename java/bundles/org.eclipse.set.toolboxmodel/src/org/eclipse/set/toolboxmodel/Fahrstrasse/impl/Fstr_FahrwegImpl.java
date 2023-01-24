@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.impl;
 
@@ -6,17 +13,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Bereich_ObjektImpl;
 
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_V_Hg_TypeClass;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -30,6 +39,7 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_FahrwegImpl#getFstrVHg <em>Fstr VHg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_FahrwegImpl#getIDStart <em>ID Start</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_FahrwegImpl#getIDZiel <em>ID Ziel</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_FahrwegImpl#getStartSignalCharakter <em>Start Signal Charakter</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +92,16 @@ public class Fstr_FahrwegImpl extends Bereich_ObjektImpl implements Fstr_Fahrweg
 	 * @ordered
 	 */
 	protected boolean iDZielESet;
+
+	/**
+	 * The cached value of the '{@link #getStartSignalCharakter() <em>Start Signal Charakter</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStartSignalCharakter()
+	 * @generated
+	 * @ordered
+	 */
+	protected Start_Signal_Charakter_TypeClass startSignalCharakter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -287,10 +307,57 @@ public class Fstr_FahrwegImpl extends Bereich_ObjektImpl implements Fstr_Fahrweg
 	 * @generated
 	 */
 	@Override
+	public Start_Signal_Charakter_TypeClass getStartSignalCharakter() {
+		return startSignalCharakter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStartSignalCharakter(Start_Signal_Charakter_TypeClass newStartSignalCharakter, NotificationChain msgs) {
+		Start_Signal_Charakter_TypeClass oldStartSignalCharakter = startSignalCharakter;
+		startSignalCharakter = newStartSignalCharakter;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER, oldStartSignalCharakter, newStartSignalCharakter);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStartSignalCharakter(Start_Signal_Charakter_TypeClass newStartSignalCharakter) {
+		if (newStartSignalCharakter != startSignalCharakter) {
+			NotificationChain msgs = null;
+			if (startSignalCharakter != null)
+				msgs = ((InternalEObject)startSignalCharakter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER, null, msgs);
+			if (newStartSignalCharakter != null)
+				msgs = ((InternalEObject)newStartSignalCharakter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER, null, msgs);
+			msgs = basicSetStartSignalCharakter(newStartSignalCharakter, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER, newStartSignalCharakter, newStartSignalCharakter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_FAHRWEG__FSTR_VHG:
 				return basicSetFstrVHg(null, msgs);
+			case FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER:
+				return basicSetStartSignalCharakter(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -312,6 +379,8 @@ public class Fstr_FahrwegImpl extends Bereich_ObjektImpl implements Fstr_Fahrweg
 			case FahrstrassePackage.FSTR_FAHRWEG__ID_ZIEL:
 				if (resolve) return getIDZiel();
 				return basicGetIDZiel();
+			case FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER:
+				return getStartSignalCharakter();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -333,6 +402,9 @@ public class Fstr_FahrwegImpl extends Bereich_ObjektImpl implements Fstr_Fahrweg
 				return;
 			case FahrstrassePackage.FSTR_FAHRWEG__ID_ZIEL:
 				setIDZiel((Basis_Objekt)newValue);
+				return;
+			case FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER:
+				setStartSignalCharakter((Start_Signal_Charakter_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -357,6 +429,9 @@ public class Fstr_FahrwegImpl extends Bereich_ObjektImpl implements Fstr_Fahrweg
 			case FahrstrassePackage.FSTR_FAHRWEG__ID_ZIEL:
 				unsetIDZiel();
 				return;
+			case FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER:
+				setStartSignalCharakter((Start_Signal_Charakter_TypeClass)null);
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -377,6 +452,8 @@ public class Fstr_FahrwegImpl extends Bereich_ObjektImpl implements Fstr_Fahrweg
 				return isSetIDStart();
 			case FahrstrassePackage.FSTR_FAHRWEG__ID_ZIEL:
 				return isSetIDZiel();
+			case FahrstrassePackage.FSTR_FAHRWEG__START_SIGNAL_CHARAKTER:
+				return startSignalCharakter != null;
 			default:
 				return super.eIsSet(featureID);
 		}

@@ -1,8 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
 /**
@@ -29,7 +37,7 @@ public interface ZN_Unterstation_Bf_Nr_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe der Bahnhofsadresse zur eindeutigen Identifikation einer Betriebsstelle. Zur eindeutigen Identifikation einer Betriebsstelle auf dem ZLV-Bus ist eine Bahnhofsadresse festzulegen. Die Bahnhofsadresse muss im Bereich der angrenzenden ZLV-Busse eindeutig sein. Bei der Verwendung von Bahnhosadressen in Bereichen mit (Koppel-/Mehrfach-)Unterstation (siehe ZN Unterstation Art) sind besondere Randbedingungen zu beachten. DB-Regelwerk 819.0731 5 (3) 819.0731 5 (4) Bei Bereichen mit (K/M)-Unterstationen: 819.0731 5 (5) - (7) 
+	 * Angabe der Bahnhofsnummer zur eindeutigen Identifikation einer Betriebsstelle auf dem ZLV-Bus. Die Bahnhofsnummer muss im Bereich der angrenzenden ZLV-Busse eindeutig sein. Bei der Verwendung von Bahnhosnummern in Bereichen mit (Koppel-/Mehrfach-)Unterstation (siehe ZN Unterstation Art) sind besondere Randbedingungen zu beachten. DB-Regelwerk 819.0731 5 (3) 819.0731 5 (4) Bei Bereichen mit (K/M)-Unterstationen: 819.0731 5 (5) - (7)
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bf Nr</em>' containment reference.
 	 * @see #setBfNr(Bf_Nr_TypeClass)

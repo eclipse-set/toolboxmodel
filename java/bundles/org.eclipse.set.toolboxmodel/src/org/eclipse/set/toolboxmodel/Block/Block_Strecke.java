@@ -1,11 +1,19 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +32,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDBetriebsstelleNachbar <em>ID Betriebsstelle Nachbar</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDKnotenbahnhof <em>ID Knotenbahnhof</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDStrecke <em>ID Strecke</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDStreckeBremsweg <em>ID Strecke Bremsweg</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Block.BlockPackage#getBlock_Strecke()
@@ -112,7 +121,7 @@ public interface Block_Strecke extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf die Örtlichkeit des nächsten Knotenbahnhofs.
+	 * Verweis auf die Örtlichkeit des nächsten Knotenbahnhofs oder am Streckenende zur besseren Orientierung. Das Attribut ist nicht zu befüllen, wenn ID_Betriebsstelle_Nachbar bereits auf einen Knotenbahnhof oder die Örtlichkeit am Streckenende verweist.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Knotenbahnhof</em>' reference.
 	 * @see #isSetIDKnotenbahnhof()
@@ -212,5 +221,58 @@ public interface Block_Strecke extends Basis_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDStrecke();
+
+	/**
+	 * Returns the value of the '<em><b>ID Strecke Bremsweg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf das Bereichsobjekt Strecke_Bremsweg zur Angabe des Bremswegs der Strecke. Es besteht übergangsweise noch die Möglichkeit, das Attribut Bremsweg zu befüllen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ID Strecke Bremsweg</em>' reference.
+	 * @see #isSetIDStreckeBremsweg()
+	 * @see #unsetIDStreckeBremsweg()
+	 * @see #setIDStreckeBremsweg(Strecke_Bremsweg)
+	 * @see org.eclipse.set.toolboxmodel.Block.BlockPackage#getBlock_Strecke_IDStreckeBremsweg()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_Strecke_Bremsweg'"
+	 * @generated
+	 */
+	Strecke_Bremsweg getIDStreckeBremsweg();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDStreckeBremsweg <em>ID Strecke Bremsweg</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID Strecke Bremsweg</em>' reference.
+	 * @see #isSetIDStreckeBremsweg()
+	 * @see #unsetIDStreckeBremsweg()
+	 * @see #getIDStreckeBremsweg()
+	 * @generated
+	 */
+	void setIDStreckeBremsweg(Strecke_Bremsweg value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDStreckeBremsweg <em>ID Strecke Bremsweg</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDStreckeBremsweg()
+	 * @see #getIDStreckeBremsweg()
+	 * @see #setIDStreckeBremsweg(Strecke_Bremsweg)
+	 * @generated
+	 */
+	void unsetIDStreckeBremsweg();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Block.Block_Strecke#getIDStreckeBremsweg <em>ID Strecke Bremsweg</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>ID Strecke Bremsweg</em>' reference is set.
+	 * @see #unsetIDStreckeBremsweg()
+	 * @see #getIDStreckeBremsweg()
+	 * @see #setIDStreckeBremsweg(Strecke_Bremsweg)
+	 * @generated
+	 */
+	boolean isSetIDStreckeBremsweg();
 
 } // Block_Strecke

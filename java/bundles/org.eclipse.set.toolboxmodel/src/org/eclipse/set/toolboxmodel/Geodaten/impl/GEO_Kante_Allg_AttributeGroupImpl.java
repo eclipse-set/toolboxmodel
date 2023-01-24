@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -12,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Form_TypeClass;
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Laenge_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Radius_A_TypeClass;
@@ -29,6 +37,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Plan_Quelle_TypeClass;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Kante_Allg_AttributeGroupImpl#getGEOForm <em>GEO Form</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Kante_Allg_AttributeGroupImpl#getGEOKAD <em>GEOKAD</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Kante_Allg_AttributeGroupImpl#getGEOLaenge <em>GEO Laenge</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Kante_Allg_AttributeGroupImpl#getGEORadiusA <em>GEO Radius A</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Kante_Allg_AttributeGroupImpl#getGEORadiusB <em>GEO Radius B</em>}</li>
@@ -48,6 +57,16 @@ public class GEO_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	 * @ordered
 	 */
 	protected GEO_Form_TypeClass gEOForm;
+
+	/**
+	 * The cached value of the '{@link #getGEOKAD() <em>GEOKAD</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGEOKAD()
+	 * @generated
+	 * @ordered
+	 */
+	protected GEO_KAD_TypeClass gEOKAD;
 
 	/**
 	 * The cached value of the '{@link #getGEOLaenge() <em>GEO Laenge</em>}' containment reference.
@@ -161,6 +180,51 @@ public class GEO_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM, newGEOForm, newGEOForm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GEO_KAD_TypeClass getGEOKAD() {
+		return gEOKAD;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetGEOKAD(GEO_KAD_TypeClass newGEOKAD, NotificationChain msgs) {
+		GEO_KAD_TypeClass oldGEOKAD = gEOKAD;
+		gEOKAD = newGEOKAD;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD, oldGEOKAD, newGEOKAD);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGEOKAD(GEO_KAD_TypeClass newGEOKAD) {
+		if (newGEOKAD != gEOKAD) {
+			NotificationChain msgs = null;
+			if (gEOKAD != null)
+				msgs = ((InternalEObject)gEOKAD).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD, null, msgs);
+			if (newGEOKAD != null)
+				msgs = ((InternalEObject)newGEOKAD).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD, null, msgs);
+			msgs = basicSetGEOKAD(newGEOKAD, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD, newGEOKAD, newGEOKAD));
 	}
 
 	/**
@@ -398,6 +462,8 @@ public class GEO_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM:
 				return basicSetGEOForm(null, msgs);
+			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD:
+				return basicSetGEOKAD(null, msgs);
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE:
 				return basicSetGEOLaenge(null, msgs);
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A:
@@ -423,6 +489,8 @@ public class GEO_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM:
 				return getGEOForm();
+			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD:
+				return getGEOKAD();
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE:
 				return getGEOLaenge();
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A:
@@ -448,6 +516,9 @@ public class GEO_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM:
 				setGEOForm((GEO_Form_TypeClass)newValue);
+				return;
+			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD:
+				setGEOKAD((GEO_KAD_TypeClass)newValue);
 				return;
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE:
 				setGEOLaenge((GEO_Laenge_TypeClass)newValue);
@@ -481,6 +552,9 @@ public class GEO_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM:
 				setGEOForm((GEO_Form_TypeClass)null);
 				return;
+			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD:
+				setGEOKAD((GEO_KAD_TypeClass)null);
+				return;
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE:
 				setGEOLaenge((GEO_Laenge_TypeClass)null);
 				return;
@@ -512,6 +586,8 @@ public class GEO_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_FORM:
 				return gEOForm != null;
+			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEOKAD:
+				return gEOKAD != null;
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_LAENGE:
 				return gEOLaenge != null;
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP__GEO_RADIUS_A:

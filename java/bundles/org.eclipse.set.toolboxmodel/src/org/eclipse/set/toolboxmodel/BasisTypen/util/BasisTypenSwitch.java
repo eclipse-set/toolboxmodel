@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen.util;
 
@@ -113,9 +120,9 @@ public class BasisTypenSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BasisTypenPackage.EIGENSCHAFTEN_DATEI_ATTRIBUTE_GROUP: {
-				Eigenschaften_Datei_AttributeGroup eigenschaften_Datei_AttributeGroup = (Eigenschaften_Datei_AttributeGroup)theEObject;
-				T result = caseEigenschaften_Datei_AttributeGroup(eigenschaften_Datei_AttributeGroup);
+			case BasisTypenPackage.ID_BEARBEITUNGSVERMERK_TYPE_CLASS: {
+				ID_Bearbeitungsvermerk_TypeClass iD_Bearbeitungsvermerk_TypeClass = (ID_Bearbeitungsvermerk_TypeClass)theEObject;
+				T result = caseID_Bearbeitungsvermerk_TypeClass(iD_Bearbeitungsvermerk_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -130,6 +137,12 @@ public class BasisTypenSwitch<T> extends Switch<T> {
 				Oertlicher_Elementname_TypeClass oertlicher_Elementname_TypeClass = (Oertlicher_Elementname_TypeClass)theEObject;
 				T result = caseOertlicher_Elementname_TypeClass(oertlicher_Elementname_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(oertlicher_Elementname_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BasisTypenPackage.PRUEFMERKMALE_DATEN_ATTRIBUTE_GROUP: {
+				Pruefmerkmale_Daten_AttributeGroup pruefmerkmale_Daten_AttributeGroup = (Pruefmerkmale_Daten_AttributeGroup)theEObject;
+				T result = casePruefmerkmale_Daten_AttributeGroup(pruefmerkmale_Daten_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -271,17 +284,17 @@ public class BasisTypenSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Eigenschaften Datei Attribute Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ID Bearbeitungsvermerk Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Eigenschaften Datei Attribute Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ID Bearbeitungsvermerk Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEigenschaften_Datei_AttributeGroup(Eigenschaften_Datei_AttributeGroup object) {
+	public T caseID_Bearbeitungsvermerk_TypeClass(ID_Bearbeitungsvermerk_TypeClass object) {
 		return null;
 	}
 
@@ -312,6 +325,21 @@ public class BasisTypenSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOertlicher_Elementname_TypeClass(Oertlicher_Elementname_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pruefmerkmale Daten Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pruefmerkmale Daten Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePruefmerkmale_Daten_AttributeGroup(Pruefmerkmale_Daten_AttributeGroup object) {
 		return null;
 	}
 

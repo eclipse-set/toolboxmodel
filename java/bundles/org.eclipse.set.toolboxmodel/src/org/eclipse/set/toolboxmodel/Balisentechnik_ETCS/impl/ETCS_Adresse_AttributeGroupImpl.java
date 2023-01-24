@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -13,7 +20,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kennung_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_C_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_RBC_TypeClass;
 
@@ -25,7 +31,6 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_RBC_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_Adresse_AttributeGroupImpl#getETCSKennung <em>ETCS Kennung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_Adresse_AttributeGroupImpl#getNIDC <em>NIDC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_Adresse_AttributeGroupImpl#getNIDRBC <em>NIDRBC</em>}</li>
  * </ul>
@@ -33,16 +38,6 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_RBC_TypeClass;
  * @generated
  */
 public class ETCS_Adresse_AttributeGroupImpl extends MinimalEObjectImpl.Container implements ETCS_Adresse_AttributeGroup {
-	/**
-	 * The cached value of the '{@link #getETCSKennung() <em>ETCS Kennung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getETCSKennung()
-	 * @generated
-	 * @ordered
-	 */
-	protected ETCS_Kennung_TypeClass eTCSKennung;
-
 	/**
 	 * The cached value of the '{@link #getNIDC() <em>NIDC</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -80,51 +75,6 @@ public class ETCS_Adresse_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	protected EClass eStaticClass() {
 		return Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Adresse_AttributeGroup();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETCS_Kennung_TypeClass getETCSKennung() {
-		return eTCSKennung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetETCSKennung(ETCS_Kennung_TypeClass newETCSKennung, NotificationChain msgs) {
-		ETCS_Kennung_TypeClass oldETCSKennung = eTCSKennung;
-		eTCSKennung = newETCSKennung;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG, oldETCSKennung, newETCSKennung);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setETCSKennung(ETCS_Kennung_TypeClass newETCSKennung) {
-		if (newETCSKennung != eTCSKennung) {
-			NotificationChain msgs = null;
-			if (eTCSKennung != null)
-				msgs = ((InternalEObject)eTCSKennung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG, null, msgs);
-			if (newETCSKennung != null)
-				msgs = ((InternalEObject)newETCSKennung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG, null, msgs);
-			msgs = basicSetETCSKennung(newETCSKennung, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG, newETCSKennung, newETCSKennung));
 	}
 
 	/**
@@ -225,8 +175,6 @@ public class ETCS_Adresse_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG:
-				return basicSetETCSKennung(null, msgs);
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDC:
 				return basicSetNIDC(null, msgs);
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDRBC:
@@ -244,8 +192,6 @@ public class ETCS_Adresse_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG:
-				return getETCSKennung();
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDC:
 				return getNIDC();
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDRBC:
@@ -263,9 +209,6 @@ public class ETCS_Adresse_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG:
-				setETCSKennung((ETCS_Kennung_TypeClass)newValue);
-				return;
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDC:
 				setNIDC((NID_C_TypeClass)newValue);
 				return;
@@ -286,9 +229,6 @@ public class ETCS_Adresse_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG:
-				setETCSKennung((ETCS_Kennung_TypeClass)null);
-				return;
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDC:
 				setNIDC((NID_C_TypeClass)null);
 				return;
@@ -309,8 +249,6 @@ public class ETCS_Adresse_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_KENNUNG:
-				return eTCSKennung != null;
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDC:
 				return nIDC != null;
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDRBC:

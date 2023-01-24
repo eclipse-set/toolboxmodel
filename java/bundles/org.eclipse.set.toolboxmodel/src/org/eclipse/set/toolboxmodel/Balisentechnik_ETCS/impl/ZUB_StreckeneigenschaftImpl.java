@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -11,7 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Oberstrombegrenzung_Gueterzug_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Oberstrombegrenzung_Reisezug_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verbot_Anhalten_TypeClass;
@@ -62,7 +69,7 @@ public class ZUB_StreckeneigenschaftImpl extends Bereich_ObjektImpl implements Z
 	 * @generated
 	 * @ordered
 	 */
-	protected Metallteil_TypeClass metallteil;
+	protected Metallteil_AttributeGroup metallteil;
 
 	/**
 	 * The cached value of the '{@link #getOberstrombegrenzungGueterzug() <em>Oberstrombegrenzung Gueterzug</em>}' containment reference.
@@ -194,7 +201,7 @@ public class ZUB_StreckeneigenschaftImpl extends Bereich_ObjektImpl implements Z
 	 * @generated
 	 */
 	@Override
-	public Metallteil_TypeClass getMetallteil() {
+	public Metallteil_AttributeGroup getMetallteil() {
 		return metallteil;
 	}
 
@@ -203,8 +210,8 @@ public class ZUB_StreckeneigenschaftImpl extends Bereich_ObjektImpl implements Z
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMetallteil(Metallteil_TypeClass newMetallteil, NotificationChain msgs) {
-		Metallteil_TypeClass oldMetallteil = metallteil;
+	public NotificationChain basicSetMetallteil(Metallteil_AttributeGroup newMetallteil, NotificationChain msgs) {
+		Metallteil_AttributeGroup oldMetallteil = metallteil;
 		metallteil = newMetallteil;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_STRECKENEIGENSCHAFT__METALLTEIL, oldMetallteil, newMetallteil);
@@ -219,7 +226,7 @@ public class ZUB_StreckeneigenschaftImpl extends Bereich_ObjektImpl implements Z
 	 * @generated
 	 */
 	@Override
-	public void setMetallteil(Metallteil_TypeClass newMetallteil) {
+	public void setMetallteil(Metallteil_AttributeGroup newMetallteil) {
 		if (newMetallteil != metallteil) {
 			NotificationChain msgs = null;
 			if (metallteil != null)
@@ -573,7 +580,7 @@ public class ZUB_StreckeneigenschaftImpl extends Bereich_ObjektImpl implements Z
 				setBezeichnung((ZUB_Streckeneigenschaft_Bezeichnung_AttributeGroup)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_STRECKENEIGENSCHAFT__METALLTEIL:
-				setMetallteil((Metallteil_TypeClass)newValue);
+				setMetallteil((Metallteil_AttributeGroup)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_STRECKENEIGENSCHAFT__OBERSTROMBEGRENZUNG_GUETERZUG:
 				setOberstrombegrenzungGueterzug((Oberstrombegrenzung_Gueterzug_TypeClass)newValue);
@@ -611,7 +618,7 @@ public class ZUB_StreckeneigenschaftImpl extends Bereich_ObjektImpl implements Z
 				setBezeichnung((ZUB_Streckeneigenschaft_Bezeichnung_AttributeGroup)null);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_STRECKENEIGENSCHAFT__METALLTEIL:
-				setMetallteil((Metallteil_TypeClass)null);
+				setMetallteil((Metallteil_AttributeGroup)null);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_STRECKENEIGENSCHAFT__OBERSTROMBEGRENZUNG_GUETERZUG:
 				setOberstrombegrenzungGueterzug((Oberstrombegrenzung_Gueterzug_TypeClass)null);

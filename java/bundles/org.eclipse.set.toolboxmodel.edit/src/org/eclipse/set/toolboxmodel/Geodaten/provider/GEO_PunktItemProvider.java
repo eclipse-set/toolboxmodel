@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenFactory;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt} object.
@@ -59,9 +60,32 @@ public class GEO_PunktItemProvider extends Basis_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIDGEOKantePropertyDescriptor(object);
 			addIDGEOKnotenPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the IDGEO Kante feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDGEOKantePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GEO_Punkt_iDGEOKante_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GEO_Punkt_iDGEOKante_feature", "_UI_GEO_Punkt_type"),
+				 GeodatenPackage.Literals.GEO_PUNKT__IDGEO_KANTE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

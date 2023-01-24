@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -144,6 +145,29 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 		}
 
 		return bsWdhItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.BSZBSBer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BSZBSBerItemProvider bszbsBerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.BSZBSBer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBSZBSBerAdapter() {
+		if (bszbsBerItemProvider == null) {
+			bszbsBerItemProvider = new BSZBSBerItemProvider(this);
+		}
+
+		return bszbsBerItemProvider;
 	}
 
 	/**
@@ -1504,6 +1528,29 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Lf1Wdh} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Lf1WdhItemProvider lf1WdhItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Lf1Wdh}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLf1WdhAdapter() {
+		if (lf1WdhItemProvider == null) {
+			lf1WdhItemProvider = new Lf1WdhItemProvider(this);
+		}
+
+		return lf1WdhItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Lf2} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1685,29 +1732,6 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 		}
 
 		return lf7ItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.LfPf} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LfPfItemProvider lfPfItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.LfPf}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLfPfAdapter() {
-		if (lfPfItemProvider == null) {
-			lfPfItemProvider = new LfPfItemProvider(this);
-		}
-
-		return lfPfItemProvider;
 	}
 
 	/**
@@ -2378,29 +2402,6 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.NISESHM} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NISESHMItemProvider niseshmItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.NISESHM}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNISESHMAdapter() {
-		if (niseshmItemProvider == null) {
-			niseshmItemProvider = new NISESHMItemProvider(this);
-		}
-
-		return niseshmItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzAutoET} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2539,6 +2540,29 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzGSMR} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OzGSMRItemProvider ozGSMRItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzGSMR}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOzGSMRAdapter() {
+		if (ozGSMRItemProvider == null) {
+			ozGSMRItemProvider = new OzGSMRItemProvider(this);
+		}
+
+		return ozGSMRItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzHET} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2559,6 +2583,29 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 		}
 
 		return ozHETItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzHM} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OzHMItemProvider ozHMItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.OzHM}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOzHMAdapter() {
+		if (ozHMItemProvider == null) {
+			ozHMItemProvider = new OzHMItemProvider(this);
+		}
+
+		return ozHMItemProvider;
 	}
 
 	/**
@@ -4325,6 +4372,7 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 		if (bsvauesItemProvider != null) bsvauesItemProvider.dispose();
 		if (bsvrvaItemProvider != null) bsvrvaItemProvider.dispose();
 		if (bsWdhItemProvider != null) bsWdhItemProvider.dispose();
+		if (bszbsBerItemProvider != null) bszbsBerItemProvider.dispose();
 		if (bsZusatzItemProvider != null) bsZusatzItemProvider.dispose();
 		if (bue00LpItemProvider != null) bue00LpItemProvider.dispose();
 		if (bue01LpItemProvider != null) bue01LpItemProvider.dispose();
@@ -4384,6 +4432,7 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 		if (ks2ItemProvider != null) ks2ItemProvider.dispose();
 		if (lf1ItemProvider != null) lf1ItemProvider.dispose();
 		if (lf12ItemProvider != null) lf12ItemProvider.dispose();
+		if (lf1WdhItemProvider != null) lf1WdhItemProvider.dispose();
 		if (lf2ItemProvider != null) lf2ItemProvider.dispose();
 		if (lf3ItemProvider != null) lf3ItemProvider.dispose();
 		if (lf4DSItemProvider != null) lf4DSItemProvider.dispose();
@@ -4392,7 +4441,6 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 		if (lf5DVItemProvider != null) lf5DVItemProvider.dispose();
 		if (lf6ItemProvider != null) lf6ItemProvider.dispose();
 		if (lf7ItemProvider != null) lf7ItemProvider.dispose();
-		if (lfPfItemProvider != null) lfPfItemProvider.dispose();
 		if (lfPfLItemProvider != null) lfPfLItemProvider.dispose();
 		if (lfPfRItemProvider != null) lfPfRItemProvider.dispose();
 		if (msGeDItemProvider != null) msGeDItemProvider.dispose();
@@ -4422,14 +4470,15 @@ public class Signalbegriffe_Ril_301ItemProviderAdapterFactory extends Signalbegr
 		if (ne6ItemProvider != null) ne6ItemProvider.dispose();
 		if (ne7aItemProvider != null) ne7aItemProvider.dispose();
 		if (ne7bItemProvider != null) ne7bItemProvider.dispose();
-		if (niseshmItemProvider != null) niseshmItemProvider.dispose();
 		if (ozAutoETItemProvider != null) ozAutoETItemProvider.dispose();
 		if (ozAutoHETItemProvider != null) ozAutoHETItemProvider.dispose();
 		if (ozBkItemProvider != null) ozBkItemProvider.dispose();
 		if (ozETItemProvider != null) ozETItemProvider.dispose();
 		if (ozFaItemProvider != null) ozFaItemProvider.dispose();
 		if (ozFakItemProvider != null) ozFakItemProvider.dispose();
+		if (ozGSMRItemProvider != null) ozGSMRItemProvider.dispose();
 		if (ozHETItemProvider != null) ozHETItemProvider.dispose();
+		if (ozHMItemProvider != null) ozHMItemProvider.dispose();
 		if (ozICEItemProvider != null) ozICEItemProvider.dispose();
 		if (ozLZBBerItemProvider != null) ozLZBBerItemProvider.dispose();
 		if (ozOBGrenzeItemProvider != null) ozOBGrenzeItemProvider.dispose();

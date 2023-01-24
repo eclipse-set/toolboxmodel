@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_ETCS_Adresse_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_ETCS_Adresse_AttributeGroup} object.
@@ -85,9 +86,8 @@ public class DP_ETCS_Adresse_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_ETCSAdresseKennung());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_ETCSAdresseNIDBG());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_ETCSAdresseNIDC());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_NIDBG());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_NIDC());
 		}
 		return childrenFeatures;
 	}
@@ -140,9 +140,8 @@ public class DP_ETCS_Adresse_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DP_ETCS_Adresse_AttributeGroup.class)) {
-			case Balisentechnik_ETCSPackage.DP_ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_ADRESSE_KENNUNG:
-			case Balisentechnik_ETCSPackage.DP_ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_ADRESSE_NIDBG:
-			case Balisentechnik_ETCSPackage.DP_ETCS_ADRESSE_ATTRIBUTE_GROUP__ETCS_ADRESSE_NIDC:
+			case Balisentechnik_ETCSPackage.DP_ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDBG:
+			case Balisentechnik_ETCSPackage.DP_ETCS_ADRESSE_ATTRIBUTE_GROUP__NIDC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -164,18 +163,13 @@ public class DP_ETCS_Adresse_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_ETCSAdresseKennung(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_Adresse_Kennung_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_NIDBG(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createNID_BG_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_ETCSAdresseNIDBG(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_Adresse_NID_BG_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_ETCSAdresseNIDC(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_Adresse_NID_C_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_ETCS_Adresse_AttributeGroup_NIDC(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createNID_C_TypeClass()));
 	}
 
 	/**

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.util;
 
@@ -114,6 +121,8 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 		switch (classifierID) {
 			case Weichen_und_GleissperrenPackage.AUFFAHRORTUNG_TYPE_CLASS:
 				return validateAuffahrortung_TypeClass((Auffahrortung_TypeClass)value, diagnostics, context);
+			case Weichen_und_GleissperrenPackage.AUSTAUSCH_ANTRIEBE_TYPE_CLASS:
+				return validateAustausch_Antriebe_TypeClass((Austausch_Antriebe_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.AUSWURFRICHTUNG_TYPE_CLASS:
 				return validateAuswurfrichtung_TypeClass((Auswurfrichtung_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.BESONDERES_FAHRWEGELEMENT_TYPE_CLASS:
@@ -150,12 +159,16 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 				return validateHerzstueck_Antriebe_TypeClass((Herzstueck_Antriebe_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ISOLIERFALL_TYPE_CLASS:
 				return validateIsolierfall_TypeClass((Isolierfall_TypeClass)value, diagnostics, context);
+			case Weichen_und_GleissperrenPackage.KR_KR_WSEITENZUORDNUNG_TYPE_CLASS:
+				return validateKr_KrW_Seitenzuordnung_TypeClass((Kr_KrW_Seitenzuordnung_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.KREUZUNG_ATTRIBUTE_GROUP:
 				return validateKreuzung_AttributeGroup((Kreuzung_AttributeGroup)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.KREUZUNGSGLEIS_TYPE_CLASS:
 				return validateKreuzungsgleis_TypeClass((Kreuzungsgleis_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.SCHUTZSCHIENE_TYPE_CLASS:
 				return validateSchutzschiene_TypeClass((Schutzschiene_TypeClass)value, diagnostics, context);
+			case Weichen_und_GleissperrenPackage.STAMMGLEIS_TYPE_CLASS:
+				return validateStammgleis_TypeClass((Stammgleis_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.VORZUGSLAGE_AUTOMATIK_TYPE_CLASS:
 				return validateVorzugslage_Automatik_TypeClass((Vorzugslage_Automatik_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.WKR_ANLAGE:
@@ -192,6 +205,8 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 				return validateZungenpruefkontakt_Anzahl_TypeClass((Zungenpruefkontakt_Anzahl_TypeClass)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ENUM_BESONDERES_FAHRWEGELEMENT:
 				return validateENUMBesonderesFahrwegelement((ENUMBesonderesFahrwegelement)value, diagnostics, context);
+			case Weichen_und_GleissperrenPackage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE:
+				return validateENUMElektrischerAntriebLage((ENUMElektrischerAntriebLage)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ENUM_ELEMENT_LAGE:
 				return validateENUMElementLage((ENUMElementLage)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ENUM_GLEIS_ABSCHLUSS_ART:
@@ -214,10 +229,10 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 				return validateCAuswurfrichtung((ENUMLinksRechts)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE:
 				return validateElektrischer_Antrieb_Anzahl_Type((BigInteger)value, diagnostics, context);
-			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_LAGE_TYPE:
-				return validateElektrischer_Antrieb_Lage_Type((ENUMLinksRechts)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ENUM_BESONDERES_FAHRWEGELEMENT_OBJECT:
 				return validateENUMBesonderesFahrwegelementObject((ENUMBesonderesFahrwegelement)value, diagnostics, context);
+			case Weichen_und_GleissperrenPackage.ENUM_ELEKTRISCHER_ANTRIEB_LAGE_OBJECT:
+				return validateENUMElektrischerAntriebLageObject((ENUMElektrischerAntriebLage)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ENUM_ELEMENT_LAGE_OBJECT:
 				return validateENUMElementLageObject((ENUMElementLage)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ENUM_GLEIS_ABSCHLUSS_ART_OBJECT:
@@ -244,8 +259,12 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 				return validateHerzstueck_Antriebe_Type((BigInteger)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.ISOLIERFALL_TYPE:
 				return validateIsolierfall_Type((String)value, diagnostics, context);
+			case Weichen_und_GleissperrenPackage.KR_KR_WSEITENZUORDNUNG_TYPE:
+				return validateKr_KrW_Seitenzuordnung_Type((ENUMLinksRechts)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.KREUZUNGSGLEIS_TYPE:
 				return validateKreuzungsgleis_Type((ENUMLinksRechts)value, diagnostics, context);
+			case Weichen_und_GleissperrenPackage.STAMMGLEIS_TYPE:
+				return validateStammgleis_Type((ENUMLinksRechts)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.WKR_GRUNDFORM_TYPE:
 				return validateW_Kr_Grundform_Type((String)value, diagnostics, context);
 			case Weichen_und_GleissperrenPackage.WEICHE_VORZUGSLAGE_TYPE:
@@ -264,6 +283,15 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 	 */
 	public boolean validateAuffahrortung_TypeClass(Auffahrortung_TypeClass auffahrortung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(auffahrortung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAustausch_Antriebe_TypeClass(Austausch_Antriebe_TypeClass austausch_Antriebe_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(austausch_Antriebe_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -433,6 +461,15 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateKr_KrW_Seitenzuordnung_TypeClass(Kr_KrW_Seitenzuordnung_TypeClass kr_KrW_Seitenzuordnung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(kr_KrW_Seitenzuordnung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateKreuzung_AttributeGroup(Kreuzung_AttributeGroup kreuzung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(kreuzung_AttributeGroup, diagnostics, context);
 	}
@@ -453,6 +490,15 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 	 */
 	public boolean validateSchutzschiene_TypeClass(Schutzschiene_TypeClass schutzschiene_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(schutzschiene_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStammgleis_TypeClass(Stammgleis_TypeClass stammgleis_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(stammgleis_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -622,6 +668,15 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateENUMElektrischerAntriebLage(ENUMElektrischerAntriebLage enumElektrischerAntriebLage, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateENUMElementLage(ENUMElementLage enumElementLage, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -745,7 +800,7 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateElektrischer_Antrieb_Lage_Type(ENUMLinksRechts elektrischer_Antrieb_Lage_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMBesonderesFahrwegelementObject(ENUMBesonderesFahrwegelement enumBesonderesFahrwegelementObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -754,7 +809,7 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMBesonderesFahrwegelementObject(ENUMBesonderesFahrwegelement enumBesonderesFahrwegelementObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMElektrischerAntriebLageObject(ENUMElektrischerAntriebLage enumElektrischerAntriebLageObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -933,7 +988,25 @@ public class Weichen_und_GleissperrenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateKr_KrW_Seitenzuordnung_Type(ENUMLinksRechts kr_KrW_Seitenzuordnung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateKreuzungsgleis_Type(ENUMLinksRechts kreuzungsgleis_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStammgleis_Type(ENUMLinksRechts stammgleis_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

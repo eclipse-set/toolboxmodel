@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsWeichen_und_Gleissperren="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/1.9.0.2">
+           xmlns:nsWeichen_und_Gleissperren="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Weichen_und_Gleissperren/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,12 +26,20 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
+	  <xs:simpleType name="ENUMElektrischer_Antrieb_Lage">
+		    <xs:restriction base="xs:string">
+			      <xs:enumeration value="links"/>
+			      <xs:enumeration value="mittig"/>
+			      <xs:enumeration value="rechts"/>
+			      <xs:enumeration value="sonstige"/>
+		    </xs:restriction>
+	  </xs:simpleType>
 	  <xs:simpleType name="TKreuzungsgleis">
 		    <xs:restriction base="nsBasisTypen:TLinksRechts"/>
 	  </xs:simpleType>
@@ -91,6 +97,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -119,6 +126,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -179,6 +187,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -202,8 +211,12 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:simpleType name="TStammgleis">
+		    <xs:restriction base="nsBasisTypen:TLinksRechts"/>
+	  </xs:simpleType>
 	  <xs:simpleType name="ENUMGleis_Abschluss_Art">
 		    <xs:restriction base="xs:string">
+			      <xs:enumeration value="Bremsprellbock"/>
 			      <xs:enumeration value="Drehscheibe"/>
 			      <xs:enumeration value="Faehranleger"/>
 			      <xs:enumeration value="Festprellbock"/>
@@ -212,7 +225,6 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:enumeration value="Schiebebuehne"/>
 			      <xs:enumeration value="Schwellenkreuz"/>
 			      <xs:enumeration value="sonstige"/>
-			      <xs:enumeration value="Bremsprellbock"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:complexType name="TCGleissperre_Vorzugslage">
@@ -244,15 +256,10 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:element>
 			      <xs:element name="Gleissperre_Vorzugslage"
                      type="nsWeichen_und_Gleissperren:TCGleissperre_Vorzugslage"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Vorzugslage der Gleissperre (Grundstellung). Dieses Attribut enthält den Eintrag abgelegt oder aufgelegt. Mit dem Attribut Vorzugslage Automatik kann festgelegt werden, dass diese Vorzugslage automatisch hergestellt wird. .</xs:documentation>
-               <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
-                  <ppi:WorkflowInformation>
-                     <ppi:ProposedValue>aufgelegt</ppi:ProposedValue>
-                  </ppi:WorkflowInformation>
-               </xs:appinfo>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Vorzugslage der Gleissperre (Grundstellung). Dieses Attribut enthält den Eintrag abgelegt oder aufgelegt. Mit dem Attribut Vorzugslage Automatik kann festgelegt werden, dass diese Vorzugslage automatisch hergestellt wird. In großen Rangierbahnhöfen wird u. U. auf die Festlegung einer Vorzugslage verzichtet.</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 		    </xs:sequence>
@@ -317,9 +324,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:enumeration value="Flachkreuzung"/>
 			      <xs:enumeration value="IBW"/>
 			      <xs:enumeration value="Klothoidenweiche"/>
+			      <xs:enumeration value="Korbbogenweiche"/>
 			      <xs:enumeration value="Kr"/>
 			      <xs:enumeration value="sonstige"/>
-			      <xs:enumeration value="Korbbogenweiche"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:complexType name="TCWeiche_Betriebsart">
@@ -384,10 +391,10 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:complexType name="CEntgleisungsschuh">
 		    <xs:sequence>
 			      <xs:element name="Auswurfrichtung" type="nsWeichen_und_Gleissperren:TCAuswurfrichtung"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Entgleisungsrichtung eines Fahrzeugs, das über den Entgleisungsschuh fährt. Die Entgleisungsrichtung ist in Bewegungsrichtung des Fahrzeuges auf den Entgleisungsschuhs zu sehen und ist nicht auf die Wirkrichtung der topologischen Kante bezogen. Da das zugehörige Objekt (W_Kr_Gsp_Komponente als Punktobjekt auf eine Fahrschiene des Gleises (Topologiekante) verortet ist, kann daraus ebenfalls die Auswurfrichtung ermittelt werden. Achtung: Die Angabe ist redundant zu den Angaben im Punktobjekt bezüglich der Attribute Seitliche Lage und Wirkrichtung! Es wird deshalb nochmals geprüft auf dieses Attribut künftig zu verzichten.</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Entgleisungsrichtung eines Fahrzeugs, das über den Entgleisungsschuh fährt. Die Entgleisungsrichtung ist in Bewegungsrichtung des Fahrzeuges auf den Entgleisungsschuhs zu sehen und ist nicht auf die Wirkrichtung der topologischen Kante bezogen. Da das zugehörige Objekt (W_Kr_Gsp_Komponente) als Punktobjekt auf eine Fahrschiene des Gleises (Topologiekante) verortet ist, kann daraus ebenfalls die Auswurfrichtung ermittelt werden. Achtung: Die Angabe ist redundant zu den Angaben im Punktobjekt bezüglich der Attribute Seitliche Lage und Wirkrichtung und soll daher zukünftig entfallen.</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Gleissperrensignal"
@@ -469,6 +476,14 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:simpleType>
 	  <xs:complexType name="CW_Kr_Gsp_Element_Allg">
 		    <xs:sequence>
+			      <xs:element name="Kr_KrW_Seitenzuordnung"
+                     type="nsWeichen_und_Gleissperren:TCKr_KrW_Seitenzuordnung"
+                     minOccurs="0"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bei unsymmetrischen Kreuzungen (Kr) und Kreuzungsweichen (KrW): Zuordnung der Seite Links/Rechts gemäß Ril 800.0120. Die Angabe wird nachfolgend für das korrekte Zeichnen der Weichendreiecke in maßstäblichen Lageplänen benötigt.</xs:documentation>
+            </xs:annotation>
+			      </xs:element>
 			      <xs:element name="Vorzugslage_Automatik"
                      type="nsWeichen_und_Gleissperren:TCVorzugslage_Automatik"
                      minOccurs="0"
@@ -565,6 +580,12 @@ XML Schema for PlanPro interface.</xs:documentation>
                      maxOccurs="1">
 				        <xs:annotation>
                <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Lage der TOP Kante, die bei EKW und DKW vom zugehörigen Zungenpaar in Richtung des Kreuzungsmittelpunktes führt. Das Attribut muss bei EKW und DKW angegeben werden, um eine lagerichtige Zuordnung der Kanteneigenschaften in dem Ausgabetabellen sicherzustellen. </xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:element name="Stammgleis" type="nsWeichen_und_Gleissperren:TCStammgleis" minOccurs="0"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Lage der TOP Kante, die das Stammgleis repräsentiert (Blickrichtung von der Weichenspitze zum Weichenstumpf bzw. Kreuzungsmittelpunkt).</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Weichensignal" type="nsWeichen_und_Gleissperren:TCWeichensignal"
@@ -732,7 +753,7 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
 				        <xs:sequence>
-					          <xs:element name="Wert" type="nsWeichen_und_Gleissperren:TElektrischer_Antrieb_Lage"
+					          <xs:element name="Wert" type="nsWeichen_und_Gleissperren:ENUMElektrischer_Antrieb_Lage"
                            minOccurs="1"
                            maxOccurs="1"
                            nillable="true"/>
@@ -740,21 +761,32 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:simpleType name="TElektrischer_Antrieb_Lage">
-		    <xs:restriction base="nsBasisTypen:TLinksRechts"/>
-	  </xs:simpleType>
 	  <xs:complexType name="CW_Kr_Gsp_Komponente">
 		    <xs:annotation>
          <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Einzelner Teil der Weichenanlage (Zungenpaar) oder konstruktiver Mittelpunkt einer Kreuzung in Form von 2 Kreuzungsseiten. Mit Hilfe der W_Kr_Gsp_Komponente als punktförmiges Objekt wird die Verknüpfung mit dem Knoten im Topologischen Modell hergestellt. Als Zuordnungspunkte für die Topologie und die Topographie werden Weichenknoten definiert. Die Verortung der Weichenkomponente ist in für die typischen Anwendungsfälle in der Modellierung Weichen dargestellt. Bei einfachen Weichen entspricht der Weichenknoten dem Weichenanfang. Bei EKW und DKW entspricht der Weichenknoten dem Anfang der entsprechenden Zungenpaare (auch hier einheitlich als Weichenanfang bezeichnet). Bei einer Kreuzung wird der Mittelpunkt der Kreuzung als Weichenknoten verwendet. Beide Kreuzungsseiten werden jeweils auf die beiden sich kreuzenden TOP-Kanten verortet. Der Mittelpunkt einer Kreuzung ist kein TOP-Knoten und kein GEO-Knoten. Bei Gleissperren wird die Lage des Entgleisungsschuhs verortet. Über die Seitliche Lage im Punkt Objekt wird die Schiene bestimmt, an der der Entgleisungsschuh angebracht ist. Die seitliche Lage wird im Bezug auf die Richtung der TOP_Kante angegeben und stellt nicht die Entgleisungsrichtung dar! Wenn die Weichenkomponente mit einem nicht mechanisch mit der Weiche verbundenen (Weichen-)Signal (z. B. Rückfallweichensignal, Weichenlagemelder) ausgerüstet werden soll, erfolgt die Modellierung dieses Signals als ein gesondertes Objekt Signal. Auf dieses Signal wird von W Kr Anlage (wenn die Anlage ein Signal hat) bzw. W Kr Gsp Element (wenn mehrere Elemete vorhanden sind und diese unterschiedliche Signale haben) verwiesen. Der Weichelagemelder einer DKW wird von den beiden W_Kr_Gsp_Element gesteuert, aber in einem Signal angezeigt. Er wird deshalb nur als ein Signal in der Weichenanlage modelliert. Ein mit der Weichenkomponente mechanisch verbundenes Weichensignal wird gemäß Regelzeichnung errichtet, wenn das Attribut Weichensignal gesetzt ist. Es wird dann kein gesondertes Signal modelliert. Siehe auch Modellierung Weichen. Die im Glossar mit (E) gekennzeichneten Attribute Radius_L und Radius_R sollen nicht mehr befüllt werden, da ein künftiger Entfall vorgesehen ist.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisobjekte:CPunkt_Objekt">
 				        <xs:sequence>
+					          <xs:element name="Austausch_Antriebe"
+                           type="nsWeichen_und_Gleissperren:TCAustausch_Antriebe"
+                           minOccurs="0"
+                           maxOccurs="1">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, ob die vorhandenen Antriebe ausgetauscht werden soll (true). Der Wert \"false\" wird nicht verwendet.</xs:documentation>
+                     <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
+                        <ppi:WorkflowInformation>
+                           <ppi:ProposedValue>true</ppi:ProposedValue>
+                        </ppi:WorkflowInformation>
+                     </xs:appinfo>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="ID_Regelzeichnung" type="nsVerweise:TCID_Regelzeichnung" minOccurs="0"
                            maxOccurs="unbounded">
 						            <xs:annotation>
@@ -812,6 +844,18 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:enumeration value="Wehrkammertor"/>
 		    </xs:restriction>
 	  </xs:simpleType>
+	  <xs:complexType name="TCKr_KrW_Seitenzuordnung">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsWeichen_und_Gleissperren:TKr_KrW_Seitenzuordnung"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:simpleType name="ENUMGleissperre_Betriebsart">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="abgelegt"/>
@@ -850,6 +894,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -919,6 +964,20 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCStammgleis">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsWeichen_und_Gleissperren:TStammgleis" minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
+	  <xs:simpleType name="TKr_KrW_Seitenzuordnung">
+		    <xs:restriction base="nsBasisTypen:TLinksRechts"/>
+	  </xs:simpleType>
 	  <xs:complexType name="CW_Kr_Anlage_Allg">
 		    <xs:sequence>
 			      <xs:element name="Isolierfall" type="nsWeichen_und_Gleissperren:TCIsolierfall"
@@ -968,10 +1027,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:complexType name="CGleis_Abschluss">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Ständig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergeführt sein. Er wird auf den Punkt verortet, der die Grenze der möglichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, fällt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem ergänzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der möglichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet wodurch der seitliche Abschand immer 0.000 sein muss. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Ständig vorhandenes Ende eines betrieblich nutzbaren Gleises (z. B. Prellbock oder Schwellenkreuz). Der Gleisabschluss ist ein Punkt Objekt. Die TOP Kante kann hinter dem Gleisabschluss bis zum baulichen Ende des Gleises weitergeführt sein. Er wird auf den Punkt verortet, der die Grenze der möglichen Fahrzeugbewegung darstellt. Da das bauliche Ende konstruktiv hinter diesem Punkt liegt, fällt der Gleisabschluss in der Regel nicht mit einem TOP Knoten zusammen. Der Gleisabschluss ist vom klappbaren Prellbock (und anderen beweglichen Elementen) zu unterscheiden. Diese besonderen beweglichen Fahrwegelemente sind als Gleissperre mit einem ergänzenden Bearbeitungsvermerk zu planen. Der Gleisabschluss ist in der Regel auch Grenze eines Gleisabschnittes. Die Wirkrichtung entspricht der Richtung der möglichen Fahrzeugbewegung auf den Gleisabschluss. Der Gleisabschluss ist mittig angeordnet, sodass die Angabe des seitlichen Abstands bzw. der seitlichen Lage entfällt.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1022,4 +1082,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="CAuswurfrichtung">
 		    <xs:restriction base="nsBasisTypen:TLinksRechts"/>
 	  </xs:simpleType>
+	  <xs:complexType name="TCAustausch_Antriebe">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="xs:boolean" minOccurs="1" maxOccurs="1" nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 </xs:schema>

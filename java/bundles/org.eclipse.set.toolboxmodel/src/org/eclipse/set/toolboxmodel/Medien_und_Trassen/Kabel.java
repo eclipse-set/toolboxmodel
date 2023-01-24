@@ -1,10 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -23,6 +29,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel#getBezeichnung <em>Bezeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel#getIDTrasseKante <em>ID Trasse Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel#getKabelAllg <em>Kabel Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel#getKabelElement <em>Kabel Element</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel()
@@ -90,5 +97,21 @@ public interface Kabel extends Basis_Objekt {
 	 * @generated
 	 */
 	void setKabelAllg(Kabel_Allg_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>Kabel Element</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Attributgruppe zur Angabe der Kabeleigenschaften je Verseilart. Bei kombinierten Signalkabeln wird die Attributgruppe zweimal instanziiert, sonst einmal.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Kabel Element</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage#getKabel_KabelElement()
+	 * @model containment="true" required="true" upper="2"
+	 *        extendedMetaData="kind='element' name='Kabel_Element'"
+	 * @generated
+	 */
+	EList<Kabel_Element_AttributeGroup> getKabelElement();
 
 } // Kabel

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl;
 
@@ -10,11 +17,12 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_Energieversorgung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_GFK_IP_Adressblock_AttributeGroup;
@@ -22,8 +30,11 @@ import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPacka
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung_Bezeichnung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
 /**

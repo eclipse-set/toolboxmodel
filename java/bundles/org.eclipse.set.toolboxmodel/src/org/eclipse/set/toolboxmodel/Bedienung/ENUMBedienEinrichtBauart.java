@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bedienung;
 
@@ -59,6 +66,16 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 	ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTAFEL(3, "ENUMBedien_Einricht_Bauart_Bedientafel", "Bedientafel"),
 
 	/**
+	 * The '<em><b>ENUM Bedien Einricht Bauart sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE(4, "ENUMBedien_Einricht_Bauart_sonstige", "sonstige"),
+
+	/**
 	 * The '<em><b>ENUM Bedien Einricht Bauart Stellpult</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,7 +83,7 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BEDIEN_EINRICHT_BAUART_STELLPULT(4, "ENUMBedien_Einricht_Bauart_Stellpult", "Stellpult"),
+	ENUM_BEDIEN_EINRICHT_BAUART_STELLPULT(5, "ENUMBedien_Einricht_Bauart_Stellpult", "Stellpult"),
 
 	/**
 	 * The '<em><b>ENUM Bedien Einricht Bauart Stelltisch</b></em>' literal object.
@@ -76,17 +93,7 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BEDIEN_EINRICHT_BAUART_STELLTISCH(5, "ENUMBedien_Einricht_Bauart_Stelltisch", "Stelltisch"),
-
-	/**
-	 * The '<em><b>ENUM Bedien Einricht Bauart sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE(6, "ENUMBedien_Einricht_Bauart_sonstige", "sonstige");
+	ENUM_BEDIEN_EINRICHT_BAUART_STELLTISCH(6, "ENUMBedien_Einricht_Bauart_Stelltisch", "Stelltisch");
 
 	/**
 	 * The '<em><b>ENUM Bedien Einricht Bauart Bedienpult</b></em>' literal value.
@@ -133,6 +140,17 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 	public static final int ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTAFEL_VALUE = 3;
 
 	/**
+	 * The '<em><b>ENUM Bedien Einricht Bauart sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE
+	 * @model name="ENUMBedien_Einricht_Bauart_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE_VALUE = 4;
+
+	/**
 	 * The '<em><b>ENUM Bedien Einricht Bauart Stellpult</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,7 +159,7 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BEDIEN_EINRICHT_BAUART_STELLPULT_VALUE = 4;
+	public static final int ENUM_BEDIEN_EINRICHT_BAUART_STELLPULT_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Bedien Einricht Bauart Stelltisch</b></em>' literal value.
@@ -152,18 +170,7 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BEDIEN_EINRICHT_BAUART_STELLTISCH_VALUE = 5;
-
-	/**
-	 * The '<em><b>ENUM Bedien Einricht Bauart sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE
-	 * @model name="ENUMBedien_Einricht_Bauart_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE_VALUE = 6;
+	public static final int ENUM_BEDIEN_EINRICHT_BAUART_STELLTISCH_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>ENUM Bedien Einricht Bauart</b></em>' enumerators.
@@ -177,9 +184,9 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 			ENUM_BEDIEN_EINRICHT_BAUART_BEDIENSAEULE,
 			ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTABLETT,
 			ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTAFEL,
+			ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE,
 			ENUM_BEDIEN_EINRICHT_BAUART_STELLPULT,
 			ENUM_BEDIEN_EINRICHT_BAUART_STELLTISCH,
-			ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE,
 		};
 
 	/**
@@ -240,9 +247,9 @@ public enum ENUMBedienEinrichtBauart implements Enumerator {
 			case ENUM_BEDIEN_EINRICHT_BAUART_BEDIENSAEULE_VALUE: return ENUM_BEDIEN_EINRICHT_BAUART_BEDIENSAEULE;
 			case ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTABLETT_VALUE: return ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTABLETT;
 			case ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTAFEL_VALUE: return ENUM_BEDIEN_EINRICHT_BAUART_BEDIENTAFEL;
+			case ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE_VALUE: return ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE;
 			case ENUM_BEDIEN_EINRICHT_BAUART_STELLPULT_VALUE: return ENUM_BEDIEN_EINRICHT_BAUART_STELLPULT;
 			case ENUM_BEDIEN_EINRICHT_BAUART_STELLTISCH_VALUE: return ENUM_BEDIEN_EINRICHT_BAUART_STELLTISCH;
-			case ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE_VALUE: return ENUM_BEDIEN_EINRICHT_BAUART_SONSTIGE;
 			default: return null;
 		}
 	}

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -24,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageFactory;
@@ -74,6 +75,7 @@ public class ZLV_BusItemProvider extends Basis_ObjektItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS__BEZEICHNUNG);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS__ZLV_BUS_ALLG);
 		}
 		return childrenFeatures;
@@ -127,6 +129,7 @@ public class ZLV_BusItemProvider extends Basis_ObjektItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ZLV_Bus.class)) {
+			case ZugnummernmeldeanlagePackage.ZLV_BUS__BEZEICHNUNG:
 			case ZugnummernmeldeanlagePackage.ZLV_BUS__ZLV_BUS_ALLG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -146,6 +149,11 @@ public class ZLV_BusItemProvider extends Basis_ObjektItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS__BEZEICHNUNG,
+				 ZugnummernmeldeanlageFactory.eINSTANCE.createZLV_Bus_Bezeichnung_AttributeGroup()));
 
 		newChildDescriptors.add
 			(createChildParameter

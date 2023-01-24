@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -216,26 +217,26 @@ public class BasisTypenItemProviderAdapterFactory extends BasisTypenAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Eigenschaften_Datei_AttributeGroupItemProvider eigenschaften_Datei_AttributeGroupItemProvider;
+	protected ID_Bearbeitungsvermerk_TypeClassItemProvider iD_Bearbeitungsvermerk_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEigenschaften_Datei_AttributeGroupAdapter() {
-		if (eigenschaften_Datei_AttributeGroupItemProvider == null) {
-			eigenschaften_Datei_AttributeGroupItemProvider = new Eigenschaften_Datei_AttributeGroupItemProvider(this);
+	public Adapter createID_Bearbeitungsvermerk_TypeClassAdapter() {
+		if (iD_Bearbeitungsvermerk_TypeClassItemProvider == null) {
+			iD_Bearbeitungsvermerk_TypeClassItemProvider = new ID_Bearbeitungsvermerk_TypeClassItemProvider(this);
 		}
 
-		return eigenschaften_Datei_AttributeGroupItemProvider;
+		return iD_Bearbeitungsvermerk_TypeClassItemProvider;
 	}
 
 	/**
@@ -282,6 +283,29 @@ public class BasisTypenItemProviderAdapterFactory extends BasisTypenAdapterFacto
 		}
 
 		return oertlicher_Elementname_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Pruefmerkmale_Daten_AttributeGroupItemProvider pruefmerkmale_Daten_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.BasisTypen.Pruefmerkmale_Daten_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPruefmerkmale_Daten_AttributeGroupAdapter() {
+		if (pruefmerkmale_Daten_AttributeGroupItemProvider == null) {
+			pruefmerkmale_Daten_AttributeGroupItemProvider = new Pruefmerkmale_Daten_AttributeGroupItemProvider(this);
+		}
+
+		return pruefmerkmale_Daten_AttributeGroupItemProvider;
 	}
 
 	/**
@@ -487,9 +511,10 @@ public class BasisTypenItemProviderAdapterFactory extends BasisTypenAdapterFacto
 		if (bezeichnung_Lageplan_Lang_TypeClassItemProvider != null) bezeichnung_Lageplan_Lang_TypeClassItemProvider.dispose();
 		if (bezeichnung_Tabelle_TypeClassItemProvider != null) bezeichnung_Tabelle_TypeClassItemProvider.dispose();
 		if (datum_Auslieferung_TypeClassItemProvider != null) datum_Auslieferung_TypeClassItemProvider.dispose();
-		if (eigenschaften_Datei_AttributeGroupItemProvider != null) eigenschaften_Datei_AttributeGroupItemProvider.dispose();
+		if (iD_Bearbeitungsvermerk_TypeClassItemProvider != null) iD_Bearbeitungsvermerk_TypeClassItemProvider.dispose();
 		if (kennzahl_TypeClassItemProvider != null) kennzahl_TypeClassItemProvider.dispose();
 		if (oertlicher_Elementname_TypeClassItemProvider != null) oertlicher_Elementname_TypeClassItemProvider.dispose();
+		if (pruefmerkmale_Daten_AttributeGroupItemProvider != null) pruefmerkmale_Daten_AttributeGroupItemProvider.dispose();
 		if (pruefsumme_Art_TypeClassItemProvider != null) pruefsumme_Art_TypeClassItemProvider.dispose();
 		if (pruefsumme_TypeClassItemProvider != null) pruefsumme_TypeClassItemProvider.dispose();
 		if (version_Auslieferung_TypeClassItemProvider != null) version_Auslieferung_TypeClassItemProvider.dispose();

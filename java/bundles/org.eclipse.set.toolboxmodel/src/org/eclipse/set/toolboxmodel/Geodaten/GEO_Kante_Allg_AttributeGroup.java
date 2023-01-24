@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -14,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEOForm <em>GEO Form</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEOKAD <em>GEOKAD</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEOLaenge <em>GEO Laenge</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEORadiusA <em>GEO Radius A</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEORadiusB <em>GEO Radius B</em>}</li>
@@ -36,7 +44,7 @@ public interface GEO_Kante_Allg_AttributeGroup extends EObject {
 	 * @return the value of the '<em>GEO Form</em>' containment reference.
 	 * @see #setGEOForm(GEO_Form_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGEO_Kante_Allg_AttributeGroup_GEOForm()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='GEO_Form'"
 	 * @generated
 	 */
@@ -51,6 +59,32 @@ public interface GEO_Kante_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setGEOForm(GEO_Form_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>GEOKAD</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Bezeichnung der topografischen Kantenadresse. Aktuell ist eine Verwendung bei der Übernahme von Trassierungsdaten (ASCIBAHN) vorgesehen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>GEOKAD</em>' containment reference.
+	 * @see #setGEOKAD(GEO_KAD_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGEO_Kante_Allg_AttributeGroup_GEOKAD()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='GEO_KAD'"
+	 * @generated
+	 */
+	GEO_KAD_TypeClass getGEOKAD();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Kante_Allg_AttributeGroup#getGEOKAD <em>GEOKAD</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>GEOKAD</em>' containment reference.
+	 * @see #getGEOKAD()
+	 * @generated
+	 */
+	void setGEOKAD(GEO_KAD_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>GEO Laenge</b></em>' containment reference.
@@ -135,7 +169,7 @@ public interface GEO_Kante_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Parameter für eine GEO Kante, der dem Bezugswinkel (Tangente) am Anfang einer GEO_Kante dsarstellt. Das Attribut GEO_Richtungswinkel enthält den Richtungswinkel der Geo-Kante am Anfang in [gon]. Es gilt nachfolgende Zuordnung der Richtung: Nord = 0,0 gon Ost = 100,0 gon Süd = 200,0 gon West = 300,0 gon originale negative Werte werden durch Addition von 400.0 gon normalisiert. 
+	 * Parameter für eine GEO Kante, der den Bezugswinkel (Tangente) am Anfang einer GEO_Kante darstellt. Das Attribut GEO_Richtungswinkel enthält den Richtungswinkel der Geo-Kante am Anfang in [gon]. Es gilt nachfolgende Zuordnung der Richtung: Nord = 0,0 gon Ost = 100,0 gon Süd = 200,0 gon West = 300,0 gon originale negative Werte werden durch Addition von 400.0 gon normalisiert. 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>GEO Richtungswinkel</em>' containment reference.
 	 * @see #setGEORichtungswinkel(GEO_Richtungswinkel_TypeClass)

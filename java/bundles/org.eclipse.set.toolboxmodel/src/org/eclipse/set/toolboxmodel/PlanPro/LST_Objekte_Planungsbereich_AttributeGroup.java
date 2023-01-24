@@ -31,9 +31,8 @@ public interface LST_Objekte_Planungsbereich_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * ID-Verweis auf LST-Objekt im Planungsbereich.
-	 *  
 	 * DB-Regelwerk
-	 * Bisher keine Abbildung, da Neuerung mit PlanPro. 
+	 * Bisher keine Abbildung, da Neuerung mit PlanPro.
 	 * Implizite Zuordnung durch Blattzuschnitte der (gesperrten) Bestandspläne zur Erstellung der Planung.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDLST Objekt Planungsbereich</em>' reference list.

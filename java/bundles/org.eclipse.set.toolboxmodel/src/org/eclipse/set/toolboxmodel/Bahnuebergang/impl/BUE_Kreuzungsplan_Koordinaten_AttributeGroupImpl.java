@@ -1,21 +1,34 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.impl;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan_Koordinaten_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Pixel_Koordinate_X_TypeClass;
 import org.eclipse.set.toolboxmodel.Bahnuebergang.Pixel_Koordinate_Y_TypeClass;
+
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
 
 /**
@@ -35,23 +48,14 @@ import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
  */
 public class BUE_Kreuzungsplan_Koordinaten_AttributeGroupImpl extends MinimalEObjectImpl.Container implements BUE_Kreuzungsplan_Koordinaten_AttributeGroup {
 	/**
-	 * The cached value of the '{@link #getIDGEOPunkt() <em>IDGEO Punkt</em>}' reference.
+	 * The cached value of the '{@link #getIDGEOPunkt() <em>IDGEO Punkt</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIDGEOPunkt()
 	 * @generated
 	 * @ordered
 	 */
-	protected GEO_Punkt iDGEOPunkt;
-
-	/**
-	 * This is true if the IDGEO Punkt reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDGEOPunktESet;
+	protected EList<GEO_Punkt> iDGEOPunkt;
 
 	/**
 	 * The cached value of the '{@link #getPixelKoordinateX() <em>Pixel Koordinate X</em>}' containment reference.
@@ -98,65 +102,11 @@ public class BUE_Kreuzungsplan_Koordinaten_AttributeGroupImpl extends MinimalEOb
 	 * @generated
 	 */
 	@Override
-	public GEO_Punkt getIDGEOPunkt() {
-		if (iDGEOPunkt != null && iDGEOPunkt.eIsProxy()) {
-			InternalEObject oldIDGEOPunkt = (InternalEObject)iDGEOPunkt;
-			iDGEOPunkt = (GEO_Punkt)eResolveProxy(oldIDGEOPunkt);
-			if (iDGEOPunkt != oldIDGEOPunkt) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT, oldIDGEOPunkt, iDGEOPunkt));
-			}
+	public EList<GEO_Punkt> getIDGEOPunkt() {
+		if (iDGEOPunkt == null) {
+			iDGEOPunkt = new EObjectResolvingEList<GEO_Punkt>(GEO_Punkt.class, this, BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT);
 		}
 		return iDGEOPunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GEO_Punkt basicGetIDGEOPunkt() {
-		return iDGEOPunkt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDGEOPunkt(GEO_Punkt newIDGEOPunkt) {
-		GEO_Punkt oldIDGEOPunkt = iDGEOPunkt;
-		iDGEOPunkt = newIDGEOPunkt;
-		boolean oldIDGEOPunktESet = iDGEOPunktESet;
-		iDGEOPunktESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT, oldIDGEOPunkt, iDGEOPunkt, !oldIDGEOPunktESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDGEOPunkt() {
-		GEO_Punkt oldIDGEOPunkt = iDGEOPunkt;
-		boolean oldIDGEOPunktESet = iDGEOPunktESet;
-		iDGEOPunkt = null;
-		iDGEOPunktESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT, oldIDGEOPunkt, null, oldIDGEOPunktESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDGEOPunkt() {
-		return iDGEOPunktESet;
 	}
 
 	/**
@@ -275,8 +225,7 @@ public class BUE_Kreuzungsplan_Koordinaten_AttributeGroupImpl extends MinimalEOb
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT:
-				if (resolve) return getIDGEOPunkt();
-				return basicGetIDGEOPunkt();
+				return getIDGEOPunkt();
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__PIXEL_KOORDINATE_X:
 				return getPixelKoordinateX();
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__PIXEL_KOORDINATE_Y:
@@ -291,11 +240,13 @@ public class BUE_Kreuzungsplan_Koordinaten_AttributeGroupImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT:
-				setIDGEOPunkt((GEO_Punkt)newValue);
+				getIDGEOPunkt().clear();
+				getIDGEOPunkt().addAll((Collection<? extends GEO_Punkt>)newValue);
 				return;
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__PIXEL_KOORDINATE_X:
 				setPixelKoordinateX((Pixel_Koordinate_X_TypeClass)newValue);
@@ -318,7 +269,7 @@ public class BUE_Kreuzungsplan_Koordinaten_AttributeGroupImpl extends MinimalEOb
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT:
-				unsetIDGEOPunkt();
+				getIDGEOPunkt().clear();
 				return;
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__PIXEL_KOORDINATE_X:
 				setPixelKoordinateX((Pixel_Koordinate_X_TypeClass)null);
@@ -341,7 +292,7 @@ public class BUE_Kreuzungsplan_Koordinaten_AttributeGroupImpl extends MinimalEOb
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__IDGEO_PUNKT:
-				return isSetIDGEOPunkt();
+				return iDGEOPunkt != null && !iDGEOPunkt.isEmpty();
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__PIXEL_KOORDINATE_X:
 				return pixelKoordinateX != null;
 			case BahnuebergangPackage.BUE_KREUZUNGSPLAN_KOORDINATEN_ATTRIBUTE_GROUP__PIXEL_KOORDINATE_Y:

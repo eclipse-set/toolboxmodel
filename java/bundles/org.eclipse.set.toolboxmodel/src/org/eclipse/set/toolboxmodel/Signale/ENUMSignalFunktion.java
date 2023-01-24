@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -49,36 +56,6 @@ public enum ENUMSignalFunktion implements Enumerator {
 	ENUM_SIGNAL_FUNKTION_AUSFAHR_SIGNAL(2, "ENUMSignal_Funktion_Ausfahr_Signal", "Ausfahr_Signal"),
 
 	/**
-	 * The '<em><b>ENUM Signal Funktion BUE Ueberwachungssignal</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL(3, "ENUMSignal_Funktion_BUE_Ueberwachungssignal", "BUE_Ueberwachungssignal"),
-
-	/**
-	 * The '<em><b>ENUM Signal Funktion Vorsignal Vorsignalwiederholer</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER(4, "ENUMSignal_Funktion_Vorsignal_Vorsignalwiederholer", "Vorsignal_Vorsignalwiederholer"),
-
-	/**
-	 * The '<em><b>ENUM Signal Funktion Zug Ziel Signal</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL(5, "ENUMSignal_Funktion_Zug_Ziel_Signal", "Zug_Ziel_Signal"),
-
-	/**
 	 * The '<em><b>ENUM Signal Funktion Ausfahr Zwischen Signal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,7 +63,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL(6, "ENUMSignal_Funktion_Ausfahr_Zwischen_Signal", "Ausfahr_Zwischen_Signal"),
+	ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL(3, "ENUMSignal_Funktion_Ausfahr_Zwischen_Signal", "Ausfahr_Zwischen_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Block Signal</b></em>' literal object.
@@ -96,7 +73,17 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL(7, "ENUMSignal_Funktion_Block_Signal", "Block_Signal"),
+	ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL(4, "ENUMSignal_Funktion_Block_Signal", "Block_Signal"),
+
+	/**
+	 * The '<em><b>ENUM Signal Funktion BUE Ueberwachungssignal</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL(5, "ENUMSignal_Funktion_BUE_Ueberwachungssignal", "BUE_Ueberwachungssignal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Deckungs Signal</b></em>' literal object.
@@ -106,7 +93,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL(8, "ENUMSignal_Funktion_Deckungs_Signal", "Deckungs_Signal"),
+	ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL(6, "ENUMSignal_Funktion_Deckungs_Signal", "Deckungs_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Einfahr Ausfahr Signal</b></em>' literal object.
@@ -116,7 +103,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL(9, "ENUMSignal_Funktion_Einfahr_Ausfahr_Signal", "Einfahr_Ausfahr_Signal"),
+	ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL(7, "ENUMSignal_Funktion_Einfahr_Ausfahr_Signal", "Einfahr_Ausfahr_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Einfahr Block Signal</b></em>' literal object.
@@ -126,7 +113,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL(10, "ENUMSignal_Funktion_Einfahr_Block_Signal", "Einfahr_Block_Signal"),
+	ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL(8, "ENUMSignal_Funktion_Einfahr_Block_Signal", "Einfahr_Block_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Einfahr Signal</b></em>' literal object.
@@ -136,7 +123,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_EINFAHR_SIGNAL(11, "ENUMSignal_Funktion_Einfahr_Signal", "Einfahr_Signal"),
+	ENUM_SIGNAL_FUNKTION_EINFAHR_SIGNAL(9, "ENUMSignal_Funktion_Einfahr_Signal", "Einfahr_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Gruppenausfahr Gruppenzwischen Signal</b></em>' literal object.
@@ -146,7 +133,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_GRUPPENZWISCHEN_SIGNAL(12, "ENUMSignal_Funktion_Gruppenausfahr_Gruppenzwischen_Signal", "Gruppenausfahr_Gruppenzwischen_Signal"),
+	ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_GRUPPENZWISCHEN_SIGNAL(10, "ENUMSignal_Funktion_Gruppenausfahr_Gruppenzwischen_Signal", "Gruppenausfahr_Gruppenzwischen_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Gruppenausfahr Signal</b></em>' literal object.
@@ -156,7 +143,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL(13, "ENUMSignal_Funktion_Gruppenausfahr_Signal", "Gruppenausfahr_Signal"),
+	ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL(11, "ENUMSignal_Funktion_Gruppenausfahr_Signal", "Gruppenausfahr_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Gruppenzwischen Signal</b></em>' literal object.
@@ -166,7 +153,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL(14, "ENUMSignal_Funktion_Gruppenzwischen_Signal", "Gruppenzwischen_Signal"),
+	ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL(12, "ENUMSignal_Funktion_Gruppenzwischen_Signal", "Gruppenzwischen_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Nachrueck Signal</b></em>' literal object.
@@ -176,7 +163,17 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL(15, "ENUMSignal_Funktion_Nachrueck_Signal", "Nachrueck_Signal"),
+	ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL(13, "ENUMSignal_Funktion_Nachrueck_Signal", "Nachrueck_Signal"),
+
+	/**
+	 * The '<em><b>ENUM Signal Funktion Vorsignal Vorsignalwiederholer</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER(14, "ENUMSignal_Funktion_Vorsignal_Vorsignalwiederholer", "Vorsignal_Vorsignalwiederholer"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Zugdeckungs Signal</b></em>' literal object.
@@ -186,7 +183,17 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL(16, "ENUMSignal_Funktion_Zugdeckungs_Signal", "Zugdeckungs_Signal"),
+	ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL(15, "ENUMSignal_Funktion_Zugdeckungs_Signal", "Zugdeckungs_Signal"),
+
+	/**
+	 * The '<em><b>ENUM Signal Funktion Zug Ziel Signal</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL(16, "ENUMSignal_Funktion_Zug_Ziel_Signal", "Zug_Ziel_Signal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Zwischen Signal</b></em>' literal object.
@@ -232,39 +239,6 @@ public enum ENUMSignalFunktion implements Enumerator {
 	public static final int ENUM_SIGNAL_FUNKTION_AUSFAHR_SIGNAL_VALUE = 2;
 
 	/**
-	 * The '<em><b>ENUM Signal Funktion BUE Ueberwachungssignal</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL
-	 * @model name="ENUMSignal_Funktion_BUE_Ueberwachungssignal" literal="BUE_Ueberwachungssignal"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Signal Funktion Vorsignal Vorsignalwiederholer</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER
-	 * @model name="ENUMSignal_Funktion_Vorsignal_Vorsignalwiederholer" literal="Vorsignal_Vorsignalwiederholer"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER_VALUE = 4;
-
-	/**
-	 * The '<em><b>ENUM Signal Funktion Zug Ziel Signal</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL
-	 * @model name="ENUMSignal_Funktion_Zug_Ziel_Signal" literal="Zug_Ziel_Signal"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL_VALUE = 5;
-
-	/**
 	 * The '<em><b>ENUM Signal Funktion Ausfahr Zwischen Signal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -273,7 +247,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL_VALUE = 6;
+	public static final int ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Block Signal</b></em>' literal value.
@@ -284,7 +258,18 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL_VALUE = 7;
+	public static final int ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Signal Funktion BUE Ueberwachungssignal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL
+	 * @model name="ENUMSignal_Funktion_BUE_Ueberwachungssignal" literal="BUE_Ueberwachungssignal"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Deckungs Signal</b></em>' literal value.
@@ -295,7 +280,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL_VALUE = 8;
+	public static final int ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Einfahr Ausfahr Signal</b></em>' literal value.
@@ -306,7 +291,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL_VALUE = 9;
+	public static final int ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Einfahr Block Signal</b></em>' literal value.
@@ -317,7 +302,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL_VALUE = 10;
+	public static final int ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Einfahr Signal</b></em>' literal value.
@@ -328,7 +313,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_EINFAHR_SIGNAL_VALUE = 11;
+	public static final int ENUM_SIGNAL_FUNKTION_EINFAHR_SIGNAL_VALUE = 9;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Gruppenausfahr Gruppenzwischen Signal</b></em>' literal value.
@@ -339,7 +324,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_GRUPPENZWISCHEN_SIGNAL_VALUE = 12;
+	public static final int ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_GRUPPENZWISCHEN_SIGNAL_VALUE = 10;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Gruppenausfahr Signal</b></em>' literal value.
@@ -350,7 +335,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL_VALUE = 13;
+	public static final int ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL_VALUE = 11;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Gruppenzwischen Signal</b></em>' literal value.
@@ -361,7 +346,7 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL_VALUE = 14;
+	public static final int ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL_VALUE = 12;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Nachrueck Signal</b></em>' literal value.
@@ -372,7 +357,18 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL_VALUE = 15;
+	public static final int ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL_VALUE = 13;
+
+	/**
+	 * The '<em><b>ENUM Signal Funktion Vorsignal Vorsignalwiederholer</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER
+	 * @model name="ENUMSignal_Funktion_Vorsignal_Vorsignalwiederholer" literal="Vorsignal_Vorsignalwiederholer"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER_VALUE = 14;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Zugdeckungs Signal</b></em>' literal value.
@@ -383,7 +379,18 @@ public enum ENUMSignalFunktion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL_VALUE = 16;
+	public static final int ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL_VALUE = 15;
+
+	/**
+	 * The '<em><b>ENUM Signal Funktion Zug Ziel Signal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL
+	 * @model name="ENUMSignal_Funktion_Zug_Ziel_Signal" literal="Zug_Ziel_Signal"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL_VALUE = 16;
 
 	/**
 	 * The '<em><b>ENUM Signal Funktion Zwischen Signal</b></em>' literal value.
@@ -407,11 +414,9 @@ public enum ENUMSignalFunktion implements Enumerator {
 			ENUM_SIGNAL_FUNKTION_ALLEINSTEHENDES_ZUSATZSIGNAL,
 			ENUM_SIGNAL_FUNKTION_ANDERE,
 			ENUM_SIGNAL_FUNKTION_AUSFAHR_SIGNAL,
-			ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL,
-			ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER,
-			ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL,
 			ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL,
 			ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL,
+			ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL,
 			ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL,
 			ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL,
 			ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL,
@@ -420,7 +425,9 @@ public enum ENUMSignalFunktion implements Enumerator {
 			ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL,
 			ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL,
 			ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL,
+			ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER,
 			ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL,
+			ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL,
 			ENUM_SIGNAL_FUNKTION_ZWISCHEN_SIGNAL,
 		};
 
@@ -481,11 +488,9 @@ public enum ENUMSignalFunktion implements Enumerator {
 			case ENUM_SIGNAL_FUNKTION_ALLEINSTEHENDES_ZUSATZSIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_ALLEINSTEHENDES_ZUSATZSIGNAL;
 			case ENUM_SIGNAL_FUNKTION_ANDERE_VALUE: return ENUM_SIGNAL_FUNKTION_ANDERE;
 			case ENUM_SIGNAL_FUNKTION_AUSFAHR_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_AUSFAHR_SIGNAL;
-			case ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL;
-			case ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER_VALUE: return ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER;
-			case ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL;
 			case ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_AUSFAHR_ZWISCHEN_SIGNAL;
 			case ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_BLOCK_SIGNAL;
+			case ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_BUE_UEBERWACHUNGSSIGNAL;
 			case ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_DECKUNGS_SIGNAL;
 			case ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_EINFAHR_AUSFAHR_SIGNAL;
 			case ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_EINFAHR_BLOCK_SIGNAL;
@@ -494,7 +499,9 @@ public enum ENUMSignalFunktion implements Enumerator {
 			case ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_GRUPPENAUSFAHR_SIGNAL;
 			case ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_GRUPPENZWISCHEN_SIGNAL;
 			case ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_NACHRUECK_SIGNAL;
+			case ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER_VALUE: return ENUM_SIGNAL_FUNKTION_VORSIGNAL_VORSIGNALWIEDERHOLER;
 			case ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_ZUGDECKUNGS_SIGNAL;
+			case ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_ZUG_ZIEL_SIGNAL;
 			case ENUM_SIGNAL_FUNKTION_ZWISCHEN_SIGNAL_VALUE: return ENUM_SIGNAL_FUNKTION_ZWISCHEN_SIGNAL;
 			default: return null;
 		}

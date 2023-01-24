@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz;
 
@@ -19,14 +26,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMMassnahme implements Enumerator {
 	/**
-	 * The '<em><b>ENUM Massnahme Fernschutz</b></em>' literal object.
+	 * The '<em><b>ENUM Massnahme Ersatzschutz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_MASSNAHME_FERNSCHUTZ_VALUE
+	 * @see #ENUM_MASSNAHME_ERSATZSCHUTZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_MASSNAHME_FERNSCHUTZ(0, "ENUMMassnahme_Fernschutz", "Fernschutz"),
+	ENUM_MASSNAHME_ERSATZSCHUTZ(0, "ENUMMassnahme_Ersatzschutz", "Ersatzschutz"),
 
 	/**
 	 * The '<em><b>ENUM Massnahme Verschluss</b></em>' literal object.
@@ -39,14 +46,14 @@ public enum ENUMMassnahme implements Enumerator {
 	ENUM_MASSNAHME_VERSCHLUSS(1, "ENUMMassnahme_Verschluss", "Verschluss"),
 
 	/**
-	 * The '<em><b>ENUM Massnahme Verschluss Fernschutz</b></em>' literal object.
+	 * The '<em><b>ENUM Massnahme Verschluss Ersatzschutz</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_MASSNAHME_VERSCHLUSS_FERNSCHUTZ_VALUE
+	 * @see #ENUM_MASSNAHME_VERSCHLUSS_ERSATZSCHUTZ_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_MASSNAHME_VERSCHLUSS_FERNSCHUTZ(2, "ENUMMassnahme_Verschluss_Fernschutz", "Verschluss_Fernschutz"),
+	ENUM_MASSNAHME_VERSCHLUSS_ERSATZSCHUTZ(2, "ENUMMassnahme_Verschluss_Ersatzschutz", "Verschluss_Ersatzschutz"),
 
 	/**
 	 * The '<em><b>ENUM Massnahme Verzicht</b></em>' literal object.
@@ -59,15 +66,15 @@ public enum ENUMMassnahme implements Enumerator {
 	ENUM_MASSNAHME_VERZICHT(3, "ENUMMassnahme_Verzicht", "Verzicht");
 
 	/**
-	 * The '<em><b>ENUM Massnahme Fernschutz</b></em>' literal value.
+	 * The '<em><b>ENUM Massnahme Ersatzschutz</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_MASSNAHME_FERNSCHUTZ
-	 * @model name="ENUMMassnahme_Fernschutz" literal="Fernschutz"
+	 * @see #ENUM_MASSNAHME_ERSATZSCHUTZ
+	 * @model name="ENUMMassnahme_Ersatzschutz" literal="Ersatzschutz"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_MASSNAHME_FERNSCHUTZ_VALUE = 0;
+	public static final int ENUM_MASSNAHME_ERSATZSCHUTZ_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUM Massnahme Verschluss</b></em>' literal value.
@@ -81,15 +88,15 @@ public enum ENUMMassnahme implements Enumerator {
 	public static final int ENUM_MASSNAHME_VERSCHLUSS_VALUE = 1;
 
 	/**
-	 * The '<em><b>ENUM Massnahme Verschluss Fernschutz</b></em>' literal value.
+	 * The '<em><b>ENUM Massnahme Verschluss Ersatzschutz</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_MASSNAHME_VERSCHLUSS_FERNSCHUTZ
-	 * @model name="ENUMMassnahme_Verschluss_Fernschutz" literal="Verschluss_Fernschutz"
+	 * @see #ENUM_MASSNAHME_VERSCHLUSS_ERSATZSCHUTZ
+	 * @model name="ENUMMassnahme_Verschluss_Ersatzschutz" literal="Verschluss_Ersatzschutz"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_MASSNAHME_VERSCHLUSS_FERNSCHUTZ_VALUE = 2;
+	public static final int ENUM_MASSNAHME_VERSCHLUSS_ERSATZSCHUTZ_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Massnahme Verzicht</b></em>' literal value.
@@ -110,9 +117,9 @@ public enum ENUMMassnahme implements Enumerator {
 	 */
 	private static final ENUMMassnahme[] VALUES_ARRAY =
 		new ENUMMassnahme[] {
-			ENUM_MASSNAHME_FERNSCHUTZ,
+			ENUM_MASSNAHME_ERSATZSCHUTZ,
 			ENUM_MASSNAHME_VERSCHLUSS,
-			ENUM_MASSNAHME_VERSCHLUSS_FERNSCHUTZ,
+			ENUM_MASSNAHME_VERSCHLUSS_ERSATZSCHUTZ,
 			ENUM_MASSNAHME_VERZICHT,
 		};
 
@@ -170,9 +177,9 @@ public enum ENUMMassnahme implements Enumerator {
 	 */
 	public static ENUMMassnahme get(int value) {
 		switch (value) {
-			case ENUM_MASSNAHME_FERNSCHUTZ_VALUE: return ENUM_MASSNAHME_FERNSCHUTZ;
+			case ENUM_MASSNAHME_ERSATZSCHUTZ_VALUE: return ENUM_MASSNAHME_ERSATZSCHUTZ;
 			case ENUM_MASSNAHME_VERSCHLUSS_VALUE: return ENUM_MASSNAHME_VERSCHLUSS;
-			case ENUM_MASSNAHME_VERSCHLUSS_FERNSCHUTZ_VALUE: return ENUM_MASSNAHME_VERSCHLUSS_FERNSCHUTZ;
+			case ENUM_MASSNAHME_VERSCHLUSS_ERSATZSCHUTZ_VALUE: return ENUM_MASSNAHME_VERSCHLUSS_ERSATZSCHUTZ;
 			case ENUM_MASSNAHME_VERZICHT_VALUE: return ENUM_MASSNAHME_VERZICHT;
 			default: return null;
 		}

@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGro
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFactory;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup} object.
@@ -86,9 +87,12 @@ public class Balise_Allg_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_AnordnungImDP());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_BaliseGeraetestand());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_Balisenhalter());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_Fabrikat());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_Hersteller());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_HinweisBalisenbefestigung());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_Montageabweichung());
 		}
 		return childrenFeatures;
 	}
@@ -142,9 +146,12 @@ public class Balise_Allg_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Balise_Allg_AttributeGroup.class)) {
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__ANORDNUNG_IM_DP:
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND:
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER:
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__FABRIKAT:
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HINWEIS_BALISENBEFESTIGUNG:
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -171,6 +178,16 @@ public class Balise_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_BaliseGeraetestand(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createBalise_Geraetestand_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_Balisenhalter(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createBalisenhalter_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_Fabrikat(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createFabrikat_TypeClass()));
 
@@ -183,6 +200,11 @@ public class Balise_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_HinweisBalisenbefestigung(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createHinweis_Balisenbefestigung_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getBalise_Allg_AttributeGroup_Montageabweichung(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createMontageabweichung_TypeClass()));
 	}
 
 	/**

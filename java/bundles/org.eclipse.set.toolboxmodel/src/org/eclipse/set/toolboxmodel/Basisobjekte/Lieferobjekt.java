@@ -1,9 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getBeschreibung <em>Beschreibung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getIDGEOPunkt <em>IDGEO Punkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getIDLOEinbau <em>IDLO Einbau</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getLOErsatz <em>LO Ersatz</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Lieferobjekt#getLOMaterial <em>LO Material</em>}</li>
@@ -35,12 +44,13 @@ public interface Lieferobjekt extends Basis_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Verbale Beschreibung des LO. 
-	 * Die Angabe soll als Beschreibung des Technischen Platzes in SAP R/3 Netz übernommen werden. Die Bereitstellung der Bildungsvorschrift erfolgt gesondert.
+	 * Die Angabe soll als Beschreibung des Technischen Platzes in SAP R/3 Netz übernommen werden.
+	 * Die Bereitstellung der Bildungsvorschrift erfolgt gesondert.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Beschreibung</em>' containment reference.
 	 * @see #setBeschreibung(Beschreibung_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getLieferobjekt_Beschreibung()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Beschreibung'"
 	 * @generated
 	 */
@@ -55,6 +65,21 @@ public interface Lieferobjekt extends Basis_Objekt {
 	 * @generated
 	 */
 	void setBeschreibung(Beschreibung_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>IDGEO Punkt</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf einen GEO_Punkt zur Topologie-unabhängigen Lokalisierung des Lieferobjekts. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>IDGEO Punkt</em>' reference list.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getLieferobjekt_IDGEOPunkt()
+	 * @model extendedMetaData="kind='element' name='ID_GEO_Punkt'"
+	 * @generated
+	 */
+	EList<GEO_Punkt> getIDGEOPunkt();
 
 	/**
 	 * Returns the value of the '<em><b>IDLO Einbau</b></em>' reference list.
@@ -84,7 +109,7 @@ public interface Lieferobjekt extends Basis_Objekt {
 	 * @return the value of the '<em>LO Ersatz</em>' containment reference.
 	 * @see #setLOErsatz(LO_Ersatz_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getLieferobjekt_LOErsatz()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='LO_Ersatz'"
 	 * @generated
 	 */
@@ -107,7 +132,7 @@ public interface Lieferobjekt extends Basis_Objekt {
 	 * @return the value of the '<em>LO Material</em>' containment reference.
 	 * @see #setLOMaterial(LO_Material_AttributeGroup)
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getLieferobjekt_LOMaterial()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='LO_Material'"
 	 * @generated
 	 */

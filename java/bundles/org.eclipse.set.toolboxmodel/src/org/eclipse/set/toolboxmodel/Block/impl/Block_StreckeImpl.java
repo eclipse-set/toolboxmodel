@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block.impl;
 
@@ -6,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -16,8 +22,10 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 import org.eclipse.set.toolboxmodel.Block.BlockPackage;
 import org.eclipse.set.toolboxmodel.Block.Block_Strecke;
 import org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +39,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_StreckeImpl#getIDBetriebsstelleNachbar <em>ID Betriebsstelle Nachbar</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_StreckeImpl#getIDKnotenbahnhof <em>ID Knotenbahnhof</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_StreckeImpl#getIDStrecke <em>ID Strecke</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_StreckeImpl#getIDStreckeBremsweg <em>ID Strecke Bremsweg</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,6 +111,25 @@ public class Block_StreckeImpl extends Basis_ObjektImpl implements Block_Strecke
 	 * @ordered
 	 */
 	protected boolean iDStreckeESet;
+
+	/**
+	 * The cached value of the '{@link #getIDStreckeBremsweg() <em>ID Strecke Bremsweg</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDStreckeBremsweg()
+	 * @generated
+	 * @ordered
+	 */
+	protected Strecke_Bremsweg iDStreckeBremsweg;
+
+	/**
+	 * This is true if the ID Strecke Bremsweg reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDStreckeBremswegESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -374,6 +402,73 @@ public class Block_StreckeImpl extends Basis_ObjektImpl implements Block_Strecke
 	 * @generated
 	 */
 	@Override
+	public Strecke_Bremsweg getIDStreckeBremsweg() {
+		if (iDStreckeBremsweg != null && iDStreckeBremsweg.eIsProxy()) {
+			InternalEObject oldIDStreckeBremsweg = (InternalEObject)iDStreckeBremsweg;
+			iDStreckeBremsweg = (Strecke_Bremsweg)eResolveProxy(oldIDStreckeBremsweg);
+			if (iDStreckeBremsweg != oldIDStreckeBremsweg) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockPackage.BLOCK_STRECKE__ID_STRECKE_BREMSWEG, oldIDStreckeBremsweg, iDStreckeBremsweg));
+			}
+		}
+		return iDStreckeBremsweg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Strecke_Bremsweg basicGetIDStreckeBremsweg() {
+		return iDStreckeBremsweg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDStreckeBremsweg(Strecke_Bremsweg newIDStreckeBremsweg) {
+		Strecke_Bremsweg oldIDStreckeBremsweg = iDStreckeBremsweg;
+		iDStreckeBremsweg = newIDStreckeBremsweg;
+		boolean oldIDStreckeBremswegESet = iDStreckeBremswegESet;
+		iDStreckeBremswegESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE__ID_STRECKE_BREMSWEG, oldIDStreckeBremsweg, iDStreckeBremsweg, !oldIDStreckeBremswegESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDStreckeBremsweg() {
+		Strecke_Bremsweg oldIDStreckeBremsweg = iDStreckeBremsweg;
+		boolean oldIDStreckeBremswegESet = iDStreckeBremswegESet;
+		iDStreckeBremsweg = null;
+		iDStreckeBremswegESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, BlockPackage.BLOCK_STRECKE__ID_STRECKE_BREMSWEG, oldIDStreckeBremsweg, null, oldIDStreckeBremswegESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDStreckeBremsweg() {
+		return iDStreckeBremswegESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case BlockPackage.BLOCK_STRECKE__BLOCK_STRECKE_ALLG:
@@ -402,6 +497,9 @@ public class Block_StreckeImpl extends Basis_ObjektImpl implements Block_Strecke
 			case BlockPackage.BLOCK_STRECKE__ID_STRECKE:
 				if (resolve) return getIDStrecke();
 				return basicGetIDStrecke();
+			case BlockPackage.BLOCK_STRECKE__ID_STRECKE_BREMSWEG:
+				if (resolve) return getIDStreckeBremsweg();
+				return basicGetIDStreckeBremsweg();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -426,6 +524,9 @@ public class Block_StreckeImpl extends Basis_ObjektImpl implements Block_Strecke
 				return;
 			case BlockPackage.BLOCK_STRECKE__ID_STRECKE:
 				setIDStrecke((Strecke)newValue);
+				return;
+			case BlockPackage.BLOCK_STRECKE__ID_STRECKE_BREMSWEG:
+				setIDStreckeBremsweg((Strecke_Bremsweg)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -453,6 +554,9 @@ public class Block_StreckeImpl extends Basis_ObjektImpl implements Block_Strecke
 			case BlockPackage.BLOCK_STRECKE__ID_STRECKE:
 				unsetIDStrecke();
 				return;
+			case BlockPackage.BLOCK_STRECKE__ID_STRECKE_BREMSWEG:
+				unsetIDStreckeBremsweg();
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -475,6 +579,8 @@ public class Block_StreckeImpl extends Basis_ObjektImpl implements Block_Strecke
 				return isSetIDKnotenbahnhof();
 			case BlockPackage.BLOCK_STRECKE__ID_STRECKE:
 				return isSetIDStrecke();
+			case BlockPackage.BLOCK_STRECKE__ID_STRECKE_BREMSWEG:
+				return isSetIDStreckeBremsweg();
 			default:
 				return super.eIsSet(featureID);
 		}

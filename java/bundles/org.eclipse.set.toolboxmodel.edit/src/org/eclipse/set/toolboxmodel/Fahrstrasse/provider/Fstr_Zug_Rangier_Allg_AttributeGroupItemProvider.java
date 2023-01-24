@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrasseFactory;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup} object.
@@ -86,9 +87,7 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG);
-			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART);
 			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING);
-			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT);
 			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE);
 			childrenFeatures.add(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V);
 		}
@@ -144,9 +143,7 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Fstr_Zug_Rangier_Allg_AttributeGroup.class)) {
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG:
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART:
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING:
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE:
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -175,18 +172,8 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART,
-				 FahrstrasseFactory.eINSTANCE.createFstr_Art_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING,
 				 FahrstrasseFactory.eINSTANCE.createFstr_Bedienstring_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FahrstrassePackage.Literals.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT,
-				 FahrstrasseFactory.eINSTANCE.createFstr_Bildezeit_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

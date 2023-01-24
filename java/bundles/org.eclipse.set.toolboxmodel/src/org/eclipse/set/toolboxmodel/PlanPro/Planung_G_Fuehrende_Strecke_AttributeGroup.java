@@ -29,7 +29,6 @@ public interface Planung_G_Fuehrende_Strecke_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Abschnitt der beplanten Strecke, z. B. "km 123,120 - km 140,450".
-	 * 
 	 * DB-Regelwerk
 	 * Bisher keine eindeutige Abbildung.
 	 * <!-- end-model-doc -->
@@ -58,7 +57,6 @@ public interface Planung_G_Fuehrende_Strecke_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Orientierungskilometer (Schwerpunkt) der beplanten führenden Strecke, z. B. Mitte des größten im Planungsbereich liegenden Bahnhofs.
-	 *  
 	 * DB-Regelwerk
 	 * Bisher keine eindeutige Abbildung.
 	 * <!-- end-model-doc -->
@@ -87,7 +85,6 @@ public interface Planung_G_Fuehrende_Strecke_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Streckennummer der beplanten Strecke.
-	 * 
 	 * DB-Regelwerk
 	 * Bisher keine eindeutige Abbildung.
 	 * <!-- end-model-doc -->

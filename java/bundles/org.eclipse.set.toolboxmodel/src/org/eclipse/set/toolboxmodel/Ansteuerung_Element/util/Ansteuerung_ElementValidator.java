@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.util;
 
@@ -128,12 +135,16 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 				return validateBezeichnung_AEA_TypeClass((Bezeichnung_AEA_TypeClass)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_ESTW_ZE_TYPE_CLASS:
 				return validateBezeichnung_ESTW_ZE_TypeClass((Bezeichnung_ESTW_ZE_TypeClass)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.BEZEICHNUNG_STELLWERK_TYPE_CLASS:
+				return validateBezeichnung_Stellwerk_TypeClass((Bezeichnung_Stellwerk_TypeClass)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_TSO_TYPE_CLASS:
 				return validateBezeichnung_TSO_TypeClass((Bezeichnung_TSO_TypeClass)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENERGIEVERSORGUNG_ART_ERSATZ_TYPE_CLASS:
 				return validateEnergieversorgung_Art_Ersatz_TypeClass((Energieversorgung_Art_Ersatz_TypeClass)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENERGIEVERSORGUNG_ART_TYPE_CLASS:
 				return validateEnergieversorgung_Art_TypeClass((Energieversorgung_Art_TypeClass)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP:
+				return validateESTW_ZE_Energieversorgung_AttributeGroup((ESTW_ZE_Energieversorgung_AttributeGroup)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT:
 				return validateESTW_Zentraleinheit((ESTW_Zentraleinheit)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP:
@@ -182,6 +193,8 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 				return validateTSO_IP_Adressblock_AttributeGroup((TSO_IP_Adressblock_AttributeGroup)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.TSO_TEILSYSTEM_ART_TYPE_CLASS:
 				return validateTSO_Teilsystem_Art_TypeClass((TSO_Teilsystem_Art_TypeClass)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.TUERANSCHLAG_TYPE_CLASS:
+				return validateTueranschlag_TypeClass((Tueranschlag_TypeClass)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.UEBERTRAGUNGSWEG:
 				return validateUebertragungsweg((Uebertragungsweg)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.UEBERTRAGUNGSWEG_ART_TYPE_CLASS:
@@ -196,6 +209,10 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 				return validateUnterbringung_Art_TypeClass((Unterbringung_Art_TypeClass)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS:
 				return validateUnterbringung_Befestigung_TypeClass((Unterbringung_Befestigung_TypeClass)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS:
+				return validateUnterbringung_Polygonzug_TypeClass((Unterbringung_Polygonzug_TypeClass)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.ZUSATZINFORMATION_STELLWERK_TYPE_CLASS:
+				return validateZusatzinformation_Stellwerk_TypeClass((Zusatzinformation_Stellwerk_TypeClass)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUM_AUSSENELEMENTANSTEUERUNG_ART:
 				return validateENUMAussenelementansteuerungArt((ENUMAussenelementansteuerungArt)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUM_BANDBREITE:
@@ -212,6 +229,8 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 				return validateENUMTechnikArt((ENUMTechnikArt)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUMTSO_TEILSYSTEM_ART:
 				return validateENUMTSOTeilsystemArt((ENUMTSOTeilsystemArt)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.ENUM_TUERANSCHLAG:
+				return validateENUMTueranschlag((ENUMTueranschlag)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUM_UEBERTRAGUNGSWEG_ART:
 				return validateENUMUebertragungswegArt((ENUMUebertragungswegArt)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUM_UNTERBRINGUNG_ART:
@@ -224,6 +243,8 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 				return validateBezeichnung_AEA_Type((String)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_ESTW_ZE_TYPE:
 				return validateBezeichnung_ESTW_ZE_Type((String)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.BEZEICHNUNG_STELLWERK_TYPE:
+				return validateBezeichnung_Stellwerk_Type((String)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_TSO_TYPE:
 				return validateBezeichnung_TSO_Type((String)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJECT:
@@ -242,6 +263,8 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 				return validateENUMTechnikArtObject((ENUMTechnikArt)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUMTSO_TEILSYSTEM_ART_OBJECT:
 				return validateENUMTSOTeilsystemArtObject((ENUMTSOTeilsystemArt)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.ENUM_TUERANSCHLAG_OBJECT:
+				return validateENUMTueranschlagObject((ENUMTueranschlag)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUM_UEBERTRAGUNGSWEG_ART_OBJECT:
 				return validateENUMUebertragungswegArtObject((ENUMUebertragungswegArt)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.ENUM_UNTERBRINGUNG_ART_OBJECT:
@@ -264,6 +287,10 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 				return validateStandort_Beschreibung_Type((String)value, diagnostics, context);
 			case Ansteuerung_ElementPackage.TECHNIK_BESCHREIBUNG_TYPE:
 				return validateTechnik_Beschreibung_Type((String)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_POLYGONZUG_TYPE:
+				return validateUnterbringung_Polygonzug_Type((String)value, diagnostics, context);
+			case Ansteuerung_ElementPackage.ZUSATZINFORMATION_STELLWERK_TYPE:
+				return validateZusatzinformation_Stellwerk_Type((String)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -364,6 +391,15 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateBezeichnung_Stellwerk_TypeClass(Bezeichnung_Stellwerk_TypeClass bezeichnung_Stellwerk_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bezeichnung_Stellwerk_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateBezeichnung_TSO_TypeClass(Bezeichnung_TSO_TypeClass bezeichnung_TSO_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(bezeichnung_TSO_TypeClass, diagnostics, context);
 	}
@@ -384,6 +420,15 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 */
 	public boolean validateEnergieversorgung_Art_TypeClass(Energieversorgung_Art_TypeClass energieversorgung_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(energieversorgung_Art_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateESTW_ZE_Energieversorgung_AttributeGroup(ESTW_ZE_Energieversorgung_AttributeGroup estW_ZE_Energieversorgung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(estW_ZE_Energieversorgung_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -607,6 +652,15 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTueranschlag_TypeClass(Tueranschlag_TypeClass tueranschlag_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(tueranschlag_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateUebertragungsweg(Uebertragungsweg uebertragungsweg, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(uebertragungsweg, diagnostics, context);
 	}
@@ -663,6 +717,24 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 */
 	public boolean validateUnterbringung_Befestigung_TypeClass(Unterbringung_Befestigung_TypeClass unterbringung_Befestigung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(unterbringung_Befestigung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUnterbringung_Polygonzug_TypeClass(Unterbringung_Polygonzug_TypeClass unterbringung_Polygonzug_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(unterbringung_Polygonzug_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZusatzinformation_Stellwerk_TypeClass(Zusatzinformation_Stellwerk_TypeClass zusatzinformation_Stellwerk_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zusatzinformation_Stellwerk_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -734,6 +806,15 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMTSOTeilsystemArt(ENUMTSOTeilsystemArt enumtsoTeilsystemArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMTueranschlag(ENUMTueranschlag enumTueranschlag, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -825,6 +906,16 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateBezeichnung_Stellwerk_Type(String bezeichnung_Stellwerk_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(bezeichnung_Stellwerk_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateBezeichnung_TSO_Type(String bezeichnung_TSO_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateText_Type_Pattern(bezeichnung_TSO_Type, diagnostics, context);
 		return result;
@@ -899,6 +990,15 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMTSOTeilsystemArtObject(ENUMTSOTeilsystemArt enumtsoTeilsystemArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMTueranschlagObject(ENUMTueranschlag enumTueranschlagObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1006,6 +1106,25 @@ public class Ansteuerung_ElementValidator extends EObjectValidator {
 	 */
 	public boolean validateTechnik_Beschreibung_Type(String technik_Beschreibung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateText_Type_Pattern(technik_Beschreibung_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUnterbringung_Polygonzug_Type(String unterbringung_Polygonzug_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZusatzinformation_Stellwerk_Type(String zusatzinformation_Stellwerk_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(zusatzinformation_Stellwerk_Type, diagnostics, context);
 		return result;
 	}
 

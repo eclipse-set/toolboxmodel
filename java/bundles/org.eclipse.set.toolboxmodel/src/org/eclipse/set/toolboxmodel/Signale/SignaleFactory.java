@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -103,6 +110,24 @@ public interface SignaleFactory extends EFactory {
 	Fiktives_Signal_Funktion_TypeClass createFiktives_Signal_Funktion_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Fundament Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fundament Art Type Class</em>'.
+	 * @generated
+	 */
+	Fundament_Art_TypeClass createFundament_Art_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Funktion Ohne Signal Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Funktion Ohne Signal Type Class</em>'.
+	 * @generated
+	 */
+	Funktion_Ohne_Signal_TypeClass createFunktion_Ohne_Signal_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Gegengleis Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +189,15 @@ public interface SignaleFactory extends EFactory {
 	 * @generated
 	 */
 	Rahmen_Art_TypeClass createRahmen_Art_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Rahmen Hoehe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rahmen Hoehe Type Class</em>'.
+	 * @generated
+	 */
+	Rahmen_Hoehe_TypeClass createRahmen_Hoehe_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Rangierstrasse Restaufloesung Type Class</em>'.

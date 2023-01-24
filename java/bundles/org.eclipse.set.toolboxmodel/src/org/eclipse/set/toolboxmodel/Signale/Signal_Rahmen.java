@@ -1,9 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
+import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +26,12 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDRegelzeichnung <em>ID Regelzeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDSignal <em>ID Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDSignalBefestigung <em>ID Signal Befestigung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDSignalNachordnung <em>ID Signal Nachordnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getRahmenArt <em>Rahmen Art</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getRahmenHoehe <em>Rahmen Hoehe</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Rahmen()
@@ -29,6 +39,59 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * @generated
  */
 public interface Signal_Rahmen extends Basis_Objekt {
+	/**
+	 * Returns the value of the '<em><b>ID Regelzeichnung</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf eine Regelzeichnung, sofern diese nur den Signalrahmen abbildet (z. B. Vorsignaltafel).
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ID Regelzeichnung</em>' reference.
+	 * @see #isSetIDRegelzeichnung()
+	 * @see #unsetIDRegelzeichnung()
+	 * @see #setIDRegelzeichnung(Regelzeichnung)
+	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Rahmen_IDRegelzeichnung()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_Regelzeichnung'"
+	 * @generated
+	 */
+	Regelzeichnung getIDRegelzeichnung();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDRegelzeichnung <em>ID Regelzeichnung</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID Regelzeichnung</em>' reference.
+	 * @see #isSetIDRegelzeichnung()
+	 * @see #unsetIDRegelzeichnung()
+	 * @see #getIDRegelzeichnung()
+	 * @generated
+	 */
+	void setIDRegelzeichnung(Regelzeichnung value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDRegelzeichnung <em>ID Regelzeichnung</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDRegelzeichnung()
+	 * @see #getIDRegelzeichnung()
+	 * @see #setIDRegelzeichnung(Regelzeichnung)
+	 * @generated
+	 */
+	void unsetIDRegelzeichnung();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getIDRegelzeichnung <em>ID Regelzeichnung</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>ID Regelzeichnung</em>' reference is set.
+	 * @see #unsetIDRegelzeichnung()
+	 * @see #getIDRegelzeichnung()
+	 * @see #setIDRegelzeichnung(Regelzeichnung)
+	 * @generated
+	 */
+	boolean isSetIDRegelzeichnung();
+
 	/**
 	 * Returns the value of the '<em><b>ID Signal</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -213,5 +276,31 @@ public interface Signal_Rahmen extends Basis_Objekt {
 	 * @generated
 	 */
 	void setRahmenArt(Rahmen_Art_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Rahmen Hoehe</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Höhe des Rahmen-Mittelpunkts über Schienenoberkante (SO). Die Angabe ist für die Zusammenstellung von Bauteilgruppen im BIM-Kontext relevant.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Rahmen Hoehe</em>' containment reference.
+	 * @see #setRahmenHoehe(Rahmen_Hoehe_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Rahmen_RahmenHoehe()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Rahmen_Hoehe'"
+	 * @generated
+	 */
+	Rahmen_Hoehe_TypeClass getRahmenHoehe();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen#getRahmenHoehe <em>Rahmen Hoehe</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Rahmen Hoehe</em>' containment reference.
+	 * @see #getRahmenHoehe()
+	 * @generated
+	 */
+	void setRahmenHoehe(Rahmen_Hoehe_TypeClass value);
 
 } // Signal_Rahmen

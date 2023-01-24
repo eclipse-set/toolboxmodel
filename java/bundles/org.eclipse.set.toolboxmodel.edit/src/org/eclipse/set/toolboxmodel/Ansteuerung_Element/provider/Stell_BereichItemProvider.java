@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -17,14 +18,19 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementFactory;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
+import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Bereich_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich} object.
@@ -82,6 +88,37 @@ public class Stell_BereichItemProvider extends Bereich_ObjektItemProvider {
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.STELL_BEREICH__ZUSATZINFORMATION_STELLWERK);
+			childrenFeatures.add(Ansteuerung_ElementPackage.Literals.STELL_BEREICH__BEZEICHNUNG_STELLWERK);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns Stell_Bereich.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,7 +151,16 @@ public class Stell_BereichItemProvider extends Bereich_ObjektItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-		super.notifyChanged(notification);
+
+		switch (notification.getFeatureID(Stell_Bereich.class)) {
+			case Ansteuerung_ElementPackage.STELL_BEREICH__ZUSATZINFORMATION_STELLWERK:
+			case Ansteuerung_ElementPackage.STELL_BEREICH__BEZEICHNUNG_STELLWERK:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+			default:
+				super.notifyChanged(notification);
+				return;
+			}
 	}
 
 	/**
@@ -127,6 +173,16 @@ public class Stell_BereichItemProvider extends Bereich_ObjektItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Ansteuerung_ElementPackage.Literals.STELL_BEREICH__ZUSATZINFORMATION_STELLWERK,
+				 Ansteuerung_ElementFactory.eINSTANCE.createZusatzinformation_Stellwerk_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Ansteuerung_ElementPackage.Literals.STELL_BEREICH__BEZEICHNUNG_STELLWERK,
+				 Ansteuerung_ElementFactory.eINSTANCE.createBezeichnung_Stellwerk_TypeClass()));
 	}
 
 	/**

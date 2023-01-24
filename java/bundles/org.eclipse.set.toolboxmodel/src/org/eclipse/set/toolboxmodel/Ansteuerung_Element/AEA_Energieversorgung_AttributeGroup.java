@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -62,13 +69,13 @@ public interface AEA_Energieversorgung_AttributeGroup extends EObject {
 	 * @return the value of the '<em>ID Energie Sekundaer</em>' reference.
 	 * @see #isSetIDEnergieSekundaer()
 	 * @see #unsetIDEnergieSekundaer()
-	 * @see #setIDEnergieSekundaer(Aussenelementansteuerung)
+	 * @see #setIDEnergieSekundaer(Basis_Objekt)
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getAEA_Energieversorgung_AttributeGroup_IDEnergieSekundaer()
 	 * @model unsettable="true"
 	 *        extendedMetaData="kind='element' name='ID_Energie_Sekundaer'"
 	 * @generated
 	 */
-	Aussenelementansteuerung getIDEnergieSekundaer();
+	Basis_Objekt getIDEnergieSekundaer();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_Energieversorgung_AttributeGroup#getIDEnergieSekundaer <em>ID Energie Sekundaer</em>}' reference.
@@ -80,7 +87,7 @@ public interface AEA_Energieversorgung_AttributeGroup extends EObject {
 	 * @see #getIDEnergieSekundaer()
 	 * @generated
 	 */
-	void setIDEnergieSekundaer(Aussenelementansteuerung value);
+	void setIDEnergieSekundaer(Basis_Objekt value);
 
 	/**
 	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_Energieversorgung_AttributeGroup#getIDEnergieSekundaer <em>ID Energie Sekundaer</em>}' reference.
@@ -88,7 +95,7 @@ public interface AEA_Energieversorgung_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetIDEnergieSekundaer()
 	 * @see #getIDEnergieSekundaer()
-	 * @see #setIDEnergieSekundaer(Aussenelementansteuerung)
+	 * @see #setIDEnergieSekundaer(Basis_Objekt)
 	 * @generated
 	 */
 	void unsetIDEnergieSekundaer();
@@ -100,7 +107,7 @@ public interface AEA_Energieversorgung_AttributeGroup extends EObject {
 	 * @return whether the value of the '<em>ID Energie Sekundaer</em>' reference is set.
 	 * @see #unsetIDEnergieSekundaer()
 	 * @see #getIDEnergieSekundaer()
-	 * @see #setIDEnergieSekundaer(Aussenelementansteuerung)
+	 * @see #setIDEnergieSekundaer(Basis_Objekt)
 	 * @generated
 	 */
 	boolean isSetIDEnergieSekundaer();

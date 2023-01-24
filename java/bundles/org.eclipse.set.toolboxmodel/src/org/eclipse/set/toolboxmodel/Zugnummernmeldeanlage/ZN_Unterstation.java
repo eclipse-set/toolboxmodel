@@ -1,13 +1,15 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage;
 
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
-import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
-import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +24,6 @@ import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation#getIDGEOPunkt <em>IDGEO Punkt</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation#getIDStreckePunkt <em>ID Strecke Punkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation#getIDZNZBS <em>IDZNZBS</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation#getZNUnterstationAllg <em>ZN Unterstation Allg</em>}</li>
  * </ul>
@@ -33,74 +33,6 @@ import org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt;
  * @generated
  */
 public interface ZN_Unterstation extends Basis_Objekt {
-	/**
-	 * Returns the value of the '<em><b>IDGEO Punkt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Positionierung der ZN-Unterstation(en) auf dem ZLV-Bus-Übersichtsplan. Gegenwärtig ist noch in Klärung, ob der Verweis auf Strecke Punkt oder dieser Verweis die bessere Lösung darstellt. DB-Regelwerk Darstellung auf dem ZLV-Bus-Übersichtsplan. 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>IDGEO Punkt</em>' reference.
-	 * @see #isSetIDGEOPunkt()
-	 * @see #unsetIDGEOPunkt()
-	 * @see #setIDGEOPunkt(GEO_Punkt)
-	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlagePackage#getZN_Unterstation_IDGEOPunkt()
-	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='ID_GEO_Punkt'"
-	 * @generated
-	 */
-	GEO_Punkt getIDGEOPunkt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation#getIDGEOPunkt <em>IDGEO Punkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>IDGEO Punkt</em>' reference.
-	 * @see #isSetIDGEOPunkt()
-	 * @see #unsetIDGEOPunkt()
-	 * @see #getIDGEOPunkt()
-	 * @generated
-	 */
-	void setIDGEOPunkt(GEO_Punkt value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation#getIDGEOPunkt <em>IDGEO Punkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDGEOPunkt()
-	 * @see #getIDGEOPunkt()
-	 * @see #setIDGEOPunkt(GEO_Punkt)
-	 * @generated
-	 */
-	void unsetIDGEOPunkt();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation#getIDGEOPunkt <em>IDGEO Punkt</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>IDGEO Punkt</em>' reference is set.
-	 * @see #unsetIDGEOPunkt()
-	 * @see #getIDGEOPunkt()
-	 * @see #setIDGEOPunkt(GEO_Punkt)
-	 * @generated
-	 */
-	boolean isSetIDGEOPunkt();
-
-	/**
-	 * Returns the value of the '<em><b>ID Strecke Punkt</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Punkt}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Verweis auf einen Streckenpunkt zur geordneten Darstellung der ZN-Unterstationen auf dem ZLV-Bus-Übersichtsplan. Gegenwärtig ist noch in Klärung, ob der Verweis auf GEO Punkt oder dieser Verweis die bessere Lösung darstellt. 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Strecke Punkt</em>' reference list.
-	 * @see org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlagePackage#getZN_Unterstation_IDStreckePunkt()
-	 * @model extendedMetaData="kind='element' name='ID_Strecke_Punkt'"
-	 * @generated
-	 */
-	EList<Strecke_Punkt> getIDStreckePunkt();
-
 	/**
 	 * Returns the value of the '<em><b>IDZNZBS</b></em>' reference.
 	 * <!-- begin-user-doc -->

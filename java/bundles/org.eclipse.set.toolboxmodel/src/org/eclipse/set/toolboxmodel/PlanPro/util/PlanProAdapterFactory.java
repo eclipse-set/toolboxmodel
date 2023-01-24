@@ -248,6 +248,10 @@ public class PlanProAdapterFactory extends AdapterFactoryImpl {
 				return createPlanPro_SchnittstelleAdapter();
 			}
 			@Override
+			public Adapter caseWzkInvalidIDReference(WzkInvalidIDReference object) {
+				return createWzkInvalidIDReferenceAdapter();
+			}
+			@Override
 			public Adapter casePlanPro_Schnittstelle_Allg_AttributeGroup(PlanPro_Schnittstelle_Allg_AttributeGroup object) {
 				return createPlanPro_Schnittstelle_Allg_AttributeGroupAdapter();
 			}
@@ -1016,6 +1020,20 @@ public class PlanProAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPlanPro_SchnittstelleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference <em>Wzk Invalid ID Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference
+	 * @generated
+	 */
+	public Adapter createWzkInvalidIDReferenceAdapter() {
 		return null;
 	}
 

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.util;
 
@@ -103,6 +110,8 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 				return validateBSVRVA((BSVRVA)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.BS_WDH:
 				return validateBSWdh((BSWdh)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.BSZBS_BER:
+				return validateBSZBSBer((BSZBSBer)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.BS_ZUSATZ:
 				return validateBSZusatz((BSZusatz)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.BUE00_LP:
@@ -221,6 +230,8 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 				return validateLf1((Lf1)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.LF12:
 				return validateLf12((Lf12)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.LF1_WDH:
+				return validateLf1Wdh((Lf1Wdh)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.LF2:
 				return validateLf2((Lf2)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.LF3:
@@ -237,8 +248,6 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 				return validateLf6((Lf6)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.LF7:
 				return validateLf7((Lf7)value, diagnostics, context);
-			case Signalbegriffe_Ril_301Package.LF_PF:
-				return validateLfPf((LfPf)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.LF_PF_L:
 				return validateLfPfL((LfPfL)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.LF_PF_R:
@@ -297,8 +306,6 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 				return validateNe7a((Ne7a)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.NE7B:
 				return validateNe7b((Ne7b)value, diagnostics, context);
-			case Signalbegriffe_Ril_301Package.NISESHM:
-				return validateNISESHM((NISESHM)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.OZ_AUTO_ET:
 				return validateOzAutoET((OzAutoET)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.OZ_AUTO_HET:
@@ -311,8 +318,12 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 				return validateOzFa((OzFa)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.OZ_FAK:
 				return validateOzFak((OzFak)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.OZ_GSMR:
+				return validateOzGSMR((OzGSMR)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.OZ_HET:
 				return validateOzHET((OzHET)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.OZ_HM:
+				return validateOzHM((OzHM)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.OZ_ICE:
 				return validateOzICE((OzICE)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.OZ_LZB_BER:
@@ -461,6 +472,12 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 				return validateENUMSymbolLf1((ENUMSymbolLf1)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF12:
 				return validateENUMSymbolLf12((ENUMSymbolLf12)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_WDH:
+				return validateENUMSymbolLf1Wdh((ENUMSymbolLf1Wdh)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DS:
+				return validateENUMSymbolLf4DS((ENUMSymbolLf4DS)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DV:
+				return validateENUMSymbolLf4DV((ENUMSymbolLf4DV)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF6:
 				return validateENUMSymbolLf6((ENUMSymbolLf6)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF7:
@@ -479,6 +496,12 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 				return validateENUMSymbolLf12Object((ENUMSymbolLf12)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_OBJECT:
 				return validateENUMSymbolLf1Object((ENUMSymbolLf1)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF1_WDH_OBJECT:
+				return validateENUMSymbolLf1WdhObject((ENUMSymbolLf1Wdh)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DS_OBJECT:
+				return validateENUMSymbolLf4DSObject((ENUMSymbolLf4DS)value, diagnostics, context);
+			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF4_DV_OBJECT:
+				return validateENUMSymbolLf4DVObject((ENUMSymbolLf4DV)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF6_OBJECT:
 				return validateENUMSymbolLf6Object((ENUMSymbolLf6)value, diagnostics, context);
 			case Signalbegriffe_Ril_301Package.ENUM_SYMBOL_LF7_OBJECT:
@@ -523,6 +546,15 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 	 */
 	public boolean validateBSWdh(BSWdh bsWdh, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(bsWdh, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBSZBSBer(BSZBSBer bszbsBer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bszbsBer, diagnostics, context);
 	}
 
 	/**
@@ -1061,6 +1093,15 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateLf1Wdh(Lf1Wdh lf1Wdh, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(lf1Wdh, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateLf2(Lf2 lf2, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(lf2, diagnostics, context);
 	}
@@ -1126,15 +1167,6 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 	 */
 	public boolean validateLf7(Lf7 lf7, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(lf7, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLfPf(LfPf lfPf, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(lfPf, diagnostics, context);
 	}
 
 	/**
@@ -1403,15 +1435,6 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateNISESHM(NISESHM niseshm, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(niseshm, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateOzAutoET(OzAutoET ozAutoET, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(ozAutoET, diagnostics, context);
 	}
@@ -1466,8 +1489,26 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateOzGSMR(OzGSMR ozGSMR, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(ozGSMR, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateOzHET(OzHET ozHET, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(ozHET, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateOzHM(OzHM ozHM, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(ozHM, diagnostics, context);
 	}
 
 	/**
@@ -2141,6 +2182,33 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateENUMSymbolLf1Wdh(ENUMSymbolLf1Wdh enumSymbolLf1Wdh, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMSymbolLf4DS(ENUMSymbolLf4DS enumSymbolLf4DS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMSymbolLf4DV(ENUMSymbolLf4DV enumSymbolLf4DV, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateENUMSymbolLf6(ENUMSymbolLf6 enumSymbolLf6, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -2238,6 +2306,33 @@ public class Signalbegriffe_Ril_301Validator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMSymbolLf1Object(ENUMSymbolLf1 enumSymbolLf1Object, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMSymbolLf1WdhObject(ENUMSymbolLf1Wdh enumSymbolLf1WdhObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMSymbolLf4DSObject(ENUMSymbolLf4DS enumSymbolLf4DSObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMSymbolLf4DVObject(ENUMSymbolLf4DV enumSymbolLf4DVObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

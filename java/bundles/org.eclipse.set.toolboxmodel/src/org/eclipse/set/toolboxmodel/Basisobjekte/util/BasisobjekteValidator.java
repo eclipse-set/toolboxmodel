@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.util;
 
@@ -129,8 +136,6 @@ public class BasisobjekteValidator extends EObjectValidator {
 				return validateBearbeitungsvermerk((Bearbeitungsvermerk)value, diagnostics, context);
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ALLG_ATTRIBUTE_GROUP:
 				return validateBearbeitungsvermerk_Allg_AttributeGroup((Bearbeitungsvermerk_Allg_AttributeGroup)value, diagnostics, context);
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS:
-				return validateBearbeitungsvermerk_Kennung_TypeClass((Bearbeitungsvermerk_Kennung_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ROLLE_TYPE_CLASS:
 				return validateBearbeitungsvermerk_Rolle_TypeClass((Bearbeitungsvermerk_Rolle_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.BEGRENZUNG_ATYPE_CLASS:
@@ -147,18 +152,22 @@ public class BasisobjekteValidator extends EObjectValidator {
 				return validateBestandsrelevanz_TypeClass((Bestandsrelevanz_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.BESTANDSSCHUTZ_TYPE_CLASS:
 				return validateBestandsschutz_TypeClass((Bestandsschutz_TypeClass)value, diagnostics, context);
+			case BasisobjektePackage.BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS:
+				return validateBV_Darstellung_In_Plan_TypeClass((BV_Darstellung_In_Plan_TypeClass)value, diagnostics, context);
+			case BasisobjektePackage.BV_KATEGORIE_TYPE_CLASS:
+				return validateBV_Kategorie_TypeClass((BV_Kategorie_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.DATEINAME_TYPE_CLASS:
 				return validateDateiname_TypeClass((Dateiname_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.DATEITYP_TYPE_CLASS:
 				return validateDateityp_TypeClass((Dateityp_TypeClass)value, diagnostics, context);
-			case BasisobjektePackage.DATEN_TYPE_CLASS:
-				return validateDaten_TypeClass((Daten_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.DATUM_REGELWERK_TYPE_CLASS:
 				return validateDatum_Regelwerk_TypeClass((Datum_Regelwerk_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.DB_GDI_REFERENZ_TYPE_CLASS:
 				return validateDB_GDI_Referenz_TypeClass((DB_GDI_Referenz_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.IDENTITAET_TYPE_CLASS:
 				return validateIdentitaet_TypeClass((Identitaet_TypeClass)value, diagnostics, context);
+			case BasisobjektePackage.KM_MASSGEBEND_TYPE_CLASS:
+				return validateKm_Massgebend_TypeClass((Km_Massgebend_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.KOMMENTAR_TYPE_CLASS:
 				return validateKommentar_TypeClass((Kommentar_TypeClass)value, diagnostics, context);
 			case BasisobjektePackage.KURZTEXT_TYPE_CLASS:
@@ -215,6 +224,8 @@ public class BasisobjekteValidator extends EObjectValidator {
 				return validateENUMAnhangArt((ENUMAnhangArt)value, diagnostics, context);
 			case BasisobjektePackage.ENUM_BESTANDSRELEVANZ:
 				return validateENUMBestandsrelevanz((ENUMBestandsrelevanz)value, diagnostics, context);
+			case BasisobjektePackage.ENUMBV_DARSTELLUNG_IN_PLAN:
+				return validateENUMBVDarstellungInPlan((ENUMBVDarstellungInPlan)value, diagnostics, context);
 			case BasisobjektePackage.ENUM_DATEITYP:
 				return validateENUMDateityp((ENUMDateityp)value, diagnostics, context);
 			case BasisobjektePackage.ENUMLST_OBJEKT_ART:
@@ -225,20 +236,22 @@ public class BasisobjekteValidator extends EObjectValidator {
 				return validateENUMRolle((ENUMRolle)value, diagnostics, context);
 			case BasisobjektePackage.ABSTAND_TYPE:
 				return validateAbstand_Type((BigDecimal)value, diagnostics, context);
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_KENNUNG_TYPE:
-				return validateBearbeitungsvermerk_Kennung_Type((String)value, diagnostics, context);
 			case BasisobjektePackage.BEGRENZUNG_ATYPE:
 				return validateBegrenzung_A_Type((BigDecimal)value, diagnostics, context);
 			case BasisobjektePackage.BEGRENZUNG_BTYPE:
 				return validateBegrenzung_B_Type((BigDecimal)value, diagnostics, context);
 			case BasisobjektePackage.BESCHREIBUNG_TYPE:
 				return validateBeschreibung_Type((String)value, diagnostics, context);
+			case BasisobjektePackage.BV_KATEGORIE_TYPE:
+				return validateBV_Kategorie_Type((String)value, diagnostics, context);
 			case BasisobjektePackage.DB_GDI_REFERENZ_TYPE:
 				return validateDB_GDI_Referenz_Type((String)value, diagnostics, context);
 			case BasisobjektePackage.ENUM_ANHANG_ART_OBJECT:
 				return validateENUMAnhangArtObject((ENUMAnhangArt)value, diagnostics, context);
 			case BasisobjektePackage.ENUM_BESTANDSRELEVANZ_OBJECT:
 				return validateENUMBestandsrelevanzObject((ENUMBestandsrelevanz)value, diagnostics, context);
+			case BasisobjektePackage.ENUMBV_DARSTELLUNG_IN_PLAN_OBJECT:
+				return validateENUMBVDarstellungInPlanObject((ENUMBVDarstellungInPlan)value, diagnostics, context);
 			case BasisobjektePackage.ENUM_DATEITYP_OBJECT:
 				return validateENUMDateitypObject((ENUMDateityp)value, diagnostics, context);
 			case BasisobjektePackage.ENUMLST_OBJEKT_ART_OBJECT:
@@ -355,15 +368,6 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBearbeitungsvermerk_Kennung_TypeClass(Bearbeitungsvermerk_Kennung_TypeClass bearbeitungsvermerk_Kennung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(bearbeitungsvermerk_Kennung_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateBearbeitungsvermerk_Rolle_TypeClass(Bearbeitungsvermerk_Rolle_TypeClass bearbeitungsvermerk_Rolle_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(bearbeitungsvermerk_Rolle_TypeClass, diagnostics, context);
 	}
@@ -436,6 +440,24 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateBV_Darstellung_In_Plan_TypeClass(BV_Darstellung_In_Plan_TypeClass bV_Darstellung_In_Plan_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bV_Darstellung_In_Plan_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBV_Kategorie_TypeClass(BV_Kategorie_TypeClass bV_Kategorie_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bV_Kategorie_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateDateiname_TypeClass(Dateiname_TypeClass dateiname_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(dateiname_TypeClass, diagnostics, context);
 	}
@@ -447,15 +469,6 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 */
 	public boolean validateDateityp_TypeClass(Dateityp_TypeClass dateityp_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(dateityp_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDaten_TypeClass(Daten_TypeClass daten_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(daten_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -483,6 +496,15 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 */
 	public boolean validateIdentitaet_TypeClass(Identitaet_TypeClass identitaet_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(identitaet_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateKm_Massgebend_TypeClass(Km_Massgebend_TypeClass km_Massgebend_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(km_Massgebend_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -742,6 +764,15 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateENUMBVDarstellungInPlan(ENUMBVDarstellungInPlan enumbvDarstellungInPlan, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateENUMDateityp(ENUMDateityp enumDateityp, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -804,16 +835,6 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 */
 	public boolean validateAbstand_Type_Pattern(BigDecimal abstand_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(BasisobjektePackage.Literals.ABSTAND_TYPE, abstand_Type, ABSTAND_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateBearbeitungsvermerk_Kennung_Type(String bearbeitungsvermerk_Kennung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = basisTypenValidator.validateZeichenkette_Type_Pattern(bearbeitungsvermerk_Kennung_Type, diagnostics, context);
-		return result;
 	}
 
 	/**
@@ -897,6 +918,16 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateBV_Kategorie_Type(String bV_Kategorie_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(bV_Kategorie_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateDB_GDI_Referenz_Type(String dB_GDI_Referenz_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = validateDB_GDI_Referenz_Type_Pattern(dB_GDI_Referenz_Type, diagnostics, context);
 		return result;
@@ -943,6 +974,15 @@ public class BasisobjekteValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMBestandsrelevanzObject(ENUMBestandsrelevanz enumBestandsrelevanzObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMBVDarstellungInPlanObject(ENUMBVDarstellungInPlan enumbvDarstellungInPlanObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

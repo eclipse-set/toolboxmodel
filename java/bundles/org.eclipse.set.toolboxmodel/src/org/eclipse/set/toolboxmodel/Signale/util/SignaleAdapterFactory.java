@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.util;
 
@@ -110,6 +117,14 @@ public class SignaleAdapterFactory extends AdapterFactoryImpl {
 				return createFiktives_Signal_Funktion_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseFundament_Art_TypeClass(Fundament_Art_TypeClass object) {
+				return createFundament_Art_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseFunktion_Ohne_Signal_TypeClass(Funktion_Ohne_Signal_TypeClass object) {
+				return createFunktion_Ohne_Signal_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseGegengleis_TypeClass(Gegengleis_TypeClass object) {
 				return createGegengleis_TypeClassAdapter();
 			}
@@ -136,6 +151,10 @@ public class SignaleAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRahmen_Art_TypeClass(Rahmen_Art_TypeClass object) {
 				return createRahmen_Art_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseRahmen_Hoehe_TypeClass(Rahmen_Hoehe_TypeClass object) {
+				return createRahmen_Hoehe_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseRangierstrasse_Restaufloesung_TypeClass(Rangierstrasse_Restaufloesung_TypeClass object) {
@@ -416,6 +435,34 @@ public class SignaleAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass <em>Fundament Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Fundament_Art_TypeClass
+	 * @generated
+	 */
+	public Adapter createFundament_Art_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass <em>Funktion Ohne Signal Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Funktion_Ohne_Signal_TypeClass
+	 * @generated
+	 */
+	public Adapter createFunktion_Ohne_Signal_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signale.Gegengleis_TypeClass <em>Gegengleis Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -510,6 +557,20 @@ public class SignaleAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRahmen_Art_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass <em>Rahmen Hoehe Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Signale.Rahmen_Hoehe_TypeClass
+	 * @generated
+	 */
+	public Adapter createRahmen_Hoehe_TypeClassAdapter() {
 		return null;
 	}
 

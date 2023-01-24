@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,11 +29,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenFactory;
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
-
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup} object.
@@ -85,14 +86,11 @@ public class Kabel_Allg_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_RESERVE);
-			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ANZAHL_VERSEILELEMENTE);
+			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__INDUKTIONSSCHUTZ);
 			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_ART);
 			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_LAENGE);
 			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_TYP);
-			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__VERSEILART);
-			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_DURCHMESSER);
-			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_QUERSCHNITT);
+			childrenFeatures.add(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__NAGETIERSCHUTZ);
 		}
 		return childrenFeatures;
 	}
@@ -145,14 +143,11 @@ public class Kabel_Allg_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Kabel_Allg_AttributeGroup.class)) {
-			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_RESERVE:
-			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__ANZAHL_VERSEILELEMENTE:
+			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__INDUKTIONSSCHUTZ:
 			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_ART:
 			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_LAENGE:
 			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_TYP:
-			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__VERSEILART:
-			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_DURCHMESSER:
-			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_QUERSCHNITT:
+			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP__NAGETIERSCHUTZ:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -174,13 +169,8 @@ public class Kabel_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_RESERVE,
-				 Medien_und_TrassenFactory.eINSTANCE.createAder_Reserve_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ANZAHL_VERSEILELEMENTE,
-				 Medien_und_TrassenFactory.eINSTANCE.createAnzahl_Verseilelemente_TypeClass()));
+				(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__INDUKTIONSSCHUTZ,
+				 Medien_und_TrassenFactory.eINSTANCE.createInduktionsschutz_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -199,18 +189,8 @@ public class Kabel_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__VERSEILART,
-				 Medien_und_TrassenFactory.eINSTANCE.createVerseilart_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_DURCHMESSER,
-				 Medien_und_TrassenFactory.eINSTANCE.createAder_Durchmesser_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__ADER_QUERSCHNITT,
-				 Medien_und_TrassenFactory.eINSTANCE.createAder_Querschnitt_TypeClass()));
+				(Medien_und_TrassenPackage.Literals.KABEL_ALLG_ATTRIBUTE_GROUP__NAGETIERSCHUTZ,
+				 Medien_und_TrassenFactory.eINSTANCE.createNagetierschutz_TypeClass()));
 	}
 
 	/**

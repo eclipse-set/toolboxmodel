@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz.impl;
 
@@ -12,6 +19,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
+import org.eclipse.set.toolboxmodel.Flankenschutz.EKW_Kr_Anteil_TypeClass;
 import org.eclipse.set.toolboxmodel.Flankenschutz.Fahrt_Ueber_TypeClass;
 import org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz_Anforderer_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage;
@@ -24,6 +33,7 @@ import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_Schutz_Anforderer_AttributeGroupImpl#getEKWKrAnteil <em>EKW Kr Anteil</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_Schutz_Anforderer_AttributeGroupImpl#getFahrtUeber <em>Fahrt Ueber</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_Schutz_Anforderer_AttributeGroupImpl#getIDAnfordererElement <em>ID Anforderer Element</em>}</li>
  * </ul>
@@ -31,6 +41,16 @@ import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage;
  * @generated
  */
 public class Fla_Schutz_Anforderer_AttributeGroupImpl extends MinimalEObjectImpl.Container implements Fla_Schutz_Anforderer_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getEKWKrAnteil() <em>EKW Kr Anteil</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEKWKrAnteil()
+	 * @generated
+	 * @ordered
+	 */
+	protected EKW_Kr_Anteil_TypeClass eKWKrAnteil;
+
 	/**
 	 * The cached value of the '{@link #getFahrtUeber() <em>Fahrt Ueber</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -77,6 +97,51 @@ public class Fla_Schutz_Anforderer_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	protected EClass eStaticClass() {
 		return FlankenschutzPackage.Literals.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EKW_Kr_Anteil_TypeClass getEKWKrAnteil() {
+		return eKWKrAnteil;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEKWKrAnteil(EKW_Kr_Anteil_TypeClass newEKWKrAnteil, NotificationChain msgs) {
+		EKW_Kr_Anteil_TypeClass oldEKWKrAnteil = eKWKrAnteil;
+		eKWKrAnteil = newEKWKrAnteil;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL, oldEKWKrAnteil, newEKWKrAnteil);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEKWKrAnteil(EKW_Kr_Anteil_TypeClass newEKWKrAnteil) {
+		if (newEKWKrAnteil != eKWKrAnteil) {
+			NotificationChain msgs = null;
+			if (eKWKrAnteil != null)
+				msgs = ((InternalEObject)eKWKrAnteil).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL, null, msgs);
+			if (newEKWKrAnteil != null)
+				msgs = ((InternalEObject)newEKWKrAnteil).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL, null, msgs);
+			msgs = basicSetEKWKrAnteil(newEKWKrAnteil, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL, newEKWKrAnteil, newEKWKrAnteil));
 	}
 
 	/**
@@ -199,6 +264,8 @@ public class Fla_Schutz_Anforderer_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL:
+				return basicSetEKWKrAnteil(null, msgs);
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER:
 				return basicSetFahrtUeber(null, msgs);
 			default:
@@ -214,6 +281,8 @@ public class Fla_Schutz_Anforderer_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL:
+				return getEKWKrAnteil();
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER:
 				return getFahrtUeber();
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__ID_ANFORDERER_ELEMENT:
@@ -232,6 +301,9 @@ public class Fla_Schutz_Anforderer_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL:
+				setEKWKrAnteil((EKW_Kr_Anteil_TypeClass)newValue);
+				return;
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER:
 				setFahrtUeber((Fahrt_Ueber_TypeClass)newValue);
 				return;
@@ -252,6 +324,9 @@ public class Fla_Schutz_Anforderer_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL:
+				setEKWKrAnteil((EKW_Kr_Anteil_TypeClass)null);
+				return;
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER:
 				setFahrtUeber((Fahrt_Ueber_TypeClass)null);
 				return;
@@ -272,6 +347,8 @@ public class Fla_Schutz_Anforderer_AttributeGroupImpl extends MinimalEObjectImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__EKW_KR_ANTEIL:
+				return eKWKrAnteil != null;
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__FAHRT_UEBER:
 				return fahrtUeber != null;
 			case FlankenschutzPackage.FLA_SCHUTZ_ANFORDERER_ATTRIBUTE_GROUP__ID_ANFORDERER_ELEMENT:

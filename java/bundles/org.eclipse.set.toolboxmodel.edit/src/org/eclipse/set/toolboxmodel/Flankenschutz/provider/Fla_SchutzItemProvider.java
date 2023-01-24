@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -19,7 +20,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -29,7 +29,7 @@ import org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz;
 import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzFactory;
 import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz} object.
@@ -59,31 +59,8 @@ public class Fla_SchutzItemProvider extends Basis_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIDFlaWeitergabeEKWPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Fla Weitergabe EKW feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDFlaWeitergabeEKWPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Fla_Schutz_iDFlaWeitergabeEKW_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Fla_Schutz_iDFlaWeitergabeEKW_feature", "_UI_Fla_Schutz_type"),
-				 FlankenschutzPackage.Literals.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

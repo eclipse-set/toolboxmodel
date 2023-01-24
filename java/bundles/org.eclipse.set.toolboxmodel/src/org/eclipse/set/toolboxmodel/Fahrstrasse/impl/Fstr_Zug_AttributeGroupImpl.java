@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.impl;
 
@@ -10,18 +17,22 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung;
+
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Automatische_Einstellung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Vsigabstand_Verkuerzt_TypeClass;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_DWeg_AttributeGroup;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -34,6 +45,7 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl#getAutomatischeEinstellung <em>Automatische Einstellung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl#getFstrVsigabstandVerkuerzt <em>Fstr Vsigabstand Verkuerzt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl#getFstrZugArt <em>Fstr Zug Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl#getFstrZugDWeg <em>Fstr Zug DWeg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl#getIDBUEEinschaltung <em>IDBUE Einschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_AttributeGroupImpl#getIDSignalGruppenausfahrt <em>ID Signal Gruppenausfahrt</em>}</li>
@@ -61,6 +73,16 @@ public class Fstr_Zug_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected Fstr_Vsigabstand_Verkuerzt_TypeClass fstrVsigabstandVerkuerzt;
+
+	/**
+	 * The cached value of the '{@link #getFstrZugArt() <em>Fstr Zug Art</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFstrZugArt()
+	 * @generated
+	 * @ordered
+	 */
+	protected Fstr_Zug_Art_TypeClass fstrZugArt;
 
 	/**
 	 * The cached value of the '{@link #getFstrZugDWeg() <em>Fstr Zug DWeg</em>}' containment reference.
@@ -216,6 +238,51 @@ public class Fstr_Zug_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
+	public Fstr_Zug_Art_TypeClass getFstrZugArt() {
+		return fstrZugArt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFstrZugArt(Fstr_Zug_Art_TypeClass newFstrZugArt, NotificationChain msgs) {
+		Fstr_Zug_Art_TypeClass oldFstrZugArt = fstrZugArt;
+		fstrZugArt = newFstrZugArt;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART, oldFstrZugArt, newFstrZugArt);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFstrZugArt(Fstr_Zug_Art_TypeClass newFstrZugArt) {
+		if (newFstrZugArt != fstrZugArt) {
+			NotificationChain msgs = null;
+			if (fstrZugArt != null)
+				msgs = ((InternalEObject)fstrZugArt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART, null, msgs);
+			if (newFstrZugArt != null)
+				msgs = ((InternalEObject)newFstrZugArt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART, null, msgs);
+			msgs = basicSetFstrZugArt(newFstrZugArt, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART, newFstrZugArt, newFstrZugArt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Fstr_Zug_DWeg_AttributeGroup getFstrZugDWeg() {
 		return fstrZugDWeg;
 	}
@@ -347,6 +414,8 @@ public class Fstr_Zug_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 				return basicSetAutomatischeEinstellung(null, msgs);
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT:
 				return basicSetFstrVsigabstandVerkuerzt(null, msgs);
+			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART:
+				return basicSetFstrZugArt(null, msgs);
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG:
 				return basicSetFstrZugDWeg(null, msgs);
 			default:
@@ -366,6 +435,8 @@ public class Fstr_Zug_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 				return getAutomatischeEinstellung();
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT:
 				return getFstrVsigabstandVerkuerzt();
+			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART:
+				return getFstrZugArt();
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG:
 				return getFstrZugDWeg();
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__IDBUE_EINSCHALTUNG:
@@ -392,6 +463,9 @@ public class Fstr_Zug_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 				return;
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT:
 				setFstrVsigabstandVerkuerzt((Fstr_Vsigabstand_Verkuerzt_TypeClass)newValue);
+				return;
+			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART:
+				setFstrZugArt((Fstr_Zug_Art_TypeClass)newValue);
 				return;
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG:
 				setFstrZugDWeg((Fstr_Zug_DWeg_AttributeGroup)newValue);
@@ -423,6 +497,9 @@ public class Fstr_Zug_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT:
 				setFstrVsigabstandVerkuerzt((Fstr_Vsigabstand_Verkuerzt_TypeClass)null);
 				return;
+			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART:
+				setFstrZugArt((Fstr_Zug_Art_TypeClass)null);
+				return;
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG:
 				setFstrZugDWeg((Fstr_Zug_DWeg_AttributeGroup)null);
 				return;
@@ -450,6 +527,8 @@ public class Fstr_Zug_AttributeGroupImpl extends MinimalEObjectImpl.Container im
 				return automatischeEinstellung != null;
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT:
 				return fstrVsigabstandVerkuerzt != null;
+			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART:
+				return fstrZugArt != null;
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG:
 				return fstrZugDWeg != null;
 			case FahrstrassePackage.FSTR_ZUG_ATTRIBUTE_GROUP__IDBUE_EINSCHALTUNG:

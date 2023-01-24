@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.util;
 
@@ -86,6 +93,13 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 				BSWdh bsWdh = (BSWdh)theEObject;
 				T result = caseBSWdh(bsWdh);
 				if (result == null) result = caseSignalbegriff_ID_TypeClass(bsWdh);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Signalbegriffe_Ril_301Package.BSZBS_BER: {
+				BSZBSBer bszbsBer = (BSZBSBer)theEObject;
+				T result = caseBSZBSBer(bszbsBer);
+				if (result == null) result = caseSignalbegriff_ID_TypeClass(bszbsBer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -501,6 +515,13 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Signalbegriffe_Ril_301Package.LF1_WDH: {
+				Lf1Wdh lf1Wdh = (Lf1Wdh)theEObject;
+				T result = caseLf1Wdh(lf1Wdh);
+				if (result == null) result = caseSignalbegriff_ID_TypeClass(lf1Wdh);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Signalbegriffe_Ril_301Package.LF2: {
 				Lf2 lf2 = (Lf2)theEObject;
 				T result = caseLf2(lf2);
@@ -554,13 +575,6 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 				Lf7 lf7 = (Lf7)theEObject;
 				T result = caseLf7(lf7);
 				if (result == null) result = caseSignalbegriff_ID_TypeClass(lf7);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Signalbegriffe_Ril_301Package.LF_PF: {
-				LfPf lfPf = (LfPf)theEObject;
-				T result = caseLfPf(lfPf);
-				if (result == null) result = caseSignalbegriff_ID_TypeClass(lfPf);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -767,13 +781,6 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Signalbegriffe_Ril_301Package.NISESHM: {
-				NISESHM niseshm = (NISESHM)theEObject;
-				T result = caseNISESHM(niseshm);
-				if (result == null) result = caseSignalbegriff_ID_TypeClass(niseshm);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Signalbegriffe_Ril_301Package.OZ_AUTO_ET: {
 				OzAutoET ozAutoET = (OzAutoET)theEObject;
 				T result = caseOzAutoET(ozAutoET);
@@ -815,10 +822,24 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Signalbegriffe_Ril_301Package.OZ_GSMR: {
+				OzGSMR ozGSMR = (OzGSMR)theEObject;
+				T result = caseOzGSMR(ozGSMR);
+				if (result == null) result = caseSignalbegriff_ID_TypeClass(ozGSMR);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Signalbegriffe_Ril_301Package.OZ_HET: {
 				OzHET ozHET = (OzHET)theEObject;
 				T result = caseOzHET(ozHET);
 				if (result == null) result = caseSignalbegriff_ID_TypeClass(ozHET);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Signalbegriffe_Ril_301Package.OZ_HM: {
+				OzHM ozHM = (OzHM)theEObject;
+				T result = caseOzHM(ozHM);
+				if (result == null) result = caseSignalbegriff_ID_TypeClass(ozHM);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1371,6 +1392,21 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBSWdh(BSWdh object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>BSZBS Ber</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>BSZBS Ber</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBSZBSBer(BSZBSBer object) {
 		return null;
 	}
 
@@ -2260,6 +2296,21 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Lf1 Wdh</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Lf1 Wdh</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLf1Wdh(Lf1Wdh object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Lf2</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2376,21 +2427,6 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLf7(Lf7 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Lf Pf</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Lf Pf</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLfPf(LfPf object) {
 		return null;
 	}
 
@@ -2830,21 +2866,6 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>NISESHM</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>NISESHM</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNISESHM(NISESHM object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Oz Auto ET</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2935,6 +2956,21 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oz GSMR</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oz GSMR</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOzGSMR(OzGSMR object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Oz HET</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2946,6 +2982,21 @@ public class Signalbegriffe_Ril_301Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOzHET(OzHET object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oz HM</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oz HM</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOzHM(OzHM object) {
 		return null;
 	}
 

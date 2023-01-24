@@ -30,7 +30,6 @@ public interface Objektmanagement_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Einbindung der konkreten Objektmanagementdaten der Ebene Planung_Projekt.
-	 * 
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->

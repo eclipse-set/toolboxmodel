@@ -1,16 +1,28 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.impl;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Abstand_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
@@ -18,6 +30,8 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_Attribut
 import org.eclipse.set.toolboxmodel.Basisobjekte.Seitliche_Lage_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Seitlicher_Abstand_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Wirkrichtung_TypeClass;
+
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
 
 /**
@@ -29,6 +43,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_Objekt_TOP_Kante_AttributeGroupImpl#getAbstand <em>Abstand</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_Objekt_TOP_Kante_AttributeGroupImpl#getIDGEOPunktBerechnet <em>IDGEO Punkt Berechnet</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_Objekt_TOP_Kante_AttributeGroupImpl#getIDTOPKante <em>IDTOP Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_Objekt_TOP_Kante_AttributeGroupImpl#getWirkrichtung <em>Wirkrichtung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_Objekt_TOP_Kante_AttributeGroupImpl#getSeitlicheLage <em>Seitliche Lage</em>}</li>
@@ -47,6 +62,16 @@ public class Punkt_Objekt_TOP_Kante_AttributeGroupImpl extends MinimalEObjectImp
 	 * @ordered
 	 */
 	protected Abstand_TypeClass abstand;
+
+	/**
+	 * The cached value of the '{@link #getIDGEOPunktBerechnet() <em>IDGEO Punkt Berechnet</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDGEOPunktBerechnet()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GEO_Punkt> iDGEOPunktBerechnet;
 
 	/**
 	 * The cached value of the '{@link #getIDTOPKante() <em>IDTOP Kante</em>}' reference.
@@ -159,6 +184,19 @@ public class Punkt_Objekt_TOP_Kante_AttributeGroupImpl extends MinimalEObjectImp
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND, newAbstand, newAbstand));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<GEO_Punkt> getIDGEOPunktBerechnet() {
+		if (iDGEOPunktBerechnet == null) {
+			iDGEOPunktBerechnet = new EObjectResolvingEList<GEO_Punkt>(GEO_Punkt.class, this, BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET);
+		}
+		return iDGEOPunktBerechnet;
 	}
 
 	/**
@@ -394,6 +432,8 @@ public class Punkt_Objekt_TOP_Kante_AttributeGroupImpl extends MinimalEObjectImp
 		switch (featureID) {
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND:
 				return getAbstand();
+			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET:
+				return getIDGEOPunktBerechnet();
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDTOP_KANTE:
 				if (resolve) return getIDTOPKante();
 				return basicGetIDTOPKante();
@@ -413,11 +453,16 @@ public class Punkt_Objekt_TOP_Kante_AttributeGroupImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND:
 				setAbstand((Abstand_TypeClass)newValue);
+				return;
+			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET:
+				getIDGEOPunktBerechnet().clear();
+				getIDGEOPunktBerechnet().addAll((Collection<? extends GEO_Punkt>)newValue);
 				return;
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDTOP_KANTE:
 				setIDTOPKante((TOP_Kante)newValue);
@@ -448,6 +493,9 @@ public class Punkt_Objekt_TOP_Kante_AttributeGroupImpl extends MinimalEObjectImp
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND:
 				setAbstand((Abstand_TypeClass)null);
 				return;
+			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET:
+				getIDGEOPunktBerechnet().clear();
+				return;
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDTOP_KANTE:
 				unsetIDTOPKante();
 				return;
@@ -476,6 +524,8 @@ public class Punkt_Objekt_TOP_Kante_AttributeGroupImpl extends MinimalEObjectImp
 		switch (featureID) {
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__ABSTAND:
 				return abstand != null;
+			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDGEO_PUNKT_BERECHNET:
+				return iDGEOPunktBerechnet != null && !iDGEOPunktBerechnet.isEmpty();
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__IDTOP_KANTE:
 				return isSetIDTOPKante();
 			case BasisobjektePackage.PUNKT_OBJEKT_TOP_KANTE_ATTRIBUTE_GROUP__WIRKRICHTUNG:

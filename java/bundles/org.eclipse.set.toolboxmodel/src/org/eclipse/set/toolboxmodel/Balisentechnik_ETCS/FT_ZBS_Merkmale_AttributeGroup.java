@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -26,6 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getSchutzstreckeErforderlich <em>Schutzstrecke Erforderlich</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getSchutzstreckeVorhanden <em>Schutzstrecke Vorhanden</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getTelegrammnummer <em>Telegrammnummer</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getUeberwachungLaenge <em>Ueberwachung Laenge</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getVBefehlR <em>VBefehl R</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getVBefehlZ <em>VBefehl Z</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getVFrei <em>VFrei</em>}</li>
@@ -314,6 +322,32 @@ public interface FT_ZBS_Merkmale_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setTelegrammnummer(Telegrammnummer_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Ueberwachung Laenge</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Länge des Überwachungsabschnitts, auf den sich das Fachtelegramm bezieht.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Ueberwachung Laenge</em>' containment reference.
+	 * @see #setUeberwachungLaenge(Ueberwachung_Laenge_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getFT_ZBS_Merkmale_AttributeGroup_UeberwachungLaenge()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Ueberwachung_Laenge'"
+	 * @generated
+	 */
+	Ueberwachung_Laenge_TypeClass getUeberwachungLaenge();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup#getUeberwachungLaenge <em>Ueberwachung Laenge</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ueberwachung Laenge</em>' containment reference.
+	 * @see #getUeberwachungLaenge()
+	 * @generated
+	 */
+	void setUeberwachungLaenge(Ueberwachung_Laenge_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>VBefehl R</b></em>' containment reference.

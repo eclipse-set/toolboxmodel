@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,18 +17,22 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Knoten;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr_MUKA_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Ortsgestellt_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC;
+
+import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Anlage;
 
 /**
@@ -32,16 +43,45 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Anlage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_W_KrImpl#getETCSWKrMUKA <em>ETCSW Kr MUKA</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_W_KrImpl#getIDETCSGefahrpunktNebengleis <em>IDETCS Gefahrpunkt Nebengleis</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_W_KrImpl#getIDETCSKnoten <em>IDETCS Knoten</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_W_KrImpl#getIDRBC <em>IDRBC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_W_KrImpl#getIDWKrAnlage <em>IDW Kr Anlage</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_W_KrImpl#getETCSWKrMUKA <em>ETCSW Kr MUKA</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_W_KrImpl#getETCSWOrtsgestellt <em>ETCSW Ortsgestellt</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
+	/**
+	 * The cached value of the '{@link #getETCSWKrMUKA() <em>ETCSW Kr MUKA</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getETCSWKrMUKA()
+	 * @generated
+	 * @ordered
+	 */
+	protected ETCS_W_Kr_MUKA_AttributeGroup eTCSWKrMUKA;
+
+	/**
+	 * The cached value of the '{@link #getIDETCSGefahrpunktNebengleis() <em>IDETCS Gefahrpunkt Nebengleis</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDETCSGefahrpunktNebengleis()
+	 * @generated
+	 * @ordered
+	 */
+	protected Basis_Objekt iDETCSGefahrpunktNebengleis;
+
+	/**
+	 * This is true if the IDETCS Gefahrpunkt Nebengleis reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDETCSGefahrpunktNebengleisESet;
+
 	/**
 	 * The cached value of the '{@link #getIDETCSKnoten() <em>IDETCS Knoten</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -91,26 +131,6 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 	protected boolean iDWKrAnlageESet;
 
 	/**
-	 * The cached value of the '{@link #getETCSWKrMUKA() <em>ETCSW Kr MUKA</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getETCSWKrMUKA()
-	 * @generated
-	 * @ordered
-	 */
-	protected ETCS_W_Kr_MUKA_AttributeGroup eTCSWKrMUKA;
-
-	/**
-	 * The cached value of the '{@link #getETCSWOrtsgestellt() <em>ETCSW Ortsgestellt</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getETCSWOrtsgestellt()
-	 * @generated
-	 * @ordered
-	 */
-	protected ETCS_W_Ortsgestellt_TypeClass eTCSWOrtsgestellt;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -127,6 +147,118 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 	@Override
 	protected EClass eStaticClass() {
 		return Balisentechnik_ETCSPackage.eINSTANCE.getETCS_W_Kr();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETCS_W_Kr_MUKA_AttributeGroup getETCSWKrMUKA() {
+		return eTCSWKrMUKA;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup newETCSWKrMUKA, NotificationChain msgs) {
+		ETCS_W_Kr_MUKA_AttributeGroup oldETCSWKrMUKA = eTCSWKrMUKA;
+		eTCSWKrMUKA = newETCSWKrMUKA;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, oldETCSWKrMUKA, newETCSWKrMUKA);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup newETCSWKrMUKA) {
+		if (newETCSWKrMUKA != eTCSWKrMUKA) {
+			NotificationChain msgs = null;
+			if (eTCSWKrMUKA != null)
+				msgs = ((InternalEObject)eTCSWKrMUKA).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, null, msgs);
+			if (newETCSWKrMUKA != null)
+				msgs = ((InternalEObject)newETCSWKrMUKA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, null, msgs);
+			msgs = basicSetETCSWKrMUKA(newETCSWKrMUKA, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, newETCSWKrMUKA, newETCSWKrMUKA));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Basis_Objekt getIDETCSGefahrpunktNebengleis() {
+		if (iDETCSGefahrpunktNebengleis != null && iDETCSGefahrpunktNebengleis.eIsProxy()) {
+			InternalEObject oldIDETCSGefahrpunktNebengleis = (InternalEObject)iDETCSGefahrpunktNebengleis;
+			iDETCSGefahrpunktNebengleis = (Basis_Objekt)eResolveProxy(oldIDETCSGefahrpunktNebengleis);
+			if (iDETCSGefahrpunktNebengleis != oldIDETCSGefahrpunktNebengleis) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_GEFAHRPUNKT_NEBENGLEIS, oldIDETCSGefahrpunktNebengleis, iDETCSGefahrpunktNebengleis));
+			}
+		}
+		return iDETCSGefahrpunktNebengleis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Basis_Objekt basicGetIDETCSGefahrpunktNebengleis() {
+		return iDETCSGefahrpunktNebengleis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDETCSGefahrpunktNebengleis(Basis_Objekt newIDETCSGefahrpunktNebengleis) {
+		Basis_Objekt oldIDETCSGefahrpunktNebengleis = iDETCSGefahrpunktNebengleis;
+		iDETCSGefahrpunktNebengleis = newIDETCSGefahrpunktNebengleis;
+		boolean oldIDETCSGefahrpunktNebengleisESet = iDETCSGefahrpunktNebengleisESet;
+		iDETCSGefahrpunktNebengleisESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_GEFAHRPUNKT_NEBENGLEIS, oldIDETCSGefahrpunktNebengleis, iDETCSGefahrpunktNebengleis, !oldIDETCSGefahrpunktNebengleisESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDETCSGefahrpunktNebengleis() {
+		Basis_Objekt oldIDETCSGefahrpunktNebengleis = iDETCSGefahrpunktNebengleis;
+		boolean oldIDETCSGefahrpunktNebengleisESet = iDETCSGefahrpunktNebengleisESet;
+		iDETCSGefahrpunktNebengleis = null;
+		iDETCSGefahrpunktNebengleisESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_GEFAHRPUNKT_NEBENGLEIS, oldIDETCSGefahrpunktNebengleis, null, oldIDETCSGefahrpunktNebengleisESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDETCSGefahrpunktNebengleis() {
+		return iDETCSGefahrpunktNebengleisESet;
 	}
 
 	/**
@@ -282,102 +414,10 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 	 * @generated
 	 */
 	@Override
-	public ETCS_W_Kr_MUKA_AttributeGroup getETCSWKrMUKA() {
-		return eTCSWKrMUKA;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup newETCSWKrMUKA, NotificationChain msgs) {
-		ETCS_W_Kr_MUKA_AttributeGroup oldETCSWKrMUKA = eTCSWKrMUKA;
-		eTCSWKrMUKA = newETCSWKrMUKA;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, oldETCSWKrMUKA, newETCSWKrMUKA);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setETCSWKrMUKA(ETCS_W_Kr_MUKA_AttributeGroup newETCSWKrMUKA) {
-		if (newETCSWKrMUKA != eTCSWKrMUKA) {
-			NotificationChain msgs = null;
-			if (eTCSWKrMUKA != null)
-				msgs = ((InternalEObject)eTCSWKrMUKA).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, null, msgs);
-			if (newETCSWKrMUKA != null)
-				msgs = ((InternalEObject)newETCSWKrMUKA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, null, msgs);
-			msgs = basicSetETCSWKrMUKA(newETCSWKrMUKA, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA, newETCSWKrMUKA, newETCSWKrMUKA));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETCS_W_Ortsgestellt_TypeClass getETCSWOrtsgestellt() {
-		return eTCSWOrtsgestellt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetETCSWOrtsgestellt(ETCS_W_Ortsgestellt_TypeClass newETCSWOrtsgestellt, NotificationChain msgs) {
-		ETCS_W_Ortsgestellt_TypeClass oldETCSWOrtsgestellt = eTCSWOrtsgestellt;
-		eTCSWOrtsgestellt = newETCSWOrtsgestellt;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT, oldETCSWOrtsgestellt, newETCSWOrtsgestellt);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setETCSWOrtsgestellt(ETCS_W_Ortsgestellt_TypeClass newETCSWOrtsgestellt) {
-		if (newETCSWOrtsgestellt != eTCSWOrtsgestellt) {
-			NotificationChain msgs = null;
-			if (eTCSWOrtsgestellt != null)
-				msgs = ((InternalEObject)eTCSWOrtsgestellt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT, null, msgs);
-			if (newETCSWOrtsgestellt != null)
-				msgs = ((InternalEObject)newETCSWOrtsgestellt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT, null, msgs);
-			msgs = basicSetETCSWOrtsgestellt(newETCSWOrtsgestellt, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT, newETCSWOrtsgestellt, newETCSWOrtsgestellt));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
 				return basicSetETCSWKrMUKA(null, msgs);
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT:
-				return basicSetETCSWOrtsgestellt(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -391,6 +431,11 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
+				return getETCSWKrMUKA();
+			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_GEFAHRPUNKT_NEBENGLEIS:
+				if (resolve) return getIDETCSGefahrpunktNebengleis();
+				return basicGetIDETCSGefahrpunktNebengleis();
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_KNOTEN:
 				if (resolve) return getIDETCSKnoten();
 				return basicGetIDETCSKnoten();
@@ -399,10 +444,6 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDW_KR_ANLAGE:
 				if (resolve) return getIDWKrAnlage();
 				return basicGetIDWKrAnlage();
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
-				return getETCSWKrMUKA();
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT:
-				return getETCSWOrtsgestellt();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -417,6 +458,12 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
+				setETCSWKrMUKA((ETCS_W_Kr_MUKA_AttributeGroup)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_GEFAHRPUNKT_NEBENGLEIS:
+				setIDETCSGefahrpunktNebengleis((Basis_Objekt)newValue);
+				return;
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_KNOTEN:
 				setIDETCSKnoten((ETCS_Knoten)newValue);
 				return;
@@ -426,12 +473,6 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 				return;
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDW_KR_ANLAGE:
 				setIDWKrAnlage((W_Kr_Anlage)newValue);
-				return;
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
-				setETCSWKrMUKA((ETCS_W_Kr_MUKA_AttributeGroup)newValue);
-				return;
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT:
-				setETCSWOrtsgestellt((ETCS_W_Ortsgestellt_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -447,6 +488,12 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
+				setETCSWKrMUKA((ETCS_W_Kr_MUKA_AttributeGroup)null);
+				return;
+			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_GEFAHRPUNKT_NEBENGLEIS:
+				unsetIDETCSGefahrpunktNebengleis();
+				return;
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_KNOTEN:
 				unsetIDETCSKnoten();
 				return;
@@ -455,12 +502,6 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 				return;
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDW_KR_ANLAGE:
 				unsetIDWKrAnlage();
-				return;
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
-				setETCSWKrMUKA((ETCS_W_Kr_MUKA_AttributeGroup)null);
-				return;
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT:
-				setETCSWOrtsgestellt((ETCS_W_Ortsgestellt_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -476,16 +517,16 @@ public class ETCS_W_KrImpl extends Basis_ObjektImpl implements ETCS_W_Kr {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
+				return eTCSWKrMUKA != null;
+			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_GEFAHRPUNKT_NEBENGLEIS:
+				return isSetIDETCSGefahrpunktNebengleis();
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDETCS_KNOTEN:
 				return isSetIDETCSKnoten();
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDRBC:
 				return iDRBC != null && !iDRBC.isEmpty();
 			case Balisentechnik_ETCSPackage.ETCS_WKR__IDW_KR_ANLAGE:
 				return isSetIDWKrAnlage();
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
-				return eTCSWKrMUKA != null;
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT:
-				return eTCSWOrtsgestellt != null;
 			default:
 				return super.eIsSet(featureID);
 		}

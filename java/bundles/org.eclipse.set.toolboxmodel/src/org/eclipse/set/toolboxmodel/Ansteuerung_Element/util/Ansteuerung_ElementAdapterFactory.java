@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.util;
 
@@ -114,6 +121,10 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 				return createBezeichnung_ESTW_ZE_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseBezeichnung_Stellwerk_TypeClass(Bezeichnung_Stellwerk_TypeClass object) {
+				return createBezeichnung_Stellwerk_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseBezeichnung_TSO_TypeClass(Bezeichnung_TSO_TypeClass object) {
 				return createBezeichnung_TSO_TypeClassAdapter();
 			}
@@ -124,6 +135,10 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEnergieversorgung_Art_TypeClass(Energieversorgung_Art_TypeClass object) {
 				return createEnergieversorgung_Art_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseESTW_ZE_Energieversorgung_AttributeGroup(ESTW_ZE_Energieversorgung_AttributeGroup object) {
+				return createESTW_ZE_Energieversorgung_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseESTW_Zentraleinheit(ESTW_Zentraleinheit object) {
@@ -222,6 +237,10 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 				return createTSO_Teilsystem_Art_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseTueranschlag_TypeClass(Tueranschlag_TypeClass object) {
+				return createTueranschlag_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseUebertragungsweg(Uebertragungsweg object) {
 				return createUebertragungswegAdapter();
 			}
@@ -248,6 +267,14 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseUnterbringung_Befestigung_TypeClass(Unterbringung_Befestigung_TypeClass object) {
 				return createUnterbringung_Befestigung_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseUnterbringung_Polygonzug_TypeClass(Unterbringung_Polygonzug_TypeClass object) {
+				return createUnterbringung_Polygonzug_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseZusatzinformation_Stellwerk_TypeClass(Zusatzinformation_Stellwerk_TypeClass object) {
+				return createZusatzinformation_Stellwerk_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseUr_Objekt(Ur_Objekt object) {
@@ -426,6 +453,20 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass <em>Bezeichnung Stellwerk Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass
+	 * @generated
+	 */
+	public Adapter createBezeichnung_Stellwerk_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_TSO_TypeClass <em>Bezeichnung TSO Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -464,6 +505,20 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEnergieversorgung_Art_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup <em>ESTW ZE Energieversorgung Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createESTW_ZE_Energieversorgung_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -804,6 +859,20 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass <em>Tueranschlag Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass
+	 * @generated
+	 */
+	public Adapter createTueranschlag_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Uebertragungsweg <em>Uebertragungsweg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -898,6 +967,34 @@ public class Ansteuerung_ElementAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUnterbringung_Befestigung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass <em>Unterbringung Polygonzug Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass
+	 * @generated
+	 */
+	public Adapter createUnterbringung_Polygonzug_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass <em>Zusatzinformation Stellwerk Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass
+	 * @generated
+	 */
+	public Adapter createZusatzinformation_Stellwerk_TypeClassAdapter() {
 		return null;
 	}
 

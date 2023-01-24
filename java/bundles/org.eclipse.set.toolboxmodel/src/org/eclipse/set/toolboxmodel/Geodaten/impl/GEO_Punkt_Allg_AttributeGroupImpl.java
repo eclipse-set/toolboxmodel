@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -11,8 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass;
-import org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass;
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.GK_X_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.GK_Y_TypeClass;
@@ -28,17 +34,26 @@ import org.eclipse.set.toolboxmodel.Geodaten.Plan_Quelle_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Punkt_Allg_AttributeGroupImpl#getGEOKoordinatensystem <em>GEO Koordinatensystem</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Punkt_Allg_AttributeGroupImpl#getGKX <em>GKX</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Punkt_Allg_AttributeGroupImpl#getGKY <em>GKY</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Punkt_Allg_AttributeGroupImpl#getGKZ <em>GKZ</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Punkt_Allg_AttributeGroupImpl#getPlanQuelle <em>Plan Quelle</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Punkt_Allg_AttributeGroupImpl#getGEOKoordinatenSystemLSys <em>GEO Koordinaten System LSys</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.GEO_Punkt_Allg_AttributeGroupImpl#getGEOKoordinatenSystemSonstige <em>GEO Koordinaten System Sonstige</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements GEO_Punkt_Allg_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getGEOKoordinatensystem() <em>GEO Koordinatensystem</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGEOKoordinatensystem()
+	 * @generated
+	 * @ordered
+	 */
+	protected GEO_Koordinatensystem_TypeClass gEOKoordinatensystem;
+
 	/**
 	 * The cached value of the '{@link #getGKX() <em>GKX</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -80,26 +95,6 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	protected Plan_Quelle_TypeClass planQuelle;
 
 	/**
-	 * The cached value of the '{@link #getGEOKoordinatenSystemLSys() <em>GEO Koordinaten System LSys</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGEOKoordinatenSystemLSys()
-	 * @generated
-	 * @ordered
-	 */
-	protected GEO_KoordinatenSystem_LSys_TypeClass gEOKoordinatenSystemLSys;
-
-	/**
-	 * The cached value of the '{@link #getGEOKoordinatenSystemSonstige() <em>GEO Koordinaten System Sonstige</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGEOKoordinatenSystemSonstige()
-	 * @generated
-	 * @ordered
-	 */
-	protected GEO_KoordinatenSystem_Sonstige_TypeClass gEOKoordinatenSystemSonstige;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,6 +111,51 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	protected EClass eStaticClass() {
 		return GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GEO_Koordinatensystem_TypeClass getGEOKoordinatensystem() {
+		return gEOKoordinatensystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetGEOKoordinatensystem(GEO_Koordinatensystem_TypeClass newGEOKoordinatensystem, NotificationChain msgs) {
+		GEO_Koordinatensystem_TypeClass oldGEOKoordinatensystem = gEOKoordinatensystem;
+		gEOKoordinatensystem = newGEOKoordinatensystem;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM, oldGEOKoordinatensystem, newGEOKoordinatensystem);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGEOKoordinatensystem(GEO_Koordinatensystem_TypeClass newGEOKoordinatensystem) {
+		if (newGEOKoordinatensystem != gEOKoordinatensystem) {
+			NotificationChain msgs = null;
+			if (gEOKoordinatensystem != null)
+				msgs = ((InternalEObject)gEOKoordinatensystem).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM, null, msgs);
+			if (newGEOKoordinatensystem != null)
+				msgs = ((InternalEObject)newGEOKoordinatensystem).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM, null, msgs);
+			msgs = basicSetGEOKoordinatensystem(newGEOKoordinatensystem, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM, newGEOKoordinatensystem, newGEOKoordinatensystem));
 	}
 
 	/**
@@ -304,98 +344,10 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 */
 	@Override
-	public GEO_KoordinatenSystem_LSys_TypeClass getGEOKoordinatenSystemLSys() {
-		return gEOKoordinatenSystemLSys;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGEOKoordinatenSystemLSys(GEO_KoordinatenSystem_LSys_TypeClass newGEOKoordinatenSystemLSys, NotificationChain msgs) {
-		GEO_KoordinatenSystem_LSys_TypeClass oldGEOKoordinatenSystemLSys = gEOKoordinatenSystemLSys;
-		gEOKoordinatenSystemLSys = newGEOKoordinatenSystemLSys;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS, oldGEOKoordinatenSystemLSys, newGEOKoordinatenSystemLSys);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setGEOKoordinatenSystemLSys(GEO_KoordinatenSystem_LSys_TypeClass newGEOKoordinatenSystemLSys) {
-		if (newGEOKoordinatenSystemLSys != gEOKoordinatenSystemLSys) {
-			NotificationChain msgs = null;
-			if (gEOKoordinatenSystemLSys != null)
-				msgs = ((InternalEObject)gEOKoordinatenSystemLSys).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS, null, msgs);
-			if (newGEOKoordinatenSystemLSys != null)
-				msgs = ((InternalEObject)newGEOKoordinatenSystemLSys).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS, null, msgs);
-			msgs = basicSetGEOKoordinatenSystemLSys(newGEOKoordinatenSystemLSys, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS, newGEOKoordinatenSystemLSys, newGEOKoordinatenSystemLSys));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public GEO_KoordinatenSystem_Sonstige_TypeClass getGEOKoordinatenSystemSonstige() {
-		return gEOKoordinatenSystemSonstige;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGEOKoordinatenSystemSonstige(GEO_KoordinatenSystem_Sonstige_TypeClass newGEOKoordinatenSystemSonstige, NotificationChain msgs) {
-		GEO_KoordinatenSystem_Sonstige_TypeClass oldGEOKoordinatenSystemSonstige = gEOKoordinatenSystemSonstige;
-		gEOKoordinatenSystemSonstige = newGEOKoordinatenSystemSonstige;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE, oldGEOKoordinatenSystemSonstige, newGEOKoordinatenSystemSonstige);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setGEOKoordinatenSystemSonstige(GEO_KoordinatenSystem_Sonstige_TypeClass newGEOKoordinatenSystemSonstige) {
-		if (newGEOKoordinatenSystemSonstige != gEOKoordinatenSystemSonstige) {
-			NotificationChain msgs = null;
-			if (gEOKoordinatenSystemSonstige != null)
-				msgs = ((InternalEObject)gEOKoordinatenSystemSonstige).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE, null, msgs);
-			if (newGEOKoordinatenSystemSonstige != null)
-				msgs = ((InternalEObject)newGEOKoordinatenSystemSonstige).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE, null, msgs);
-			msgs = basicSetGEOKoordinatenSystemSonstige(newGEOKoordinatenSystemSonstige, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE, newGEOKoordinatenSystemSonstige, newGEOKoordinatenSystemSonstige));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM:
+				return basicSetGEOKoordinatensystem(null, msgs);
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX:
 				return basicSetGKX(null, msgs);
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY:
@@ -404,10 +356,6 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return basicSetGKZ(null, msgs);
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE:
 				return basicSetPlanQuelle(null, msgs);
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS:
-				return basicSetGEOKoordinatenSystemLSys(null, msgs);
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE:
-				return basicSetGEOKoordinatenSystemSonstige(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -421,6 +369,8 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM:
+				return getGEOKoordinatensystem();
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX:
 				return getGKX();
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY:
@@ -429,10 +379,6 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return getGKZ();
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE:
 				return getPlanQuelle();
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS:
-				return getGEOKoordinatenSystemLSys();
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE:
-				return getGEOKoordinatenSystemSonstige();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -446,6 +392,9 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM:
+				setGEOKoordinatensystem((GEO_Koordinatensystem_TypeClass)newValue);
+				return;
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX:
 				setGKX((GK_X_TypeClass)newValue);
 				return;
@@ -457,12 +406,6 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return;
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE:
 				setPlanQuelle((Plan_Quelle_TypeClass)newValue);
-				return;
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS:
-				setGEOKoordinatenSystemLSys((GEO_KoordinatenSystem_LSys_TypeClass)newValue);
-				return;
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE:
-				setGEOKoordinatenSystemSonstige((GEO_KoordinatenSystem_Sonstige_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -478,6 +421,9 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM:
+				setGEOKoordinatensystem((GEO_Koordinatensystem_TypeClass)null);
+				return;
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX:
 				setGKX((GK_X_TypeClass)null);
 				return;
@@ -489,12 +435,6 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return;
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE:
 				setPlanQuelle((Plan_Quelle_TypeClass)null);
-				return;
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS:
-				setGEOKoordinatenSystemLSys((GEO_KoordinatenSystem_LSys_TypeClass)null);
-				return;
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE:
-				setGEOKoordinatenSystemSonstige((GEO_KoordinatenSystem_Sonstige_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -510,6 +450,8 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM:
+				return gEOKoordinatensystem != null;
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX:
 				return gKX != null;
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY:
@@ -518,10 +460,6 @@ public class GEO_Punkt_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 				return gKZ != null;
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE:
 				return planQuelle != null;
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS:
-				return gEOKoordinatenSystemLSys != null;
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE:
-				return gEOKoordinatenSystemSonstige != null;
 			default:
 				return super.eIsSet(featureID);
 		}

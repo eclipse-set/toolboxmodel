@@ -1,8 +1,19 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
 
 /**
@@ -15,6 +26,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getAbstand <em>Abstand</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getIDGEOPunktBerechnet <em>IDGEO Punkt Berechnet</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getIDTOPKante <em>IDTOP Kante</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getWirkrichtung <em>Wirkrichtung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_TOP_Kante_AttributeGroup#getSeitlicheLage <em>Seitliche Lage</em>}</li>
@@ -51,6 +63,21 @@ public interface Punkt_Objekt_TOP_Kante_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setAbstand(Abstand_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>IDGEO Punkt Berechnet</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf einen GEO_Punkt zur Angabe von berechneten Objekt-Koordinaten. Diese werden auf Basis der Soll-Gleislage und der im Punktobjekt vorgegebenen Abstände ermittelt und sind für Bau und Abnahme maßgebend. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>IDGEO Punkt Berechnet</em>' reference list.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getPunkt_Objekt_TOP_Kante_AttributeGroup_IDGEOPunktBerechnet()
+	 * @model extendedMetaData="kind='element' name='ID_GEO_Punkt_Berechnet'"
+	 * @generated
+	 */
+	EList<GEO_Punkt> getIDGEOPunktBerechnet();
 
 	/**
 	 * Returns the value of the '<em><b>IDTOP Kante</b></em>' reference.

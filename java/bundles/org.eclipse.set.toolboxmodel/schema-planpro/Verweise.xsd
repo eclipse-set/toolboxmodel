@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2">
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -12,9 +12,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -26,12 +24,19 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
 	  <xs:complexType name="TCID_Anhang_ohne_Proxy">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -40,10 +45,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_ATO_TS_Instanz">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="ATO_TS_Instanz|Proxy_Objekt"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_BUE_Einschaltung">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -56,6 +87,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -68,6 +106,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -80,6 +125,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -92,6 +144,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -104,6 +163,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -112,10 +178,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Regelzeichnung_ohne_Proxy">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Regelzeichnung"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Aussenelementansteuerung">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -129,6 +221,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -137,15 +236,41 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:complexType name="TCID_Anforderung">
+	  <xs:complexType name="TCID_Markanter_Punkt_Gleis_Abschluss">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
 				        <xs:attribute name="Objektname" use="prohibited"
-                          fixed="Block_Element|Fstr_Fahrweg|BUE_Einschaltung|BUE_Ausschaltung|Proxy_Objekt"
+                          fixed="Markanter_Punkt|Gleis_Abschluss|Proxy_Objekt"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
+	  <xs:complexType name="TCID_Fstr_Fahrweg_ohne_Proxy">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Fstr_Fahrweg"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -154,6 +279,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -166,6 +298,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -178,6 +317,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -191,6 +337,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -203,6 +356,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -215,6 +375,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -227,6 +394,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -235,10 +409,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_ZLV_Bus_ohne_Proxy">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="ZLV_Bus"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_BUE_WS_Fstr_Zuordnung">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -251,6 +451,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -264,6 +471,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -272,15 +486,61 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_ETCS_Kante">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="ETCS_Kante"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_NB_Element">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
 				        <xs:attribute name="Objektname" use="prohibited"
-                          fixed="Signal|W_Kr_Gsp_Komponente|Schluesselsperre|Proxy_Objekt"
+                          fixed="Signal|W_Kr_Gsp_Element|Schluesselsperre|Proxy_Objekt"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
+	  <xs:complexType name="TCID_AnhangBearbeitungsvermerk">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited"
+                          fixed="Anhang|Bearbeitungsvermerk|Proxy_Objekt"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -289,6 +549,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -297,10 +564,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_GEO_Kante">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="GEO_Kante"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Element">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -314,6 +607,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -326,6 +626,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -338,6 +645,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -350,6 +664,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -358,10 +679,17 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:complexType name="TCID_Geraet_Programmiert">
+	  <xs:complexType name="TCID_Komponente_Programmiert">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -374,6 +702,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -386,6 +721,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -394,10 +736,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_ATO_TS_Instanz_ohne_Proxy">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="ATO_TS_Instanz"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Technischer_Punkt">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -410,6 +778,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -422,6 +797,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -434,6 +816,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -446,6 +835,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -458,6 +854,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -470,6 +873,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -482,6 +892,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -494,6 +911,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -506,6 +930,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -518,6 +949,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -530,11 +968,18 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
 				        <xs:attribute name="Objektname" use="prohibited"
-                          fixed="Aussenelementansteuerung|Bedien_Standort|ESTW_Zentraleinheit|FMA_Komponente|Kabel_Verteilpunkt|Stellelement|Technik_Standort|Proxy_Objekt"
+                          fixed="Aussenelementansteuerung|Bedien_Standort|Datenpunkt|ESTW_Zentraleinheit|FMA_Komponente|Kabel_Verteilpunkt|LEU_Anlage|Stellelement|Technik_Standort|Proxy_Objekt"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -543,6 +988,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -551,10 +1003,37 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Anforderung">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited"
+                          fixed="Block_Element|Fstr_Fahrweg|BUE_Einschaltung|BUE_Ausschaltung|Proxy_Objekt"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_ZL_Fstr">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -567,6 +1046,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -575,10 +1061,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Lageplan_Blattschnitt">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Lageplan_Blattschnitt"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Balise_ohne_Proxy">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -591,6 +1103,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -603,6 +1122,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -615,6 +1141,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -623,10 +1156,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Strecke_Bremsweg_ohne_Proxy">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Strecke_Bremsweg"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_ETCS_Knoten">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -639,6 +1198,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -651,6 +1217,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -663,6 +1236,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -675,6 +1255,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -688,6 +1275,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -700,6 +1294,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -713,6 +1314,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -726,6 +1334,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -739,6 +1354,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -751,6 +1373,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -763,6 +1392,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -775,6 +1411,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -787,6 +1430,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -799,6 +1449,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -811,6 +1468,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -823,6 +1487,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -835,6 +1506,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -847,6 +1525,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -855,15 +1540,22 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:complexType name="TCID_DP_Bezugspunkt">
+	  <xs:complexType name="TCID_DP_Bezug_Funktional">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
 				        <xs:attribute name="Objektname" use="prohibited"
-                          fixed="BUE_Anlage|ZUB_Streckeneigenschaft|Signal|Proxy_Objekt"
+                          fixed="BUE_Anlage|BUE_Einschaltung|BUE_Kante|Markanter_Punkt|PZB_Element|ZUB_Streckeneigenschaft|Proxy_Objekt"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -872,6 +1564,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -884,6 +1583,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -896,6 +1602,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -908,6 +1621,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -920,6 +1640,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -933,6 +1660,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -945,6 +1679,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -957,6 +1698,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -970,6 +1718,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -982,6 +1737,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -991,10 +1753,37 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Befestigung_Bauwerk">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited"
+                          fixed="Technischer_Punkt|Technischer_Bereich|Proxy_Objekt"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Hoehenpunkt">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1007,6 +1796,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1019,6 +1815,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1031,6 +1834,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1044,6 +1854,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1056,6 +1873,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1068,6 +1892,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1080,6 +1911,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1092,6 +1930,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1104,6 +1949,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1116,6 +1968,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1124,10 +1983,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Lageplan">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Lageplan"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Strecke">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1140,6 +2025,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1152,6 +2044,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1165,6 +2064,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1178,6 +2084,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1190,6 +2103,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1202,6 +2122,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1215,6 +2142,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1224,10 +2158,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Fstr_DWeg_ohne_Proxy">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Fstr_DWeg"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_ZLV_Bus">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1240,6 +2200,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1252,6 +2219,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1264,6 +2238,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1276,6 +2257,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1289,6 +2277,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1297,10 +2292,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Lageplan_Zustand">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Lageplan_Zustand"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_ZL_Signalgruppe">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1309,15 +2330,22 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:complexType name="TCID_Energie_Primaer">
+	  <xs:complexType name="TCID_Energie">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
 				        <xs:attribute name="Objektname" use="prohibited"
-                          fixed="Aussenelementansteuerung|ESTW_Zentraleinheit|Proxy_Objekt"
+                          fixed="Aussenelementansteuerung|ESTW_Zentraleinheit|EV_Modul|Proxy_Objekt"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -1326,6 +2354,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1338,6 +2373,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1350,6 +2392,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1362,6 +2411,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1374,6 +2430,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1387,6 +2450,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1399,6 +2469,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1411,6 +2488,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1423,6 +2507,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1435,6 +2526,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1448,6 +2546,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1461,6 +2566,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1469,10 +2581,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Aussenelementansteuerung_ohne_Proxy">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Aussenelementansteuerung"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Signal_Signalbegriff">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1485,6 +2623,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1493,10 +2638,36 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Oertlichkeit_Ausgabe">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Oertlichkeit"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_PZB_Element">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1509,6 +2680,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1521,6 +2699,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1529,14 +2714,21 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:complexType name="TCID_LEU_Bezugspunkt">
+	  <xs:complexType name="TCID_LEU_Bezug_Funktional">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
-				        <xs:attribute name="Objektname" use="prohibited" fixed="Signal|W_Kr_Gsp_Element"
+				        <xs:attribute name="Objektname" use="prohibited" fixed="BUE_Anlage|Signal|W_Kr_Gsp_Element"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -1545,6 +2737,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1557,6 +2756,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1569,6 +2775,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1581,6 +2794,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1593,6 +2813,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1605,6 +2832,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1617,6 +2851,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1629,6 +2870,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1641,6 +2889,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1653,6 +2908,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1661,10 +2923,37 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCID_Bezugspunkt_Positionierung">
+		    <xs:complexContent>
+			      <xs:restriction base="nsBasisTypen:TCZeiger">
+				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+				        <xs:attribute name="Objektname" use="prohibited"
+                          fixed="Signal|Technischer_Punkt|Proxy_Objekt"
+                          type="nsBasisTypen:TObjektname"/>
+			      </xs:restriction>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCID_Bahnsteig_Anlage">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1673,14 +2962,21 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:complexType name="TCID_Bearbeitungsvermerk">
+	  <xs:complexType name="TCID_Fachtelegramm_ohne_Proxy">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
-				        <xs:attribute name="Objektname" use="prohibited" fixed="Bearbeitungsvermerk|Proxy_Objekt"
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Fachtelegramm"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -1689,6 +2985,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1701,6 +3004,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1713,6 +3023,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1725,6 +3042,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1737,6 +3061,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1745,14 +3076,21 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:restriction>
 		    </xs:complexContent>
 	  </xs:complexType>
-	  <xs:complexType name="TCID_Binaerdatei_ohne_Proxy">
+	  <xs:complexType name="TCID_Binaerdaten_ohne_Proxy">
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
-				        <xs:attribute name="Objektname" use="prohibited" fixed="Binaerdatei"
+				        <xs:attribute name="Objektname" use="prohibited" fixed="Binaerdaten"
                           type="nsBasisTypen:TObjektname"/>
 			      </xs:restriction>
 		    </xs:complexContent>
@@ -1761,6 +3099,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1773,6 +3118,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1785,6 +3137,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -1798,6 +3157,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    <xs:complexContent>
 			      <xs:restriction base="nsBasisTypen:TCZeiger">
 				        <xs:sequence>
+					          <xs:element name="ID_Bearbeitungsvermerk" type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="Wert" type="nsBasisTypen:TGUID" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl;
 
@@ -13,6 +20,10 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -63,13 +74,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -99,6 +114,8 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMGspLage;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSchlossArt;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSchluesselBartform;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSchluesselGruppe;
+import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage;
+import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Gsp_Lage_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Hauptschloss_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss;
@@ -121,8 +138,9 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schluessel_In_Grds
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenFactory;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenPackage;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schluesselsperre;
+import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Technisch_Berechtigter_TypeClass;
-import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass;
+import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.W_Anbaulage_TypeClass;
 import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.W_Lage_TypeClass;
 
@@ -131,9 +149,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.util.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -348,6 +368,13 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass sonderanlage_Lage_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass technisch_Berechtigter_TypeClassEClass = null;
 
 	/**
@@ -355,7 +382,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass verschluss_Herzstueck_TypeClassEClass = null;
+	private EClass verschluss_Ort_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -412,6 +439,20 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	private EEnum enumSchluesselGruppeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum enumSonderanlageLageEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum enumVerschlussOrtEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -488,6 +529,20 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType enumSonderanlageLageObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumVerschlussOrtObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType w_Anbaulage_TypeEDataType = null;
 
 	/**
@@ -548,32 +603,36 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -588,8 +647,8 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		FlankenschutzPackageImpl theFlankenschutzPackage = (FlankenschutzPackageImpl)(registeredPackage instanceof FlankenschutzPackageImpl ? registeredPackage : FlankenschutzPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -607,48 +666,52 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 
 		// Create package meta-data objects
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
 		theSignalbegriffe_StrukturPackage.createPackageContents();
 		theFlankenschutzPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
 		theSignalbegriffe_StrukturPackage.initializePackageContents();
 		theFlankenschutzPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -1093,7 +1156,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	@Override
-	public EReference getSchloss_Sonderanlage_AttributeGroup_BeschreibungSonderanlage() {
+	public EReference getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage() {
 		return (EReference)schloss_Sonderanlage_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1103,8 +1166,18 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	@Override
-	public EReference getSchloss_Sonderanlage_AttributeGroup_IDSonderanlage() {
+	public EReference getSchloss_Sonderanlage_AttributeGroup_BeschreibungSonderanlage() {
 		return (EReference)schloss_Sonderanlage_AttributeGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSchloss_Sonderanlage_AttributeGroup_IDSonderanlage() {
+		return (EReference)schloss_Sonderanlage_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1163,7 +1236,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	@Override
-	public EReference getSchloss_W_AttributeGroup_VerschlussHerzstueck() {
+	public EReference getSchloss_W_AttributeGroup_VerschlussOrt() {
 		return (EReference)schloss_W_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1433,6 +1506,26 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	@Override
+	public EClass getSonderanlage_Lage_TypeClass() {
+		return sonderanlage_Lage_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSonderanlage_Lage_TypeClass_Wert() {
+		return (EAttribute)sonderanlage_Lage_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTechnisch_Berechtigter_TypeClass() {
 		return technisch_Berechtigter_TypeClassEClass;
 	}
@@ -1453,8 +1546,8 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	@Override
-	public EClass getVerschluss_Herzstueck_TypeClass() {
-		return verschluss_Herzstueck_TypeClassEClass;
+	public EClass getVerschluss_Ort_TypeClass() {
+		return verschluss_Ort_TypeClassEClass;
 	}
 
 	/**
@@ -1463,8 +1556,8 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVerschluss_Herzstueck_TypeClass_Wert() {
-		return (EAttribute)verschluss_Herzstueck_TypeClassEClass.getEStructuralFeatures().get(0);
+	public EAttribute getVerschluss_Ort_TypeClass_Wert() {
+		return (EAttribute)verschluss_Ort_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1573,6 +1666,26 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	@Override
+	public EEnum getENUMSonderanlageLage() {
+		return enumSonderanlageLageEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMVerschlussOrt() {
+		return enumVerschlussOrtEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getBeschreibung_Sonderanlage_Type() {
 		return beschreibung_Sonderanlage_TypeEDataType;
 	}
@@ -1665,6 +1778,26 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 	@Override
 	public EDataType getENUMSchluesselGruppeObject() {
 		return enumSchluesselGruppeObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMSonderanlageLageObject() {
+		return enumSonderanlageLageObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMVerschlussOrtObject() {
+		return enumVerschlussOrtObjectEDataType;
 	}
 
 	/**
@@ -1771,6 +1904,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		createEReference(schloss_Sk_AttributeGroupEClass, SCHLOSS_SK_ATTRIBUTE_GROUP__ID_SCHLOSSKOMBINATION);
 
 		schloss_Sonderanlage_AttributeGroupEClass = createEClass(SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP);
+		createEReference(schloss_Sonderanlage_AttributeGroupEClass, SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE);
 		createEReference(schloss_Sonderanlage_AttributeGroupEClass, SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE);
 		createEReference(schloss_Sonderanlage_AttributeGroupEClass, SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__ID_SONDERANLAGE);
 
@@ -1780,7 +1914,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		schloss_W_AttributeGroupEClass = createEClass(SCHLOSS_WATTRIBUTE_GROUP);
 		createEReference(schloss_W_AttributeGroupEClass, SCHLOSS_WATTRIBUTE_GROUP__IDW_KR_ELEMENT);
 		createEReference(schloss_W_AttributeGroupEClass, SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART);
-		createEReference(schloss_W_AttributeGroupEClass, SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK);
+		createEReference(schloss_W_AttributeGroupEClass, SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT);
 		createEReference(schloss_W_AttributeGroupEClass, SCHLOSS_WATTRIBUTE_GROUP__WANBAULAGE);
 		createEReference(schloss_W_AttributeGroupEClass, SCHLOSS_WATTRIBUTE_GROUP__WLAGE);
 
@@ -1817,11 +1951,14 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		createEReference(schluesselsperreEClass, SCHLUESSELSPERRE__ID_STELLELEMENT);
 		createEReference(schluesselsperreEClass, SCHLUESSELSPERRE__ID_UNTERBRINGUNG);
 
+		sonderanlage_Lage_TypeClassEClass = createEClass(SONDERANLAGE_LAGE_TYPE_CLASS);
+		createEAttribute(sonderanlage_Lage_TypeClassEClass, SONDERANLAGE_LAGE_TYPE_CLASS__WERT);
+
 		technisch_Berechtigter_TypeClassEClass = createEClass(TECHNISCH_BERECHTIGTER_TYPE_CLASS);
 		createEAttribute(technisch_Berechtigter_TypeClassEClass, TECHNISCH_BERECHTIGTER_TYPE_CLASS__WERT);
 
-		verschluss_Herzstueck_TypeClassEClass = createEClass(VERSCHLUSS_HERZSTUECK_TYPE_CLASS);
-		createEAttribute(verschluss_Herzstueck_TypeClassEClass, VERSCHLUSS_HERZSTUECK_TYPE_CLASS__WERT);
+		verschluss_Ort_TypeClassEClass = createEClass(VERSCHLUSS_ORT_TYPE_CLASS);
+		createEAttribute(verschluss_Ort_TypeClassEClass, VERSCHLUSS_ORT_TYPE_CLASS__WERT);
 
 		w_Anbaulage_TypeClassEClass = createEClass(WANBAULAGE_TYPE_CLASS);
 		createEAttribute(w_Anbaulage_TypeClassEClass, WANBAULAGE_TYPE_CLASS__WERT);
@@ -1836,6 +1973,8 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		enumSchlossArtEEnum = createEEnum(ENUM_SCHLOSS_ART);
 		enumSchluesselBartformEEnum = createEEnum(ENUM_SCHLUESSEL_BARTFORM);
 		enumSchluesselGruppeEEnum = createEEnum(ENUM_SCHLUESSEL_GRUPPE);
+		enumSonderanlageLageEEnum = createEEnum(ENUM_SONDERANLAGE_LAGE);
+		enumVerschlussOrtEEnum = createEEnum(ENUM_VERSCHLUSS_ORT);
 
 		// Create data types
 		beschreibung_Sonderanlage_TypeEDataType = createEDataType(BESCHREIBUNG_SONDERANLAGE_TYPE);
@@ -1848,6 +1987,8 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		enumSchlossArtObjectEDataType = createEDataType(ENUM_SCHLOSS_ART_OBJECT);
 		enumSchluesselBartformObjectEDataType = createEDataType(ENUM_SCHLUESSEL_BARTFORM_OBJECT);
 		enumSchluesselGruppeObjectEDataType = createEDataType(ENUM_SCHLUESSEL_GRUPPE_OBJECT);
+		enumSonderanlageLageObjectEDataType = createEDataType(ENUM_SONDERANLAGE_LAGE_OBJECT);
+		enumVerschlussOrtObjectEDataType = createEDataType(ENUM_VERSCHLUSS_ORT_OBJECT);
 		w_Anbaulage_TypeEDataType = createEDataType(WANBAULAGE_TYPE);
 		w_Lage_TypeEDataType = createEDataType(WLAGE_TYPE);
 	}
@@ -1898,14 +2039,16 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		hauptschloss_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		schlossEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schloss_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		schloss_Bezeichnung_AttributeGroupEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schlosskombinationEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schluesselEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schluessel_Bartform_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		schluessel_Gruppe_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		schluessel_In_Grdst_Eingeschl_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		schluesselsperreEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
+		sonderanlage_Lage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		technisch_Berechtigter_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		verschluss_Herzstueck_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		verschluss_Ort_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		w_Anbaulage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		w_Lage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 
@@ -1965,6 +2108,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		initEReference(getSchloss_Sk_AttributeGroup_IDSchlosskombination(), this.getSchlosskombination(), null, "iDSchlosskombination", null, 1, 1, Schloss_Sk_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(schloss_Sonderanlage_AttributeGroupEClass, Schloss_Sonderanlage_AttributeGroup.class, "Schloss_Sonderanlage_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage(), this.getSonderanlage_Lage_TypeClass(), null, "sonderanlageLage", null, 1, 1, Schloss_Sonderanlage_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchloss_Sonderanlage_AttributeGroup_BeschreibungSonderanlage(), this.getBeschreibung_Sonderanlage_TypeClass(), null, "beschreibungSonderanlage", null, 0, 1, Schloss_Sonderanlage_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchloss_Sonderanlage_AttributeGroup_IDSonderanlage(), theWeichen_und_GleissperrenPackage.getW_Kr_Gsp_Element(), null, "iDSonderanlage", null, 0, 1, Schloss_Sonderanlage_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1974,7 +2118,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		initEClass(schloss_W_AttributeGroupEClass, Schloss_W_AttributeGroup.class, "Schloss_W_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSchloss_W_AttributeGroup_IDWKrElement(), theWeichen_und_GleissperrenPackage.getW_Kr_Gsp_Element(), null, "iDWKrElement", null, 1, 1, Schloss_W_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchloss_W_AttributeGroup_SchlossArt(), this.getSchloss_Art_TypeClass(), null, "schlossArt", null, 1, 1, Schloss_W_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSchloss_W_AttributeGroup_VerschlussHerzstueck(), this.getVerschluss_Herzstueck_TypeClass(), null, "verschlussHerzstueck", null, 0, 1, Schloss_W_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSchloss_W_AttributeGroup_VerschlussOrt(), this.getVerschluss_Ort_TypeClass(), null, "verschlussOrt", null, 1, 1, Schloss_W_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchloss_W_AttributeGroup_WAnbaulage(), this.getW_Anbaulage_TypeClass(), null, "wAnbaulage", null, 1, 1, Schloss_W_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchloss_W_AttributeGroup_WLage(), this.getW_Lage_TypeClass(), null, "wLage", null, 1, 1, Schloss_W_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2011,11 +2155,14 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		initEReference(getSchluesselsperre_IDStellelement(), theAnsteuerung_ElementPackage.getStellelement(), null, "iDStellelement", null, 1, 1, Schluesselsperre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchluesselsperre_IDUnterbringung(), theAnsteuerung_ElementPackage.getUnterbringung(), null, "iDUnterbringung", null, 1, 1, Schluesselsperre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(sonderanlage_Lage_TypeClassEClass, Sonderanlage_Lage_TypeClass.class, "Sonderanlage_Lage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSonderanlage_Lage_TypeClass_Wert(), this.getENUMSonderanlageLageObject(), "wert", null, 1, 1, Sonderanlage_Lage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(technisch_Berechtigter_TypeClassEClass, Technisch_Berechtigter_TypeClass.class, "Technisch_Berechtigter_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTechnisch_Berechtigter_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Technisch_Berechtigter_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(verschluss_Herzstueck_TypeClassEClass, Verschluss_Herzstueck_TypeClass.class, "Verschluss_Herzstueck_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVerschluss_Herzstueck_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Verschluss_Herzstueck_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(verschluss_Ort_TypeClassEClass, Verschluss_Ort_TypeClass.class, "Verschluss_Ort_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVerschluss_Ort_TypeClass_Wert(), this.getENUMVerschlussOrtObject(), "wert", null, 1, 1, Verschluss_Ort_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(w_Anbaulage_TypeClassEClass, W_Anbaulage_TypeClass.class, "W_Anbaulage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getW_Anbaulage_TypeClass_Wert(), this.getW_Anbaulage_Type(), "wert", null, 1, 1, W_Anbaulage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2079,6 +2226,17 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		addEEnumLiteral(enumSchluesselGruppeEEnum, ENUMSchluesselGruppe.ENUM_SCHLUESSEL_GRUPPE_4);
 		addEEnumLiteral(enumSchluesselGruppeEEnum, ENUMSchluesselGruppe.ENUM_SCHLUESSEL_GRUPPE_5);
 
+		initEEnum(enumSonderanlageLageEEnum, ENUMSonderanlageLage.class, "ENUMSonderanlageLage");
+		addEEnumLiteral(enumSonderanlageLageEEnum, ENUMSonderanlageLage.ENUM_SONDERANLAGE_LAGE_BEFAHRBAR);
+		addEEnumLiteral(enumSonderanlageLageEEnum, ENUMSonderanlageLage.ENUM_SONDERANLAGE_LAGE_NICHT_BEFAHRBAR);
+		addEEnumLiteral(enumSonderanlageLageEEnum, ENUMSonderanlageLage.ENUM_SONDERANLAGE_LAGE_SONSTIGE);
+
+		initEEnum(enumVerschlussOrtEEnum, ENUMVerschlussOrt.class, "ENUMVerschlussOrt");
+		addEEnumLiteral(enumVerschlussOrtEEnum, ENUMVerschlussOrt.ENUM_VERSCHLUSS_ORT_HERZSTÜCK);
+		addEEnumLiteral(enumVerschlussOrtEEnum, ENUMVerschlussOrt.ENUM_VERSCHLUSS_ORT_MITTE);
+		addEEnumLiteral(enumVerschlussOrtEEnum, ENUMVerschlussOrt.ENUM_VERSCHLUSS_ORT_SONSTIGE);
+		addEEnumLiteral(enumVerschlussOrtEEnum, ENUMVerschlussOrt.ENUM_VERSCHLUSS_ORT_SPITZE);
+
 		// Initialize data types
 		initEDataType(beschreibung_Sonderanlage_TypeEDataType, String.class, "Beschreibung_Sonderanlage_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(bezeichnung_Schloss_TypeEDataType, String.class, "Bezeichnung_Schloss_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -2090,6 +2248,8 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		initEDataType(enumSchlossArtObjectEDataType, ENUMSchlossArt.class, "ENUMSchlossArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumSchluesselBartformObjectEDataType, ENUMSchluesselBartform.class, "ENUMSchluesselBartformObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumSchluesselGruppeObjectEDataType, ENUMSchluesselGruppe.class, "ENUMSchluesselGruppeObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumSonderanlageLageObjectEDataType, ENUMSonderanlageLage.class, "ENUMSonderanlageLageObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumVerschlussOrtObjectEDataType, ENUMVerschlussOrt.class, "ENUMVerschlussOrtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(w_Anbaulage_TypeEDataType, ENUMLinksRechts.class, "W_Anbaulage_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(w_Lage_TypeEDataType, ENUMLinksRechts.class, "W_Lage_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
@@ -2117,7 +2277,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (schlossEClass,
@@ -2186,6 +2346,12 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "documentation", "Verweis auf die Schlosskombination, zu der das Schloss geh\u00f6rt."
 		   });
 		addAnnotation
+		  (getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage(),
+		   source,
+		   new String[] {
+			   "documentation", "Lage, in der die Sonderanlage verschlossen wird. DB-Regelwerk Die Abh\u00e4ngigkeiten werden heute durch eine Zeichnung im Lageplan nach 819.9002 3 dargestellt."
+		   });
+		addAnnotation
 		  (getSchloss_Sonderanlage_AttributeGroup_BeschreibungSonderanlage(),
 		   source,
 		   new String[] {
@@ -2216,10 +2382,10 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "documentation", "Bauart des an der Weiche vorgesehenen Schlosses. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen."
 		   });
 		addAnnotation
-		  (getSchloss_W_AttributeGroup_VerschlussHerzstueck(),
+		  (getSchloss_W_AttributeGroup_VerschlussOrt(),
 		   source,
 		   new String[] {
-			   "documentation", "Angabe, ob die Herzst\u00fcckspitze des unter ID_W_Kr_Element angegebenen Weichen- bzw. Kreuzungselements zu verschlie\u00dfen (true) oder nicht zu verschlie\u00dfen ist (false). Die Angabe ist nur bei Weichen mit beweglichem Herzst\u00fcck sinnvoll."
+			   "documentation", "Verschlussort f\u00fcr das unter ID_W_Kr_Element angegebene Weichen- bzw. Kreuzungselement. Die Angabe \"Herzst\u00fcck\" ist nur bei Weichen mit beweglichen Herzst\u00fcckspitzen sinnvoll."
 		   });
 		addAnnotation
 		  (getSchloss_W_AttributeGroup_WAnbaulage(),
@@ -2521,6 +2687,32 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "baseType", "ENUMSchluessel_Gruppe"
 		   });
 		addAnnotation
+		  (enumSonderanlageLageEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMSonderanlage_Lage"
+		   });
+		addAnnotation
+		  (enumSonderanlageLageObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMSonderanlage_Lage:Object",
+			   "baseType", "ENUMSonderanlage_Lage"
+		   });
+		addAnnotation
+		  (enumVerschlussOrtEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMVerschluss_Ort"
+		   });
+		addAnnotation
+		  (enumVerschlussOrtObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMVerschluss_Ort:Object",
+			   "baseType", "ENUMVerschluss_Ort"
+		   });
+		addAnnotation
 		  (gsp_Lage_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -2724,6 +2916,13 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
+		  (getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Sonderanlage_Lage"
+		   });
+		addAnnotation
 		  (getSchloss_Sonderanlage_AttributeGroup_BeschreibungSonderanlage(),
 		   source,
 		   new String[] {
@@ -2773,11 +2972,11 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "name", "Schloss_Art"
 		   });
 		addAnnotation
-		  (getSchloss_W_AttributeGroup_VerschlussHerzstueck(),
+		  (getSchloss_W_AttributeGroup_VerschlussOrt(),
 		   source,
 		   new String[] {
 			   "kind", "element",
-			   "name", "Verschluss_Herzstueck"
+			   "name", "Verschluss_Ort"
 		   });
 		addAnnotation
 		  (getSchloss_W_AttributeGroup_WAnbaulage(),
@@ -2962,6 +3161,20 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "name", "ID_Unterbringung"
 		   });
 		addAnnotation
+		  (sonderanlage_Lage_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCSonderanlage_Lage",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getSonderanlage_Lage_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (technisch_Berechtigter_TypeClassEClass,
 		   source,
 		   new String[] {
@@ -2976,14 +3189,14 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "name", "Wert"
 		   });
 		addAnnotation
-		  (verschluss_Herzstueck_TypeClassEClass,
+		  (verschluss_Ort_TypeClassEClass,
 		   source,
 		   new String[] {
-			   "name", "TCVerschluss_Herzstueck",
+			   "name", "TCVerschluss_Ort",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (getVerschluss_Herzstueck_TypeClass_Wert(),
+		  (getVerschluss_Ort_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -3045,7 +3258,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		  (schlossEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSchloss_TechnischBerechtigter(),
@@ -3057,7 +3270,13 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		  (getSchloss_Bezeichnung_AttributeGroup_BezeichnungSchloss(),
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>[1..20]</Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n                          \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                               \r\n    <Patternbeschreibung>[1..20]</Patternbeschreibung>\r\n                            \r\n  </WorkflowInformation>\r\n                       \r\n"
+		   });
+		addAnnotation
+		  (getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>befahrbar</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (getSchloss_Sonderanlage_AttributeGroup_BeschreibungSonderanlage(),
@@ -3072,22 +3291,16 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>Riegelhandschloss</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
-		  (getSchloss_W_AttributeGroup_VerschlussHerzstueck(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>true</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
-		   });
-		addAnnotation
 		  (schlosskombinationEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (schluesselEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSchluessel_Bezeichnung_AttributeGroup_BezeichnungSchluessel(),
@@ -3099,7 +3312,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		  (schluesselsperreEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>B\u00dc|ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getSchluesselsperre_BedienungArt(),

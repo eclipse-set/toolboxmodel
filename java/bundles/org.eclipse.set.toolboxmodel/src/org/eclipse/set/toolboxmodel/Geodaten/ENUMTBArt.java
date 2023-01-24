@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -19,14 +26,34 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMTBArt implements Enumerator {
 	/**
-	 * The '<em><b>ENUMTB Art Bruecke</b></em>' literal object.
+	 * The '<em><b>ENUMTB Art Bahnsteig ungenutzt</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMTB_ART_BRUECKE_VALUE
+	 * @see #ENUMTB_ART_BAHNSTEIG_UNGENUTZT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTB_ART_BRUECKE(0, "ENUMTB_Art_Bruecke", "Bruecke"),
+	ENUMTB_ART_BAHNSTEIG_UNGENUTZT(0, "ENUMTB_Art_Bahnsteig_ungenutzt", "Bahnsteig_ungenutzt"),
+
+	/**
+	 * The '<em><b>ENUMTB Art Personenunterfuehrung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_PERSONENUNTERFUEHRUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTB_ART_PERSONENUNTERFUEHRUNG(1, "ENUMTB_Art_Personenunterfuehrung", "Personenunterfuehrung"),
+
+	/**
+	 * The '<em><b>ENUMTB Art Bahnsteigabsenkung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_BAHNSTEIGABSENKUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTB_ART_BAHNSTEIGABSENKUNG(2, "ENUMTB_Art_Bahnsteigabsenkung", "Bahnsteigabsenkung"),
 
 	/**
 	 * The '<em><b>ENUMTB Art Durchlass</b></em>' literal object.
@@ -36,7 +63,37 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTB_ART_DURCHLASS(1, "ENUMTB_Art_Durchlass", "Durchlass"),
+	ENUMTB_ART_DURCHLASS(3, "ENUMTB_Art_Durchlass", "Durchlass"),
+
+	/**
+	 * The '<em><b>ENUMTB Art Eisenbahnkreuzungsbauwerk oben</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN(4, "ENUMTB_Art_Eisenbahnkreuzungsbauwerk_oben", "Eisenbahnkreuzungsbauwerk_oben"),
+
+	/**
+	 * The '<em><b>ENUMTB Art Eisenbahnkreuzungsbauwerk unten</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN(5, "ENUMTB_Art_Eisenbahnkreuzungsbauwerk_unten", "Eisenbahnkreuzungsbauwerk_unten"),
+
+	/**
+	 * The '<em><b>ENUMTB Art Eisenbahnueberfuehrung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_EISENBAHNUEBERFUEHRUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMTB_ART_EISENBAHNUEBERFUEHRUNG(6, "ENUMTB_Art_Eisenbahnueberfuehrung", "Eisenbahnueberfuehrung"),
 
 	/**
 	 * The '<em><b>ENUMTB Art Schutzwand links</b></em>' literal object.
@@ -46,7 +103,7 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTB_ART_SCHUTZWAND_LINKS(2, "ENUMTB_Art_Schutzwand_links", "Schutzwand_links"),
+	ENUMTB_ART_SCHUTZWAND_LINKS(7, "ENUMTB_Art_Schutzwand_links", "Schutzwand_links"),
 
 	/**
 	 * The '<em><b>ENUMTB Art Schutzwand rechts</b></em>' literal object.
@@ -56,7 +113,7 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTB_ART_SCHUTZWAND_RECHTS(3, "ENUMTB_Art_Schutzwand_rechts", "Schutzwand_rechts"),
+	ENUMTB_ART_SCHUTZWAND_RECHTS(8, "ENUMTB_Art_Schutzwand_rechts", "Schutzwand_rechts"),
 
 	/**
 	 * The '<em><b>ENUMTB Art sonstige</b></em>' literal object.
@@ -66,7 +123,7 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTB_ART_SONSTIGE(4, "ENUMTB_Art_sonstige", "sonstige"),
+	ENUMTB_ART_SONSTIGE(9, "ENUMTB_Art_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUMTB Art Tunnel</b></em>' literal object.
@@ -76,18 +133,50 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMTB_ART_TUNNEL(5, "ENUMTB_Art_Tunnel", "Tunnel");
+	ENUMTB_ART_TUNNEL(10, "ENUMTB_Art_Tunnel", "Tunnel"),
 
 	/**
-	 * The '<em><b>ENUMTB Art Bruecke</b></em>' literal value.
+	 * The '<em><b>ENUMTB Art Ueberfuehrung ueber Eisenbahn</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMTB_ART_BRUECKE
-	 * @model name="ENUMTB_Art_Bruecke" literal="Bruecke"
+	 * @see #ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTB_ART_BRUECKE_VALUE = 0;
+	ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN(11, "ENUMTB_Art_Ueberfuehrung_ueber_Eisenbahn", "Ueberfuehrung_ueber_Eisenbahn");
+
+	/**
+	 * The '<em><b>ENUMTB Art Bahnsteig ungenutzt</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_BAHNSTEIG_UNGENUTZT
+	 * @model name="ENUMTB_Art_Bahnsteig_ungenutzt" literal="Bahnsteig_ungenutzt"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTB_ART_BAHNSTEIG_UNGENUTZT_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUMTB Art Personenunterfuehrung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_PERSONENUNTERFUEHRUNG
+	 * @model name="ENUMTB_Art_Personenunterfuehrung" literal="Personenunterfuehrung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTB_ART_PERSONENUNTERFUEHRUNG_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUMTB Art Bahnsteigabsenkung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_BAHNSTEIGABSENKUNG
+	 * @model name="ENUMTB_Art_Bahnsteigabsenkung" literal="Bahnsteigabsenkung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTB_ART_BAHNSTEIGABSENKUNG_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUMTB Art Durchlass</b></em>' literal value.
@@ -98,7 +187,40 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTB_ART_DURCHLASS_VALUE = 1;
+	public static final int ENUMTB_ART_DURCHLASS_VALUE = 3;
+
+	/**
+	 * The '<em><b>ENUMTB Art Eisenbahnkreuzungsbauwerk oben</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN
+	 * @model name="ENUMTB_Art_Eisenbahnkreuzungsbauwerk_oben" literal="Eisenbahnkreuzungsbauwerk_oben"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUMTB Art Eisenbahnkreuzungsbauwerk unten</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN
+	 * @model name="ENUMTB_Art_Eisenbahnkreuzungsbauwerk_unten" literal="Eisenbahnkreuzungsbauwerk_unten"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUMTB Art Eisenbahnueberfuehrung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_EISENBAHNUEBERFUEHRUNG
+	 * @model name="ENUMTB_Art_Eisenbahnueberfuehrung" literal="Eisenbahnueberfuehrung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTB_ART_EISENBAHNUEBERFUEHRUNG_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUMTB Art Schutzwand links</b></em>' literal value.
@@ -109,7 +231,7 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTB_ART_SCHUTZWAND_LINKS_VALUE = 2;
+	public static final int ENUMTB_ART_SCHUTZWAND_LINKS_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUMTB Art Schutzwand rechts</b></em>' literal value.
@@ -120,7 +242,7 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTB_ART_SCHUTZWAND_RECHTS_VALUE = 3;
+	public static final int ENUMTB_ART_SCHUTZWAND_RECHTS_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUMTB Art sonstige</b></em>' literal value.
@@ -131,7 +253,7 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTB_ART_SONSTIGE_VALUE = 4;
+	public static final int ENUMTB_ART_SONSTIGE_VALUE = 9;
 
 	/**
 	 * The '<em><b>ENUMTB Art Tunnel</b></em>' literal value.
@@ -142,7 +264,18 @@ public enum ENUMTBArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMTB_ART_TUNNEL_VALUE = 5;
+	public static final int ENUMTB_ART_TUNNEL_VALUE = 10;
+
+	/**
+	 * The '<em><b>ENUMTB Art Ueberfuehrung ueber Eisenbahn</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN
+	 * @model name="ENUMTB_Art_Ueberfuehrung_ueber_Eisenbahn" literal="Ueberfuehrung_ueber_Eisenbahn"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN_VALUE = 11;
 
 	/**
 	 * An array of all the '<em><b>ENUMTB Art</b></em>' enumerators.
@@ -152,12 +285,18 @@ public enum ENUMTBArt implements Enumerator {
 	 */
 	private static final ENUMTBArt[] VALUES_ARRAY =
 		new ENUMTBArt[] {
-			ENUMTB_ART_BRUECKE,
+			ENUMTB_ART_BAHNSTEIG_UNGENUTZT,
+			ENUMTB_ART_PERSONENUNTERFUEHRUNG,
+			ENUMTB_ART_BAHNSTEIGABSENKUNG,
 			ENUMTB_ART_DURCHLASS,
+			ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN,
+			ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN,
+			ENUMTB_ART_EISENBAHNUEBERFUEHRUNG,
 			ENUMTB_ART_SCHUTZWAND_LINKS,
 			ENUMTB_ART_SCHUTZWAND_RECHTS,
 			ENUMTB_ART_SONSTIGE,
 			ENUMTB_ART_TUNNEL,
+			ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN,
 		};
 
 	/**
@@ -214,12 +353,18 @@ public enum ENUMTBArt implements Enumerator {
 	 */
 	public static ENUMTBArt get(int value) {
 		switch (value) {
-			case ENUMTB_ART_BRUECKE_VALUE: return ENUMTB_ART_BRUECKE;
+			case ENUMTB_ART_BAHNSTEIG_UNGENUTZT_VALUE: return ENUMTB_ART_BAHNSTEIG_UNGENUTZT;
+			case ENUMTB_ART_PERSONENUNTERFUEHRUNG_VALUE: return ENUMTB_ART_PERSONENUNTERFUEHRUNG;
+			case ENUMTB_ART_BAHNSTEIGABSENKUNG_VALUE: return ENUMTB_ART_BAHNSTEIGABSENKUNG;
 			case ENUMTB_ART_DURCHLASS_VALUE: return ENUMTB_ART_DURCHLASS;
+			case ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN_VALUE: return ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_OBEN;
+			case ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN_VALUE: return ENUMTB_ART_EISENBAHNKREUZUNGSBAUWERK_UNTEN;
+			case ENUMTB_ART_EISENBAHNUEBERFUEHRUNG_VALUE: return ENUMTB_ART_EISENBAHNUEBERFUEHRUNG;
 			case ENUMTB_ART_SCHUTZWAND_LINKS_VALUE: return ENUMTB_ART_SCHUTZWAND_LINKS;
 			case ENUMTB_ART_SCHUTZWAND_RECHTS_VALUE: return ENUMTB_ART_SCHUTZWAND_RECHTS;
 			case ENUMTB_ART_SONSTIGE_VALUE: return ENUMTB_ART_SONSTIGE;
 			case ENUMTB_ART_TUNNEL_VALUE: return ENUMTB_ART_TUNNEL;
+			case ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN_VALUE: return ENUMTB_ART_UEBERFUEHRUNG_UEBER_EISENBAHN;
 			default: return null;
 		}
 	}

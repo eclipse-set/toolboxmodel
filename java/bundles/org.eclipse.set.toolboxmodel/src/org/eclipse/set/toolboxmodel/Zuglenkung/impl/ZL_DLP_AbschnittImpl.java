@@ -1,16 +1,31 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Gleis.Gleis_Abschnitt;
+
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Abschnitt;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZL_DLP_Fstr;
 import org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage;
@@ -31,23 +46,14 @@ import org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage;
  */
 public class ZL_DLP_AbschnittImpl extends Basis_ObjektImpl implements ZL_DLP_Abschnitt {
 	/**
-	 * The cached value of the '{@link #getIDGleisAbschnitt() <em>ID Gleis Abschnitt</em>}' reference.
+	 * The cached value of the '{@link #getIDGleisAbschnitt() <em>ID Gleis Abschnitt</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIDGleisAbschnitt()
 	 * @generated
 	 * @ordered
 	 */
-	protected Gleis_Abschnitt iDGleisAbschnitt;
-
-	/**
-	 * This is true if the ID Gleis Abschnitt reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDGleisAbschnittESet;
+	protected EList<Gleis_Abschnitt> iDGleisAbschnitt;
 
 	/**
 	 * The cached value of the '{@link #getIDZLDLPFstr() <em>IDZLDLP Fstr</em>}' reference.
@@ -93,65 +99,11 @@ public class ZL_DLP_AbschnittImpl extends Basis_ObjektImpl implements ZL_DLP_Abs
 	 * @generated
 	 */
 	@Override
-	public Gleis_Abschnitt getIDGleisAbschnitt() {
-		if (iDGleisAbschnitt != null && iDGleisAbschnitt.eIsProxy()) {
-			InternalEObject oldIDGleisAbschnitt = (InternalEObject)iDGleisAbschnitt;
-			iDGleisAbschnitt = (Gleis_Abschnitt)eResolveProxy(oldIDGleisAbschnitt);
-			if (iDGleisAbschnitt != oldIDGleisAbschnitt) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT, oldIDGleisAbschnitt, iDGleisAbschnitt));
-			}
+	public EList<Gleis_Abschnitt> getIDGleisAbschnitt() {
+		if (iDGleisAbschnitt == null) {
+			iDGleisAbschnitt = new EObjectResolvingEList<Gleis_Abschnitt>(Gleis_Abschnitt.class, this, ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT);
 		}
 		return iDGleisAbschnitt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Gleis_Abschnitt basicGetIDGleisAbschnitt() {
-		return iDGleisAbschnitt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDGleisAbschnitt(Gleis_Abschnitt newIDGleisAbschnitt) {
-		Gleis_Abschnitt oldIDGleisAbschnitt = iDGleisAbschnitt;
-		iDGleisAbschnitt = newIDGleisAbschnitt;
-		boolean oldIDGleisAbschnittESet = iDGleisAbschnittESet;
-		iDGleisAbschnittESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT, oldIDGleisAbschnitt, iDGleisAbschnitt, !oldIDGleisAbschnittESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDGleisAbschnitt() {
-		Gleis_Abschnitt oldIDGleisAbschnitt = iDGleisAbschnitt;
-		boolean oldIDGleisAbschnittESet = iDGleisAbschnittESet;
-		iDGleisAbschnitt = null;
-		iDGleisAbschnittESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT, oldIDGleisAbschnitt, null, oldIDGleisAbschnittESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDGleisAbschnitt() {
-		return iDGleisAbschnittESet;
 	}
 
 	/**
@@ -230,8 +182,7 @@ public class ZL_DLP_AbschnittImpl extends Basis_ObjektImpl implements ZL_DLP_Abs
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT:
-				if (resolve) return getIDGleisAbschnitt();
-				return basicGetIDGleisAbschnitt();
+				return getIDGleisAbschnitt();
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__IDZLDLP_FSTR:
 				if (resolve) return getIDZLDLPFstr();
 				return basicGetIDZLDLPFstr();
@@ -245,11 +196,13 @@ public class ZL_DLP_AbschnittImpl extends Basis_ObjektImpl implements ZL_DLP_Abs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT:
-				setIDGleisAbschnitt((Gleis_Abschnitt)newValue);
+				getIDGleisAbschnitt().clear();
+				getIDGleisAbschnitt().addAll((Collection<? extends Gleis_Abschnitt>)newValue);
 				return;
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__IDZLDLP_FSTR:
 				setIDZLDLPFstr((ZL_DLP_Fstr)newValue);
@@ -269,7 +222,7 @@ public class ZL_DLP_AbschnittImpl extends Basis_ObjektImpl implements ZL_DLP_Abs
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT:
-				unsetIDGleisAbschnitt();
+				getIDGleisAbschnitt().clear();
 				return;
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__IDZLDLP_FSTR:
 				unsetIDZLDLPFstr();
@@ -289,7 +242,7 @@ public class ZL_DLP_AbschnittImpl extends Basis_ObjektImpl implements ZL_DLP_Abs
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__ID_GLEIS_ABSCHNITT:
-				return isSetIDGleisAbschnitt();
+				return iDGleisAbschnitt != null && !iDGleisAbschnitt.isEmpty();
 			case ZuglenkungPackage.ZL_DLP_ABSCHNITT__IDZLDLP_FSTR:
 				return isSetIDZLDLPFstr();
 			default:

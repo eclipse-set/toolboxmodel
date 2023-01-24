@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.util;
 
@@ -139,6 +146,13 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Ansteuerung_ElementPackage.BEZEICHNUNG_STELLWERK_TYPE_CLASS: {
+				Bezeichnung_Stellwerk_TypeClass bezeichnung_Stellwerk_TypeClass = (Bezeichnung_Stellwerk_TypeClass)theEObject;
+				T result = caseBezeichnung_Stellwerk_TypeClass(bezeichnung_Stellwerk_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(bezeichnung_Stellwerk_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Ansteuerung_ElementPackage.BEZEICHNUNG_TSO_TYPE_CLASS: {
 				Bezeichnung_TSO_TypeClass bezeichnung_TSO_TypeClass = (Bezeichnung_TSO_TypeClass)theEObject;
 				T result = caseBezeichnung_TSO_TypeClass(bezeichnung_TSO_TypeClass);
@@ -157,6 +171,12 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 				Energieversorgung_Art_TypeClass energieversorgung_Art_TypeClass = (Energieversorgung_Art_TypeClass)theEObject;
 				T result = caseEnergieversorgung_Art_TypeClass(energieversorgung_Art_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(energieversorgung_Art_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Ansteuerung_ElementPackage.ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP: {
+				ESTW_ZE_Energieversorgung_AttributeGroup estW_ZE_Energieversorgung_AttributeGroup = (ESTW_ZE_Energieversorgung_AttributeGroup)theEObject;
+				T result = caseESTW_ZE_Energieversorgung_AttributeGroup(estW_ZE_Energieversorgung_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -328,6 +348,13 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Ansteuerung_ElementPackage.TUERANSCHLAG_TYPE_CLASS: {
+				Tueranschlag_TypeClass tueranschlag_TypeClass = (Tueranschlag_TypeClass)theEObject;
+				T result = caseTueranschlag_TypeClass(tueranschlag_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(tueranschlag_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Ansteuerung_ElementPackage.UEBERTRAGUNGSWEG: {
 				Uebertragungsweg uebertragungsweg = (Uebertragungsweg)theEObject;
 				T result = caseUebertragungsweg(uebertragungsweg);
@@ -374,6 +401,20 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 				Unterbringung_Befestigung_TypeClass unterbringung_Befestigung_TypeClass = (Unterbringung_Befestigung_TypeClass)theEObject;
 				T result = caseUnterbringung_Befestigung_TypeClass(unterbringung_Befestigung_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(unterbringung_Befestigung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Ansteuerung_ElementPackage.UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS: {
+				Unterbringung_Polygonzug_TypeClass unterbringung_Polygonzug_TypeClass = (Unterbringung_Polygonzug_TypeClass)theEObject;
+				T result = caseUnterbringung_Polygonzug_TypeClass(unterbringung_Polygonzug_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(unterbringung_Polygonzug_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Ansteuerung_ElementPackage.ZUSATZINFORMATION_STELLWERK_TYPE_CLASS: {
+				Zusatzinformation_Stellwerk_TypeClass zusatzinformation_Stellwerk_TypeClass = (Zusatzinformation_Stellwerk_TypeClass)theEObject;
+				T result = caseZusatzinformation_Stellwerk_TypeClass(zusatzinformation_Stellwerk_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(zusatzinformation_Stellwerk_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -532,6 +573,21 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bezeichnung Stellwerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bezeichnung Stellwerk Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBezeichnung_Stellwerk_TypeClass(Bezeichnung_Stellwerk_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Bezeichnung TSO Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -573,6 +629,21 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEnergieversorgung_Art_TypeClass(Energieversorgung_Art_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ESTW ZE Energieversorgung Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ESTW ZE Energieversorgung Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseESTW_ZE_Energieversorgung_AttributeGroup(ESTW_ZE_Energieversorgung_AttributeGroup object) {
 		return null;
 	}
 
@@ -937,6 +1008,21 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tueranschlag Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tueranschlag Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTueranschlag_TypeClass(Tueranschlag_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Uebertragungsweg</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1038,6 +1124,36 @@ public class Ansteuerung_ElementSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUnterbringung_Befestigung_TypeClass(Unterbringung_Befestigung_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unterbringung Polygonzug Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unterbringung Polygonzug Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnterbringung_Polygonzug_TypeClass(Unterbringung_Polygonzug_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Zusatzinformation Stellwerk Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Zusatzinformation Stellwerk Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZusatzinformation_Stellwerk_TypeClass(Zusatzinformation_Stellwerk_TypeClass object) {
 		return null;
 	}
 

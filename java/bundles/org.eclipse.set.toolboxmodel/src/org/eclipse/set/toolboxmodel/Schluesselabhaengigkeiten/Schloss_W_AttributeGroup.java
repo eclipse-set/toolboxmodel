@@ -1,8 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
 
 /**
@@ -16,7 +24,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Element;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getIDWKrElement <em>IDW Kr Element</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getSchlossArt <em>Schloss Art</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussHerzstueck <em>Verschluss Herzstueck</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussOrt <em>Verschluss Ort</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getWAnbaulage <em>WAnbaulage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getWLage <em>WLage</em>}</li>
  * </ul>
@@ -106,30 +114,30 @@ public interface Schloss_W_AttributeGroup extends EObject {
 	void setSchlossArt(Schloss_Art_TypeClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Verschluss Herzstueck</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Verschluss Ort</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe, ob die Herzstückspitze des unter ID_W_Kr_Element angegebenen Weichen- bzw. Kreuzungselements zu verschließen (true) oder nicht zu verschließen ist (false). Die Angabe ist nur bei Weichen mit beweglichem Herzstück sinnvoll.
+	 * Verschlussort für das unter ID_W_Kr_Element angegebene Weichen- bzw. Kreuzungselement. Die Angabe "Herzstück" ist nur bei Weichen mit beweglichen Herzstückspitzen sinnvoll.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Verschluss Herzstueck</em>' containment reference.
-	 * @see #setVerschlussHerzstueck(Verschluss_Herzstueck_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenPackage#getSchloss_W_AttributeGroup_VerschlussHerzstueck()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Verschluss_Herzstueck'"
+	 * @return the value of the '<em>Verschluss Ort</em>' containment reference.
+	 * @see #setVerschlussOrt(Verschluss_Ort_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.SchluesselabhaengigkeitenPackage#getSchloss_W_AttributeGroup_VerschlussOrt()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='Verschluss_Ort'"
 	 * @generated
 	 */
-	Verschluss_Herzstueck_TypeClass getVerschlussHerzstueck();
+	Verschluss_Ort_TypeClass getVerschlussOrt();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussHerzstueck <em>Verschluss Herzstueck</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussOrt <em>Verschluss Ort</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Verschluss Herzstueck</em>' containment reference.
-	 * @see #getVerschlussHerzstueck()
+	 * @param value the new value of the '<em>Verschluss Ort</em>' containment reference.
+	 * @see #getVerschlussOrt()
 	 * @generated
 	 */
-	void setVerschlussHerzstueck(Verschluss_Herzstueck_TypeClass value);
+	void setVerschlussOrt(Verschluss_Ort_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>WAnbaulage</b></em>' containment reference.

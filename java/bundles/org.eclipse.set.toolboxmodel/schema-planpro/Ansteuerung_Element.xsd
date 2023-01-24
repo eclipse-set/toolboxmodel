@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Ansteuerung_Element/1.9.0.2">
+           xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Ansteuerung_Element/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,11 +26,11 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
 	  <xs:simpleType name="ENUMMedium_Art">
 		    <xs:restriction base="xs:string">
@@ -46,6 +44,18 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:enumeration value="sonstige"/>
 		    </xs:restriction>
 	  </xs:simpleType>
+	  <xs:complexType name="TCZusatzinformation_Stellwerk">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsAnsteuerung_Element:TZusatzinformation_Stellwerk"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:simpleType name="ENUMUnterbringung_Befestigung">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="Fundament"/>
@@ -126,12 +136,16 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:simpleType name="TBezeichnung_Stellwerk">
+		    <xs:restriction base="nsBasisTypen:TText"/>
+	  </xs:simpleType>
 	  <xs:complexType name="CESTW_Zentraleinheit">
 		    <xs:annotation>
          <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zentrale Komponente eines ESTW. Die ESTW-Zentraleinheit (ZE) steuert alle untergeordneten Aussenelementansteuerungen, stellt die Verbindung zu den Bedienbezirken (Notbedienplatz, Steuerbezirk/Zentralbedienung) und zu Nachbar-ESTW-Zentraleinheiten, zur Zuglenkung und zur Zugnummernmeldeanlage her. Die ZE kann ein ESTW-Z oder eine ESTW-UZ sein. Die geografische Grenze einer ZE liegt immer an einem Haupt- oder Sperrsignal (Signal_Real_Aktiv) oder einem Bedienpunkt (Signal_Fiktiv), in der Regel an einem Einfahrsignal. Die von einer Unterzentrale benötigten Adressformeln nach Richtlinie 819.0705 werden über die Verknüpfung zu Bedien Bezirk bereitgestellt. DB-Regelwerk Darstellung des ESTW-Gebäudes im sicherungstechnischen Lageplan nach Ril 819.9002, Beschreibung im Erläuterungsbericht</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -146,6 +160,10 @@ XML Schema for PlanPro interface.</xs:documentation>
                      <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Attributgruppe zur Bezeichnung von Stell- und sonstigen Elementen. Sofern ausreichend, wird an dieser Stelle über Vererbung die Basisattributgruppe Bezeichnung Element eingebunden. Ist die Abbildung mit den Attributen der Basisattributgruppe nicht möglich (z. B. wegen spezieller Patternvorgabe) oder nicht sinnvoll (z. B. weil eine Unterscheidung nach Bezeichnung_Lageplan_..., Bezeichnung_Tabelle und Bezeichnung_Aussenanlage (Pflichtattribute!) nicht notwendig ist), werden in der Attributgruppe Bezeichnung entsprechende objektspezifische Bezeichnungsattribute modelliert. Diese sind nach dem Schema Bezeichnung_[Objektname] zu benennen. Zudem ist es möglich, gleichzeitig die Basisattributgruppe Bezeichnung Element und objektspezifische Attribute einzubinden. Siehe auch Bildung der Bezeichnungen. DB-Regelwerk Sicherungstechnischer Lage- und Übersichtsplan, BÜ-Lageplan Planungstabellen </xs:documentation>
                   </xs:annotation>
 					          </xs:element>
+					          <xs:element name="ESTW_ZE_Energieversorgung"
+                           type="nsAnsteuerung_Element:CESTW_ZE_Energieversorgung"
+                           minOccurs="1"
+                           maxOccurs="1"/>
 					          <xs:element name="ESTW_Zentraleinheit_Allg"
                            type="nsAnsteuerung_Element:CESTW_Zentraleinheit_Allg"
                            minOccurs="1"
@@ -226,17 +244,17 @@ XML Schema for PlanPro interface.</xs:documentation>
       </xs:annotation>
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="andere_Aussenelementansteuerung"/>
-			      <xs:enumeration value="FeAk_400V_DC_direkt"/>
-			      <xs:enumeration value="FeAk_750V_DC_Energiebus"/>
-			      <xs:enumeration value="Landesnetz_VNB"/>
-			      <xs:enumeration value="Notstromaggregat_NEA_mobil"/>
-			      <xs:enumeration value="Notstromaggregat_NEA_stationaer"/>
-			      <xs:enumeration value="Solar"/>
 			      <xs:enumeration value="Batterie"/>
-			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="BUE"/>
 			      <xs:enumeration value="ESTW_Zentraleinheit"/>
 			      <xs:enumeration value="Fahrleitung"/>
+			      <xs:enumeration value="FeAk_400V_DC_direkt"/>
+			      <xs:enumeration value="FeAk_750V_DC_Energiebus"/>
+			      <xs:enumeration value="Landesnetz_VNB"/>
+			      <xs:enumeration value="Notstromaggregat_NEA_stationaer"/>
+			      <xs:enumeration value="Notstromanschluss_NEA_mobil"/>
+			      <xs:enumeration value="Solar"/>
+			      <xs:enumeration value="sonstige"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:complexType name="CTechnik_Standort">
@@ -245,6 +263,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -276,6 +295,42 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="TBezeichnung_TSO">
 		    <xs:restriction base="nsBasisTypen:TText"/>
 	  </xs:simpleType>
+	  <xs:complexType name="CESTW_ZE_Energieversorgung">
+		    <xs:sequence>
+			      <xs:element name="Energieversorgung_Art_Ersatz_2"
+                     type="nsAnsteuerung_Element:TCEnergieversorgung_Art_Ersatz"
+                     minOccurs="0"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe der zweiten Ersatz-Energieversorgung (bei DSTW: 1. Ersatz Fahrleitung, 2. Ersatz NEA).</xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:choice minOccurs="1" maxOccurs="1">
+				        <xs:element name="Energieversorgung_Art"
+                        type="nsAnsteuerung_Element:TCEnergieversorgung_Art"
+                        minOccurs="1"
+                        maxOccurs="1">
+					          <xs:annotation>
+                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Grundsätzliche Art der Energieversorgung. Wird für die Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Primaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
+               </xs:annotation>
+				        </xs:element>
+				        <xs:element name="ID_Energie_Primaer" type="nsVerweise:TCID_Energie" minOccurs="1"
+                        maxOccurs="1"/>
+			      </xs:choice>
+			      <xs:choice minOccurs="1" maxOccurs="1">
+				        <xs:element name="Energieversorgung_Art_Ersatz"
+                        type="nsAnsteuerung_Element:TCEnergieversorgung_Art_Ersatz"
+                        minOccurs="0"
+                        maxOccurs="1">
+					          <xs:annotation>
+                  <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Grundsätzliche Art der Ersatz-Energieversorgung. Wird für die Ersatz-Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Sekundaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
+               </xs:annotation>
+				        </xs:element>
+				        <xs:element name="ID_Energie_Sekundaer" type="nsVerweise:TCID_Energie" minOccurs="0"
+                        maxOccurs="1"/>
+			      </xs:choice>
+		    </xs:sequence>
+	  </xs:complexType>
 	  <xs:complexType name="CAEA_Allg">
 		    <xs:sequence>
 			      <xs:element name="Aussenelementansteuerung_Art"
@@ -303,10 +358,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:simpleType>
 	  <xs:complexType name="CUnterbringung">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Ort der Anordnung von nicht an das Gleis gebundenen Komponenten. Die Verortung der U. erfolgt entweder analog zum Punkt Objekt, mit einem GEO Punkt oder durch einen beschreibenden Text. Eine U. beschreibt in der Regel die Umhausung der Komponente. Ist sie nicht eingehaust, wird als Unterbringung Art \"keine\" angegeben. In diesen Fällen hat die Komponente dennoch eine Unterbringung Befestigung. Das ist z. B. der Fall, wenn eine wetterfeste Komponente (z. B. Schlüsselschalter) ohne Einhausung direkt an einem Pfosten befestigt ist. In einer U. können mehrere LST-Objekte untergebracht sein. Eine U. ist z. B. ein Betonschalthaus oder ein Schaltkasten. DB-Regelwerk Darstellung des Gebäudes im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erläuterungsbericht</xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Ort der Anordnung von nicht an das Gleis gebundenen Komponenten. Die Verortung der U. erfolgt entweder analog zum Punkt Objekt, mit einem GEO Punkt, einem Polygonzug oder durch einen beschreibenden Text. Eine U. beschreibt in der Regel die Umhausung der Komponente. Ist sie nicht eingehaust, wird als Unterbringung Art \"keine\" angegeben. In diesen Fällen hat die Komponente dennoch eine Unterbringung Befestigung. Das ist z. B. der Fall, wenn eine wetterfeste Komponente (z. B. Schlüsselschalter) ohne Einhausung direkt an einem Pfosten befestigt ist. In einer U. können mehrere LST-Objekte untergebracht sein. Eine U. ist z. B. ein Betonschalthaus oder ein Schaltkasten. DB-Regelwerk Darstellung des Gebäudes im sicherungstechnischen Lageplan nach Ril 819.9002 oder Beschreibung im Erläuterungsbericht</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ATO|Bedienung Fdl ESTW|Bedienung Fdl BZ|BÜ| ESTW|ETCS|ZN</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -325,9 +381,9 @@ XML Schema for PlanPro interface.</xs:documentation>
                            maxOccurs="1"/>
 					          <xs:choice minOccurs="1" maxOccurs="1">
 						            <xs:element name="ID_GEO_Punkt" type="nsVerweise:TCID_GEO_Punkt" minOccurs="1"
-                              maxOccurs="1">
+                              maxOccurs="unbounded">
 							              <xs:annotation>
-                        <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf einen GEO Punkt, der eine Verortung über x- und y-Koordinate ermöglicht. DB-Regelwerk ESTW: Darstellung im sicherungstechnischen Lageplan. </xs:documentation>
+                        <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf einen GEO Punkt, der eine Verortung über x- und y-Koordinate ermöglicht. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig. DB-Regelwerk ESTW: Darstellung im sicherungstechnischen Lageplan.</xs:documentation>
                      </xs:annotation>
 						            </xs:element>
 						            <xs:element name="Punkt_Objekt_TOP_Kante" type="nsBasisobjekte:CPunkt_Objekt_TOP_Kante"
@@ -343,6 +399,14 @@ XML Schema for PlanPro interface.</xs:documentation>
                               maxOccurs="1">
 							              <xs:annotation>
                         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Textuelle Beschreibung des Standorts der Unterbringung. Das Attribut wird genutzt, wenn eine punktförmige Verortung nicht möglich ist, z. B. aufgrund der großen Entfernung des Standorts und der somit bedingten Lage außerhalb des Planungs- oder Betrachtungsbereichs.</xs:documentation>
+                     </xs:annotation>
+						            </xs:element>
+						            <xs:element name="Unterbringung_Polygonzug"
+                              type="nsAnsteuerung_Element:TCUnterbringung_Polygonzug"
+                              minOccurs="1"
+                              maxOccurs="1">
+							              <xs:annotation>
+                        <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Grundriss der Unterbringung, beschrieben mittels Polygonzug unter Nutzung des GML-Standards.</xs:documentation>
                      </xs:annotation>
 						            </xs:element>
 					          </xs:choice>
@@ -378,12 +442,12 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="ENUMUnterbringung_Art">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="Antrieb"/>
+			      <xs:enumeration value="Gebaeude"/>
 			      <xs:enumeration value="keine"/>
+			      <xs:enumeration value="Schalthaus"/>
 			      <xs:enumeration value="Schaltschrank_Schaltkasten"/>
 			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="Tafel"/>
-			      <xs:enumeration value="Gebaeude"/>
-			      <xs:enumeration value="Schalthaus"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:simpleType name="ENUMTSO_Teilsystem_Art">
@@ -435,6 +499,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -500,12 +565,21 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="TTechnik_Beschreibung">
 		    <xs:restriction base="nsBasisTypen:TText"/>
 	  </xs:simpleType>
+	  <xs:simpleType name="TUnterbringung_Polygonzug">
+		    <xs:restriction base="nsBasisTypen:TFreiText"/>
+	  </xs:simpleType>
 	  <xs:complexType name="CUnterbringung_Allg">
 		    <xs:sequence>
 			      <xs:element name="Hersteller" type="nsAnsteuerung_Element:TCHersteller" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
                <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Unternehmen, das die Funktionsfähigkeit der Anlage verantwortlich hergestellt hat oder Hersteller des jeweiligen Elements. Diese Eigenschaft ist kein Datum einer Planung, sondern dient im Rücklauf der Planung dazu den Hersteller im Bestand zu erfassen. Es ist die zum Zeitpunkt der Inbetriebnahme gültige Firmierung zu verwenden. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:element name="Tueranschlag" type="nsAnsteuerung_Element:TCTueranschlag" minOccurs="0"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Seite des Türanschlags. Die Angabe wird insbesondere bei Unterbringungen für FeAK/FeAS benötigt.</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Unterbringung_Art" type="nsAnsteuerung_Element:TCUnterbringung_Art"
@@ -530,10 +604,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:simpleType>
 	  <xs:complexType name="CUebertragungsweg">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Physikalischer/logischer Übertragungsweg zwischen zwei Objekten für eine erforderliche Informationsübertragung. Die Angabe erfolgt, wenn der Übertragungsweg vom Betreiber beigestellt wird oder die Informationsübertragung vom Lieferanten zusätzlich zu schalten ist. Es geht um die Erfassung der physikalischen/logischen Verbindung zweier Objekte, die entweder einer funktionalen Verbindung zwischen den Objekten des Modells selbst dient, z.B. der ESTW-Bus zwischen zwei Aussenelementansteuerungen; einer funktionalen Verbindung eines Objektes des Modells zu einer nicht im Modell befindlichen Komponente dient, z.B. der Anbindung der KUS über die ZN_ZBS an die Leittechnik der BZ; einer funktionalen Verbindung zwischen zwei Komponenten, die nicht im Modell abgebildet sind, aber über diese angebunden werden und darum für die SBI dokumentiert werden müssen, z.B. die Verbindung von der LZB-Zentrale in der ESTW Zentraleinheit zum LZB-Bedienplatz in der Bedien Zentrale. Je nach Art und Anwendungsfall kann ein Objekt nur eine oder auch mehrere Verbindungen zu einem oder mehreren anderen Objekten haben. Der Anschluss von stellwerkstypischen Elementen an das Stellwerk (Kabelanlage) wird nicht mit diesem Objekt abgebildet. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Physikalischer/logischer Übertragungsweg zwischen zwei Objekten für eine erforderliche Informationsübertragung. Die Angabe erfolgt, wenn der Übertragungsweg vom Betreiber beigestellt wird oder die Informationsübertragung vom Lieferanten zusätzlich zu schalten ist. Es geht um die Erfassung der physikalischen/logischen Verbindung zweier Objekte, die entweder einer funktionalen Verbindung zwischen den Objekten des Modells selbst dient, z.B. der ESTW-Bus zwischen zwei Aussenelementansteuerungen; einer funktionalen Verbindung eines Objektes des Modells zu einer nicht im Modell befindlichen Komponente dient, z.B. der Anbindung der KUS über die ZN_ZBS an die Leittechnik der BZ; einer funktionalen Verbindung zwischen zwei Komponenten, die nicht im Modell abgebildet sind, aber über diese angebunden werden und darum für die SBI dokumentiert werden müssen, z.B. die Verbindung von der LZB-Zentrale in der ESTW Zentraleinheit zum LZB-Bedienplatz in der Bedien Zentrale. Je nach Art und Anwendungsfall kann ein Objekt nur eine oder auch mehrere Verbindungen zu einem oder mehreren anderen Objekten haben. Der Anschluss von stellwerkstypischen Elementen an das Stellwerk (Kabelanlage) wird nicht mit diesem Objekt abgebildet.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW|BÜ|ZN</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -581,6 +656,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:simpleType name="TZusatzinformation_Stellwerk">
+		    <xs:restriction base="nsBasisTypen:TText"/>
+	  </xs:simpleType>
 	  <xs:simpleType name="ENUMBandbreite">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="100Mbit_s"/>
@@ -616,6 +694,18 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
 				        <xs:sequence>
 					          <xs:element name="Wert" type="nsAnsteuerung_Element:ENUMNetz_Art" minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
+	  <xs:complexType name="TCUnterbringung_Polygonzug">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsAnsteuerung_Element:TUnterbringung_Polygonzug"
+                           minOccurs="1"
                            maxOccurs="1"
                            nillable="true"/>
 				        </xs:sequence>
@@ -742,8 +832,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                   <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Grundsätzliche Art der Ersatz-Energieversorgung. Wird für die Ersatz-Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Sekundaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
                </xs:annotation>
 				        </xs:element>
-				        <xs:element name="ID_Energie_Sekundaer" type="nsVerweise:TCID_Aussenelementansteuerung"
-                        minOccurs="0"
+				        <xs:element name="ID_Energie_Sekundaer" type="nsVerweise:TCID_Energie" minOccurs="0"
                         maxOccurs="1">
 					          <xs:annotation>
                   <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Objekt der sekundären Energiequelle (sofern vorhanden). DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
@@ -759,7 +848,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                   <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Grundsätzliche Art der Energieversorgung. Wird für die Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Primaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
                </xs:annotation>
 				        </xs:element>
-				        <xs:element name="ID_Energie_Primaer" type="nsVerweise:TCID_Energie_Primaer" minOccurs="1"
+				        <xs:element name="ID_Energie_Primaer" type="nsVerweise:TCID_Energie" minOccurs="1"
                         maxOccurs="1">
 					          <xs:annotation>
                   <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Objekt der primären Energiequelle. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
@@ -791,26 +880,56 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="TIP_Adressblock_Blau">
 		    <xs:restriction base="nsBasisTypen:TText"/>
 	  </xs:simpleType>
+	  <xs:complexType name="TCBezeichnung_Stellwerk">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsAnsteuerung_Element:TBezeichnung_Stellwerk" minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="CStell_Bereich">
 		    <xs:annotation>
          <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bereich_Objekt, mit dem ein Stellbereich beschrieben wird. Ein Stellbereich wird immer von einer AEA (Top) gesteuert. Grenzen des Stellbereichs sind Haupt-, Sperr- oder virtuelle Signale oder Gleisabschlüsse. Jedes Hauptgleis muss einem Stellbereich zugeordnet sein.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisobjekte:CBereich_Objekt">
 				        <xs:sequence>
-					          <xs:element name="ID_Aussenelementansteuerung"
-                           type="nsVerweise:TCID_Aussenelementansteuerung"
-                           minOccurs="1"
+					          <xs:element name="Zusatzinformation_Stellwerk"
+                           type="nsAnsteuerung_Element:TCZusatzinformation_Stellwerk"
+                           minOccurs="0"
                            maxOccurs="1">
 						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Top-Außenelementansteuerung (Außenelementansteuerung, die mit einer ESTW Zentraleinheit verbunden ist).</xs:documentation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Ergänzende Information zur Beschreibung des Stellbereichs.</xs:documentation>
                   </xs:annotation>
 					          </xs:element>
+					          <xs:choice minOccurs="1" maxOccurs="1">
+						            <xs:element name="Bezeichnung_Stellwerk"
+                              type="nsAnsteuerung_Element:TCBezeichnung_Stellwerk"
+                              minOccurs="1"
+                              maxOccurs="1">
+							              <xs:annotation>
+                        <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bezeichnung des Stellwerks, sofern kein Verweis auf eine Aussenelementansteuerung möglich ist (z. B. \"Relaisstellwerk xyz\").</xs:documentation>
+                     </xs:annotation>
+						            </xs:element>
+						            <xs:element name="ID_Aussenelementansteuerung"
+                              type="nsVerweise:TCID_Aussenelementansteuerung"
+                              minOccurs="1"
+                              maxOccurs="1">
+							              <xs:annotation>
+                        <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Top-Außenelementansteuerung (Außenelementansteuerung, die mit einer ESTW Zentraleinheit verbunden ist).</xs:documentation>
+                     </xs:annotation>
+						            </xs:element>
+					          </xs:choice>
 				        </xs:sequence>
 			      </xs:extension>
 		    </xs:complexContent>
@@ -818,6 +937,17 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="TIP_Adressblock_Blau_V6">
 		    <xs:restriction base="nsBasisTypen:TText"/>
 	  </xs:simpleType>
+	  <xs:complexType name="TCTueranschlag">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsAnsteuerung_Element:ENUMTueranschlag" minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="CAEA_GFK_IP_Adressblock">
 		    <xs:sequence>
 			      <xs:element name="GFK_Kategorie" type="nsAnsteuerung_Element:TCGFK_Kategorie" minOccurs="1"
@@ -899,12 +1029,13 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">GFK=Gleisfeldkonzentrator; FeAk=Feldelement-Anschlusskasten; enthält ebenfalls Objektcontroller; dieser ist mit dem ENUM-Wert </xs:documentation>
       </xs:annotation>
 		    <xs:restriction base="xs:string">
-			      <xs:enumeration value="FeAk"/>
-			      <xs:enumeration value="GFK"/>
+			      <xs:enumeration value="BUE_Anschaltung"/>
 			      <xs:enumeration value="ESTW_A"/>
+			      <xs:enumeration value="FeAk"/>
+			      <xs:enumeration value="FeAS"/>
+			      <xs:enumeration value="GFK"/>
 			      <xs:enumeration value="Gleisfreimelde_Innenanlage"/>
 			      <xs:enumeration value="Objektcontroller"/>
-			      <xs:enumeration value="Relaisstellwerk"/>
 			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="virtuelle_Aussenelementansteuerung"/>
 		    </xs:restriction>
@@ -997,6 +1128,17 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:simpleType name="ENUMTueranschlag">
+		    <xs:restriction base="xs:string">
+			      <xs:enumeration value="abnehmbar"/>
+			      <xs:enumeration value="beidseitig"/>
+			      <xs:enumeration value="links"/>
+			      <xs:enumeration value="oben"/>
+			      <xs:enumeration value="rechts"/>
+			      <xs:enumeration value="sonstige"/>
+			      <xs:enumeration value="unten"/>
+		    </xs:restriction>
+	  </xs:simpleType>
 	  <xs:simpleType name="TIP_Adressblock_Blau_V4">
 		    <xs:restriction base="nsBasisTypen:TText"/>
 	  </xs:simpleType>
@@ -1022,6 +1164,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW|BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1062,30 +1205,6 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:element name="Bauart" type="nsAnsteuerung_Element:TCBauart" minOccurs="0" maxOccurs="1">
 				        <xs:annotation>
                <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Herstellerbezogene Bauart der Steuerung. Das Attribut beschreibt im Gegensatz zu Aussenelementansteuerung Art bzw. Hersteller die herstellerbezogene Bauart der Steuerung. Es ist ein Rücklaufdatum der AP PT 2 und dient der Bestandsdatenverwaltung. Beispiel: Aussenelementansteuerung_Art == ESTW_A, Bauart == \"Jüdel E8001\". DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
-            </xs:annotation>
-			      </xs:element>
-			      <xs:element name="Energieversorgung_Art"
-                     type="nsAnsteuerung_Element:TCEnergieversorgung_Art"
-                     minOccurs="1"
-                     maxOccurs="1">
-				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Grundsätzliche Art der Energieversorgung. Wird für die Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Primaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
-            </xs:annotation>
-			      </xs:element>
-			      <xs:element name="Energieversorgung_Art_Ersatz"
-                     type="nsAnsteuerung_Element:TCEnergieversorgung_Art_Ersatz"
-                     minOccurs="0"
-                     maxOccurs="1">
-				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Grundsätzliche Art der Ersatz-Energieversorgung. Wird für die Ersatz-Energieversorgung eine ESTW_Zentraleinheit, eine andere Aussenelementansteuerung oder ein BÜ verwendet, so kann dies in frühen Planungsphasen unspezifisch mit diesem Attribut angegeben werden. In späteren Planungsphasen wird dann alternativ die spezifische Quelle der Energie mit ID Energie Sekundaer angegeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk notwendig. DB-Regelwerk Beschreibung im Erläuterungsbericht</xs:documentation>
-            </xs:annotation>
-			      </xs:element>
-			      <xs:element name="Energieversorgung_Art_Ersatz_2"
-                     type="nsAnsteuerung_Element:TCEnergieversorgung_Art_Ersatz"
-                     minOccurs="0"
-                     maxOccurs="1">
-				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe der zweiten Ersatz-Energieversorgung (bei DSTW: 1. Ersatz Fahrleitung, 2. Ersatz NEA).</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Hersteller" type="nsAnsteuerung_Element:TCHersteller" minOccurs="0"

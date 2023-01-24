@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis.util;
 
@@ -132,22 +139,6 @@ public class GleisAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseLichtraumprofil_TypeClass(Lichtraumprofil_TypeClass object) {
 				return createLichtraumprofil_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseNutzung_Gueterzug_TypeClass(Nutzung_Gueterzug_TypeClass object) {
-				return createNutzung_Gueterzug_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseNutzung_Rangier_TypeClass(Nutzung_Rangier_TypeClass object) {
-				return createNutzung_Rangier_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseNutzung_Reisezug_TypeClass(Nutzung_Reisezug_TypeClass object) {
-				return createNutzung_Reisezug_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseNutzung_SBahn_TypeClass(Nutzung_SBahn_TypeClass object) {
-				return createNutzung_SBahn_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseBasisAttribut_AttributeGroup(BasisAttribut_AttributeGroup object) {
@@ -392,62 +383,6 @@ public class GleisAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLichtraumprofil_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass <em>Nutzung Gueterzug Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass
-	 * @generated
-	 */
-	public Adapter createNutzung_Gueterzug_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass <em>Nutzung Rangier Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass
-	 * @generated
-	 */
-	public Adapter createNutzung_Rangier_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass <em>Nutzung Reisezug Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass
-	 * @generated
-	 */
-	public Adapter createNutzung_Reisezug_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass <em>Nutzung SBahn Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass
-	 * @generated
-	 */
-	public Adapter createNutzung_SBahn_TypeClassAdapter() {
 		return null;
 	}
 

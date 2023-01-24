@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block.util;
 
@@ -154,13 +161,6 @@ public class BlockSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BlockPackage.ENTWURFSGESCHWINDIGKEIT_TYPE_CLASS: {
-				Entwurfsgeschwindigkeit_TypeClass entwurfsgeschwindigkeit_TypeClass = (Entwurfsgeschwindigkeit_TypeClass)theEObject;
-				T result = caseEntwurfsgeschwindigkeit_TypeClass(entwurfsgeschwindigkeit_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(entwurfsgeschwindigkeit_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BlockPackage.ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS: {
 				Erlaubnis_Staendig_Vorhanden_TypeClass erlaubnis_Staendig_Vorhanden_TypeClass = (Erlaubnis_Staendig_Vorhanden_TypeClass)theEObject;
 				T result = caseErlaubnis_Staendig_Vorhanden_TypeClass(erlaubnis_Staendig_Vorhanden_TypeClass);
@@ -210,10 +210,17 @@ public class BlockSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BlockPackage.TRAKTION_ART_TYPE_CLASS: {
-				Traktion_Art_TypeClass traktion_Art_TypeClass = (Traktion_Art_TypeClass)theEObject;
-				T result = caseTraktion_Art_TypeClass(traktion_Art_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(traktion_Art_TypeClass);
+			case BlockPackage.STRECKENGESCHWINDIGKEIT_TYPE_CLASS: {
+				Streckengeschwindigkeit_TypeClass streckengeschwindigkeit_TypeClass = (Streckengeschwindigkeit_TypeClass)theEObject;
+				T result = caseStreckengeschwindigkeit_TypeClass(streckengeschwindigkeit_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(streckengeschwindigkeit_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BlockPackage.TRAKTION_ART_ELEKTRISCH_TYPE_CLASS: {
+				Traktion_Art_Elektrisch_TypeClass traktion_Art_Elektrisch_TypeClass = (Traktion_Art_Elektrisch_TypeClass)theEObject;
+				T result = caseTraktion_Art_Elektrisch_TypeClass(traktion_Art_Elektrisch_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(traktion_Art_Elektrisch_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -423,21 +430,6 @@ public class BlockSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entwurfsgeschwindigkeit Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entwurfsgeschwindigkeit Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEntwurfsgeschwindigkeit_TypeClass(Entwurfsgeschwindigkeit_TypeClass object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Erlaubnis Staendig Vorhanden Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -543,17 +535,32 @@ public class BlockSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traktion Art Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Streckengeschwindigkeit Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traktion Art Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Streckengeschwindigkeit Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTraktion_Art_TypeClass(Traktion_Art_TypeClass object) {
+	public T caseStreckengeschwindigkeit_TypeClass(Streckengeschwindigkeit_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traktion Art Elektrisch Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traktion Art Elektrisch Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTraktion_Art_Elektrisch_TypeClass(Traktion_Art_Elektrisch_TypeClass object) {
 		return null;
 	}
 

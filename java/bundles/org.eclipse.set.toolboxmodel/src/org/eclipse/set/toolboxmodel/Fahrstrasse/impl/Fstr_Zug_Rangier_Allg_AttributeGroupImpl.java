@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.impl;
 
@@ -13,9 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Fahrstrasse.F_Bedienung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bedienstring_TypeClass;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Reihenfolge_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_V_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeGroup;
@@ -29,9 +34,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier_Allg_AttributeG
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Rangier_Allg_AttributeGroupImpl#getFBedienung <em>FBedienung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Rangier_Allg_AttributeGroupImpl#getFstrArt <em>Fstr Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Rangier_Allg_AttributeGroupImpl#getFstrBedienstring <em>Fstr Bedienstring</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Rangier_Allg_AttributeGroupImpl#getFstrBildezeit <em>Fstr Bildezeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Rangier_Allg_AttributeGroupImpl#getFstrReihenfolge <em>Fstr Reihenfolge</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.impl.Fstr_Zug_Rangier_Allg_AttributeGroupImpl#getFstrV <em>Fstr V</em>}</li>
  * </ul>
@@ -50,16 +53,6 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	protected F_Bedienung_TypeClass fBedienung;
 
 	/**
-	 * The cached value of the '{@link #getFstrArt() <em>Fstr Art</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFstrArt()
-	 * @generated
-	 * @ordered
-	 */
-	protected Fstr_Art_TypeClass fstrArt;
-
-	/**
 	 * The cached value of the '{@link #getFstrBedienstring() <em>Fstr Bedienstring</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,16 +61,6 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	 * @ordered
 	 */
 	protected Fstr_Bedienstring_TypeClass fstrBedienstring;
-
-	/**
-	 * The cached value of the '{@link #getFstrBildezeit() <em>Fstr Bildezeit</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFstrBildezeit()
-	 * @generated
-	 * @ordered
-	 */
-	protected Fstr_Bildezeit_TypeClass fstrBildezeit;
 
 	/**
 	 * The cached value of the '{@link #getFstrReihenfolge() <em>Fstr Reihenfolge</em>}' containment reference.
@@ -169,51 +152,6 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 	 * @generated
 	 */
 	@Override
-	public Fstr_Art_TypeClass getFstrArt() {
-		return fstrArt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetFstrArt(Fstr_Art_TypeClass newFstrArt, NotificationChain msgs) {
-		Fstr_Art_TypeClass oldFstrArt = fstrArt;
-		fstrArt = newFstrArt;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART, oldFstrArt, newFstrArt);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFstrArt(Fstr_Art_TypeClass newFstrArt) {
-		if (newFstrArt != fstrArt) {
-			NotificationChain msgs = null;
-			if (fstrArt != null)
-				msgs = ((InternalEObject)fstrArt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART, null, msgs);
-			if (newFstrArt != null)
-				msgs = ((InternalEObject)newFstrArt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART, null, msgs);
-			msgs = basicSetFstrArt(newFstrArt, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART, newFstrArt, newFstrArt));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Fstr_Bedienstring_TypeClass getFstrBedienstring() {
 		return fstrBedienstring;
 	}
@@ -251,51 +189,6 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING, newFstrBedienstring, newFstrBedienstring));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Fstr_Bildezeit_TypeClass getFstrBildezeit() {
-		return fstrBildezeit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetFstrBildezeit(Fstr_Bildezeit_TypeClass newFstrBildezeit, NotificationChain msgs) {
-		Fstr_Bildezeit_TypeClass oldFstrBildezeit = fstrBildezeit;
-		fstrBildezeit = newFstrBildezeit;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, oldFstrBildezeit, newFstrBildezeit);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFstrBildezeit(Fstr_Bildezeit_TypeClass newFstrBildezeit) {
-		if (newFstrBildezeit != fstrBildezeit) {
-			NotificationChain msgs = null;
-			if (fstrBildezeit != null)
-				msgs = ((InternalEObject)fstrBildezeit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, null, msgs);
-			if (newFstrBildezeit != null)
-				msgs = ((InternalEObject)newFstrBildezeit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, null, msgs);
-			msgs = basicSetFstrBildezeit(newFstrBildezeit, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT, newFstrBildezeit, newFstrBildezeit));
 	}
 
 	/**
@@ -398,12 +291,8 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG:
 				return basicSetFBedienung(null, msgs);
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART:
-				return basicSetFstrArt(null, msgs);
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING:
 				return basicSetFstrBedienstring(null, msgs);
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
-				return basicSetFstrBildezeit(null, msgs);
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE:
 				return basicSetFstrReihenfolge(null, msgs);
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V:
@@ -423,12 +312,8 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG:
 				return getFBedienung();
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART:
-				return getFstrArt();
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING:
 				return getFstrBedienstring();
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
-				return getFstrBildezeit();
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE:
 				return getFstrReihenfolge();
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V:
@@ -449,14 +334,8 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG:
 				setFBedienung((F_Bedienung_TypeClass)newValue);
 				return;
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART:
-				setFstrArt((Fstr_Art_TypeClass)newValue);
-				return;
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING:
 				setFstrBedienstring((Fstr_Bedienstring_TypeClass)newValue);
-				return;
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
-				setFstrBildezeit((Fstr_Bildezeit_TypeClass)newValue);
 				return;
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE:
 				setFstrReihenfolge((Fstr_Reihenfolge_TypeClass)newValue);
@@ -481,14 +360,8 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG:
 				setFBedienung((F_Bedienung_TypeClass)null);
 				return;
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART:
-				setFstrArt((Fstr_Art_TypeClass)null);
-				return;
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING:
 				setFstrBedienstring((Fstr_Bedienstring_TypeClass)null);
-				return;
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
-				setFstrBildezeit((Fstr_Bildezeit_TypeClass)null);
 				return;
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE:
 				setFstrReihenfolge((Fstr_Reihenfolge_TypeClass)null);
@@ -512,12 +385,8 @@ public class Fstr_Zug_Rangier_Allg_AttributeGroupImpl extends MinimalEObjectImpl
 		switch (featureID) {
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG:
 				return fBedienung != null;
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART:
-				return fstrArt != null;
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING:
 				return fstrBedienstring != null;
-			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT:
-				return fstrBildezeit != null;
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE:
 				return fstrReihenfolge != null;
 			case FahrstrassePackage.FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V:

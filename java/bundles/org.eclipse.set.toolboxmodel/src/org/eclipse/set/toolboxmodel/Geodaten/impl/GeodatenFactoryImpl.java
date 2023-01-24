@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -19,7 +26,6 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenFactory;
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
-import org.eclipse.set.toolboxmodel.BasisTypen.ENUMWirkrichtung;
 
 import org.eclipse.set.toolboxmodel.Geodaten.*;
 
@@ -67,13 +73,15 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case GeodatenPackage.ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE_CLASS: return createAnzeigegefuehrt_ES_Kategorie_TypeClass();
 			case GeodatenPackage.BEZEICHNUNG_STRECKE_TYPE_CLASS: return createBezeichnung_Strecke_TypeClass();
+			case GeodatenPackage.BREMSWEG_TYPE_CLASS: return createBremsweg_TypeClass();
 			case GeodatenPackage.GEO_FORM_TYPE_CLASS: return createGEO_Form_TypeClass();
+			case GeodatenPackage.GEO_KAD_TYPE_CLASS: return createGEO_KAD_TypeClass();
 			case GeodatenPackage.GEO_KANTE: return createGEO_Kante();
 			case GeodatenPackage.GEO_KANTE_ALLG_ATTRIBUTE_GROUP: return createGEO_Kante_Allg_AttributeGroup();
 			case GeodatenPackage.GEO_KNOTEN: return createGEO_Knoten();
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_LSYS_TYPE_CLASS: return createGEO_KoordinatenSystem_LSys_TypeClass();
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE_CLASS: return createGEO_KoordinatenSystem_Sonstige_TypeClass();
+			case GeodatenPackage.GEO_KOORDINATENSYSTEM_TYPE_CLASS: return createGEO_Koordinatensystem_TypeClass();
 			case GeodatenPackage.GEO_LAENGE_TYPE_CLASS: return createGEO_Laenge_TypeClass();
 			case GeodatenPackage.GEO_PAD_TYPE_CLASS: return createGEO_PAD_TypeClass();
 			case GeodatenPackage.GEO_PUNKT: return createGEO_Punkt();
@@ -96,6 +104,7 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 			case GeodatenPackage.HOEHENPUNKT_DATUM_TYPE_CLASS: return createHoehenpunkt_Datum_TypeClass();
 			case GeodatenPackage.HOEHENPUNKT_HOEHE_TYPE_CLASS: return createHoehenpunkt_Hoehe_TypeClass();
 			case GeodatenPackage.HSYSTEM_TYPE_CLASS: return createHSystem_TypeClass();
+			case GeodatenPackage.KANTENNAME_TYPE_CLASS: return createKantenname_TypeClass();
 			case GeodatenPackage.KNOTENNAME_TYPE_CLASS: return createKnotenname_TypeClass();
 			case GeodatenPackage.NEIGUNG_TYPE_CLASS: return createNeigung_TypeClass();
 			case GeodatenPackage.OERTLICHKEIT: return createOertlichkeit();
@@ -110,8 +119,10 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 			case GeodatenPackage.PLAN_QUELLE_TYPE_CLASS: return createPlan_Quelle_TypeClass();
 			case GeodatenPackage.STRECKE: return createStrecke();
 			case GeodatenPackage.STRECKE_BEZEICHNUNG_ATTRIBUTE_GROUP: return createStrecke_Bezeichnung_AttributeGroup();
+			case GeodatenPackage.STRECKE_BREMSWEG: return createStrecke_Bremsweg();
 			case GeodatenPackage.STRECKE_METER_TYPE_CLASS: return createStrecke_Meter_TypeClass();
 			case GeodatenPackage.STRECKE_PUNKT: return createStrecke_Punkt();
+			case GeodatenPackage.STRECKE_RICHTUNG_TYPE_CLASS: return createStrecke_Richtung_TypeClass();
 			case GeodatenPackage.TB_ART_TYPE_CLASS: return createTB_Art_TypeClass();
 			case GeodatenPackage.TB_BESCHREIBUNG_TYPE_CLASS: return createTB_Beschreibung_TypeClass();
 			case GeodatenPackage.TECHNISCHER_BEREICH: return createTechnischer_Bereich();
@@ -124,6 +135,7 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 			case GeodatenPackage.TOP_LAENGE_TYPE_CLASS: return createTOP_Laenge_TypeClass();
 			case GeodatenPackage.TP_ART_TYPE_CLASS: return createTP_Art_TypeClass();
 			case GeodatenPackage.TP_BESCHREIBUNG_TYPE_CLASS: return createTP_Beschreibung_TypeClass();
+			case GeodatenPackage.TRASSE_KANTE_CHILD_ATTRIBUTE_GROUP: return createTrasse_Kante_child_AttributeGroup();
 			case GeodatenPackage.UEBERHOEHUNG: return createUeberhoehung();
 			case GeodatenPackage.UEBERHOEHUNG_ALLG_ATTRIBUTE_GROUP: return createUeberhoehung_Allg_AttributeGroup();
 			case GeodatenPackage.UEBERHOEHUNG_DATUM_TYPE_CLASS: return createUeberhoehung_Datum_TypeClass();
@@ -133,7 +145,6 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 			case GeodatenPackage.UEBERHOEHUNGSLINIE_FORM_TYPE_CLASS: return createUeberhoehungslinie_Form_TypeClass();
 			case GeodatenPackage.UEBERHOEHUNGSLINIE_LAENGE_TYPE_CLASS: return createUeberhoehungslinie_Laenge_TypeClass();
 			case GeodatenPackage.VPROFIL_ART_TYPE_CLASS: return createV_Profil_Art_TypeClass();
-			case GeodatenPackage.WIRKRICHTUNG_TYPE_CLASS: return createWirkrichtung_TypeClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -149,6 +160,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 		switch (eDataType.getClassifierID()) {
 			case GeodatenPackage.ENUMGEO_FORM:
 				return createENUMGEOFormFromString(eDataType, initialValue);
+			case GeodatenPackage.ENUMGEO_KOORDINATENSYSTEM:
+				return createENUMGEOKoordinatensystemFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUM_HOEHENLINIE_FORM:
 				return createENUMHoehenlinieFormFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMH_SYSTEM:
@@ -157,6 +170,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return createENUMOertlichkeitArtFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUM_PLAN_QUELLE:
 				return createENUMPlanQuelleFromString(eDataType, initialValue);
+			case GeodatenPackage.ENUM_STRECKE_RICHTUNG:
+				return createENUMStreckeRichtungFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMTB_ART:
 				return createENUMTBArtFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMTOP_ANSCHLUSS:
@@ -167,10 +182,16 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return createENUMUeberhoehungslinieFormFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMV_PROFIL_ART:
 				return createENUMVProfilArtFromString(eDataType, initialValue);
+			case GeodatenPackage.ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE:
+				return createAnzeigegefuehrt_ES_Kategorie_TypeFromString(eDataType, initialValue);
 			case GeodatenPackage.BEZEICHNUNG_STRECKE_TYPE:
 				return createBezeichnung_Strecke_TypeFromString(eDataType, initialValue);
+			case GeodatenPackage.ENUMERATION1:
+				return createEnumeration1FromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMGEO_FORM_OBJECT:
 				return createENUMGEOFormObjectFromString(eDataType, initialValue);
+			case GeodatenPackage.ENUMGEO_KOORDINATENSYSTEM_OBJECT:
+				return createENUMGEOKoordinatensystemObjectFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUM_HOEHENLINIE_FORM_OBJECT:
 				return createENUMHoehenlinieFormObjectFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMH_SYSTEM_OBJECT:
@@ -179,6 +200,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return createENUMOertlichkeitArtObjectFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUM_PLAN_QUELLE_OBJECT:
 				return createENUMPlanQuelleObjectFromString(eDataType, initialValue);
+			case GeodatenPackage.ENUM_STRECKE_RICHTUNG_OBJECT:
+				return createENUMStreckeRichtungObjectFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMTB_ART_OBJECT:
 				return createENUMTBArtObjectFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMTOP_ANSCHLUSS_OBJECT:
@@ -189,10 +212,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return createENUMUeberhoehungslinieFormObjectFromString(eDataType, initialValue);
 			case GeodatenPackage.ENUMV_PROFIL_ART_OBJECT:
 				return createENUMVProfilArtObjectFromString(eDataType, initialValue);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_LSYS_TYPE:
-				return createGEO_KoordinatenSystem_LSys_TypeFromString(eDataType, initialValue);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE:
-				return createGEO_KoordinatenSystem_Sonstige_TypeFromString(eDataType, initialValue);
+			case GeodatenPackage.GEO_KAD_TYPE:
+				return createGEO_KAD_TypeFromString(eDataType, initialValue);
 			case GeodatenPackage.GEO_LAENGE_TYPE:
 				return createGEO_Laenge_TypeFromString(eDataType, initialValue);
 			case GeodatenPackage.GEO_PAD_TYPE:
@@ -215,6 +236,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return createHoehenlinie_Laenge_TypeFromString(eDataType, initialValue);
 			case GeodatenPackage.HOEHENPUNKT_HOEHE_TYPE:
 				return createHoehenpunkt_Hoehe_TypeFromString(eDataType, initialValue);
+			case GeodatenPackage.KANTENNAME_TYPE:
+				return createKantenname_TypeFromString(eDataType, initialValue);
 			case GeodatenPackage.KNOTENNAME_TYPE:
 				return createKnotenname_TypeFromString(eDataType, initialValue);
 			case GeodatenPackage.NEIGUNG_TYPE:
@@ -237,8 +260,6 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return createUeberhoehung_Hoehe_TypeFromString(eDataType, initialValue);
 			case GeodatenPackage.UEBERHOEHUNGSLINIE_LAENGE_TYPE:
 				return createUeberhoehungslinie_Laenge_TypeFromString(eDataType, initialValue);
-			case GeodatenPackage.WIRKRICHTUNG_TYPE:
-				return createWirkrichtung_TypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -254,6 +275,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 		switch (eDataType.getClassifierID()) {
 			case GeodatenPackage.ENUMGEO_FORM:
 				return convertENUMGEOFormToString(eDataType, instanceValue);
+			case GeodatenPackage.ENUMGEO_KOORDINATENSYSTEM:
+				return convertENUMGEOKoordinatensystemToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUM_HOEHENLINIE_FORM:
 				return convertENUMHoehenlinieFormToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMH_SYSTEM:
@@ -262,6 +285,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return convertENUMOertlichkeitArtToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUM_PLAN_QUELLE:
 				return convertENUMPlanQuelleToString(eDataType, instanceValue);
+			case GeodatenPackage.ENUM_STRECKE_RICHTUNG:
+				return convertENUMStreckeRichtungToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMTB_ART:
 				return convertENUMTBArtToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMTOP_ANSCHLUSS:
@@ -272,10 +297,16 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return convertENUMUeberhoehungslinieFormToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMV_PROFIL_ART:
 				return convertENUMVProfilArtToString(eDataType, instanceValue);
+			case GeodatenPackage.ANZEIGEGEFUEHRT_ES_KATEGORIE_TYPE:
+				return convertAnzeigegefuehrt_ES_Kategorie_TypeToString(eDataType, instanceValue);
 			case GeodatenPackage.BEZEICHNUNG_STRECKE_TYPE:
 				return convertBezeichnung_Strecke_TypeToString(eDataType, instanceValue);
+			case GeodatenPackage.ENUMERATION1:
+				return convertEnumeration1ToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMGEO_FORM_OBJECT:
 				return convertENUMGEOFormObjectToString(eDataType, instanceValue);
+			case GeodatenPackage.ENUMGEO_KOORDINATENSYSTEM_OBJECT:
+				return convertENUMGEOKoordinatensystemObjectToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUM_HOEHENLINIE_FORM_OBJECT:
 				return convertENUMHoehenlinieFormObjectToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMH_SYSTEM_OBJECT:
@@ -284,6 +315,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return convertENUMOertlichkeitArtObjectToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUM_PLAN_QUELLE_OBJECT:
 				return convertENUMPlanQuelleObjectToString(eDataType, instanceValue);
+			case GeodatenPackage.ENUM_STRECKE_RICHTUNG_OBJECT:
+				return convertENUMStreckeRichtungObjectToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMTB_ART_OBJECT:
 				return convertENUMTBArtObjectToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMTOP_ANSCHLUSS_OBJECT:
@@ -294,10 +327,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return convertENUMUeberhoehungslinieFormObjectToString(eDataType, instanceValue);
 			case GeodatenPackage.ENUMV_PROFIL_ART_OBJECT:
 				return convertENUMVProfilArtObjectToString(eDataType, instanceValue);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_LSYS_TYPE:
-				return convertGEO_KoordinatenSystem_LSys_TypeToString(eDataType, instanceValue);
-			case GeodatenPackage.GEO_KOORDINATEN_SYSTEM_SONSTIGE_TYPE:
-				return convertGEO_KoordinatenSystem_Sonstige_TypeToString(eDataType, instanceValue);
+			case GeodatenPackage.GEO_KAD_TYPE:
+				return convertGEO_KAD_TypeToString(eDataType, instanceValue);
 			case GeodatenPackage.GEO_LAENGE_TYPE:
 				return convertGEO_Laenge_TypeToString(eDataType, instanceValue);
 			case GeodatenPackage.GEO_PAD_TYPE:
@@ -320,6 +351,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return convertHoehenlinie_Laenge_TypeToString(eDataType, instanceValue);
 			case GeodatenPackage.HOEHENPUNKT_HOEHE_TYPE:
 				return convertHoehenpunkt_Hoehe_TypeToString(eDataType, instanceValue);
+			case GeodatenPackage.KANTENNAME_TYPE:
+				return convertKantenname_TypeToString(eDataType, instanceValue);
 			case GeodatenPackage.KNOTENNAME_TYPE:
 				return convertKnotenname_TypeToString(eDataType, instanceValue);
 			case GeodatenPackage.NEIGUNG_TYPE:
@@ -342,11 +375,20 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 				return convertUeberhoehung_Hoehe_TypeToString(eDataType, instanceValue);
 			case GeodatenPackage.UEBERHOEHUNGSLINIE_LAENGE_TYPE:
 				return convertUeberhoehungslinie_Laenge_TypeToString(eDataType, instanceValue);
-			case GeodatenPackage.WIRKRICHTUNG_TYPE:
-				return convertWirkrichtung_TypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Anzeigegefuehrt_ES_Kategorie_TypeClass createAnzeigegefuehrt_ES_Kategorie_TypeClass() {
+		Anzeigegefuehrt_ES_Kategorie_TypeClassImpl anzeigegefuehrt_ES_Kategorie_TypeClass = new Anzeigegefuehrt_ES_Kategorie_TypeClassImpl();
+		return anzeigegefuehrt_ES_Kategorie_TypeClass;
 	}
 
 	/**
@@ -366,9 +408,31 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	@Override
+	public Bremsweg_TypeClass createBremsweg_TypeClass() {
+		Bremsweg_TypeClassImpl bremsweg_TypeClass = new Bremsweg_TypeClassImpl();
+		return bremsweg_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public GEO_Form_TypeClass createGEO_Form_TypeClass() {
 		GEO_Form_TypeClassImpl geO_Form_TypeClass = new GEO_Form_TypeClassImpl();
 		return geO_Form_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GEO_KAD_TypeClass createGEO_KAD_TypeClass() {
+		GEO_KAD_TypeClassImpl geO_KAD_TypeClass = new GEO_KAD_TypeClassImpl();
+		return geO_KAD_TypeClass;
 	}
 
 	/**
@@ -410,20 +474,9 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	@Override
-	public GEO_KoordinatenSystem_LSys_TypeClass createGEO_KoordinatenSystem_LSys_TypeClass() {
-		GEO_KoordinatenSystem_LSys_TypeClassImpl geO_KoordinatenSystem_LSys_TypeClass = new GEO_KoordinatenSystem_LSys_TypeClassImpl();
-		return geO_KoordinatenSystem_LSys_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public GEO_KoordinatenSystem_Sonstige_TypeClass createGEO_KoordinatenSystem_Sonstige_TypeClass() {
-		GEO_KoordinatenSystem_Sonstige_TypeClassImpl geO_KoordinatenSystem_Sonstige_TypeClass = new GEO_KoordinatenSystem_Sonstige_TypeClassImpl();
-		return geO_KoordinatenSystem_Sonstige_TypeClass;
+	public GEO_Koordinatensystem_TypeClass createGEO_Koordinatensystem_TypeClass() {
+		GEO_Koordinatensystem_TypeClassImpl geO_Koordinatensystem_TypeClass = new GEO_Koordinatensystem_TypeClassImpl();
+		return geO_Koordinatensystem_TypeClass;
 	}
 
 	/**
@@ -674,6 +727,17 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	@Override
+	public Kantenname_TypeClass createKantenname_TypeClass() {
+		Kantenname_TypeClassImpl kantenname_TypeClass = new Kantenname_TypeClassImpl();
+		return kantenname_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Knotenname_TypeClass createKnotenname_TypeClass() {
 		Knotenname_TypeClassImpl knotenname_TypeClass = new Knotenname_TypeClassImpl();
 		return knotenname_TypeClass;
@@ -828,6 +892,17 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	@Override
+	public Strecke_Bremsweg createStrecke_Bremsweg() {
+		Strecke_BremswegImpl strecke_Bremsweg = new Strecke_BremswegImpl();
+		return strecke_Bremsweg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Strecke_Meter_TypeClass createStrecke_Meter_TypeClass() {
 		Strecke_Meter_TypeClassImpl strecke_Meter_TypeClass = new Strecke_Meter_TypeClassImpl();
 		return strecke_Meter_TypeClass;
@@ -842,6 +917,17 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	public Strecke_Punkt createStrecke_Punkt() {
 		Strecke_PunktImpl strecke_Punkt = new Strecke_PunktImpl();
 		return strecke_Punkt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Strecke_Richtung_TypeClass createStrecke_Richtung_TypeClass() {
+		Strecke_Richtung_TypeClassImpl strecke_Richtung_TypeClass = new Strecke_Richtung_TypeClassImpl();
+		return strecke_Richtung_TypeClass;
 	}
 
 	/**
@@ -982,6 +1068,17 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	@Override
+	public Trasse_Kante_child_AttributeGroup createTrasse_Kante_child_AttributeGroup() {
+		Trasse_Kante_child_AttributeGroupImpl trasse_Kante_child_AttributeGroup = new Trasse_Kante_child_AttributeGroupImpl();
+		return trasse_Kante_child_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Ueberhoehung createUeberhoehung() {
 		UeberhoehungImpl ueberhoehung = new UeberhoehungImpl();
 		return ueberhoehung;
@@ -1080,17 +1177,6 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Wirkrichtung_TypeClass createWirkrichtung_TypeClass() {
-		Wirkrichtung_TypeClassImpl wirkrichtung_TypeClass = new Wirkrichtung_TypeClassImpl();
-		return wirkrichtung_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ENUMGEOForm createENUMGEOFormFromString(EDataType eDataType, String initialValue) {
 		ENUMGEOForm result = ENUMGEOForm.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -1103,6 +1189,26 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	public String convertENUMGEOFormToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMGEOKoordinatensystem createENUMGEOKoordinatensystemFromString(EDataType eDataType, String initialValue) {
+		ENUMGEOKoordinatensystem result = ENUMGEOKoordinatensystem.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMGEOKoordinatensystemToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1183,6 +1289,26 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	public String convertENUMPlanQuelleToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMStreckeRichtung createENUMStreckeRichtungFromString(EDataType eDataType, String initialValue) {
+		ENUMStreckeRichtung result = ENUMStreckeRichtung.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMStreckeRichtungToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1291,6 +1417,24 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String createAnzeigegefuehrt_ES_Kategorie_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAnzeigegefuehrt_ES_Kategorie_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String createBezeichnung_Strecke_TypeFromString(EDataType eDataType, String initialValue) {
 		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
@@ -1309,6 +1453,24 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String createEnumeration1FromString(EDataType eDataType, String initialValue) {
+		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.STRING, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEnumeration1ToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.STRING, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ENUMGEOForm createENUMGEOFormObjectFromString(EDataType eDataType, String initialValue) {
 		return createENUMGEOFormFromString(GeodatenPackage.Literals.ENUMGEO_FORM, initialValue);
 	}
@@ -1320,6 +1482,24 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 */
 	public String convertENUMGEOFormObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMGEOFormToString(GeodatenPackage.Literals.ENUMGEO_FORM, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMGEOKoordinatensystem createENUMGEOKoordinatensystemObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMGEOKoordinatensystemFromString(GeodatenPackage.Literals.ENUMGEO_KOORDINATENSYSTEM, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMGEOKoordinatensystemObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMGEOKoordinatensystemToString(GeodatenPackage.Literals.ENUMGEO_KOORDINATENSYSTEM, instanceValue);
 	}
 
 	/**
@@ -1392,6 +1572,24 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 */
 	public String convertENUMPlanQuelleObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMPlanQuelleToString(GeodatenPackage.Literals.ENUM_PLAN_QUELLE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMStreckeRichtung createENUMStreckeRichtungObjectFromString(EDataType eDataType, String initialValue) {
+		return createENUMStreckeRichtungFromString(GeodatenPackage.Literals.ENUM_STRECKE_RICHTUNG, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertENUMStreckeRichtungObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertENUMStreckeRichtungToString(GeodatenPackage.Literals.ENUM_STRECKE_RICHTUNG, instanceValue);
 	}
 
 	/**
@@ -1489,8 +1687,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createGEO_KoordinatenSystem_LSys_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, initialValue);
+	public String createGEO_KAD_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
 
 	/**
@@ -1498,26 +1696,8 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGEO_KoordinatenSystem_LSys_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String createGEO_KoordinatenSystem_Sonstige_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertGEO_KoordinatenSystem_Sonstige_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.ZEICHENKETTE_TYPE, instanceValue);
+	public String convertGEO_KAD_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
 	/**
@@ -1723,6 +1903,24 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String createKantenname_TypeFromString(EDataType eDataType, String initialValue) {
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertKantenname_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String createKnotenname_TypeFromString(EDataType eDataType, String initialValue) {
 		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
@@ -1832,7 +2030,7 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	public String createTB_Beschreibung_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.FREI_TEXT_TYPE, initialValue);
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
 
 	/**
@@ -1841,7 +2039,7 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	public String convertTB_Beschreibung_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.FREI_TEXT_TYPE, instanceValue);
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
 	/**
@@ -1868,7 +2066,7 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	public String createTP_Beschreibung_TypeFromString(EDataType eDataType, String initialValue) {
-		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.FREI_TEXT_TYPE, initialValue);
+		return (String)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.TEXT_TYPE, initialValue);
 	}
 
 	/**
@@ -1877,7 +2075,7 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 * @generated
 	 */
 	public String convertTP_Beschreibung_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.FREI_TEXT_TYPE, instanceValue);
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.TEXT_TYPE, instanceValue);
 	}
 
 	/**
@@ -1914,24 +2112,6 @@ public class GeodatenFactoryImpl extends EFactoryImpl implements GeodatenFactory
 	 */
 	public String convertUeberhoehungslinie_Laenge_TypeToString(EDataType eDataType, Object instanceValue) {
 		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.METER_TYPE, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ENUMWirkrichtung createWirkrichtung_TypeFromString(EDataType eDataType, String initialValue) {
-		return (ENUMWirkrichtung)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.WIRKRICHTUNG_TYPE, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertWirkrichtung_TypeToString(EDataType eDataType, Object instanceValue) {
-		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.WIRKRICHTUNG_TYPE, instanceValue);
 	}
 
 	/**

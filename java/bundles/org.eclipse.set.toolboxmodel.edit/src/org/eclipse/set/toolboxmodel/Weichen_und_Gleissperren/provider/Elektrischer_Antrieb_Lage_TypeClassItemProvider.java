@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -22,12 +23,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts;
-
 import org.eclipse.set.toolboxmodel.BasisTypen.provider.BasisAttribut_AttributeGroupItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Elektrischer_Antrieb_Lage_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage;
 
@@ -105,7 +105,7 @@ public class Elektrischer_Antrieb_Lage_TypeClassItemProvider extends BasisAttrib
 	 */
 	@Override
 	public String getText(Object object) {
-		ENUMLinksRechts labelValue = ((Elektrischer_Antrieb_Lage_TypeClass)object).getWert();
+		ENUMElektrischerAntriebLage labelValue = ((Elektrischer_Antrieb_Lage_TypeClass)object).getWert();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Elektrischer_Antrieb_Lage_TypeClass_type") :

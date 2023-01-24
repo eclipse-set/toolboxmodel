@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung;
 
@@ -15,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getAnnaeherungsgeschwindigkeit <em>Annaeherungsgeschwindigkeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getDWegPrio <em>DWeg Prio</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getFstrBildezeit <em>Fstr Bildezeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getFUEMAuswertung <em>FUEM Auswertung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getSichtzeitVorsignal <em>Sichtzeit Vorsignal</em>}</li>
  * </ul>
@@ -75,6 +83,32 @@ public interface ZL_Fstr_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setDWegPrio(DWeg_Prio_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Fstr Bildezeit</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Für die Ermittlung des rechtzeitigen Fahrstraßenanstoßes notwendige Fahrstraßenbildezeit. DB-Regelwerk Ril 819.0732
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Fstr Bildezeit</em>' containment reference.
+	 * @see #setFstrBildezeit(Fstr_Bildezeit_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Allg_AttributeGroup_FstrBildezeit()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='Fstr_Bildezeit'"
+	 * @generated
+	 */
+	Fstr_Bildezeit_TypeClass getFstrBildezeit();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Allg_AttributeGroup#getFstrBildezeit <em>Fstr Bildezeit</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fstr Bildezeit</em>' containment reference.
+	 * @see #getFstrBildezeit()
+	 * @generated
+	 */
+	void setFstrBildezeit(Fstr_Bildezeit_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>FUEM Auswertung</b></em>' containment reference.

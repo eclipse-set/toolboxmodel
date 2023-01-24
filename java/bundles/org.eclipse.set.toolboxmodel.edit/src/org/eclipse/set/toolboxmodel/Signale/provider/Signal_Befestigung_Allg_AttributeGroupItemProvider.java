@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Signale.SignaleFactory;
@@ -86,6 +87,7 @@ public class Signal_Befestigung_Allg_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE);
 		}
@@ -141,6 +143,7 @@ public class Signal_Befestigung_Allg_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(Signal_Befestigung_Allg_AttributeGroup.class)) {
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART:
+			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART:
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__HOEHE_FUNDAMENTOBERKANTE:
 			case SignalePackage.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__OBERE_LICHTPUNKTHOEHE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -166,6 +169,11 @@ public class Signal_Befestigung_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__BEFESTIGUNG_ART,
 				 SignaleFactory.eINSTANCE.createBefestigung_Art_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_BEFESTIGUNG_ALLG_ATTRIBUTE_GROUP__FUNDAMENT_ART,
+				 SignaleFactory.eINSTANCE.createFundament_Art_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

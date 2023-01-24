@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Flankenschutz/1.9.0.2">
+           xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Flankenschutz/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,11 +26,11 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
 	  <xs:complexType name="TCFahrt_Ueber">
 		    <xs:complexContent>
@@ -46,6 +44,17 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:complexType name="CFla_Schutz_Anforderer">
 		    <xs:sequence>
+			      <xs:element name="EKW_Kr_Anteil" type="nsFlankenschutz:TCEKW_Kr_Anteil" minOccurs="0"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Nur bei EKW: Kennzeichnung des Kreuzungsanteils, auf den sich die Flankenschutzbetrachtung bezieht (\"true\"). Der Wert \"false\" wird nicht verwendet. Die Zerlegung in Weichen- und Kreuzungsanteile findet nur bei der Flankenschutzbetrachtung für die EKW statt. Je zugehörigem Weichenelement sind damit 4 Inszanzen Fla_Schutz anzulegen (zweimal bezogen auf den Weichenanteil (links/rechts) und zweimal bezogen auf den Kreuzungsanteil (links/rechts)). Die Modellierung der EKW an sich (eine Weichenanlage, zwei Weichenelemente) bleibt hiervon unberührt.</xs:documentation>
+               <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
+                  <ppi:WorkflowInformation>
+                     <ppi:ProposedValue>true</ppi:ProposedValue>
+                  </ppi:WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+			      </xs:element>
 			      <xs:element name="Fahrt_Ueber" type="nsFlankenschutz:TCFahrt_Ueber" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
@@ -56,7 +65,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                      minOccurs="1"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Element, das den Flankenschutz anfordert. Flankenschutz können Weichen, Kreuzungen (W Kr Gsp Element) und Nahbedienbereiche (NB Zone Grenze) anfordern. Ist bei einer Zwieschutzweiche ein Ersatzschutz geplant, ist die Zwieschutzweiche der Anforderer. DB-Regelwerk Flankenschutztabelle, Spalten 1 \"Fahrstraßen über/Nahbedienbezirk\" und 2 \"Nahbediengrenze\"</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Element, das den Flankenschutz anfordert. Flankenschutz können Weichen, Kreuzungen (W Kr Gsp Element) und Nahstellbereiche (NB Zone Grenze) anfordern. Ist bei einer Zwieschutzweiche ein Ersatzschutz geplant, ist die Zwieschutzweiche der Anforderer. DB-Regelwerk Flankenschutztabelle, Spalten 1 \"Fahrstraßen über/Nahbedienbezirk\" und 2 \"Nahbediengrenze\"</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 		    </xs:sequence>
@@ -83,25 +92,27 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:element name="ID_Fla_Schutz_L" type="nsVerweise:TCID_Fla_Schutz" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Ersatzschutzmaßnahme bei Fernschutz und Anforderung in Linkslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 \"direkt anschließender Flankenschutz\" und 8...9 \"Flankenschutz\"</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Ersatzschutzmaßnahme bei Ersatzschutz und Anforderung in Linkslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 \"direkt anschließender Flankenschutz\" und 8...9 \"Flankenschutz\"</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="ID_Fla_Schutz_R" type="nsVerweise:TCID_Fla_Schutz" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Ersatzschutzmaßnahme bei Fernschutz und Anforderung in Rechtslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 \"direkt anschließender Flankenschutz\" und 8...9 \"Flankenschutz\"</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Ersatzschutzmaßnahme bei Ersatzschutz und Anforderung in Rechtslage. DB-Regelwerk Zwieschutzweichentabelle, Spalten 5...7 \"direkt anschließender Flankenschutz\" und 8...9 \"Flankenschutz\"</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Massnahme_L" type="nsFlankenschutz:TCMassnahme" minOccurs="1"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Maßnahme, durch die der Flankenschutz im linken Strang der Zwieschutzweiche hergestellt wird. Fernschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Linkslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. Die Maßnahmen beziehen sich nur auf den Zwieschutzfall. Wird die Weiche nur in einem Strang angefordert, wird sie regulär Flankenschutz bieten, wie es in der Flankenschutzplanung vorgesehen ist. DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 \"Zwieschutzfall-Maßnahme\"</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Maßnahme, durch die der Flankenschutz im linken Strang der Zwieschutzweiche hergestellt wird. Ersatzschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Linkslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. Verschluss/Ersatzschutz: Der Wert bildet den Planungsfall ab, dass die Flankenschutzanforderungen an die Zwieschutzweiche von gleichberechtigten Fahrstraßen kommen und damit planerisch keine feste Zuweisung von Verschluss und Ersatzschutz erfolgt. Der ENUM-Wert ist also im Sinne „Verschluss oder Ersatzschutz“ zu interpretieren. In der Praxis bedeutet dies, dass die Fahrstraße, die zuerst eingestellt wird, den direkten Flankenschutz und die als zweite eingestellte Fahrstraße den Ersatzschutz erhält. 
+Die Maßnahmen beziehen sich nur auf den Zwieschutzfall. Wird die Weiche nur in einem Strang angefordert, wird sie regulär Flankenschutz bieten, wie es in der Flankenschutzplanung vorgesehen ist. DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 \"Zwieschutzfall-Maßnahme\"</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Massnahme_R" type="nsFlankenschutz:TCMassnahme" minOccurs="1"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Maßnahme, durch die der Flankenschutz im rechten Strang der Zwieschutzweiche hergestellt wird. Fernschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Rechtslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 \"Zwieschutzfall-Maßnahme\"</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Maßnahme, durch die der Flankenschutz im rechten Strang der Zwieschutzweiche hergestellt wird. Ersatzschutz: Der Flankenschutz wird durch das nächste Flankenschutzelement hergestellt. Verschluss: Die Flankenschutzweiche wird in der Rechtslage verschlossen. Verzicht: Der Flankenschutz wird durch betriebliche Maßnahmen hergestellt; technisch wird darauf verzichtet. Verschluss/Ersatzschutz: Der Wert bildet den Planungsfall ab, dass die Flankenschutzanforderungen an die Zwieschutzweiche von gleichberechtigten Fahrstraßen kommen und damit planerisch keine feste Zuweisung von Verschluss und Ersatzschutz erfolgt. Der ENUM-Wert ist also im Sinne „Verschluss oder Ersatzschutz“ zu interpretieren. In der Praxis bedeutet dies, dass die Fahrstraße, die zuerst eingestellt wird, den direkten Flankenschutz und die als zweite eingestellte Fahrstraße den Ersatzchutz erhält. Die Maßnahmen beziehen sich nur auf den Zwieschutzfall. Wird die Weiche nur in einem Strang angefordert, wird sie regulär Flankenschutz bieten, wie es in der Flankenschutzplanung vorgesehen ist. 
+DB-Regelwerk Zwieschutzweichentabelle, Spalte 4 \"Zwieschutzfall-Maßnahme\"</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Nachlaufverhinderung" type="nsFlankenschutz:TCNachlaufverhinderung"
@@ -124,6 +135,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -134,7 +146,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                            minOccurs="1"
                            maxOccurs="1">
 						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, ob eine Freimeldung des Freimeldeabschnitts im Flankenschutzraum erfolgen soll (true) oder nicht (false). In der Regel werden die Freimeldeabschnitte des Flankenschutzraumes freigemeldet. Im Ausnahmefall kann bei Fernschutz auf die Freimeldung verzichtet werden (Lastenheft F1 Abschnitt Z 4.4.10). DB-Regelwerk Das Datum ist im jetzigen PT 1 höchstens unformal (Fußnote, Erläuterungsbericht) enthalten.</xs:documentation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, ob eine Freimeldung des Freimeldeabschnitts im Flankenschutzraum erfolgen soll (true) oder nicht (false). In der Regel werden die Freimeldeabschnitte des Flankenschutzraumes freigemeldet. Im Ausnahmefall kann bei Ersatzschutz auf die Freimeldung verzichtet werden (Lastenheft F1 Abschnitt Z 4.4.10). DB-Regelwerk Das Datum ist im jetzigen PT 1 höchstens unformal (Fußnote, Erläuterungsbericht) enthalten.</xs:documentation>
                      <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
                         <ppi:WorkflowInformation>
                            <ppi:ProposedValue>true</ppi:ProposedValue>
@@ -181,13 +193,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:element name="ID_Fla_Weitergabe_L" type="nsVerweise:TCID_Fla_Schutz" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung im linken Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 \"Weitergabe über Weiche, Kreuzung\" und 7 \"wie Fahrt über deren Strang\" mit Ausfüllung \"L\" (Links)</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung wie bei Fahrt über den linken Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 \"Weitergabe über Weiche, Kreuzung\" und 7 \"wie Fahrt über deren Strang\" mit Ausfüllung \"L\" (Links)</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="ID_Fla_Weitergabe_R" type="nsVerweise:TCID_Fla_Schutz" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung im rechten Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 \"Weitergabe über Weiche, Kreuzung\" und 7 \"wie Fahrt über deren Strang\" mit Ausfüllung \"R\" (Rechts)</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Flankenschutzmaßnahme bei Weitergabe der Flankenschutzanforderung wie bei Fahrt über den rechten Strang der Flankenschutztransportweiche. DB-Regelwerk Flankenschutztabelle, Spalten 6 \"Weitergabe über Weiche, Kreuzung\" und 7 \"wie Fahrt über deren Strang\" mit Ausfüllung \"R\" (Rechts)</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 		    </xs:sequence>
@@ -216,6 +228,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -225,12 +238,6 @@ XML Schema for PlanPro interface.</xs:documentation>
 					          <xs:element name="Fla_Schutz_Anforderer" type="nsFlankenschutz:CFla_Schutz_Anforderer"
                            minOccurs="1"
                            maxOccurs="1"/>
-					          <xs:element name="ID_Fla_Weitergabe_EKW" type="nsVerweise:TCID_Fla_Schutz" minOccurs="0"
-                           maxOccurs="1">
-						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zusätzliche Flankenschutzweitergabe bei Flankenschutzanforderung durch eine EKW. Die zusätzliche Weitergabe wird nicht wirksam, wenn die Flankenschutzanforderung der EKW nur durch einen Flankenschutztransport ausgelöst wird. Siehe auch Flankenschutz EKW. DB-Regelwerk Flankenschutztabelle, Fußnote</xs:documentation>
-                  </xs:annotation>
-					          </xs:element>
 					          <xs:choice minOccurs="1" maxOccurs="1">
 						            <xs:element name="Fla_Schutz_Signal" type="nsFlankenschutz:CFla_Schutz_Signal"
                               minOccurs="1"
@@ -257,6 +264,15 @@ XML Schema for PlanPro interface.</xs:documentation>
 				        <xs:sequence>
 					          <xs:element name="Wert" type="nsFlankenschutz:TFla_W_Lage" minOccurs="1" maxOccurs="1"
                            nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
+	  <xs:complexType name="TCEKW_Kr_Anteil">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="xs:boolean" minOccurs="1" maxOccurs="1" nillable="true"/>
 				        </xs:sequence>
 			      </xs:extension>
 		    </xs:complexContent>
@@ -288,6 +304,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -335,9 +352,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:simpleType name="ENUMMassnahme">
 		    <xs:restriction base="xs:string">
-			      <xs:enumeration value="Fernschutz"/>
+			      <xs:enumeration value="Ersatzschutz"/>
 			      <xs:enumeration value="Verschluss"/>
-			      <xs:enumeration value="Verschluss_Fernschutz"/>
+			      <xs:enumeration value="Verschluss_Ersatzschutz"/>
 			      <xs:enumeration value="Verzicht"/>
 		    </xs:restriction>
 	  </xs:simpleType>

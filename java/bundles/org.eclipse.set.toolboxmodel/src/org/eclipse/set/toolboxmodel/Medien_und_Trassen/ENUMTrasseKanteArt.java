@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen;
 
@@ -42,6 +49,16 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	ENUM_TRASSE_KANTE_ART_FREI(1, "ENUMTrasse_Kante_Art_frei", "frei"),
 
 	/**
+	 * The '<em><b>ENUM Trasse Kante Art Kabelgestell Tunnel</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TRASSE_KANTE_ART_KABELGESTELL_TUNNEL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_TRASSE_KANTE_ART_KABELGESTELL_TUNNEL(2, "ENUMTrasse_Kante_Art_Kabelgestell_Tunnel", "Kabelgestell_Tunnel"),
+
+	/**
 	 * The '<em><b>ENUM Trasse Kante Art Lufttrasse</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,7 +66,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TRASSE_KANTE_ART_LUFTTRASSE(2, "ENUMTrasse_Kante_Art_Lufttrasse", "Lufttrasse"),
+	ENUM_TRASSE_KANTE_ART_LUFTTRASSE(3, "ENUMTrasse_Kante_Art_Lufttrasse", "Lufttrasse"),
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Rohrtrasse</b></em>' literal object.
@@ -59,7 +76,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TRASSE_KANTE_ART_ROHRTRASSE(3, "ENUMTrasse_Kante_Art_Rohrtrasse", "Rohrtrasse"),
+	ENUM_TRASSE_KANTE_ART_ROHRTRASSE(4, "ENUMTrasse_Kante_Art_Rohrtrasse", "Rohrtrasse"),
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art sonstige</b></em>' literal object.
@@ -69,7 +86,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TRASSE_KANTE_ART_SONSTIGE(4, "ENUMTrasse_Kante_Art_sonstige", "sonstige"),
+	ENUM_TRASSE_KANTE_ART_SONSTIGE(5, "ENUMTrasse_Kante_Art_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Trogtrasse</b></em>' literal object.
@@ -79,7 +96,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TRASSE_KANTE_ART_TROGTRASSE(5, "ENUMTrasse_Kante_Art_Trogtrasse", "Trogtrasse"),
+	ENUM_TRASSE_KANTE_ART_TROGTRASSE(6, "ENUMTrasse_Kante_Art_Trogtrasse", "Trogtrasse"),
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Trogtrasse aufgestaendert</b></em>' literal object.
@@ -89,7 +106,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TRASSE_KANTE_ART_TROGTRASSE_AUFGESTAENDERT(6, "ENUMTrasse_Kante_Art_Trogtrasse_aufgestaendert", "Trogtrasse_aufgestaendert"),
+	ENUM_TRASSE_KANTE_ART_TROGTRASSE_AUFGESTAENDERT(7, "ENUMTrasse_Kante_Art_Trogtrasse_aufgestaendert", "Trogtrasse_aufgestaendert"),
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Trogtrasse Behelf</b></em>' literal object.
@@ -99,7 +116,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TRASSE_KANTE_ART_TROGTRASSE_BEHELF(7, "ENUMTrasse_Kante_Art_Trogtrasse_Behelf", "Trogtrasse_Behelf");
+	ENUM_TRASSE_KANTE_ART_TROGTRASSE_BEHELF(8, "ENUMTrasse_Kante_Art_Trogtrasse_Behelf", "Trogtrasse_Behelf");
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Erdtrasse</b></em>' literal value.
@@ -124,6 +141,17 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	public static final int ENUM_TRASSE_KANTE_ART_FREI_VALUE = 1;
 
 	/**
+	 * The '<em><b>ENUM Trasse Kante Art Kabelgestell Tunnel</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TRASSE_KANTE_ART_KABELGESTELL_TUNNEL
+	 * @model name="ENUMTrasse_Kante_Art_Kabelgestell_Tunnel" literal="Kabelgestell_Tunnel"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_TRASSE_KANTE_ART_KABELGESTELL_TUNNEL_VALUE = 2;
+
+	/**
 	 * The '<em><b>ENUM Trasse Kante Art Lufttrasse</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,7 +160,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TRASSE_KANTE_ART_LUFTTRASSE_VALUE = 2;
+	public static final int ENUM_TRASSE_KANTE_ART_LUFTTRASSE_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Rohrtrasse</b></em>' literal value.
@@ -143,7 +171,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TRASSE_KANTE_ART_ROHRTRASSE_VALUE = 3;
+	public static final int ENUM_TRASSE_KANTE_ART_ROHRTRASSE_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art sonstige</b></em>' literal value.
@@ -154,7 +182,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TRASSE_KANTE_ART_SONSTIGE_VALUE = 4;
+	public static final int ENUM_TRASSE_KANTE_ART_SONSTIGE_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Trogtrasse</b></em>' literal value.
@@ -165,7 +193,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TRASSE_KANTE_ART_TROGTRASSE_VALUE = 5;
+	public static final int ENUM_TRASSE_KANTE_ART_TROGTRASSE_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Trogtrasse aufgestaendert</b></em>' literal value.
@@ -176,7 +204,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TRASSE_KANTE_ART_TROGTRASSE_AUFGESTAENDERT_VALUE = 6;
+	public static final int ENUM_TRASSE_KANTE_ART_TROGTRASSE_AUFGESTAENDERT_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUM Trasse Kante Art Trogtrasse Behelf</b></em>' literal value.
@@ -187,7 +215,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TRASSE_KANTE_ART_TROGTRASSE_BEHELF_VALUE = 7;
+	public static final int ENUM_TRASSE_KANTE_ART_TROGTRASSE_BEHELF_VALUE = 8;
 
 	/**
 	 * An array of all the '<em><b>ENUM Trasse Kante Art</b></em>' enumerators.
@@ -199,6 +227,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 		new ENUMTrasseKanteArt[] {
 			ENUM_TRASSE_KANTE_ART_ERDTRASSE,
 			ENUM_TRASSE_KANTE_ART_FREI,
+			ENUM_TRASSE_KANTE_ART_KABELGESTELL_TUNNEL,
 			ENUM_TRASSE_KANTE_ART_LUFTTRASSE,
 			ENUM_TRASSE_KANTE_ART_ROHRTRASSE,
 			ENUM_TRASSE_KANTE_ART_SONSTIGE,
@@ -263,6 +292,7 @@ public enum ENUMTrasseKanteArt implements Enumerator {
 		switch (value) {
 			case ENUM_TRASSE_KANTE_ART_ERDTRASSE_VALUE: return ENUM_TRASSE_KANTE_ART_ERDTRASSE;
 			case ENUM_TRASSE_KANTE_ART_FREI_VALUE: return ENUM_TRASSE_KANTE_ART_FREI;
+			case ENUM_TRASSE_KANTE_ART_KABELGESTELL_TUNNEL_VALUE: return ENUM_TRASSE_KANTE_ART_KABELGESTELL_TUNNEL;
 			case ENUM_TRASSE_KANTE_ART_LUFTTRASSE_VALUE: return ENUM_TRASSE_KANTE_ART_LUFTTRASSE;
 			case ENUM_TRASSE_KANTE_ART_ROHRTRASSE_VALUE: return ENUM_TRASSE_KANTE_ART_ROHRTRASSE;
 			case ENUM_TRASSE_KANTE_ART_SONSTIGE_VALUE: return ENUM_TRASSE_KANTE_ART_SONSTIGE;

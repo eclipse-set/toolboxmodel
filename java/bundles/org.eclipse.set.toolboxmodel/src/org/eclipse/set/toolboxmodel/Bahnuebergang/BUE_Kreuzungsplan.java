@@ -1,10 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
@@ -23,6 +29,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getBUEKreuzungsplanKoordinaten <em>BUE Kreuzungsplan Koordinaten</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getIDAnhangKreuzungsplan <em>ID Anhang Kreuzungsplan</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getIDBUEAnlage <em>IDBUE Anlage</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage#getBUE_Kreuzungsplan()
@@ -95,5 +102,58 @@ public interface BUE_Kreuzungsplan extends Basis_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDAnhangKreuzungsplan();
+
+	/**
+	 * Returns the value of the '<em><b>IDBUE Anlage</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf die für die Ausgabe des Kreuzungsplans relevante BÜ-Anlage.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>IDBUE Anlage</em>' reference.
+	 * @see #isSetIDBUEAnlage()
+	 * @see #unsetIDBUEAnlage()
+	 * @see #setIDBUEAnlage(BUE_Anlage)
+	 * @see org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage#getBUE_Kreuzungsplan_IDBUEAnlage()
+	 * @model unsettable="true" required="true"
+	 *        extendedMetaData="kind='element' name='ID_BUE_Anlage'"
+	 * @generated
+	 */
+	BUE_Anlage getIDBUEAnlage();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getIDBUEAnlage <em>IDBUE Anlage</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IDBUE Anlage</em>' reference.
+	 * @see #isSetIDBUEAnlage()
+	 * @see #unsetIDBUEAnlage()
+	 * @see #getIDBUEAnlage()
+	 * @generated
+	 */
+	void setIDBUEAnlage(BUE_Anlage value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getIDBUEAnlage <em>IDBUE Anlage</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDBUEAnlage()
+	 * @see #getIDBUEAnlage()
+	 * @see #setIDBUEAnlage(BUE_Anlage)
+	 * @generated
+	 */
+	void unsetIDBUEAnlage();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan#getIDBUEAnlage <em>IDBUE Anlage</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>IDBUE Anlage</em>' reference is set.
+	 * @see #unsetIDBUEAnlage()
+	 * @see #getIDBUEAnlage()
+	 * @see #setIDBUEAnlage(BUE_Anlage)
+	 * @generated
+	 */
+	boolean isSetIDBUEAnlage();
 
 } // BUE_Kreuzungsplan

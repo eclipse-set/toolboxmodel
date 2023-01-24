@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/Bahnuebergang/1.9.0.2">
+           xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/Bahnuebergang/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,11 +26,11 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
 	  <xs:complexType name="TCBezeichnung_GFR_Element">
 		    <xs:complexContent>
@@ -69,10 +67,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:simpleType>
 	  <xs:complexType name="CBUE_Einschaltung_Zuordnung">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Logisches Objekt zur Zuordnung zwischen BUE Einschaltung und zugehörigem BUE Gleisbezogener Gefahrraum. Im Regelfall wirkt eine BUE_Einschaltung direkt auf einen gleisbezogenen Gefahrraum; das Zuordnungsobjekt wäre nicht erforderlich. Liegt jedoch zwischen BUE_Einschaltung und dem BÜ eine Weichenverbindung, wird eine Zuordnung der BUE_Einschaltung auf mehrere gleisbezogene Gefahrräume notwendig. Diese Verbindung stellt das Zuordnungsobjekt her. Zur Vereinheitlichung wurde auf eine Choice zwischen direktem Verweis von BUE_Einschaltung auf BUE_Gleisbezogener_Gefahrraum und den Verweisen durch das Zuordnungsobjekt verzichtet. DB-Regelwerk Dieser Anwendungsfall ist im Regelwerk der DB AG nicht explizit beschrieben. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Logisches Objekt zur Zuordnung zwischen BUE Einschaltung und zugehörigem BUE Gleisbezogener Gefahrraum. Im Regelfall wirkt eine BUE_Einschaltung direkt auf einen gleisbezogenen Gefahrraum; das Zuordnungsobjekt wäre nicht erforderlich. Liegt jedoch zwischen BUE_Einschaltung und dem BÜ eine Weichenverbindung, wird eine Zuordnung der BUE_Einschaltung auf mehrere gleisbezogene Gefahrräume notwendig. Diese Verbindung stellt das Zuordnungsobjekt her. Zur Vereinheitlichung wurde auf eine Choice zwischen direktem Verweis von BUE_Einschaltung auf BUE_Gleisbezogener_Gefahrraum und den Verweisen durch das Zuordnungsobjekt verzichtet. DB-Regelwerk Dieser Anwendungsfall ist im Regelwerk der DB AG nicht explizit beschrieben.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -241,6 +240,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -385,7 +385,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                      minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bauart der Bahnübergangs(BÜ)-Sicherung. A: Anrufschranke; F: abgesetzter Fuß-/Radweg mit eigener Halbschranke; Lf: Geschwindigkeitsreduzierung im BÜ-Bereich mittels Lf-Signalen; Lz: Lichtzeichen; H: Halbschranken; HH: zwei Halbschranken, die gemeinsam die gesamte Straßenbreite sichern; P: Pfeiftafel; Ue: Übersicht (Ermittlung durch Sichtdreieck); V: Vollschranke; bei abgesetzten Fuß-/Radwegen sichert die Vollschranke auch diese. Schlüsselabhängig sind z. B. Bau-BÜ. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk 815.0010 4 (7) Tabelle 1 in Verbindung mit 815.0031 oder 815.0032 </xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bauart der Bahnübergangs(BÜ)-Sicherung. A: Abschluss; bgBÜ: benutzergesteuerte BÜSA; F: abgesetzter Fuß-/Radweg mit eigener Halbschranke; Lf: Geschwindigkeitsreduzierung im BÜ-Bereich mittels Lf-Signalen; Lz: Lichtzeichen; H: Halbschranken; HH: zwei Halbschranken, die gemeinsam die gesamte Straßenbreite sichern; P: Pfeiftafel; U: Umlaufsperre; Ue: Übersicht (Ermittlung durch Sichtdreieck); V: Vollschranke; bei abgesetzten Fuß-/Radwegen sichert die Vollschranke auch diese. Schlüsselabhängig sind z. B. Bau-BÜ; V(A): Anrufschranke. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk 815.2000, Abschnitt 2 (6) mit Tabelle 3</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="BUE_Strasse" type="nsBahnuebergang:TCBUE_Strasse" minOccurs="1"
@@ -397,7 +397,7 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:element name="BUE_Technik" type="nsBahnuebergang:TCBUE_Technik" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bauart der technischen BÜ-Sicherung. Ist der BÜ nichttechnisch gesichert, ist \"keine\" anzugeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Das Planungsdatum ist im Regelwerk der DB AG nicht enthalten. Die Festlegung neu zu errichtender BÜ-Technik erfolgt projektbezogen durch Vorgabe des Bestellers. Allgemeine Angaben finden sich in der Ril 819.1203 2 </xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Technik der technischen BÜ-Sicherung. Ist der BÜ nichttechnisch gesichert, ist \"keine\" anzugeben. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Das Planungsdatum ist im Regelwerk der DB AG nicht enthalten. Die Festlegung neu zu errichtender BÜ-Technik erfolgt projektbezogen durch Vorgabe des Bestellers. Allgemeine Angaben finden sich in der Ril 819.1203 2 </xs:documentation>
             </xs:annotation>
 			      </xs:element>
 		    </xs:sequence>
@@ -448,6 +448,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -463,6 +464,12 @@ XML Schema for PlanPro interface.</xs:documentation>
                            maxOccurs="1">
 						            <xs:annotation>
                      <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf den einzubindenden bautechnischen BÜ-Kreuzungsplan als Bild.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
+					          <xs:element name="ID_BUE_Anlage" type="nsVerweise:TCID_BUE_Anlage_ohne_Proxy" minOccurs="1"
+                           maxOccurs="1">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die für die Ausgabe des Kreuzungsplans relevante BÜ-Anlage.</xs:documentation>
                   </xs:annotation>
 					          </xs:element>
 				        </xs:sequence>
@@ -570,6 +577,16 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="TCHaltezeit">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsBahnuebergang:THaltezeit" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:simpleType name="TBezeichnung_GFR_Tripelspiegel">
 		    <xs:restriction base="xs:integer">
 			      <xs:pattern value="[1-9]"/>
@@ -607,6 +624,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -746,6 +764,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:complexType>
 	  <xs:simpleType name="ENUMBUE_Funktionsueberwachung">
 		    <xs:restriction base="xs:string">
+			      <xs:enumeration value="FSUe_B"/>
+			      <xs:enumeration value="FSUe_E"/>
+			      <xs:enumeration value="FSUe_S"/>
 			      <xs:enumeration value="Fü"/>
 			      <xs:enumeration value="Hp"/>
 			      <xs:enumeration value="Üs"/>
@@ -1013,13 +1034,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  <xs:simpleType name="ENUMBUE_Handschalteinrichtung">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="AT"/>
-			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="ET"/>
 			      <xs:enumeration value="HAT"/>
 			      <xs:enumeration value="HET"/>
 			      <xs:enumeration value="RS"/>
 			      <xs:enumeration value="RT_ein_aus"/>
 			      <xs:enumeration value="RT_ein_RT_aus"/>
+			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="UT"/>
 		    </xs:restriction>
 	  </xs:simpleType>
@@ -1048,6 +1069,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1078,6 +1100,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1134,6 +1157,11 @@ XML Schema for PlanPro interface.</xs:documentation>
                      <ppi:Patternbeschreibung_Abweichend>[0.00..99999.99] zwei Stellen nach dem Komma</ppi:Patternbeschreibung_Abweichend>
                   </ppi:WorkflowInformation>
                </xs:appinfo>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:element name="Haltezeit" type="nsBahnuebergang:TCHaltezeit" minOccurs="0" maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Haltezeit der haltenden Züge am Haltepunkt in der Einschaltstrecke inklusive der Brems- und Anfahrbeschleunigung (tZH)</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Kurzzugschaltung" type="nsBahnuebergang:TCKurzzugschaltung" minOccurs="0"
@@ -1286,6 +1314,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1333,6 +1362,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1369,6 +1399,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1389,6 +1420,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1414,6 +1446,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1469,6 +1502,9 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 			      <xs:enumeration value="einseitig"/>
 		    </xs:restriction>
 	  </xs:simpleType>
+	  <xs:simpleType name="THaltezeit">
+		    <xs:restriction base="nsBasisTypen:TSekunde"/>
+	  </xs:simpleType>
 	  <xs:complexType name="TCFahrbahn_Befestigung_Gleis">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -1522,6 +1558,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1589,7 +1626,9 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 			      <xs:element name="Fue_Schaltfall" type="nsBahnuebergang:TCFue_Schaltfall" minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Im Stellwerk zu realisierende Schaltung bei Fü-Anlagen:\n2: Wirksamschaltung der Einschaltpunkte;\n12: Art der BÜ-Einschaltung in Abhängigkeit eines Signals in der Einschaltstrecke.</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Im Stellwerk zu realisierende Schaltung bei Fü-Anlagen:
+2: Wirksamschaltung der Einschaltpunkte;
+12: Art der BÜ-Einschaltung in Abhängigkeit eines Signals in der Einschaltstrecke.</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Stoerhalt_Haltfall" type="nsBahnuebergang:TCStoerhalt_Haltfall"
@@ -1652,6 +1691,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 			      <xs:enumeration value="LO1"/>
 			      <xs:enumeration value="LO1_57"/>
 			      <xs:enumeration value="NE_BUE_90"/>
+			      <xs:enumeration value="RBUEP"/>
 			      <xs:enumeration value="RBUET"/>
 			      <xs:enumeration value="SIMIS_LC"/>
 			      <xs:enumeration value="sonstige"/>
@@ -1736,6 +1776,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1805,6 +1846,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1815,7 +1857,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
                            minOccurs="0"
                            maxOccurs="1"/>
 					          <xs:element name="BUE_Schnittstelle_Allg" type="nsBahnuebergang:CBUE_Schnittstelle_Allg"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"/>
 					          <xs:element name="ID_Stellelement" type="nsVerweise:TCID_Stellelement" minOccurs="1"
                            maxOccurs="1">
@@ -1833,6 +1875,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -1878,6 +1921,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -2030,6 +2074,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -2118,20 +2163,29 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 	  </xs:simpleType>
 	  <xs:simpleType name="ENUMBUE_Sicherungsart">
 		    <xs:restriction base="xs:string">
+			      <xs:enumeration value="A"/>
 			      <xs:enumeration value="A_und_Lf"/>
 			      <xs:enumeration value="A_und_Sprechverbindung"/>
+			      <xs:enumeration value="Anrufschranke_und_Sprechverbindung"/>
+			      <xs:enumeration value="bgBUe"/>
 			      <xs:enumeration value="Lz"/>
+			      <xs:enumeration value="LzF"/>
 			      <xs:enumeration value="LzH"/>
 			      <xs:enumeration value="LzH_2F"/>
 			      <xs:enumeration value="LzH_F"/>
 			      <xs:enumeration value="LzHH"/>
+			      <xs:enumeration value="LzHH_2F"/>
+			      <xs:enumeration value="LzHH_F"/>
 			      <xs:enumeration value="LzV"/>
 			      <xs:enumeration value="P"/>
 			      <xs:enumeration value="P_und_Lf"/>
+			      <xs:enumeration value="P_und_U"/>
 			      <xs:enumeration value="schluesselabhaengig"/>
 			      <xs:enumeration value="sonstige"/>
 			      <xs:enumeration value="Ue"/>
+			      <xs:enumeration value="Ue_und_A"/>
 			      <xs:enumeration value="Ue_und_P"/>
+			      <xs:enumeration value="Ue_und_U"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:complexType name="TCTeilvorgabezeit">
@@ -2179,9 +2233,9 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 	  <xs:complexType name="CBUE_Kreuzungsplan_Koordinaten">
 		    <xs:sequence>
 			      <xs:element name="ID_GEO_Punkt" type="nsVerweise:TCID_GEO_Punkt_ohne_Proxy" minOccurs="1"
-                     maxOccurs="1">
+                     maxOccurs="unbounded">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf einen GEO_Punkt zur geografischen Verortung des Bildpunktes.</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf einen GEO_Punkt zur geografischen Verortung des Bildpunktes. Eine Mehrfachangabe ist bei Verortung in unterschiedlichen Koordinatensystemen notwendig.</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Pixel_Koordinate_X" type="nsBahnuebergang:TCPixel_Koordinate_X"
@@ -2261,8 +2315,8 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="Bau_Bue"/>
 			      <xs:enumeration value="Bue"/>
-			      <xs:enumeration value="ntg_Reisendenuebergang"/>
-			      <xs:enumeration value="Resi"/>
+			      <xs:enumeration value="ntResi"/>
+			      <xs:enumeration value="tResi"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:complexType name="TCBaulast">
@@ -2323,6 +2377,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -2383,10 +2438,11 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 	  </xs:simpleType>
 	  <xs:complexType name="CBUE_Anlage">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Zurzeit beschränken sich die Angaben auf den im Lageplan darzustellenden Teil des BÜ. Zu einem späteren Zeitpunkt werden die spezifischen BÜ-Sicherungsanlagen wie Lichtzeichen, Andreaskreuze, Schrankenantriebe, Belag im BÜ-Bereich etc. in das Modell aufgenommen. Gleiches gilt für die Einschaltstreckenberechnung sowie die Beeinflussungsberechnung. Das Objekt wird auf den Kreuzungspunkt (in der Mitte der kreuzenden Straße) verortet; damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815 819.12xx Die konkreten Bezüge zum Regelwerk werden in den einzelnen Attributen angegeben. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Beschreibung der baulichen Anlage des Bahnübergangs (BÜ) einschließlich der technischen Sicherung, sofern vorhanden. Das Objekt wird auf den Kreuzungspunkt gem. Ril 815.2000 verortet, wobei die punktförmige Verortung auf alle zum BÜ gehörigen Gleisachsen erfolgen soll. Damit ergibt sich die sogenannte BÜ-Mitte gemäß Einschaltstreckenberechnung. DB-Regelwerk Für die Planung von Bahnübergängen gelten folgende Regelwerke: 815, 819.12xx. Die konkreten Bezüge zum Regelwerk werden für die einzelnen Attributen angegeben.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -2401,6 +2457,14 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
 					          </xs:element>
 					          <xs:element name="BUE_Anlage_Allg" type="nsBahnuebergang:CBUE_Anlage_Allg" minOccurs="1"
                            maxOccurs="1"/>
+					          <xs:element name="ID_AEA_BUE_Anschaltung"
+                           type="nsVerweise:TCID_Aussenelementansteuerung_ohne_Proxy"
+                           minOccurs="0"
+                           maxOccurs="1">
+						            <xs:annotation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die Aussenelementansteuerung, von der die BÜ-Anlage gesteuert/geschaltet wird.</xs:documentation>
+                  </xs:annotation>
+					          </xs:element>
 					          <xs:element name="ID_BUE_Schnittstelle" type="nsVerweise:TCID_BUE_Schnittstelle"
                            minOccurs="0"
                            maxOccurs="1">
@@ -2425,6 +2489,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -2568,6 +2633,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -2582,7 +2648,7 @@ Die Teilvorgabezeit ist die Summe aus Nachlaufzeit, erforderlicher Vorleuchtzeit
                            minOccurs="1"
                            maxOccurs="1">
 						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe der Funktionsüberwachung, die der Ermittlung der Einschaltung zugrunde liegt. Es wird zwischen folgenden Funktionsüberwachungen unterschieden: Hp: Der BÜ ist durch Hauptsignal(e) gedeckt. Die Fahrtstellung erfolgt erst, wenn der BÜ geschlossen ist. Fü: Der BÜ wird zugbewirkt eingeschaltet, die Überwachung erfolgt durch einen Fahrdienstleiter im Stellwerk. Dieser kann im Störungsfall eingreifen. Üs: Der BÜ wird zugbewirkt eingeschaltet und vom Triebfahrzeugführer überwacht. Der Zustand des BÜ wird diesem durch Überwachungssignale angezeigt. Es gibt keine Verbindung zum Stellwerk. Kombinationen der Funtkionsüberwachungen sind möglich. Die ENUM-Werte \"Fue\", \"Ues\" und \"UesOE\" sollen künftig entfernt und daher nicht mehr verwendet werden. DB-Regelwerk 815.0032 1 (1) und (2) 819.1203 3 </xs:documentation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe der Funktionsüberwachung, die der Ermittlung der Einschaltung zugrunde liegt. Es wird zwischen folgenden Funktionsüberwachungen unterschieden: Hp: Der BÜ ist durch Hauptsignal(e) gedeckt. Die Fahrtstellung erfolgt erst, wenn der BÜ geschlossen ist. Fü: Der BÜ wird zugbewirkt eingeschaltet, die Überwachung erfolgt durch einen Fahrdienstleiter im Stellwerk. Dieser kann im Störungsfall eingreifen. Üs: Der BÜ wird zugbewirkt eingeschaltet und vom Triebfahrzeugführer überwacht. Der Zustand des BÜ wird diesem durch Überwachungssignale angezeigt. Es gibt keine Verbindung zum Stellwerk. Kombinationen der Funtkionsüberwachungen sind möglich. DB-Regelwerk 815.0032 1 (1) und (2) 819.1203 3 </xs:documentation>
                   </xs:annotation>
 					          </xs:element>
 				        </xs:sequence>

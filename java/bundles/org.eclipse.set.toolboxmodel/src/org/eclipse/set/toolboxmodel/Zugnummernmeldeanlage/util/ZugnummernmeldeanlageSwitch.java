@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.util;
 
@@ -127,6 +134,13 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ZugnummernmeldeanlagePackage.BEZEICHNUNG_BESONDERE_ANLAGE_TYPE_CLASS: {
+				Bezeichnung_Besondere_Anlage_TypeClass bezeichnung_Besondere_Anlage_TypeClass = (Bezeichnung_Besondere_Anlage_TypeClass)theEObject;
+				T result = caseBezeichnung_Besondere_Anlage_TypeClass(bezeichnung_Besondere_Anlage_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(bezeichnung_Besondere_Anlage_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ZugnummernmeldeanlagePackage.BF_KENNUNG_TYPE_CLASS: {
 				Bf_Kennung_TypeClass bf_Kennung_TypeClass = (Bf_Kennung_TypeClass)theEObject;
 				T result = caseBf_Kennung_TypeClass(bf_Kennung_TypeClass);
@@ -208,6 +222,13 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 				Koppelunterstation_TypeClass koppelunterstation_TypeClass = (Koppelunterstation_TypeClass)theEObject;
 				T result = caseKoppelunterstation_TypeClass(koppelunterstation_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(koppelunterstation_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ZugnummernmeldeanlagePackage.KUS_ZEITTELEGRAMM_TYPE_CLASS: {
+				KUs_Zeittelegramm_TypeClass kUs_Zeittelegramm_TypeClass = (KUs_Zeittelegramm_TypeClass)theEObject;
+				T result = caseKUs_Zeittelegramm_TypeClass(kUs_Zeittelegramm_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(kUs_Zeittelegramm_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -382,6 +403,13 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ZugnummernmeldeanlagePackage.ZEITSYNCHRONISATION_FUNKUHR_TYPE_CLASS: {
+				Zeitsynchronisation_Funkuhr_TypeClass zeitsynchronisation_Funkuhr_TypeClass = (Zeitsynchronisation_Funkuhr_TypeClass)theEObject;
+				T result = caseZeitsynchronisation_Funkuhr_TypeClass(zeitsynchronisation_Funkuhr_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(zeitsynchronisation_Funkuhr_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ZugnummernmeldeanlagePackage.ZLV_BUS: {
 				ZLV_Bus zlV_Bus = (ZLV_Bus)theEObject;
 				T result = caseZLV_Bus(zlV_Bus);
@@ -393,6 +421,26 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP: {
 				ZLV_Bus_Allg_AttributeGroup zlV_Bus_Allg_AttributeGroup = (ZLV_Bus_Allg_AttributeGroup)theEObject;
 				T result = caseZLV_Bus_Allg_AttributeGroup(zlV_Bus_Allg_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BESONDERE_ANLAGE: {
+				ZLV_Bus_Besondere_Anlage zlV_Bus_Besondere_Anlage = (ZLV_Bus_Besondere_Anlage)theEObject;
+				T result = caseZLV_Bus_Besondere_Anlage(zlV_Bus_Besondere_Anlage);
+				if (result == null) result = caseBasis_Objekt(zlV_Bus_Besondere_Anlage);
+				if (result == null) result = caseUr_Objekt(zlV_Bus_Besondere_Anlage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BESONDERE_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP: {
+				ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup = (ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup)theEObject;
+				T result = caseZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup(zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BEZEICHNUNG_ATTRIBUTE_GROUP: {
+				ZLV_Bus_Bezeichnung_AttributeGroup zlV_Bus_Bezeichnung_AttributeGroup = (ZLV_Bus_Bezeichnung_AttributeGroup)theEObject;
+				T result = caseZLV_Bus_Bezeichnung_AttributeGroup(zlV_Bus_Bezeichnung_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -584,12 +632,6 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ZugnummernmeldeanlagePackage.ZN_ZBS_ALLG_ATTRIBUTE_GROUP: {
-				ZN_ZBS_Allg_AttributeGroup zN_ZBS_Allg_AttributeGroup = (ZN_ZBS_Allg_AttributeGroup)theEObject;
-				T result = caseZN_ZBS_Allg_AttributeGroup(zN_ZBS_Allg_AttributeGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ZugnummernmeldeanlagePackage.ZUGVORBEREITUNGSMELDUNG_TYPE_CLASS: {
 				Zugvorbereitungsmeldung_TypeClass zugvorbereitungsmeldung_TypeClass = (Zugvorbereitungsmeldung_TypeClass)theEObject;
 				T result = caseZugvorbereitungsmeldung_TypeClass(zugvorbereitungsmeldung_TypeClass);
@@ -718,6 +760,21 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBesonderes_Schaltkriterium_TypeClass(Besonderes_Schaltkriterium_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bezeichnung Besondere Anlage Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bezeichnung Besondere Anlage Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBezeichnung_Besondere_Anlage_TypeClass(Bezeichnung_Besondere_Anlage_TypeClass object) {
 		return null;
 	}
 
@@ -898,6 +955,21 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKoppelunterstation_TypeClass(Koppelunterstation_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>KUs Zeittelegramm Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>KUs Zeittelegramm Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKUs_Zeittelegramm_TypeClass(KUs_Zeittelegramm_TypeClass object) {
 		return null;
 	}
 
@@ -1277,6 +1349,21 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Zeitsynchronisation Funkuhr Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Zeitsynchronisation Funkuhr Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZeitsynchronisation_Funkuhr_TypeClass(Zeitsynchronisation_Funkuhr_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ZLV Bus</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1303,6 +1390,51 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseZLV_Bus_Allg_AttributeGroup(ZLV_Bus_Allg_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZLV Bus Besondere Anlage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZLV Bus Besondere Anlage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZLV_Bus_Besondere_Anlage(ZLV_Bus_Besondere_Anlage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZLV Bus Besondere Anlage Bezeichnung Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZLV Bus Besondere Anlage Bezeichnung Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup(ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZLV Bus Bezeichnung Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZLV Bus Bezeichnung Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZLV_Bus_Bezeichnung_AttributeGroup(ZLV_Bus_Bezeichnung_AttributeGroup object) {
 		return null;
 	}
 
@@ -1708,21 +1840,6 @@ public class ZugnummernmeldeanlageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseZN_ZBS(ZN_ZBS object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ZN ZBS Allg Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ZN ZBS Allg Attribute Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseZN_ZBS_Allg_AttributeGroup(ZN_ZBS_Allg_AttributeGroup object) {
 		return null;
 	}
 

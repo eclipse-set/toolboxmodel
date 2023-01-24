@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl;
 
@@ -72,15 +79,18 @@ public class Medien_und_TrassenFactoryImpl extends EFactoryImpl implements Medie
 			case Medien_und_TrassenPackage.ANZAHL_VERSEILELEMENTE_TYPE_CLASS: return createAnzahl_Verseilelemente_TypeClass();
 			case Medien_und_TrassenPackage.BEZEICHNUNG_KABEL_TYPE_CLASS: return createBezeichnung_Kabel_TypeClass();
 			case Medien_und_TrassenPackage.BEZEICHNUNG_KABEL_VERTEILPUNKT_TYPE_CLASS: return createBezeichnung_Kabel_Verteilpunkt_TypeClass();
+			case Medien_und_TrassenPackage.INDUKTIONSSCHUTZ_TYPE_CLASS: return createInduktionsschutz_TypeClass();
 			case Medien_und_TrassenPackage.KABEL: return createKabel();
 			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP: return createKabel_Allg_AttributeGroup();
 			case Medien_und_TrassenPackage.KABEL_ART_TYPE_CLASS: return createKabel_Art_TypeClass();
 			case Medien_und_TrassenPackage.KABEL_BEZEICHNUNG_ATTRIBUTE_GROUP: return createKabel_Bezeichnung_AttributeGroup();
+			case Medien_und_TrassenPackage.KABEL_ELEMENT_ATTRIBUTE_GROUP: return createKabel_Element_AttributeGroup();
 			case Medien_und_TrassenPackage.KABEL_LAENGE_TYPE_CLASS: return createKabel_Laenge_TypeClass();
 			case Medien_und_TrassenPackage.KABEL_TYP_TYPE_CLASS: return createKabel_Typ_TypeClass();
 			case Medien_und_TrassenPackage.KABEL_VERTEILPUNKT: return createKabel_Verteilpunkt();
 			case Medien_und_TrassenPackage.KABEL_VERTEILPUNKT_ART_TYPE_CLASS: return createKabel_Verteilpunkt_Art_TypeClass();
 			case Medien_und_TrassenPackage.KABEL_VERTEILPUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP: return createKabel_Verteilpunkt_Bezeichnung_AttributeGroup();
+			case Medien_und_TrassenPackage.NAGETIERSCHUTZ_TYPE_CLASS: return createNagetierschutz_TypeClass();
 			case Medien_und_TrassenPackage.TRASSE_KANTE: return createTrasse_Kante();
 			case Medien_und_TrassenPackage.TRASSE_KANTE_ART_TYPE_CLASS: return createTrasse_Kante_Art_TypeClass();
 			case Medien_und_TrassenPackage.TRASSE_KNOTEN: return createTrasse_Knoten();
@@ -132,6 +142,8 @@ public class Medien_und_TrassenFactoryImpl extends EFactoryImpl implements Medie
 				return createENUMTrasseKnotenArtObjectFromString(eDataType, initialValue);
 			case Medien_und_TrassenPackage.ENUM_TRASSE_NUTZER_OBJECT:
 				return createENUMTrasseNutzerObjectFromString(eDataType, initialValue);
+			case Medien_und_TrassenPackage.INDUKTIONSSCHUTZ_TYPE:
+				return createInduktionsschutz_TypeFromString(eDataType, initialValue);
 			case Medien_und_TrassenPackage.KABEL_LAENGE_TYPE:
 				return createKabel_Laenge_TypeFromString(eDataType, initialValue);
 			case Medien_und_TrassenPackage.KABEL_TYP_TYPE:
@@ -183,6 +195,8 @@ public class Medien_und_TrassenFactoryImpl extends EFactoryImpl implements Medie
 				return convertENUMTrasseKnotenArtObjectToString(eDataType, instanceValue);
 			case Medien_und_TrassenPackage.ENUM_TRASSE_NUTZER_OBJECT:
 				return convertENUMTrasseNutzerObjectToString(eDataType, instanceValue);
+			case Medien_und_TrassenPackage.INDUKTIONSSCHUTZ_TYPE:
+				return convertInduktionsschutz_TypeToString(eDataType, instanceValue);
 			case Medien_und_TrassenPackage.KABEL_LAENGE_TYPE:
 				return convertKabel_Laenge_TypeToString(eDataType, instanceValue);
 			case Medien_und_TrassenPackage.KABEL_TYP_TYPE:
@@ -266,6 +280,17 @@ public class Medien_und_TrassenFactoryImpl extends EFactoryImpl implements Medie
 	 * @generated
 	 */
 	@Override
+	public Induktionsschutz_TypeClass createInduktionsschutz_TypeClass() {
+		Induktionsschutz_TypeClassImpl induktionsschutz_TypeClass = new Induktionsschutz_TypeClassImpl();
+		return induktionsschutz_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Kabel createKabel() {
 		KabelImpl kabel = new KabelImpl();
 		return kabel;
@@ -302,6 +327,17 @@ public class Medien_und_TrassenFactoryImpl extends EFactoryImpl implements Medie
 	public Kabel_Bezeichnung_AttributeGroup createKabel_Bezeichnung_AttributeGroup() {
 		Kabel_Bezeichnung_AttributeGroupImpl kabel_Bezeichnung_AttributeGroup = new Kabel_Bezeichnung_AttributeGroupImpl();
 		return kabel_Bezeichnung_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Kabel_Element_AttributeGroup createKabel_Element_AttributeGroup() {
+		Kabel_Element_AttributeGroupImpl kabel_Element_AttributeGroup = new Kabel_Element_AttributeGroupImpl();
+		return kabel_Element_AttributeGroup;
 	}
 
 	/**
@@ -357,6 +393,17 @@ public class Medien_und_TrassenFactoryImpl extends EFactoryImpl implements Medie
 	public Kabel_Verteilpunkt_Bezeichnung_AttributeGroup createKabel_Verteilpunkt_Bezeichnung_AttributeGroup() {
 		Kabel_Verteilpunkt_Bezeichnung_AttributeGroupImpl kabel_Verteilpunkt_Bezeichnung_AttributeGroup = new Kabel_Verteilpunkt_Bezeichnung_AttributeGroupImpl();
 		return kabel_Verteilpunkt_Bezeichnung_AttributeGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Nagetierschutz_TypeClass createNagetierschutz_TypeClass() {
+		Nagetierschutz_TypeClassImpl nagetierschutz_TypeClass = new Nagetierschutz_TypeClassImpl();
+		return nagetierschutz_TypeClass;
 	}
 
 	/**
@@ -721,6 +768,24 @@ public class Medien_und_TrassenFactoryImpl extends EFactoryImpl implements Medie
 	 */
 	public String convertENUMTrasseNutzerObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMTrasseNutzerToString(Medien_und_TrassenPackage.Literals.ENUM_TRASSE_NUTZER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger createInduktionsschutz_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigInteger)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INTEGER, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertInduktionsschutz_TypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
 	}
 
 	/**

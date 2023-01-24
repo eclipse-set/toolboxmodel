@@ -1,13 +1,22 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Ortung.Schaltmittel_Zuordnung;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
+
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Anzeigefeld;
 
 /**
@@ -23,12 +32,12 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Anzeigefeld;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDVorsignal <em>ID Vorsignal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDZLFstr <em>IDZL Fstr</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDZNAnzeigefeldAnstoss <em>IDZN Anzeigefeld Anstoss</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getZLFstrAnstossAllg <em>ZL Fstr Anstoss Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getZLFstrAnstossGK <em>ZL Fstr Anstoss GK</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDZNAnzeigefeldAnstoss <em>IDZN Anzeigefeld Anstoss</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Anstoss()
@@ -36,59 +45,6 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Anzeigefeld;
  * @generated
  */
 public interface ZL_Fstr_Anstoss extends Basis_Objekt {
-	/**
-	 * Returns the value of the '<em><b>ID Einschaltpunkt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Verweis auf ein Schaltmittel, welches als Anstoß für die ZL-Fahrstraße ausgewertet wird. Der Standort bzw. die Stationierung geht in die Berechnung einer Verzögerungszeit ein. Das Attribut ist optional, da nicht für jede ZL-Fahrstraße ein Schaltmittel ausgewählt werden kann (z. B. an Stellbereichsgrenzen). In dem Fall ist ein ZN_Anzeigefeld als Anstoßkriterium festzulegen. Einer von beiden Verweisen (ID_Einschaltpunkt oder ID ZN Anzeigefeld Anstoss) muss immer gefüllt sein.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Einschaltpunkt</em>' reference.
-	 * @see #isSetIDEinschaltpunkt()
-	 * @see #unsetIDEinschaltpunkt()
-	 * @see #setIDEinschaltpunkt(Schaltmittel_Zuordnung)
-	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Anstoss_IDEinschaltpunkt()
-	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='ID_Einschaltpunkt'"
-	 * @generated
-	 */
-	Schaltmittel_Zuordnung getIDEinschaltpunkt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Einschaltpunkt</em>' reference.
-	 * @see #isSetIDEinschaltpunkt()
-	 * @see #unsetIDEinschaltpunkt()
-	 * @see #getIDEinschaltpunkt()
-	 * @generated
-	 */
-	void setIDEinschaltpunkt(Schaltmittel_Zuordnung value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDEinschaltpunkt()
-	 * @see #getIDEinschaltpunkt()
-	 * @see #setIDEinschaltpunkt(Schaltmittel_Zuordnung)
-	 * @generated
-	 */
-	void unsetIDEinschaltpunkt();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Einschaltpunkt</em>' reference is set.
-	 * @see #unsetIDEinschaltpunkt()
-	 * @see #getIDEinschaltpunkt()
-	 * @see #setIDEinschaltpunkt(Schaltmittel_Zuordnung)
-	 * @generated
-	 */
-	boolean isSetIDEinschaltpunkt();
-
 	/**
 	 * Returns the value of the '<em><b>ID Vorsignal</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -196,6 +152,95 @@ public interface ZL_Fstr_Anstoss extends Basis_Objekt {
 	boolean isSetIDZLFstr();
 
 	/**
+	 * Returns the value of the '<em><b>ZL Fstr Anstoss Allg</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ZL Fstr Anstoss Allg</em>' containment reference.
+	 * @see #setZLFstrAnstossAllg(ZL_Fstr_Anstoss_Allg_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Anstoss_ZLFstrAnstossAllg()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='ZL_Fstr_Anstoss_Allg'"
+	 * @generated
+	 */
+	ZL_Fstr_Anstoss_Allg_AttributeGroup getZLFstrAnstossAllg();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getZLFstrAnstossAllg <em>ZL Fstr Anstoss Allg</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ZL Fstr Anstoss Allg</em>' containment reference.
+	 * @see #getZLFstrAnstossAllg()
+	 * @generated
+	 */
+	void setZLFstrAnstossAllg(ZL_Fstr_Anstoss_Allg_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>ZL Fstr Anstoss GK</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss_GK_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ZL Fstr Anstoss GK</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Anstoss_ZLFstrAnstossGK()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ZL_Fstr_Anstoss_GK'"
+	 * @generated
+	 */
+	EList<ZL_Fstr_Anstoss_GK_AttributeGroup> getZLFstrAnstossGK();
+
+	/**
+	 * Returns the value of the '<em><b>ID Einschaltpunkt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Verweis auf ein Schaltmittel, welches als Anstoß für die ZL-Fahrstraße ausgewertet wird. Der Standort bzw. die Stationierung geht in die Berechnung einer Verzögerungszeit ein. Das Attribut ist optional, da nicht für jede ZL-Fahrstraße ein Schaltmittel ausgewählt werden kann (z. B. an Stellbereichsgrenzen). In dem Fall ist ein ZN_Anzeigefeld als Anstoßkriterium festzulegen. Einer von beiden Verweisen (ID_Einschaltpunkt oder ID ZN Anzeigefeld Anstoss) muss immer gefüllt sein.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ID Einschaltpunkt</em>' reference.
+	 * @see #isSetIDEinschaltpunkt()
+	 * @see #unsetIDEinschaltpunkt()
+	 * @see #setIDEinschaltpunkt(Schaltmittel_Zuordnung)
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Anstoss_IDEinschaltpunkt()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_Einschaltpunkt'"
+	 * @generated
+	 */
+	Schaltmittel_Zuordnung getIDEinschaltpunkt();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ID Einschaltpunkt</em>' reference.
+	 * @see #isSetIDEinschaltpunkt()
+	 * @see #unsetIDEinschaltpunkt()
+	 * @see #getIDEinschaltpunkt()
+	 * @generated
+	 */
+	void setIDEinschaltpunkt(Schaltmittel_Zuordnung value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDEinschaltpunkt()
+	 * @see #getIDEinschaltpunkt()
+	 * @see #setIDEinschaltpunkt(Schaltmittel_Zuordnung)
+	 * @generated
+	 */
+	void unsetIDEinschaltpunkt();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getIDEinschaltpunkt <em>ID Einschaltpunkt</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>ID Einschaltpunkt</em>' reference is set.
+	 * @see #unsetIDEinschaltpunkt()
+	 * @see #getIDEinschaltpunkt()
+	 * @see #setIDEinschaltpunkt(Schaltmittel_Zuordnung)
+	 * @generated
+	 */
+	boolean isSetIDEinschaltpunkt();
+
+	/**
 	 * Returns the value of the '<em><b>IDZN Anzeigefeld Anstoss</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -247,41 +292,5 @@ public interface ZL_Fstr_Anstoss extends Basis_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDZNAnzeigefeldAnstoss();
-
-	/**
-	 * Returns the value of the '<em><b>ZL Fstr Anstoss Allg</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>ZL Fstr Anstoss Allg</em>' containment reference.
-	 * @see #setZLFstrAnstossAllg(ZL_Fstr_Anstoss_Allg_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Anstoss_ZLFstrAnstossAllg()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='ZL_Fstr_Anstoss_Allg'"
-	 * @generated
-	 */
-	ZL_Fstr_Anstoss_Allg_AttributeGroup getZLFstrAnstossAllg();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss#getZLFstrAnstossAllg <em>ZL Fstr Anstoss Allg</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ZL Fstr Anstoss Allg</em>' containment reference.
-	 * @see #getZLFstrAnstossAllg()
-	 * @generated
-	 */
-	void setZLFstrAnstossAllg(ZL_Fstr_Anstoss_Allg_AttributeGroup value);
-
-	/**
-	 * Returns the value of the '<em><b>ZL Fstr Anstoss GK</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Zuglenkung.ZL_Fstr_Anstoss_GK_AttributeGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>ZL Fstr Anstoss GK</em>' containment reference list.
-	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.ZuglenkungPackage#getZL_Fstr_Anstoss_ZLFstrAnstossGK()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='ZL_Fstr_Anstoss_GK'"
-	 * @generated
-	 */
-	EList<ZL_Fstr_Anstoss_GK_AttributeGroup> getZLFstrAnstossGK();
 
 } // ZL_Fstr_Anstoss

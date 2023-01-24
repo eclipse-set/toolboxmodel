@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,20 +17,26 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Gefahrpunktabstand_Abweichend_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal_DWeg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal_TBV_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Technischer_Punkt;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -34,10 +47,12 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getETCSGefahrpunktabstandAbweichend <em>ETCS Gefahrpunktabstand Abweichend</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getETCSSignalAllg <em>ETCS Signal Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getETCSSignalDWeg <em>ETCS Signal DWeg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getETCSSignalTBV <em>ETCS Signal TBV</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getIDETCSGefahrpunkt <em>IDETCS Gefahrpunkt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getIDETCSGefahrpunkt2 <em>IDETCS Gefahrpunkt2</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getIDHOAFBOA <em>IDHOAFBOA</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getIDRBC <em>IDRBC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_SignalImpl#getIDSignal <em>ID Signal</em>}</li>
@@ -46,6 +61,16 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * @generated
  */
 public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
+	/**
+	 * The cached value of the '{@link #getETCSGefahrpunktabstandAbweichend() <em>ETCS Gefahrpunktabstand Abweichend</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getETCSGefahrpunktabstandAbweichend()
+	 * @generated
+	 * @ordered
+	 */
+	protected ETCS_Gefahrpunktabstand_Abweichend_TypeClass eTCSGefahrpunktabstandAbweichend;
+
 	/**
 	 * The cached value of the '{@link #getETCSSignalAllg() <em>ETCS Signal Allg</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -94,6 +119,25 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	 * @ordered
 	 */
 	protected boolean iDETCSGefahrpunktESet;
+
+	/**
+	 * The cached value of the '{@link #getIDETCSGefahrpunkt2() <em>IDETCS Gefahrpunkt2</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDETCSGefahrpunkt2()
+	 * @generated
+	 * @ordered
+	 */
+	protected Markanter_Punkt iDETCSGefahrpunkt2;
+
+	/**
+	 * This is true if the IDETCS Gefahrpunkt2 reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDETCSGefahrpunkt2ESet;
 
 	/**
 	 * The cached value of the '{@link #getIDHOAFBOA() <em>IDHOAFBOA</em>}' reference.
@@ -160,6 +204,51 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	@Override
 	protected EClass eStaticClass() {
 		return Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Signal();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETCS_Gefahrpunktabstand_Abweichend_TypeClass getETCSGefahrpunktabstandAbweichend() {
+		return eTCSGefahrpunktabstandAbweichend;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetETCSGefahrpunktabstandAbweichend(ETCS_Gefahrpunktabstand_Abweichend_TypeClass newETCSGefahrpunktabstandAbweichend, NotificationChain msgs) {
+		ETCS_Gefahrpunktabstand_Abweichend_TypeClass oldETCSGefahrpunktabstandAbweichend = eTCSGefahrpunktabstandAbweichend;
+		eTCSGefahrpunktabstandAbweichend = newETCSGefahrpunktabstandAbweichend;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND, oldETCSGefahrpunktabstandAbweichend, newETCSGefahrpunktabstandAbweichend);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setETCSGefahrpunktabstandAbweichend(ETCS_Gefahrpunktabstand_Abweichend_TypeClass newETCSGefahrpunktabstandAbweichend) {
+		if (newETCSGefahrpunktabstandAbweichend != eTCSGefahrpunktabstandAbweichend) {
+			NotificationChain msgs = null;
+			if (eTCSGefahrpunktabstandAbweichend != null)
+				msgs = ((InternalEObject)eTCSGefahrpunktabstandAbweichend).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND, null, msgs);
+			if (newETCSGefahrpunktabstandAbweichend != null)
+				msgs = ((InternalEObject)newETCSGefahrpunktabstandAbweichend).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND, null, msgs);
+			msgs = basicSetETCSGefahrpunktabstandAbweichend(newETCSGefahrpunktabstandAbweichend, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND, newETCSGefahrpunktabstandAbweichend, newETCSGefahrpunktabstandAbweichend));
 	}
 
 	/**
@@ -370,6 +459,73 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	 * @generated
 	 */
 	@Override
+	public Markanter_Punkt getIDETCSGefahrpunkt2() {
+		if (iDETCSGefahrpunkt2 != null && iDETCSGefahrpunkt2.eIsProxy()) {
+			InternalEObject oldIDETCSGefahrpunkt2 = (InternalEObject)iDETCSGefahrpunkt2;
+			iDETCSGefahrpunkt2 = (Markanter_Punkt)eResolveProxy(oldIDETCSGefahrpunkt2);
+			if (iDETCSGefahrpunkt2 != oldIDETCSGefahrpunkt2) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT2, oldIDETCSGefahrpunkt2, iDETCSGefahrpunkt2));
+			}
+		}
+		return iDETCSGefahrpunkt2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Markanter_Punkt basicGetIDETCSGefahrpunkt2() {
+		return iDETCSGefahrpunkt2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDETCSGefahrpunkt2(Markanter_Punkt newIDETCSGefahrpunkt2) {
+		Markanter_Punkt oldIDETCSGefahrpunkt2 = iDETCSGefahrpunkt2;
+		iDETCSGefahrpunkt2 = newIDETCSGefahrpunkt2;
+		boolean oldIDETCSGefahrpunkt2ESet = iDETCSGefahrpunkt2ESet;
+		iDETCSGefahrpunkt2ESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT2, oldIDETCSGefahrpunkt2, iDETCSGefahrpunkt2, !oldIDETCSGefahrpunkt2ESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDETCSGefahrpunkt2() {
+		Markanter_Punkt oldIDETCSGefahrpunkt2 = iDETCSGefahrpunkt2;
+		boolean oldIDETCSGefahrpunkt2ESet = iDETCSGefahrpunkt2ESet;
+		iDETCSGefahrpunkt2 = null;
+		iDETCSGefahrpunkt2ESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT2, oldIDETCSGefahrpunkt2, null, oldIDETCSGefahrpunkt2ESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDETCSGefahrpunkt2() {
+		return iDETCSGefahrpunkt2ESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Technischer_Punkt getIDHOAFBOA() {
 		if (iDHOAFBOA != null && iDHOAFBOA.eIsProxy()) {
 			InternalEObject oldIDHOAFBOA = (InternalEObject)iDHOAFBOA;
@@ -519,6 +675,8 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND:
+				return basicSetETCSGefahrpunktabstandAbweichend(null, msgs);
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_ALLG:
 				return basicSetETCSSignalAllg(null, msgs);
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_DWEG:
@@ -538,6 +696,8 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND:
+				return getETCSGefahrpunktabstandAbweichend();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_ALLG:
 				return getETCSSignalAllg();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_DWEG:
@@ -547,6 +707,9 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT:
 				if (resolve) return getIDETCSGefahrpunkt();
 				return basicGetIDETCSGefahrpunkt();
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT2:
+				if (resolve) return getIDETCSGefahrpunkt2();
+				return basicGetIDETCSGefahrpunkt2();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDHOAFBOA:
 				if (resolve) return getIDHOAFBOA();
 				return basicGetIDHOAFBOA();
@@ -569,6 +732,9 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND:
+				setETCSGefahrpunktabstandAbweichend((ETCS_Gefahrpunktabstand_Abweichend_TypeClass)newValue);
+				return;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_ALLG:
 				setETCSSignalAllg((ETCS_Signal_Allg_AttributeGroup)newValue);
 				return;
@@ -580,6 +746,9 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 				return;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT:
 				setIDETCSGefahrpunkt((Markanter_Punkt)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT2:
+				setIDETCSGefahrpunkt2((Markanter_Punkt)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDHOAFBOA:
 				setIDHOAFBOA((Technischer_Punkt)newValue);
@@ -605,6 +774,9 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND:
+				setETCSGefahrpunktabstandAbweichend((ETCS_Gefahrpunktabstand_Abweichend_TypeClass)null);
+				return;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_ALLG:
 				setETCSSignalAllg((ETCS_Signal_Allg_AttributeGroup)null);
 				return;
@@ -616,6 +788,9 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 				return;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT:
 				unsetIDETCSGefahrpunkt();
+				return;
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT2:
+				unsetIDETCSGefahrpunkt2();
 				return;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDHOAFBOA:
 				unsetIDHOAFBOA();
@@ -640,6 +815,8 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND:
+				return eTCSGefahrpunktabstandAbweichend != null;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_ALLG:
 				return eTCSSignalAllg != null;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__ETCS_SIGNAL_DWEG:
@@ -648,6 +825,8 @@ public class ETCS_SignalImpl extends Basis_ObjektImpl implements ETCS_Signal {
 				return eTCSSignalTBV != null;
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT:
 				return isSetIDETCSGefahrpunkt();
+			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDETCS_GEFAHRPUNKT2:
+				return isSetIDETCSGefahrpunkt2();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDHOAFBOA:
 				return isSetIDHOAFBOA();
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL__IDRBC:

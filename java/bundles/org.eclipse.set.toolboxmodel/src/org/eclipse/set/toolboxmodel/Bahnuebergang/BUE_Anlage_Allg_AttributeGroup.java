@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -109,7 +116,7 @@ public interface BUE_Anlage_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Bauart der Bahnübergangs(BÜ)-Sicherung. A: Anrufschranke; F: abgesetzter Fuß-/Radweg mit eigener Halbschranke; Lf: Geschwindigkeitsreduzierung im BÜ-Bereich mittels Lf-Signalen; Lz: Lichtzeichen; H: Halbschranken; HH: zwei Halbschranken, die gemeinsam die gesamte Straßenbreite sichern; P: Pfeiftafel; Ue: Übersicht (Ermittlung durch Sichtdreieck); V: Vollschranke; bei abgesetzten Fuß-/Radwegen sichert die Vollschranke auch diese. Schlüsselabhängig sind z. B. Bau-BÜ. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk 815.0010 4 (7) Tabelle 1 in Verbindung mit 815.0031 oder 815.0032 
+	 * Bauart der Bahnübergangs(BÜ)-Sicherung. A: Abschluss; bgBÜ: benutzergesteuerte BÜSA; F: abgesetzter Fuß-/Radweg mit eigener Halbschranke; Lf: Geschwindigkeitsreduzierung im BÜ-Bereich mittels Lf-Signalen; Lz: Lichtzeichen; H: Halbschranken; HH: zwei Halbschranken, die gemeinsam die gesamte Straßenbreite sichern; P: Pfeiftafel; U: Umlaufsperre; Ue: Übersicht (Ermittlung durch Sichtdreieck); V: Vollschranke; bei abgesetzten Fuß-/Radwegen sichert die Vollschranke auch diese. Schlüsselabhängig sind z. B. Bau-BÜ; V(A): Anrufschranke. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk 815.2000, Abschnitt 2 (6) mit Tabelle 3
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>BUE Sicherungsart</em>' containment reference.
 	 * @see #setBUESicherungsart(BUE_Sicherungsart_TypeClass)
@@ -161,7 +168,7 @@ public interface BUE_Anlage_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Bauart der technischen BÜ-Sicherung. Ist der BÜ nichttechnisch gesichert, ist "keine" anzugeben. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Das Planungsdatum ist im Regelwerk der DB AG nicht enthalten. Die Festlegung neu zu errichtender BÜ-Technik erfolgt projektbezogen durch Vorgabe des Bestellers. Allgemeine Angaben finden sich in der Ril 819.1203 2 
+	 * Technik der technischen BÜ-Sicherung. Ist der BÜ nichttechnisch gesichert, ist "keine" anzugeben. Bei Auswahl von "sonstige" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Das Planungsdatum ist im Regelwerk der DB AG nicht enthalten. Die Festlegung neu zu errichtender BÜ-Technik erfolgt projektbezogen durch Vorgabe des Bestellers. Allgemeine Angaben finden sich in der Ril 819.1203 2 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>BUE Technik</em>' containment reference.
 	 * @see #setBUETechnik(BUE_Technik_TypeClass)

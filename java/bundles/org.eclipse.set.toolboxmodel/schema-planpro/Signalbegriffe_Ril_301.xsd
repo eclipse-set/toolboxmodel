@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/1.9.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nsSignalbegriffe_Ril_301="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/1.9.0" xmlns:nsSignalbegriffe_Struktur="http://www.plan-pro.org/modell/Signalbegriffe_Struktur/1.6.0.1">
+<xs:schema targetNamespace="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/1.10.0.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nsSignalbegriffe_Ril_301="http://www.plan-pro.org/modell/Signalbegriffe_Ril_301/1.10.0.1" xmlns:nsSignalbegriffe_Struktur="http://www.plan-pro.org/modell/Signalbegriffe_Struktur/1.6.0.1">
 	<xs:annotation>
 		<xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -9,9 +9,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -1474,7 +1472,7 @@ XML Schema for PlanPro interface.</xs:documentation>
 				<xs:sequence>
 					<xs:element name="Symbol" type="nsSignalbegriffe_Ril_301:ENUMSymbol_Lf_1" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="Anmerkungen" use="prohibited" fixed="Nachtzeichen wird im Modell nicht berücksichtigt, da kein Bestandteil AP PT 1" type="xs:string"/>
+				<xs:attribute name="Anmerkungen" use="prohibited" fixed="Nachtzeichen wird im Modell nicht berücksichtigt, da kein Bestandteil PT 1" type="xs:string"/>
 				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="true" type="xs:boolean"/>
 				<xs:attribute name="Beschreibung" use="prohibited" fixed="dreieckige gelbe Scheibe mit weißem Rand und Spitze nach oben oder unten zeigt eine schwarze Kennziffer" type="xs:string"/>
 				<xs:attribute name="Geltungsbereich_DS" use="prohibited" fixed="true" type="xs:boolean"/>
@@ -1599,7 +1597,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 	<xs:complexType name="Lf_4_DS">
 		<xs:complexContent>
 			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
-				<xs:sequence/>
+				<xs:sequence>
+					<xs:element name="Symbol" type="nsSignalbegriffe_Ril_301:ENUMSymbol_Lf_4_DS" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
 				<xs:attribute name="Anmerkungen" use="prohibited" type="xs:string"/>
 				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="true" type="xs:boolean"/>
 				<xs:attribute name="Beschreibung" use="prohibited" fixed="auf der Spitze stehende oder mit der Spitze nach oben zeigende dreieckige weiße Tafel mit schwarzem Rand zeigt eine schwarze Kennziffer" type="xs:string"/>
@@ -1617,10 +1617,32 @@ XML Schema for PlanPro interface.</xs:documentation>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:simpleType name="ENUMSymbol_Lf_4_DS">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="0,5"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="9"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="Lf_4_DV">
 		<xs:complexContent>
 			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
-				<xs:sequence/>
+				<xs:sequence>
+					<xs:element name="Symbol" type="nsSignalbegriffe_Ril_301:ENUMSymbol_Lf_4_DV" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
 				<xs:attribute name="Anmerkungen" use="prohibited" type="xs:string"/>
 				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="true" type="xs:boolean"/>
 				<xs:attribute name="Beschreibung" use="prohibited" fixed="auf der Spitze stehende  oder mit der Spitze nach oben zeigende dreieckige, weiße Tafel mit schwarzem Rand zeigt eine schwarze Geschwindigkeitszahl" type="xs:string"/>
@@ -1638,6 +1660,26 @@ XML Schema for PlanPro interface.</xs:documentation>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:simpleType name="ENUMSymbol_Lf_4_DV">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="30"/>
+			<xs:enumeration value="40"/>
+			<xs:enumeration value="50"/>
+			<xs:enumeration value="60"/>
+			<xs:enumeration value="70"/>
+			<xs:enumeration value="80"/>
+			<xs:enumeration value="90"/>
+			<xs:enumeration value="100"/>
+			<xs:enumeration value="110"/>
+			<xs:enumeration value="120"/>
+			<xs:enumeration value="130"/>
+			<xs:enumeration value="140"/>
+			<xs:enumeration value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="Lf_5_DS">
 		<xs:complexContent>
 			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
@@ -2962,27 +3004,6 @@ XML Schema for PlanPro interface.</xs:documentation>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="Lf_Pf">
-		<xs:complexContent>
-			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
-				<xs:sequence/>
-				<xs:attribute name="Anmerkungen" use="prohibited" fixed="Ersatz durch Lf_Pf_l und Lf_Pf_r, entfällt zukünftig" type="xs:string"/>
-				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="false" type="xs:boolean"/>
-				<xs:attribute name="Beschreibung" use="prohibited" fixed="Richtungspfeil, gelber oder weißer Pfeil nach links oder rechts auf einer schwarzen viereckigen Tafel" type="xs:string"/>
-				<xs:attribute name="Geltungsbereich_DS" use="prohibited" fixed="true" type="xs:boolean"/>
-				<xs:attribute name="Geltungsbereich_DV" use="prohibited" fixed="true" type="xs:boolean"/>
-				<xs:attribute name="Geltungsbereich_SBahn_B" use="prohibited" fixed="true" type="xs:boolean"/>
-				<xs:attribute name="Geltungsbereich_SBahn_HH" use="prohibited" fixed="true" type="xs:boolean"/>
-				<xs:attribute name="Gueltig_Ab" use="prohibited" type="xs:date"/>
-				<xs:attribute name="Gueltig_Bis" use="prohibited" type="xs:date"/>
-				<xs:attribute name="Kurzbezeichnung_DS" use="prohibited" type="xs:string"/>
-				<xs:attribute name="Kurzbezeichnung_DV" use="prohibited" type="xs:string"/>
-				<xs:attribute name="Langbezeichnung" use="prohibited" type="xs:string"/>
-				<xs:attribute name="Schaltbar" use="prohibited" fixed="false" type="xs:boolean"/>
-				<xs:attribute name="Zusatz_Moeglich" use="prohibited" fixed="false" type="xs:boolean"/>
-			</xs:restriction>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:complexType name="Ms_UES_Wdh">
 		<xs:complexContent>
 			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
@@ -3470,9 +3491,9 @@ XML Schema for PlanPro interface.</xs:documentation>
 		<xs:complexContent>
 			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
 				<xs:sequence/>
-				<xs:attribute name="Anmerkungen" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Anmerkungen" use="prohibited" fixed="Erkennung Variante b über Zusatzschild" type="xs:string"/>
 				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="false" type="xs:boolean"/>
-				<xs:attribute name="Beschreibung" use="prohibited" fixed="weiße quadratische Tafel mit schwarzem Kreis und Bezeichner des Blockabschnittes" type="xs:string"/>
+				<xs:attribute name="Beschreibung" use="prohibited" fixed="a) weiße quadratische Tafel mit schwarzem Kreis und Bezeichner des Blockabschnittes b) weiße quadratische Tafel mit schwarzem Pfeil (gilt für das Gleis, auf das der Pfeil weist)" type="xs:string"/>
 				<xs:attribute name="Geltungsbereich_DS" use="prohibited" fixed="true" type="xs:boolean"/>
 				<xs:attribute name="Geltungsbereich_DV" use="prohibited" fixed="true" type="xs:boolean"/>
 				<xs:attribute name="Geltungsbereich_SBahn_B" use="prohibited" fixed="false" type="xs:boolean"/>
@@ -3487,11 +3508,11 @@ XML Schema for PlanPro interface.</xs:documentation>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="NISES_HM">
+	<xs:complexType name="Oz_HM">
 		<xs:complexContent>
 			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
 				<xs:sequence/>
-				<xs:attribute name="Anmerkungen" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Anmerkungen" use="prohibited" fixed="Der Signalhaltmelder dient zur signaltechnisch sicheren Anzeige der Haltstellung des Einfahrsignals aus der einmündenden Zugleitstrecke." type="xs:string"/>
 				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="false" type="xs:boolean"/>
 				<xs:attribute name="Beschreibung" use="prohibited" fixed="Der Melder zeigt ein stilisiertes Formhauptsignal in Haltstellung in der Regel in Form eines Zusatzanzeigers" type="xs:string"/>
 				<xs:attribute name="Geltungsbereich_DS" use="prohibited" fixed="true" type="xs:boolean"/>
@@ -3672,7 +3693,7 @@ XML Schema for PlanPro interface.</xs:documentation>
 				<xs:attribute name="Gueltig_Bis" use="prohibited" type="xs:date"/>
 				<xs:attribute name="Kurzbezeichnung_DS" use="prohibited" type="xs:string"/>
 				<xs:attribute name="Kurzbezeichnung_DV" use="prohibited" type="xs:string"/>
-				<xs:attribute name="Langbezeichnung" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Langbezeichnung" use="prohibited" fixed="PZB BÜ" type="xs:string"/>
 				<xs:attribute name="Schaltbar" use="prohibited" fixed="false" type="xs:boolean"/>
 				<xs:attribute name="Zusatz_Moeglich" use="prohibited" fixed="false" type="xs:boolean"/>
 			</xs:restriction>
@@ -3993,4 +4014,89 @@ XML Schema for PlanPro interface.</xs:documentation>
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="BS_ZBS-Ber">
+		<xs:complexContent>
+			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
+				<xs:sequence/>
+				<xs:attribute name="Anmerkungen" use="prohibited" fixed="Kennzeichnung der Grenze des ZBS-Ausrüstungsbereichs" type="xs:string"/>
+				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Beschreibung" use="prohibited" fixed="weiße rechteckige Tafel mit der Aufschrift “ZBS”" type="xs:string"/>
+				<xs:attribute name="Geltungsbereich_DS" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_DV" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_SBahn_B" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_SBahn_HH" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Gueltig_Ab" use="prohibited" type="xs:date"/>
+				<xs:attribute name="Gueltig_Bis" use="prohibited" type="xs:date"/>
+				<xs:attribute name="Kurzbezeichnung_DS" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Kurzbezeichnung_DV" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Langbezeichnung" use="prohibited" fixed="ZBS-Bereichskennzeichen" type="xs:string"/>
+				<xs:attribute name="Schaltbar" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Zusatz_Moeglich" use="prohibited" fixed="false" type="xs:boolean"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Oz_GSM-R">
+		<xs:complexContent>
+			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
+				<xs:sequence/>
+				<xs:attribute name="Anmerkungen" use="prohibited" fixed="Kennzeichnung der Stelle, an der das nationale GSM-R-Funknetz beginnt." type="xs:string"/>
+				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Beschreibung" use="prohibited" fixed="weiße rechteckige Tafel mit schwarzem Rand, Telefonhörersymbol, Aufschrift “GSM-R” und Landeskennzeichen “D”" type="xs:string"/>
+				<xs:attribute name="Geltungsbereich_DS" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_DV" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_SBahn_B" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_SBahn_HH" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Gueltig_Ab" use="prohibited" type="xs:date"/>
+				<xs:attribute name="Gueltig_Bis" use="prohibited" type="xs:date"/>
+				<xs:attribute name="Kurzbezeichnung_DS" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Kurzbezeichnung_DV" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Langbezeichnung" use="prohibited" fixed="GSM-R-Funknetztafel" type="xs:string"/>
+				<xs:attribute name="Schaltbar" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Zusatz_Moeglich" use="prohibited" fixed="false" type="xs:boolean"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+		<xs:complexType name="Lf_1_Wdh">
+		<xs:complexContent>
+			<xs:restriction base="nsSignalbegriffe_Struktur:TCSignalbegriff_ID">
+				<xs:sequence>
+					<xs:element name="Symbol" type="nsSignalbegriffe_Ril_301:ENUMSymbol_Lf_1_Wdh" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="Anmerkungen" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Beleuchtbar" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Beschreibung" use="prohibited" fixed="zweites Signal Lf 1 (Wiederholer)" type="xs:string"/>
+				<xs:attribute name="Geltungsbereich_DS" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_DV" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_SBahn_B" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Geltungsbereich_SBahn_HH" use="prohibited" fixed="true" type="xs:boolean"/>
+				<xs:attribute name="Gueltig_Ab" use="prohibited" type="xs:date"/>
+				<xs:attribute name="Gueltig_Bis" use="prohibited" type="xs:date"/>
+				<xs:attribute name="Kurzbezeichnung_DS" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Kurzbezeichnung_DV" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Langbezeichnung" use="prohibited" type="xs:string"/>
+				<xs:attribute name="Schaltbar" use="prohibited" fixed="false" type="xs:boolean"/>
+				<xs:attribute name="Zusatz_Moeglich" use="prohibited" fixed="false" type="xs:boolean"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="ENUMSymbol_Lf_1_Wdh">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="0,5"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="9"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

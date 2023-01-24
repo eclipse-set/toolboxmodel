@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup} object.
@@ -96,6 +97,7 @@ public class FT_ZBS_Merkmale_AttributeGroupItemProvider
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_SchutzstreckeErforderlich());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_SchutzstreckeVorhanden());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_Telegrammnummer());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_UeberwachungLaenge());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_VBefehlR());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_VBefehlZ());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_VFrei());
@@ -165,6 +167,7 @@ public class FT_ZBS_Merkmale_AttributeGroupItemProvider
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__SCHUTZSTRECKE_ERFORDERLICH:
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__SCHUTZSTRECKE_VORHANDEN:
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__TELEGRAMMNUMMER:
+			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__UEBERWACHUNG_LAENGE:
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_R:
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VBEFEHL_Z:
 			case Balisentechnik_ETCSPackage.FT_ZBS_MERKMALE_ATTRIBUTE_GROUP__VFREI:
@@ -244,6 +247,11 @@ public class FT_ZBS_Merkmale_AttributeGroupItemProvider
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_Telegrammnummer(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createTelegrammnummer_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getFT_ZBS_Merkmale_AttributeGroup_UeberwachungLaenge(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createUeberwachung_Laenge_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

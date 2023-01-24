@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
@@ -69,6 +76,16 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR(4, "ENUMZugeinwirkung_Art_Einfach_Sensor", "Einfach_Sensor"),
 
 	/**
+	 * The '<em><b>ENUM Zugeinwirkung Art Einfach Sensor richtungsabhaengig</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_RICHTUNGSABHAENGIG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_RICHTUNGSABHAENGIG(5, "ENUMZugeinwirkung_Art_Einfach_Sensor_richtungsabhaengig", "Einfach_Sensor_richtungsabhaengig"),
+
+	/**
 	 * The '<em><b>ENUM Zugeinwirkung Art Isolierte Schiene alleinstehend</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,7 +93,7 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_ALLEINSTEHEND(5, "ENUMZugeinwirkung_Art_Isolierte_Schiene_alleinstehend", "Isolierte_Schiene_alleinstehend"),
+	ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_ALLEINSTEHEND(6, "ENUMZugeinwirkung_Art_Isolierte_Schiene_alleinstehend", "Isolierte_Schiene_alleinstehend"),
 
 	/**
 	 * The '<em><b>ENUM Zugeinwirkung Art Isolierte Schiene FMA Anlage mitbenutzt</b></em>' literal object.
@@ -86,7 +103,17 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_FMA_ANLAGE_MITBENUTZT(6, "ENUMZugeinwirkung_Art_Isolierte_Schiene_FMA_Anlage_mitbenutzt", "Isolierte_Schiene_FMA_Anlage_mitbenutzt"),
+	ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_FMA_ANLAGE_MITBENUTZT(7, "ENUMZugeinwirkung_Art_Isolierte_Schiene_FMA_Anlage_mitbenutzt", "Isolierte_Schiene_FMA_Anlage_mitbenutzt"),
+
+	/**
+	 * The '<em><b>ENUM Zugeinwirkung Art Schienenkontakt</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_ZUGEINWIRKUNG_ART_SCHIENENKONTAKT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_ZUGEINWIRKUNG_ART_SCHIENENKONTAKT(8, "ENUMZugeinwirkung_Art_Schienenkontakt", "Schienenkontakt"),
 
 	/**
 	 * The '<em><b>ENUM Zugeinwirkung Art sonstige</b></em>' literal object.
@@ -96,7 +123,7 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_ZUGEINWIRKUNG_ART_SONSTIGE(7, "ENUMZugeinwirkung_Art_sonstige", "sonstige");
+	ENUM_ZUGEINWIRKUNG_ART_SONSTIGE(9, "ENUMZugeinwirkung_Art_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUM Zugeinwirkung Art Doppel Schleife</b></em>' literal value.
@@ -154,6 +181,17 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	public static final int ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_VALUE = 4;
 
 	/**
+	 * The '<em><b>ENUM Zugeinwirkung Art Einfach Sensor richtungsabhaengig</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_RICHTUNGSABHAENGIG
+	 * @model name="ENUMZugeinwirkung_Art_Einfach_Sensor_richtungsabhaengig" literal="Einfach_Sensor_richtungsabhaengig"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_RICHTUNGSABHAENGIG_VALUE = 5;
+
+	/**
 	 * The '<em><b>ENUM Zugeinwirkung Art Isolierte Schiene alleinstehend</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -162,7 +200,7 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_ALLEINSTEHEND_VALUE = 5;
+	public static final int ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_ALLEINSTEHEND_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Zugeinwirkung Art Isolierte Schiene FMA Anlage mitbenutzt</b></em>' literal value.
@@ -173,7 +211,18 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_FMA_ANLAGE_MITBENUTZT_VALUE = 6;
+	public static final int ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_FMA_ANLAGE_MITBENUTZT_VALUE = 7;
+
+	/**
+	 * The '<em><b>ENUM Zugeinwirkung Art Schienenkontakt</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_ZUGEINWIRKUNG_ART_SCHIENENKONTAKT
+	 * @model name="ENUMZugeinwirkung_Art_Schienenkontakt" literal="Schienenkontakt"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_ZUGEINWIRKUNG_ART_SCHIENENKONTAKT_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUM Zugeinwirkung Art sonstige</b></em>' literal value.
@@ -184,7 +233,7 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_ZUGEINWIRKUNG_ART_SONSTIGE_VALUE = 7;
+	public static final int ENUM_ZUGEINWIRKUNG_ART_SONSTIGE_VALUE = 9;
 
 	/**
 	 * An array of all the '<em><b>ENUM Zugeinwirkung Art</b></em>' enumerators.
@@ -199,8 +248,10 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 			ENUM_ZUGEINWIRKUNG_ART_DREIFACH_SCHLEIFE,
 			ENUM_ZUGEINWIRKUNG_ART_EINFACH_SCHLEIFE,
 			ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR,
+			ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_RICHTUNGSABHAENGIG,
 			ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_ALLEINSTEHEND,
 			ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_FMA_ANLAGE_MITBENUTZT,
+			ENUM_ZUGEINWIRKUNG_ART_SCHIENENKONTAKT,
 			ENUM_ZUGEINWIRKUNG_ART_SONSTIGE,
 		};
 
@@ -263,8 +314,10 @@ public enum ENUMZugeinwirkungArt implements Enumerator {
 			case ENUM_ZUGEINWIRKUNG_ART_DREIFACH_SCHLEIFE_VALUE: return ENUM_ZUGEINWIRKUNG_ART_DREIFACH_SCHLEIFE;
 			case ENUM_ZUGEINWIRKUNG_ART_EINFACH_SCHLEIFE_VALUE: return ENUM_ZUGEINWIRKUNG_ART_EINFACH_SCHLEIFE;
 			case ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_VALUE: return ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR;
+			case ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_RICHTUNGSABHAENGIG_VALUE: return ENUM_ZUGEINWIRKUNG_ART_EINFACH_SENSOR_RICHTUNGSABHAENGIG;
 			case ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_ALLEINSTEHEND_VALUE: return ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_ALLEINSTEHEND;
 			case ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_FMA_ANLAGE_MITBENUTZT_VALUE: return ENUM_ZUGEINWIRKUNG_ART_ISOLIERTE_SCHIENE_FMA_ANLAGE_MITBENUTZT;
+			case ENUM_ZUGEINWIRKUNG_ART_SCHIENENKONTAKT_VALUE: return ENUM_ZUGEINWIRKUNG_ART_SCHIENENKONTAKT;
 			case ENUM_ZUGEINWIRKUNG_ART_SONSTIGE_VALUE: return ENUM_ZUGEINWIRKUNG_ART_SONSTIGE;
 			default: return null;
 		}

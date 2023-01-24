@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -49,6 +56,16 @@ public enum ENUMSignalArt implements Enumerator {
 	ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL(2, "ENUMSignal_Art_Hauptsperrsignal", "Hauptsperrsignal"),
 
 	/**
+	 * The '<em><b>ENUM Signal Art Hauptsperrsignal Ne 14 Ls</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS(3, "ENUMSignal_Art_Hauptsperrsignal_Ne_14_Ls", "Hauptsperrsignal Ne 14 Ls"),
+
+	/**
 	 * The '<em><b>ENUM Signal Art Mehrabschnittssignal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,7 +73,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL(3, "ENUMSignal_Art_Mehrabschnittssignal", "Mehrabschnittssignal"),
+	ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL(4, "ENUMSignal_Art_Mehrabschnittssignal", "Mehrabschnittssignal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Art Mehrabschnittssperrsignal</b></em>' literal object.
@@ -66,7 +83,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL(4, "ENUMSignal_Art_Mehrabschnittssperrsignal", "Mehrabschnittssperrsignal"),
+	ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL(5, "ENUMSignal_Art_Mehrabschnittssperrsignal", "Mehrabschnittssperrsignal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Art Sperrsignal</b></em>' literal object.
@@ -76,7 +93,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_ART_SPERRSIGNAL(5, "ENUMSignal_Art_Sperrsignal", "Sperrsignal"),
+	ENUM_SIGNAL_ART_SPERRSIGNAL(6, "ENUMSignal_Art_Sperrsignal", "Sperrsignal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Art Vorsignal</b></em>' literal object.
@@ -86,7 +103,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_ART_VORSIGNAL(6, "ENUMSignal_Art_Vorsignal", "Vorsignal"),
+	ENUM_SIGNAL_ART_VORSIGNAL(7, "ENUMSignal_Art_Vorsignal", "Vorsignal"),
 
 	/**
 	 * The '<em><b>ENUM Signal Art Vorsignalwiederholer</b></em>' literal object.
@@ -96,7 +113,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_ART_VORSIGNALWIEDERHOLER(7, "ENUMSignal_Art_Vorsignalwiederholer", "Vorsignalwiederholer"),
+	ENUM_SIGNAL_ART_VORSIGNALWIEDERHOLER(8, "ENUMSignal_Art_Vorsignalwiederholer", "Vorsignalwiederholer"),
 
 	/**
 	 * The '<em><b>ENUM Signal Art Zugdeckungssignal</b></em>' literal object.
@@ -106,7 +123,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SIGNAL_ART_ZUGDECKUNGSSIGNAL(8, "ENUMSignal_Art_Zugdeckungssignal", "Zugdeckungssignal");
+	ENUM_SIGNAL_ART_ZUGDECKUNGSSIGNAL(9, "ENUMSignal_Art_Zugdeckungssignal", "Zugdeckungssignal");
 
 	/**
 	 * The '<em><b>ENUM Signal Art andere</b></em>' literal value.
@@ -142,6 +159,17 @@ public enum ENUMSignalArt implements Enumerator {
 	public static final int ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_VALUE = 2;
 
 	/**
+	 * The '<em><b>ENUM Signal Art Hauptsperrsignal Ne 14 Ls</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS
+	 * @model name="ENUMSignal_Art_Hauptsperrsignal_Ne_14_Ls" literal="Hauptsperrsignal Ne 14 Ls"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS_VALUE = 3;
+
+	/**
 	 * The '<em><b>ENUM Signal Art Mehrabschnittssignal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,7 +178,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL_VALUE = 3;
+	public static final int ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUM Signal Art Mehrabschnittssperrsignal</b></em>' literal value.
@@ -161,7 +189,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL_VALUE = 4;
+	public static final int ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Signal Art Sperrsignal</b></em>' literal value.
@@ -172,7 +200,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_ART_SPERRSIGNAL_VALUE = 5;
+	public static final int ENUM_SIGNAL_ART_SPERRSIGNAL_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Signal Art Vorsignal</b></em>' literal value.
@@ -183,7 +211,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_ART_VORSIGNAL_VALUE = 6;
+	public static final int ENUM_SIGNAL_ART_VORSIGNAL_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUM Signal Art Vorsignalwiederholer</b></em>' literal value.
@@ -194,7 +222,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_ART_VORSIGNALWIEDERHOLER_VALUE = 7;
+	public static final int ENUM_SIGNAL_ART_VORSIGNALWIEDERHOLER_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUM Signal Art Zugdeckungssignal</b></em>' literal value.
@@ -205,7 +233,7 @@ public enum ENUMSignalArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SIGNAL_ART_ZUGDECKUNGSSIGNAL_VALUE = 8;
+	public static final int ENUM_SIGNAL_ART_ZUGDECKUNGSSIGNAL_VALUE = 9;
 
 	/**
 	 * An array of all the '<em><b>ENUM Signal Art</b></em>' enumerators.
@@ -218,6 +246,7 @@ public enum ENUMSignalArt implements Enumerator {
 			ENUM_SIGNAL_ART_ANDERE,
 			ENUM_SIGNAL_ART_HAUPTSIGNAL,
 			ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL,
+			ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS,
 			ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL,
 			ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL,
 			ENUM_SIGNAL_ART_SPERRSIGNAL,
@@ -283,6 +312,7 @@ public enum ENUMSignalArt implements Enumerator {
 			case ENUM_SIGNAL_ART_ANDERE_VALUE: return ENUM_SIGNAL_ART_ANDERE;
 			case ENUM_SIGNAL_ART_HAUPTSIGNAL_VALUE: return ENUM_SIGNAL_ART_HAUPTSIGNAL;
 			case ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_VALUE: return ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL;
+			case ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS_VALUE: return ENUM_SIGNAL_ART_HAUPTSPERRSIGNAL_NE_14_LS;
 			case ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL_VALUE: return ENUM_SIGNAL_ART_MEHRABSCHNITTSSIGNAL;
 			case ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL_VALUE: return ENUM_SIGNAL_ART_MEHRABSCHNITTSSPERRSIGNAL;
 			case ENUM_SIGNAL_ART_SPERRSIGNAL_VALUE: return ENUM_SIGNAL_ART_SPERRSIGNAL;

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.impl;
 
@@ -16,7 +23,6 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Dateiname_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Dateityp_TypeClass;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +35,6 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Daten_TypeClass;
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Anhang_Allg_AttributeGroupImpl#getAnhangArt <em>Anhang Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Anhang_Allg_AttributeGroupImpl#getDateiname <em>Dateiname</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Anhang_Allg_AttributeGroupImpl#getDateityp <em>Dateityp</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.impl.Anhang_Allg_AttributeGroupImpl#getDaten <em>Daten</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,16 +69,6 @@ public class Anhang_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected Dateityp_TypeClass dateityp;
-
-	/**
-	 * The cached value of the '{@link #getDaten() <em>Daten</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDaten()
-	 * @generated
-	 * @ordered
-	 */
-	protected Daten_TypeClass daten;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,51 +230,6 @@ public class Anhang_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Daten_TypeClass getDaten() {
-		return daten;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDaten(Daten_TypeClass newDaten, NotificationChain msgs) {
-		Daten_TypeClass oldDaten = daten;
-		daten = newDaten;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN, oldDaten, newDaten);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDaten(Daten_TypeClass newDaten) {
-		if (newDaten != daten) {
-			NotificationChain msgs = null;
-			if (daten != null)
-				msgs = ((InternalEObject)daten).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN, null, msgs);
-			if (newDaten != null)
-				msgs = ((InternalEObject)newDaten).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN, null, msgs);
-			msgs = basicSetDaten(newDaten, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN, newDaten, newDaten));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__ANHANG_ART:
@@ -288,8 +238,6 @@ public class Anhang_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 				return basicSetDateiname(null, msgs);
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP:
 				return basicSetDateityp(null, msgs);
-			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN:
-				return basicSetDaten(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -309,8 +257,6 @@ public class Anhang_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 				return getDateiname();
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP:
 				return getDateityp();
-			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN:
-				return getDaten();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -332,9 +278,6 @@ public class Anhang_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 				return;
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP:
 				setDateityp((Dateityp_TypeClass)newValue);
-				return;
-			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN:
-				setDaten((Daten_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -359,9 +302,6 @@ public class Anhang_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP:
 				setDateityp((Dateityp_TypeClass)null);
 				return;
-			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN:
-				setDaten((Daten_TypeClass)null);
-				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -382,8 +322,6 @@ public class Anhang_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 				return dateiname != null;
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP:
 				return dateityp != null;
-			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN:
-				return daten != null;
 			default:
 				return super.eIsSet(featureID);
 		}

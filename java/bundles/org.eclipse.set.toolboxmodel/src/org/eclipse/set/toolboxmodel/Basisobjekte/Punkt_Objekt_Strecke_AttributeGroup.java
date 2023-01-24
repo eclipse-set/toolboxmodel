@@ -1,8 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
 
 /**
@@ -15,6 +23,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup#getIDStrecke <em>ID Strecke</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup#getKmMassgebend <em>Km Massgebend</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup#getStreckeKm <em>Strecke Km</em>}</li>
  * </ul>
  *
@@ -75,6 +84,32 @@ public interface Punkt_Objekt_Strecke_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	boolean isSetIDStrecke();
+
+	/**
+	 * Returns the value of the '<em><b>Km Massgebend</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Kennzeichnung der maßgebenden Kilometrierung ("true") bei Referenz zu mehreren Strecken.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Km Massgebend</em>' containment reference.
+	 * @see #setKmMassgebend(Km_Massgebend_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getPunkt_Objekt_Strecke_AttributeGroup_KmMassgebend()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Km_Massgebend'"
+	 * @generated
+	 */
+	Km_Massgebend_TypeClass getKmMassgebend();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt_Strecke_AttributeGroup#getKmMassgebend <em>Km Massgebend</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Km Massgebend</em>' containment reference.
+	 * @see #getKmMassgebend()
+	 * @generated
+	 */
+	void setKmMassgebend(Km_Massgebend_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Strecke Km</b></em>' containment reference.

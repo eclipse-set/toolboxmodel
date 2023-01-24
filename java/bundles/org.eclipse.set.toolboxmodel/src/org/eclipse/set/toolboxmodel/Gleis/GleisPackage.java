@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface GleisPackage extends EPackage {
 	int BAUBEREICH_ART_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface GleisPackage extends EPackage {
 	int BEZ_GLEIS_BEZEICHNUNG_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface GleisPackage extends EPackage {
 	int FAHRSTROM_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface GleisPackage extends EPackage {
 	int GESCHWINDIGKEIT_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -802,13 +778,22 @@ public interface GleisPackage extends EPackage {
 	int GLEIS_ABSCHNITT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_ABSCHNITT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_ABSCHNITT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -893,13 +878,22 @@ public interface GleisPackage extends EPackage {
 	int GLEIS_ART__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_ART__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_ART__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -975,13 +969,22 @@ public interface GleisPackage extends EPackage {
 	int GLEIS_BAUBEREICH__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_BAUBEREICH__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_BAUBEREICH__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1057,13 +1060,22 @@ public interface GleisPackage extends EPackage {
 	int GLEIS_BEZEICHNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_BEZEICHNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_BEZEICHNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1176,13 +1188,22 @@ public interface GleisPackage extends EPackage {
 	int GLEIS_FAHRBAHN__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_FAHRBAHN__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_FAHRBAHN__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1258,13 +1279,22 @@ public interface GleisPackage extends EPackage {
 	int GLEIS_LICHTRAUM__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_LICHTRAUM__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_LICHTRAUM__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1340,13 +1370,22 @@ public interface GleisPackage extends EPackage {
 	int GLEIS_SCHALTGRUPPE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int GLEIS_SCHALTGRUPPE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLEIS_SCHALTGRUPPE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1413,7 +1452,7 @@ public interface GleisPackage extends EPackage {
 	int GLEISART_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1459,7 +1498,7 @@ public interface GleisPackage extends EPackage {
 	int KONSTRUKTION_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1505,7 +1544,7 @@ public interface GleisPackage extends EPackage {
 	int LICHTRAUMPROFIL_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1541,190 +1580,6 @@ public interface GleisPackage extends EPackage {
 	int LICHTRAUMPROFIL_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Gueterzug_TypeClassImpl <em>Nutzung Gueterzug Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Gueterzug_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_Gueterzug_TypeClass()
-	 * @generated
-	 */
-	int NUTZUNG_GUETERZUG_TYPE_CLASS = 15;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_GUETERZUG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_GUETERZUG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Nutzung Gueterzug Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_GUETERZUG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Nutzung Gueterzug Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_GUETERZUG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Rangier_TypeClassImpl <em>Nutzung Rangier Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Rangier_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_Rangier_TypeClass()
-	 * @generated
-	 */
-	int NUTZUNG_RANGIER_TYPE_CLASS = 16;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_RANGIER_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_RANGIER_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Nutzung Rangier Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_RANGIER_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Nutzung Rangier Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_RANGIER_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Reisezug_TypeClassImpl <em>Nutzung Reisezug Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Reisezug_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_Reisezug_TypeClass()
-	 * @generated
-	 */
-	int NUTZUNG_REISEZUG_TYPE_CLASS = 17;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_REISEZUG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_REISEZUG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Nutzung Reisezug Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_REISEZUG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Nutzung Reisezug Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_REISEZUG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_SBahn_TypeClassImpl <em>Nutzung SBahn Type Class</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_SBahn_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_SBahn_TypeClass()
-	 * @generated
-	 */
-	int NUTZUNG_SBAHN_TYPE_CLASS = 18;
-
-	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_SBAHN_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
-
-	/**
-	 * The feature id for the '<em><b>Wert</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_SBAHN_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Nutzung SBahn Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_SBAHN_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Nutzung SBahn Type Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUTZUNG_SBAHN_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.ENUMBaubereichArt <em>ENUM Baubereich Art</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1732,7 +1587,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMBaubereichArt()
 	 * @generated
 	 */
-	int ENUM_BAUBEREICH_ART = 19;
+	int ENUM_BAUBEREICH_ART = 15;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.ENUMGleisart <em>ENUM Gleisart</em>}' enum.
@@ -1742,7 +1597,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMGleisart()
 	 * @generated
 	 */
-	int ENUM_GLEISART = 20;
+	int ENUM_GLEISART = 16;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.ENUMKonstruktion <em>ENUM Konstruktion</em>}' enum.
@@ -1752,7 +1607,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMKonstruktion()
 	 * @generated
 	 */
-	int ENUM_KONSTRUKTION = 21;
+	int ENUM_KONSTRUKTION = 17;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Gleis.ENUMLichtraumprofil <em>ENUM Lichtraumprofil</em>}' enum.
@@ -1762,7 +1617,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMLichtraumprofil()
 	 * @generated
 	 */
-	int ENUM_LICHTRAUMPROFIL = 22;
+	int ENUM_LICHTRAUMPROFIL = 18;
 
 	/**
 	 * The meta object id for the '<em>Bez Gleis Bezeichnung Type</em>' data type.
@@ -1772,7 +1627,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getBez_Gleis_Bezeichnung_Type()
 	 * @generated
 	 */
-	int BEZ_GLEIS_BEZEICHNUNG_TYPE = 23;
+	int BEZ_GLEIS_BEZEICHNUNG_TYPE = 19;
 
 	/**
 	 * The meta object id for the '<em>ENUM Baubereich Art Object</em>' data type.
@@ -1782,7 +1637,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMBaubereichArtObject()
 	 * @generated
 	 */
-	int ENUM_BAUBEREICH_ART_OBJECT = 24;
+	int ENUM_BAUBEREICH_ART_OBJECT = 20;
 
 	/**
 	 * The meta object id for the '<em>ENUM Gleisart Object</em>' data type.
@@ -1792,7 +1647,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMGleisartObject()
 	 * @generated
 	 */
-	int ENUM_GLEISART_OBJECT = 25;
+	int ENUM_GLEISART_OBJECT = 21;
 
 	/**
 	 * The meta object id for the '<em>ENUM Konstruktion Object</em>' data type.
@@ -1802,7 +1657,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMKonstruktionObject()
 	 * @generated
 	 */
-	int ENUM_KONSTRUKTION_OBJECT = 26;
+	int ENUM_KONSTRUKTION_OBJECT = 22;
 
 	/**
 	 * The meta object id for the '<em>ENUM Lichtraumprofil Object</em>' data type.
@@ -1812,7 +1667,17 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getENUMLichtraumprofilObject()
 	 * @generated
 	 */
-	int ENUM_LICHTRAUMPROFIL_OBJECT = 27;
+	int ENUM_LICHTRAUMPROFIL_OBJECT = 23;
+
+	/**
+	 * The meta object id for the '<em>Fahrstrom Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom
+	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getFahrstrom_Type()
+	 * @generated
+	 */
+	int FAHRSTROM_TYPE = 24;
 
 	/**
 	 * The meta object id for the '<em>Geschwindigkeit Type</em>' data type.
@@ -1822,7 +1687,7 @@ public interface GleisPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getGeschwindigkeit_Type()
 	 * @generated
 	 */
-	int GESCHWINDIGKEIT_TYPE = 28;
+	int GESCHWINDIGKEIT_TYPE = 25;
 
 
 	/**
@@ -2163,90 +2028,6 @@ public interface GleisPackage extends EPackage {
 	EAttribute getLichtraumprofil_TypeClass_Wert();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass <em>Nutzung Gueterzug Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Nutzung Gueterzug Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass
-	 * @generated
-	 */
-	EClass getNutzung_Gueterzug_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass#getWert()
-	 * @see #getNutzung_Gueterzug_TypeClass()
-	 * @generated
-	 */
-	EAttribute getNutzung_Gueterzug_TypeClass_Wert();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass <em>Nutzung Rangier Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Nutzung Rangier Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass
-	 * @generated
-	 */
-	EClass getNutzung_Rangier_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass#getWert()
-	 * @see #getNutzung_Rangier_TypeClass()
-	 * @generated
-	 */
-	EAttribute getNutzung_Rangier_TypeClass_Wert();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass <em>Nutzung Reisezug Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Nutzung Reisezug Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass
-	 * @generated
-	 */
-	EClass getNutzung_Reisezug_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass#getWert()
-	 * @see #getNutzung_Reisezug_TypeClass()
-	 * @generated
-	 */
-	EAttribute getNutzung_Reisezug_TypeClass_Wert();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass <em>Nutzung SBahn Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Nutzung SBahn Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass
-	 * @generated
-	 */
-	EClass getNutzung_SBahn_TypeClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass#getWert <em>Wert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass#getWert()
-	 * @see #getNutzung_SBahn_TypeClass()
-	 * @generated
-	 */
-	EAttribute getNutzung_SBahn_TypeClass_Wert();
-
-	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Gleis.ENUMBaubereichArt <em>ENUM Baubereich Art</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2345,6 +2126,18 @@ public interface GleisPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMLichtraumprofilObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom <em>Fahrstrom Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Fahrstrom Type</em>'.
+	 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom"
+	 *        extendedMetaData="name='TFahrstrom' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TFahrstrom'"
+	 * @generated
+	 */
+	EDataType getFahrstrom_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.math.BigInteger <em>Geschwindigkeit Type</em>}'.
@@ -2668,78 +2461,6 @@ public interface GleisPackage extends EPackage {
 		EAttribute LICHTRAUMPROFIL_TYPE_CLASS__WERT = eINSTANCE.getLichtraumprofil_TypeClass_Wert();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Gueterzug_TypeClassImpl <em>Nutzung Gueterzug Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Gueterzug_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_Gueterzug_TypeClass()
-		 * @generated
-		 */
-		EClass NUTZUNG_GUETERZUG_TYPE_CLASS = eINSTANCE.getNutzung_Gueterzug_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NUTZUNG_GUETERZUG_TYPE_CLASS__WERT = eINSTANCE.getNutzung_Gueterzug_TypeClass_Wert();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Rangier_TypeClassImpl <em>Nutzung Rangier Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Rangier_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_Rangier_TypeClass()
-		 * @generated
-		 */
-		EClass NUTZUNG_RANGIER_TYPE_CLASS = eINSTANCE.getNutzung_Rangier_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NUTZUNG_RANGIER_TYPE_CLASS__WERT = eINSTANCE.getNutzung_Rangier_TypeClass_Wert();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Reisezug_TypeClassImpl <em>Nutzung Reisezug Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_Reisezug_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_Reisezug_TypeClass()
-		 * @generated
-		 */
-		EClass NUTZUNG_REISEZUG_TYPE_CLASS = eINSTANCE.getNutzung_Reisezug_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NUTZUNG_REISEZUG_TYPE_CLASS__WERT = eINSTANCE.getNutzung_Reisezug_TypeClass_Wert();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_SBahn_TypeClassImpl <em>Nutzung SBahn Type Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.Nutzung_SBahn_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getNutzung_SBahn_TypeClass()
-		 * @generated
-		 */
-		EClass NUTZUNG_SBAHN_TYPE_CLASS = eINSTANCE.getNutzung_SBahn_TypeClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NUTZUNG_SBAHN_TYPE_CLASS__WERT = eINSTANCE.getNutzung_SBahn_TypeClass_Wert();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Gleis.ENUMBaubereichArt <em>ENUM Baubereich Art</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2828,6 +2549,16 @@ public interface GleisPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_LICHTRAUMPROFIL_OBJECT = eINSTANCE.getENUMLichtraumprofilObject();
+
+		/**
+		 * The meta object literal for the '<em>Fahrstrom Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom
+		 * @see org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl#getFahrstrom_Type()
+		 * @generated
+		 */
+		EDataType FAHRSTROM_TYPE = eINSTANCE.getFahrstrom_Type();
 
 		/**
 		 * The meta object literal for the '<em>Geschwindigkeit Type</em>' data type.

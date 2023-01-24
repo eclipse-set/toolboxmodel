@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang;
 
@@ -189,6 +196,16 @@ public enum ENUMBUETechnik implements Enumerator {
 	ENUMBUE_TECHNIK_NE_BUE_90(16, "ENUMBUE_Technik_NE_BUE_90", "NE_BUE_90"),
 
 	/**
+	 * The '<em><b>ENUMBUE Technik RBUEP</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_TECHNIK_RBUEP_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMBUE_TECHNIK_RBUEP(17, "ENUMBUE_Technik_RBUEP", "RBUEP"),
+
+	/**
 	 * The '<em><b>ENUMBUE Technik RBUET</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,7 +213,7 @@ public enum ENUMBUETechnik implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_TECHNIK_RBUET(17, "ENUMBUE_Technik_RBUET", "RBUET"),
+	ENUMBUE_TECHNIK_RBUET(18, "ENUMBUE_Technik_RBUET", "RBUET"),
 
 	/**
 	 * The '<em><b>ENUMBUE Technik SIMIS LC</b></em>' literal object.
@@ -206,7 +223,7 @@ public enum ENUMBUETechnik implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_TECHNIK_SIMIS_LC(18, "ENUMBUE_Technik_SIMIS_LC", "SIMIS_LC"),
+	ENUMBUE_TECHNIK_SIMIS_LC(19, "ENUMBUE_Technik_SIMIS_LC", "SIMIS_LC"),
 
 	/**
 	 * The '<em><b>ENUMBUE Technik sonstige</b></em>' literal object.
@@ -216,7 +233,7 @@ public enum ENUMBUETechnik implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMBUE_TECHNIK_SONSTIGE(19, "ENUMBUE_Technik_sonstige", "sonstige");
+	ENUMBUE_TECHNIK_SONSTIGE(20, "ENUMBUE_Technik_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUMBUE Technik Anrufschranke</b></em>' literal value.
@@ -406,6 +423,17 @@ public enum ENUMBUETechnik implements Enumerator {
 	public static final int ENUMBUE_TECHNIK_NE_BUE_90_VALUE = 16;
 
 	/**
+	 * The '<em><b>ENUMBUE Technik RBUEP</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMBUE_TECHNIK_RBUEP
+	 * @model name="ENUMBUE_Technik_RBUEP" literal="RBUEP"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMBUE_TECHNIK_RBUEP_VALUE = 17;
+
+	/**
 	 * The '<em><b>ENUMBUE Technik RBUET</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -414,7 +442,7 @@ public enum ENUMBUETechnik implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_TECHNIK_RBUET_VALUE = 17;
+	public static final int ENUMBUE_TECHNIK_RBUET_VALUE = 18;
 
 	/**
 	 * The '<em><b>ENUMBUE Technik SIMIS LC</b></em>' literal value.
@@ -425,7 +453,7 @@ public enum ENUMBUETechnik implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_TECHNIK_SIMIS_LC_VALUE = 18;
+	public static final int ENUMBUE_TECHNIK_SIMIS_LC_VALUE = 19;
 
 	/**
 	 * The '<em><b>ENUMBUE Technik sonstige</b></em>' literal value.
@@ -436,7 +464,7 @@ public enum ENUMBUETechnik implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMBUE_TECHNIK_SONSTIGE_VALUE = 19;
+	public static final int ENUMBUE_TECHNIK_SONSTIGE_VALUE = 20;
 
 	/**
 	 * An array of all the '<em><b>ENUMBUE Technik</b></em>' enumerators.
@@ -463,6 +491,7 @@ public enum ENUMBUETechnik implements Enumerator {
 			ENUMBUE_TECHNIK_LO1,
 			ENUMBUE_TECHNIK_LO1_57,
 			ENUMBUE_TECHNIK_NE_BUE_90,
+			ENUMBUE_TECHNIK_RBUEP,
 			ENUMBUE_TECHNIK_RBUET,
 			ENUMBUE_TECHNIK_SIMIS_LC,
 			ENUMBUE_TECHNIK_SONSTIGE,
@@ -539,6 +568,7 @@ public enum ENUMBUETechnik implements Enumerator {
 			case ENUMBUE_TECHNIK_LO1_VALUE: return ENUMBUE_TECHNIK_LO1;
 			case ENUMBUE_TECHNIK_LO1_57_VALUE: return ENUMBUE_TECHNIK_LO1_57;
 			case ENUMBUE_TECHNIK_NE_BUE_90_VALUE: return ENUMBUE_TECHNIK_NE_BUE_90;
+			case ENUMBUE_TECHNIK_RBUEP_VALUE: return ENUMBUE_TECHNIK_RBUEP;
 			case ENUMBUE_TECHNIK_RBUET_VALUE: return ENUMBUE_TECHNIK_RBUET;
 			case ENUMBUE_TECHNIK_SIMIS_LC_VALUE: return ENUMBUE_TECHNIK_SIMIS_LC;
 			case ENUMBUE_TECHNIK_SONSTIGE_VALUE: return ENUMBUE_TECHNIK_SONSTIGE;

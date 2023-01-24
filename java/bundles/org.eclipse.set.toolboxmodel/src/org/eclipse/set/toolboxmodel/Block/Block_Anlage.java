@@ -1,9 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Gleis.Gleis_Bezeichnung;
 
 /**
@@ -37,7 +44,7 @@ public interface Block_Anlage extends Basis_Objekt {
 	 * @return the value of the '<em>Block Anlage Allg</em>' containment reference.
 	 * @see #setBlockAnlageAllg(Block_Anlage_Allg_AttributeGroup)
 	 * @see org.eclipse.set.toolboxmodel.Block.BlockPackage#getBlock_Anlage_BlockAnlageAllg()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Block_Anlage_Allg'"
 	 * @generated
 	 */

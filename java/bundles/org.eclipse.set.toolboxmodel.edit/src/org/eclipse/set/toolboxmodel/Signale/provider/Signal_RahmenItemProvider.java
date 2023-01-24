@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Signale.Signal_Rahmen;
 import org.eclipse.set.toolboxmodel.Signale.SignaleFactory;
@@ -59,11 +60,34 @@ public class Signal_RahmenItemProvider extends Basis_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIDRegelzeichnungPropertyDescriptor(object);
 			addIDSignalPropertyDescriptor(object);
 			addIDSignalBefestigungPropertyDescriptor(object);
 			addIDSignalNachordnungPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the ID Regelzeichnung feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDRegelzeichnungPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Signal_Rahmen_iDRegelzeichnung_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Signal_Rahmen_iDRegelzeichnung_feature", "_UI_Signal_Rahmen_type"),
+				 SignalePackage.Literals.SIGNAL_RAHMEN__ID_REGELZEICHNUNG,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -145,6 +169,7 @@ public class Signal_RahmenItemProvider extends Basis_ObjektItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_RAHMEN__RAHMEN_ART);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_RAHMEN__RAHMEN_HOEHE);
 		}
 		return childrenFeatures;
 	}
@@ -198,6 +223,7 @@ public class Signal_RahmenItemProvider extends Basis_ObjektItemProvider {
 
 		switch (notification.getFeatureID(Signal_Rahmen.class)) {
 			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_ART:
+			case SignalePackage.SIGNAL_RAHMEN__RAHMEN_HOEHE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -221,6 +247,11 @@ public class Signal_RahmenItemProvider extends Basis_ObjektItemProvider {
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_RAHMEN__RAHMEN_ART,
 				 SignaleFactory.eINSTANCE.createRahmen_Art_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_RAHMEN__RAHMEN_HOEHE,
+				 SignaleFactory.eINSTANCE.createRahmen_Hoehe_TypeClass()));
 	}
 
 	/**

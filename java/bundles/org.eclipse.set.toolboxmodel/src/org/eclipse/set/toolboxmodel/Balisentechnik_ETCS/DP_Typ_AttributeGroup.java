@@ -1,6 +1,15 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -32,12 +41,12 @@ public interface DP_Typ_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Das angegebene Anwendungssystem ist das primär oder sekundär genutzte.
+	 * Das angegebene Anwendungssystem ist das sekundär genutzte. Sofern keine Angabe vorhanden ist, handelt es sich um das einzige oder primaer genutzte Anwendungssystem.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>DP Typ Art</em>' containment reference.
 	 * @see #setDPTypArt(DP_Typ_Art_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDP_Typ_AttributeGroup_DPTypArt()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='DP_Typ_Art'"
 	 * @generated
 	 */
@@ -77,27 +86,17 @@ public interface DP_Typ_AttributeGroup extends EObject {
 	void setDPTypGESG(DP_Typ_GESG_AttributeGroup value);
 
 	/**
-	 * Returns the value of the '<em><b>DP Typ GETCS</b></em>' containment reference.
+	 * Returns the value of the '<em><b>DP Typ GETCS</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GETCS_AttributeGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>DP Typ GETCS</em>' containment reference.
-	 * @see #setDPTypGETCS(DP_Typ_GETCS_AttributeGroup)
+	 * @return the value of the '<em>DP Typ GETCS</em>' containment reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDP_Typ_AttributeGroup_DPTypGETCS()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='DP_Typ_GETCS'"
 	 * @generated
 	 */
-	DP_Typ_GETCS_AttributeGroup getDPTypGETCS();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_AttributeGroup#getDPTypGETCS <em>DP Typ GETCS</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>DP Typ GETCS</em>' containment reference.
-	 * @see #getDPTypGETCS()
-	 * @generated
-	 */
-	void setDPTypGETCS(DP_Typ_GETCS_AttributeGroup value);
+	EList<DP_Typ_GETCS_AttributeGroup> getDPTypGETCS();
 
 	/**
 	 * Returns the value of the '<em><b>DP Typ GGNT</b></em>' containment reference.

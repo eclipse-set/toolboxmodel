@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.util;
 
@@ -127,6 +134,8 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 				return validateBedienbarkeit_Anzeigefeld_TypeClass((Bedienbarkeit_Anzeigefeld_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.BESONDERES_SCHALTKRITERIUM_TYPE_CLASS:
 				return validateBesonderes_Schaltkriterium_TypeClass((Besonderes_Schaltkriterium_TypeClass)value, diagnostics, context);
+			case ZugnummernmeldeanlagePackage.BEZEICHNUNG_BESONDERE_ANLAGE_TYPE_CLASS:
+				return validateBezeichnung_Besondere_Anlage_TypeClass((Bezeichnung_Besondere_Anlage_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.BF_KENNUNG_TYPE_CLASS:
 				return validateBf_Kennung_TypeClass((Bf_Kennung_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.BF_NR_ANB_TYPE_CLASS:
@@ -151,6 +160,8 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 				return validateIP_Adresse_TypeClass((IP_Adresse_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.KOPPELUNTERSTATION_TYPE_CLASS:
 				return validateKoppelunterstation_TypeClass((Koppelunterstation_TypeClass)value, diagnostics, context);
+			case ZugnummernmeldeanlagePackage.KUS_ZEITTELEGRAMM_TYPE_CLASS:
+				return validateKUs_Zeittelegramm_TypeClass((KUs_Zeittelegramm_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.MELDEDRUCK_TYPE_CLASS:
 				return validateMeldedruck_TypeClass((Meldedruck_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.PRIORITAET_TYPE_CLASS:
@@ -201,10 +212,18 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 				return validateZBS_Anbindung_TypeClass((ZBS_Anbindung_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ZBS_SCHNITTSTELLE_TYPE_CLASS:
 				return validateZBS_Schnittstelle_TypeClass((ZBS_Schnittstelle_TypeClass)value, diagnostics, context);
+			case ZugnummernmeldeanlagePackage.ZEITSYNCHRONISATION_FUNKUHR_TYPE_CLASS:
+				return validateZeitsynchronisation_Funkuhr_TypeClass((Zeitsynchronisation_Funkuhr_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ZLV_BUS:
 				return validateZLV_Bus((ZLV_Bus)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP:
 				return validateZLV_Bus_Allg_AttributeGroup((ZLV_Bus_Allg_AttributeGroup)value, diagnostics, context);
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BESONDERE_ANLAGE:
+				return validateZLV_Bus_Besondere_Anlage((ZLV_Bus_Besondere_Anlage)value, diagnostics, context);
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BESONDERE_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP:
+				return validateZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup((ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup)value, diagnostics, context);
+			case ZugnummernmeldeanlagePackage.ZLV_BUS_BEZEICHNUNG_ATTRIBUTE_GROUP:
+				return validateZLV_Bus_Bezeichnung_AttributeGroup((ZLV_Bus_Bezeichnung_AttributeGroup)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_NR_TYPE_CLASS:
 				return validateZLV_Bus_Nr_TypeClass((ZLV_Bus_Nr_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_US_ZUORDNUNG:
@@ -259,8 +278,6 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 				return validateZN_Unterstation_Bf_Nr_AttributeGroup((ZN_Unterstation_Bf_Nr_AttributeGroup)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ZN_ZBS:
 				return validateZN_ZBS((ZN_ZBS)value, diagnostics, context);
-			case ZugnummernmeldeanlagePackage.ZN_ZBS_ALLG_ATTRIBUTE_GROUP:
-				return validateZN_ZBS_Allg_AttributeGroup((ZN_ZBS_Allg_AttributeGroup)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ZUGVORBEREITUNGSMELDUNG_TYPE_CLASS:
 				return validateZugvorbereitungsmeldung_TypeClass((Zugvorbereitungsmeldung_TypeClass)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ENUM_AKUSTIK_ANB_ANN:
@@ -285,6 +302,8 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 				return validateAnschlussnummer_Type((BigInteger)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.BESONDERES_SCHALTKRITERIUM_TYPE:
 				return validateBesonderes_Schaltkriterium_Type((String)value, diagnostics, context);
+			case ZugnummernmeldeanlagePackage.BEZEICHNUNG_BESONDERE_ANLAGE_TYPE:
+				return validateBezeichnung_Besondere_Anlage_Type((String)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.BF_NR_TYPE:
 				return validateBf_Nr_Type((BigInteger)value, diagnostics, context);
 			case ZugnummernmeldeanlagePackage.ENUM_AKUSTIK_ANB_ANN_OBJECT:
@@ -405,6 +424,15 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateBezeichnung_Besondere_Anlage_TypeClass(Bezeichnung_Besondere_Anlage_TypeClass bezeichnung_Besondere_Anlage_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bezeichnung_Besondere_Anlage_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateBf_Kennung_TypeClass(Bf_Kennung_TypeClass bf_Kennung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(bf_Kennung_TypeClass, diagnostics, context);
 	}
@@ -506,6 +534,15 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	 */
 	public boolean validateKoppelunterstation_TypeClass(Koppelunterstation_TypeClass koppelunterstation_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(koppelunterstation_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateKUs_Zeittelegramm_TypeClass(KUs_Zeittelegramm_TypeClass kUs_Zeittelegramm_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(kUs_Zeittelegramm_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -738,6 +775,15 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateZeitsynchronisation_Funkuhr_TypeClass(Zeitsynchronisation_Funkuhr_TypeClass zeitsynchronisation_Funkuhr_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zeitsynchronisation_Funkuhr_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateZLV_Bus(ZLV_Bus zlV_Bus, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(zlV_Bus, diagnostics, context);
 	}
@@ -749,6 +795,33 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	 */
 	public boolean validateZLV_Bus_Allg_AttributeGroup(ZLV_Bus_Allg_AttributeGroup zlV_Bus_Allg_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(zlV_Bus_Allg_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZLV_Bus_Besondere_Anlage(ZLV_Bus_Besondere_Anlage zlV_Bus_Besondere_Anlage, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zlV_Bus_Besondere_Anlage, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup(ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZLV_Bus_Bezeichnung_AttributeGroup(ZLV_Bus_Bezeichnung_AttributeGroup zlV_Bus_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zlV_Bus_Bezeichnung_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -999,15 +1072,6 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateZN_ZBS_Allg_AttributeGroup(ZN_ZBS_Allg_AttributeGroup zN_ZBS_Allg_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(zN_ZBS_Allg_AttributeGroup, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateZugvorbereitungsmeldung_TypeClass(Zugvorbereitungsmeldung_TypeClass zugvorbereitungsmeldung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(zugvorbereitungsmeldung_TypeClass, diagnostics, context);
 	}
@@ -1109,6 +1173,16 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	 */
 	public boolean validateBesonderes_Schaltkriterium_Type(String besonderes_Schaltkriterium_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateText_Type_Pattern(besonderes_Schaltkriterium_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBezeichnung_Besondere_Anlage_Type(String bezeichnung_Besondere_Anlage_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(bezeichnung_Besondere_Anlage_Type, diagnostics, context);
 		return result;
 	}
 
@@ -1323,7 +1397,7 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] UNTERSTATION_NR_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[1-9]|[1-3][0-9]{0,1}|40")
+				XMLTypeUtil.createPatternMatcher("0[1-9]|[1-3][0-9]|40")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher("[a-zA-Z_0-9]{1,250}")
@@ -1405,7 +1479,7 @@ public class ZugnummernmeldeanlageValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] ZLV_BUS_NR_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[1-9][0-9]?|1[0-9]{2}|2[0-4][0-9]|25[0-5]")
+				XMLTypeUtil.createPatternMatcher("[1-9][0-9]{0,3}")
 			}
 		};
 

@@ -1,8 +1,14 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -19,7 +25,6 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getFlaSchutzAnforderer <em>Fla Schutz Anforderer</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getIDFlaWeitergabeEKW <em>ID Fla Weitergabe EKW</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getFlaSchutzSignal <em>Fla Schutz Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getFlaSchutzWGsp <em>Fla Schutz WGsp</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getFlaSchutzWeitergabe <em>Fla Schutz Weitergabe</em>}</li>
@@ -53,59 +58,6 @@ public interface Fla_Schutz extends Basis_Objekt {
 	 * @generated
 	 */
 	void setFlaSchutzAnforderer(Fla_Schutz_Anforderer_AttributeGroup value);
-
-	/**
-	 * Returns the value of the '<em><b>ID Fla Weitergabe EKW</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Zusätzliche Flankenschutzweitergabe bei Flankenschutzanforderung durch eine EKW. Die zusätzliche Weitergabe wird nicht wirksam, wenn die Flankenschutzanforderung der EKW nur durch einen Flankenschutztransport ausgelöst wird. Siehe auch Flankenschutz EKW. DB-Regelwerk Flankenschutztabelle, Fußnote
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Fla Weitergabe EKW</em>' reference.
-	 * @see #isSetIDFlaWeitergabeEKW()
-	 * @see #unsetIDFlaWeitergabeEKW()
-	 * @see #setIDFlaWeitergabeEKW(Fla_Schutz)
-	 * @see org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage#getFla_Schutz_IDFlaWeitergabeEKW()
-	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='ID_Fla_Weitergabe_EKW'"
-	 * @generated
-	 */
-	Fla_Schutz getIDFlaWeitergabeEKW();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getIDFlaWeitergabeEKW <em>ID Fla Weitergabe EKW</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Fla Weitergabe EKW</em>' reference.
-	 * @see #isSetIDFlaWeitergabeEKW()
-	 * @see #unsetIDFlaWeitergabeEKW()
-	 * @see #getIDFlaWeitergabeEKW()
-	 * @generated
-	 */
-	void setIDFlaWeitergabeEKW(Fla_Schutz value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getIDFlaWeitergabeEKW <em>ID Fla Weitergabe EKW</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDFlaWeitergabeEKW()
-	 * @see #getIDFlaWeitergabeEKW()
-	 * @see #setIDFlaWeitergabeEKW(Fla_Schutz)
-	 * @generated
-	 */
-	void unsetIDFlaWeitergabeEKW();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Flankenschutz.Fla_Schutz#getIDFlaWeitergabeEKW <em>ID Fla Weitergabe EKW</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Fla Weitergabe EKW</em>' reference is set.
-	 * @see #unsetIDFlaWeitergabeEKW()
-	 * @see #getIDFlaWeitergabeEKW()
-	 * @see #setIDFlaWeitergabeEKW(Fla_Schutz)
-	 * @generated
-	 */
-	boolean isSetIDFlaWeitergabeEKW();
 
 	/**
 	 * Returns the value of the '<em><b>Fla Schutz Signal</b></em>' containment reference.

@@ -56,7 +56,6 @@ public interface PlanPro_Schnittstelle_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Zeitstempel der PlanPro-XML-Erzeugung.
-	 *  
 	 * DB-Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->
@@ -85,7 +84,6 @@ public interface PlanPro_Schnittstelle_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Name des Werkzeugs, mit dem die PlanPro-XML erzeugt wurde.
-	 *  
 	 * DB-Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->
@@ -114,7 +112,6 @@ public interface PlanPro_Schnittstelle_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Version des Werkzeugs, mit der die PlanPro-XML erzeugt wurde.
-	 *  
 	 * DB-Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro-Planungsprozess.
 	 * <!-- end-model-doc -->

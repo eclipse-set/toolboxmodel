@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -26,9 +27,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
-import org.eclipse.set.toolboxmodel.PZB.PZBPackage;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.PZB.PZBPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup} object.
@@ -67,7 +68,6 @@ public class PZB_Element_Zuordnung_INA_AttributeGroupItemProvider
 
 			addIDAnhangINAPropertyDescriptor(object);
 			addIDBahnsteigKantePropertyDescriptor(object);
-			addIDMarkanterPunktPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,28 +108,6 @@ public class PZB_Element_Zuordnung_INA_AttributeGroupItemProvider
 				 getString("_UI_PZB_Element_Zuordnung_INA_AttributeGroup_iDBahnsteigKante_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PZB_Element_Zuordnung_INA_AttributeGroup_iDBahnsteigKante_feature", "_UI_PZB_Element_Zuordnung_INA_AttributeGroup_type"),
 				 PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP__ID_BAHNSTEIG_KANTE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the ID Markanter Punkt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIDMarkanterPunktPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PZB_Element_Zuordnung_INA_AttributeGroup_iDMarkanterPunkt_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PZB_Element_Zuordnung_INA_AttributeGroup_iDMarkanterPunkt_feature", "_UI_PZB_Element_Zuordnung_INA_AttributeGroup_type"),
-				 PZBPackage.Literals.PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP__ID_MARKANTER_PUNKT,
 				 true,
 				 false,
 				 true,

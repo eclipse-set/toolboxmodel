@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -19,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getGeschwindigkeitR <em>Geschwindigkeit R</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getHerzstueckAntriebe <em>Herzstueck Antriebe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getKreuzungsgleis <em>Kreuzungsgleis</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getStammgleis <em>Stammgleis</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getWeichensignal <em>Weichensignal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getZungenpruefkontaktAnzahl <em>Zungenpruefkontakt Anzahl</em>}</li>
  * </ul>
@@ -183,6 +191,32 @@ public interface Zungenpaar_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setKreuzungsgleis(Kreuzungsgleis_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Stammgleis</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Lage der TOP Kante, die das Stammgleis repräsentiert (Blickrichtung von der Weichenspitze zum Weichenstumpf bzw. Kreuzungsmittelpunkt).
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Stammgleis</em>' containment reference.
+	 * @see #setStammgleis(Stammgleis_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage#getZungenpaar_AttributeGroup_Stammgleis()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Stammgleis'"
+	 * @generated
+	 */
+	Stammgleis_TypeClass getStammgleis();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup#getStammgleis <em>Stammgleis</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Stammgleis</em>' containment reference.
+	 * @see #getStammgleis()
+	 * @generated
+	 */
+	void setStammgleis(Stammgleis_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Weichensignal</b></em>' containment reference.

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -19,6 +26,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMDPTypESG implements Enumerator {
 	/**
+	 * The '<em><b>ENUMDP Typ ESG AA</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AA_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_AA(0, "ENUMDP_Typ_ESG_AA", "AA"),
+
+	/**
 	 * The '<em><b>ENUMDP Typ ESG AB</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,87 +43,127 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AB(0, "ENUMDP_Typ_ESG_AB", "AB"),
+	ENUMDP_TYP_ESG_AB(1, "ENUMDP_Typ_ESG_AB", "AB"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AE</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AE E</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AE_VALUE
+	 * @see #ENUMDP_TYP_ESG_AE_E_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AE(1, "ENUMDP_Typ_ESG_AE", "AE"),
+	ENUMDP_TYP_ESG_AE_E(2, "ENUMDP_Typ_ESG_AE_E", "AE-E"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AF</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AE L</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AF_VALUE
+	 * @see #ENUMDP_TYP_ESG_AE_L_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AF(2, "ENUMDP_Typ_ESG_AF", "AF"),
+	ENUMDP_TYP_ESG_AE_L(3, "ENUMDP_Typ_ESG_AE_L", "AE-L"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 136</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AG E</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_136_VALUE
+	 * @see #ENUMDP_TYP_ESG_AG_E_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AS_136(3, "ENUMDP_Typ_ESG_AS_136", "AS-136"),
+	ENUMDP_TYP_ESG_AG_E(4, "ENUMDP_Typ_ESG_AG_E", "AG-E"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 187</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AG L</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_187_VALUE
+	 * @see #ENUMDP_TYP_ESG_AG_L_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AS_187(4, "ENUMDP_Typ_ESG_AS_187", "AS-187"),
+	ENUMDP_TYP_ESG_AG_L(5, "ENUMDP_Typ_ESG_AG_L", "AG-L"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 24</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AH</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_24_VALUE
+	 * @see #ENUMDP_TYP_ESG_AH_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AS_24(5, "ENUMDP_Typ_ESG_AS_24", "AS-24"),
+	ENUMDP_TYP_ESG_AH(6, "ENUMDP_Typ_ESG_AH", "AH"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 48</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AM</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_48_VALUE
+	 * @see #ENUMDP_TYP_ESG_AM_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AS_48(6, "ENUMDP_Typ_ESG_AS_48", "AS-48"),
+	ENUMDP_TYP_ESG_AM(7, "ENUMDP_Typ_ESG_AM", "AM"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 72</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_72_VALUE
+	 * @see #ENUMDP_TYP_ESG_AR_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AS_72(7, "ENUMDP_Typ_ESG_AS_72", "AS-72"),
+	ENUMDP_TYP_ESG_AR(8, "ENUMDP_Typ_ESG_AR", "AR"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 99</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_99_VALUE
+	 * @see #ENUMDP_TYP_ESG_AS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AS_99(8, "ENUMDP_Typ_ESG_AS_99", "AS-99"),
+	ENUMDP_TYP_ESG_AS(9, "ENUMDP_Typ_ESG_AS", "AS"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG AT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_AT(10, "ENUMDP_Typ_ESG_AT", "AT"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG ATS</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_ATS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_ATS(11, "ENUMDP_Typ_ESG_ATS", "ATS"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG AV E</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AV_E_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_AV_E(12, "ENUMDP_Typ_ESG_AV_E", "AV-E"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG AV L</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AV_L_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_AV_L(13, "ENUMDP_Typ_ESG_AV_L", "AV-L"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG AW</b></em>' literal object.
@@ -116,197 +173,127 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_AW(9, "ENUMDP_Typ_ESG_AW", "AW"),
+	ENUMDP_TYP_ESG_AW(14, "ENUMDP_Typ_ESG_AW", "AW"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BA</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG AWP</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BA_VALUE
+	 * @see #ENUMDP_TYP_ESG_AWP_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_BA(10, "ENUMDP_Typ_ESG_BA", "BA"),
+	ENUMDP_TYP_ESG_AWP(15, "ENUMDP_Typ_ESG_AWP", "AWP"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BM</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG BMI</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BM_VALUE
+	 * @see #ENUMDP_TYP_ESG_BMI_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_BM(11, "ENUMDP_Typ_ESG_BM", "BM"),
+	ENUMDP_TYP_ESG_BMI(16, "ENUMDP_Typ_ESG_BMI", "BMI"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BP</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG BPI</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BP_VALUE
+	 * @see #ENUMDP_TYP_ESG_BPI_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_BP(12, "ENUMDP_Typ_ESG_BP", "BP"),
+	ENUMDP_TYP_ESG_BPI(17, "ENUMDP_Typ_ESG_BPI", "BPI"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BR</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG BRI</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BR_VALUE
+	 * @see #ENUMDP_TYP_ESG_BRI_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_BR(13, "ENUMDP_Typ_ESG_BR", "BR"),
+	ENUMDP_TYP_ESG_BRI(18, "ENUMDP_Typ_ESG_BRI", "BRI"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BS</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG BW</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BS_VALUE
+	 * @see #ENUMDP_TYP_ESG_BW_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_BS(14, "ENUMDP_Typ_ESG_BS", "BS"),
+	ENUMDP_TYP_ESG_BW(19, "ENUMDP_Typ_ESG_BW", "BW"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FH1</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG EA</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FH1_VALUE
+	 * @see #ENUMDP_TYP_ESG_EA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_FH1(15, "ENUMDP_Typ_ESG_FH1", "FH1"),
+	ENUMDP_TYP_ESG_EA(20, "ENUMDP_Typ_ESG_EA", "EA"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FH2</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG EF</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FH2_VALUE
+	 * @see #ENUMDP_TYP_ESG_EF_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_FH2(16, "ENUMDP_Typ_ESG_FH2", "FH2"),
+	ENUMDP_TYP_ESG_EF(21, "ENUMDP_Typ_ESG_EF", "EF"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FM1</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG EH</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FM1_VALUE
+	 * @see #ENUMDP_TYP_ESG_EH_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_FM1(17, "ENUMDP_Typ_ESG_FM1", "FM1"),
+	ENUMDP_TYP_ESG_EH(22, "ENUMDP_Typ_ESG_EH", "EH"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FM2</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG EM</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FM2_VALUE
+	 * @see #ENUMDP_TYP_ESG_EM_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_FM2(18, "ENUMDP_Typ_ESG_FM2", "FM2"),
+	ENUMDP_TYP_ESG_EM(23, "ENUMDP_Typ_ESG_EM", "EM"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG GH1</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG EP</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH1_VALUE
+	 * @see #ENUMDP_TYP_ESG_EP_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_GH1(19, "ENUMDP_Typ_ESG_GH1", "GH1"),
+	ENUMDP_TYP_ESG_EP(24, "ENUMDP_Typ_ESG_EP", "EP"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG GH2</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG GLI</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH2_VALUE
+	 * @see #ENUMDP_TYP_ESG_GLI_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_GH2(20, "ENUMDP_Typ_ESG_GH2", "GH2"),
+	ENUMDP_TYP_ESG_GLI(25, "ENUMDP_Typ_ESG_GLI", "GLI"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG GH3</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG HG</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH3_VALUE
+	 * @see #ENUMDP_TYP_ESG_HG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_GH3(21, "ENUMDP_Typ_ESG_GH3", "GH3"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GH4</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH4_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_GH4(22, "ENUMDP_Typ_ESG_GH4", "GH4"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GH5</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH5_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_GH5(23, "ENUMDP_Typ_ESG_GH5", "GH5"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM1</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM1_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_GM1(24, "ENUMDP_Typ_ESG_GM1", "GM1"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM2</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM2_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_GM2(25, "ENUMDP_Typ_ESG_GM2", "GM2"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM3</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM3_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_GM3(26, "ENUMDP_Typ_ESG_GM3", "GM3"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM4</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM4_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_GM4(27, "ENUMDP_Typ_ESG_GM4", "GM4"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM5</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM5_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_GM5(28, "ENUMDP_Typ_ESG_GM5", "GM5"),
+	ENUMDP_TYP_ESG_HG(26, "ENUMDP_Typ_ESG_HG", "HG"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG HS</b></em>' literal object.
@@ -316,37 +303,117 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_HS(29, "ENUMDP_Typ_ESG_HS", "HS"),
+	ENUMDP_TYP_ESG_HS(27, "ENUMDP_Typ_ESG_HS", "HS"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG LB</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG HV</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_LB_VALUE
+	 * @see #ENUMDP_TYP_ESG_HV_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_LB(30, "ENUMDP_Typ_ESG_LB", "LB"),
+	ENUMDP_TYP_ESG_HV(28, "ENUMDP_Typ_ESG_HV", "HV"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG LF</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG LF S</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_LF_VALUE
+	 * @see #ENUMDP_TYP_ESG_LF_S_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_LF(31, "ENUMDP_Typ_ESG_LF", "LF"),
+	ENUMDP_TYP_ESG_LF_S(29, "ENUMDP_Typ_ESG_LF_S", "LF-S"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG LR</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG LF V</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_LR_VALUE
+	 * @see #ENUMDP_TYP_ESG_LF_V_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_LR(32, "ENUMDP_Typ_ESG_LR", "LR"),
+	ENUMDP_TYP_ESG_LF_V(30, "ENUMDP_Typ_ESG_LF_V", "LF-V"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LFI</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LFI_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_LFI(31, "ENUMDP_Typ_ESG_LFI", "LFI"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LG S</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LG_S_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_LG_S(32, "ENUMDP_Typ_ESG_LG_S", "LG-S"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LG V</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LG_V_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_LG_V(33, "ENUMDP_Typ_ESG_LG_V", "LG-V"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LR S</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LR_S_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_LR_S(34, "ENUMDP_Typ_ESG_LR_S", "LR-S"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LR V</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LR_V_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_LR_V(35, "ENUMDP_Typ_ESG_LR_V", "LR-V"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MG</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_MG(36, "ENUMDP_Typ_ESG_MG", "MG"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MH</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MH_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_MH(37, "ENUMDP_Typ_ESG_MH", "MH"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MP</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MP_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_MP(38, "ENUMDP_Typ_ESG_MP", "MP"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG MS</b></em>' literal object.
@@ -356,7 +423,17 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_MS(33, "ENUMDP_Typ_ESG_MS", "MS"),
+	ENUMDP_TYP_ESG_MS(39, "ENUMDP_Typ_ESG_MS", "MS"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MV</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MV_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_MV(40, "ENUMDP_Typ_ESG_MV", "MV"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG NV</b></em>' literal object.
@@ -366,57 +443,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_NV(34, "ENUMDP_Typ_ESG_NV", "NV"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG RP1</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_RP1_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_RP1(35, "ENUMDP_Typ_ESG_RP1", "RP1"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG RP2</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_RP2_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_RP2(36, "ENUMDP_Typ_ESG_RP2", "RP2"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG RS</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_RS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_RS(37, "ENUMDP_Typ_ESG_RS", "RS"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SA</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SA(38, "ENUMDP_Typ_ESG_SA", "SA"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SB</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SB_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SB(39, "ENUMDP_Typ_ESG_SB", "SB"),
+	ENUMDP_TYP_ESG_NV(41, "ENUMDP_Typ_ESG_NV", "NV"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG SK</b></em>' literal object.
@@ -426,7 +453,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_SK(40, "ENUMDP_Typ_ESG_SK", "SK"),
+	ENUMDP_TYP_ESG_SK(42, "ENUMDP_Typ_ESG_SK", "SK"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG SN</b></em>' literal object.
@@ -436,17 +463,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_SN(41, "ENUMDP_Typ_ESG_SN", "SN"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SONSTIGE(42, "ENUMDP_Typ_ESG_sonstige", "sonstige"),
+	ENUMDP_TYP_ESG_SN(43, "ENUMDP_Typ_ESG_SN", "SN"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG SP</b></em>' literal object.
@@ -456,67 +473,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_SP(43, "ENUMDP_Typ_ESG_SP", "SP"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 136</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_136_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SS_136(44, "ENUMDP_Typ_ESG_SS_136", "SS-136"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 187</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_187_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SS_187(45, "ENUMDP_Typ_ESG_SS_187", "SS-187"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 24</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_24_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SS_24(46, "ENUMDP_Typ_ESG_SS_24", "SS-24"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 48</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_48_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SS_48(47, "ENUMDP_Typ_ESG_SS_48", "SS-48"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 72</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_72_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SS_72(48, "ENUMDP_Typ_ESG_SS_72", "SS-72"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 99</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_99_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_SS_99(49, "ENUMDP_Typ_ESG_SS_99", "SS-99"),
+	ENUMDP_TYP_ESG_SP(44, "ENUMDP_Typ_ESG_SP", "SP"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG ST</b></em>' literal object.
@@ -526,17 +483,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_ST(50, "ENUMDP_Typ_ESG_ST", "ST"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG TA</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_TA(51, "ENUMDP_Typ_ESG_TA", "TA"),
+	ENUMDP_TYP_ESG_ST(45, "ENUMDP_Typ_ESG_ST", "ST"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TE E</b></em>' literal object.
@@ -546,7 +493,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TE_E(52, "ENUMDP_Typ_ESG_TE_E", "TE-E"),
+	ENUMDP_TYP_ESG_TE_E(46, "ENUMDP_Typ_ESG_TE_E", "TE-E"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TE L</b></em>' literal object.
@@ -556,27 +503,27 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TE_L(53, "ENUMDP_Typ_ESG_TE_L", "TE-L"),
+	ENUMDP_TYP_ESG_TE_L(47, "ENUMDP_Typ_ESG_TE_L", "TE-L"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG TE2</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG TG E</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TE2_VALUE
+	 * @see #ENUMDP_TYP_ESG_TG_E_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TE2(54, "ENUMDP_Typ_ESG_TE2", "TE2"),
+	ENUMDP_TYP_ESG_TG_E(48, "ENUMDP_Typ_ESG_TG_E", "TG-E"),
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG TG</b></em>' literal object.
+	 * The '<em><b>ENUMDP Typ ESG TG L</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TG_VALUE
+	 * @see #ENUMDP_TYP_ESG_TG_L_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TG(55, "ENUMDP_Typ_ESG_TG", "TG"),
+	ENUMDP_TYP_ESG_TG_L(49, "ENUMDP_Typ_ESG_TG_L", "TG-L"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TM E</b></em>' literal object.
@@ -586,7 +533,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TM_E(56, "ENUMDP_Typ_ESG_TM_E", "TM-E"),
+	ENUMDP_TYP_ESG_TM_E(50, "ENUMDP_Typ_ESG_TM_E", "TM-E"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TM L</b></em>' literal object.
@@ -596,7 +543,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TM_L(57, "ENUMDP_Typ_ESG_TM_L", "TM-L"),
+	ENUMDP_TYP_ESG_TM_L(51, "ENUMDP_Typ_ESG_TM_L", "TM-L"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TP</b></em>' literal object.
@@ -606,27 +553,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TP(58, "ENUMDP_Typ_ESG_TP", "TP"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG TR</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TR_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_TR(59, "ENUMDP_Typ_ESG_TR", "TR"),
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG TS</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMDP_TYP_ESG_TS(60, "ENUMDP_Typ_ESG_TS", "TS"),
+	ENUMDP_TYP_ESG_TP(52, "ENUMDP_Typ_ESG_TP", "TP"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TV E</b></em>' literal object.
@@ -636,7 +563,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TV_E(61, "ENUMDP_Typ_ESG_TV_E", "TV-E"),
+	ENUMDP_TYP_ESG_TV_E(53, "ENUMDP_Typ_ESG_TV_E", "TV-E"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TV L</b></em>' literal object.
@@ -646,7 +573,17 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_TV_L(62, "ENUMDP_Typ_ESG_TV_L", "TV-L"),
+	ENUMDP_TYP_ESG_TV_L(54, "ENUMDP_Typ_ESG_TV_L", "TV-L"),
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG VP</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_VP_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUMDP_TYP_ESG_VP(55, "ENUMDP_Typ_ESG_VP", "VP"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG VS</b></em>' literal object.
@@ -656,7 +593,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_VS(63, "ENUMDP_Typ_ESG_VS", "VS"),
+	ENUMDP_TYP_ESG_VS(56, "ENUMDP_Typ_ESG_VS", "VS"),
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG VW</b></em>' literal object.
@@ -666,7 +603,18 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMDP_TYP_ESG_VW(64, "ENUMDP_Typ_ESG_VW", "VW");
+	ENUMDP_TYP_ESG_VW(57, "ENUMDP_Typ_ESG_VW", "VW");
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG AA</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AA
+	 * @model name="ENUMDP_Typ_ESG_AA" literal="AA"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_AA_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG AB</b></em>' literal value.
@@ -677,95 +625,139 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AB_VALUE = 0;
+	public static final int ENUMDP_TYP_ESG_AB_VALUE = 1;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AE</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AE E</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AE
-	 * @model name="ENUMDP_Typ_ESG_AE" literal="AE"
+	 * @see #ENUMDP_TYP_ESG_AE_E
+	 * @model name="ENUMDP_Typ_ESG_AE_E" literal="AE-E"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AE_VALUE = 1;
+	public static final int ENUMDP_TYP_ESG_AE_E_VALUE = 2;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AF</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AE L</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AF
-	 * @model name="ENUMDP_Typ_ESG_AF" literal="AF"
+	 * @see #ENUMDP_TYP_ESG_AE_L
+	 * @model name="ENUMDP_Typ_ESG_AE_L" literal="AE-L"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AF_VALUE = 2;
+	public static final int ENUMDP_TYP_ESG_AE_L_VALUE = 3;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 136</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AG E</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_136
-	 * @model name="ENUMDP_Typ_ESG_AS_136" literal="AS-136"
+	 * @see #ENUMDP_TYP_ESG_AG_E
+	 * @model name="ENUMDP_Typ_ESG_AG_E" literal="AG-E"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AS_136_VALUE = 3;
+	public static final int ENUMDP_TYP_ESG_AG_E_VALUE = 4;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 187</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AG L</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_187
-	 * @model name="ENUMDP_Typ_ESG_AS_187" literal="AS-187"
+	 * @see #ENUMDP_TYP_ESG_AG_L
+	 * @model name="ENUMDP_Typ_ESG_AG_L" literal="AG-L"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AS_187_VALUE = 4;
+	public static final int ENUMDP_TYP_ESG_AG_L_VALUE = 5;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 24</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AH</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_24
-	 * @model name="ENUMDP_Typ_ESG_AS_24" literal="AS-24"
+	 * @see #ENUMDP_TYP_ESG_AH
+	 * @model name="ENUMDP_Typ_ESG_AH" literal="AH"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AS_24_VALUE = 5;
+	public static final int ENUMDP_TYP_ESG_AH_VALUE = 6;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 48</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AM</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_48
-	 * @model name="ENUMDP_Typ_ESG_AS_48" literal="AS-48"
+	 * @see #ENUMDP_TYP_ESG_AM
+	 * @model name="ENUMDP_Typ_ESG_AM" literal="AM"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AS_48_VALUE = 6;
+	public static final int ENUMDP_TYP_ESG_AM_VALUE = 7;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 72</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AR</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_72
-	 * @model name="ENUMDP_Typ_ESG_AS_72" literal="AS-72"
+	 * @see #ENUMDP_TYP_ESG_AR
+	 * @model name="ENUMDP_Typ_ESG_AR" literal="AR"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AS_72_VALUE = 7;
+	public static final int ENUMDP_TYP_ESG_AR_VALUE = 8;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG AS 99</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_AS_99
-	 * @model name="ENUMDP_Typ_ESG_AS_99" literal="AS-99"
+	 * @see #ENUMDP_TYP_ESG_AS
+	 * @model name="ENUMDP_Typ_ESG_AS" literal="AS"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AS_99_VALUE = 8;
+	public static final int ENUMDP_TYP_ESG_AS_VALUE = 9;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG AT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AT
+	 * @model name="ENUMDP_Typ_ESG_AT" literal="AT"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_AT_VALUE = 10;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG ATS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_ATS
+	 * @model name="ENUMDP_Typ_ESG_ATS" literal="ATS"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_ATS_VALUE = 11;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG AV E</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AV_E
+	 * @model name="ENUMDP_Typ_ESG_AV_E" literal="AV-E"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_AV_E_VALUE = 12;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG AV L</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_AV_L
+	 * @model name="ENUMDP_Typ_ESG_AV_L" literal="AV-L"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_AV_L_VALUE = 13;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG AW</b></em>' literal value.
@@ -776,216 +768,139 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_AW_VALUE = 9;
+	public static final int ENUMDP_TYP_ESG_AW_VALUE = 14;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BA</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG AWP</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BA
-	 * @model name="ENUMDP_Typ_ESG_BA" literal="BA"
+	 * @see #ENUMDP_TYP_ESG_AWP
+	 * @model name="ENUMDP_Typ_ESG_AWP" literal="AWP"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_BA_VALUE = 10;
+	public static final int ENUMDP_TYP_ESG_AWP_VALUE = 15;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BM</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG BMI</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BM
-	 * @model name="ENUMDP_Typ_ESG_BM" literal="BM"
+	 * @see #ENUMDP_TYP_ESG_BMI
+	 * @model name="ENUMDP_Typ_ESG_BMI" literal="BMI"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_BM_VALUE = 11;
+	public static final int ENUMDP_TYP_ESG_BMI_VALUE = 16;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BP</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG BPI</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BP
-	 * @model name="ENUMDP_Typ_ESG_BP" literal="BP"
+	 * @see #ENUMDP_TYP_ESG_BPI
+	 * @model name="ENUMDP_Typ_ESG_BPI" literal="BPI"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_BP_VALUE = 12;
+	public static final int ENUMDP_TYP_ESG_BPI_VALUE = 17;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BR</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG BRI</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BR
-	 * @model name="ENUMDP_Typ_ESG_BR" literal="BR"
+	 * @see #ENUMDP_TYP_ESG_BRI
+	 * @model name="ENUMDP_Typ_ESG_BRI" literal="BRI"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_BR_VALUE = 13;
+	public static final int ENUMDP_TYP_ESG_BRI_VALUE = 18;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG BS</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG BW</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_BS
-	 * @model name="ENUMDP_Typ_ESG_BS" literal="BS"
+	 * @see #ENUMDP_TYP_ESG_BW
+	 * @model name="ENUMDP_Typ_ESG_BW" literal="BW"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_BS_VALUE = 14;
+	public static final int ENUMDP_TYP_ESG_BW_VALUE = 19;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FH1</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG EA</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FH1
-	 * @model name="ENUMDP_Typ_ESG_FH1" literal="FH1"
+	 * @see #ENUMDP_TYP_ESG_EA
+	 * @model name="ENUMDP_Typ_ESG_EA" literal="EA"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_FH1_VALUE = 15;
+	public static final int ENUMDP_TYP_ESG_EA_VALUE = 20;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FH2</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG EF</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FH2
-	 * @model name="ENUMDP_Typ_ESG_FH2" literal="FH2"
+	 * @see #ENUMDP_TYP_ESG_EF
+	 * @model name="ENUMDP_Typ_ESG_EF" literal="EF"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_FH2_VALUE = 16;
+	public static final int ENUMDP_TYP_ESG_EF_VALUE = 21;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FM1</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG EH</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FM1
-	 * @model name="ENUMDP_Typ_ESG_FM1" literal="FM1"
+	 * @see #ENUMDP_TYP_ESG_EH
+	 * @model name="ENUMDP_Typ_ESG_EH" literal="EH"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_FM1_VALUE = 17;
+	public static final int ENUMDP_TYP_ESG_EH_VALUE = 22;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG FM2</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG EM</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_FM2
-	 * @model name="ENUMDP_Typ_ESG_FM2" literal="FM2"
+	 * @see #ENUMDP_TYP_ESG_EM
+	 * @model name="ENUMDP_Typ_ESG_EM" literal="EM"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_FM2_VALUE = 18;
+	public static final int ENUMDP_TYP_ESG_EM_VALUE = 23;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG GH1</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG EP</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH1
-	 * @model name="ENUMDP_Typ_ESG_GH1" literal="GH1"
+	 * @see #ENUMDP_TYP_ESG_EP
+	 * @model name="ENUMDP_Typ_ESG_EP" literal="EP"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_GH1_VALUE = 19;
+	public static final int ENUMDP_TYP_ESG_EP_VALUE = 24;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG GH2</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG GLI</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH2
-	 * @model name="ENUMDP_Typ_ESG_GH2" literal="GH2"
+	 * @see #ENUMDP_TYP_ESG_GLI
+	 * @model name="ENUMDP_Typ_ESG_GLI" literal="GLI"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_GH2_VALUE = 20;
+	public static final int ENUMDP_TYP_ESG_GLI_VALUE = 25;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG GH3</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG HG</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH3
-	 * @model name="ENUMDP_Typ_ESG_GH3" literal="GH3"
+	 * @see #ENUMDP_TYP_ESG_HG
+	 * @model name="ENUMDP_Typ_ESG_HG" literal="HG"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_GH3_VALUE = 21;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GH4</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH4
-	 * @model name="ENUMDP_Typ_ESG_GH4" literal="GH4"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_GH4_VALUE = 22;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GH5</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GH5
-	 * @model name="ENUMDP_Typ_ESG_GH5" literal="GH5"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_GH5_VALUE = 23;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM1</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM1
-	 * @model name="ENUMDP_Typ_ESG_GM1" literal="GM1"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_GM1_VALUE = 24;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM2</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM2
-	 * @model name="ENUMDP_Typ_ESG_GM2" literal="GM2"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_GM2_VALUE = 25;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM3</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM3
-	 * @model name="ENUMDP_Typ_ESG_GM3" literal="GM3"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_GM3_VALUE = 26;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM4</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM4
-	 * @model name="ENUMDP_Typ_ESG_GM4" literal="GM4"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_GM4_VALUE = 27;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG GM5</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_GM5
-	 * @model name="ENUMDP_Typ_ESG_GM5" literal="GM5"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_GM5_VALUE = 28;
+	public static final int ENUMDP_TYP_ESG_HG_VALUE = 26;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG HS</b></em>' literal value.
@@ -996,40 +911,128 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_HS_VALUE = 29;
+	public static final int ENUMDP_TYP_ESG_HS_VALUE = 27;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG LB</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG HV</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_LB
-	 * @model name="ENUMDP_Typ_ESG_LB" literal="LB"
+	 * @see #ENUMDP_TYP_ESG_HV
+	 * @model name="ENUMDP_Typ_ESG_HV" literal="HV"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_LB_VALUE = 30;
+	public static final int ENUMDP_TYP_ESG_HV_VALUE = 28;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG LF</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG LF S</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_LF
-	 * @model name="ENUMDP_Typ_ESG_LF" literal="LF"
+	 * @see #ENUMDP_TYP_ESG_LF_S
+	 * @model name="ENUMDP_Typ_ESG_LF_S" literal="LF-S"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_LF_VALUE = 31;
+	public static final int ENUMDP_TYP_ESG_LF_S_VALUE = 29;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG LR</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG LF V</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_LR
-	 * @model name="ENUMDP_Typ_ESG_LR" literal="LR"
+	 * @see #ENUMDP_TYP_ESG_LF_V
+	 * @model name="ENUMDP_Typ_ESG_LF_V" literal="LF-V"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_LR_VALUE = 32;
+	public static final int ENUMDP_TYP_ESG_LF_V_VALUE = 30;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LFI</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LFI
+	 * @model name="ENUMDP_Typ_ESG_LFI" literal="LFI"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_LFI_VALUE = 31;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LG S</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LG_S
+	 * @model name="ENUMDP_Typ_ESG_LG_S" literal="LG-S"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_LG_S_VALUE = 32;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LG V</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LG_V
+	 * @model name="ENUMDP_Typ_ESG_LG_V" literal="LG-V"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_LG_V_VALUE = 33;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LR S</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LR_S
+	 * @model name="ENUMDP_Typ_ESG_LR_S" literal="LR-S"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_LR_S_VALUE = 34;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG LR V</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_LR_V
+	 * @model name="ENUMDP_Typ_ESG_LR_V" literal="LR-V"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_LR_V_VALUE = 35;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MG</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MG
+	 * @model name="ENUMDP_Typ_ESG_MG" literal="MG"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_MG_VALUE = 36;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MH</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MH
+	 * @model name="ENUMDP_Typ_ESG_MH" literal="MH"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_MH_VALUE = 37;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MP</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MP
+	 * @model name="ENUMDP_Typ_ESG_MP" literal="MP"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_MP_VALUE = 38;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG MS</b></em>' literal value.
@@ -1040,7 +1043,18 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_MS_VALUE = 33;
+	public static final int ENUMDP_TYP_ESG_MS_VALUE = 39;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG MV</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_MV
+	 * @model name="ENUMDP_Typ_ESG_MV" literal="MV"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_MV_VALUE = 40;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG NV</b></em>' literal value.
@@ -1051,62 +1065,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_NV_VALUE = 34;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG RP1</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_RP1
-	 * @model name="ENUMDP_Typ_ESG_RP1" literal="RP1"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_RP1_VALUE = 35;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG RP2</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_RP2
-	 * @model name="ENUMDP_Typ_ESG_RP2" literal="RP2"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_RP2_VALUE = 36;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG RS</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_RS
-	 * @model name="ENUMDP_Typ_ESG_RS" literal="RS"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_RS_VALUE = 37;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SA</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SA
-	 * @model name="ENUMDP_Typ_ESG_SA" literal="SA"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SA_VALUE = 38;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SB</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SB
-	 * @model name="ENUMDP_Typ_ESG_SB" literal="SB"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SB_VALUE = 39;
+	public static final int ENUMDP_TYP_ESG_NV_VALUE = 41;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG SK</b></em>' literal value.
@@ -1117,7 +1076,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_SK_VALUE = 40;
+	public static final int ENUMDP_TYP_ESG_SK_VALUE = 42;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG SN</b></em>' literal value.
@@ -1128,18 +1087,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_SN_VALUE = 41;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SONSTIGE
-	 * @model name="ENUMDP_Typ_ESG_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SONSTIGE_VALUE = 42;
+	public static final int ENUMDP_TYP_ESG_SN_VALUE = 43;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG SP</b></em>' literal value.
@@ -1150,73 +1098,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_SP_VALUE = 43;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 136</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_136
-	 * @model name="ENUMDP_Typ_ESG_SS_136" literal="SS-136"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SS_136_VALUE = 44;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 187</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_187
-	 * @model name="ENUMDP_Typ_ESG_SS_187" literal="SS-187"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SS_187_VALUE = 45;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 24</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_24
-	 * @model name="ENUMDP_Typ_ESG_SS_24" literal="SS-24"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SS_24_VALUE = 46;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 48</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_48
-	 * @model name="ENUMDP_Typ_ESG_SS_48" literal="SS-48"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SS_48_VALUE = 47;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 72</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_72
-	 * @model name="ENUMDP_Typ_ESG_SS_72" literal="SS-72"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SS_72_VALUE = 48;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG SS 99</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_SS_99
-	 * @model name="ENUMDP_Typ_ESG_SS_99" literal="SS-99"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_SS_99_VALUE = 49;
+	public static final int ENUMDP_TYP_ESG_SP_VALUE = 44;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG ST</b></em>' literal value.
@@ -1227,18 +1109,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_ST_VALUE = 50;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG TA</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TA
-	 * @model name="ENUMDP_Typ_ESG_TA" literal="TA"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_TA_VALUE = 51;
+	public static final int ENUMDP_TYP_ESG_ST_VALUE = 45;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TE E</b></em>' literal value.
@@ -1249,7 +1120,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TE_E_VALUE = 52;
+	public static final int ENUMDP_TYP_ESG_TE_E_VALUE = 46;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TE L</b></em>' literal value.
@@ -1260,29 +1131,29 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TE_L_VALUE = 53;
+	public static final int ENUMDP_TYP_ESG_TE_L_VALUE = 47;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG TE2</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG TG E</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TE2
-	 * @model name="ENUMDP_Typ_ESG_TE2" literal="TE2"
+	 * @see #ENUMDP_TYP_ESG_TG_E
+	 * @model name="ENUMDP_Typ_ESG_TG_E" literal="TG-E"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TE2_VALUE = 54;
+	public static final int ENUMDP_TYP_ESG_TG_E_VALUE = 48;
 
 	/**
-	 * The '<em><b>ENUMDP Typ ESG TG</b></em>' literal value.
+	 * The '<em><b>ENUMDP Typ ESG TG L</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TG
-	 * @model name="ENUMDP_Typ_ESG_TG" literal="TG"
+	 * @see #ENUMDP_TYP_ESG_TG_L
+	 * @model name="ENUMDP_Typ_ESG_TG_L" literal="TG-L"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TG_VALUE = 55;
+	public static final int ENUMDP_TYP_ESG_TG_L_VALUE = 49;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TM E</b></em>' literal value.
@@ -1293,7 +1164,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TM_E_VALUE = 56;
+	public static final int ENUMDP_TYP_ESG_TM_E_VALUE = 50;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TM L</b></em>' literal value.
@@ -1304,7 +1175,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TM_L_VALUE = 57;
+	public static final int ENUMDP_TYP_ESG_TM_L_VALUE = 51;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TP</b></em>' literal value.
@@ -1315,29 +1186,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TP_VALUE = 58;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG TR</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TR
-	 * @model name="ENUMDP_Typ_ESG_TR" literal="TR"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_TR_VALUE = 59;
-
-	/**
-	 * The '<em><b>ENUMDP Typ ESG TS</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMDP_TYP_ESG_TS
-	 * @model name="ENUMDP_Typ_ESG_TS" literal="TS"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMDP_TYP_ESG_TS_VALUE = 60;
+	public static final int ENUMDP_TYP_ESG_TP_VALUE = 52;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TV E</b></em>' literal value.
@@ -1348,7 +1197,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TV_E_VALUE = 61;
+	public static final int ENUMDP_TYP_ESG_TV_E_VALUE = 53;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG TV L</b></em>' literal value.
@@ -1359,7 +1208,18 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_TV_L_VALUE = 62;
+	public static final int ENUMDP_TYP_ESG_TV_L_VALUE = 54;
+
+	/**
+	 * The '<em><b>ENUMDP Typ ESG VP</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMDP_TYP_ESG_VP
+	 * @model name="ENUMDP_Typ_ESG_VP" literal="VP"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMDP_TYP_ESG_VP_VALUE = 55;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG VS</b></em>' literal value.
@@ -1370,7 +1230,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_VS_VALUE = 63;
+	public static final int ENUMDP_TYP_ESG_VS_VALUE = 56;
 
 	/**
 	 * The '<em><b>ENUMDP Typ ESG VW</b></em>' literal value.
@@ -1381,7 +1241,7 @@ public enum ENUMDPTypESG implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMDP_TYP_ESG_VW_VALUE = 64;
+	public static final int ENUMDP_TYP_ESG_VW_VALUE = 57;
 
 	/**
 	 * An array of all the '<em><b>ENUMDP Typ ESG</b></em>' enumerators.
@@ -1391,69 +1251,62 @@ public enum ENUMDPTypESG implements Enumerator {
 	 */
 	private static final ENUMDPTypESG[] VALUES_ARRAY =
 		new ENUMDPTypESG[] {
+			ENUMDP_TYP_ESG_AA,
 			ENUMDP_TYP_ESG_AB,
-			ENUMDP_TYP_ESG_AE,
-			ENUMDP_TYP_ESG_AF,
-			ENUMDP_TYP_ESG_AS_136,
-			ENUMDP_TYP_ESG_AS_187,
-			ENUMDP_TYP_ESG_AS_24,
-			ENUMDP_TYP_ESG_AS_48,
-			ENUMDP_TYP_ESG_AS_72,
-			ENUMDP_TYP_ESG_AS_99,
+			ENUMDP_TYP_ESG_AE_E,
+			ENUMDP_TYP_ESG_AE_L,
+			ENUMDP_TYP_ESG_AG_E,
+			ENUMDP_TYP_ESG_AG_L,
+			ENUMDP_TYP_ESG_AH,
+			ENUMDP_TYP_ESG_AM,
+			ENUMDP_TYP_ESG_AR,
+			ENUMDP_TYP_ESG_AS,
+			ENUMDP_TYP_ESG_AT,
+			ENUMDP_TYP_ESG_ATS,
+			ENUMDP_TYP_ESG_AV_E,
+			ENUMDP_TYP_ESG_AV_L,
 			ENUMDP_TYP_ESG_AW,
-			ENUMDP_TYP_ESG_BA,
-			ENUMDP_TYP_ESG_BM,
-			ENUMDP_TYP_ESG_BP,
-			ENUMDP_TYP_ESG_BR,
-			ENUMDP_TYP_ESG_BS,
-			ENUMDP_TYP_ESG_FH1,
-			ENUMDP_TYP_ESG_FH2,
-			ENUMDP_TYP_ESG_FM1,
-			ENUMDP_TYP_ESG_FM2,
-			ENUMDP_TYP_ESG_GH1,
-			ENUMDP_TYP_ESG_GH2,
-			ENUMDP_TYP_ESG_GH3,
-			ENUMDP_TYP_ESG_GH4,
-			ENUMDP_TYP_ESG_GH5,
-			ENUMDP_TYP_ESG_GM1,
-			ENUMDP_TYP_ESG_GM2,
-			ENUMDP_TYP_ESG_GM3,
-			ENUMDP_TYP_ESG_GM4,
-			ENUMDP_TYP_ESG_GM5,
+			ENUMDP_TYP_ESG_AWP,
+			ENUMDP_TYP_ESG_BMI,
+			ENUMDP_TYP_ESG_BPI,
+			ENUMDP_TYP_ESG_BRI,
+			ENUMDP_TYP_ESG_BW,
+			ENUMDP_TYP_ESG_EA,
+			ENUMDP_TYP_ESG_EF,
+			ENUMDP_TYP_ESG_EH,
+			ENUMDP_TYP_ESG_EM,
+			ENUMDP_TYP_ESG_EP,
+			ENUMDP_TYP_ESG_GLI,
+			ENUMDP_TYP_ESG_HG,
 			ENUMDP_TYP_ESG_HS,
-			ENUMDP_TYP_ESG_LB,
-			ENUMDP_TYP_ESG_LF,
-			ENUMDP_TYP_ESG_LR,
+			ENUMDP_TYP_ESG_HV,
+			ENUMDP_TYP_ESG_LF_S,
+			ENUMDP_TYP_ESG_LF_V,
+			ENUMDP_TYP_ESG_LFI,
+			ENUMDP_TYP_ESG_LG_S,
+			ENUMDP_TYP_ESG_LG_V,
+			ENUMDP_TYP_ESG_LR_S,
+			ENUMDP_TYP_ESG_LR_V,
+			ENUMDP_TYP_ESG_MG,
+			ENUMDP_TYP_ESG_MH,
+			ENUMDP_TYP_ESG_MP,
 			ENUMDP_TYP_ESG_MS,
+			ENUMDP_TYP_ESG_MV,
 			ENUMDP_TYP_ESG_NV,
-			ENUMDP_TYP_ESG_RP1,
-			ENUMDP_TYP_ESG_RP2,
-			ENUMDP_TYP_ESG_RS,
-			ENUMDP_TYP_ESG_SA,
-			ENUMDP_TYP_ESG_SB,
 			ENUMDP_TYP_ESG_SK,
 			ENUMDP_TYP_ESG_SN,
-			ENUMDP_TYP_ESG_SONSTIGE,
 			ENUMDP_TYP_ESG_SP,
-			ENUMDP_TYP_ESG_SS_136,
-			ENUMDP_TYP_ESG_SS_187,
-			ENUMDP_TYP_ESG_SS_24,
-			ENUMDP_TYP_ESG_SS_48,
-			ENUMDP_TYP_ESG_SS_72,
-			ENUMDP_TYP_ESG_SS_99,
 			ENUMDP_TYP_ESG_ST,
-			ENUMDP_TYP_ESG_TA,
 			ENUMDP_TYP_ESG_TE_E,
 			ENUMDP_TYP_ESG_TE_L,
-			ENUMDP_TYP_ESG_TE2,
-			ENUMDP_TYP_ESG_TG,
+			ENUMDP_TYP_ESG_TG_E,
+			ENUMDP_TYP_ESG_TG_L,
 			ENUMDP_TYP_ESG_TM_E,
 			ENUMDP_TYP_ESG_TM_L,
 			ENUMDP_TYP_ESG_TP,
-			ENUMDP_TYP_ESG_TR,
-			ENUMDP_TYP_ESG_TS,
 			ENUMDP_TYP_ESG_TV_E,
 			ENUMDP_TYP_ESG_TV_L,
+			ENUMDP_TYP_ESG_VP,
 			ENUMDP_TYP_ESG_VS,
 			ENUMDP_TYP_ESG_VW,
 		};
@@ -1512,69 +1365,62 @@ public enum ENUMDPTypESG implements Enumerator {
 	 */
 	public static ENUMDPTypESG get(int value) {
 		switch (value) {
+			case ENUMDP_TYP_ESG_AA_VALUE: return ENUMDP_TYP_ESG_AA;
 			case ENUMDP_TYP_ESG_AB_VALUE: return ENUMDP_TYP_ESG_AB;
-			case ENUMDP_TYP_ESG_AE_VALUE: return ENUMDP_TYP_ESG_AE;
-			case ENUMDP_TYP_ESG_AF_VALUE: return ENUMDP_TYP_ESG_AF;
-			case ENUMDP_TYP_ESG_AS_136_VALUE: return ENUMDP_TYP_ESG_AS_136;
-			case ENUMDP_TYP_ESG_AS_187_VALUE: return ENUMDP_TYP_ESG_AS_187;
-			case ENUMDP_TYP_ESG_AS_24_VALUE: return ENUMDP_TYP_ESG_AS_24;
-			case ENUMDP_TYP_ESG_AS_48_VALUE: return ENUMDP_TYP_ESG_AS_48;
-			case ENUMDP_TYP_ESG_AS_72_VALUE: return ENUMDP_TYP_ESG_AS_72;
-			case ENUMDP_TYP_ESG_AS_99_VALUE: return ENUMDP_TYP_ESG_AS_99;
+			case ENUMDP_TYP_ESG_AE_E_VALUE: return ENUMDP_TYP_ESG_AE_E;
+			case ENUMDP_TYP_ESG_AE_L_VALUE: return ENUMDP_TYP_ESG_AE_L;
+			case ENUMDP_TYP_ESG_AG_E_VALUE: return ENUMDP_TYP_ESG_AG_E;
+			case ENUMDP_TYP_ESG_AG_L_VALUE: return ENUMDP_TYP_ESG_AG_L;
+			case ENUMDP_TYP_ESG_AH_VALUE: return ENUMDP_TYP_ESG_AH;
+			case ENUMDP_TYP_ESG_AM_VALUE: return ENUMDP_TYP_ESG_AM;
+			case ENUMDP_TYP_ESG_AR_VALUE: return ENUMDP_TYP_ESG_AR;
+			case ENUMDP_TYP_ESG_AS_VALUE: return ENUMDP_TYP_ESG_AS;
+			case ENUMDP_TYP_ESG_AT_VALUE: return ENUMDP_TYP_ESG_AT;
+			case ENUMDP_TYP_ESG_ATS_VALUE: return ENUMDP_TYP_ESG_ATS;
+			case ENUMDP_TYP_ESG_AV_E_VALUE: return ENUMDP_TYP_ESG_AV_E;
+			case ENUMDP_TYP_ESG_AV_L_VALUE: return ENUMDP_TYP_ESG_AV_L;
 			case ENUMDP_TYP_ESG_AW_VALUE: return ENUMDP_TYP_ESG_AW;
-			case ENUMDP_TYP_ESG_BA_VALUE: return ENUMDP_TYP_ESG_BA;
-			case ENUMDP_TYP_ESG_BM_VALUE: return ENUMDP_TYP_ESG_BM;
-			case ENUMDP_TYP_ESG_BP_VALUE: return ENUMDP_TYP_ESG_BP;
-			case ENUMDP_TYP_ESG_BR_VALUE: return ENUMDP_TYP_ESG_BR;
-			case ENUMDP_TYP_ESG_BS_VALUE: return ENUMDP_TYP_ESG_BS;
-			case ENUMDP_TYP_ESG_FH1_VALUE: return ENUMDP_TYP_ESG_FH1;
-			case ENUMDP_TYP_ESG_FH2_VALUE: return ENUMDP_TYP_ESG_FH2;
-			case ENUMDP_TYP_ESG_FM1_VALUE: return ENUMDP_TYP_ESG_FM1;
-			case ENUMDP_TYP_ESG_FM2_VALUE: return ENUMDP_TYP_ESG_FM2;
-			case ENUMDP_TYP_ESG_GH1_VALUE: return ENUMDP_TYP_ESG_GH1;
-			case ENUMDP_TYP_ESG_GH2_VALUE: return ENUMDP_TYP_ESG_GH2;
-			case ENUMDP_TYP_ESG_GH3_VALUE: return ENUMDP_TYP_ESG_GH3;
-			case ENUMDP_TYP_ESG_GH4_VALUE: return ENUMDP_TYP_ESG_GH4;
-			case ENUMDP_TYP_ESG_GH5_VALUE: return ENUMDP_TYP_ESG_GH5;
-			case ENUMDP_TYP_ESG_GM1_VALUE: return ENUMDP_TYP_ESG_GM1;
-			case ENUMDP_TYP_ESG_GM2_VALUE: return ENUMDP_TYP_ESG_GM2;
-			case ENUMDP_TYP_ESG_GM3_VALUE: return ENUMDP_TYP_ESG_GM3;
-			case ENUMDP_TYP_ESG_GM4_VALUE: return ENUMDP_TYP_ESG_GM4;
-			case ENUMDP_TYP_ESG_GM5_VALUE: return ENUMDP_TYP_ESG_GM5;
+			case ENUMDP_TYP_ESG_AWP_VALUE: return ENUMDP_TYP_ESG_AWP;
+			case ENUMDP_TYP_ESG_BMI_VALUE: return ENUMDP_TYP_ESG_BMI;
+			case ENUMDP_TYP_ESG_BPI_VALUE: return ENUMDP_TYP_ESG_BPI;
+			case ENUMDP_TYP_ESG_BRI_VALUE: return ENUMDP_TYP_ESG_BRI;
+			case ENUMDP_TYP_ESG_BW_VALUE: return ENUMDP_TYP_ESG_BW;
+			case ENUMDP_TYP_ESG_EA_VALUE: return ENUMDP_TYP_ESG_EA;
+			case ENUMDP_TYP_ESG_EF_VALUE: return ENUMDP_TYP_ESG_EF;
+			case ENUMDP_TYP_ESG_EH_VALUE: return ENUMDP_TYP_ESG_EH;
+			case ENUMDP_TYP_ESG_EM_VALUE: return ENUMDP_TYP_ESG_EM;
+			case ENUMDP_TYP_ESG_EP_VALUE: return ENUMDP_TYP_ESG_EP;
+			case ENUMDP_TYP_ESG_GLI_VALUE: return ENUMDP_TYP_ESG_GLI;
+			case ENUMDP_TYP_ESG_HG_VALUE: return ENUMDP_TYP_ESG_HG;
 			case ENUMDP_TYP_ESG_HS_VALUE: return ENUMDP_TYP_ESG_HS;
-			case ENUMDP_TYP_ESG_LB_VALUE: return ENUMDP_TYP_ESG_LB;
-			case ENUMDP_TYP_ESG_LF_VALUE: return ENUMDP_TYP_ESG_LF;
-			case ENUMDP_TYP_ESG_LR_VALUE: return ENUMDP_TYP_ESG_LR;
+			case ENUMDP_TYP_ESG_HV_VALUE: return ENUMDP_TYP_ESG_HV;
+			case ENUMDP_TYP_ESG_LF_S_VALUE: return ENUMDP_TYP_ESG_LF_S;
+			case ENUMDP_TYP_ESG_LF_V_VALUE: return ENUMDP_TYP_ESG_LF_V;
+			case ENUMDP_TYP_ESG_LFI_VALUE: return ENUMDP_TYP_ESG_LFI;
+			case ENUMDP_TYP_ESG_LG_S_VALUE: return ENUMDP_TYP_ESG_LG_S;
+			case ENUMDP_TYP_ESG_LG_V_VALUE: return ENUMDP_TYP_ESG_LG_V;
+			case ENUMDP_TYP_ESG_LR_S_VALUE: return ENUMDP_TYP_ESG_LR_S;
+			case ENUMDP_TYP_ESG_LR_V_VALUE: return ENUMDP_TYP_ESG_LR_V;
+			case ENUMDP_TYP_ESG_MG_VALUE: return ENUMDP_TYP_ESG_MG;
+			case ENUMDP_TYP_ESG_MH_VALUE: return ENUMDP_TYP_ESG_MH;
+			case ENUMDP_TYP_ESG_MP_VALUE: return ENUMDP_TYP_ESG_MP;
 			case ENUMDP_TYP_ESG_MS_VALUE: return ENUMDP_TYP_ESG_MS;
+			case ENUMDP_TYP_ESG_MV_VALUE: return ENUMDP_TYP_ESG_MV;
 			case ENUMDP_TYP_ESG_NV_VALUE: return ENUMDP_TYP_ESG_NV;
-			case ENUMDP_TYP_ESG_RP1_VALUE: return ENUMDP_TYP_ESG_RP1;
-			case ENUMDP_TYP_ESG_RP2_VALUE: return ENUMDP_TYP_ESG_RP2;
-			case ENUMDP_TYP_ESG_RS_VALUE: return ENUMDP_TYP_ESG_RS;
-			case ENUMDP_TYP_ESG_SA_VALUE: return ENUMDP_TYP_ESG_SA;
-			case ENUMDP_TYP_ESG_SB_VALUE: return ENUMDP_TYP_ESG_SB;
 			case ENUMDP_TYP_ESG_SK_VALUE: return ENUMDP_TYP_ESG_SK;
 			case ENUMDP_TYP_ESG_SN_VALUE: return ENUMDP_TYP_ESG_SN;
-			case ENUMDP_TYP_ESG_SONSTIGE_VALUE: return ENUMDP_TYP_ESG_SONSTIGE;
 			case ENUMDP_TYP_ESG_SP_VALUE: return ENUMDP_TYP_ESG_SP;
-			case ENUMDP_TYP_ESG_SS_136_VALUE: return ENUMDP_TYP_ESG_SS_136;
-			case ENUMDP_TYP_ESG_SS_187_VALUE: return ENUMDP_TYP_ESG_SS_187;
-			case ENUMDP_TYP_ESG_SS_24_VALUE: return ENUMDP_TYP_ESG_SS_24;
-			case ENUMDP_TYP_ESG_SS_48_VALUE: return ENUMDP_TYP_ESG_SS_48;
-			case ENUMDP_TYP_ESG_SS_72_VALUE: return ENUMDP_TYP_ESG_SS_72;
-			case ENUMDP_TYP_ESG_SS_99_VALUE: return ENUMDP_TYP_ESG_SS_99;
 			case ENUMDP_TYP_ESG_ST_VALUE: return ENUMDP_TYP_ESG_ST;
-			case ENUMDP_TYP_ESG_TA_VALUE: return ENUMDP_TYP_ESG_TA;
 			case ENUMDP_TYP_ESG_TE_E_VALUE: return ENUMDP_TYP_ESG_TE_E;
 			case ENUMDP_TYP_ESG_TE_L_VALUE: return ENUMDP_TYP_ESG_TE_L;
-			case ENUMDP_TYP_ESG_TE2_VALUE: return ENUMDP_TYP_ESG_TE2;
-			case ENUMDP_TYP_ESG_TG_VALUE: return ENUMDP_TYP_ESG_TG;
+			case ENUMDP_TYP_ESG_TG_E_VALUE: return ENUMDP_TYP_ESG_TG_E;
+			case ENUMDP_TYP_ESG_TG_L_VALUE: return ENUMDP_TYP_ESG_TG_L;
 			case ENUMDP_TYP_ESG_TM_E_VALUE: return ENUMDP_TYP_ESG_TM_E;
 			case ENUMDP_TYP_ESG_TM_L_VALUE: return ENUMDP_TYP_ESG_TM_L;
 			case ENUMDP_TYP_ESG_TP_VALUE: return ENUMDP_TYP_ESG_TP;
-			case ENUMDP_TYP_ESG_TR_VALUE: return ENUMDP_TYP_ESG_TR;
-			case ENUMDP_TYP_ESG_TS_VALUE: return ENUMDP_TYP_ESG_TS;
 			case ENUMDP_TYP_ESG_TV_E_VALUE: return ENUMDP_TYP_ESG_TV_E;
 			case ENUMDP_TYP_ESG_TV_L_VALUE: return ENUMDP_TYP_ESG_TV_L;
+			case ENUMDP_TYP_ESG_VP_VALUE: return ENUMDP_TYP_ESG_VP;
 			case ENUMDP_TYP_ESG_VS_VALUE: return ENUMDP_TYP_ESG_VS;
 			case ENUMDP_TYP_ESG_VW_VALUE: return ENUMDP_TYP_ESG_VW;
 			default: return null;

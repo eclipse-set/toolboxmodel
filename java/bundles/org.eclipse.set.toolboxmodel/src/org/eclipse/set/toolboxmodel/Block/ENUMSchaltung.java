@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block;
 
@@ -29,16 +36,6 @@ public enum ENUMSchaltung implements Enumerator {
 	ENUM_SCHALTUNG_3DRAHTSCHALTUNG(0, "ENUMSchaltung_3_Drahtschaltung", "3_Drahtschaltung"),
 
 	/**
-	 * The '<em><b>ENUM Schaltung sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SCHALTUNG_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_SCHALTUNG_SONSTIGE(1, "ENUMSchaltung_sonstige", "sonstige"),
-
-	/**
 	 * The '<em><b>ENUM Schaltung 6Drahtschaltung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,7 +43,7 @@ public enum ENUMSchaltung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTUNG_6DRAHTSCHALTUNG(2, "ENUMSchaltung_6_Drahtschaltung", "6_Drahtschaltung"),
+	ENUM_SCHALTUNG_6DRAHTSCHALTUNG(1, "ENUMSchaltung_6_Drahtschaltung", "6_Drahtschaltung"),
 
 	/**
 	 * The '<em><b>ENUM Schaltung 9Drahtschaltung</b></em>' literal object.
@@ -56,7 +53,17 @@ public enum ENUMSchaltung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTUNG_9DRAHTSCHALTUNG(3, "ENUMSchaltung_9_Drahtschaltung", "9_Drahtschaltung");
+	ENUM_SCHALTUNG_9DRAHTSCHALTUNG(2, "ENUMSchaltung_9_Drahtschaltung", "9_Drahtschaltung"),
+
+	/**
+	 * The '<em><b>ENUM Schaltung sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SCHALTUNG_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_SCHALTUNG_SONSTIGE(3, "ENUMSchaltung_sonstige", "sonstige");
 
 	/**
 	 * The '<em><b>ENUM Schaltung 3Drahtschaltung</b></em>' literal value.
@@ -70,17 +77,6 @@ public enum ENUMSchaltung implements Enumerator {
 	public static final int ENUM_SCHALTUNG_3DRAHTSCHALTUNG_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUM Schaltung sonstige</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_SCHALTUNG_SONSTIGE
-	 * @model name="ENUMSchaltung_sonstige" literal="sonstige"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_SCHALTUNG_SONSTIGE_VALUE = 1;
-
-	/**
 	 * The '<em><b>ENUM Schaltung 6Drahtschaltung</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,7 +85,7 @@ public enum ENUMSchaltung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTUNG_6DRAHTSCHALTUNG_VALUE = 2;
+	public static final int ENUM_SCHALTUNG_6DRAHTSCHALTUNG_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Schaltung 9Drahtschaltung</b></em>' literal value.
@@ -100,7 +96,18 @@ public enum ENUMSchaltung implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTUNG_9DRAHTSCHALTUNG_VALUE = 3;
+	public static final int ENUM_SCHALTUNG_9DRAHTSCHALTUNG_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUM Schaltung sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SCHALTUNG_SONSTIGE
+	 * @model name="ENUMSchaltung_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_SCHALTUNG_SONSTIGE_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>ENUM Schaltung</b></em>' enumerators.
@@ -111,9 +118,9 @@ public enum ENUMSchaltung implements Enumerator {
 	private static final ENUMSchaltung[] VALUES_ARRAY =
 		new ENUMSchaltung[] {
 			ENUM_SCHALTUNG_3DRAHTSCHALTUNG,
-			ENUM_SCHALTUNG_SONSTIGE,
 			ENUM_SCHALTUNG_6DRAHTSCHALTUNG,
 			ENUM_SCHALTUNG_9DRAHTSCHALTUNG,
+			ENUM_SCHALTUNG_SONSTIGE,
 		};
 
 	/**
@@ -171,9 +178,9 @@ public enum ENUMSchaltung implements Enumerator {
 	public static ENUMSchaltung get(int value) {
 		switch (value) {
 			case ENUM_SCHALTUNG_3DRAHTSCHALTUNG_VALUE: return ENUM_SCHALTUNG_3DRAHTSCHALTUNG;
-			case ENUM_SCHALTUNG_SONSTIGE_VALUE: return ENUM_SCHALTUNG_SONSTIGE;
 			case ENUM_SCHALTUNG_6DRAHTSCHALTUNG_VALUE: return ENUM_SCHALTUNG_6DRAHTSCHALTUNG;
 			case ENUM_SCHALTUNG_9DRAHTSCHALTUNG_VALUE: return ENUM_SCHALTUNG_9DRAHTSCHALTUNG;
+			case ENUM_SCHALTUNG_SONSTIGE_VALUE: return ENUM_SCHALTUNG_SONSTIGE;
 			default: return null;
 		}
 	}

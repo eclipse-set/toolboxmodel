@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_SE_Ausruestung_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_SE_Ausruestung_AttributeGroup} object.
@@ -86,6 +87,7 @@ public class ZUB_SE_Ausruestung_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_SE_Ausruestung_AttributeGroup_Anwendungssystem());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_SE_Ausruestung_AttributeGroup_BaselineSystemVersion());
 		}
 		return childrenFeatures;
 	}
@@ -139,6 +141,7 @@ public class ZUB_SE_Ausruestung_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(ZUB_SE_Ausruestung_AttributeGroup.class)) {
 			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__ANWENDUNGSSYSTEM:
+			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -162,6 +165,11 @@ public class ZUB_SE_Ausruestung_AttributeGroupItemProvider
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_SE_Ausruestung_AttributeGroup_Anwendungssystem(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createAnwendungssystem_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getZUB_SE_Ausruestung_AttributeGroup_BaselineSystemVersion(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createBaseline_System_Version_TypeClass()));
 	}
 
 	/**

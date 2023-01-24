@@ -31,10 +31,9 @@ public interface Planung_P_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-model-doc -->
 	 * "Gekürzte Langbezeichnung" einer Baumaßnahme, die über mehrere Planungsgruppen realisiert wird.
 	 * z. B. Grunderneuerung Strecke xxxx.
-	 * 
 	 * DB-Regelwerk
-	 * Bisher keine eindeutige Abbildung. 
-	 * Meist Zusatzeintrag auf Planungsunterlagen außerhalb Standard-Schriftfeld nach Ril 819.0103.
+	 * Bisher keine eindeutige Abbildung.
+	 * Meist Zusatzeintrag auf Planungsunterlagen außerhalb Standard-Schriftfeld nach Ril 886.0102.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bezeichnung Planung Projekt</em>' containment reference.
 	 * @see #setBezeichnungPlanungProjekt(Bezeichnung_Planung_Projekt_TypeClass)
@@ -62,7 +61,6 @@ public interface Planung_P_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Datum des Abschlusses des Planungsprojektes.
 	 * Bis zum tatsächlichen Abschluss handelt es sich dabei um ein geplantes Datum, das iterativ nachzupflegen ist.
-	 * 
 	 * DB-Regelwerk
 	 * Bisher ohne eindeutige Abbildung.
 	 * <!-- end-model-doc -->
@@ -91,8 +89,7 @@ public interface Planung_P_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Angabe der Projektnummer.
-	 * Die Struktur wird im LST-Datenmodell nicht vorgegeben. 
-	 * 
+	 * Die Struktur wird im LST-Datenmodell nicht vorgegeben.
 	 * DB-Regelwerk
 	 * Bisher keine eindeutige Abbildung.
 	 * <!-- end-model-doc -->
@@ -121,7 +118,6 @@ public interface Planung_P_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Name des Projektleiters, der für die erfolgreiche Projektabwicklung verantwortlich ist.
-	 * 
 	 * DB-Regelwerk
 	 * Bisher ohne eindeutige Abbildung.
 	 * <!-- end-model-doc -->

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB;
 
@@ -164,7 +171,7 @@ public interface PZB_Element_GUE_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Mitnutzung nur im besonderen Fall.
+	 * Mit Ausnahme von GÜ bei Lf-Signalisierung werden bei der Anordnung von GÜ unmittelbar am Signal (meist im Zusammenhang mit geschwindigkeitsmindernden Zusatzanzeigern) der Wirkmagnet der GÜ und der PZB-Magnet des Signals zu einem PZB-Magneten zusammengefasst. DB-Regelwerk Der Sachverhalt ist in der Ril 819.1310 zwar nicht eindeutig beschrieben, geht jedoch aus den Tabelleneinträgen im Anhang 01 hervor.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDPZB Element Mitnutzung</em>' reference.
 	 * @see #isSetIDPZBElementMitnutzung()

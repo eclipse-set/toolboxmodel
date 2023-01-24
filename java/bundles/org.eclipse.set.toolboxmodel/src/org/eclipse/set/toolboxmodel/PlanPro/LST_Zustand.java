@@ -18,7 +18,6 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  * * Einzelner LST_Zustand: für Bestandsdaten oder einzelne Zustände der Gleislage (Geodaten);
  * * Kombination von LST_Zustand_Start und LST_Zustand_Ziel innerhalb einer Planung_Einzel zur Abbildung der durch eine Planung verursachten Änderung des Zustands der Gleislage bzw. LST-Anlage.
  * Es erfolgt eine alphabetische Auflistung der Objektinstanzen in der Attributgruppe „Container“.
- * 
  * DB Regelwerk
  * Bisher keine Abbildung, da Neuerung mit PlanPro.
  * <!-- end-model-doc -->
@@ -42,7 +41,7 @@ public interface LST_Zustand extends Ur_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Ergänzender pdf-Anhang zu einem LST_Zustand. 
+	 * Ergänzender pdf-Anhang zu einem LST_Zustand.
 	 * DB-Regelwerk
 	 * Bisher ohne eindeutige Darstellung.
 	 * <!-- end-model-doc -->
@@ -63,7 +62,6 @@ public interface LST_Zustand extends Ur_Objekt {
 	 * Alle Objekte des LST-Datenmodells werden in die Attributgruppe eingebunden.
 	 * DB Regelwerk
 	 * Bisher keine Abbildung, da Neuerung mit PlanPro.
-	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Container</em>' containment reference.
 	 * @see #setContainer(Container_AttributeGroup)

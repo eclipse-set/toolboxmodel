@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -1090,6 +1091,29 @@ public class PlanProItemProviderAdapterFactory extends PlanProAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WzkInvalidIDReferenceItemProvider wzkInvalidIDReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWzkInvalidIDReferenceAdapter() {
+		if (wzkInvalidIDReferenceItemProvider == null) {
+			wzkInvalidIDReferenceItemProvider = new WzkInvalidIDReferenceItemProvider(this);
+		}
+
+		return wzkInvalidIDReferenceItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle_Allg_AttributeGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1974,6 +1998,7 @@ public class PlanProItemProviderAdapterFactory extends PlanProAdapterFactory imp
 		if (organisationItemProvider != null) organisationItemProvider.dispose();
 		if (organisationseinheit_TypeClassItemProvider != null) organisationseinheit_TypeClassItemProvider.dispose();
 		if (planPro_SchnittstelleItemProvider != null) planPro_SchnittstelleItemProvider.dispose();
+		if (wzkInvalidIDReferenceItemProvider != null) wzkInvalidIDReferenceItemProvider.dispose();
 		if (planPro_Schnittstelle_Allg_AttributeGroupItemProvider != null) planPro_Schnittstelle_Allg_AttributeGroupItemProvider.dispose();
 		if (planPro_XSD_Version_TypeClassItemProvider != null) planPro_XSD_Version_TypeClassItemProvider.dispose();
 		if (planung_E_Allg_AttributeGroupItemProvider != null) planung_E_Allg_AttributeGroupItemProvider.dispose();

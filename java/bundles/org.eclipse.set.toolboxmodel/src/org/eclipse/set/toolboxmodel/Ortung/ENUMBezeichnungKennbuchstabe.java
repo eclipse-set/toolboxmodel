@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
@@ -19,16 +26,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMBezeichnungKennbuchstabe implements Enumerator {
 	/**
-	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe G</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_G_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_BEZEICHNUNG_KENNBUCHSTABE_G(0, "ENUMBezeichnung_Kennbuchstabe_G", "G"),
-
-	/**
 	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe B</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,17 +33,17 @@ public enum ENUMBezeichnungKennbuchstabe implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BEZEICHNUNG_KENNBUCHSTABE_B(1, "ENUMBezeichnung_Kennbuchstabe_B", "B"),
+	ENUM_BEZEICHNUNG_KENNBUCHSTABE_B(0, "ENUMBezeichnung_Kennbuchstabe_B", "B"),
 
 	/**
-	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe W</b></em>' literal object.
+	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe G</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_W_VALUE
+	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_G_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BEZEICHNUNG_KENNBUCHSTABE_W(2, "ENUMBezeichnung_Kennbuchstabe_W", "W"),
+	ENUM_BEZEICHNUNG_KENNBUCHSTABE_G(1, "ENUMBezeichnung_Kennbuchstabe_G", "G"),
 
 	/**
 	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe K</b></em>' literal object.
@@ -56,18 +53,17 @@ public enum ENUMBezeichnungKennbuchstabe implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_BEZEICHNUNG_KENNBUCHSTABE_K(3, "ENUMBezeichnung_Kennbuchstabe_K", "K");
+	ENUM_BEZEICHNUNG_KENNBUCHSTABE_K(2, "ENUMBezeichnung_Kennbuchstabe_K", "K"),
 
 	/**
-	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe G</b></em>' literal value.
+	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe W</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_G
-	 * @model name="ENUMBezeichnung_Kennbuchstabe_G" literal="G"
+	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_W_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_G_VALUE = 0;
+	ENUM_BEZEICHNUNG_KENNBUCHSTABE_W(3, "ENUMBezeichnung_Kennbuchstabe_W", "W");
 
 	/**
 	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe B</b></em>' literal value.
@@ -78,18 +74,18 @@ public enum ENUMBezeichnungKennbuchstabe implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_B_VALUE = 1;
+	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_B_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe W</b></em>' literal value.
+	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe G</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_W
-	 * @model name="ENUMBezeichnung_Kennbuchstabe_W" literal="W"
+	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_G
+	 * @model name="ENUMBezeichnung_Kennbuchstabe_G" literal="G"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_W_VALUE = 2;
+	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_G_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe K</b></em>' literal value.
@@ -100,7 +96,18 @@ public enum ENUMBezeichnungKennbuchstabe implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_K_VALUE = 3;
+	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_K_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUM Bezeichnung Kennbuchstabe W</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_BEZEICHNUNG_KENNBUCHSTABE_W
+	 * @model name="ENUMBezeichnung_Kennbuchstabe_W" literal="W"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_BEZEICHNUNG_KENNBUCHSTABE_W_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>ENUM Bezeichnung Kennbuchstabe</b></em>' enumerators.
@@ -110,10 +117,10 @@ public enum ENUMBezeichnungKennbuchstabe implements Enumerator {
 	 */
 	private static final ENUMBezeichnungKennbuchstabe[] VALUES_ARRAY =
 		new ENUMBezeichnungKennbuchstabe[] {
-			ENUM_BEZEICHNUNG_KENNBUCHSTABE_G,
 			ENUM_BEZEICHNUNG_KENNBUCHSTABE_B,
-			ENUM_BEZEICHNUNG_KENNBUCHSTABE_W,
+			ENUM_BEZEICHNUNG_KENNBUCHSTABE_G,
 			ENUM_BEZEICHNUNG_KENNBUCHSTABE_K,
+			ENUM_BEZEICHNUNG_KENNBUCHSTABE_W,
 		};
 
 	/**
@@ -170,10 +177,10 @@ public enum ENUMBezeichnungKennbuchstabe implements Enumerator {
 	 */
 	public static ENUMBezeichnungKennbuchstabe get(int value) {
 		switch (value) {
-			case ENUM_BEZEICHNUNG_KENNBUCHSTABE_G_VALUE: return ENUM_BEZEICHNUNG_KENNBUCHSTABE_G;
 			case ENUM_BEZEICHNUNG_KENNBUCHSTABE_B_VALUE: return ENUM_BEZEICHNUNG_KENNBUCHSTABE_B;
-			case ENUM_BEZEICHNUNG_KENNBUCHSTABE_W_VALUE: return ENUM_BEZEICHNUNG_KENNBUCHSTABE_W;
+			case ENUM_BEZEICHNUNG_KENNBUCHSTABE_G_VALUE: return ENUM_BEZEICHNUNG_KENNBUCHSTABE_G;
 			case ENUM_BEZEICHNUNG_KENNBUCHSTABE_K_VALUE: return ENUM_BEZEICHNUNG_KENNBUCHSTABE_K;
+			case ENUM_BEZEICHNUNG_KENNBUCHSTABE_W_VALUE: return ENUM_BEZEICHNUNG_KENNBUCHSTABE_W;
 			default: return null;
 		}
 	}

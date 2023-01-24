@@ -1,28 +1,29 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Bezeichnung_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Moduleigenschaften_AttributeGroup;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
 /**
@@ -35,7 +36,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_AnlageImpl#getBezeichnung <em>Bezeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_AnlageImpl#getIDLEUBezugspunkt <em>IDLEU Bezugspunkt</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_AnlageImpl#getLEUAnlageModuleigenschaften <em>LEU Anlage Moduleigenschaften</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.LEU_AnlageImpl#getLEUAnlageAllg <em>LEU Anlage Allg</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,14 +72,14 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 	protected boolean iDLEUBezugspunktESet;
 
 	/**
-	 * The cached value of the '{@link #getLEUAnlageModuleigenschaften() <em>LEU Anlage Moduleigenschaften</em>}' containment reference list.
+	 * The cached value of the '{@link #getLEUAnlageAllg() <em>LEU Anlage Allg</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLEUAnlageModuleigenschaften()
+	 * @see #getLEUAnlageAllg()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LEU_Anlage_Moduleigenschaften_AttributeGroup> lEUAnlageModuleigenschaften;
+	protected LEU_Anlage_Allg_AttributeGroup lEUAnlageAllg;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,11 +218,43 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 	 * @generated
 	 */
 	@Override
-	public EList<LEU_Anlage_Moduleigenschaften_AttributeGroup> getLEUAnlageModuleigenschaften() {
-		if (lEUAnlageModuleigenschaften == null) {
-			lEUAnlageModuleigenschaften = new EObjectContainmentEList<LEU_Anlage_Moduleigenschaften_AttributeGroup>(LEU_Anlage_Moduleigenschaften_AttributeGroup.class, this, Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_MODULEIGENSCHAFTEN);
+	public LEU_Anlage_Allg_AttributeGroup getLEUAnlageAllg() {
+		return lEUAnlageAllg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLEUAnlageAllg(LEU_Anlage_Allg_AttributeGroup newLEUAnlageAllg, NotificationChain msgs) {
+		LEU_Anlage_Allg_AttributeGroup oldLEUAnlageAllg = lEUAnlageAllg;
+		lEUAnlageAllg = newLEUAnlageAllg;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG, oldLEUAnlageAllg, newLEUAnlageAllg);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return lEUAnlageModuleigenschaften;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLEUAnlageAllg(LEU_Anlage_Allg_AttributeGroup newLEUAnlageAllg) {
+		if (newLEUAnlageAllg != lEUAnlageAllg) {
+			NotificationChain msgs = null;
+			if (lEUAnlageAllg != null)
+				msgs = ((InternalEObject)lEUAnlageAllg).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG, null, msgs);
+			if (newLEUAnlageAllg != null)
+				msgs = ((InternalEObject)newLEUAnlageAllg).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG, null, msgs);
+			msgs = basicSetLEUAnlageAllg(newLEUAnlageAllg, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG, newLEUAnlageAllg, newLEUAnlageAllg));
 	}
 
 	/**
@@ -234,8 +267,8 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE__BEZEICHNUNG:
 				return basicSetBezeichnung(null, msgs);
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_MODULEIGENSCHAFTEN:
-				return ((InternalEList<?>)getLEUAnlageModuleigenschaften()).basicRemove(otherEnd, msgs);
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG:
+				return basicSetLEUAnlageAllg(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -254,8 +287,8 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE__IDLEU_BEZUGSPUNKT:
 				if (resolve) return getIDLEUBezugspunkt();
 				return basicGetIDLEUBezugspunkt();
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_MODULEIGENSCHAFTEN:
-				return getLEUAnlageModuleigenschaften();
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG:
+				return getLEUAnlageAllg();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -266,7 +299,6 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -276,9 +308,8 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE__IDLEU_BEZUGSPUNKT:
 				setIDLEUBezugspunkt((Basis_Objekt)newValue);
 				return;
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_MODULEIGENSCHAFTEN:
-				getLEUAnlageModuleigenschaften().clear();
-				getLEUAnlageModuleigenschaften().addAll((Collection<? extends LEU_Anlage_Moduleigenschaften_AttributeGroup>)newValue);
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG:
+				setLEUAnlageAllg((LEU_Anlage_Allg_AttributeGroup)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -300,8 +331,8 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE__IDLEU_BEZUGSPUNKT:
 				unsetIDLEUBezugspunkt();
 				return;
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_MODULEIGENSCHAFTEN:
-				getLEUAnlageModuleigenschaften().clear();
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG:
+				setLEUAnlageAllg((LEU_Anlage_Allg_AttributeGroup)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -321,8 +352,8 @@ public class LEU_AnlageImpl extends Basis_ObjektImpl implements LEU_Anlage {
 				return bezeichnung != null;
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE__IDLEU_BEZUGSPUNKT:
 				return isSetIDLEUBezugspunkt();
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_MODULEIGENSCHAFTEN:
-				return lEUAnlageModuleigenschaften != null && !lEUAnlageModuleigenschaften.isEmpty();
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG:
+				return lEUAnlageAllg != null;
 			default:
 				return super.eIsSet(featureID);
 		}

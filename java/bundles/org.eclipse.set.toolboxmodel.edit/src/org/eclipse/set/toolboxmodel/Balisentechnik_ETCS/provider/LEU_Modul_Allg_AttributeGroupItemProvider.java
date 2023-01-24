@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup} object.
@@ -87,6 +88,7 @@ public class LEU_Modul_Allg_AttributeGroupItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Modul_Allg_AttributeGroup_Hersteller());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Modul_Allg_AttributeGroup_LEUModulArt());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Modul_Allg_AttributeGroup_LEUModulGeraetestand());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Modul_Allg_AttributeGroup_LEUModulTyp());
 		}
 		return childrenFeatures;
@@ -142,6 +144,7 @@ public class LEU_Modul_Allg_AttributeGroupItemProvider
 		switch (notification.getFeatureID(LEU_Modul_Allg_AttributeGroup.class)) {
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_ART:
+			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_GERAETESTAND:
 			case Balisentechnik_ETCSPackage.LEU_MODUL_ALLG_ATTRIBUTE_GROUP__LEU_MODUL_TYP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -171,6 +174,11 @@ public class LEU_Modul_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Modul_Allg_AttributeGroup_LEUModulArt(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Modul_Art_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Modul_Allg_AttributeGroup_LEUModulGeraetestand(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Modul_Geraetestand_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

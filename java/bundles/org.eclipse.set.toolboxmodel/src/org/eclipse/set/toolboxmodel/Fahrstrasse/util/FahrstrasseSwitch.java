@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.util;
 
@@ -73,10 +80,10 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case FahrstrassePackage.AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS: {
-				Aufloesung_Ssp_Zielgeis_TypeClass aufloesung_Ssp_Zielgeis_TypeClass = (Aufloesung_Ssp_Zielgeis_TypeClass)theEObject;
-				T result = caseAufloesung_Ssp_Zielgeis_TypeClass(aufloesung_Ssp_Zielgeis_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(aufloesung_Ssp_Zielgeis_TypeClass);
+			case FahrstrassePackage.AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS: {
+				Aufloesung_Ssp_Zielgleis_TypeClass aufloesung_Ssp_Zielgleis_TypeClass = (Aufloesung_Ssp_Zielgleis_TypeClass)theEObject;
+				T result = caseAufloesung_Ssp_Zielgleis_TypeClass(aufloesung_Ssp_Zielgleis_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(aufloesung_Ssp_Zielgleis_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -187,24 +194,10 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FahrstrassePackage.FSTR_ART_TYPE_CLASS: {
-				Fstr_Art_TypeClass fstr_Art_TypeClass = (Fstr_Art_TypeClass)theEObject;
-				T result = caseFstr_Art_TypeClass(fstr_Art_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Art_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FahrstrassePackage.FSTR_BEDIENSTRING_TYPE_CLASS: {
 				Fstr_Bedienstring_TypeClass fstr_Bedienstring_TypeClass = (Fstr_Bedienstring_TypeClass)theEObject;
 				T result = caseFstr_Bedienstring_TypeClass(fstr_Bedienstring_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Bedienstring_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FahrstrassePackage.FSTR_BILDEZEIT_TYPE_CLASS: {
-				Fstr_Bildezeit_TypeClass fstr_Bildezeit_TypeClass = (Fstr_Bildezeit_TypeClass)theEObject;
-				T result = caseFstr_Bildezeit_TypeClass(fstr_Bildezeit_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Bildezeit_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -242,32 +235,19 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FahrstrassePackage.FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP: {
-				Fstr_DWeg_W_Kr_Allg_AttributeGroup fstr_DWeg_W_Kr_Allg_AttributeGroup = (Fstr_DWeg_W_Kr_Allg_AttributeGroup)theEObject;
-				T result = caseFstr_DWeg_W_Kr_Allg_AttributeGroup(fstr_DWeg_W_Kr_Allg_AttributeGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FahrstrassePackage.FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP: {
-				Fstr_DWeg_W_Kr_Allg_child_AttributeGroup fstr_DWeg_W_Kr_Allg_child_AttributeGroup = (Fstr_DWeg_W_Kr_Allg_child_AttributeGroup)theEObject;
-				T result = caseFstr_DWeg_W_Kr_Allg_child_AttributeGroup(fstr_DWeg_W_Kr_Allg_child_AttributeGroup);
-				if (result == null) result = caseFstr_DWeg_W_Kr_Allg_AttributeGroup(fstr_DWeg_W_Kr_Allg_child_AttributeGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FahrstrassePackage.FSTR_DWEG_WKR_TYPE_CLASS: {
-				Fstr_DWeg_W_Kr_TypeClass fstr_DWeg_W_Kr_TypeClass = (Fstr_DWeg_W_Kr_TypeClass)theEObject;
-				T result = caseFstr_DWeg_W_Kr_TypeClass(fstr_DWeg_W_Kr_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_DWeg_W_Kr_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FahrstrassePackage.FSTR_FAHRWEG: {
 				Fstr_Fahrweg fstr_Fahrweg = (Fstr_Fahrweg)theEObject;
 				T result = caseFstr_Fahrweg(fstr_Fahrweg);
 				if (result == null) result = caseBereich_Objekt(fstr_Fahrweg);
 				if (result == null) result = caseBasis_Objekt(fstr_Fahrweg);
 				if (result == null) result = caseUr_Objekt(fstr_Fahrweg);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FahrstrassePackage.FSTR_MITTEL_ART_TYPE_CLASS: {
+				Fstr_Mittel_Art_TypeClass fstr_Mittel_Art_TypeClass = (Fstr_Mittel_Art_TypeClass)theEObject;
+				T result = caseFstr_Mittel_Art_TypeClass(fstr_Mittel_Art_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Mittel_Art_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -289,6 +269,13 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 				T result = caseFstr_Nichthaltfall(fstr_Nichthaltfall);
 				if (result == null) result = caseBasis_Objekt(fstr_Nichthaltfall);
 				if (result == null) result = caseUr_Objekt(fstr_Nichthaltfall);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FahrstrassePackage.FSTR_RANGIER_ART_TYPE_CLASS: {
+				Fstr_Rangier_Art_TypeClass fstr_Rangier_Art_TypeClass = (Fstr_Rangier_Art_TypeClass)theEObject;
+				T result = caseFstr_Rangier_Art_TypeClass(fstr_Rangier_Art_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Rangier_Art_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -347,6 +334,13 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 				Fstr_Vsigabstand_Verkuerzt_TypeClass fstr_Vsigabstand_Verkuerzt_TypeClass = (Fstr_Vsigabstand_Verkuerzt_TypeClass)theEObject;
 				T result = caseFstr_Vsigabstand_Verkuerzt_TypeClass(fstr_Vsigabstand_Verkuerzt_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Vsigabstand_Verkuerzt_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FahrstrassePackage.FSTR_ZUG_ART_TYPE_CLASS: {
+				Fstr_Zug_Art_TypeClass fstr_Zug_Art_TypeClass = (Fstr_Zug_Art_TypeClass)theEObject;
+				T result = caseFstr_Zug_Art_TypeClass(fstr_Zug_Art_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(fstr_Zug_Art_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -420,22 +414,29 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FahrstrassePackage.START_SIGNAL_CHARAKTER_TYPE_CLASS: {
+				Start_Signal_Charakter_TypeClass start_Signal_Charakter_TypeClass = (Start_Signal_Charakter_TypeClass)theEObject;
+				T result = caseStart_Signal_Charakter_TypeClass(start_Signal_Charakter_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(start_Signal_Charakter_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Aufloesung Ssp Zielgeis Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Aufloesung Ssp Zielgleis Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Aufloesung Ssp Zielgeis Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Aufloesung Ssp Zielgleis Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAufloesung_Ssp_Zielgeis_TypeClass(Aufloesung_Ssp_Zielgeis_TypeClass object) {
+	public T caseAufloesung_Ssp_Zielgleis_TypeClass(Aufloesung_Ssp_Zielgleis_TypeClass object) {
 		return null;
 	}
 
@@ -665,21 +666,6 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fstr Art Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fstr Art Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFstr_Art_TypeClass(Fstr_Art_TypeClass object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Fstr Bedienstring Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -691,21 +677,6 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFstr_Bedienstring_TypeClass(Fstr_Bedienstring_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fstr Bildezeit Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fstr Bildezeit Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFstr_Bildezeit_TypeClass(Fstr_Bildezeit_TypeClass object) {
 		return null;
 	}
 
@@ -785,51 +756,6 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fstr DWeg WKr Allg Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fstr DWeg WKr Allg Attribute Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFstr_DWeg_W_Kr_Allg_AttributeGroup(Fstr_DWeg_W_Kr_Allg_AttributeGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fstr DWeg WKr Allg child Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fstr DWeg WKr Allg child Attribute Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFstr_DWeg_W_Kr_Allg_child_AttributeGroup(Fstr_DWeg_W_Kr_Allg_child_AttributeGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fstr DWeg WKr Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fstr DWeg WKr Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFstr_DWeg_W_Kr_TypeClass(Fstr_DWeg_W_Kr_TypeClass object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Fstr Fahrweg</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -841,6 +767,21 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFstr_Fahrweg(Fstr_Fahrweg object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fstr Mittel Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fstr Mittel Art Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFstr_Mittel_Art_TypeClass(Fstr_Mittel_Art_TypeClass object) {
 		return null;
 	}
 
@@ -886,6 +827,21 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFstr_Nichthaltfall(Fstr_Nichthaltfall object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fstr Rangier Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fstr Rangier Art Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFstr_Rangier_Art_TypeClass(Fstr_Rangier_Art_TypeClass object) {
 		return null;
 	}
 
@@ -1006,6 +962,21 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFstr_Vsigabstand_Verkuerzt_TypeClass(Fstr_Vsigabstand_Verkuerzt_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fstr Zug Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fstr Zug Art Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFstr_Zug_Art_TypeClass(Fstr_Zug_Art_TypeClass object) {
 		return null;
 	}
 
@@ -1156,6 +1127,21 @@ public class FahrstrasseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSonstiger_Punkt(Sonstiger_Punkt object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Start Signal Charakter Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Start Signal Charakter Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStart_Signal_Charakter_TypeClass(Start_Signal_Charakter_TypeClass object) {
 		return null;
 	}
 

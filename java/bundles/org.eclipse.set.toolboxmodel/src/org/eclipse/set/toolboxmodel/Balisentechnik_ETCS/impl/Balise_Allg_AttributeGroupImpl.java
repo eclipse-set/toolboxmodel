@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -13,10 +20,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anordnung_Im_DP_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Allg_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Geraetestand_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisenhalter_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Fabrikat_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Hersteller_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Hinweis_Balisenbefestigung_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Montageabweichung_TypeClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,9 +37,12 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Hinweis_Balisenbefestigu
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balise_Allg_AttributeGroupImpl#getAnordnungImDP <em>Anordnung Im DP</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balise_Allg_AttributeGroupImpl#getBaliseGeraetestand <em>Balise Geraetestand</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balise_Allg_AttributeGroupImpl#getBalisenhalter <em>Balisenhalter</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balise_Allg_AttributeGroupImpl#getFabrikat <em>Fabrikat</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balise_Allg_AttributeGroupImpl#getHersteller <em>Hersteller</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balise_Allg_AttributeGroupImpl#getHinweisBalisenbefestigung <em>Hinweis Balisenbefestigung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balise_Allg_AttributeGroupImpl#getMontageabweichung <em>Montageabweichung</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,6 +57,26 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected Anordnung_Im_DP_TypeClass anordnungImDP;
+
+	/**
+	 * The cached value of the '{@link #getBaliseGeraetestand() <em>Balise Geraetestand</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaliseGeraetestand()
+	 * @generated
+	 * @ordered
+	 */
+	protected Balise_Geraetestand_TypeClass baliseGeraetestand;
+
+	/**
+	 * The cached value of the '{@link #getBalisenhalter() <em>Balisenhalter</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBalisenhalter()
+	 * @generated
+	 * @ordered
+	 */
+	protected Balisenhalter_TypeClass balisenhalter;
 
 	/**
 	 * The cached value of the '{@link #getFabrikat() <em>Fabrikat</em>}' containment reference.
@@ -74,6 +107,16 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected Hinweis_Balisenbefestigung_TypeClass hinweisBalisenbefestigung;
+
+	/**
+	 * The cached value of the '{@link #getMontageabweichung() <em>Montageabweichung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMontageabweichung()
+	 * @generated
+	 * @ordered
+	 */
+	protected Montageabweichung_TypeClass montageabweichung;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,6 +180,96 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__ANORDNUNG_IM_DP, newAnordnungImDP, newAnordnungImDP));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Balise_Geraetestand_TypeClass getBaliseGeraetestand() {
+		return baliseGeraetestand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBaliseGeraetestand(Balise_Geraetestand_TypeClass newBaliseGeraetestand, NotificationChain msgs) {
+		Balise_Geraetestand_TypeClass oldBaliseGeraetestand = baliseGeraetestand;
+		baliseGeraetestand = newBaliseGeraetestand;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND, oldBaliseGeraetestand, newBaliseGeraetestand);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBaliseGeraetestand(Balise_Geraetestand_TypeClass newBaliseGeraetestand) {
+		if (newBaliseGeraetestand != baliseGeraetestand) {
+			NotificationChain msgs = null;
+			if (baliseGeraetestand != null)
+				msgs = ((InternalEObject)baliseGeraetestand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND, null, msgs);
+			if (newBaliseGeraetestand != null)
+				msgs = ((InternalEObject)newBaliseGeraetestand).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND, null, msgs);
+			msgs = basicSetBaliseGeraetestand(newBaliseGeraetestand, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND, newBaliseGeraetestand, newBaliseGeraetestand));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Balisenhalter_TypeClass getBalisenhalter() {
+		return balisenhalter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBalisenhalter(Balisenhalter_TypeClass newBalisenhalter, NotificationChain msgs) {
+		Balisenhalter_TypeClass oldBalisenhalter = balisenhalter;
+		balisenhalter = newBalisenhalter;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER, oldBalisenhalter, newBalisenhalter);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBalisenhalter(Balisenhalter_TypeClass newBalisenhalter) {
+		if (newBalisenhalter != balisenhalter) {
+			NotificationChain msgs = null;
+			if (balisenhalter != null)
+				msgs = ((InternalEObject)balisenhalter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER, null, msgs);
+			if (newBalisenhalter != null)
+				msgs = ((InternalEObject)newBalisenhalter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER, null, msgs);
+			msgs = basicSetBalisenhalter(newBalisenhalter, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER, newBalisenhalter, newBalisenhalter));
 	}
 
 	/**
@@ -280,16 +413,67 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
+	public Montageabweichung_TypeClass getMontageabweichung() {
+		return montageabweichung;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetMontageabweichung(Montageabweichung_TypeClass newMontageabweichung, NotificationChain msgs) {
+		Montageabweichung_TypeClass oldMontageabweichung = montageabweichung;
+		montageabweichung = newMontageabweichung;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG, oldMontageabweichung, newMontageabweichung);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMontageabweichung(Montageabweichung_TypeClass newMontageabweichung) {
+		if (newMontageabweichung != montageabweichung) {
+			NotificationChain msgs = null;
+			if (montageabweichung != null)
+				msgs = ((InternalEObject)montageabweichung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG, null, msgs);
+			if (newMontageabweichung != null)
+				msgs = ((InternalEObject)newMontageabweichung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG, null, msgs);
+			msgs = basicSetMontageabweichung(newMontageabweichung, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG, newMontageabweichung, newMontageabweichung));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__ANORDNUNG_IM_DP:
 				return basicSetAnordnungImDP(null, msgs);
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND:
+				return basicSetBaliseGeraetestand(null, msgs);
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER:
+				return basicSetBalisenhalter(null, msgs);
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__FABRIKAT:
 				return basicSetFabrikat(null, msgs);
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				return basicSetHersteller(null, msgs);
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HINWEIS_BALISENBEFESTIGUNG:
 				return basicSetHinweisBalisenbefestigung(null, msgs);
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG:
+				return basicSetMontageabweichung(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -305,12 +489,18 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__ANORDNUNG_IM_DP:
 				return getAnordnungImDP();
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND:
+				return getBaliseGeraetestand();
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER:
+				return getBalisenhalter();
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__FABRIKAT:
 				return getFabrikat();
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				return getHersteller();
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HINWEIS_BALISENBEFESTIGUNG:
 				return getHinweisBalisenbefestigung();
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG:
+				return getMontageabweichung();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -327,6 +517,12 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__ANORDNUNG_IM_DP:
 				setAnordnungImDP((Anordnung_Im_DP_TypeClass)newValue);
 				return;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND:
+				setBaliseGeraetestand((Balise_Geraetestand_TypeClass)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER:
+				setBalisenhalter((Balisenhalter_TypeClass)newValue);
+				return;
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__FABRIKAT:
 				setFabrikat((Fabrikat_TypeClass)newValue);
 				return;
@@ -335,6 +531,9 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 				return;
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HINWEIS_BALISENBEFESTIGUNG:
 				setHinweisBalisenbefestigung((Hinweis_Balisenbefestigung_TypeClass)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG:
+				setMontageabweichung((Montageabweichung_TypeClass)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -353,6 +552,12 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__ANORDNUNG_IM_DP:
 				setAnordnungImDP((Anordnung_Im_DP_TypeClass)null);
 				return;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND:
+				setBaliseGeraetestand((Balise_Geraetestand_TypeClass)null);
+				return;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER:
+				setBalisenhalter((Balisenhalter_TypeClass)null);
+				return;
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__FABRIKAT:
 				setFabrikat((Fabrikat_TypeClass)null);
 				return;
@@ -361,6 +566,9 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 				return;
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HINWEIS_BALISENBEFESTIGUNG:
 				setHinweisBalisenbefestigung((Hinweis_Balisenbefestigung_TypeClass)null);
+				return;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG:
+				setMontageabweichung((Montageabweichung_TypeClass)null);
 				return;
 			default:
 				super.eUnset(featureID);
@@ -378,12 +586,18 @@ public class Balise_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__ANORDNUNG_IM_DP:
 				return anordnungImDP != null;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISE_GERAETESTAND:
+				return baliseGeraetestand != null;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__BALISENHALTER:
+				return balisenhalter != null;
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__FABRIKAT:
 				return fabrikat != null;
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HERSTELLER:
 				return hersteller != null;
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__HINWEIS_BALISENBEFESTIGUNG:
 				return hinweisBalisenbefestigung != null;
+			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP__MONTAGEABWEICHUNG:
+				return montageabweichung != null;
 			default:
 				return super.eIsSet(featureID);
 		}

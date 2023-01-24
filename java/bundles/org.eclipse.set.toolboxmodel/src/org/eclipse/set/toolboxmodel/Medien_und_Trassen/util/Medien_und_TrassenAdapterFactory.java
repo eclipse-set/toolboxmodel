@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen.util;
 
@@ -97,6 +104,10 @@ public class Medien_und_TrassenAdapterFactory extends AdapterFactoryImpl {
 				return createBezeichnung_Kabel_Verteilpunkt_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseInduktionsschutz_TypeClass(Induktionsschutz_TypeClass object) {
+				return createInduktionsschutz_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseKabel(Kabel object) {
 				return createKabelAdapter();
 			}
@@ -111,6 +122,10 @@ public class Medien_und_TrassenAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseKabel_Bezeichnung_AttributeGroup(Kabel_Bezeichnung_AttributeGroup object) {
 				return createKabel_Bezeichnung_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseKabel_Element_AttributeGroup(Kabel_Element_AttributeGroup object) {
+				return createKabel_Element_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseKabel_Laenge_TypeClass(Kabel_Laenge_TypeClass object) {
@@ -131,6 +146,10 @@ public class Medien_und_TrassenAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseKabel_Verteilpunkt_Bezeichnung_AttributeGroup(Kabel_Verteilpunkt_Bezeichnung_AttributeGroup object) {
 				return createKabel_Verteilpunkt_Bezeichnung_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseNagetierschutz_TypeClass(Nagetierschutz_TypeClass object) {
+				return createNagetierschutz_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseTrasse_Kante(Trasse_Kante object) {
@@ -273,6 +292,20 @@ public class Medien_und_TrassenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass <em>Induktionsschutz Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass
+	 * @generated
+	 */
+	public Adapter createInduktionsschutz_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel <em>Kabel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -325,6 +358,20 @@ public class Medien_und_TrassenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createKabel_Bezeichnung_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup <em>Kabel Element Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createKabel_Element_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -395,6 +442,20 @@ public class Medien_und_TrassenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createKabel_Verteilpunkt_Bezeichnung_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass <em>Nagetierschutz Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass
+	 * @generated
+	 */
+	public Adapter createNagetierschutz_TypeClassAdapter() {
 		return null;
 	}
 

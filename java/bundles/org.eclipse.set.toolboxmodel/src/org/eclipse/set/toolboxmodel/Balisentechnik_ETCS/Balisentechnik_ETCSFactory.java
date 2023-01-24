@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -22,6 +29,51 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Balisentechnik_ETCSFactory eINSTANCE = org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Balisentechnik_ETCSFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Abstand Bes Langer Einfahrweg Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstand Bes Langer Einfahrweg Type Class</em>'.
+	 * @generated
+	 */
+	Abstand_Bes_Langer_Einfahrweg_TypeClass createAbstand_Bes_Langer_Einfahrweg_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Abstand Datenpunkt EH EM Folgesignal Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstand Datenpunkt EH EM Folgesignal Type Class</em>'.
+	 * @generated
+	 */
+	Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Abstand Datenpunkt EP TPI Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstand Datenpunkt EP TPI Type Class</em>'.
+	 * @generated
+	 */
+	Abstand_Datenpunkt_EP_TPI_TypeClass createAbstand_Datenpunkt_EP_TPI_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Abstand Datenpunkt TPI Folgesignal Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstand Datenpunkt TPI Folgesignal Type Class</em>'.
+	 * @generated
+	 */
+	Abstand_Datenpunkt_TPI_Folgesignal_TypeClass createAbstand_Datenpunkt_TPI_Folgesignal_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Abstand Einmesspunkt Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstand Einmesspunkt Type Class</em>'.
+	 * @generated
+	 */
+	Abstand_Einmesspunkt_TypeClass createAbstand_Einmesspunkt_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Abstand Grenze Bereich CType Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -29,6 +81,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	Abstand_Grenze_Bereich_C_TypeClass createAbstand_Grenze_Bereich_C_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Abstand Reduziert Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstand Reduziert Type Class</em>'.
+	 * @generated
+	 */
+	Abstand_Reduziert_TypeClass createAbstand_Reduziert_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Anlagenteil Sonstige Type Class</em>'.
@@ -47,6 +108,24 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	Anordnung_Im_DP_TypeClass createAnordnung_Im_DP_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Anwendung ESG Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Anwendung ESG Type Class</em>'.
+	 * @generated
+	 */
+	Anwendung_ESG_TypeClass createAnwendung_ESG_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Anwendung GNT Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Anwendung GNT Type Class</em>'.
+	 * @generated
+	 */
+	Anwendung_GNT_TypeClass createAnwendung_GNT_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Anwendung Sonst Type Class</em>'.
@@ -139,13 +218,31 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Balise_Allg_AttributeGroup createBalise_Allg_AttributeGroup();
 
 	/**
-	 * Returns a new object of class '<em>Baseline SRS Type Class</em>'.
+	 * Returns a new object of class '<em>Balise Geraetestand Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Baseline SRS Type Class</em>'.
+	 * @return a new object of class '<em>Balise Geraetestand Type Class</em>'.
 	 * @generated
 	 */
-	Baseline_SRS_TypeClass createBaseline_SRS_TypeClass();
+	Balise_Geraetestand_TypeClass createBalise_Geraetestand_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Balisenhalter Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Balisenhalter Type Class</em>'.
+	 * @generated
+	 */
+	Balisenhalter_TypeClass createBalisenhalter_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Baseline System Version Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Baseline System Version Type Class</em>'.
+	 * @generated
+	 */
+	Baseline_System_Version_TypeClass createBaseline_System_Version_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Bedingung Besondere Attribute Group</em>'.
@@ -319,6 +416,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Bgrenze_Nach_PZB_Bed_Einstieg_AttributeGroup createBgrenze_Nach_PZB_Bed_Einstieg_AttributeGroup();
 
 	/**
+	 * Returns a new object of class '<em>Bgrenze Nach ZBS Bed Einstieg Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bgrenze Nach ZBS Bed Einstieg Attribute Group</em>'.
+	 * @generated
+	 */
+	Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup createBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup();
+
+	/**
 	 * Returns a new object of class '<em>Bgrenze RBC Wechsel BTS Kette Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -328,31 +434,22 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup createBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup();
 
 	/**
-	 * Returns a new object of class '<em>Binaerdatei</em>'.
+	 * Returns a new object of class '<em>Binaerdaten</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Binaerdatei</em>'.
+	 * @return a new object of class '<em>Binaerdaten</em>'.
 	 * @generated
 	 */
-	Binaerdatei createBinaerdatei();
+	Binaerdaten createBinaerdaten();
 
 	/**
-	 * Returns a new object of class '<em>Binaerdatei Allg Attribute Group</em>'.
+	 * Returns a new object of class '<em>Binaerdaten Datei Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Binaerdatei Allg Attribute Group</em>'.
+	 * @return a new object of class '<em>Binaerdaten Datei Attribute Group</em>'.
 	 * @generated
 	 */
-	Binaerdatei_Allg_AttributeGroup createBinaerdatei_Allg_AttributeGroup();
-
-	/**
-	 * Returns a new object of class '<em>Bremsweg Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bremsweg Type Class</em>'.
-	 * @generated
-	 */
-	Bremsweg_TypeClass createBremsweg_TypeClass();
+	Binaerdaten_Datei_AttributeGroup createBinaerdaten_Datei_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>DLEVELTR Type Class</em>'.
@@ -418,6 +515,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Datenpunkt_Beschreibung_TypeClass createDatenpunkt_Beschreibung_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Datenpunkt Einmesspunkt Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Datenpunkt Einmesspunkt Attribute Group</em>'.
+	 * @generated
+	 */
+	Datenpunkt_Einmesspunkt_AttributeGroup createDatenpunkt_Einmesspunkt_AttributeGroup();
+
+	/**
 	 * Returns a new object of class '<em>Datenpunkt Laenge Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -463,22 +569,31 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Delta_VZES_TypeClass createDelta_VZES_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>DP Bezug Betrieblich Art Type Class</em>'.
+	 * Returns a new object of class '<em>DP ATO Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DP Bezug Betrieblich Art Type Class</em>'.
+	 * @return a new object of class '<em>DP ATO Type Class</em>'.
 	 * @generated
 	 */
-	DP_Bezug_Betrieblich_Art_TypeClass createDP_Bezug_Betrieblich_Art_TypeClass();
+	DP_ATO_TypeClass createDP_ATO_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>DP Bezug Betrieblich Attribute Group</em>'.
+	 * Returns a new object of class '<em>DP Bezug Funktional Art Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DP Bezug Betrieblich Attribute Group</em>'.
+	 * @return a new object of class '<em>DP Bezug Funktional Art Type Class</em>'.
 	 * @generated
 	 */
-	DP_Bezug_Betrieblich_AttributeGroup createDP_Bezug_Betrieblich_AttributeGroup();
+	DP_Bezug_Funktional_Art_TypeClass createDP_Bezug_Funktional_Art_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>DP Bezug Funktional Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DP Bezug Funktional Attribute Group</em>'.
+	 * @generated
+	 */
+	DP_Bezug_Funktional_AttributeGroup createDP_Bezug_Funktional_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>DP ETCS Adresse Attribute Group</em>'.
@@ -652,6 +767,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	DP_Typ_ZBS_TypeClass createDP_Typ_ZBS_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>DP Verlinkt Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DP Verlinkt Type Class</em>'.
+	 * @generated
+	 */
+	DP_Verlinkt_TypeClass createDP_Verlinkt_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Dunkelschaltanstoss Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -787,31 +911,13 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	ETCS_Adresse_AttributeGroup createETCS_Adresse_AttributeGroup();
 
 	/**
-	 * Returns a new object of class '<em>ETCS Adresse Kennung Type Class</em>'.
+	 * Returns a new object of class '<em>ETCS Gefahrpunktabstand Abweichend Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ETCS Adresse Kennung Type Class</em>'.
+	 * @return a new object of class '<em>ETCS Gefahrpunktabstand Abweichend Type Class</em>'.
 	 * @generated
 	 */
-	ETCS_Adresse_Kennung_TypeClass createETCS_Adresse_Kennung_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>ETCS Adresse NID BG Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ETCS Adresse NID BG Type Class</em>'.
-	 * @generated
-	 */
-	ETCS_Adresse_NID_BG_TypeClass createETCS_Adresse_NID_BG_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>ETCS Adresse NID CType Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ETCS Adresse NID CType Class</em>'.
-	 * @generated
-	 */
-	ETCS_Adresse_NID_C_TypeClass createETCS_Adresse_NID_C_TypeClass();
+	ETCS_Gefahrpunktabstand_Abweichend_TypeClass createETCS_Gefahrpunktabstand_Abweichend_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ETCS Kante</em>'.
@@ -830,15 +936,6 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	ETCS_Kante_Bezeichnung_AttributeGroup createETCS_Kante_Bezeichnung_AttributeGroup();
-
-	/**
-	 * Returns a new object of class '<em>ETCS Kennung Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ETCS Kennung Type Class</em>'.
-	 * @generated
-	 */
-	ETCS_Kennung_TypeClass createETCS_Kennung_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ETCS Knoten</em>'.
@@ -895,6 +992,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	ETCS_Parameterwert_TypeClass createETCS_Parameterwert_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ETCS Richtungsanzeige</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETCS Richtungsanzeige</em>'.
+	 * @generated
+	 */
+	ETCS_Richtungsanzeige createETCS_Richtungsanzeige();
+
+	/**
 	 * Returns a new object of class '<em>ETCS Signal</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -931,6 +1037,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	ETCS_Signal_TBV_AttributeGroup createETCS_Signal_TBV_AttributeGroup();
 
 	/**
+	 * Returns a new object of class '<em>ETCS System Version Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETCS System Version Type Class</em>'.
+	 * @generated
+	 */
+	ETCS_System_Version_TypeClass createETCS_System_Version_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>ETCS WKr</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -947,15 +1062,6 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	ETCS_W_Kr_MUKA_AttributeGroup createETCS_W_Kr_MUKA_AttributeGroup();
-
-	/**
-	 * Returns a new object of class '<em>ETCS WOrtsgestellt Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ETCS WOrtsgestellt Type Class</em>'.
-	 * @generated
-	 */
-	ETCS_W_Ortsgestellt_TypeClass createETCS_W_Ortsgestellt_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>EV Modul</em>'.
@@ -1201,13 +1307,13 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	FT_ZBS_Typ_TypeClass createFT_ZBS_Typ_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>GNT Merkmale Attribute Group</em>'.
+	 * Returns a new object of class '<em>FW Teil Nummer Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GNT Merkmale Attribute Group</em>'.
+	 * @return a new object of class '<em>FW Teil Nummer Type Class</em>'.
 	 * @generated
 	 */
-	GNT_Merkmale_AttributeGroup createGNT_Merkmale_AttributeGroup();
+	FW_Teil_Nummer_TypeClass createFW_Teil_Nummer_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Gruppen ID Type Class</em>'.
@@ -1246,13 +1352,13 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Hinweis_Balisenbefestigung_TypeClass createHinweis_Balisenbefestigung_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>Individuell Type Class</em>'.
+	 * Returns a new object of class '<em>Individualisierung Weitere Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Individuell Type Class</em>'.
+	 * @return a new object of class '<em>Individualisierung Weitere Type Class</em>'.
 	 * @generated
 	 */
-	Individuell_TypeClass createIndividuell_TypeClass();
+	Individualisierung_Weitere_TypeClass createIndividualisierung_Weitere_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Ist Befahren Type Class</em>'.
@@ -1336,6 +1442,33 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Laenge_Ausfuehrungsbereich_TypeClass createLaenge_Ausfuehrungsbereich_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Laenge Gestufte VSignalisierung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Laenge Gestufte VSignalisierung Type Class</em>'.
+	 * @generated
+	 */
+	Laenge_Gestufte_V_Signalisierung_TypeClass createLaenge_Gestufte_V_Signalisierung_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Laenge Soll Mind 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Laenge Soll Mind 150 Type Class</em>'.
+	 * @generated
+	 */
+	Laenge_Soll_Mind_150_TypeClass createLaenge_Soll_Mind_150_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Leistungsbedarf Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leistungsbedarf Type Class</em>'.
+	 * @generated
+	 */
+	Leistungsbedarf_TypeClass createLeistungsbedarf_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>LEU Anlage</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1345,6 +1478,24 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	LEU_Anlage createLEU_Anlage();
 
 	/**
+	 * Returns a new object of class '<em>LEU Anlage Allg Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>LEU Anlage Allg Attribute Group</em>'.
+	 * @generated
+	 */
+	LEU_Anlage_Allg_AttributeGroup createLEU_Anlage_Allg_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>LEU Anlage Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>LEU Anlage Art Type Class</em>'.
+	 * @generated
+	 */
+	LEU_Anlage_Art_TypeClass createLEU_Anlage_Art_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>LEU Anlage Bezeichnung Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1352,15 +1503,6 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	LEU_Anlage_Bezeichnung_AttributeGroup createLEU_Anlage_Bezeichnung_AttributeGroup();
-
-	/**
-	 * Returns a new object of class '<em>LEU Anlage Moduleigenschaften Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>LEU Anlage Moduleigenschaften Attribute Group</em>'.
-	 * @generated
-	 */
-	LEU_Anlage_Moduleigenschaften_AttributeGroup createLEU_Anlage_Moduleigenschaften_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>LEU Ausgang Nr Type Class</em>'.
@@ -1415,6 +1557,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	LEU_Modul_Bezeichnung_AttributeGroup createLEU_Modul_Bezeichnung_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>LEU Modul Geraetestand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>LEU Modul Geraetestand Type Class</em>'.
+	 * @generated
+	 */
+	LEU_Modul_Geraetestand_TypeClass createLEU_Modul_Geraetestand_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>LEU Modul Typ Type Class</em>'.
@@ -1489,15 +1640,6 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Lfd_Nr_Am_Bezugspunkt_TypeClass createLfd_Nr_Am_Bezugspunkt_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>Lfd Nr in Telegr Spec Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lfd Nr in Telegr Spec Type Class</em>'.
-	 * @generated
-	 */
-	LfdNr_in_Telegr_Spec_TypeClass createLfdNr_in_Telegr_Spec_TypeClass();
-
-	/**
 	 * Returns a new object of class '<em>Link Distanz Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1523,6 +1665,24 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	LM_G_TypeClass createLM_G_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>LT Binaerdatei Hilfe Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>LT Binaerdatei Hilfe Attribute Group</em>'.
+	 * @generated
+	 */
+	LT_Binaerdatei_Hilfe_AttributeGroup createLT_Binaerdatei_Hilfe_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>LT Binaerdaten Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>LT Binaerdaten Attribute Group</em>'.
+	 * @generated
+	 */
+	LT_Binaerdaten_AttributeGroup createLT_Binaerdaten_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>Luft Telegramm</em>'.
@@ -1561,6 +1721,33 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Massgebende_Neig_Schutzstrecke_TypeClass createMassgebende_Neig_Schutzstrecke_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Massgebende Neigung Mind 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Massgebende Neigung Mind 150 Type Class</em>'.
+	 * @generated
+	 */
+	Massgebende_Neigung_Mind_150_TypeClass createMassgebende_Neigung_Mind_150_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Massgebende Neigung Mind Sig 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Massgebende Neigung Mind Sig 150 Type Class</em>'.
+	 * @generated
+	 */
+	Massgebende_Neigung_Mind_Sig_150_TypeClass createMassgebende_Neigung_Mind_Sig_150_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Massgebende Neigung Mind Sig Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Massgebende Neigung Mind Sig Type Class</em>'.
+	 * @generated
+	 */
+	Massgebende_Neigung_Mind_Sig_TypeClass createMassgebende_Neigung_Mind_Sig_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Mastschild Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1588,13 +1775,31 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Max_Unterbrechungszeit_TypeClass createMax_Unterbrechungszeit_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>Metallteil Type Class</em>'.
+	 * Returns a new object of class '<em>Metallteil Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Metallteil Type Class</em>'.
+	 * @return a new object of class '<em>Metallteil Attribute Group</em>'.
 	 * @generated
 	 */
-	Metallteil_TypeClass createMetallteil_TypeClass();
+	Metallteil_AttributeGroup createMetallteil_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>Metallteil Kategorie Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Metallteil Kategorie Type Class</em>'.
+	 * @generated
+	 */
+	Metallteil_Kategorie_TypeClass createMetallteil_Kategorie_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Metallteil Laenge Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Metallteil Laenge Type Class</em>'.
+	 * @generated
+	 */
+	Metallteil_Laenge_TypeClass createMetallteil_Laenge_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Modulnummer Type Class</em>'.
@@ -1604,6 +1809,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	Modulnummer_TypeClass createModulnummer_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Montageabweichung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Montageabweichung Type Class</em>'.
+	 * @generated
+	 */
+	Montageabweichung_TypeClass createMontageabweichung_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Neigung Type Class</em>'.
@@ -1622,6 +1836,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	Nennleistung_TypeClass createNennleistung_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>NID BG Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>NID BG Type Class</em>'.
+	 * @generated
+	 */
+	NID_BG_TypeClass createNID_BG_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>NID CType Class</em>'.
@@ -1649,6 +1872,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	NID_STM_TypeClass createNID_STM_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>NID TSR Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>NID TSR Type Class</em>'.
+	 * @generated
+	 */
+	NID_TSR_TypeClass createNID_TSR_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Nummer Schaltkasten Type Class</em>'.
@@ -1741,6 +1973,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Prog_Datei_Gruppe createProg_Datei_Gruppe();
 
 	/**
+	 * Returns a new object of class '<em>Projektierungsfall Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Projektierungsfall Type Class</em>'.
+	 * @generated
+	 */
+	Projektierungsfall_TypeClass createProjektierungsfall_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>RBC</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1759,13 +2000,13 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	RBC_Allg_AttributeGroup createRBC_Allg_AttributeGroup();
 
 	/**
-	 * Returns a new object of class '<em>RBC SRS Unterversion Type Class</em>'.
+	 * Returns a new object of class '<em>RBC ETCS System Version Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>RBC SRS Unterversion Type Class</em>'.
+	 * @return a new object of class '<em>RBC ETCS System Version Type Class</em>'.
 	 * @generated
 	 */
-	RBC_SRS_Unterversion_TypeClass createRBC_SRS_Unterversion_TypeClass();
+	RBC_ETCS_System_Version_TypeClass createRBC_ETCS_System_Version_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>RBC SRS Version Type Class</em>'.
@@ -1831,6 +2072,24 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Schutzstrecke_Vorhanden_TypeClass createSchutzstrecke_Vorhanden_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Solllaenge Mind Sig 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solllaenge Mind Sig 150 Type Class</em>'.
+	 * @generated
+	 */
+	Solllaenge_Mind_Sig_150_TypeClass createSolllaenge_Mind_Sig_150_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Solllaenge Mind Sig Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solllaenge Mind Sig Type Class</em>'.
+	 * @generated
+	 */
+	Solllaenge_Mind_Sig_TypeClass createSolllaenge_Mind_Sig_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Sonstige Standortangabe Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1865,15 +2124,6 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	Spannung_Toleranz_Untere_TypeClass createSpannung_Toleranz_Untere_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>SRS Unterversion Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>SRS Unterversion Type Class</em>'.
-	 * @generated
-	 */
-	SRS_Unterversion_TypeClass createSRS_Unterversion_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>SRS Version Type Class</em>'.
@@ -1957,6 +2207,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	TBV_Tunnelsignal_TypeClass createTBV_Tunnelsignal_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Telegramm Index Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Telegramm Index Type Class</em>'.
+	 * @generated
+	 */
+	Telegramm_Index_TypeClass createTelegramm_Index_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Telegrammnummer Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1975,6 +2234,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Text_Bedingung_TypeClass createText_Bedingung_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Textmeldung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Textmeldung Type Class</em>'.
+	 * @generated
+	 */
+	Textmeldung_TypeClass createTextmeldung_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Ueberbrueckung EV Unterbrechung Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1982,6 +2250,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	Ueberbrueckung_EV_Unterbrechung_TypeClass createUeberbrueckung_EV_Unterbrechung_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Ueberwachung Laenge Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ueberwachung Laenge Type Class</em>'.
+	 * @generated
+	 */
+	Ueberwachung_Laenge_TypeClass createUeberwachung_Laenge_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Umfahrstrasse Type Class</em>'.
@@ -2029,6 +2306,24 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	V_Frei_TypeClass createV_Frei_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>VStart Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VStart Type Class</em>'.
+	 * @generated
+	 */
+	V_Start_TypeClass createV_Start_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>VZiel Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VZiel Type Class</em>'.
+	 * @generated
+	 */
+	V_Ziel_TypeClass createV_Ziel_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>VZul Strecke Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2036,6 +2331,42 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	V_Zul_Strecke_TypeClass createV_Zul_Strecke_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>VBC Kennung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VBC Kennung Type Class</em>'.
+	 * @generated
+	 */
+	VBC_Kennung_TypeClass createVBC_Kennung_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>VBC NID CType Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VBC NID CType Class</em>'.
+	 * @generated
+	 */
+	VBC_NID_C_TypeClass createVBC_NID_C_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>VBC Setzen Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VBC Setzen Type Class</em>'.
+	 * @generated
+	 */
+	VBC_Setzen_TypeClass createVBC_Setzen_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>VBC Timer Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VBC Timer Type Class</em>'.
+	 * @generated
+	 */
+	VBC_Timer_TypeClass createVBC_Timer_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Verbot Anhalten Type Class</em>'.
@@ -2065,6 +2396,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	Verbot_WB_Art_TypeClass createVerbot_WB_Art_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Verkuerzter Abstand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Verkuerzter Abstand Type Class</em>'.
+	 * @generated
+	 */
+	Verkuerzter_Abstand_TypeClass createVerkuerzter_Abstand_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Verwendung Als Rueckfall Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2072,6 +2412,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	Verwendung_Als_Rueckfall_TypeClass createVerwendung_Als_Rueckfall_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Verwendung Hilfe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Verwendung Hilfe Type Class</em>'.
+	 * @generated
+	 */
+	Verwendung_Hilfe_TypeClass createVerwendung_Hilfe_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Verwendung Type Class</em>'.
@@ -2117,6 +2466,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	VLA_TypeClass createVLA_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Vorsignalabstand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vorsignalabstand Type Class</em>'.
+	 * @generated
+	 */
+	Vorsignalabstand_TypeClass createVorsignalabstand_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>VZ Type Class</em>'.
@@ -2218,6 +2576,42 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	ZBS_Reaktion_TypeClass createZBS_Reaktion_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>ZBS Schutzstrecke</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZBS Schutzstrecke</em>'.
+	 * @generated
+	 */
+	ZBS_Schutzstrecke createZBS_Schutzstrecke();
+
+	/**
+	 * Returns a new object of class '<em>ZBS Schutzstrecke Allg Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZBS Schutzstrecke Allg Attribute Group</em>'.
+	 * @generated
+	 */
+	ZBS_Schutzstrecke_Allg_AttributeGroup createZBS_Schutzstrecke_Allg_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>ZBS Signal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZBS Signal</em>'.
+	 * @generated
+	 */
+	ZBS_Signal createZBS_Signal();
+
+	/**
+	 * Returns a new object of class '<em>ZBS Signal Signalabstand Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZBS Signal Signalabstand Attribute Group</em>'.
+	 * @generated
+	 */
+	ZBS_Signal_Signalabstand_AttributeGroup createZBS_Signal_Signalabstand_AttributeGroup();
+
+	/**
 	 * Returns a new object of class '<em>Ziel DP Ausrichtung Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2290,13 +2684,13 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	ZUB_Bereichsgrenze_Nach_ESG_AttributeGroup createZUB_Bereichsgrenze_Nach_ESG_AttributeGroup();
 
 	/**
-	 * Returns a new object of class '<em>ZUB Bereichsgrenze Nach GNT Attribute Group</em>'.
+	 * Returns a new object of class '<em>ZUB Bereichsgrenze Nach GNT Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ZUB Bereichsgrenze Nach GNT Attribute Group</em>'.
+	 * @return a new object of class '<em>ZUB Bereichsgrenze Nach GNT Type Class</em>'.
 	 * @generated
 	 */
-	ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup createZUB_Bereichsgrenze_Nach_GNT_AttributeGroup();
+	ZUB_Bereichsgrenze_Nach_GNT_TypeClass createZUB_Bereichsgrenze_Nach_GNT_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>ZUB Bereichsgrenze Nach L2 Attribute Group</em>'.
@@ -2306,6 +2700,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	ZUB_Bereichsgrenze_Nach_L2_AttributeGroup createZUB_Bereichsgrenze_Nach_L2_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>ZUB Bereichsgrenze Nach L2 Von ESG Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZUB Bereichsgrenze Nach L2 Von ESG Attribute Group</em>'.
+	 * @generated
+	 */
+	ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup createZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>ZUB Bereichsgrenze Nach LZB Attribute Group</em>'.
@@ -2342,6 +2745,15 @@ public interface Balisentechnik_ETCSFactory extends EFactory {
 	 * @generated
 	 */
 	ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup createZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup();
+
+	/**
+	 * Returns a new object of class '<em>ZUB Bereichsgrenze Nach ZBS Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ZUB Bereichsgrenze Nach ZBS Attribute Group</em>'.
+	 * @generated
+	 */
+	ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup createZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup();
 
 	/**
 	 * Returns a new object of class '<em>ZUB Bgrenze RBC Wechsel Attribute Group</em>'.

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung.util;
 
@@ -91,6 +98,10 @@ public class ZuglenkungAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEinstellkontrollzeit_TypeClass(Einstellkontrollzeit_TypeClass object) {
 				return createEinstellkontrollzeit_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseFstr_Bildezeit_TypeClass(Fstr_Bildezeit_TypeClass object) {
+				return createFstr_Bildezeit_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseFUEM_Auswertung_TypeClass(FUEM_Auswertung_TypeClass object) {
@@ -291,6 +302,20 @@ public class ZuglenkungAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEinstellkontrollzeit_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass <em>Fstr Bildezeit Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Zuglenkung.Fstr_Bildezeit_TypeClass
+	 * @generated
+	 */
+	public Adapter createFstr_Bildezeit_TypeClassAdapter() {
 		return null;
 	}
 

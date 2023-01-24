@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/1.9.0.2"
-           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
-           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
-           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
-           targetNamespace="http://www.plan-pro.org/modell/PZB/1.9.0.2">
+           xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/1.10.0.1"
+           xmlns:nsBasisobjekte="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
+           xmlns:nsBasisTypen="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
+           xmlns:nsVerweise="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
+           targetNamespace="http://www.plan-pro.org/modell/PZB/1.10.0.1">
 	  <xs:annotation>
 		    <xs:documentation>Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
 
@@ -14,9 +14,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -28,12 +26,22 @@ http://www.dbnetze.com/planpro
 Contents of the file:
 XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:annotation>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Verweise/1.10.0.1"
               schemaLocation="Verweise.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/BasisTypen/1.10.0.1"
               schemaLocation="BasisTypen.xsd"/>
-	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.9.0.2"
+	  <xs:import namespace="http://www.plan-pro.org/modell/Basisobjekte/1.10.0.1"
               schemaLocation="Basisobjekte.xsd"/>
+	  <xs:complexType name="TCGUE_Bauart">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsPZB:ENUMGUE_Bauart" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCGUE_Abstand_Abweichend">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -50,6 +58,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -89,44 +98,33 @@ XML Schema for PlanPro interface.</xs:documentation>
 	  </xs:simpleType>
 	  <xs:complexType name="CPZB_Element_Zuordnung">
 		    <xs:annotation>
-         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zuordnung von PZB Element zu einem Signal, einer Fahrstraße oder auch anderen Objekten, die im Bezug zum PZB_Element stehen. Der Verweis von einem PZB Element über das Zuordnungsobjekt auf ein Signal ist dabei immer gefüllt. Die Verknüpfung mit einer Fahrstraße (nur Zugstraßen sind relevant) oder weiteren Objekten (INA-Berechnungsrelevante Objekte) ist fallbezogen notwendig. Beispiele für die Zuordnung sind unter ID Fstr Zug Rangier zu finden. DB-Regelwerk Eintrag in der Gleismagnettabelle; die Zuordnung zu einzelnen Fahrstraßen wird heute über Fußnoten gelöst. </xs:documentation>
+         <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Zuordnung von PZB Element zu einem Signal, einer Fahrstraße oder auch anderen Objekten, die im Bezug zum PZB_Element stehen. Der Verweis von einem PZB Element über das Zuordnungsobjekt auf ein Signal ist dabei immer gefüllt. Die Verknüpfung mit einer Fahrstraße (nur Zugstraßen sind relevant) oder weiteren Objekten (INA-Berechnungsrelevante Objekte) ist fallbezogen notwendig. Beispiele für die Zuordnung sind unter ID Fstr Zug Rangier zu finden. DB-Regelwerk Eintrag in der Gleismagnettabelle; die Zuordnung zu einzelnen Fahrstraßen wird heute über Fußnoten gelöst.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisobjekte:CBasis_Objekt">
 				        <xs:sequence>
-					          <xs:element name="ID_Fstr_Zug_Rangier" type="nsVerweise:TCID_Fstr_Zug_Rangier"
-                           minOccurs="0"
-                           maxOccurs="1">
-						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verlinkung, zu welcher Fahrstraße der PZB-Gleismagnet gehört (wird nur angegeben, wenn Ziel der Fahrstraße nicht identisch mit zugeordneten Signal ist oder Umfahrwege existieren). Dabei ist festgelegt, dass der Fahrweg der Fahrstraße über den PZB-Gleismagneten führt. Gleismagnete ohne Zuordnung zu einem Signal oder einer Fahrstraße sind ständig wirksam. Zur Verdeutlichung dienen die folgenden Beispiele: Media:Skizze PZB.pdf, Media:Tabellen PZB.pdf. In den Beipielen ist das PZB Element ein Gleismagnet 500 Hz; diese Verfahrensweise kann analog auch für alle anderen PZB_Elemente, z.B. GÜ, angewandt werden. DB-Regelwerk Gleismagnettabelle 1 mittels Fußnote </xs:documentation>
-                  </xs:annotation>
-					          </xs:element>
-					          <xs:element name="ID_PZB_Element_Bezugspunkt"
-                           type="nsVerweise:TCID_PZB_Element_Bezugspunkt"
+					          <xs:element name="PZB_Element_Zuordnung_BP" type="nsPZB:CPZB_Element_Zuordnung_BP"
                            minOccurs="1"
-                           maxOccurs="1">
-						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf das Signal bzw. die Weiche, in dessen Abhängigkeit das PZB Element angeordnet werden muss. Während bei PZB-Element-GM im Regelfall das Signal anzugeben ist, können PZB-Element-GUE auch in Abhängigkeit einer Weiche angeordnet werden (z.B. Spätablenkung). DB-Regelwerk Gleismagnettabelle 1 </xs:documentation>
-                  </xs:annotation>
-					          </xs:element>
-					          <xs:element name="PZB_Element_Zuordnung_INA" type="nsPZB:CPZB_Element_Zuordnung_INA"
+                           maxOccurs="unbounded"/>
+					          <xs:element name="PZB_Element_Zuordnung_Fstr" type="nsPZB:CPZB_Element_Zuordnung_Fstr"
                            minOccurs="0"
-                           maxOccurs="1"/>
-					          <xs:element name="Wirksamkeit" type="nsPZB:TCWirksamkeit" minOccurs="1" maxOccurs="1">
-						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, ob der Gleismagnet/ die GÜ schaltbar ist oder nicht bzw. wie die Anschaltung erfolgt. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Gleismagnettabelle 1 </xs:documentation>
-                     <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
-                        <ppi:WorkflowInformation>
-                           <ppi:ProposedValue>schaltbar_von_Signal</ppi:ProposedValue>
-                        </ppi:WorkflowInformation>
-                     </xs:appinfo>
-                  </xs:annotation>
-					          </xs:element>
+                           maxOccurs="unbounded"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
+	  <xs:complexType name="TCMessfehler">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsPZB:ENUMMessfehler" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
 				        </xs:sequence>
 			      </xs:extension>
 		    </xs:complexContent>
@@ -155,15 +153,6 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:element>
 		    </xs:sequence>
 	  </xs:complexType>
-	  <xs:complexType name="TCPruefzeit">
-		    <xs:complexContent>
-			      <xs:extension base="nsBasisTypen:CBasisAttribut">
-				        <xs:sequence>
-					          <xs:element name="Wert" type="nsPZB:TPruefzeit" minOccurs="1" maxOccurs="1" nillable="true"/>
-				        </xs:sequence>
-			      </xs:extension>
-		    </xs:complexContent>
-	  </xs:complexType>
 	  <xs:complexType name="TCPruefgeschwindigkeit">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -179,15 +168,6 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:pattern value="5\.[89][0-9]|([6-9]|[1-6][0-9]|7[0-4])\.[0-9]{2}|75\.00"/>
 		    </xs:restriction>
 	  </xs:simpleType>
-	  <xs:complexType name="TCGUE_Bauart">
-		    <xs:complexContent>
-			      <xs:extension base="nsBasisTypen:CBasisAttribut">
-				        <xs:sequence>
-					          <xs:element name="Wert" type="nsPZB:ENUMGUE_Bauart" minOccurs="1" maxOccurs="1" nillable="true"/>
-				        </xs:sequence>
-			      </xs:extension>
-		    </xs:complexContent>
-	  </xs:complexType>
 	  <xs:simpleType name="ENUMGUE_Energieversorgung">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="Solar"/>
@@ -218,6 +198,23 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:pattern value="\-[1-6]|[0-9]|[1-9][0-9]|[12][0-9]{2}|300"/>
 		    </xs:restriction>
 	  </xs:simpleType>
+	  <xs:complexType name="CINA_Gefahrstelle">
+		    <xs:sequence>
+			      <xs:element name="ID_Markanter_Punkt" type="nsVerweise:TCID_Markanter_Punkt" minOccurs="1"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf einen Markanten Punkt zur Angabe einer Gefahrstelle für die INA-Berechnung. Die Unterscheidung in  maßgebende und schützenswertere Gefahrstelle erfolgt über das Attribut Prioritaet_Gefahrstelle. DB-Regelwerk 819.1311V00</xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:element name="Prioritaet_Gefahrstelle" type="nsPZB:TCPrioritaet_Gefahrstelle"
+                     minOccurs="1"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Priorität der Gefahrstelle für die INA-Berechnung. Die maßgebende Gefahrstelle wird durch den Wert 1 gekennzeichnet, schützenswertere Gefahrstellen erhalten entsprechend höhere Werte.</xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+		    </xs:sequence>
+	  </xs:complexType>
 	  <xs:complexType name="TCPZB_Abstand_GM">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -228,6 +225,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:simpleType name="ENUMWirksamkeit_Fstr">
+		    <xs:restriction base="xs:string">
+			      <xs:enumeration value="sonstige"/>
+			      <xs:enumeration value="staendig_wirksam_wenn_Fahrstrasse_eingestellt"/>
+			      <xs:enumeration value="unwirksam_wenn_Fahrstrasse_eingestellt"/>
+		    </xs:restriction>
+	  </xs:simpleType>
 	  <xs:complexType name="TCGUE_Messstrecke">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
@@ -307,7 +311,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                      minOccurs="0"
                      maxOccurs="1">
 				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Mitnutzung nur im besonderen Fall.</xs:documentation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Mit Ausnahme von GÜ bei Lf-Signalisierung werden bei der Anordnung von GÜ unmittelbar am Signal (meist im Zusammenhang mit geschwindigkeitsmindernden Zusatzanzeigern) der Wirkmagnet der GÜ und der PZB-Magnet des Signals zu einem PZB-Magneten zusammengefasst. DB-Regelwerk Der Sachverhalt ist in der Ril 819.1310 zwar nicht eindeutig beschrieben, geht jedoch aus den Tabelleneinträgen im Anhang 01 hervor.</xs:documentation>
             </xs:annotation>
 			      </xs:element>
 			      <xs:element name="Messfehler" type="nsPZB:TCMessfehler" minOccurs="0" maxOccurs="1">
@@ -344,6 +348,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
             <ppi:WorkflowInformation>
                <ppi:ObjectType>LST_OBJECT</ppi:ObjectType>
+               <ppi:Untergewerke>BÜ|ESTW</ppi:Untergewerke>
             </ppi:WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -354,7 +359,7 @@ XML Schema for PlanPro interface.</xs:documentation>
                            minOccurs="1"
                            maxOccurs="1">
 						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf das Objekt PZB_Element_Zuordnung, zur Angabe des zugehörigen Signals. </xs:documentation>
+                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf das Objekt PZB_Element_Zuordnung zur Angabe des Bezugspunkts bzw. der Bezugspunkte und ggf. bestehender Fahrstraßen-Abhängigkeiten.</xs:documentation>
                   </xs:annotation>
 					          </xs:element>
 					          <xs:element name="PZB_Art" type="nsPZB:TCPZB_Art" minOccurs="1" maxOccurs="1">
@@ -388,9 +393,13 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:simpleType name="TPrioritaet_Gefahrstelle">
+		    <xs:restriction base="xs:integer"/>
+	  </xs:simpleType>
 	  <xs:complexType name="CPZB_Element_Zuordnung_INA">
 		    <xs:sequence>
-			      <xs:element name="ID_Anhang_INA" type="nsVerweise:TCID_Anhang" minOccurs="1" maxOccurs="1">
+			      <xs:element name="ID_Anhang_INA" type="nsVerweise:TCID_Anhang" minOccurs="1"
+                     maxOccurs="unbounded">
 				        <xs:annotation>
                <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf die zugehörigen Dokumente zur INA-Berechnung. Dazu gehören Erhebungsbogen, Wirkbereichsbogen und ggf. die Berechnungsblätter selbst. Diese werden für jedes Signal gesondert erstellt. DB-Regelwerk 819.1310A02 </xs:documentation>
             </xs:annotation>
@@ -401,21 +410,13 @@ XML Schema for PlanPro interface.</xs:documentation>
                <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">ID der zugehörigen Bahnsteigkante bezogen auf ein Signal mit INA-Berechnung. Der Fall, dass zwei separate Bahnsteige zwischen Vor- und Hauptsignal angeordnet sind, wird nicht angenommen. Aus der bisherigen Praxis sind keine solchen Fälle bekannt. DB-Regelwerk 819.1310A02 2 (1) </xs:documentation>
             </xs:annotation>
 			      </xs:element>
-			      <xs:element name="ID_Markanter_Punkt" type="nsVerweise:TCID_Markanter_Punkt" minOccurs="1"
-                     maxOccurs="1">
-				        <xs:annotation>
-               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">ID des Markanten Punktes, welcher die maßgebende Gefahrenstelle für die INA-Berechnung ist. DB-Regelwerk 819.1310A02 2 (11) und (12) </xs:documentation>
-            </xs:annotation>
-			      </xs:element>
 		    </xs:sequence>
 	  </xs:complexType>
 	  <xs:simpleType name="ENUMWirksamkeit">
 		    <xs:restriction base="xs:string">
 			      <xs:enumeration value="schaltbar_von_Signal"/>
-			      <xs:enumeration value="staendig_wirksam_wenn_Fahrstrasse_eingestellt"/>
-			      <xs:enumeration value="unwirksam_wenn_Fahrstrasse_eingestellt"/>
-			      <xs:enumeration value="staendig_wirksam"/>
 			      <xs:enumeration value="sonstige"/>
+			      <xs:enumeration value="staendig_wirksam"/>
 		    </xs:restriction>
 	  </xs:simpleType>
 	  <xs:simpleType name="TPruefzeit">
@@ -437,23 +438,87 @@ XML Schema for PlanPro interface.</xs:documentation>
 			      <xs:enumeration value="2_AE"/>
 		    </xs:restriction>
 	  </xs:simpleType>
-	  <xs:complexType name="TCMessfehler">
+	  <xs:complexType name="CPZB_Element_Zuordnung_Fstr">
+		    <xs:sequence>
+			      <xs:element name="ID_Fstr_Zug_Rangier" type="nsVerweise:TCID_Fstr_Zug_Rangier"
+                     minOccurs="1"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verlinkung, zu welcher Fahrstraße der PZB-Gleismagnet gehört (wird nur angegeben, wenn Ziel der Fahrstraße nicht identisch mit zugeordneten Signal ist oder Umfahrwege existieren). Dabei ist festgelegt, dass der Fahrweg der Fahrstraße über den PZB-Gleismagneten führt. Gleismagnete ohne Zuordnung zu einem Signal oder einer Fahrstraße sind ständig wirksam. Zur Verdeutlichung dienen die folgenden Beispiele: Media:Skizze PZB.pdf, Media:Tabellen PZB.pdf. In den Beipielen ist das PZB Element ein Gleismagnet 500 Hz; diese Verfahrensweise kann analog auch für alle anderen PZB_Elemente, z.B. GÜ, angewandt werden. DB-Regelwerk Gleismagnettabelle 1 mittels Fußnote </xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:element name="Wirksamkeit_Fstr" type="nsPZB:TCWirksamkeit_Fstr" minOccurs="1"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, ob der Gleismagnet/ die GÜ bei Einstellung der referenzierten Fahrstraße wirksam ist oder nicht. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Gleismagnettabelle</xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+		    </xs:sequence>
+	  </xs:complexType>
+	  <xs:complexType name="TCWirksamkeit_Fstr">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
 				        <xs:sequence>
-					          <xs:element name="Wert" type="nsPZB:ENUMMessfehler" minOccurs="1" maxOccurs="1" nillable="true"/>
+					          <xs:element name="Wert" type="nsPZB:ENUMWirksamkeit_Fstr" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
 				        </xs:sequence>
 			      </xs:extension>
 		    </xs:complexContent>
 	  </xs:complexType>
+	  <xs:complexType name="CPZB_Element_Zuordnung_BP">
+		    <xs:sequence>
+			      <xs:element name="ID_PZB_Element_Bezugspunkt"
+                     type="nsVerweise:TCID_PZB_Element_Bezugspunkt"
+                     minOccurs="1"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Verweis auf das Signal bzw. die Weiche, in dessen Abhängigkeit das PZB Element angeordnet werden muss. Während bei PZB-Element-GM im Regelfall das Signal anzugeben ist, können PZB-Element-GUE auch in Abhängigkeit einer Weiche angeordnet werden (z.B. Spätablenkung). DB-Regelwerk Gleismagnettabelle 1 </xs:documentation>
+            </xs:annotation>
+			      </xs:element>
+			      <xs:element name="INA_Gefahrstelle" type="nsPZB:CINA_Gefahrstelle" minOccurs="0"
+                     maxOccurs="unbounded"/>
+			      <xs:element name="PZB_Element_Zuordnung_INA" type="nsPZB:CPZB_Element_Zuordnung_INA"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+			      <xs:element name="Wirksamkeit" type="nsPZB:TCWirksamkeit" minOccurs="1" maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Angabe, ob der Gleismagnet/ die GÜ schaltbar ist oder nicht bzw. wie die Anschaltung erfolgt. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erläuterungen anzufügen. DB-Regelwerk Gleismagnettabelle</xs:documentation>
+               <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
+                  <ppi:WorkflowInformation>
+                     <ppi:ProposedValue>schaltbar_von_Signal</ppi:ProposedValue>
+                  </ppi:WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+			      </xs:element>
+		    </xs:sequence>
+	  </xs:complexType>
 	  <xs:simpleType name="TGUE_Abstand_Abweichend">
 		    <xs:restriction base="nsBasisTypen:TMeter"/>
 	  </xs:simpleType>
+	  <xs:complexType name="TCPrioritaet_Gefahrstelle">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsPZB:TPrioritaet_Gefahrstelle" minOccurs="1" maxOccurs="1"
+                           nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
 	  <xs:complexType name="TCPZB_INA">
 		    <xs:complexContent>
 			      <xs:extension base="nsBasisTypen:CBasisAttribut">
 				        <xs:sequence>
 					          <xs:element name="Wert" type="xs:boolean" minOccurs="1" maxOccurs="1" nillable="true"/>
+				        </xs:sequence>
+			      </xs:extension>
+		    </xs:complexContent>
+	  </xs:complexType>
+	  <xs:complexType name="TCPruefzeit">
+		    <xs:complexContent>
+			      <xs:extension base="nsBasisTypen:CBasisAttribut">
+				        <xs:sequence>
+					          <xs:element name="Wert" type="nsPZB:TPruefzeit" minOccurs="1" maxOccurs="1" nillable="true"/>
 				        </xs:sequence>
 			      </xs:extension>
 		    </xs:complexContent>

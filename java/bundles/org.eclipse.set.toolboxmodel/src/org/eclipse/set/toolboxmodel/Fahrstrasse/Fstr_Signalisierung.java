@@ -1,9 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal_Signalbegriff;
 
 /**
@@ -140,7 +147,7 @@ public interface Fstr_Signalisierung extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Optionale Bedingung für die Anzeige von Fstr_Signalisierung_Besonders.ID Signal Signalbegriff. Das Zielsignal ist meist das Signal am Fahrstraßenziel, kann aber auch davor (z. B. gestufte Geschwindigkeitssignalisierung) oder dahinter (z. B. nach dem Ende des Weichenbereiches bei Ausfahrten) liegen.
+	 * Optionale Bedingung für die Anzeige von Fstr_Signalisierung.ID Signal Signalbegriff. Das Zielsignal ist meist das Signal am Fahrstraßenziel, kann aber auch davor (z. B. gestufte Geschwindigkeitssignalisierung) oder dahinter (z. B. nach dem Ende des Weichenbereiches bei Ausfahrten) liegen.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ID Signal Signalbegriff Ziel</em>' reference.
 	 * @see #isSetIDSignalSignalbegriffZiel()

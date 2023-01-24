@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,15 +17,17 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bedingung_Signal_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_Als_Rueckfall_TypeClass;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal_Signalbegriff;
 
 /**
@@ -30,6 +39,7 @@ import org.eclipse.set.toolboxmodel.Signale.Signal_Signalbegriff;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Bedingung_Signal_AttributeGroupImpl#getIDSignalSignalbegriff <em>ID Signal Signalbegriff</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Bedingung_Signal_AttributeGroupImpl#getIDSignalbegriffWeiterer <em>ID Signalbegriff Weiterer</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Bedingung_Signal_AttributeGroupImpl#getVerwendungAlsRueckfall <em>Verwendung Als Rueckfall</em>}</li>
  * </ul>
  *
@@ -45,6 +55,16 @@ public class Bedingung_Signal_AttributeGroupImpl extends MinimalEObjectImpl.Cont
 	 * @ordered
 	 */
 	protected EList<Signal_Signalbegriff> iDSignalSignalbegriff;
+
+	/**
+	 * The cached value of the '{@link #getIDSignalbegriffWeiterer() <em>ID Signalbegriff Weiterer</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDSignalbegriffWeiterer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Signal_Signalbegriff> iDSignalbegriffWeiterer;
 
 	/**
 	 * The cached value of the '{@link #getVerwendungAlsRueckfall() <em>Verwendung Als Rueckfall</em>}' containment reference.
@@ -86,6 +106,19 @@ public class Bedingung_Signal_AttributeGroupImpl extends MinimalEObjectImpl.Cont
 			iDSignalSignalbegriff = new EObjectResolvingEList<Signal_Signalbegriff>(Signal_Signalbegriff.class, this, Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNAL_SIGNALBEGRIFF);
 		}
 		return iDSignalSignalbegriff;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Signal_Signalbegriff> getIDSignalbegriffWeiterer() {
+		if (iDSignalbegriffWeiterer == null) {
+			iDSignalbegriffWeiterer = new EObjectResolvingEList<Signal_Signalbegriff>(Signal_Signalbegriff.class, this, Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNALBEGRIFF_WEITERER);
+		}
+		return iDSignalbegriffWeiterer;
 	}
 
 	/**
@@ -158,6 +191,8 @@ public class Bedingung_Signal_AttributeGroupImpl extends MinimalEObjectImpl.Cont
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNAL_SIGNALBEGRIFF:
 				return getIDSignalSignalbegriff();
+			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNALBEGRIFF_WEITERER:
+				return getIDSignalbegriffWeiterer();
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__VERWENDUNG_ALS_RUECKFALL:
 				return getVerwendungAlsRueckfall();
 			default:
@@ -177,6 +212,10 @@ public class Bedingung_Signal_AttributeGroupImpl extends MinimalEObjectImpl.Cont
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNAL_SIGNALBEGRIFF:
 				getIDSignalSignalbegriff().clear();
 				getIDSignalSignalbegriff().addAll((Collection<? extends Signal_Signalbegriff>)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNALBEGRIFF_WEITERER:
+				getIDSignalbegriffWeiterer().clear();
+				getIDSignalbegriffWeiterer().addAll((Collection<? extends Signal_Signalbegriff>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__VERWENDUNG_ALS_RUECKFALL:
 				setVerwendungAlsRueckfall((Verwendung_Als_Rueckfall_TypeClass)newValue);
@@ -198,6 +237,9 @@ public class Bedingung_Signal_AttributeGroupImpl extends MinimalEObjectImpl.Cont
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNAL_SIGNALBEGRIFF:
 				getIDSignalSignalbegriff().clear();
 				return;
+			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNALBEGRIFF_WEITERER:
+				getIDSignalbegriffWeiterer().clear();
+				return;
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__VERWENDUNG_ALS_RUECKFALL:
 				setVerwendungAlsRueckfall((Verwendung_Als_Rueckfall_TypeClass)null);
 				return;
@@ -217,6 +259,8 @@ public class Bedingung_Signal_AttributeGroupImpl extends MinimalEObjectImpl.Cont
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNAL_SIGNALBEGRIFF:
 				return iDSignalSignalbegriff != null && !iDSignalSignalbegriff.isEmpty();
+			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__ID_SIGNALBEGRIFF_WEITERER:
+				return iDSignalbegriffWeiterer != null && !iDSignalbegriffWeiterer.isEmpty();
 			case Balisentechnik_ETCSPackage.BEDINGUNG_SIGNAL_ATTRIBUTE_GROUP__VERWENDUNG_ALS_RUECKFALL:
 				return verwendungAlsRueckfall != null;
 			default:

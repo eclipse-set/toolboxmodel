@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Signale.Signal_Real_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Signale.SignaleFactory;
@@ -85,10 +86,16 @@ public class Signal_Real_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__DUNKELSCHALTUNG);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__FUNKTION_OHNE_SIGNAL);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__GELTUNGSBEREICH);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNGSART);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_FUNKTION);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV);
 			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV_SCHIRM);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST);
+			childrenFeatures.add(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL);
 		}
 		return childrenFeatures;
 	}
@@ -141,10 +148,16 @@ public class Signal_Real_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Signal_Real_AttributeGroup.class)) {
+			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__DUNKELSCHALTUNG:
+			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__FUNKTION_OHNE_SIGNAL:
 			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__GELTUNGSBEREICH:
 			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_BEFESTIGUNGSART:
+			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_FUNKTION:
 			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV:
 			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV_SCHIRM:
+			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR:
+			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST:
+			case SignalePackage.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -166,6 +179,16 @@ public class Signal_Real_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__DUNKELSCHALTUNG,
+				 SignaleFactory.eINSTANCE.createDunkelschaltung_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__FUNKTION_OHNE_SIGNAL,
+				 SignaleFactory.eINSTANCE.createFunktion_Ohne_Signal_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__GELTUNGSBEREICH,
 				 SignaleFactory.eINSTANCE.createGeltungsbereich_TypeClass()));
 
@@ -176,6 +199,11 @@ public class Signal_Real_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_FUNKTION,
+				 SignaleFactory.eINSTANCE.createSignal_Funktion_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV,
 				 SignaleFactory.eINSTANCE.createSignal_Real_Aktiv_AttributeGroup()));
 
@@ -183,6 +211,21 @@ public class Signal_Real_AttributeGroupItemProvider
 			(createChildParameter
 				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNAL_REAL_AKTIV_SCHIRM,
 				 SignaleFactory.eINSTANCE.createSignal_Real_Aktiv_Schirm_AttributeGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_ERREICHBAR,
+				 SignaleFactory.eINSTANCE.createSignalsicht_Erreichbar_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_MINDEST,
+				 SignaleFactory.eINSTANCE.createSignalsicht_Mindest_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SignalePackage.Literals.SIGNAL_REAL_ATTRIBUTE_GROUP__SIGNALSICHT_SOLL,
+				 SignaleFactory.eINSTANCE.createSignalsicht_Soll_TypeClass()));
 	}
 
 	/**

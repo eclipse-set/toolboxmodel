@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen.util;
 
@@ -123,6 +130,8 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 				return validateBezeichnung_Kabel_TypeClass((Bezeichnung_Kabel_TypeClass)value, diagnostics, context);
 			case Medien_und_TrassenPackage.BEZEICHNUNG_KABEL_VERTEILPUNKT_TYPE_CLASS:
 				return validateBezeichnung_Kabel_Verteilpunkt_TypeClass((Bezeichnung_Kabel_Verteilpunkt_TypeClass)value, diagnostics, context);
+			case Medien_und_TrassenPackage.INDUKTIONSSCHUTZ_TYPE_CLASS:
+				return validateInduktionsschutz_TypeClass((Induktionsschutz_TypeClass)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL:
 				return validateKabel((Kabel)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL_ALLG_ATTRIBUTE_GROUP:
@@ -131,6 +140,8 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 				return validateKabel_Art_TypeClass((Kabel_Art_TypeClass)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL_BEZEICHNUNG_ATTRIBUTE_GROUP:
 				return validateKabel_Bezeichnung_AttributeGroup((Kabel_Bezeichnung_AttributeGroup)value, diagnostics, context);
+			case Medien_und_TrassenPackage.KABEL_ELEMENT_ATTRIBUTE_GROUP:
+				return validateKabel_Element_AttributeGroup((Kabel_Element_AttributeGroup)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL_LAENGE_TYPE_CLASS:
 				return validateKabel_Laenge_TypeClass((Kabel_Laenge_TypeClass)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL_TYP_TYPE_CLASS:
@@ -141,6 +152,8 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 				return validateKabel_Verteilpunkt_Art_TypeClass((Kabel_Verteilpunkt_Art_TypeClass)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL_VERTEILPUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP:
 				return validateKabel_Verteilpunkt_Bezeichnung_AttributeGroup((Kabel_Verteilpunkt_Bezeichnung_AttributeGroup)value, diagnostics, context);
+			case Medien_und_TrassenPackage.NAGETIERSCHUTZ_TYPE_CLASS:
+				return validateNagetierschutz_TypeClass((Nagetierschutz_TypeClass)value, diagnostics, context);
 			case Medien_und_TrassenPackage.TRASSE_KANTE:
 				return validateTrasse_Kante((Trasse_Kante)value, diagnostics, context);
 			case Medien_und_TrassenPackage.TRASSE_KANTE_ART_TYPE_CLASS:
@@ -185,6 +198,8 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 				return validateENUMTrasseKnotenArtObject((ENUMTrasseKnotenArt)value, diagnostics, context);
 			case Medien_und_TrassenPackage.ENUM_TRASSE_NUTZER_OBJECT:
 				return validateENUMTrasseNutzerObject((ENUMTrasseNutzer)value, diagnostics, context);
+			case Medien_und_TrassenPackage.INDUKTIONSSCHUTZ_TYPE:
+				return validateInduktionsschutz_Type((BigInteger)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL_LAENGE_TYPE:
 				return validateKabel_Laenge_Type((BigDecimal)value, diagnostics, context);
 			case Medien_und_TrassenPackage.KABEL_TYP_TYPE:
@@ -255,6 +270,15 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateInduktionsschutz_TypeClass(Induktionsschutz_TypeClass induktionsschutz_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(induktionsschutz_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateKabel(Kabel kabel, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(kabel, diagnostics, context);
 	}
@@ -284,6 +308,15 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 	 */
 	public boolean validateKabel_Bezeichnung_AttributeGroup(Kabel_Bezeichnung_AttributeGroup kabel_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(kabel_Bezeichnung_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateKabel_Element_AttributeGroup(Kabel_Element_AttributeGroup kabel_Element_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(kabel_Element_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -329,6 +362,15 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 	 */
 	public boolean validateKabel_Verteilpunkt_Bezeichnung_AttributeGroup(Kabel_Verteilpunkt_Bezeichnung_AttributeGroup kabel_Verteilpunkt_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(kabel_Verteilpunkt_Bezeichnung_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNagetierschutz_TypeClass(Nagetierschutz_TypeClass nagetierschutz_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(nagetierschutz_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -449,7 +491,7 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] ADER_DURCHMESSER_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[0,1][.][0-8]|[0][.][9]")
+				XMLTypeUtil.createPatternMatcher("[01][.][1-8]|[0][.][9]|[1][.][0]")
 			}
 		};
 
@@ -684,6 +726,15 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateInduktionsschutz_Type(BigInteger induktionsschutz_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateKabel_Laenge_Type(BigDecimal kabel_Laenge_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = validateKabel_Laenge_Type_Pattern(kabel_Laenge_Type, diagnostics, context);
 		return result;
@@ -741,7 +792,7 @@ public class Medien_und_TrassenValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] VERSEILART_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[1,4]")
+				XMLTypeUtil.createPatternMatcher("[1|4]")
 			}
 		};
 

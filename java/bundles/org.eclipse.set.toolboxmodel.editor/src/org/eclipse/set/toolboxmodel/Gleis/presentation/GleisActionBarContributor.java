@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -42,7 +43,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.Viewer;
 
-import org.eclipse.set.toolboxmodel.PlanPro.presentation.PlanProEditorPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.presentation.PlanProEditorPlugin;
 
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;

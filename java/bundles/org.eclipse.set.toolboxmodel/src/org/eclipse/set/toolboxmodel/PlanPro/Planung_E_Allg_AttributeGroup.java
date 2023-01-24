@@ -36,12 +36,10 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Bezeichnung für die zeitlich-logische Abgrenzung einer Maßnahme nach bautechnologischen Gesichtspunkten, z. B. Durcharbeitung Gleis x.
-	 * 
 	 * Die Bezeichnung der ~ kann für mehrere Einzelplanungen einer definierten Planungsgruppe identisch sein.
-	 *  
 	 * DB-Regelwerk
-	 * Bisher ohne eindeutige Darstellung. 
-	 * • Eintrag außerhalb des in Ril 819.0103 definierten Schriftfeldes.
+	 * Bisher ohne eindeutige Darstellung.
+	 * Eintrag außerhalb des in Ril 886.0102 definierten Schriftfeldes.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bauphase</em>' containment reference.
 	 * @see #setBauphase(Bauphase_TypeClass)
@@ -69,7 +67,7 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Kurzbezeichnung des Bauzustandes.
 	 * DB-Regelwerk
-	 * Bestandteil Schriftfeldeintrag Feld 23.1 "Änderung (Bezeichnung der Baumaßnahme)" [Erläuterungen zur Ril 819.0103 Schriftfeld]).
+	 * Bestandteil Schriftfeldeintrag Feld 23.1 "Änderung (Bezeichnung der Baumaßnahme)" [Erläuterungen zur Ril 886.0102 Schriftfeld]).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bauzustand Kurzbezeichnung</em>' containment reference.
 	 * @see #setBauzustandKurzbezeichnung(Bauzustand_Kurzbezeichnung_TypeClass)
@@ -99,7 +97,6 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * DB-Regelwerk
 	 * Bisher keine eindeutige Abbildung.
 	 * Bestandteil der organisatorischen Projektdaten.
-	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bauzustand Langbezeichnung</em>' containment reference.
 	 * @see #setBauzustandLangbezeichnung(Bauzustand_Langbezeichnung_TypeClass)
@@ -126,9 +123,7 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Datum des Abschlusses der Einzelplanung.
-	 * 
 	 * Bis zum tatsächlichen Abschluss handelt es sich dabei um ein geplantes Datum, das iterativ nachzupflegen ist.
-	 * 
 	 * DB-Regelwerk
 	 * Bisher keine eindeutige Abbildung.
 	 * <!-- end-model-doc -->
@@ -157,17 +152,12 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Regelwerksstand der Einzelplanung, auf dessen Basis die Objekte geändert bzw. neu geplant wurden.
-	 * 
 	 * Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess
-	 * 
-	 * Es entspricht im Regelfall dem Datum der Auftragsvergabe oder im besonderen Fall einem festgelegten Datum, wenn bspw. ein zukünftig gültiges Regelwerk bereits bei der Erstellung der AP PT 1 berücksichtigt werden soll. Anhand des Regelwerksstandes lassen sich die jeweils gültigen Stände der verwendeten Regelwerke herleiten. Abweichungen werden auf Objektebene (Basis_Objekt) über das Attribut ID_Anhang_Regelwerk_Besonders beigefügt.
-	 * 
+	 * Es entspricht im Regelfall dem Datum der Auftragsvergabe oder im besonderen Fall einem festgelegten Datum, wenn bspw. ein zukünftig gültiges Regelwerk bereits bei der Erstellung des PT 1 berücksichtigt werden soll. Anhand des Regelwerksstandes lassen sich die jeweils gültigen Stände der verwendeten Regelwerke herleiten. Abweichungen werden auf Objektebene (Basis_Objekt) über das Attribut ID_Anhang_Regelwerk_Besonders beigefügt.
 	 * Die Historie der Bearbeitung von Objekten ergibt sich nur aus der Rückverfolgung von Planungen (Planungsarchiv), indem identifizierbar ist, welche Objekte sich zuletzt (jeweils) im Pb/Bb einer Planung befanden.
-	 * 
 	 * Das Datum_Regelwerksstand der Einzelplanung wird auf Objektebene in das Attribut Datum_Regelwerk der geänderten bzw. neu geplanten Objekte übernommen. Bestandsobjekte behalten ihren alten Regelwerksstand. Wenn durch Beziehungen zwischen diesen Objekten technisch nicht lösbare Situationen entstehen, muss eine Umplanung erfolgen.
-	 * 
 	 * DB-Regelwerk
-	 * Bisher ohne eindeutige Abbildung im Schriftfeld gemäß Ril 819.0103.
+	 * Bisher ohne eindeutige Abbildung im Schriftfeld gemäß Ril 886.0102.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Datum Regelwerksstand</em>' containment reference.
 	 * @see #setDatumRegelwerksstand(Datum_Regelwerksstand_TypeClass)
@@ -196,7 +186,7 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * Parameter zur Systematisierung der Reihenfolge von Bauzuständen.
 	 * Bei der Neuerstellung von Planungsdaten für eine Einzelplanung (Bauzustand) erhält der Index_Ausgabe den Startwert "01". Dieser wird bei jedem weiteren Bauzustand um "01" erhöht. Für eine Projektinitialisierung ist der Eintrag "00" zu verwenden. Der ~ wird außerdem zur Generierung der Ausgabenummer benötigt.
 	 * DB-Regelwerk
-	 * Entspricht dem 2ziffrigen Schriftfeldeintrag, Feld 3.1, gemäß Ril 819.0103 sowie bei Bestand dem Eintrag in Feld 3.2.
+	 * Entspricht dem 2ziffrigen Schriftfeldeintrag, Feld 3.1, gemäß Ril 886.0102 sowie bei Bestand dem Eintrag in Feld 3.2.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Index Ausgabe</em>' containment reference.
 	 * @see #setIndexAusgabe(Index_Ausgabe_TypeClass)
@@ -223,9 +213,8 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Die Planungsdaten dienen nur zur Information und geben keinen offiziellen Planungsstand wieder. Das Ausgabedatum im Attribut Datum wird zusätzlich angegeben.
-	 * 
 	 * DB-Regelwerk
-	 * Bisher keine eindeutige Angabe. 
+	 * Bisher keine eindeutige Angabe.
 	 * Das Verfahren der Auslieferung von Planungen zur Information wird nicht beschrieben.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Informativ</em>' containment reference.
@@ -254,8 +243,8 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Bestandteil des Ausgabestandes.
 	 * DB-Regelwerk
-	 * Zweiter Bestandteil des 2ziffrig.2ziffrigen Schriftfeldeintrags im Feld 20 gemäß Ril 819.0103.
-	 * Gemäß Erläuterungen zur Ril 819.0103 zusätzlich im Feld 3.2 eingetragen, sofern es sich um eine laufende Planung handelt (bei Bestand wird im Feld 3.2 nur der Index eingetragen).
+	 * Zweiter Bestandteil des 2ziffrig.2ziffrigen Schriftfeldeintrags im Feld 20 gemäß Ril 886.0102.
+	 * Gemäß Erläuterungen zur Ril 886.0102 zusätzlich im Feld 3.2 eingetragen, sofern es sich um eine laufende Planung handelt (bei Bestand wird im Feld 3.2 nur der Index eingetragen).
 	 * Die laufende Nummer der Ausgabe beginnt bei 01 und wird mit jeder Änderung um 01 erhöht. Bei einer Projektinitialisierung ist abweichend der Wert "00" zu verwenden.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Laufende Nummer Ausgabe</em>' containment reference.
@@ -283,10 +272,9 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Art der Einzelplanung.
-	 *  
 	 * DB-Regelwerk
-	 * Bisher ohne eindeutige Abbildung. 
-	 * Meist Bestandteil Schriftfeldeintrag gemäß Ril 819.0103 der Kurzbezeichnung des Bauzustandes.
+	 * Bisher ohne eindeutige Abbildung.
+	 * Meist Bestandteil Schriftfeldeintrag gemäß Ril 886.0102 der Kurzbezeichnung des Bauzustandes.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Planung EArt</em>' containment reference.
 	 * @see #setPlanungEArt(Planung_E_Art_TypeClass)
@@ -313,7 +301,6 @@ public interface Planung_E_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Gibt an, innerhalb welcher Planungsphase die Planung erstellt wurde.
-	 *  
 	 * DB-Regelwerk
 	 * Ril 809.
 	 * <!-- end-model-doc -->

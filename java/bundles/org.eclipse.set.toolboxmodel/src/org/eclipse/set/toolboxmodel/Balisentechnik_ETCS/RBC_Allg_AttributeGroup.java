@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -13,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup#getRBCSRSUnterversion <em>RBCSRS Unterversion</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup#getRBCETCSSystemVersion <em>RBCETCS System Version</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup#getRBCSRSVersion <em>RBCSRS Version</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup#getRufnummer <em>Rufnummer</em>}</li>
  * </ul>
@@ -24,42 +31,42 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface RBC_Allg_AttributeGroup extends EObject {
 	/**
-	 * Returns the value of the '<em><b>RBCSRS Unterversion</b></em>' containment reference.
+	 * Returns the value of the '<em><b>RBCETCS System Version</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Unterversion der System Requirement Specification gemäß Subset 26 Kapitel 7. Im Planungswerkzeug soll der Wert aus einer Liste der veröffentlichten Unterversionen für die angegebene SRS-Version auswählbar sein.
+	 * Erste Stelle der Systemversion gemäß System Requirement Specification (Subset 26, Kapitel 7). Die Angabe kann nicht eindeutig aus der ersten Stelle der SRS-Version abgeleitet werden. Auf Basis der SRS 3.3.0 kann beispielsweise die Systemversion 1 oder 2 implementiert werden.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>RBCSRS Unterversion</em>' containment reference.
-	 * @see #setRBCSRSUnterversion(RBC_SRS_Unterversion_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getRBC_Allg_AttributeGroup_RBCSRSUnterversion()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='RBC_SRS_Unterversion'"
+	 * @return the value of the '<em>RBCETCS System Version</em>' containment reference.
+	 * @see #setRBCETCSSystemVersion(RBC_ETCS_System_Version_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getRBC_Allg_AttributeGroup_RBCETCSSystemVersion()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='RBC_ETCS_System_Version'"
 	 * @generated
 	 */
-	RBC_SRS_Unterversion_TypeClass getRBCSRSUnterversion();
+	RBC_ETCS_System_Version_TypeClass getRBCETCSSystemVersion();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup#getRBCSRSUnterversion <em>RBCSRS Unterversion</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_Allg_AttributeGroup#getRBCETCSSystemVersion <em>RBCETCS System Version</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>RBCSRS Unterversion</em>' containment reference.
-	 * @see #getRBCSRSUnterversion()
+	 * @param value the new value of the '<em>RBCETCS System Version</em>' containment reference.
+	 * @see #getRBCETCSSystemVersion()
 	 * @generated
 	 */
-	void setRBCSRSUnterversion(RBC_SRS_Unterversion_TypeClass value);
+	void setRBCETCSSystemVersion(RBC_ETCS_System_Version_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>RBCSRS Version</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Version (Baseline) der System Requirement Specification gemäß Subset 26 Kapitel 7.
+	 * Version der System Requirement Specification (Subset 26, Kapitel 7). Beispiel: 3.3.0.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>RBCSRS Version</em>' containment reference.
 	 * @see #setRBCSRSVersion(RBC_SRS_Version_TypeClass)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getRBC_Allg_AttributeGroup_RBCSRSVersion()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='RBC_SRS_Version'"
 	 * @generated
 	 */

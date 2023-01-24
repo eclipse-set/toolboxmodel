@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Gleis.impl;
 
@@ -15,6 +22,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenFactory;
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
+import org.eclipse.set.toolboxmodel.BasisTypen.ENUMFahrstrom;
 
 import org.eclipse.set.toolboxmodel.Gleis.*;
 
@@ -77,10 +85,6 @@ public class GleisFactoryImpl extends EFactoryImpl implements GleisFactory {
 			case GleisPackage.GLEISART_TYPE_CLASS: return createGleisart_TypeClass();
 			case GleisPackage.KONSTRUKTION_TYPE_CLASS: return createKonstruktion_TypeClass();
 			case GleisPackage.LICHTRAUMPROFIL_TYPE_CLASS: return createLichtraumprofil_TypeClass();
-			case GleisPackage.NUTZUNG_GUETERZUG_TYPE_CLASS: return createNutzung_Gueterzug_TypeClass();
-			case GleisPackage.NUTZUNG_RANGIER_TYPE_CLASS: return createNutzung_Rangier_TypeClass();
-			case GleisPackage.NUTZUNG_REISEZUG_TYPE_CLASS: return createNutzung_Reisezug_TypeClass();
-			case GleisPackage.NUTZUNG_SBAHN_TYPE_CLASS: return createNutzung_SBahn_TypeClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -112,6 +116,8 @@ public class GleisFactoryImpl extends EFactoryImpl implements GleisFactory {
 				return createENUMKonstruktionObjectFromString(eDataType, initialValue);
 			case GleisPackage.ENUM_LICHTRAUMPROFIL_OBJECT:
 				return createENUMLichtraumprofilObjectFromString(eDataType, initialValue);
+			case GleisPackage.FAHRSTROM_TYPE:
+				return createFahrstrom_TypeFromString(eDataType, initialValue);
 			case GleisPackage.GESCHWINDIGKEIT_TYPE:
 				return createGeschwindigkeit_TypeFromString(eDataType, initialValue);
 			default:
@@ -145,6 +151,8 @@ public class GleisFactoryImpl extends EFactoryImpl implements GleisFactory {
 				return convertENUMKonstruktionObjectToString(eDataType, instanceValue);
 			case GleisPackage.ENUM_LICHTRAUMPROFIL_OBJECT:
 				return convertENUMLichtraumprofilObjectToString(eDataType, instanceValue);
+			case GleisPackage.FAHRSTROM_TYPE:
+				return convertFahrstrom_TypeToString(eDataType, instanceValue);
 			case GleisPackage.GESCHWINDIGKEIT_TYPE:
 				return convertGeschwindigkeit_TypeToString(eDataType, instanceValue);
 			default:
@@ -322,50 +330,6 @@ public class GleisFactoryImpl extends EFactoryImpl implements GleisFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Nutzung_Gueterzug_TypeClass createNutzung_Gueterzug_TypeClass() {
-		Nutzung_Gueterzug_TypeClassImpl nutzung_Gueterzug_TypeClass = new Nutzung_Gueterzug_TypeClassImpl();
-		return nutzung_Gueterzug_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Nutzung_Rangier_TypeClass createNutzung_Rangier_TypeClass() {
-		Nutzung_Rangier_TypeClassImpl nutzung_Rangier_TypeClass = new Nutzung_Rangier_TypeClassImpl();
-		return nutzung_Rangier_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Nutzung_Reisezug_TypeClass createNutzung_Reisezug_TypeClass() {
-		Nutzung_Reisezug_TypeClassImpl nutzung_Reisezug_TypeClass = new Nutzung_Reisezug_TypeClassImpl();
-		return nutzung_Reisezug_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Nutzung_SBahn_TypeClass createNutzung_SBahn_TypeClass() {
-		Nutzung_SBahn_TypeClassImpl nutzung_SBahn_TypeClass = new Nutzung_SBahn_TypeClassImpl();
-		return nutzung_SBahn_TypeClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ENUMBaubereichArt createENUMBaubereichArtFromString(EDataType eDataType, String initialValue) {
 		ENUMBaubereichArt result = ENUMBaubereichArt.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -529,6 +493,24 @@ public class GleisFactoryImpl extends EFactoryImpl implements GleisFactory {
 	 */
 	public String convertENUMLichtraumprofilObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMLichtraumprofilToString(GleisPackage.Literals.ENUM_LICHTRAUMPROFIL, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ENUMFahrstrom createFahrstrom_TypeFromString(EDataType eDataType, String initialValue) {
+		return (ENUMFahrstrom)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.FAHRSTROM_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFahrstrom_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.FAHRSTROM_TYPE, instanceValue);
 	}
 
 	/**

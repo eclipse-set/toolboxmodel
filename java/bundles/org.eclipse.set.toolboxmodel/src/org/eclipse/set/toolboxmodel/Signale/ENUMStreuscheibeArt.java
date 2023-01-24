@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
@@ -19,24 +26,24 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMStreuscheibeArt implements Enumerator {
 	/**
-	 * The '<em><b>ENUM Streuscheibe Art LED</b></em>' literal object.
+	 * The '<em><b>ENUM Streuscheibe Art HG</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_LED_VALUE
+	 * @see #ENUM_STREUSCHEIBE_ART_HG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_STREUSCHEIBE_ART_LED(0, "ENUMStreuscheibe_Art_LED", "LED"),
+	ENUM_STREUSCHEIBE_ART_HG(0, "ENUMStreuscheibe_Art_HG", "HG"),
 
 	/**
-	 * The '<em><b>ENUM Streuscheibe Art sonstige</b></em>' literal object.
+	 * The '<em><b>ENUM Streuscheibe Art HN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_SONSTIGE_VALUE
+	 * @see #ENUM_STREUSCHEIBE_ART_HN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_STREUSCHEIBE_ART_SONSTIGE(1, "ENUMStreuscheibe_Art_sonstige", "sonstige"),
+	ENUM_STREUSCHEIBE_ART_HN(1, "ENUMStreuscheibe_Art_HN", "HN"),
 
 	/**
 	 * The '<em><b>ENUM Streuscheibe Art HRL</b></em>' literal object.
@@ -49,24 +56,14 @@ public enum ENUMStreuscheibeArt implements Enumerator {
 	ENUM_STREUSCHEIBE_ART_HRL(2, "ENUMStreuscheibe_Art_HRL", "HRL"),
 
 	/**
-	 * The '<em><b>ENUM Streuscheibe Art HG</b></em>' literal object.
+	 * The '<em><b>ENUM Streuscheibe Art LED</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_HG_VALUE
+	 * @see #ENUM_STREUSCHEIBE_ART_LED_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_STREUSCHEIBE_ART_HG(3, "ENUMStreuscheibe_Art_HG", "HG"),
-
-	/**
-	 * The '<em><b>ENUM Streuscheibe Art HN</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_HN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUM_STREUSCHEIBE_ART_HN(4, "ENUMStreuscheibe_Art_HN", "HN"),
+	ENUM_STREUSCHEIBE_ART_LED(3, "ENUMStreuscheibe_Art_LED", "LED"),
 
 	/**
 	 * The '<em><b>ENUM Streuscheibe Art ORL</b></em>' literal object.
@@ -76,7 +73,17 @@ public enum ENUMStreuscheibeArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_STREUSCHEIBE_ART_ORL(5, "ENUMStreuscheibe_Art_ORL", "ORL"),
+	ENUM_STREUSCHEIBE_ART_ORL(4, "ENUMStreuscheibe_Art_ORL", "ORL"),
+
+	/**
+	 * The '<em><b>ENUM Streuscheibe Art sonstige</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_STREUSCHEIBE_ART_SONSTIGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_STREUSCHEIBE_ART_SONSTIGE(5, "ENUMStreuscheibe_Art_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUM Streuscheibe Art VRL</b></em>' literal object.
@@ -89,26 +96,26 @@ public enum ENUMStreuscheibeArt implements Enumerator {
 	ENUM_STREUSCHEIBE_ART_VRL(6, "ENUMStreuscheibe_Art_VRL", "VRL");
 
 	/**
-	 * The '<em><b>ENUM Streuscheibe Art LED</b></em>' literal value.
+	 * The '<em><b>ENUM Streuscheibe Art HG</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_LED
-	 * @model name="ENUMStreuscheibe_Art_LED" literal="LED"
+	 * @see #ENUM_STREUSCHEIBE_ART_HG
+	 * @model name="ENUMStreuscheibe_Art_HG" literal="HG"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_STREUSCHEIBE_ART_LED_VALUE = 0;
+	public static final int ENUM_STREUSCHEIBE_ART_HG_VALUE = 0;
 
 	/**
-	 * The '<em><b>ENUM Streuscheibe Art sonstige</b></em>' literal value.
+	 * The '<em><b>ENUM Streuscheibe Art HN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_SONSTIGE
-	 * @model name="ENUMStreuscheibe_Art_sonstige" literal="sonstige"
+	 * @see #ENUM_STREUSCHEIBE_ART_HN
+	 * @model name="ENUMStreuscheibe_Art_HN" literal="HN"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_STREUSCHEIBE_ART_SONSTIGE_VALUE = 1;
+	public static final int ENUM_STREUSCHEIBE_ART_HN_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Streuscheibe Art HRL</b></em>' literal value.
@@ -122,26 +129,15 @@ public enum ENUMStreuscheibeArt implements Enumerator {
 	public static final int ENUM_STREUSCHEIBE_ART_HRL_VALUE = 2;
 
 	/**
-	 * The '<em><b>ENUM Streuscheibe Art HG</b></em>' literal value.
+	 * The '<em><b>ENUM Streuscheibe Art LED</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_HG
-	 * @model name="ENUMStreuscheibe_Art_HG" literal="HG"
+	 * @see #ENUM_STREUSCHEIBE_ART_LED
+	 * @model name="ENUMStreuscheibe_Art_LED" literal="LED"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_STREUSCHEIBE_ART_HG_VALUE = 3;
-
-	/**
-	 * The '<em><b>ENUM Streuscheibe Art HN</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUM_STREUSCHEIBE_ART_HN
-	 * @model name="ENUMStreuscheibe_Art_HN" literal="HN"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUM_STREUSCHEIBE_ART_HN_VALUE = 4;
+	public static final int ENUM_STREUSCHEIBE_ART_LED_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Streuscheibe Art ORL</b></em>' literal value.
@@ -152,7 +148,18 @@ public enum ENUMStreuscheibeArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_STREUSCHEIBE_ART_ORL_VALUE = 5;
+	public static final int ENUM_STREUSCHEIBE_ART_ORL_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Streuscheibe Art sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_STREUSCHEIBE_ART_SONSTIGE
+	 * @model name="ENUMStreuscheibe_Art_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_STREUSCHEIBE_ART_SONSTIGE_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Streuscheibe Art VRL</b></em>' literal value.
@@ -173,12 +180,12 @@ public enum ENUMStreuscheibeArt implements Enumerator {
 	 */
 	private static final ENUMStreuscheibeArt[] VALUES_ARRAY =
 		new ENUMStreuscheibeArt[] {
-			ENUM_STREUSCHEIBE_ART_LED,
-			ENUM_STREUSCHEIBE_ART_SONSTIGE,
-			ENUM_STREUSCHEIBE_ART_HRL,
 			ENUM_STREUSCHEIBE_ART_HG,
 			ENUM_STREUSCHEIBE_ART_HN,
+			ENUM_STREUSCHEIBE_ART_HRL,
+			ENUM_STREUSCHEIBE_ART_LED,
 			ENUM_STREUSCHEIBE_ART_ORL,
+			ENUM_STREUSCHEIBE_ART_SONSTIGE,
 			ENUM_STREUSCHEIBE_ART_VRL,
 		};
 
@@ -236,12 +243,12 @@ public enum ENUMStreuscheibeArt implements Enumerator {
 	 */
 	public static ENUMStreuscheibeArt get(int value) {
 		switch (value) {
-			case ENUM_STREUSCHEIBE_ART_LED_VALUE: return ENUM_STREUSCHEIBE_ART_LED;
-			case ENUM_STREUSCHEIBE_ART_SONSTIGE_VALUE: return ENUM_STREUSCHEIBE_ART_SONSTIGE;
-			case ENUM_STREUSCHEIBE_ART_HRL_VALUE: return ENUM_STREUSCHEIBE_ART_HRL;
 			case ENUM_STREUSCHEIBE_ART_HG_VALUE: return ENUM_STREUSCHEIBE_ART_HG;
 			case ENUM_STREUSCHEIBE_ART_HN_VALUE: return ENUM_STREUSCHEIBE_ART_HN;
+			case ENUM_STREUSCHEIBE_ART_HRL_VALUE: return ENUM_STREUSCHEIBE_ART_HRL;
+			case ENUM_STREUSCHEIBE_ART_LED_VALUE: return ENUM_STREUSCHEIBE_ART_LED;
 			case ENUM_STREUSCHEIBE_ART_ORL_VALUE: return ENUM_STREUSCHEIBE_ART_ORL;
+			case ENUM_STREUSCHEIBE_ART_SONSTIGE_VALUE: return ENUM_STREUSCHEIBE_ART_SONSTIGE;
 			case ENUM_STREUSCHEIBE_ART_VRL_VALUE: return ENUM_STREUSCHEIBE_ART_VRL;
 			default: return null;
 		}

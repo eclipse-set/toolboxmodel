@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -1734,6 +1735,29 @@ public class BahnuebergangItemProviderAdapterFactory extends BahnuebergangAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Haltezeit_TypeClassItemProvider haltezeit_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Bahnuebergang.Haltezeit_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHaltezeit_TypeClassAdapter() {
+		if (haltezeit_TypeClassItemProvider == null) {
+			haltezeit_TypeClassItemProvider = new Haltezeit_TypeClassItemProvider(this);
+		}
+
+		return haltezeit_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Bahnuebergang.Hersteller_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3244,6 +3268,7 @@ public class BahnuebergangItemProviderAdapterFactory extends BahnuebergangAdapte
 		if (gfR_Typ_TypeClassItemProvider != null) gfR_Typ_TypeClassItemProvider.dispose();
 		if (gitterbehang_TypeClassItemProvider != null) gitterbehang_TypeClassItemProvider.dispose();
 		if (gleis_Am_Bue_TypeClassItemProvider != null) gleis_Am_Bue_TypeClassItemProvider.dispose();
+		if (haltezeit_TypeClassItemProvider != null) haltezeit_TypeClassItemProvider.dispose();
 		if (hersteller_TypeClassItemProvider != null) hersteller_TypeClassItemProvider.dispose();
 		if (hp_Ersatzstecker_TypeClassItemProvider != null) hp_Ersatzstecker_TypeClassItemProvider.dispose();
 		if (klassifizierung_TypeClassItemProvider != null) klassifizierung_TypeClassItemProvider.dispose();

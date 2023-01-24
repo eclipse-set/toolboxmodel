@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -13,9 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getBremsweg <em>Bremsweg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getDPTypESG <em>DP Typ ESG</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getIndividuell <em>Individuell</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getDPVerlinkt <em>DP Verlinkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getLfdNrAmBezugspunkt <em>Lfd Nr Am Bezugspunkt</em>}</li>
  * </ul>
  *
@@ -24,32 +30,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface DP_Typ_GESG_AttributeGroup extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Bremsweg</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Regelbremsweg der Strecke. Ein Regelbremsweg von 1000 m wird in den Planunterlagen nicht ausgewiesen.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Bremsweg</em>' containment reference.
-	 * @see #setBremsweg(Bremsweg_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDP_Typ_GESG_AttributeGroup_Bremsweg()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Bremsweg'"
-	 * @generated
-	 */
-	Bremsweg_TypeClass getBremsweg();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getBremsweg <em>Bremsweg</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bremsweg</em>' containment reference.
-	 * @see #getBremsweg()
-	 * @generated
-	 */
-	void setBremsweg(Bremsweg_TypeClass value);
-
 	/**
 	 * Returns the value of the '<em><b>DP Typ ESG</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -77,30 +57,31 @@ public interface DP_Typ_GESG_AttributeGroup extends EObject {
 	void setDPTypESG(DP_Typ_ESG_TypeClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Individuell</b></em>' containment reference.
+	 * Returns the value of the '<em><b>DP Verlinkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe, ob es sich um einen individuell programmierten Datenpunkt handelt (true). Der Wert "false" wird nicht verwendet.
+	 * Angabe, ob der Datenpunkt verlinkt ist (true). In jedem von diesem DP gesendeten Telegramm wird in diesem Fall Q_Link = 1 gesetzt.
+	 * DB-Regelwerk ESG-Datenpunkttabelle, Spalte "Linking", Eintrag "L"
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Individuell</em>' containment reference.
-	 * @see #setIndividuell(Individuell_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDP_Typ_GESG_AttributeGroup_Individuell()
+	 * @return the value of the '<em>DP Verlinkt</em>' containment reference.
+	 * @see #setDPVerlinkt(DP_Verlinkt_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDP_Typ_GESG_AttributeGroup_DPVerlinkt()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Individuell'"
+	 *        extendedMetaData="kind='element' name='DP_Verlinkt'"
 	 * @generated
 	 */
-	Individuell_TypeClass getIndividuell();
+	DP_Verlinkt_TypeClass getDPVerlinkt();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getIndividuell <em>Individuell</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup#getDPVerlinkt <em>DP Verlinkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Individuell</em>' containment reference.
-	 * @see #getIndividuell()
+	 * @param value the new value of the '<em>DP Verlinkt</em>' containment reference.
+	 * @see #getDPVerlinkt()
 	 * @generated
 	 */
-	void setIndividuell(Individuell_TypeClass value);
+	void setDPVerlinkt(DP_Verlinkt_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Lfd Nr Am Bezugspunkt</b></em>' containment reference.

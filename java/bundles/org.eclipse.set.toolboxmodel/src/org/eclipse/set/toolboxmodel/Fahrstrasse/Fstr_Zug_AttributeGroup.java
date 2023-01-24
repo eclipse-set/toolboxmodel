@@ -1,11 +1,20 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Einschaltung;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -19,6 +28,7 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getAutomatischeEinstellung <em>Automatische Einstellung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getFstrVsigabstandVerkuerzt <em>Fstr Vsigabstand Verkuerzt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getFstrZugArt <em>Fstr Zug Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getFstrZugDWeg <em>Fstr Zug DWeg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getIDBUEEinschaltung <em>IDBUE Einschaltung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getIDSignalGruppenausfahrt <em>ID Signal Gruppenausfahrt</em>}</li>
@@ -80,6 +90,32 @@ public interface Fstr_Zug_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setFstrVsigabstandVerkuerzt(Fstr_Vsigabstand_Verkuerzt_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Fstr Zug Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Art der Zugstraße. ZH – ZugHilfs-, ZR – ZugRegel-, ZU – ZugUmfahr-, ZUH – ZugUmfahrhilfs-, ZZ – ZugZentralblock-, ZT - ZugTeil-, ZTU - ZugTeilUmfahr-. ZZ: Anwendung im Zentralblock oder an Schnittstellen zu anderen Stellwerkstechniken bei Mehrabschnittssignalisierung, Signalabhängigkeiten von Fahrwegelementen auf der freien Strecke oder bei Bedienung einer Awanst. DB-Regelwerk Zugstraßentabelle, Spalte 2 "Art"
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Fstr Zug Art</em>' containment reference.
+	 * @see #setFstrZugArt(Fstr_Zug_Art_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrassePackage#getFstr_Zug_AttributeGroup_FstrZugArt()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='Fstr_Zug_Art'"
+	 * @generated
+	 */
+	Fstr_Zug_Art_TypeClass getFstrZugArt();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup#getFstrZugArt <em>Fstr Zug Art</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fstr Zug Art</em>' containment reference.
+	 * @see #getFstrZugArt()
+	 * @generated
+	 */
+	void setFstrZugArt(Fstr_Zug_Art_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Fstr Zug DWeg</b></em>' containment reference.

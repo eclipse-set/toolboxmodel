@@ -1,11 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
+
 import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
 
 /**
@@ -21,6 +28,7 @@ import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getAustauschAntriebe <em>Austausch Antriebe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getIDRegelzeichnung <em>ID Regelzeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getIDWKrGspElement <em>IDW Kr Gsp Element</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getBesonderesFahrwegelement <em>Besonderes Fahrwegelement</em>}</li>
@@ -34,6 +42,32 @@ import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
  * @generated
  */
 public interface W_Kr_Gsp_Komponente extends Punkt_Objekt {
+	/**
+	 * Returns the value of the '<em><b>Austausch Antriebe</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Angabe, ob die vorhandenen Antriebe ausgetauscht werden soll (true). Der Wert "false" wird nicht verwendet.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Austausch Antriebe</em>' containment reference.
+	 * @see #setAustauschAntriebe(Austausch_Antriebe_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage#getW_Kr_Gsp_Komponente_AustauschAntriebe()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Austausch_Antriebe'"
+	 * @generated
+	 */
+	Austausch_Antriebe_TypeClass getAustauschAntriebe();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente#getAustauschAntriebe <em>Austausch Antriebe</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Austausch Antriebe</em>' containment reference.
+	 * @see #getAustauschAntriebe()
+	 * @generated
+	 */
+	void setAustauschAntriebe(Austausch_Antriebe_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>ID Regelzeichnung</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung}.

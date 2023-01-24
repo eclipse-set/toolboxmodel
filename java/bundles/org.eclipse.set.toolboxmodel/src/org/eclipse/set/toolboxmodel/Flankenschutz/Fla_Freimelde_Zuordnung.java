@@ -1,9 +1,16 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Anlage;
 
 /**
@@ -34,7 +41,7 @@ public interface Fla_Freimelde_Zuordnung extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Angabe, ob eine Freimeldung des Freimeldeabschnitts im Flankenschutzraum erfolgen soll (true) oder nicht (false). In der Regel werden die Freimeldeabschnitte des Flankenschutzraumes freigemeldet. Im Ausnahmefall kann bei Fernschutz auf die Freimeldung verzichtet werden (Lastenheft F1 Abschnitt Z 4.4.10). DB-Regelwerk Das Datum ist im jetzigen PT 1 höchstens unformal (Fußnote, Erläuterungsbericht) enthalten.
+	 * Angabe, ob eine Freimeldung des Freimeldeabschnitts im Flankenschutzraum erfolgen soll (true) oder nicht (false). In der Regel werden die Freimeldeabschnitte des Flankenschutzraumes freigemeldet. Im Ausnahmefall kann bei Ersatzschutz auf die Freimeldung verzichtet werden (Lastenheft F1 Abschnitt Z 4.4.10). DB-Regelwerk Das Datum ist im jetzigen PT 1 höchstens unformal (Fußnote, Erläuterungsbericht) enthalten.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fla Raum Freimeldung</em>' containment reference.
 	 * @see #setFlaRaumFreimeldung(Fla_Raum_Freimeldung_TypeClass)

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -61,17 +68,14 @@ public interface ZUB_Streckeneigenschaft extends Bereich_Objekt {
 	 * Returns the value of the '<em><b>Metallteil</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Metallteil mit zugehöriger Kategorie. Die Werte 1 bis 3 entsprechen den Kategorien gemäß Ril 819.1344. Der Wert 0 entspricht einem großen Metallteil, das einen Metallwarnungs-Datenpunkt erfordert.
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Metallteil</em>' containment reference.
-	 * @see #setMetallteil(Metallteil_TypeClass)
+	 * @see #setMetallteil(Metallteil_AttributeGroup)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getZUB_Streckeneigenschaft_Metallteil()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='Metallteil'"
 	 * @generated
 	 */
-	Metallteil_TypeClass getMetallteil();
+	Metallteil_AttributeGroup getMetallteil();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Streckeneigenschaft#getMetallteil <em>Metallteil</em>}' containment reference.
@@ -81,7 +85,7 @@ public interface ZUB_Streckeneigenschaft extends Bereich_Objekt {
 	 * @see #getMetallteil()
 	 * @generated
 	 */
-	void setMetallteil(Metallteil_TypeClass value);
+	void setMetallteil(Metallteil_AttributeGroup value);
 
 	/**
 	 * Returns the value of the '<em><b>Oberstrombegrenzung Gueterzug</b></em>' containment reference.

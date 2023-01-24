@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante} object.
@@ -62,6 +63,7 @@ public class ETCS_KanteItemProvider extends Basis_ObjektItemProvider {
 			addIDETCSKnotenAPropertyDescriptor(object);
 			addIDETCSKnotenBPropertyDescriptor(object);
 			addIDRBCPropertyDescriptor(object);
+			addIDStreckePropertyDescriptor(object);
 			addIDTOPKantePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -125,6 +127,28 @@ public class ETCS_KanteItemProvider extends Basis_ObjektItemProvider {
 				 getString("_UI_ETCS_Kante_iDRBC_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ETCS_Kante_iDRBC_feature", "_UI_ETCS_Kante_type"),
 				 Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Kante_IDRBC(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the ID Strecke feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDStreckePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ETCS_Kante_iDStrecke_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ETCS_Kante_iDStrecke_feature", "_UI_ETCS_Kante_type"),
+				 Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Kante_IDStrecke(),
 				 true,
 				 false,
 				 true,

@@ -1,9 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -18,6 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendungssystem_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_System_Version_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_SE_Ausruestung_AttributeGroup;
 
 /**
@@ -29,6 +39,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_SE_Ausruestung_Attri
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_SE_Ausruestung_AttributeGroupImpl#getAnwendungssystem <em>Anwendungssystem</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_SE_Ausruestung_AttributeGroupImpl#getBaselineSystemVersion <em>Baseline System Version</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +54,16 @@ public class ZUB_SE_Ausruestung_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * @ordered
 	 */
 	protected EList<Anwendungssystem_TypeClass> anwendungssystem;
+
+	/**
+	 * The cached value of the '{@link #getBaselineSystemVersion() <em>Baseline System Version</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaselineSystemVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected Baseline_System_Version_TypeClass baselineSystemVersion;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,10 +103,57 @@ public class ZUB_SE_Ausruestung_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * @generated
 	 */
 	@Override
+	public Baseline_System_Version_TypeClass getBaselineSystemVersion() {
+		return baselineSystemVersion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBaselineSystemVersion(Baseline_System_Version_TypeClass newBaselineSystemVersion, NotificationChain msgs) {
+		Baseline_System_Version_TypeClass oldBaselineSystemVersion = baselineSystemVersion;
+		baselineSystemVersion = newBaselineSystemVersion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, oldBaselineSystemVersion, newBaselineSystemVersion);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBaselineSystemVersion(Baseline_System_Version_TypeClass newBaselineSystemVersion) {
+		if (newBaselineSystemVersion != baselineSystemVersion) {
+			NotificationChain msgs = null;
+			if (baselineSystemVersion != null)
+				msgs = ((InternalEObject)baselineSystemVersion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, null, msgs);
+			if (newBaselineSystemVersion != null)
+				msgs = ((InternalEObject)newBaselineSystemVersion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, null, msgs);
+			msgs = basicSetBaselineSystemVersion(newBaselineSystemVersion, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, newBaselineSystemVersion, newBaselineSystemVersion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__ANWENDUNGSSYSTEM:
 				return ((InternalEList<?>)getAnwendungssystem()).basicRemove(otherEnd, msgs);
+			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				return basicSetBaselineSystemVersion(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -101,6 +169,8 @@ public class ZUB_SE_Ausruestung_AttributeGroupImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__ANWENDUNGSSYSTEM:
 				return getAnwendungssystem();
+			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				return getBaselineSystemVersion();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -119,6 +189,9 @@ public class ZUB_SE_Ausruestung_AttributeGroupImpl extends MinimalEObjectImpl.Co
 				getAnwendungssystem().clear();
 				getAnwendungssystem().addAll((Collection<? extends Anwendungssystem_TypeClass>)newValue);
 				return;
+			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				setBaselineSystemVersion((Baseline_System_Version_TypeClass)newValue);
+				return;
 			default:
 				super.eSet(featureID, newValue);
 				return;
@@ -136,6 +209,9 @@ public class ZUB_SE_Ausruestung_AttributeGroupImpl extends MinimalEObjectImpl.Co
 			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__ANWENDUNGSSYSTEM:
 				getAnwendungssystem().clear();
 				return;
+			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				setBaselineSystemVersion((Baseline_System_Version_TypeClass)null);
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -152,6 +228,8 @@ public class ZUB_SE_Ausruestung_AttributeGroupImpl extends MinimalEObjectImpl.Co
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__ANWENDUNGSSYSTEM:
 				return anwendungssystem != null && !anwendungssystem.isEmpty();
+			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				return baselineSystemVersion != null;
 			default:
 				return super.eIsSet(featureID);
 		}

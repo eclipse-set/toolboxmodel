@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -78,6 +79,29 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Anzeigegefuehrt_ES_Kategorie_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnzeigegefuehrt_ES_Kategorie_TypeClassAdapter() {
+		if (anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider == null) {
+			anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider = new Anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider(this);
+		}
+
+		return anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Bezeichnung_Strecke_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +125,29 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Bremsweg_TypeClassItemProvider bremsweg_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Bremsweg_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBremsweg_TypeClassAdapter() {
+		if (bremsweg_TypeClassItemProvider == null) {
+			bremsweg_TypeClassItemProvider = new Bremsweg_TypeClassItemProvider(this);
+		}
+
+		return bremsweg_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Form_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,6 +168,29 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 		}
 
 		return geO_Form_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GEO_KAD_TypeClassItemProvider geO_KAD_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KAD_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGEO_KAD_TypeClassAdapter() {
+		if (geO_KAD_TypeClassItemProvider == null) {
+			geO_KAD_TypeClassItemProvider = new GEO_KAD_TypeClassItemProvider(this);
+		}
+
+		return geO_KAD_TypeClassItemProvider;
 	}
 
 	/**
@@ -193,49 +263,26 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GEO_KoordinatenSystem_LSys_TypeClassItemProvider geO_KoordinatenSystem_LSys_TypeClassItemProvider;
+	protected GEO_Koordinatensystem_TypeClassItemProvider geO_Koordinatensystem_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_LSys_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Koordinatensystem_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createGEO_KoordinatenSystem_LSys_TypeClassAdapter() {
-		if (geO_KoordinatenSystem_LSys_TypeClassItemProvider == null) {
-			geO_KoordinatenSystem_LSys_TypeClassItemProvider = new GEO_KoordinatenSystem_LSys_TypeClassItemProvider(this);
+	public Adapter createGEO_Koordinatensystem_TypeClassAdapter() {
+		if (geO_Koordinatensystem_TypeClassItemProvider == null) {
+			geO_Koordinatensystem_TypeClassItemProvider = new GEO_Koordinatensystem_TypeClassItemProvider(this);
 		}
 
-		return geO_KoordinatenSystem_LSys_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GEO_KoordinatenSystem_Sonstige_TypeClassItemProvider geO_KoordinatenSystem_Sonstige_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_KoordinatenSystem_Sonstige_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGEO_KoordinatenSystem_Sonstige_TypeClassAdapter() {
-		if (geO_KoordinatenSystem_Sonstige_TypeClassItemProvider == null) {
-			geO_KoordinatenSystem_Sonstige_TypeClassItemProvider = new GEO_KoordinatenSystem_Sonstige_TypeClassItemProvider(this);
-		}
-
-		return geO_KoordinatenSystem_Sonstige_TypeClassItemProvider;
+		return geO_Koordinatensystem_TypeClassItemProvider;
 	}
 
 	/**
@@ -745,6 +792,29 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Kantenname_TypeClassItemProvider kantenname_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createKantenname_TypeClassAdapter() {
+		if (kantenname_TypeClassItemProvider == null) {
+			kantenname_TypeClassItemProvider = new Kantenname_TypeClassItemProvider(this);
+		}
+
+		return kantenname_TypeClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Knotenname_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1067,6 +1137,29 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Strecke_BremswegItemProvider strecke_BremswegItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Bremsweg}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrecke_BremswegAdapter() {
+		if (strecke_BremswegItemProvider == null) {
+			strecke_BremswegItemProvider = new Strecke_BremswegItemProvider(this);
+		}
+
+		return strecke_BremswegItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Meter_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1110,6 +1203,29 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 		}
 
 		return strecke_PunktItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Strecke_Richtung_TypeClassItemProvider strecke_Richtung_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Strecke_Richtung_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrecke_Richtung_TypeClassAdapter() {
+		if (strecke_Richtung_TypeClassItemProvider == null) {
+			strecke_Richtung_TypeClassItemProvider = new Strecke_Richtung_TypeClassItemProvider(this);
+		}
+
+		return strecke_Richtung_TypeClassItemProvider;
 	}
 
 	/**
@@ -1389,6 +1505,29 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Trasse_Kante_child_AttributeGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Trasse_Kante_child_AttributeGroupItemProvider trasse_Kante_child_AttributeGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Trasse_Kante_child_AttributeGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTrasse_Kante_child_AttributeGroupAdapter() {
+		if (trasse_Kante_child_AttributeGroupItemProvider == null) {
+			trasse_Kante_child_AttributeGroupItemProvider = new Trasse_Kante_child_AttributeGroupItemProvider(this);
+		}
+
+		return trasse_Kante_child_AttributeGroupItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Ueberhoehung} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1596,29 +1735,6 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Wirkrichtung_TypeClassItemProvider wirkrichtung_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Wirkrichtung_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createWirkrichtung_TypeClassAdapter() {
-		if (wirkrichtung_TypeClassItemProvider == null) {
-			wirkrichtung_TypeClassItemProvider = new Wirkrichtung_TypeClassItemProvider(this);
-		}
-
-		return wirkrichtung_TypeClassItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1723,13 +1839,15 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 	 */
 	@Override
 	public void dispose() {
+		if (anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider != null) anzeigegefuehrt_ES_Kategorie_TypeClassItemProvider.dispose();
 		if (bezeichnung_Strecke_TypeClassItemProvider != null) bezeichnung_Strecke_TypeClassItemProvider.dispose();
+		if (bremsweg_TypeClassItemProvider != null) bremsweg_TypeClassItemProvider.dispose();
 		if (geO_Form_TypeClassItemProvider != null) geO_Form_TypeClassItemProvider.dispose();
+		if (geO_KAD_TypeClassItemProvider != null) geO_KAD_TypeClassItemProvider.dispose();
 		if (geO_KanteItemProvider != null) geO_KanteItemProvider.dispose();
 		if (geO_Kante_Allg_AttributeGroupItemProvider != null) geO_Kante_Allg_AttributeGroupItemProvider.dispose();
 		if (geO_KnotenItemProvider != null) geO_KnotenItemProvider.dispose();
-		if (geO_KoordinatenSystem_LSys_TypeClassItemProvider != null) geO_KoordinatenSystem_LSys_TypeClassItemProvider.dispose();
-		if (geO_KoordinatenSystem_Sonstige_TypeClassItemProvider != null) geO_KoordinatenSystem_Sonstige_TypeClassItemProvider.dispose();
+		if (geO_Koordinatensystem_TypeClassItemProvider != null) geO_Koordinatensystem_TypeClassItemProvider.dispose();
 		if (geO_Laenge_TypeClassItemProvider != null) geO_Laenge_TypeClassItemProvider.dispose();
 		if (geO_PAD_TypeClassItemProvider != null) geO_PAD_TypeClassItemProvider.dispose();
 		if (geO_PunktItemProvider != null) geO_PunktItemProvider.dispose();
@@ -1752,6 +1870,7 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 		if (hoehenpunkt_Datum_TypeClassItemProvider != null) hoehenpunkt_Datum_TypeClassItemProvider.dispose();
 		if (hoehenpunkt_Hoehe_TypeClassItemProvider != null) hoehenpunkt_Hoehe_TypeClassItemProvider.dispose();
 		if (hSystem_TypeClassItemProvider != null) hSystem_TypeClassItemProvider.dispose();
+		if (kantenname_TypeClassItemProvider != null) kantenname_TypeClassItemProvider.dispose();
 		if (knotenname_TypeClassItemProvider != null) knotenname_TypeClassItemProvider.dispose();
 		if (neigung_TypeClassItemProvider != null) neigung_TypeClassItemProvider.dispose();
 		if (oertlichkeitItemProvider != null) oertlichkeitItemProvider.dispose();
@@ -1766,8 +1885,10 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 		if (plan_Quelle_TypeClassItemProvider != null) plan_Quelle_TypeClassItemProvider.dispose();
 		if (streckeItemProvider != null) streckeItemProvider.dispose();
 		if (strecke_Bezeichnung_AttributeGroupItemProvider != null) strecke_Bezeichnung_AttributeGroupItemProvider.dispose();
+		if (strecke_BremswegItemProvider != null) strecke_BremswegItemProvider.dispose();
 		if (strecke_Meter_TypeClassItemProvider != null) strecke_Meter_TypeClassItemProvider.dispose();
 		if (strecke_PunktItemProvider != null) strecke_PunktItemProvider.dispose();
+		if (strecke_Richtung_TypeClassItemProvider != null) strecke_Richtung_TypeClassItemProvider.dispose();
 		if (tB_Art_TypeClassItemProvider != null) tB_Art_TypeClassItemProvider.dispose();
 		if (tB_Beschreibung_TypeClassItemProvider != null) tB_Beschreibung_TypeClassItemProvider.dispose();
 		if (technischer_BereichItemProvider != null) technischer_BereichItemProvider.dispose();
@@ -1780,6 +1901,7 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 		if (toP_Laenge_TypeClassItemProvider != null) toP_Laenge_TypeClassItemProvider.dispose();
 		if (tP_Art_TypeClassItemProvider != null) tP_Art_TypeClassItemProvider.dispose();
 		if (tP_Beschreibung_TypeClassItemProvider != null) tP_Beschreibung_TypeClassItemProvider.dispose();
+		if (trasse_Kante_child_AttributeGroupItemProvider != null) trasse_Kante_child_AttributeGroupItemProvider.dispose();
 		if (ueberhoehungItemProvider != null) ueberhoehungItemProvider.dispose();
 		if (ueberhoehung_Allg_AttributeGroupItemProvider != null) ueberhoehung_Allg_AttributeGroupItemProvider.dispose();
 		if (ueberhoehung_Datum_TypeClassItemProvider != null) ueberhoehung_Datum_TypeClassItemProvider.dispose();
@@ -1789,7 +1911,6 @@ public class GeodatenItemProviderAdapterFactory extends GeodatenAdapterFactory i
 		if (ueberhoehungslinie_Form_TypeClassItemProvider != null) ueberhoehungslinie_Form_TypeClassItemProvider.dispose();
 		if (ueberhoehungslinie_Laenge_TypeClassItemProvider != null) ueberhoehungslinie_Laenge_TypeClassItemProvider.dispose();
 		if (v_Profil_Art_TypeClassItemProvider != null) v_Profil_Art_TypeClassItemProvider.dispose();
-		if (wirkrichtung_TypeClassItemProvider != null) wirkrichtung_TypeClassItemProvider.dispose();
 	}
 
 }

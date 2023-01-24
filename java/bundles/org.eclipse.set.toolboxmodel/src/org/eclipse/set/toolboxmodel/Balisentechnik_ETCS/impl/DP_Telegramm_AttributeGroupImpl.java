@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,17 +17,18 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Telegramm_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_System_Version_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_Anschaltbedingung;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Fachtelegramm;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.SRS_Unterversion_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.SRS_Version_TypeClass;
 
 /**
@@ -31,15 +39,25 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.SRS_Version_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Telegramm_AttributeGroupImpl#getETCSSystemVersion <em>ETCS System Version</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Telegramm_AttributeGroupImpl#getIDFachtelegramm <em>ID Fachtelegramm</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Telegramm_AttributeGroupImpl#getIDFTAnschaltbedingung <em>IDFT Anschaltbedingung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Telegramm_AttributeGroupImpl#getSRSUnterversion <em>SRS Unterversion</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Telegramm_AttributeGroupImpl#getSRSVersion <em>SRS Version</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Container implements DP_Telegramm_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getETCSSystemVersion() <em>ETCS System Version</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getETCSSystemVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected ETCS_System_Version_TypeClass eTCSSystemVersion;
+
 	/**
 	 * The cached value of the '{@link #getIDFachtelegramm() <em>ID Fachtelegramm</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -59,16 +77,6 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected EList<FT_Anschaltbedingung> iDFTAnschaltbedingung;
-
-	/**
-	 * The cached value of the '{@link #getSRSUnterversion() <em>SRS Unterversion</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSRSUnterversion()
-	 * @generated
-	 * @ordered
-	 */
-	protected SRS_Unterversion_TypeClass sRSUnterversion;
 
 	/**
 	 * The cached value of the '{@link #getSRSVersion() <em>SRS Version</em>}' containment reference.
@@ -105,6 +113,51 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	@Override
+	public ETCS_System_Version_TypeClass getETCSSystemVersion() {
+		return eTCSSystemVersion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetETCSSystemVersion(ETCS_System_Version_TypeClass newETCSSystemVersion, NotificationChain msgs) {
+		ETCS_System_Version_TypeClass oldETCSSystemVersion = eTCSSystemVersion;
+		eTCSSystemVersion = newETCSSystemVersion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION, oldETCSSystemVersion, newETCSSystemVersion);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setETCSSystemVersion(ETCS_System_Version_TypeClass newETCSSystemVersion) {
+		if (newETCSSystemVersion != eTCSSystemVersion) {
+			NotificationChain msgs = null;
+			if (eTCSSystemVersion != null)
+				msgs = ((InternalEObject)eTCSSystemVersion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION, null, msgs);
+			if (newETCSSystemVersion != null)
+				msgs = ((InternalEObject)newETCSSystemVersion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION, null, msgs);
+			msgs = basicSetETCSSystemVersion(newETCSSystemVersion, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION, newETCSSystemVersion, newETCSSystemVersion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<Fachtelegramm> getIDFachtelegramm() {
 		if (iDFachtelegramm == null) {
 			iDFachtelegramm = new EObjectResolvingEList<Fachtelegramm>(Fachtelegramm.class, this, Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ID_FACHTELEGRAMM);
@@ -123,51 +176,6 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 			iDFTAnschaltbedingung = new EObjectResolvingEList<FT_Anschaltbedingung>(FT_Anschaltbedingung.class, this, Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__IDFT_ANSCHALTBEDINGUNG);
 		}
 		return iDFTAnschaltbedingung;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SRS_Unterversion_TypeClass getSRSUnterversion() {
-		return sRSUnterversion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSRSUnterversion(SRS_Unterversion_TypeClass newSRSUnterversion, NotificationChain msgs) {
-		SRS_Unterversion_TypeClass oldSRSUnterversion = sRSUnterversion;
-		sRSUnterversion = newSRSUnterversion;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION, oldSRSUnterversion, newSRSUnterversion);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSRSUnterversion(SRS_Unterversion_TypeClass newSRSUnterversion) {
-		if (newSRSUnterversion != sRSUnterversion) {
-			NotificationChain msgs = null;
-			if (sRSUnterversion != null)
-				msgs = ((InternalEObject)sRSUnterversion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION, null, msgs);
-			if (newSRSUnterversion != null)
-				msgs = ((InternalEObject)newSRSUnterversion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION, null, msgs);
-			msgs = basicSetSRSUnterversion(newSRSUnterversion, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION, newSRSUnterversion, newSRSUnterversion));
 	}
 
 	/**
@@ -223,8 +231,8 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION:
-				return basicSetSRSUnterversion(null, msgs);
+			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION:
+				return basicSetETCSSystemVersion(null, msgs);
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_VERSION:
 				return basicSetSRSVersion(null, msgs);
 			default:
@@ -240,12 +248,12 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION:
+				return getETCSSystemVersion();
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ID_FACHTELEGRAMM:
 				return getIDFachtelegramm();
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__IDFT_ANSCHALTBEDINGUNG:
 				return getIDFTAnschaltbedingung();
-			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION:
-				return getSRSUnterversion();
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_VERSION:
 				return getSRSVersion();
 			default:
@@ -262,6 +270,9 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION:
+				setETCSSystemVersion((ETCS_System_Version_TypeClass)newValue);
+				return;
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ID_FACHTELEGRAMM:
 				getIDFachtelegramm().clear();
 				getIDFachtelegramm().addAll((Collection<? extends Fachtelegramm>)newValue);
@@ -269,9 +280,6 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__IDFT_ANSCHALTBEDINGUNG:
 				getIDFTAnschaltbedingung().clear();
 				getIDFTAnschaltbedingung().addAll((Collection<? extends FT_Anschaltbedingung>)newValue);
-				return;
-			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION:
-				setSRSUnterversion((SRS_Unterversion_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_VERSION:
 				setSRSVersion((SRS_Version_TypeClass)newValue);
@@ -290,14 +298,14 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION:
+				setETCSSystemVersion((ETCS_System_Version_TypeClass)null);
+				return;
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ID_FACHTELEGRAMM:
 				getIDFachtelegramm().clear();
 				return;
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__IDFT_ANSCHALTBEDINGUNG:
 				getIDFTAnschaltbedingung().clear();
-				return;
-			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION:
-				setSRSUnterversion((SRS_Unterversion_TypeClass)null);
 				return;
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_VERSION:
 				setSRSVersion((SRS_Version_TypeClass)null);
@@ -316,12 +324,12 @@ public class DP_Telegramm_AttributeGroupImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ETCS_SYSTEM_VERSION:
+				return eTCSSystemVersion != null;
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__ID_FACHTELEGRAMM:
 				return iDFachtelegramm != null && !iDFachtelegramm.isEmpty();
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__IDFT_ANSCHALTBEDINGUNG:
 				return iDFTAnschaltbedingung != null && !iDFTAnschaltbedingung.isEmpty();
-			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_UNTERVERSION:
-				return sRSUnterversion != null;
 			case Balisentechnik_ETCSPackage.DP_TELEGRAMM_ATTRIBUTE_GROUP__SRS_VERSION:
 				return sRSVersion != null;
 			default:

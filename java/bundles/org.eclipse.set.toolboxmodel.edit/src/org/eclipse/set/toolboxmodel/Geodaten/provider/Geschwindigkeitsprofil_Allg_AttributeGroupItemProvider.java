@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.GeodatenFactory;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
 import org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.Geschwindigkeitsprofil_Allg_AttributeGroup} object.
@@ -85,9 +86,9 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE);
 			childrenFeatures.add(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT);
 			childrenFeatures.add(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART);
-			childrenFeatures.add(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG);
 		}
 		return childrenFeatures;
 	}
@@ -140,9 +141,9 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Geschwindigkeitsprofil_Allg_AttributeGroup.class)) {
+			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE:
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT:
 			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART:
-			case GeodatenPackage.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -164,6 +165,11 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__ANZEIGEGEFUEHRT_ES_KATEGORIE,
+				 GeodatenFactory.eINSTANCE.createAnzeigegefuehrt_ES_Kategorie_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__GESCHWINDIGKEIT,
 				 GeodatenFactory.eINSTANCE.createGeschwindigkeit_TypeClass()));
 
@@ -171,11 +177,6 @@ public class Geschwindigkeitsprofil_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__VPROFIL_ART,
 				 GeodatenFactory.eINSTANCE.createV_Profil_Art_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GeodatenPackage.Literals.GESCHWINDIGKEITSPROFIL_ALLG_ATTRIBUTE_GROUP__WIRKRICHTUNG,
-				 GeodatenFactory.eINSTANCE.createWirkrichtung_TypeClass()));
 	}
 
 	/**

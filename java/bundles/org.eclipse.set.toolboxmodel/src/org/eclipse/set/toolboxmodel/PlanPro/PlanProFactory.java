@@ -418,6 +418,15 @@ public interface PlanProFactory extends EFactory {
 	PlanPro_Schnittstelle createPlanPro_Schnittstelle();
 
 	/**
+	 * Returns a new object of class '<em>Wzk Invalid ID Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wzk Invalid ID Reference</em>'.
+	 * @generated
+	 */
+	WzkInvalidIDReference createWzkInvalidIDReference();
+
+	/**
 	 * Returns a new object of class '<em>Plan Pro Schnittstelle Allg Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

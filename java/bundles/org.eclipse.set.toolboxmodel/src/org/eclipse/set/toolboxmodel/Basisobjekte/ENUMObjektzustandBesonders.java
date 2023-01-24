@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
@@ -19,34 +26,44 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMObjektzustandBesonders implements Enumerator {
 	/**
-	 * The '<em><b>ENUM Objektzustand Besonders abgedeckt</b></em>' literal object.
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort angesteuert nicht gueltig</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT_VALUE
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT(0, "ENUMObjektzustand_Besonders_abgedeckt", "abgedeckt"),
+	ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG(0, "ENUMObjektzustand_Besonders_am_Standort_angesteuert_nicht_gueltig", "am_Standort_angesteuert_nicht_gueltig"),
 
 	/**
-	 * The '<em><b>ENUM Objektzustand Besonders ausser Betrieb</b></em>' literal object.
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort angesteuert ungueltig abgedeckt</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VALUE
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB(1, "ENUMObjektzustand_Besonders_ausser_Betrieb", "ausser_Betrieb"),
+	ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT(1, "ENUMObjektzustand_Besonders_am_Standort_angesteuert_ungueltig_abgedeckt", "am_Standort_angesteuert_ungueltig_abgedeckt"),
 
 	/**
-	 * The '<em><b>ENUM Objektzustand Besonders ausser Betrieb vorbereitend</b></em>' literal object.
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort nicht angesteuert ungueltig</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND_VALUE
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND(2, "ENUMObjektzustand_Besonders_ausser_Betrieb_vorbereitend", "ausser_Betrieb_vorbereitend"),
+	ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG(2, "ENUMObjektzustand_Besonders_am_Standort_nicht_angesteuert_ungueltig", "am_Standort_nicht_angesteuert_ungueltig"),
+
+	/**
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort nicht angesteuert vorbereitend</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND(3, "ENUMObjektzustand_Besonders_am_Standort_nicht_angesteuert_vorbereitend", "am_Standort_nicht_angesteuert_vorbereitend"),
 
 	/**
 	 * The '<em><b>ENUM Objektzustand Besonders sonstige</b></em>' literal object.
@@ -56,40 +73,71 @@ public enum ENUMObjektzustandBesonders implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE(3, "ENUMObjektzustand_Besonders_sonstige", "sonstige");
+	ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE(4, "ENUMObjektzustand_Besonders_sonstige", "sonstige"),
 
 	/**
-	 * The '<em><b>ENUM Objektzustand Besonders abgedeckt</b></em>' literal value.
+	 * The '<em><b>ENUM Objektzustand Besonders standortfern angesteuert ungueltig</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT
-	 * @model name="ENUMObjektzustand_Besonders_abgedeckt" literal="abgedeckt"
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT_VALUE = 0;
+	ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG(5, "ENUMObjektzustand_Besonders_standortfern_angesteuert_ungueltig", "standortfern_angesteuert_ungueltig"),
 
 	/**
-	 * The '<em><b>ENUM Objektzustand Besonders ausser Betrieb</b></em>' literal value.
+	 * The '<em><b>ENUM Objektzustand Besonders standortfern nicht angesteuert ungueltig</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB
-	 * @model name="ENUMObjektzustand_Besonders_ausser_Betrieb" literal="ausser_Betrieb"
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VALUE = 1;
+	ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG(6, "ENUMObjektzustand_Besonders_standortfern_nicht_angesteuert_ungueltig", "standortfern_nicht_angesteuert_ungueltig");
 
 	/**
-	 * The '<em><b>ENUM Objektzustand Besonders ausser Betrieb vorbereitend</b></em>' literal value.
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort angesteuert nicht gueltig</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND
-	 * @model name="ENUMObjektzustand_Besonders_ausser_Betrieb_vorbereitend" literal="ausser_Betrieb_vorbereitend"
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG
+	 * @model name="ENUMObjektzustand_Besonders_am_Standort_angesteuert_nicht_gueltig" literal="am_Standort_angesteuert_nicht_gueltig"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND_VALUE = 2;
+	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort angesteuert ungueltig abgedeckt</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT
+	 * @model name="ENUMObjektzustand_Besonders_am_Standort_angesteuert_ungueltig_abgedeckt" literal="am_Standort_angesteuert_ungueltig_abgedeckt"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort nicht angesteuert ungueltig</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG
+	 * @model name="ENUMObjektzustand_Besonders_am_Standort_nicht_angesteuert_ungueltig" literal="am_Standort_nicht_angesteuert_ungueltig"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUM Objektzustand Besonders am Standort nicht angesteuert vorbereitend</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND
+	 * @model name="ENUMObjektzustand_Besonders_am_Standort_nicht_angesteuert_vorbereitend" literal="am_Standort_nicht_angesteuert_vorbereitend"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Objektzustand Besonders sonstige</b></em>' literal value.
@@ -100,7 +148,29 @@ public enum ENUMObjektzustandBesonders implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE_VALUE = 3;
+	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE_VALUE = 4;
+
+	/**
+	 * The '<em><b>ENUM Objektzustand Besonders standortfern angesteuert ungueltig</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG
+	 * @model name="ENUMObjektzustand_Besonders_standortfern_angesteuert_ungueltig" literal="standortfern_angesteuert_ungueltig"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG_VALUE = 5;
+
+	/**
+	 * The '<em><b>ENUM Objektzustand Besonders standortfern nicht angesteuert ungueltig</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG
+	 * @model name="ENUMObjektzustand_Besonders_standortfern_nicht_angesteuert_ungueltig" literal="standortfern_nicht_angesteuert_ungueltig"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>ENUM Objektzustand Besonders</b></em>' enumerators.
@@ -110,10 +180,13 @@ public enum ENUMObjektzustandBesonders implements Enumerator {
 	 */
 	private static final ENUMObjektzustandBesonders[] VALUES_ARRAY =
 		new ENUMObjektzustandBesonders[] {
-			ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT,
-			ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB,
-			ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND,
+			ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG,
+			ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT,
+			ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG,
+			ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND,
 			ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE,
+			ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG,
+			ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG,
 		};
 
 	/**
@@ -170,10 +243,13 @@ public enum ENUMObjektzustandBesonders implements Enumerator {
 	 */
 	public static ENUMObjektzustandBesonders get(int value) {
 		switch (value) {
-			case ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_ABGEDECKT;
-			case ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB;
-			case ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_AUSSER_BETRIEB_VORBEREITEND;
+			case ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_NICHT_GUELTIG;
+			case ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_ANGESTEUERT_UNGUELTIG_ABGEDECKT;
+			case ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_UNGUELTIG;
+			case ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_AM_STANDORT_NICHT_ANGESTEUERT_VORBEREITEND;
 			case ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_SONSTIGE;
+			case ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_ANGESTEUERT_UNGUELTIG;
+			case ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG_VALUE: return ENUM_OBJEKTZUSTAND_BESONDERS_STANDORTFERN_NICHT_ANGESTEUERT_UNGUELTIG;
 			default: return null;
 		}
 	}

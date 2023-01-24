@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -354,29 +355,6 @@ public class BlockItemProviderAdapterFactory extends BlockAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Entwurfsgeschwindigkeit_TypeClassItemProvider entwurfsgeschwindigkeit_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEntwurfsgeschwindigkeit_TypeClassAdapter() {
-		if (entwurfsgeschwindigkeit_TypeClassItemProvider == null) {
-			entwurfsgeschwindigkeit_TypeClassItemProvider = new Entwurfsgeschwindigkeit_TypeClassItemProvider(this);
-		}
-
-		return entwurfsgeschwindigkeit_TypeClassItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Block.Erlaubnis_Staendig_Vorhanden_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -538,26 +516,49 @@ public class BlockItemProviderAdapterFactory extends BlockAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Traktion_Art_TypeClassItemProvider traktion_Art_TypeClassItemProvider;
+	protected Streckengeschwindigkeit_TypeClassItemProvider streckengeschwindigkeit_TypeClassItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass}.
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTraktion_Art_TypeClassAdapter() {
-		if (traktion_Art_TypeClassItemProvider == null) {
-			traktion_Art_TypeClassItemProvider = new Traktion_Art_TypeClassItemProvider(this);
+	public Adapter createStreckengeschwindigkeit_TypeClassAdapter() {
+		if (streckengeschwindigkeit_TypeClassItemProvider == null) {
+			streckengeschwindigkeit_TypeClassItemProvider = new Streckengeschwindigkeit_TypeClassItemProvider(this);
 		}
 
-		return traktion_Art_TypeClassItemProvider;
+		return streckengeschwindigkeit_TypeClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Traktion_Art_Elektrisch_TypeClassItemProvider traktion_Art_Elektrisch_TypeClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTraktion_Art_Elektrisch_TypeClassAdapter() {
+		if (traktion_Art_Elektrisch_TypeClassItemProvider == null) {
+			traktion_Art_Elektrisch_TypeClassItemProvider = new Traktion_Art_Elektrisch_TypeClassItemProvider(this);
+		}
+
+		return traktion_Art_Elektrisch_TypeClassItemProvider;
 	}
 
 	/**
@@ -746,7 +747,6 @@ public class BlockItemProviderAdapterFactory extends BlockAdapterFactory impleme
 		if (block_StreckeItemProvider != null) block_StreckeItemProvider.dispose();
 		if (block_Strecke_Allg_AttributeGroupItemProvider != null) block_Strecke_Allg_AttributeGroupItemProvider.dispose();
 		if (bremsweg_TypeClassItemProvider != null) bremsweg_TypeClassItemProvider.dispose();
-		if (entwurfsgeschwindigkeit_TypeClassItemProvider != null) entwurfsgeschwindigkeit_TypeClassItemProvider.dispose();
 		if (erlaubnis_Staendig_Vorhanden_TypeClassItemProvider != null) erlaubnis_Staendig_Vorhanden_TypeClassItemProvider.dispose();
 		if (erlaubnisabgabespeicherung_TypeClassItemProvider != null) erlaubnisabgabespeicherung_TypeClassItemProvider.dispose();
 		if (erlaubnisholen_TypeClassItemProvider != null) erlaubnisholen_TypeClassItemProvider.dispose();
@@ -754,7 +754,8 @@ public class BlockItemProviderAdapterFactory extends BlockAdapterFactory impleme
 		if (schaltung_TypeClassItemProvider != null) schaltung_TypeClassItemProvider.dispose();
 		if (schutzuebertrager_TypeClassItemProvider != null) schutzuebertrager_TypeClassItemProvider.dispose();
 		if (strecke_Art_TypeClassItemProvider != null) strecke_Art_TypeClassItemProvider.dispose();
-		if (traktion_Art_TypeClassItemProvider != null) traktion_Art_TypeClassItemProvider.dispose();
+		if (streckengeschwindigkeit_TypeClassItemProvider != null) streckengeschwindigkeit_TypeClassItemProvider.dispose();
+		if (traktion_Art_Elektrisch_TypeClassItemProvider != null) traktion_Art_Elektrisch_TypeClassItemProvider.dispose();
 		if (vorblockwecker_TypeClassItemProvider != null) vorblockwecker_TypeClassItemProvider.dispose();
 		if (zugbeeinflussung_Art_TypeClassItemProvider != null) zugbeeinflussung_Art_TypeClassItemProvider.dispose();
 		if (zusatzinformation_TypeClassItemProvider != null) zusatzinformation_TypeClassItemProvider.dispose();

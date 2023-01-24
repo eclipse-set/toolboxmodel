@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz;
 
@@ -20,6 +27,15 @@ public interface FlankenschutzFactory extends EFactory {
 	 * @generated
 	 */
 	FlankenschutzFactory eINSTANCE = org.eclipse.set.toolboxmodel.Flankenschutz.impl.FlankenschutzFactoryImpl.init();
+
+	/**
+	 * Returns a new object of class '<em>EKW Kr Anteil Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EKW Kr Anteil Type Class</em>'.
+	 * @generated
+	 */
+	EKW_Kr_Anteil_TypeClass createEKW_Kr_Anteil_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Fahrt Ueber Type Class</em>'.

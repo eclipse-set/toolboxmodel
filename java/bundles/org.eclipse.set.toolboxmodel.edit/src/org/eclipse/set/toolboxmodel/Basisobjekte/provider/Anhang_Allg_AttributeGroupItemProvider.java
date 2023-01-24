@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjekteFactory;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Basisobjekte.Anhang_Allg_AttributeGroup} object.
@@ -88,7 +89,6 @@ public class Anhang_Allg_AttributeGroupItemProvider
 			childrenFeatures.add(BasisobjektePackage.Literals.ANHANG_ALLG_ATTRIBUTE_GROUP__ANHANG_ART);
 			childrenFeatures.add(BasisobjektePackage.Literals.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEINAME);
 			childrenFeatures.add(BasisobjektePackage.Literals.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP);
-			childrenFeatures.add(BasisobjektePackage.Literals.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,6 @@ public class Anhang_Allg_AttributeGroupItemProvider
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__ANHANG_ART:
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEINAME:
 			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP:
-			case BasisobjektePackage.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -178,11 +177,6 @@ public class Anhang_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(BasisobjektePackage.Literals.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEITYP,
 				 BasisobjekteFactory.eINSTANCE.createDateityp_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasisobjektePackage.Literals.ANHANG_ALLG_ATTRIBUTE_GROUP__DATEN,
-				 BasisobjekteFactory.eINSTANCE.createDaten_TypeClass()));
 	}
 
 	/**

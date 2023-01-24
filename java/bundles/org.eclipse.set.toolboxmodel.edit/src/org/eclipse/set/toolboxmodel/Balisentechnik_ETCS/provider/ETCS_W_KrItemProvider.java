@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr} object.
@@ -59,11 +60,34 @@ public class ETCS_W_KrItemProvider extends Basis_ObjektItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIDETCSGefahrpunktNebengleisPropertyDescriptor(object);
 			addIDETCSKnotenPropertyDescriptor(object);
 			addIDRBCPropertyDescriptor(object);
 			addIDWKrAnlagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the IDETCS Gefahrpunkt Nebengleis feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDETCSGefahrpunktNebengleisPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ETCS_W_Kr_iDETCSGefahrpunktNebengleis_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ETCS_W_Kr_iDETCSGefahrpunktNebengleis_feature", "_UI_ETCS_W_Kr_type"),
+				 Balisentechnik_ETCSPackage.eINSTANCE.getETCS_W_Kr_IDETCSGefahrpunktNebengleis(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -145,7 +169,6 @@ public class ETCS_W_KrItemProvider extends Basis_ObjektItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_W_Kr_ETCSWKrMUKA());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_W_Kr_ETCSWOrtsgestellt());
 		}
 		return childrenFeatures;
 	}
@@ -199,7 +222,6 @@ public class ETCS_W_KrItemProvider extends Basis_ObjektItemProvider {
 
 		switch (notification.getFeatureID(ETCS_W_Kr.class)) {
 			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_KR_MUKA:
-			case Balisentechnik_ETCSPackage.ETCS_WKR__ETCSW_ORTSGESTELLT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -223,11 +245,6 @@ public class ETCS_W_KrItemProvider extends Basis_ObjektItemProvider {
 			(createChildParameter
 				(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_W_Kr_ETCSWKrMUKA(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_W_Kr_MUKA_AttributeGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_W_Kr_ETCSWOrtsgestellt(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createETCS_W_Ortsgestellt_TypeClass()));
 	}
 
 	/**

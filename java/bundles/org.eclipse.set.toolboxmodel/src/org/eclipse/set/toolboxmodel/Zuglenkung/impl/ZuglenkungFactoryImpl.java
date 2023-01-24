@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zuglenkung.impl;
 
@@ -71,6 +78,7 @@ public class ZuglenkungFactoryImpl extends EFactoryImpl implements ZuglenkungFac
 			case ZuglenkungPackage.DEADLOCKPRUEFUNG_TYPE_CLASS: return createDeadlockpruefung_TypeClass();
 			case ZuglenkungPackage.DWEG_PRIO_TYPE_CLASS: return createDWeg_Prio_TypeClass();
 			case ZuglenkungPackage.EINSTELLKONTROLLZEIT_TYPE_CLASS: return createEinstellkontrollzeit_TypeClass();
+			case ZuglenkungPackage.FSTR_BILDEZEIT_TYPE_CLASS: return createFstr_Bildezeit_TypeClass();
 			case ZuglenkungPackage.FUEM_AUSWERTUNG_TYPE_CLASS: return createFUEM_Auswertung_TypeClass();
 			case ZuglenkungPackage.GK_TYPE_CLASS: return createGK_TypeClass();
 			case ZuglenkungPackage.GKZSS_TYPE_CLASS: return createGKZSS_TypeClass();
@@ -125,6 +133,8 @@ public class ZuglenkungFactoryImpl extends EFactoryImpl implements ZuglenkungFac
 				return createENUMLenkziffernstellenObjectFromString(eDataType, initialValue);
 			case ZuglenkungPackage.ENUMZN_STELLEN_OBJECT:
 				return createENUMZNStellenObjectFromString(eDataType, initialValue);
+			case ZuglenkungPackage.FSTR_BILDEZEIT_TYPE:
+				return createFstr_Bildezeit_TypeFromString(eDataType, initialValue);
 			case ZuglenkungPackage.GK_TYPE:
 				return createGK_TypeFromString(eDataType, initialValue);
 			case ZuglenkungPackage.LENKABBRUCHZEIT_TYPE:
@@ -170,6 +180,8 @@ public class ZuglenkungFactoryImpl extends EFactoryImpl implements ZuglenkungFac
 				return convertENUMLenkziffernstellenObjectToString(eDataType, instanceValue);
 			case ZuglenkungPackage.ENUMZN_STELLEN_OBJECT:
 				return convertENUMZNStellenObjectToString(eDataType, instanceValue);
+			case ZuglenkungPackage.FSTR_BILDEZEIT_TYPE:
+				return convertFstr_Bildezeit_TypeToString(eDataType, instanceValue);
 			case ZuglenkungPackage.GK_TYPE:
 				return convertGK_TypeToString(eDataType, instanceValue);
 			case ZuglenkungPackage.LENKABBRUCHZEIT_TYPE:
@@ -244,6 +256,17 @@ public class ZuglenkungFactoryImpl extends EFactoryImpl implements ZuglenkungFac
 	public Einstellkontrollzeit_TypeClass createEinstellkontrollzeit_TypeClass() {
 		Einstellkontrollzeit_TypeClassImpl einstellkontrollzeit_TypeClass = new Einstellkontrollzeit_TypeClassImpl();
 		return einstellkontrollzeit_TypeClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Fstr_Bildezeit_TypeClass createFstr_Bildezeit_TypeClass() {
+		Fstr_Bildezeit_TypeClassImpl fstr_Bildezeit_TypeClass = new Fstr_Bildezeit_TypeClassImpl();
+		return fstr_Bildezeit_TypeClass;
 	}
 
 	/**
@@ -667,6 +690,24 @@ public class ZuglenkungFactoryImpl extends EFactoryImpl implements ZuglenkungFac
 	 */
 	public String convertENUMZNStellenObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertENUMZNStellenToString(ZuglenkungPackage.Literals.ENUMZN_STELLEN, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigDecimal createFstr_Bildezeit_TypeFromString(EDataType eDataType, String initialValue) {
+		return (BigDecimal)BasisTypenFactory.eINSTANCE.createFromString(BasisTypenPackage.Literals.SEKUNDE_TYPE, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFstr_Bildezeit_TypeToString(EDataType eDataType, Object instanceValue) {
+		return BasisTypenFactory.eINSTANCE.convertToString(BasisTypenPackage.Literals.SEKUNDE_TYPE, instanceValue);
 	}
 
 	/**

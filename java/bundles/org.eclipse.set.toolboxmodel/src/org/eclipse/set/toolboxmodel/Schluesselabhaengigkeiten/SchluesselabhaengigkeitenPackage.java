@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEDIENUNG_ART_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BESCHREIBUNG_SONDERANLAGE_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEZEICHNUNG_SCHLOSS_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEZEICHNUNG_SCHLUESSEL_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +760,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEZEICHNUNG_SK_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -830,7 +806,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BUE_LAGE_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -876,7 +852,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int GSP_LAGE_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -922,7 +898,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int HAUPTSCHLOSS_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -986,13 +962,22 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSS__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SCHLOSS__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSS__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1122,7 +1107,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSS_ART_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1168,13 +1153,58 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP = 10;
 
 	/**
+	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP__IDENTITAET = BasisobjektePackage.BASIS_OBJEKT__IDENTITAET;
+
+	/**
+	 * The feature id for the '<em><b>Basis Objekt Allg</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
+
+	/**
+	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP__OBJEKTREFERENZEN = BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN;
+
+	/**
 	 * The feature id for the '<em><b>Bezeichnung Schloss</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP__BEZEICHNUNG_SCHLOSS = 0;
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP__BEZEICHNUNG_SCHLOSS = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Schloss Bezeichnung Attribute Group</em>' class.
@@ -1183,7 +1213,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP_FEATURE_COUNT = 1;
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Schloss Bezeichnung Attribute Group</em>' class.
@@ -1192,7 +1222,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+	int SCHLOSS_BEZEICHNUNG_ATTRIBUTE_GROUP_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schloss_BUE_AttributeGroupImpl <em>Schloss BUE Attribute Group</em>}' class.
@@ -1343,13 +1373,22 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP = 14;
 
 	/**
+	 * The feature id for the '<em><b>Sonderanlage Lage</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE = 0;
+
+	/**
 	 * The feature id for the '<em><b>Beschreibung Sonderanlage</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE = 0;
+	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__BESCHREIBUNG_SONDERANLAGE = 1;
 
 	/**
 	 * The feature id for the '<em><b>ID Sonderanlage</b></em>' reference.
@@ -1358,7 +1397,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__ID_SONDERANLAGE = 1;
+	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__ID_SONDERANLAGE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Schloss Sonderanlage Attribute Group</em>' class.
@@ -1367,7 +1406,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
+	int SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Schloss Sonderanlage Attribute Group</em>' class.
@@ -1444,13 +1483,13 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART = 1;
 
 	/**
-	 * The feature id for the '<em><b>Verschluss Herzstueck</b></em>' containment reference.
+	 * The feature id for the '<em><b>Verschluss Ort</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK = 2;
+	int SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT = 2;
 
 	/**
 	 * The feature id for the '<em><b>WAnbaulage</b></em>' containment reference.
@@ -1517,13 +1556,22 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSSKOMBINATION__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SCHLOSSKOMBINATION__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLOSSKOMBINATION__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1636,13 +1684,22 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SCHLUESSEL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLUESSEL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1746,7 +1803,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL_BARTFORM_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1829,7 +1886,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL_GRUPPE_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1875,7 +1932,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL_IN_GRDST_EINGESCHL_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1939,13 +1996,22 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSELSPERRE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int SCHLUESSELSPERRE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHLUESSELSPERRE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2011,6 +2077,52 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSELSPERRE_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Sonderanlage_Lage_TypeClassImpl <em>Sonderanlage Lage Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Sonderanlage_Lage_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getSonderanlage_Lage_TypeClass()
+	 * @generated
+	 */
+	int SONDERANLAGE_LAGE_TYPE_CLASS = 26;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SONDERANLAGE_LAGE_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SONDERANLAGE_LAGE_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Sonderanlage Lage Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SONDERANLAGE_LAGE_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Sonderanlage Lage Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SONDERANLAGE_LAGE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Technisch_Berechtigter_TypeClassImpl <em>Technisch Berechtigter Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2018,10 +2130,10 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getTechnisch_Berechtigter_TypeClass()
 	 * @generated
 	 */
-	int TECHNISCH_BERECHTIGTER_TYPE_CLASS = 26;
+	int TECHNISCH_BERECHTIGTER_TYPE_CLASS = 27;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2057,23 +2169,23 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int TECHNISCH_BERECHTIGTER_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Herzstueck_TypeClassImpl <em>Verschluss Herzstueck Type Class</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Ort_TypeClassImpl <em>Verschluss Ort Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Herzstueck_TypeClassImpl
-	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getVerschluss_Herzstueck_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Ort_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getVerschluss_Ort_TypeClass()
 	 * @generated
 	 */
-	int VERSCHLUSS_HERZSTUECK_TYPE_CLASS = 27;
+	int VERSCHLUSS_ORT_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSCHLUSS_HERZSTUECK_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+	int VERSCHLUSS_ORT_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
 
 	/**
 	 * The feature id for the '<em><b>Wert</b></em>' attribute.
@@ -2082,25 +2194,25 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VERSCHLUSS_HERZSTUECK_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+	int VERSCHLUSS_ORT_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Verschluss Herzstueck Type Class</em>' class.
+	 * The number of structural features of the '<em>Verschluss Ort Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSCHLUSS_HERZSTUECK_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+	int VERSCHLUSS_ORT_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Verschluss Herzstueck Type Class</em>' class.
+	 * The number of operations of the '<em>Verschluss Ort Type Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERSCHLUSS_HERZSTUECK_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+	int VERSCHLUSS_ORT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.W_Anbaulage_TypeClassImpl <em>WAnbaulage Type Class</em>}' class.
@@ -2110,10 +2222,10 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getW_Anbaulage_TypeClass()
 	 * @generated
 	 */
-	int WANBAULAGE_TYPE_CLASS = 28;
+	int WANBAULAGE_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2156,10 +2268,10 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getW_Lage_TypeClass()
 	 * @generated
 	 */
-	int WLAGE_TYPE_CLASS = 29;
+	int WLAGE_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2202,7 +2314,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMBedienungArt()
 	 * @generated
 	 */
-	int ENUM_BEDIENUNG_ART = 30;
+	int ENUM_BEDIENUNG_ART = 31;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMBUELage <em>ENUMBUE Lage</em>}' enum.
@@ -2212,7 +2324,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMBUELage()
 	 * @generated
 	 */
-	int ENUMBUE_LAGE = 31;
+	int ENUMBUE_LAGE = 32;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMGspLage <em>ENUM Gsp Lage</em>}' enum.
@@ -2222,7 +2334,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMGspLage()
 	 * @generated
 	 */
-	int ENUM_GSP_LAGE = 32;
+	int ENUM_GSP_LAGE = 33;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSchlossArt <em>ENUM Schloss Art</em>}' enum.
@@ -2232,7 +2344,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSchlossArt()
 	 * @generated
 	 */
-	int ENUM_SCHLOSS_ART = 33;
+	int ENUM_SCHLOSS_ART = 34;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSchluesselBartform <em>ENUM Schluessel Bartform</em>}' enum.
@@ -2242,7 +2354,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSchluesselBartform()
 	 * @generated
 	 */
-	int ENUM_SCHLUESSEL_BARTFORM = 34;
+	int ENUM_SCHLUESSEL_BARTFORM = 35;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSchluesselGruppe <em>ENUM Schluessel Gruppe</em>}' enum.
@@ -2252,7 +2364,27 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSchluesselGruppe()
 	 * @generated
 	 */
-	int ENUM_SCHLUESSEL_GRUPPE = 35;
+	int ENUM_SCHLUESSEL_GRUPPE = 36;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage <em>ENUM Sonderanlage Lage</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSonderanlageLage()
+	 * @generated
+	 */
+	int ENUM_SONDERANLAGE_LAGE = 37;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt <em>ENUM Verschluss Ort</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMVerschlussOrt()
+	 * @generated
+	 */
+	int ENUM_VERSCHLUSS_ORT = 38;
 
 	/**
 	 * The meta object id for the '<em>Beschreibung Sonderanlage Type</em>' data type.
@@ -2262,7 +2394,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getBeschreibung_Sonderanlage_Type()
 	 * @generated
 	 */
-	int BESCHREIBUNG_SONDERANLAGE_TYPE = 36;
+	int BESCHREIBUNG_SONDERANLAGE_TYPE = 39;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Schloss Type</em>' data type.
@@ -2272,7 +2404,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getBezeichnung_Schloss_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_SCHLOSS_TYPE = 37;
+	int BEZEICHNUNG_SCHLOSS_TYPE = 40;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Schluessel Type</em>' data type.
@@ -2282,7 +2414,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getBezeichnung_Schluessel_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_SCHLUESSEL_TYPE = 38;
+	int BEZEICHNUNG_SCHLUESSEL_TYPE = 41;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Sk Type</em>' data type.
@@ -2292,7 +2424,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getBezeichnung_Sk_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_SK_TYPE = 39;
+	int BEZEICHNUNG_SK_TYPE = 42;
 
 	/**
 	 * The meta object id for the '<em>ENUM Bedienung Art Object</em>' data type.
@@ -2302,7 +2434,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMBedienungArtObject()
 	 * @generated
 	 */
-	int ENUM_BEDIENUNG_ART_OBJECT = 40;
+	int ENUM_BEDIENUNG_ART_OBJECT = 43;
 
 	/**
 	 * The meta object id for the '<em>ENUMBUE Lage Object</em>' data type.
@@ -2312,7 +2444,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMBUELageObject()
 	 * @generated
 	 */
-	int ENUMBUE_LAGE_OBJECT = 41;
+	int ENUMBUE_LAGE_OBJECT = 44;
 
 	/**
 	 * The meta object id for the '<em>ENUM Gsp Lage Object</em>' data type.
@@ -2322,7 +2454,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMGspLageObject()
 	 * @generated
 	 */
-	int ENUM_GSP_LAGE_OBJECT = 42;
+	int ENUM_GSP_LAGE_OBJECT = 45;
 
 	/**
 	 * The meta object id for the '<em>ENUM Schloss Art Object</em>' data type.
@@ -2332,7 +2464,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSchlossArtObject()
 	 * @generated
 	 */
-	int ENUM_SCHLOSS_ART_OBJECT = 43;
+	int ENUM_SCHLOSS_ART_OBJECT = 46;
 
 	/**
 	 * The meta object id for the '<em>ENUM Schluessel Bartform Object</em>' data type.
@@ -2342,7 +2474,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSchluesselBartformObject()
 	 * @generated
 	 */
-	int ENUM_SCHLUESSEL_BARTFORM_OBJECT = 44;
+	int ENUM_SCHLUESSEL_BARTFORM_OBJECT = 47;
 
 	/**
 	 * The meta object id for the '<em>ENUM Schluessel Gruppe Object</em>' data type.
@@ -2352,7 +2484,27 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSchluesselGruppeObject()
 	 * @generated
 	 */
-	int ENUM_SCHLUESSEL_GRUPPE_OBJECT = 45;
+	int ENUM_SCHLUESSEL_GRUPPE_OBJECT = 48;
+
+	/**
+	 * The meta object id for the '<em>ENUM Sonderanlage Lage Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSonderanlageLageObject()
+	 * @generated
+	 */
+	int ENUM_SONDERANLAGE_LAGE_OBJECT = 49;
+
+	/**
+	 * The meta object id for the '<em>ENUM Verschluss Ort Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMVerschlussOrtObject()
+	 * @generated
+	 */
+	int ENUM_VERSCHLUSS_ORT_OBJECT = 50;
 
 	/**
 	 * The meta object id for the '<em>WAnbaulage Type</em>' data type.
@@ -2362,7 +2514,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getW_Anbaulage_Type()
 	 * @generated
 	 */
-	int WANBAULAGE_TYPE = 46;
+	int WANBAULAGE_TYPE = 51;
 
 	/**
 	 * The meta object id for the '<em>WLage Type</em>' data type.
@@ -2372,7 +2524,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getW_Lage_Type()
 	 * @generated
 	 */
-	int WLAGE_TYPE = 47;
+	int WLAGE_TYPE = 52;
 
 
 	/**
@@ -2812,6 +2964,17 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	EClass getSchloss_Sonderanlage_AttributeGroup();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup#getSonderanlageLage <em>Sonderanlage Lage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sonderanlage Lage</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup#getSonderanlageLage()
+	 * @see #getSchloss_Sonderanlage_AttributeGroup()
+	 * @generated
+	 */
+	EReference getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_Sonderanlage_AttributeGroup#getBeschreibungSonderanlage <em>Beschreibung Sonderanlage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2887,15 +3050,15 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	EReference getSchloss_W_AttributeGroup_SchlossArt();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussHerzstueck <em>Verschluss Herzstueck</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussOrt <em>Verschluss Ort</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Verschluss Herzstueck</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussHerzstueck()
+	 * @return the meta object for the containment reference '<em>Verschluss Ort</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getVerschlussOrt()
 	 * @see #getSchloss_W_AttributeGroup()
 	 * @generated
 	 */
-	EReference getSchloss_W_AttributeGroup_VerschlussHerzstueck();
+	EReference getSchloss_W_AttributeGroup_VerschlussOrt();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schloss_W_AttributeGroup#getWAnbaulage <em>WAnbaulage</em>}'.
@@ -3175,6 +3338,27 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	EReference getSchluesselsperre_IDUnterbringung();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass <em>Sonderanlage Lage Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sonderanlage Lage Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass
+	 * @generated
+	 */
+	EClass getSonderanlage_Lage_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Sonderanlage_Lage_TypeClass#getWert()
+	 * @see #getSonderanlage_Lage_TypeClass()
+	 * @generated
+	 */
+	EAttribute getSonderanlage_Lage_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Technisch_Berechtigter_TypeClass <em>Technisch Berechtigter Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3196,25 +3380,25 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	EAttribute getTechnisch_Berechtigter_TypeClass_Wert();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass <em>Verschluss Herzstueck Type Class</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass <em>Verschluss Ort Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Verschluss Herzstueck Type Class</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass
+	 * @return the meta object for class '<em>Verschluss Ort Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass
 	 * @generated
 	 */
-	EClass getVerschluss_Herzstueck_TypeClass();
+	EClass getVerschluss_Ort_TypeClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass#getWert <em>Wert</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass#getWert <em>Wert</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Wert</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Herzstueck_TypeClass#getWert()
-	 * @see #getVerschluss_Herzstueck_TypeClass()
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Verschluss_Ort_TypeClass#getWert()
+	 * @see #getVerschluss_Ort_TypeClass()
 	 * @generated
 	 */
-	EAttribute getVerschluss_Herzstueck_TypeClass_Wert();
+	EAttribute getVerschluss_Ort_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.W_Anbaulage_TypeClass <em>WAnbaulage Type Class</em>}'.
@@ -3317,6 +3501,26 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getENUMSchluesselGruppe();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage <em>ENUM Sonderanlage Lage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Sonderanlage Lage</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage
+	 * @generated
+	 */
+	EEnum getENUMSonderanlageLage();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt <em>ENUM Verschluss Ort</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Verschluss Ort</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt
+	 * @generated
+	 */
+	EEnum getENUMVerschlussOrt();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Beschreibung Sonderanlage Type</em>}'.
@@ -3437,6 +3641,30 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMSchluesselGruppeObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage <em>ENUM Sonderanlage Lage Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Sonderanlage Lage Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage"
+	 *        extendedMetaData="name='ENUMSonderanlage_Lage:Object' baseType='ENUMSonderanlage_Lage'"
+	 * @generated
+	 */
+	EDataType getENUMSonderanlageLageObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt <em>ENUM Verschluss Ort Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Verschluss Ort Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt"
+	 *        extendedMetaData="name='ENUMVerschluss_Ort:Object' baseType='ENUMVerschluss_Ort'"
+	 * @generated
+	 */
+	EDataType getENUMVerschlussOrtObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts <em>WAnbaulage Type</em>}'.
@@ -3844,6 +4072,14 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 		EClass SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP = eINSTANCE.getSchloss_Sonderanlage_AttributeGroup();
 
 		/**
+		 * The meta object literal for the '<em><b>Sonderanlage Lage</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCHLOSS_SONDERANLAGE_ATTRIBUTE_GROUP__SONDERANLAGE_LAGE = eINSTANCE.getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage();
+
+		/**
 		 * The meta object literal for the '<em><b>Beschreibung Sonderanlage</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3904,12 +4140,12 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 		EReference SCHLOSS_WATTRIBUTE_GROUP__SCHLOSS_ART = eINSTANCE.getSchloss_W_AttributeGroup_SchlossArt();
 
 		/**
-		 * The meta object literal for the '<em><b>Verschluss Herzstueck</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Verschluss Ort</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_HERZSTUECK = eINSTANCE.getSchloss_W_AttributeGroup_VerschlussHerzstueck();
+		EReference SCHLOSS_WATTRIBUTE_GROUP__VERSCHLUSS_ORT = eINSTANCE.getSchloss_W_AttributeGroup_VerschlussOrt();
 
 		/**
 		 * The meta object literal for the '<em><b>WAnbaulage</b></em>' containment reference feature.
@@ -4138,6 +4374,24 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 		EReference SCHLUESSELSPERRE__ID_UNTERBRINGUNG = eINSTANCE.getSchluesselsperre_IDUnterbringung();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Sonderanlage_Lage_TypeClassImpl <em>Sonderanlage Lage Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Sonderanlage_Lage_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getSonderanlage_Lage_TypeClass()
+		 * @generated
+		 */
+		EClass SONDERANLAGE_LAGE_TYPE_CLASS = eINSTANCE.getSonderanlage_Lage_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SONDERANLAGE_LAGE_TYPE_CLASS__WERT = eINSTANCE.getSonderanlage_Lage_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Technisch_Berechtigter_TypeClassImpl <em>Technisch Berechtigter Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4156,14 +4410,14 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 		EAttribute TECHNISCH_BERECHTIGTER_TYPE_CLASS__WERT = eINSTANCE.getTechnisch_Berechtigter_TypeClass_Wert();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Herzstueck_TypeClassImpl <em>Verschluss Herzstueck Type Class</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Ort_TypeClassImpl <em>Verschluss Ort Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Herzstueck_TypeClassImpl
-		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getVerschluss_Herzstueck_TypeClass()
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Verschluss_Ort_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getVerschluss_Ort_TypeClass()
 		 * @generated
 		 */
-		EClass VERSCHLUSS_HERZSTUECK_TYPE_CLASS = eINSTANCE.getVerschluss_Herzstueck_TypeClass();
+		EClass VERSCHLUSS_ORT_TYPE_CLASS = eINSTANCE.getVerschluss_Ort_TypeClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
@@ -4171,7 +4425,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VERSCHLUSS_HERZSTUECK_TYPE_CLASS__WERT = eINSTANCE.getVerschluss_Herzstueck_TypeClass_Wert();
+		EAttribute VERSCHLUSS_ORT_TYPE_CLASS__WERT = eINSTANCE.getVerschluss_Ort_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.W_Anbaulage_TypeClassImpl <em>WAnbaulage Type Class</em>}' class.
@@ -4268,6 +4522,26 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ENUM_SCHLUESSEL_GRUPPE = eINSTANCE.getENUMSchluesselGruppe();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage <em>ENUM Sonderanlage Lage</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSonderanlageLage()
+		 * @generated
+		 */
+		EEnum ENUM_SONDERANLAGE_LAGE = eINSTANCE.getENUMSonderanlageLage();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt <em>ENUM Verschluss Ort</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMVerschlussOrt()
+		 * @generated
+		 */
+		EEnum ENUM_VERSCHLUSS_ORT = eINSTANCE.getENUMVerschlussOrt();
 
 		/**
 		 * The meta object literal for the '<em>Beschreibung Sonderanlage Type</em>' data type.
@@ -4368,6 +4642,26 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_SCHLUESSEL_GRUPPE_OBJECT = eINSTANCE.getENUMSchluesselGruppeObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Sonderanlage Lage Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMSonderanlageLage
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMSonderanlageLageObject()
+		 * @generated
+		 */
+		EDataType ENUM_SONDERANLAGE_LAGE_OBJECT = eINSTANCE.getENUMSonderanlageLageObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Verschluss Ort Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.ENUMVerschlussOrt
+		 * @see org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.SchluesselabhaengigkeitenPackageImpl#getENUMVerschlussOrtObject()
+		 * @generated
+		 */
+		EDataType ENUM_VERSCHLUSS_ORT_OBJECT = eINSTANCE.getENUMVerschlussOrtObject();
 
 		/**
 		 * The meta object literal for the '<em>WAnbaulage Type</em>' data type.

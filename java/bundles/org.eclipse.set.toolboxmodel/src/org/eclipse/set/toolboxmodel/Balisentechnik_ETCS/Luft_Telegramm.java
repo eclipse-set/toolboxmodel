@@ -1,10 +1,14 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.set.toolboxmodel.BasisTypen.Eigenschaften_Datei_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 
 /**
@@ -20,13 +24,11 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getEigenschaftenBinaerdatei <em>Eigenschaften Binaerdatei</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getEigenschaftenBinaerdateiHilfe <em>Eigenschaften Binaerdatei Hilfe</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDAnhangEADoku <em>ID Anhang EA Doku</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBaliseUebertragung <em>ID Balise Uebertragung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdatei <em>ID Binaerdatei</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdateiHilfe <em>ID Binaerdatei Hilfe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDFachtelegramm <em>ID Fachtelegramm</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getLTBinaerdateiHilfe <em>LT Binaerdatei Hilfe</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getLTBinaerdaten <em>LT Binaerdaten</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getTelegrammIndex <em>Telegramm Index</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm()
@@ -34,111 +36,6 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * @generated
  */
 public interface Luft_Telegramm extends Basis_Objekt {
-	/**
-	 * Returns the value of the '<em><b>Eigenschaften Binaerdatei</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Metadaten der Binärdatei, die von der Balise gesendet wird
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Eigenschaften Binaerdatei</em>' containment reference.
-	 * @see #setEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_EigenschaftenBinaerdatei()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Eigenschaften_Binaerdatei'"
-	 * @generated
-	 */
-	Eigenschaften_Datei_AttributeGroup getEigenschaftenBinaerdatei();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getEigenschaftenBinaerdatei <em>Eigenschaften Binaerdatei</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eigenschaften Binaerdatei</em>' containment reference.
-	 * @see #getEigenschaftenBinaerdatei()
-	 * @generated
-	 */
-	void setEigenschaftenBinaerdatei(Eigenschaften_Datei_AttributeGroup value);
-
-	/**
-	 * Returns the value of the '<em><b>Eigenschaften Binaerdatei Hilfe</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Metadaten der Hilfsdatei zur Unterstützung bei der Balisenprüfung.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Eigenschaften Binaerdatei Hilfe</em>' containment reference.
-	 * @see #setEigenschaftenBinaerdateiHilfe(Eigenschaften_Datei_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_EigenschaftenBinaerdateiHilfe()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Eigenschaften_Binaerdatei_Hilfe'"
-	 * @generated
-	 */
-	Eigenschaften_Datei_AttributeGroup getEigenschaftenBinaerdateiHilfe();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getEigenschaftenBinaerdateiHilfe <em>Eigenschaften Binaerdatei Hilfe</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Eigenschaften Binaerdatei Hilfe</em>' containment reference.
-	 * @see #getEigenschaftenBinaerdateiHilfe()
-	 * @generated
-	 */
-	void setEigenschaftenBinaerdateiHilfe(Eigenschaften_Datei_AttributeGroup value);
-
-	/**
-	 * Returns the value of the '<em><b>ID Anhang EA Doku</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Verweis auf einen Anhang, der die Zuordnung zwischen Eingangsinformationen (z. B. Signalbegriffe) und zugehörigem Lufttelegramm enthält.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Anhang EA Doku</em>' reference.
-	 * @see #isSetIDAnhangEADoku()
-	 * @see #unsetIDAnhangEADoku()
-	 * @see #setIDAnhangEADoku(Anhang)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_IDAnhangEADoku()
-	 * @model unsettable="true" required="true"
-	 *        extendedMetaData="kind='element' name='ID_Anhang_EA_Doku'"
-	 * @generated
-	 */
-	Anhang getIDAnhangEADoku();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDAnhangEADoku <em>ID Anhang EA Doku</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Anhang EA Doku</em>' reference.
-	 * @see #isSetIDAnhangEADoku()
-	 * @see #unsetIDAnhangEADoku()
-	 * @see #getIDAnhangEADoku()
-	 * @generated
-	 */
-	void setIDAnhangEADoku(Anhang value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDAnhangEADoku <em>ID Anhang EA Doku</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDAnhangEADoku()
-	 * @see #getIDAnhangEADoku()
-	 * @see #setIDAnhangEADoku(Anhang)
-	 * @generated
-	 */
-	void unsetIDAnhangEADoku();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDAnhangEADoku <em>ID Anhang EA Doku</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Anhang EA Doku</em>' reference is set.
-	 * @see #unsetIDAnhangEADoku()
-	 * @see #getIDAnhangEADoku()
-	 * @see #setIDAnhangEADoku(Anhang)
-	 * @generated
-	 */
-	boolean isSetIDAnhangEADoku();
-
 	/**
 	 * Returns the value of the '<em><b>ID Balise Uebertragung</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -193,112 +90,6 @@ public interface Luft_Telegramm extends Basis_Objekt {
 	boolean isSetIDBaliseUebertragung();
 
 	/**
-	 * Returns the value of the '<em><b>ID Binaerdatei</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Verweis auf die Binärdatei, die von der Balise gesendet wird.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Binaerdatei</em>' reference.
-	 * @see #isSetIDBinaerdatei()
-	 * @see #unsetIDBinaerdatei()
-	 * @see #setIDBinaerdatei(Binaerdatei)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_IDBinaerdatei()
-	 * @model unsettable="true" required="true"
-	 *        extendedMetaData="kind='element' name='ID_Binaerdatei'"
-	 * @generated
-	 */
-	Binaerdatei getIDBinaerdatei();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdatei <em>ID Binaerdatei</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Binaerdatei</em>' reference.
-	 * @see #isSetIDBinaerdatei()
-	 * @see #unsetIDBinaerdatei()
-	 * @see #getIDBinaerdatei()
-	 * @generated
-	 */
-	void setIDBinaerdatei(Binaerdatei value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdatei <em>ID Binaerdatei</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDBinaerdatei()
-	 * @see #getIDBinaerdatei()
-	 * @see #setIDBinaerdatei(Binaerdatei)
-	 * @generated
-	 */
-	void unsetIDBinaerdatei();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdatei <em>ID Binaerdatei</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Binaerdatei</em>' reference is set.
-	 * @see #unsetIDBinaerdatei()
-	 * @see #getIDBinaerdatei()
-	 * @see #setIDBinaerdatei(Binaerdatei)
-	 * @generated
-	 */
-	boolean isSetIDBinaerdatei();
-
-	/**
-	 * Returns the value of the '<em><b>ID Binaerdatei Hilfe</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Verweis auf eine Hilfsdatei zur Unterstützung bei der Balisenprüfung.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Binaerdatei Hilfe</em>' reference.
-	 * @see #isSetIDBinaerdateiHilfe()
-	 * @see #unsetIDBinaerdateiHilfe()
-	 * @see #setIDBinaerdateiHilfe(Binaerdatei)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_IDBinaerdateiHilfe()
-	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='ID_Binaerdatei_Hilfe'"
-	 * @generated
-	 */
-	Binaerdatei getIDBinaerdateiHilfe();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdateiHilfe <em>ID Binaerdatei Hilfe</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Binaerdatei Hilfe</em>' reference.
-	 * @see #isSetIDBinaerdateiHilfe()
-	 * @see #unsetIDBinaerdateiHilfe()
-	 * @see #getIDBinaerdateiHilfe()
-	 * @generated
-	 */
-	void setIDBinaerdateiHilfe(Binaerdatei value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdateiHilfe <em>ID Binaerdatei Hilfe</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDBinaerdateiHilfe()
-	 * @see #getIDBinaerdateiHilfe()
-	 * @see #setIDBinaerdateiHilfe(Binaerdatei)
-	 * @generated
-	 */
-	void unsetIDBinaerdateiHilfe();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getIDBinaerdateiHilfe <em>ID Binaerdatei Hilfe</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Binaerdatei Hilfe</em>' reference is set.
-	 * @see #unsetIDBinaerdateiHilfe()
-	 * @see #getIDBinaerdateiHilfe()
-	 * @see #setIDBinaerdateiHilfe(Binaerdatei)
-	 * @generated
-	 */
-	boolean isSetIDBinaerdateiHilfe();
-
-	/**
 	 * Returns the value of the '<em><b>ID Fachtelegramm</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -350,5 +141,77 @@ public interface Luft_Telegramm extends Basis_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDFachtelegramm();
+
+	/**
+	 * Returns the value of the '<em><b>LT Binaerdatei Hilfe</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>LT Binaerdatei Hilfe</em>' containment reference.
+	 * @see #setLTBinaerdateiHilfe(LT_Binaerdatei_Hilfe_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_LTBinaerdateiHilfe()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='LT_Binaerdatei_Hilfe'"
+	 * @generated
+	 */
+	LT_Binaerdatei_Hilfe_AttributeGroup getLTBinaerdateiHilfe();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getLTBinaerdateiHilfe <em>LT Binaerdatei Hilfe</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>LT Binaerdatei Hilfe</em>' containment reference.
+	 * @see #getLTBinaerdateiHilfe()
+	 * @generated
+	 */
+	void setLTBinaerdateiHilfe(LT_Binaerdatei_Hilfe_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>LT Binaerdaten</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>LT Binaerdaten</em>' containment reference.
+	 * @see #setLTBinaerdaten(LT_Binaerdaten_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_LTBinaerdaten()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='LT_Binaerdaten'"
+	 * @generated
+	 */
+	LT_Binaerdaten_AttributeGroup getLTBinaerdaten();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getLTBinaerdaten <em>LT Binaerdaten</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>LT Binaerdaten</em>' containment reference.
+	 * @see #getLTBinaerdaten()
+	 * @generated
+	 */
+	void setLTBinaerdaten(LT_Binaerdaten_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>Telegramm Index</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Index für die Signalbegriffsanschaltung, z. B. bei SIMIS D: ACC-Zeiger (Rücklaufdatum)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Telegramm Index</em>' containment reference.
+	 * @see #setTelegrammIndex(Telegramm_Index_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLuft_Telegramm_TelegrammIndex()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Telegramm_Index'"
+	 * @generated
+	 */
+	Telegramm_Index_TypeClass getTelegrammIndex();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Luft_Telegramm#getTelegrammIndex <em>Telegramm Index</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Telegramm Index</em>' containment reference.
+	 * @see #getTelegrammIndex()
+	 * @generated
+	 */
+	void setTelegrammIndex(Telegramm_Index_TypeClass value);
 
 } // Luft_Telegramm

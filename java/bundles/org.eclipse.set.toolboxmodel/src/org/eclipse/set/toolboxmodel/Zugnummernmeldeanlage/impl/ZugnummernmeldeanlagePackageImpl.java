@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl;
 
@@ -16,6 +23,10 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -65,13 +76,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -96,9 +111,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -123,6 +140,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Ausfahrdruck_Gegenglei
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Ausfahrdruck_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bedienbarkeit_Anzeigefeld_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Besonderes_Schaltkriterium_TypeClass;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bezeichnung_Besondere_Anlage_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bf_Kennung_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bf_Nr_ANB_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Bf_Nr_TypeClass;
@@ -143,6 +161,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Einwahlstelle_TypeClas
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Funktionalitaet_Anzeigefeld_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.HOA_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.IP_Adresse_TypeClass;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.KUs_Zeittelegramm_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Koppelunterstation_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Meldedruck_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Prioritaet_TypeClass;
@@ -171,6 +190,9 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZBS_Anbindung_TypeClas
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZBS_Schnittstelle_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Allg_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Bezeichnung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Nr_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_US_Zuordnung;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_US_Zuordnung_Telegramm_AttributeGroup;
@@ -196,7 +218,7 @@ import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Telegramm_85_Zuordn
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_Unterstation_Bf_Nr_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS_Allg_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zeitsynchronisation_Funkuhr_TypeClass;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageFactory;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlagePackage;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.Zugvorbereitungsmeldung_TypeClass;
@@ -265,6 +287,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	private EClass besonderes_Schaltkriterium_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass bezeichnung_Besondere_Anlage_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,6 +378,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	private EClass koppelunterstation_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kUs_Zeittelegramm_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -530,6 +566,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass zeitsynchronisation_Funkuhr_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass zlV_BusEClass = null;
 
 	/**
@@ -538,6 +581,27 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	private EClass zlV_Bus_Allg_AttributeGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass zlV_Bus_Besondere_AnlageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass zlV_Bus_Bezeichnung_AttributeGroupEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -733,13 +797,6 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass zN_ZBS_Allg_AttributeGroupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass zugvorbereitungsmeldung_TypeClassEClass = null;
 
 	/**
@@ -818,6 +875,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	private EDataType besonderes_Schaltkriterium_TypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType bezeichnung_Besondere_Anlage_TypeEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1003,32 +1067,36 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
-		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FahrstrassePackage.eNS_URI);
+		FahrstrassePackageImpl theFahrstrassePackage = (FahrstrassePackageImpl)(registeredPackage instanceof FahrstrassePackageImpl ? registeredPackage : FahrstrassePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -1045,8 +1113,8 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Signalbegriffe_Ril_301Package.eNS_URI);
@@ -1062,17 +1130,19 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 
 		// Create package meta-data objects
 		theZugnummernmeldeanlagePackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
-		theFahrstrassePackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
+		theFahrstrassePackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -1080,23 +1150,25 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theZugnummernmeldeanlagePackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
-		theFahrstrassePackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
+		theFahrstrassePackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -1104,7 +1176,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
 
@@ -1290,6 +1362,26 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	@Override
 	public EAttribute getBesonderes_Schaltkriterium_TypeClass_Wert() {
 		return (EAttribute)besonderes_Schaltkriterium_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBezeichnung_Besondere_Anlage_TypeClass() {
+		return bezeichnung_Besondere_Anlage_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBezeichnung_Besondere_Anlage_TypeClass_Wert() {
+		return (EAttribute)bezeichnung_Besondere_Anlage_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1530,6 +1622,26 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	@Override
 	public EAttribute getKoppelunterstation_TypeClass_Wert() {
 		return (EAttribute)koppelunterstation_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getKUs_Zeittelegramm_TypeClass() {
+		return kUs_Zeittelegramm_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getKUs_Zeittelegramm_TypeClass_Wert() {
+		return (EAttribute)kUs_Zeittelegramm_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2078,6 +2190,26 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
+	public EClass getZeitsynchronisation_Funkuhr_TypeClass() {
+		return zeitsynchronisation_Funkuhr_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getZeitsynchronisation_Funkuhr_TypeClass_Wert() {
+		return (EAttribute)zeitsynchronisation_Funkuhr_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getZLV_Bus() {
 		return zlV_BusEClass;
 	}
@@ -2088,8 +2220,18 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZLV_Bus_ZLVBusAllg() {
+	public EReference getZLV_Bus_Bezeichnung() {
 		return (EReference)zlV_BusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZLV_Bus_ZLVBusAllg() {
+		return (EReference)zlV_BusEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2118,7 +2260,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZLV_Bus_Allg_AttributeGroup_ZLVBusNr() {
+	public EReference getZLV_Bus_Allg_AttributeGroup_ZNModem() {
 		return (EReference)zlV_Bus_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2128,8 +2270,68 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZLV_Bus_Allg_AttributeGroup_ZNModem() {
-		return (EReference)zlV_Bus_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
+	public EClass getZLV_Bus_Besondere_Anlage() {
+		return zlV_Bus_Besondere_AnlageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZLV_Bus_Besondere_Anlage_Bezeichnung() {
+		return (EReference)zlV_Bus_Besondere_AnlageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZLV_Bus_Besondere_Anlage_IDZLVBus() {
+		return (EReference)zlV_Bus_Besondere_AnlageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup() {
+		return zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup_BezeichnungBesondereAnlage() {
+		return (EReference)zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getZLV_Bus_Bezeichnung_AttributeGroup() {
+		return zlV_Bus_Bezeichnung_AttributeGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZLV_Bus_Bezeichnung_AttributeGroup_ZLVBusNr() {
+		return (EReference)zlV_Bus_Bezeichnung_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3148,7 +3350,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZN_Unterstation_IDGEOPunkt() {
+	public EReference getZN_Unterstation_IDZNZBS() {
 		return (EReference)zN_UnterstationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3158,28 +3360,8 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZN_Unterstation_IDStreckePunkt() {
-		return (EReference)zN_UnterstationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getZN_Unterstation_IDZNZBS() {
-		return (EReference)zN_UnterstationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getZN_Unterstation_ZNUnterstationAllg() {
-		return (EReference)zN_UnterstationEClass.getEStructuralFeatures().get(3);
+		return (EReference)zN_UnterstationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3218,7 +3400,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZN_Unterstation_Allg_AttributeGroup_ZBSAdresse() {
+	public EReference getZN_Unterstation_Allg_AttributeGroup_KUsZeittelegramm() {
 		return (EReference)zN_Unterstation_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3228,7 +3410,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZN_Unterstation_Allg_AttributeGroup_ZBSAnbindung() {
+	public EReference getZN_Unterstation_Allg_AttributeGroup_ZBSAdresse() {
 		return (EReference)zN_Unterstation_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3238,8 +3420,28 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZN_Unterstation_Allg_AttributeGroup_ZNUnterstationBfNr() {
+	public EReference getZN_Unterstation_Allg_AttributeGroup_ZBSAnbindung() {
 		return (EReference)zN_Unterstation_Allg_AttributeGroupEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZN_Unterstation_Allg_AttributeGroup_ZeitsynchronisationFunkuhr() {
+		return (EReference)zN_Unterstation_Allg_AttributeGroupEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getZN_Unterstation_Allg_AttributeGroup_ZNUnterstationBfNr() {
+		return (EReference)zN_Unterstation_Allg_AttributeGroupEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -3308,7 +3510,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EReference getZN_ZBS_ZNZBSAllg() {
+	public EReference getZN_ZBS_IPAdresse() {
 		return (EReference)zN_ZBSEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3318,28 +3520,8 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	 * @generated
 	 */
 	@Override
-	public EClass getZN_ZBS_Allg_AttributeGroup() {
-		return zN_ZBS_Allg_AttributeGroupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getZN_ZBS_Allg_AttributeGroup_IPAdresse() {
-		return (EReference)zN_ZBS_Allg_AttributeGroupEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getZN_ZBS_Allg_AttributeGroup_ZBSSchnittstelle() {
-		return (EReference)zN_ZBS_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
+	public EReference getZN_ZBS_ZBSSchnittstelle() {
+		return (EReference)zN_ZBSEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3470,6 +3652,16 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 	@Override
 	public EDataType getBesonderes_Schaltkriterium_Type() {
 		return besonderes_Schaltkriterium_TypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getBezeichnung_Besondere_Anlage_Type() {
+		return bezeichnung_Besondere_Anlage_TypeEDataType;
 	}
 
 	/**
@@ -3715,6 +3907,9 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		besonderes_Schaltkriterium_TypeClassEClass = createEClass(BESONDERES_SCHALTKRITERIUM_TYPE_CLASS);
 		createEAttribute(besonderes_Schaltkriterium_TypeClassEClass, BESONDERES_SCHALTKRITERIUM_TYPE_CLASS__WERT);
 
+		bezeichnung_Besondere_Anlage_TypeClassEClass = createEClass(BEZEICHNUNG_BESONDERE_ANLAGE_TYPE_CLASS);
+		createEAttribute(bezeichnung_Besondere_Anlage_TypeClassEClass, BEZEICHNUNG_BESONDERE_ANLAGE_TYPE_CLASS__WERT);
+
 		bf_Kennung_TypeClassEClass = createEClass(BF_KENNUNG_TYPE_CLASS);
 		createEAttribute(bf_Kennung_TypeClassEClass, BF_KENNUNG_TYPE_CLASS__WERT);
 
@@ -3750,6 +3945,9 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 
 		koppelunterstation_TypeClassEClass = createEClass(KOPPELUNTERSTATION_TYPE_CLASS);
 		createEAttribute(koppelunterstation_TypeClassEClass, KOPPELUNTERSTATION_TYPE_CLASS__WERT);
+
+		kUs_Zeittelegramm_TypeClassEClass = createEClass(KUS_ZEITTELEGRAMM_TYPE_CLASS);
+		createEAttribute(kUs_Zeittelegramm_TypeClassEClass, KUS_ZEITTELEGRAMM_TYPE_CLASS__WERT);
 
 		meldedruck_TypeClassEClass = createEClass(MELDEDRUCK_TYPE_CLASS);
 		createEAttribute(meldedruck_TypeClassEClass, MELDEDRUCK_TYPE_CLASS__WERT);
@@ -3830,13 +4028,26 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		zbS_Schnittstelle_TypeClassEClass = createEClass(ZBS_SCHNITTSTELLE_TYPE_CLASS);
 		createEAttribute(zbS_Schnittstelle_TypeClassEClass, ZBS_SCHNITTSTELLE_TYPE_CLASS__WERT);
 
+		zeitsynchronisation_Funkuhr_TypeClassEClass = createEClass(ZEITSYNCHRONISATION_FUNKUHR_TYPE_CLASS);
+		createEAttribute(zeitsynchronisation_Funkuhr_TypeClassEClass, ZEITSYNCHRONISATION_FUNKUHR_TYPE_CLASS__WERT);
+
 		zlV_BusEClass = createEClass(ZLV_BUS);
+		createEReference(zlV_BusEClass, ZLV_BUS__BEZEICHNUNG);
 		createEReference(zlV_BusEClass, ZLV_BUS__ZLV_BUS_ALLG);
 
 		zlV_Bus_Allg_AttributeGroupEClass = createEClass(ZLV_BUS_ALLG_ATTRIBUTE_GROUP);
 		createEReference(zlV_Bus_Allg_AttributeGroupEClass, ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX);
-		createEReference(zlV_Bus_Allg_AttributeGroupEClass, ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR);
 		createEReference(zlV_Bus_Allg_AttributeGroupEClass, ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM);
+
+		zlV_Bus_Besondere_AnlageEClass = createEClass(ZLV_BUS_BESONDERE_ANLAGE);
+		createEReference(zlV_Bus_Besondere_AnlageEClass, ZLV_BUS_BESONDERE_ANLAGE__BEZEICHNUNG);
+		createEReference(zlV_Bus_Besondere_AnlageEClass, ZLV_BUS_BESONDERE_ANLAGE__IDZLV_BUS);
+
+		zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupEClass = createEClass(ZLV_BUS_BESONDERE_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP);
+		createEReference(zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupEClass, ZLV_BUS_BESONDERE_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP__BEZEICHNUNG_BESONDERE_ANLAGE);
+
+		zlV_Bus_Bezeichnung_AttributeGroupEClass = createEClass(ZLV_BUS_BEZEICHNUNG_ATTRIBUTE_GROUP);
+		createEReference(zlV_Bus_Bezeichnung_AttributeGroupEClass, ZLV_BUS_BEZEICHNUNG_ATTRIBUTE_GROUP__ZLV_BUS_NR);
 
 		zlV_Bus_Nr_TypeClassEClass = createEClass(ZLV_BUS_NR_TYPE_CLASS);
 		createEAttribute(zlV_Bus_Nr_TypeClassEClass, ZLV_BUS_NR_TYPE_CLASS__WERT);
@@ -3962,16 +4173,16 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		createEReference(zN_Telegramm_85_ZuordnungEClass, ZN_TELEGRAMM_85_ZUORDNUNG__TELEGRAMM85_EINZELNE_FSTR);
 
 		zN_UnterstationEClass = createEClass(ZN_UNTERSTATION);
-		createEReference(zN_UnterstationEClass, ZN_UNTERSTATION__IDGEO_PUNKT);
-		createEReference(zN_UnterstationEClass, ZN_UNTERSTATION__ID_STRECKE_PUNKT);
 		createEReference(zN_UnterstationEClass, ZN_UNTERSTATION__IDZNZBS);
 		createEReference(zN_UnterstationEClass, ZN_UNTERSTATION__ZN_UNTERSTATION_ALLG);
 
 		zN_Unterstation_Allg_AttributeGroupEClass = createEClass(ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP);
 		createEReference(zN_Unterstation_Allg_AttributeGroupEClass, ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__BF_KENNUNG);
 		createEReference(zN_Unterstation_Allg_AttributeGroupEClass, ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KOPPELUNTERSTATION);
+		createEReference(zN_Unterstation_Allg_AttributeGroupEClass, ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__KUS_ZEITTELEGRAMM);
 		createEReference(zN_Unterstation_Allg_AttributeGroupEClass, ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ADRESSE);
 		createEReference(zN_Unterstation_Allg_AttributeGroupEClass, ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZBS_ANBINDUNG);
+		createEReference(zN_Unterstation_Allg_AttributeGroupEClass, ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZEITSYNCHRONISATION_FUNKUHR);
 		createEReference(zN_Unterstation_Allg_AttributeGroupEClass, ZN_UNTERSTATION_ALLG_ATTRIBUTE_GROUP__ZN_UNTERSTATION_BF_NR);
 
 		zN_Unterstation_Bf_Nr_AttributeGroupEClass = createEClass(ZN_UNTERSTATION_BF_NR_ATTRIBUTE_GROUP);
@@ -3981,11 +4192,8 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 
 		zN_ZBSEClass = createEClass(ZN_ZBS);
 		createEReference(zN_ZBSEClass, ZN_ZBS__IDESTW_ZENTRALEINHEIT);
-		createEReference(zN_ZBSEClass, ZN_ZBS__ZNZBS_ALLG);
-
-		zN_ZBS_Allg_AttributeGroupEClass = createEClass(ZN_ZBS_ALLG_ATTRIBUTE_GROUP);
-		createEReference(zN_ZBS_Allg_AttributeGroupEClass, ZN_ZBS_ALLG_ATTRIBUTE_GROUP__IP_ADRESSE);
-		createEReference(zN_ZBS_Allg_AttributeGroupEClass, ZN_ZBS_ALLG_ATTRIBUTE_GROUP__ZBS_SCHNITTSTELLE);
+		createEReference(zN_ZBSEClass, ZN_ZBS__IP_ADRESSE);
+		createEReference(zN_ZBSEClass, ZN_ZBS__ZBS_SCHNITTSTELLE);
 
 		zugvorbereitungsmeldung_TypeClassEClass = createEClass(ZUGVORBEREITUNGSMELDUNG_TYPE_CLASS);
 		createEAttribute(zugvorbereitungsmeldung_TypeClassEClass, ZUGVORBEREITUNGSMELDUNG_TYPE_CLASS__WERT);
@@ -4004,6 +4212,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		// Create data types
 		anschlussnummer_TypeEDataType = createEDataType(ANSCHLUSSNUMMER_TYPE);
 		besonderes_Schaltkriterium_TypeEDataType = createEDataType(BESONDERES_SCHALTKRITERIUM_TYPE);
+		bezeichnung_Besondere_Anlage_TypeEDataType = createEDataType(BEZEICHNUNG_BESONDERE_ANLAGE_TYPE);
 		bf_Nr_TypeEDataType = createEDataType(BF_NR_TYPE);
 		enumAkustikAnbAnnObjectEDataType = createEDataType(ENUM_AKUSTIK_ANB_ANN_OBJECT);
 		enumAkustikSonstObjectEDataType = createEDataType(ENUM_AKUSTIK_SONST_OBJECT);
@@ -4070,6 +4279,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		ausfahrdruck_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bedienbarkeit_Anzeigefeld_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		besonderes_Schaltkriterium_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		bezeichnung_Besondere_Anlage_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bf_Kennung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bf_Nr_ANB_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bf_Nr_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -4082,6 +4292,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		hoA_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		iP_Adresse_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		koppelunterstation_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		kUs_Zeittelegramm_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		meldedruck_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		prioritaet_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		reaktivierungsfunktion_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -4103,7 +4314,9 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		zbS_Adresse_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		zbS_Anbindung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		zbS_Schnittstelle_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		zeitsynchronisation_Funkuhr_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		zlV_BusEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
+		zlV_Bus_Besondere_AnlageEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		zlV_Bus_Nr_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		zlV_Bus_US_ZuordnungEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		znEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
@@ -4148,6 +4361,9 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		initEClass(besonderes_Schaltkriterium_TypeClassEClass, Besonderes_Schaltkriterium_TypeClass.class, "Besonderes_Schaltkriterium_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBesonderes_Schaltkriterium_TypeClass_Wert(), this.getBesonderes_Schaltkriterium_Type(), "wert", null, 1, 1, Besonderes_Schaltkriterium_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(bezeichnung_Besondere_Anlage_TypeClassEClass, Bezeichnung_Besondere_Anlage_TypeClass.class, "Bezeichnung_Besondere_Anlage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBezeichnung_Besondere_Anlage_TypeClass_Wert(), this.getBezeichnung_Besondere_Anlage_Type(), "wert", null, 1, 1, Bezeichnung_Besondere_Anlage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(bf_Kennung_TypeClassEClass, Bf_Kennung_TypeClass.class, "Bf_Kennung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBf_Kennung_TypeClass_Wert(), this.getENUMBfKennungObject(), "wert", null, 1, 1, Bf_Kennung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4183,6 +4399,9 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 
 		initEClass(koppelunterstation_TypeClassEClass, Koppelunterstation_TypeClass.class, "Koppelunterstation_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKoppelunterstation_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Koppelunterstation_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(kUs_Zeittelegramm_TypeClassEClass, KUs_Zeittelegramm_TypeClass.class, "KUs_Zeittelegramm_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKUs_Zeittelegramm_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, KUs_Zeittelegramm_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(meldedruck_TypeClassEClass, Meldedruck_TypeClass.class, "Meldedruck_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMeldedruck_TypeClass_Wert(), theBasisTypenPackage.getWirkrichtung_Type(), "wert", null, 1, 1, Meldedruck_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4263,13 +4482,26 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		initEClass(zbS_Schnittstelle_TypeClassEClass, ZBS_Schnittstelle_TypeClass.class, "ZBS_Schnittstelle_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getZBS_Schnittstelle_TypeClass_Wert(), this.getENUMZBSSchnittstelleObject(), "wert", null, 1, 1, ZBS_Schnittstelle_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(zeitsynchronisation_Funkuhr_TypeClassEClass, Zeitsynchronisation_Funkuhr_TypeClass.class, "Zeitsynchronisation_Funkuhr_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getZeitsynchronisation_Funkuhr_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Zeitsynchronisation_Funkuhr_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(zlV_BusEClass, ZLV_Bus.class, "ZLV_Bus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getZLV_Bus_Bezeichnung(), this.getZLV_Bus_Bezeichnung_AttributeGroup(), null, "bezeichnung", null, 1, 1, ZLV_Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZLV_Bus_ZLVBusAllg(), this.getZLV_Bus_Allg_AttributeGroup(), null, "zLVBusAllg", null, 1, 1, ZLV_Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zlV_Bus_Allg_AttributeGroupEClass, ZLV_Bus_Allg_AttributeGroup.class, "ZLV_Bus_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getZLV_Bus_Allg_AttributeGroup_UnterstationMax(), this.getUnterstation_Max_TypeClass(), null, "unterstationMax", null, 1, 1, ZLV_Bus_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getZLV_Bus_Allg_AttributeGroup_ZLVBusNr(), this.getZLV_Bus_Nr_TypeClass(), null, "zLVBusNr", null, 1, 1, ZLV_Bus_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZLV_Bus_Allg_AttributeGroup_ZNModem(), this.getZN_Modem_TypeClass(), null, "zNModem", null, 1, 1, ZLV_Bus_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(zlV_Bus_Besondere_AnlageEClass, ZLV_Bus_Besondere_Anlage.class, "ZLV_Bus_Besondere_Anlage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getZLV_Bus_Besondere_Anlage_Bezeichnung(), this.getZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup(), null, "bezeichnung", null, 1, 1, ZLV_Bus_Besondere_Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZLV_Bus_Besondere_Anlage_IDZLVBus(), this.getZLV_Bus(), null, "iDZLVBus", null, 1, 1, ZLV_Bus_Besondere_Anlage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupEClass, ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup.class, "ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup_BezeichnungBesondereAnlage(), this.getBezeichnung_Besondere_Anlage_TypeClass(), null, "bezeichnungBesondereAnlage", null, 1, 1, ZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(zlV_Bus_Bezeichnung_AttributeGroupEClass, ZLV_Bus_Bezeichnung_AttributeGroup.class, "ZLV_Bus_Bezeichnung_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getZLV_Bus_Bezeichnung_AttributeGroup_ZLVBusNr(), this.getZLV_Bus_Nr_TypeClass(), null, "zLVBusNr", null, 1, 1, ZLV_Bus_Bezeichnung_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zlV_Bus_Nr_TypeClassEClass, ZLV_Bus_Nr_TypeClass.class, "ZLV_Bus_Nr_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getZLV_Bus_Nr_TypeClass_Wert(), this.getZLV_Bus_Nr_Type(), "wert", null, 1, 1, ZLV_Bus_Nr_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4395,16 +4627,16 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		initEReference(getZN_Telegramm_85_Zuordnung_Telegramm85EinzelneFstr(), this.getTelegramm_85_Einzelne_Fstr_AttributeGroup(), null, "telegramm85EinzelneFstr", null, 0, 1, ZN_Telegramm_85_Zuordnung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zN_UnterstationEClass, ZN_Unterstation.class, "ZN_Unterstation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getZN_Unterstation_IDGEOPunkt(), theGeodatenPackage.getGEO_Punkt(), null, "iDGEOPunkt", null, 0, 1, ZN_Unterstation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getZN_Unterstation_IDStreckePunkt(), theGeodatenPackage.getStrecke_Punkt(), null, "iDStreckePunkt", null, 0, -1, ZN_Unterstation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZN_Unterstation_IDZNZBS(), this.getZN_ZBS(), null, "iDZNZBS", null, 0, 1, ZN_Unterstation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZN_Unterstation_ZNUnterstationAllg(), this.getZN_Unterstation_Allg_AttributeGroup(), null, "zNUnterstationAllg", null, 1, 1, ZN_Unterstation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zN_Unterstation_Allg_AttributeGroupEClass, ZN_Unterstation_Allg_AttributeGroup.class, "ZN_Unterstation_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getZN_Unterstation_Allg_AttributeGroup_BfKennung(), this.getBf_Kennung_TypeClass(), null, "bfKennung", null, 1, 1, ZN_Unterstation_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZN_Unterstation_Allg_AttributeGroup_Koppelunterstation(), this.getKoppelunterstation_TypeClass(), null, "koppelunterstation", null, 1, 1, ZN_Unterstation_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZN_Unterstation_Allg_AttributeGroup_KUsZeittelegramm(), this.getKUs_Zeittelegramm_TypeClass(), null, "kUsZeittelegramm", null, 0, 1, ZN_Unterstation_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZN_Unterstation_Allg_AttributeGroup_ZBSAdresse(), this.getZBS_Adresse_TypeClass(), null, "zBSAdresse", null, 0, 1, ZN_Unterstation_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZN_Unterstation_Allg_AttributeGroup_ZBSAnbindung(), this.getZBS_Anbindung_TypeClass(), null, "zBSAnbindung", null, 1, 1, ZN_Unterstation_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZN_Unterstation_Allg_AttributeGroup_ZeitsynchronisationFunkuhr(), this.getZeitsynchronisation_Funkuhr_TypeClass(), null, "zeitsynchronisationFunkuhr", null, 0, 1, ZN_Unterstation_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getZN_Unterstation_Allg_AttributeGroup_ZNUnterstationBfNr(), this.getZN_Unterstation_Bf_Nr_AttributeGroup(), null, "zNUnterstationBfNr", null, 1, -1, ZN_Unterstation_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zN_Unterstation_Bf_Nr_AttributeGroupEClass, ZN_Unterstation_Bf_Nr_AttributeGroup.class, "ZN_Unterstation_Bf_Nr_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4414,11 +4646,8 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 
 		initEClass(zN_ZBSEClass, org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS.class, "ZN_ZBS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getZN_ZBS_IDESTWZentraleinheit(), theAnsteuerung_ElementPackage.getESTW_Zentraleinheit(), null, "iDESTWZentraleinheit", null, 0, 1, org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getZN_ZBS_ZNZBSAllg(), this.getZN_ZBS_Allg_AttributeGroup(), null, "zNZBSAllg", null, 1, 1, org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(zN_ZBS_Allg_AttributeGroupEClass, ZN_ZBS_Allg_AttributeGroup.class, "ZN_ZBS_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getZN_ZBS_Allg_AttributeGroup_IPAdresse(), this.getIP_Adresse_TypeClass(), null, "iPAdresse", null, 0, 1, ZN_ZBS_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getZN_ZBS_Allg_AttributeGroup_ZBSSchnittstelle(), this.getZBS_Schnittstelle_TypeClass(), null, "zBSSchnittstelle", null, 1, 1, ZN_ZBS_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZN_ZBS_IPAdresse(), this.getIP_Adresse_TypeClass(), null, "iPAdresse", null, 0, 1, org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZN_ZBS_ZBSSchnittstelle(), this.getZBS_Schnittstelle_TypeClass(), null, "zBSSchnittstelle", null, 0, 1, org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZN_ZBS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zugvorbereitungsmeldung_TypeClassEClass, Zugvorbereitungsmeldung_TypeClass.class, "Zugvorbereitungsmeldung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getZugvorbereitungsmeldung_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Zugvorbereitungsmeldung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4433,11 +4662,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		addEEnumLiteral(enumAkustikSonstEEnum, ENUMAkustikSonst.ENUM_AKUSTIK_SONST_KEINE);
 
 		initEEnum(enumBfKennungEEnum, ENUMBfKennung.class, "ENUMBfKennung");
-		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_0);
-		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_1);
-		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_2);
-		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_3);
-		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_4);
+		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_20);
+		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_21);
+		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_22);
+		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_23);
+		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_24);
+		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_50);
+		addEEnumLiteral(enumBfKennungEEnum, ENUMBfKennung.ENUM_BF_KENNUNG_51);
 
 		initEEnum(enumFunktionalitaetAnzeigefeldEEnum, ENUMFunktionalitaetAnzeigefeld.class, "ENUMFunktionalitaetAnzeigefeld");
 		addEEnumLiteral(enumFunktionalitaetAnzeigefeldEEnum, ENUMFunktionalitaetAnzeigefeld.ENUM_FUNKTIONALITAET_ANZEIGEFELD_ANBIETE_ANNAHMEFELD);
@@ -4449,7 +4680,6 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		addEEnumLiteral(enumFunktionalitaetAnzeigefeldEEnum, ENUMFunktionalitaetAnzeigefeld.ENUM_FUNKTIONALITAET_ANZEIGEFELD_WANDELFELD);
 
 		initEEnum(enumzbsSchnittstelleEEnum, ENUMZBSSchnittstelle.class, "ENUMZBSSchnittstelle");
-		addEEnumLiteral(enumzbsSchnittstelleEEnum, ENUMZBSSchnittstelle.ENUMZBS_SCHNITTSTELLE_COMSERVER);
 		addEEnumLiteral(enumzbsSchnittstelleEEnum, ENUMZBSSchnittstelle.ENUMZBS_SCHNITTSTELLE_LOGEM_LGM_28_8D1);
 		addEEnumLiteral(enumzbsSchnittstelleEEnum, ENUMZBSSchnittstelle.ENUMZBS_SCHNITTSTELLE_NOKIA_ECM_FAST_14400);
 		addEEnumLiteral(enumzbsSchnittstelleEEnum, ENUMZBSSchnittstelle.ENUMZBS_SCHNITTSTELLE_NOKIA_ECM_FAST_19200);
@@ -4482,18 +4712,19 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		addEEnumLiteral(enumznModemEEnum, ENUMZNModem.ENUMZN_MODEM_SONSTIGE);
 
 		initEEnum(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.class, "ENUMZNSchaltkriterium");
-		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_KEIN);
-		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL);
-		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL);
-		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_SONSTIGE);
 		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN);
 		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_GLEIS_BELEGEN_UND_DAVOR_FREIFAHREN);
 		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_GLEIS_FREIFAHREN);
+		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_KEIN);
 		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_MANUELL);
+		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_HAUPTSIGNAL);
+		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_SIGNALHALTFALL_RANGIERSIGNAL);
+		addEEnumLiteral(enumznSchaltkriteriumEEnum, ENUMZNSchaltkriterium.ENUMZN_SCHALTKRITERIUM_SONSTIGE);
 
 		// Initialize data types
 		initEDataType(anschlussnummer_TypeEDataType, BigInteger.class, "Anschlussnummer_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(besonderes_Schaltkriterium_TypeEDataType, String.class, "Besonderes_Schaltkriterium_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(bezeichnung_Besondere_Anlage_TypeEDataType, String.class, "Bezeichnung_Besondere_Anlage_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(bf_Nr_TypeEDataType, BigInteger.class, "Bf_Nr_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumAkustikAnbAnnObjectEDataType, ENUMAkustikAnbAnn.class, "ENUMAkustikAnbAnnObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumAkustikSonstObjectEDataType, ENUMAkustikSonst.class, "ENUMAkustikSonstObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -4538,7 +4769,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (getTelegramm_84_Alle_Fstr_AttributeGroup_IDZLVBus(),
@@ -4601,16 +4832,34 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "documentation", "Anzahl der maximal auf einen ZLV-Bus anschlie\u00dfbaren Unterstationen. Die Anzahl h\u00e4ngt von der L\u00e4nge, der Qualit\u00e4t und des Umfangs der Telegramme ab. Nach Ril sind in der Regel maximal 10 Unterstationen pro ZLV-Bus zu planen. DB-Regelwerk 819.0731 5 (12) 819.0731 5 (13) "
 		   });
 		addAnnotation
-		  (getZLV_Bus_Allg_AttributeGroup_ZLVBusNr(),
-		   source,
-		   new String[] {
-			   "documentation", "Nummer des ZLV-Busses. Jeder ZLV-Bus hat eine ihn identifizierende Nummer, die zentral festgelegt wird. Zuk\u00fcnftig wird die Nummer vierstellig angegeben; die ersten beiden Ziffern geben die Region an. Damit ist jeder ZLV-Bus bereits anhand seiner Nummer eindeutig in der Region identifizierbar. Bei BZ-\u00fcbergreifenden ZLV-Bussen wird der BZ-Code nach Ril 100.0001A01 der ZLV-Bus-Nummer vorangestellt, getrennt durch einen Schr\u00e4gstrich. Der BZ-Code wird aus dem Verweis auf die Bedien Zentrale generiert. DB-Regelwerk 100.0001A01 819.0731 5 (14) "
-		   });
-		addAnnotation
 		  (getZLV_Bus_Allg_AttributeGroup_ZNModem(),
 		   source,
 		   new String[] {
 			   "documentation", "Modem, welches die Verbindung zwischen ZN Unterstation und ZLV-Bus f\u00fcr die Datenkommunikation herstellt. Je ZLV-Bus ist nur eine Modembauart zul\u00e4ssig. F\u00fcr Neuanlagen ist das Modem der Bauart LOGEM 1200 MD oder LineRunner SCADA NG zu verwenden. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. DB-Regelwerk 819.0731A04 1 "
+		   });
+		addAnnotation
+		  (zlV_Bus_Besondere_AnlageEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Besondere Anlage, die an einen ZLV-Bus angeschlossen ist."
+		   });
+		addAnnotation
+		  (getZLV_Bus_Besondere_Anlage_IDZLVBus(),
+		   source,
+		   new String[] {
+			   "documentation", "Verweis auf den ZLV-Bus, an den die Besondere Anlage angeschlossen ist."
+		   });
+		addAnnotation
+		  (getZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup_BezeichnungBesondereAnlage(),
+		   source,
+		   new String[] {
+			   "documentation", "Bezeichnung der besonderen Anlage, die Informationen \u00fcber den ZLV-Bus empf\u00e4ngt bzw. sendet."
+		   });
+		addAnnotation
+		  (getZLV_Bus_Bezeichnung_AttributeGroup_ZLVBusNr(),
+		   source,
+		   new String[] {
+			   "documentation", "Nummer des ZLV-Busses. Jeder ZLV-Bus hat eine ihn identifizierende Nummer, die zentral festgelegt wird. Zuk\u00fcnftig wird die Nummer vierstellig angegeben; die ersten beiden Ziffern geben die Region an. Damit ist jeder ZLV-Bus bereits anhand seiner Nummer eindeutig in der Region identifizierbar. Bei BZ-\u00fcbergreifenden ZLV-Bussen wird der BZ-Code nach Ril 100.0001A01 der ZLV-Bus-Nummer vorangestellt, getrennt durch einen Schr\u00e4gstrich. Der BZ-Code wird aus dem Verweis auf die Bedien Zentrale generiert. DB-Regelwerk 100.0001A01 819.0731 5 (14) "
 		   });
 		addAnnotation
 		  (zlV_Bus_US_ZuordnungEClass,
@@ -4970,7 +5219,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (getZN_Fortschalt_Kriterium_IDZNFortschaltKritZiel(),
 		   source,
 		   new String[] {
-			   "documentation", "Verweis auf das ZN Anzeigefeld in der Bedienoberfl\u00e4che, in das die Zugnummer fortgeschaltet wird. "
+			   "documentation", "Verweis auf das ZN Anzeigefeld in der Bedienoberfl\u00e4che, in das die Zugnummer fortgeschaltet wird. Die Angabe erfolgt nur bei besonderen Schaltkriterien. Eine Fortschaltung ist in mehrere Richtungen m\u00f6glich."
 		   });
 		addAnnotation
 		  (zN_Telegramm_84_ZuordnungEClass,
@@ -5009,18 +5258,6 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "documentation", "Verbindung zwischen ZN und ZLV Bus und/oder ZN ZBS. \u00dcber Modems wird die ZN an einen oder mehrere ZLV-Busse und ggf. an eine ZBS (Verbindung zu einer Bedien Zentrale) angebunden. Die Attributgruppe ZN_Unterstation_Bf_Nr kann mehrfach eingebunden werden. Damit werden alle Betriebsstellen, die ZN-seitig \u00fcber diese Unterstation verwaltet bzw \"angesprochen\" werden, beschrieben. Der ZN-seitigen Bahnhofsnummer wird eine \u00d6rtlichkeit (Ril-100-Bezeichner der zugewiesenen Betriebsstelle) und ggf. eine Priorit\u00e4t zugeordnet. Letztere wird nur f\u00fcr diejenige Bahnhosnummer angegeben, die f\u00fcr die Kommunikation der ZN_Unterstation mit dem ZLV-Bus ma\u00dfgebend ist. In allen anderen F\u00e4llen wird das Attribut nicht bef\u00fcllt. Die Darstellung erfolgt auf dem ZLV-Bus-\u00dcbersichtsplan als tabellarischer Block mit den Zeilen \\u0026lt;Bf-Nr\\u0026gt; \\u0026lt;Oertlichkeit_Abkuerzung\\u0026gt; in dem Symbol f\u00fcr die ZN_Unterstation. Die Bahnhofsnummer mit Priorit\u00e4t wird direkt neben dem ZLV-Bus-Anschluss angeordnet. DB-Regelwerk 819.0731 5 Die Darstellung der Angaben erfolgt im ZLV-Bus-\u00dcbersichtsplan nach 819.0731 A01 "
 		   });
 		addAnnotation
-		  (getZN_Unterstation_IDGEOPunkt(),
-		   source,
-		   new String[] {
-			   "documentation", "Positionierung der ZN-Unterstation(en) auf dem ZLV-Bus-\u00dcbersichtsplan. Gegenw\u00e4rtig ist noch in Kl\u00e4rung, ob der Verweis auf Strecke Punkt oder dieser Verweis die bessere L\u00f6sung darstellt. DB-Regelwerk Darstellung auf dem ZLV-Bus-\u00dcbersichtsplan. "
-		   });
-		addAnnotation
-		  (getZN_Unterstation_IDStreckePunkt(),
-		   source,
-		   new String[] {
-			   "documentation", "Verweis auf einen Streckenpunkt zur geordneten Darstellung der ZN-Unterstationen auf dem ZLV-Bus-\u00dcbersichtsplan. Gegenw\u00e4rtig ist noch in Kl\u00e4rung, ob der Verweis auf GEO Punkt oder dieser Verweis die bessere L\u00f6sung darstellt. "
-		   });
-		addAnnotation
 		  (getZN_Unterstation_IDZNZBS(),
 		   source,
 		   new String[] {
@@ -5030,13 +5267,19 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (getZN_Unterstation_Allg_AttributeGroup_BfKennung(),
 		   source,
 		   new String[] {
-			   "documentation", "Angabe der Bahnhofskennung. In BZ-Bereichen kann die Vergabe von gleichen Bahnhofsadressen nicht ausgeschlossen werden. Es sind daher Bereiche mit eindeutiger Bahnhofsadresse festzulegen und zur Unterscheidung von Nachbarbereichen mit einer Bahnhofskennung zu markieren. Die Fehlnummernbereiche werden automatisch in Abh\u00e4ngigkeit der Bahnhofskennung gebildet (siehe Ril 819.0731A03 (3)). Dies gilt f\u00fcr alle Bauarten der ZN. DB-Regelwerk 819.0731A03 (3) "
+			   "documentation", "Angabe der Bahnhofskennung. Die erste Ziffer gibt die Basis f\u00fcr die Bestimmung der Fehlnummernbereiche an (2 = 20, 5 = 50). In BZ-Bereichen kann die Vergabe von gleichen Bahnhofsadressen nicht ausgeschlossen werden. Es sind daher Bereiche mit eindeutiger Bahnhofsadresse festzulegen und zur Unterscheidung von Nachbarbereichen mit einer Bahnhofskennung zu markieren. Die Fehlnummernbereiche werden automatisch in Abh\u00e4ngigkeit der Bahnhofskennung gebildet (siehe Ril 819.0731A03 (3)). Dies gilt f\u00fcr alle Bauarten der ZN. DB-Regelwerk 819.0731A03 (3) "
 		   });
 		addAnnotation
 		  (getZN_Unterstation_Allg_AttributeGroup_Koppelunterstation(),
 		   source,
 		   new String[] {
 			   "documentation", "Angabe, ob es sich um eine Koppelunterstation handelt. Bei einer Koppelunterstation treffen ein oder mehrere ZLV-Bus-Leitungen sowie eine ZBS zusammen. Eine Koppelunterstation hat somit immer eine Anbindung an die Betriebszentrale (BZ). Eine Unterstation hat eine oder mehrere Anbindung(en) an einen ZLV-Bus. DB-Regelwerk F\u00fcr das Planungsdatum gibt es im Regelwerk der DB AG keine konkrete Vorgabe. Die Art der Unterstation ergibt sich aus dem ZLV-Bus-Konzept, welches die DB AG erstellt. 819.0731 5 (17). Koppelunterstationen erhalten eine ZBS-Anbindung. 819.0731 8 (1), 819.0731 8 (2), 819.0731 9 (7), 819.0731 A05. "
+		   });
+		addAnnotation
+		  (getZN_Unterstation_Allg_AttributeGroup_KUsZeittelegramm(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe, ob die Koppelunterstation (KUs) zur Zeitsynchronisation ein Zeittelegramm auf den ZLV-Bus sendet (true) oder nicht (false). Sind zwei\nKUs an einem ZLV-Bus angeschlossen, so darf jeweils nur eine KUs ein Zeittelegramm auf den ZLV-Bus senden. DB-Regelwerk 819.0731 5 (22)"
 		   });
 		addAnnotation
 		  (getZN_Unterstation_Allg_AttributeGroup_ZBSAdresse(),
@@ -5051,10 +5294,16 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "documentation", "Die Unterstation erh\u00e4lt eine ZBS-Anbindung. DB-Regelwerk 819.0731 8 (1) 819.0731 8 (2) 819.0731 9 (7) 819.0731A05 "
 		   });
 		addAnnotation
+		  (getZN_Unterstation_Allg_AttributeGroup_ZeitsynchronisationFunkuhr(),
+		   source,
+		   new String[] {
+			   "documentation", "Angabe, ob eine Zeitsynchronisation \u00fcber Funkuhr zu projektieren is (true). Bei Benutzung der Funkuhr darf keine Zeitsynchronisation \u00fcber den ZLV-Bus (Telegramm 80) oder \u00fcber Network-Time-Protocol (ntp) erfolgen. Der Wert \"false\" wird nicht verwendet. DB-Regelwerk Ril 819.0731 2 (4)"
+		   });
+		addAnnotation
 		  (getZN_Unterstation_Bf_Nr_AttributeGroup_BfNr(),
 		   source,
 		   new String[] {
-			   "documentation", "Angabe der Bahnhofsadresse zur eindeutigen Identifikation einer Betriebsstelle. Zur eindeutigen Identifikation einer Betriebsstelle auf dem ZLV-Bus ist eine Bahnhofsadresse festzulegen. Die Bahnhofsadresse muss im Bereich der angrenzenden ZLV-Busse eindeutig sein. Bei der Verwendung von Bahnhosadressen in Bereichen mit (Koppel-/Mehrfach-)Unterstation (siehe ZN Unterstation Art) sind besondere Randbedingungen zu beachten. DB-Regelwerk 819.0731 5 (3) 819.0731 5 (4) Bei Bereichen mit (K/M)-Unterstationen: 819.0731 5 (5) - (7) "
+			   "documentation", "Angabe der Bahnhofsnummer zur eindeutigen Identifikation einer Betriebsstelle auf dem ZLV-Bus. Die Bahnhofsnummer muss im Bereich der angrenzenden ZLV-Busse eindeutig sein. Bei der Verwendung von Bahnhosnummern in Bereichen mit (Koppel-/Mehrfach-)Unterstation (siehe ZN Unterstation Art) sind besondere Randbedingungen zu beachten. DB-Regelwerk 819.0731 5 (3) 819.0731 5 (4) Bei Bereichen mit (K/M)-Unterstationen: 819.0731 5 (5) - (7)"
 		   });
 		addAnnotation
 		  (getZN_Unterstation_Bf_Nr_AttributeGroup_IDOertlichkeit(),
@@ -5081,13 +5330,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "documentation", "Verweis auf den Ort der r\u00e4umlichen Unterbringung der Koppelunterstation "
 		   });
 		addAnnotation
-		  (getZN_ZBS_Allg_AttributeGroup_IPAdresse(),
+		  (getZN_ZBS_IPAdresse(),
 		   source,
 		   new String[] {
 			   "documentation", "IP_Adresse des COM-Servers gem\u00e4\u00df Ril 819.0705. Der Planungsfall tritt ein, wenn eine ZBS-Verbindung zwischen ZN Unterstation und BZ zu planen ist. DB-Regelwerk 819.0731A05 819.0705 "
 		   });
 		addAnnotation
-		  (getZN_ZBS_Allg_AttributeGroup_ZBSSchnittstelle(),
+		  (getZN_ZBS_ZBSSchnittstelle(),
 		   source,
 		   new String[] {
 			   "documentation", "Modem, welches die Verbindung zwischen ZN Unterstation und ZBS f\u00fcr die Datenkommunikation herstellt. Bei Auswahl von \"sonstige\" ist ein Bearbeitungsvermerk mit entsprechenden Erl\u00e4uterungen anzuf\u00fcgen. DB-Regelwerk 819.0731A04 2 "
@@ -5223,6 +5472,27 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		   });
 		addAnnotation
 		  (getBesonderes_Schaltkriterium_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (bezeichnung_Besondere_Anlage_TypeEDataType,
+		   source,
+		   new String[] {
+			   "name", "TBezeichnung_Besondere_Anlage",
+			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TText"
+		   });
+		addAnnotation
+		  (bezeichnung_Besondere_Anlage_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCBezeichnung_Besondere_Anlage",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getBezeichnung_Besondere_Anlage_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -5524,6 +5794,20 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		   });
 		addAnnotation
 		  (getKoppelunterstation_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
+		  (kUs_Zeittelegramm_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCKUs_Zeittelegramm",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getKUs_Zeittelegramm_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -5844,7 +6128,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		   new String[] {
 			   "name", "TUnterstation_Nr",
 			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TZeichenkette",
-			   "pattern", "[1-9]|[1-3][0-9]{0,1}|40"
+			   "pattern", "0[1-9]|[1-3][0-9]|40"
 		   });
 		addAnnotation
 		  (unterstation_Nr_TypeClassEClass,
@@ -5946,11 +6230,32 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (zeitsynchronisation_Funkuhr_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCZeitsynchronisation_Funkuhr",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getZeitsynchronisation_Funkuhr_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (zlV_BusEClass,
 		   source,
 		   new String[] {
 			   "name", "CZLV_Bus",
 			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getZLV_Bus_Bezeichnung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Bezeichnung"
 		   });
 		addAnnotation
 		  (getZLV_Bus_ZLVBusAllg(),
@@ -5974,13 +6279,6 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "name", "Unterstation_Max"
 		   });
 		addAnnotation
-		  (getZLV_Bus_Allg_AttributeGroup_ZLVBusNr(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "ZLV_Bus_Nr"
-		   });
-		addAnnotation
 		  (getZLV_Bus_Allg_AttributeGroup_ZNModem(),
 		   source,
 		   new String[] {
@@ -5988,12 +6286,61 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "name", "ZN_Modem"
 		   });
 		addAnnotation
+		  (zlV_Bus_Besondere_AnlageEClass,
+		   source,
+		   new String[] {
+			   "name", "CZLV_Bus_Besondere_Anlage",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getZLV_Bus_Besondere_Anlage_Bezeichnung(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Bezeichnung"
+		   });
+		addAnnotation
+		  (getZLV_Bus_Besondere_Anlage_IDZLVBus(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ID_ZLV_Bus"
+		   });
+		addAnnotation
+		  (zlV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroupEClass,
+		   source,
+		   new String[] {
+			   "name", "CZLV_Bus_Besondere_Anlage_Bezeichnung",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getZLV_Bus_Besondere_Anlage_Bezeichnung_AttributeGroup_BezeichnungBesondereAnlage(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Bezeichnung_Besondere_Anlage"
+		   });
+		addAnnotation
+		  (zlV_Bus_Bezeichnung_AttributeGroupEClass,
+		   source,
+		   new String[] {
+			   "name", "CZLV_Bus_Bezeichnung",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getZLV_Bus_Bezeichnung_AttributeGroup_ZLVBusNr(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "ZLV_Bus_Nr"
+		   });
+		addAnnotation
 		  (zlV_Bus_Nr_TypeEDataType,
 		   source,
 		   new String[] {
 			   "name", "TZLV_Bus_Nr",
 			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#integer",
-			   "pattern", "[1-9][0-9]?|1[0-9]{2}|2[0-4][0-9]|25[0-5]"
+			   "pattern", "[1-9][0-9]{0,3}"
 		   });
 		addAnnotation
 		  (zlV_Bus_Nr_TypeClassEClass,
@@ -6718,20 +7065,6 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (getZN_Unterstation_IDGEOPunkt(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "ID_GEO_Punkt"
-		   });
-		addAnnotation
-		  (getZN_Unterstation_IDStreckePunkt(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "ID_Strecke_Punkt"
-		   });
-		addAnnotation
 		  (getZN_Unterstation_IDZNZBS(),
 		   source,
 		   new String[] {
@@ -6767,6 +7100,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "name", "Koppelunterstation"
 		   });
 		addAnnotation
+		  (getZN_Unterstation_Allg_AttributeGroup_KUsZeittelegramm(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "KUs_Zeittelegramm"
+		   });
+		addAnnotation
 		  (getZN_Unterstation_Allg_AttributeGroup_ZBSAdresse(),
 		   source,
 		   new String[] {
@@ -6779,6 +7119,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		   new String[] {
 			   "kind", "element",
 			   "name", "ZBS_Anbindung"
+		   });
+		addAnnotation
+		  (getZN_Unterstation_Allg_AttributeGroup_ZeitsynchronisationFunkuhr(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Zeitsynchronisation_Funkuhr"
 		   });
 		addAnnotation
 		  (getZN_Unterstation_Allg_AttributeGroup_ZNUnterstationBfNr(),
@@ -6830,28 +7177,14 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "name", "ID_ESTW_Zentraleinheit"
 		   });
 		addAnnotation
-		  (getZN_ZBS_ZNZBSAllg(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "ZN_ZBS_Allg"
-		   });
-		addAnnotation
-		  (zN_ZBS_Allg_AttributeGroupEClass,
-		   source,
-		   new String[] {
-			   "name", "CZN_ZBS_Allg",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getZN_ZBS_Allg_AttributeGroup_IPAdresse(),
+		  (getZN_ZBS_IPAdresse(),
 		   source,
 		   new String[] {
 			   "kind", "element",
 			   "name", "IP_Adresse"
 		   });
 		addAnnotation
-		  (getZN_ZBS_Allg_AttributeGroup_ZBSSchnittstelle(),
+		  (getZN_ZBS_ZBSSchnittstelle(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -6885,7 +7218,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (zlV_BusEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZLV-Bus</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getZLV_Bus_Allg_AttributeGroup_UnterstationMax(),
@@ -6894,34 +7227,40 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..40] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
-		  (getZLV_Bus_Allg_AttributeGroup_ZLVBusNr(),
+		  (zlV_Bus_Besondere_AnlageEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..255] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZLV-Bus</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+		   });
+		addAnnotation
+		  (getZLV_Bus_Bezeichnung_AttributeGroup_ZLVBusNr(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..9999] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (zlV_Bus_US_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZLV-Bus</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getZLV_Bus_Zuordnung_Allg_AttributeGroup_UnterstationNr(),
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [1..40] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [01..40] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (znEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZLV-Bus</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (zN_AkustikEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZN|ZLV-Bus</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getZN_Allg_AttributeGroup_Einwahlstelle(),
@@ -6933,7 +7272,7 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (zN_AnzeigefeldEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getZN_Anzeigefeld_Allg_AttributeGroup_BedienbarkeitAnzeigefeld(),
@@ -6981,13 +7320,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (zN_Fortschalt_KriteriumEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (zN_Telegramm_84_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getZN_Telegramm_84_Zuordnung_Telegramm84Verzicht(),
@@ -6999,13 +7338,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (zN_Telegramm_85_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZN</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (zN_UnterstationEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZLV-Bus</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getZN_Unterstation_Allg_AttributeGroup_BfKennung(),
@@ -7020,6 +7359,12 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [A0..FF] hexadezimal, ohne AA und BB </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
+		  (getZN_Unterstation_Allg_AttributeGroup_ZeitsynchronisationFunkuhr(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>true</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+		   });
+		addAnnotation
 		  (getZN_Unterstation_Bf_Nr_AttributeGroup_BfNr(),
 		   source,
 		   new String[] {
@@ -7029,13 +7374,13 @@ public class ZugnummernmeldeanlagePackageImpl extends EPackageImpl implements Zu
 		  (zN_ZBSEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ZLV-Bus</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
-		  (getZN_ZBS_Allg_AttributeGroup_IPAdresse(),
+		  (getZN_ZBS_IPAdresse(),
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [7..15] gebildet aus vier maximal dreistelligen Zahlen, getrennt durch Punkte </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+			   "appinfo", "\r\n                             \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                                  \r\n    <Patternbeschreibung> [7..15] gebildet aus vier maximal dreistelligen Zahlen, getrennt durch Punkte </Patternbeschreibung>\r\n                               \r\n  </WorkflowInformation>\r\n                          \r\n"
 		   });
 	}
 

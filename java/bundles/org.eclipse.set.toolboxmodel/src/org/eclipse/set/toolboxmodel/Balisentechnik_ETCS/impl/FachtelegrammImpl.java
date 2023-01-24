@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,7 +17,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -27,7 +33,9 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_GNT_Merkmale_Attribut
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FT_ZBS_Merkmale_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Fachtelegramm;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Wirkrichtung_In_Datenpunkt_TypeClass;
-import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
+
+import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
 /**
@@ -69,7 +77,7 @@ public class FachtelegrammImpl extends Basis_ObjektImpl implements Fachtelegramm
 	 * @generated
 	 * @ordered
 	 */
-	protected Anhang iDDokuTelegrammkodierung;
+	protected Basis_Objekt iDDokuTelegrammkodierung;
 
 	/**
 	 * This is true if the ID Doku Telegrammkodierung reference has been set.
@@ -178,10 +186,10 @@ public class FachtelegrammImpl extends Basis_ObjektImpl implements Fachtelegramm
 	 * @generated
 	 */
 	@Override
-	public Anhang getIDDokuTelegrammkodierung() {
+	public Basis_Objekt getIDDokuTelegrammkodierung() {
 		if (iDDokuTelegrammkodierung != null && iDDokuTelegrammkodierung.eIsProxy()) {
 			InternalEObject oldIDDokuTelegrammkodierung = (InternalEObject)iDDokuTelegrammkodierung;
-			iDDokuTelegrammkodierung = (Anhang)eResolveProxy(oldIDDokuTelegrammkodierung);
+			iDDokuTelegrammkodierung = (Basis_Objekt)eResolveProxy(oldIDDokuTelegrammkodierung);
 			if (iDDokuTelegrammkodierung != oldIDDokuTelegrammkodierung) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.FACHTELEGRAMM__ID_DOKU_TELEGRAMMKODIERUNG, oldIDDokuTelegrammkodierung, iDDokuTelegrammkodierung));
@@ -195,7 +203,7 @@ public class FachtelegrammImpl extends Basis_ObjektImpl implements Fachtelegramm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anhang basicGetIDDokuTelegrammkodierung() {
+	public Basis_Objekt basicGetIDDokuTelegrammkodierung() {
 		return iDDokuTelegrammkodierung;
 	}
 
@@ -205,8 +213,8 @@ public class FachtelegrammImpl extends Basis_ObjektImpl implements Fachtelegramm
 	 * @generated
 	 */
 	@Override
-	public void setIDDokuTelegrammkodierung(Anhang newIDDokuTelegrammkodierung) {
-		Anhang oldIDDokuTelegrammkodierung = iDDokuTelegrammkodierung;
+	public void setIDDokuTelegrammkodierung(Basis_Objekt newIDDokuTelegrammkodierung) {
+		Basis_Objekt oldIDDokuTelegrammkodierung = iDDokuTelegrammkodierung;
 		iDDokuTelegrammkodierung = newIDDokuTelegrammkodierung;
 		boolean oldIDDokuTelegrammkodierungESet = iDDokuTelegrammkodierungESet;
 		iDDokuTelegrammkodierungESet = true;
@@ -221,7 +229,7 @@ public class FachtelegrammImpl extends Basis_ObjektImpl implements Fachtelegramm
 	 */
 	@Override
 	public void unsetIDDokuTelegrammkodierung() {
-		Anhang oldIDDokuTelegrammkodierung = iDDokuTelegrammkodierung;
+		Basis_Objekt oldIDDokuTelegrammkodierung = iDDokuTelegrammkodierung;
 		boolean oldIDDokuTelegrammkodierungESet = iDDokuTelegrammkodierungESet;
 		iDDokuTelegrammkodierung = null;
 		iDDokuTelegrammkodierungESet = false;
@@ -580,7 +588,7 @@ public class FachtelegrammImpl extends Basis_ObjektImpl implements Fachtelegramm
 				getFTFahrwegTeile().addAll((Collection<? extends FT_Fahrweg_Teile_AttributeGroup>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.FACHTELEGRAMM__ID_DOKU_TELEGRAMMKODIERUNG:
-				setIDDokuTelegrammkodierung((Anhang)newValue);
+				setIDDokuTelegrammkodierung((Basis_Objekt)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.FACHTELEGRAMM__WIRKRICHTUNG_IN_DATENPUNKT:
 				setWirkrichtungInDatenpunkt((Wirkrichtung_In_Datenpunkt_TypeClass)newValue);

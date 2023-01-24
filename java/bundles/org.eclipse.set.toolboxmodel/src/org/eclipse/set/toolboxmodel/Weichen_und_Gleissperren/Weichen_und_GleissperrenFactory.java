@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren;
 
@@ -29,6 +36,15 @@ public interface Weichen_und_GleissperrenFactory extends EFactory {
 	 * @generated
 	 */
 	Auffahrortung_TypeClass createAuffahrortung_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Austausch Antriebe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Austausch Antriebe Type Class</em>'.
+	 * @generated
+	 */
+	Austausch_Antriebe_TypeClass createAustausch_Antriebe_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Auswurfrichtung Type Class</em>'.
@@ -193,6 +209,15 @@ public interface Weichen_und_GleissperrenFactory extends EFactory {
 	Isolierfall_TypeClass createIsolierfall_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>Kr Kr WSeitenzuordnung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kr Kr WSeitenzuordnung Type Class</em>'.
+	 * @generated
+	 */
+	Kr_KrW_Seitenzuordnung_TypeClass createKr_KrW_Seitenzuordnung_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Kreuzung Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -218,6 +243,15 @@ public interface Weichen_und_GleissperrenFactory extends EFactory {
 	 * @generated
 	 */
 	Schutzschiene_TypeClass createSchutzschiene_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Stammgleis Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Stammgleis Type Class</em>'.
+	 * @generated
+	 */
+	Stammgleis_TypeClass createStammgleis_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Vorzugslage Automatik Type Class</em>'.

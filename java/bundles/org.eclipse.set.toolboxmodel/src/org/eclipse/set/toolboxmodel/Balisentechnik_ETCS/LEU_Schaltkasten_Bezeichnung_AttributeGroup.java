@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -26,7 +33,12 @@ public interface LEU_Schaltkasten_Bezeichnung_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Nummer des Schaltkastens, die der Bezeichnung der LEU-Anlage für die Bezeichnung des LEU-Schaltkastens angefügt wird.
+	 * Nummer des Schaltkastens, die der Bezeichnung der LEU-Anlage für die Bezeichnung des LEU-Schaltkastens angefügt wird. Wenn sich in einem LEU-Schaltkasten Module mehrerer LEU-Anlagen befinden, wird die Bezeichnung des LEU-Schaltkastens aus den Bezeichnungen gemäß vorheriger Regel für alle enthaltenen LEU-Anlagen  zusammengesetzt. 
+	 * Beispiel:
+	 * Bez. LEU-Anlage 1: A1
+	 * Bez. LEU-Anlage 2: A2
+	 * Nummer_Schaltkasten: 1
+	 * Bezeichnung Schaltkasten: A1.1, A2.1
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Nummer Schaltkasten</em>' containment reference.
 	 * @see #setNummerSchaltkasten(Nummer_Schaltkasten_TypeClass)

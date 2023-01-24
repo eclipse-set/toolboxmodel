@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.BasisTypen;
 
@@ -29,7 +36,7 @@ public interface Pruefsumme_TypeClass extends BasisAttribut_AttributeGroup {
 	 * @see #unsetWert()
 	 * @see #setWert(String)
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage#getPruefsumme_TypeClass_Wert()
-	 * @model unsettable="true" dataType="org.eclipse.set.toolboxmodel.BasisTypen.Pruefsumme_Type" required="true"
+	 * @model unsettable="true" dataType="org.eclipse.set.toolboxmodel.BasisTypen.Text_Type" required="true"
 	 *        extendedMetaData="kind='element' name='Wert'"
 	 * @generated
 	 */

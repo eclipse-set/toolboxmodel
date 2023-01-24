@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl;
 
@@ -10,13 +17,17 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Punkt_ObjektImpl;
+
 import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
+
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Besonderes_Fahrwegelement_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Entgleisungsschuh_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kreuzung_AttributeGroup;
@@ -33,6 +44,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_Attribut
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.W_Kr_Gsp_KomponenteImpl#getAustauschAntriebe <em>Austausch Antriebe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.W_Kr_Gsp_KomponenteImpl#getIDRegelzeichnung <em>ID Regelzeichnung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.W_Kr_Gsp_KomponenteImpl#getIDWKrGspElement <em>IDW Kr Gsp Element</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.W_Kr_Gsp_KomponenteImpl#getBesonderesFahrwegelement <em>Besonderes Fahrwegelement</em>}</li>
@@ -44,6 +56,16 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_Attribut
  * @generated
  */
 public class W_Kr_Gsp_KomponenteImpl extends Punkt_ObjektImpl implements W_Kr_Gsp_Komponente {
+	/**
+	 * The cached value of the '{@link #getAustauschAntriebe() <em>Austausch Antriebe</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAustauschAntriebe()
+	 * @generated
+	 * @ordered
+	 */
+	protected Austausch_Antriebe_TypeClass austauschAntriebe;
+
 	/**
 	 * The cached value of the '{@link #getIDRegelzeichnung() <em>ID Regelzeichnung</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -130,6 +152,51 @@ public class W_Kr_Gsp_KomponenteImpl extends Punkt_ObjektImpl implements W_Kr_Gs
 	@Override
 	protected EClass eStaticClass() {
 		return Weichen_und_GleissperrenPackage.Literals.WKR_GSP_KOMPONENTE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Austausch_Antriebe_TypeClass getAustauschAntriebe() {
+		return austauschAntriebe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAustauschAntriebe(Austausch_Antriebe_TypeClass newAustauschAntriebe, NotificationChain msgs) {
+		Austausch_Antriebe_TypeClass oldAustauschAntriebe = austauschAntriebe;
+		austauschAntriebe = newAustauschAntriebe;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE, oldAustauschAntriebe, newAustauschAntriebe);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAustauschAntriebe(Austausch_Antriebe_TypeClass newAustauschAntriebe) {
+		if (newAustauschAntriebe != austauschAntriebe) {
+			NotificationChain msgs = null;
+			if (austauschAntriebe != null)
+				msgs = ((InternalEObject)austauschAntriebe).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE, null, msgs);
+			if (newAustauschAntriebe != null)
+				msgs = ((InternalEObject)newAustauschAntriebe).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE, null, msgs);
+			msgs = basicSetAustauschAntriebe(newAustauschAntriebe, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE, newAustauschAntriebe, newAustauschAntriebe));
 	}
 
 	/**
@@ -400,6 +467,8 @@ public class W_Kr_Gsp_KomponenteImpl extends Punkt_ObjektImpl implements W_Kr_Gs
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE:
+				return basicSetAustauschAntriebe(null, msgs);
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__BESONDERES_FAHRWEGELEMENT:
 				return basicSetBesonderesFahrwegelement(null, msgs);
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__ENTGLEISUNGSSCHUH:
@@ -421,6 +490,8 @@ public class W_Kr_Gsp_KomponenteImpl extends Punkt_ObjektImpl implements W_Kr_Gs
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE:
+				return getAustauschAntriebe();
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__ID_REGELZEICHNUNG:
 				return getIDRegelzeichnung();
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__IDW_KR_GSP_ELEMENT:
@@ -448,6 +519,9 @@ public class W_Kr_Gsp_KomponenteImpl extends Punkt_ObjektImpl implements W_Kr_Gs
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE:
+				setAustauschAntriebe((Austausch_Antriebe_TypeClass)newValue);
+				return;
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__ID_REGELZEICHNUNG:
 				getIDRegelzeichnung().clear();
 				getIDRegelzeichnung().addAll((Collection<? extends Regelzeichnung>)newValue);
@@ -481,6 +555,9 @@ public class W_Kr_Gsp_KomponenteImpl extends Punkt_ObjektImpl implements W_Kr_Gs
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE:
+				setAustauschAntriebe((Austausch_Antriebe_TypeClass)null);
+				return;
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__ID_REGELZEICHNUNG:
 				getIDRegelzeichnung().clear();
 				return;
@@ -513,6 +590,8 @@ public class W_Kr_Gsp_KomponenteImpl extends Punkt_ObjektImpl implements W_Kr_Gs
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE:
+				return austauschAntriebe != null;
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__ID_REGELZEICHNUNG:
 				return iDRegelzeichnung != null && !iDRegelzeichnung.isEmpty();
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__IDW_KR_GSP_ELEMENT:

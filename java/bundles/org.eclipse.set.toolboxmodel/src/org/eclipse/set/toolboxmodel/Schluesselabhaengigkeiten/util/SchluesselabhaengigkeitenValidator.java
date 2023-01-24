@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.util;
 
@@ -162,10 +169,12 @@ public class SchluesselabhaengigkeitenValidator extends EObjectValidator {
 				return validateSchluessel_In_Grdst_Eingeschl_TypeClass((Schluessel_In_Grdst_Eingeschl_TypeClass)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.SCHLUESSELSPERRE:
 				return validateSchluesselsperre((Schluesselsperre)value, diagnostics, context);
+			case SchluesselabhaengigkeitenPackage.SONDERANLAGE_LAGE_TYPE_CLASS:
+				return validateSonderanlage_Lage_TypeClass((Sonderanlage_Lage_TypeClass)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.TECHNISCH_BERECHTIGTER_TYPE_CLASS:
 				return validateTechnisch_Berechtigter_TypeClass((Technisch_Berechtigter_TypeClass)value, diagnostics, context);
-			case SchluesselabhaengigkeitenPackage.VERSCHLUSS_HERZSTUECK_TYPE_CLASS:
-				return validateVerschluss_Herzstueck_TypeClass((Verschluss_Herzstueck_TypeClass)value, diagnostics, context);
+			case SchluesselabhaengigkeitenPackage.VERSCHLUSS_ORT_TYPE_CLASS:
+				return validateVerschluss_Ort_TypeClass((Verschluss_Ort_TypeClass)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.WANBAULAGE_TYPE_CLASS:
 				return validateW_Anbaulage_TypeClass((W_Anbaulage_TypeClass)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.WLAGE_TYPE_CLASS:
@@ -182,6 +191,10 @@ public class SchluesselabhaengigkeitenValidator extends EObjectValidator {
 				return validateENUMSchluesselBartform((ENUMSchluesselBartform)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.ENUM_SCHLUESSEL_GRUPPE:
 				return validateENUMSchluesselGruppe((ENUMSchluesselGruppe)value, diagnostics, context);
+			case SchluesselabhaengigkeitenPackage.ENUM_SONDERANLAGE_LAGE:
+				return validateENUMSonderanlageLage((ENUMSonderanlageLage)value, diagnostics, context);
+			case SchluesselabhaengigkeitenPackage.ENUM_VERSCHLUSS_ORT:
+				return validateENUMVerschlussOrt((ENUMVerschlussOrt)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.BESCHREIBUNG_SONDERANLAGE_TYPE:
 				return validateBeschreibung_Sonderanlage_Type((String)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.BEZEICHNUNG_SCHLOSS_TYPE:
@@ -202,6 +215,10 @@ public class SchluesselabhaengigkeitenValidator extends EObjectValidator {
 				return validateENUMSchluesselBartformObject((ENUMSchluesselBartform)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.ENUM_SCHLUESSEL_GRUPPE_OBJECT:
 				return validateENUMSchluesselGruppeObject((ENUMSchluesselGruppe)value, diagnostics, context);
+			case SchluesselabhaengigkeitenPackage.ENUM_SONDERANLAGE_LAGE_OBJECT:
+				return validateENUMSonderanlageLageObject((ENUMSonderanlageLage)value, diagnostics, context);
+			case SchluesselabhaengigkeitenPackage.ENUM_VERSCHLUSS_ORT_OBJECT:
+				return validateENUMVerschlussOrtObject((ENUMVerschlussOrt)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.WANBAULAGE_TYPE:
 				return validateW_Anbaulage_Type((ENUMLinksRechts)value, diagnostics, context);
 			case SchluesselabhaengigkeitenPackage.WLAGE_TYPE:
@@ -450,6 +467,15 @@ public class SchluesselabhaengigkeitenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateSonderanlage_Lage_TypeClass(Sonderanlage_Lage_TypeClass sonderanlage_Lage_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(sonderanlage_Lage_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTechnisch_Berechtigter_TypeClass(Technisch_Berechtigter_TypeClass technisch_Berechtigter_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(technisch_Berechtigter_TypeClass, diagnostics, context);
 	}
@@ -459,8 +485,8 @@ public class SchluesselabhaengigkeitenValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateVerschluss_Herzstueck_TypeClass(Verschluss_Herzstueck_TypeClass verschluss_Herzstueck_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(verschluss_Herzstueck_TypeClass, diagnostics, context);
+	public boolean validateVerschluss_Ort_TypeClass(Verschluss_Ort_TypeClass verschluss_Ort_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(verschluss_Ort_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -532,6 +558,24 @@ public class SchluesselabhaengigkeitenValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMSchluesselGruppe(ENUMSchluesselGruppe enumSchluesselGruppe, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMSonderanlageLage(ENUMSonderanlageLage enumSonderanlageLage, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMVerschlussOrt(ENUMVerschlussOrt enumVerschlussOrt, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -704,6 +748,24 @@ public class SchluesselabhaengigkeitenValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMSchluesselGruppeObject(ENUMSchluesselGruppe enumSchluesselGruppeObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMSonderanlageLageObject(ENUMSonderanlageLage enumSonderanlageLageObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMVerschlussOrtObject(ENUMVerschlussOrt enumVerschlussOrtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

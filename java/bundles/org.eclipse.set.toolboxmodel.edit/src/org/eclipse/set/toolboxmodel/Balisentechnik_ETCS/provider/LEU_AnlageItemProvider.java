@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage} object.
@@ -99,7 +100,7 @@ public class LEU_AnlageItemProvider extends Basis_ObjektItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Anlage_Bezeichnung());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Anlage_LEUAnlageModuleigenschaften());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Anlage_LEUAnlageAllg());
 		}
 		return childrenFeatures;
 	}
@@ -153,7 +154,7 @@ public class LEU_AnlageItemProvider extends Basis_ObjektItemProvider {
 
 		switch (notification.getFeatureID(LEU_Anlage.class)) {
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE__BEZEICHNUNG:
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_MODULEIGENSCHAFTEN:
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE__LEU_ANLAGE_ALLG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -180,8 +181,8 @@ public class LEU_AnlageItemProvider extends Basis_ObjektItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Anlage_LEUAnlageModuleigenschaften(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Anlage_Moduleigenschaften_AttributeGroup()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Anlage_LEUAnlageAllg(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Anlage_Allg_AttributeGroup()));
 	}
 
 	/**

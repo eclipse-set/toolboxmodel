@@ -1,17 +1,31 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung.impl;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
+
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente_Achszaehlpunkt_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente_Schienenprofil_TypeClass;
 import org.eclipse.set.toolboxmodel.Ortung.FMA_Komponente_Stromversorgung_TypeClass;
@@ -86,23 +100,14 @@ public class FMA_Komponente_Achszaehlpunkt_AttributeGroupImpl extends MinimalEOb
 	protected boolean iDEnergieESet;
 
 	/**
-	 * The cached value of the '{@link #getIDInformation() <em>ID Information</em>}' reference.
+	 * The cached value of the '{@link #getIDInformation() <em>ID Information</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIDInformation()
 	 * @generated
 	 * @ordered
 	 */
-	protected Aussenelementansteuerung iDInformation;
-
-	/**
-	 * This is true if the ID Information reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDInformationESet;
+	protected EList<Aussenelementansteuerung> iDInformation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -331,65 +336,11 @@ public class FMA_Komponente_Achszaehlpunkt_AttributeGroupImpl extends MinimalEOb
 	 * @generated
 	 */
 	@Override
-	public Aussenelementansteuerung getIDInformation() {
-		if (iDInformation != null && iDInformation.eIsProxy()) {
-			InternalEObject oldIDInformation = (InternalEObject)iDInformation;
-			iDInformation = (Aussenelementansteuerung)eResolveProxy(oldIDInformation);
-			if (iDInformation != oldIDInformation) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION, oldIDInformation, iDInformation));
-			}
+	public EList<Aussenelementansteuerung> getIDInformation() {
+		if (iDInformation == null) {
+			iDInformation = new EObjectResolvingEList<Aussenelementansteuerung>(Aussenelementansteuerung.class, this, OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION);
 		}
 		return iDInformation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Aussenelementansteuerung basicGetIDInformation() {
-		return iDInformation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDInformation(Aussenelementansteuerung newIDInformation) {
-		Aussenelementansteuerung oldIDInformation = iDInformation;
-		iDInformation = newIDInformation;
-		boolean oldIDInformationESet = iDInformationESet;
-		iDInformationESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION, oldIDInformation, iDInformation, !oldIDInformationESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDInformation() {
-		Aussenelementansteuerung oldIDInformation = iDInformation;
-		boolean oldIDInformationESet = iDInformationESet;
-		iDInformation = null;
-		iDInformationESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION, oldIDInformation, null, oldIDInformationESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDInformation() {
-		return iDInformationESet;
 	}
 
 	/**
@@ -429,8 +380,7 @@ public class FMA_Komponente_Achszaehlpunkt_AttributeGroupImpl extends MinimalEOb
 				if (resolve) return getIDEnergie();
 				return basicGetIDEnergie();
 			case OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION:
-				if (resolve) return getIDInformation();
-				return basicGetIDInformation();
+				return getIDInformation();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -441,6 +391,7 @@ public class FMA_Komponente_Achszaehlpunkt_AttributeGroupImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -457,7 +408,8 @@ public class FMA_Komponente_Achszaehlpunkt_AttributeGroupImpl extends MinimalEOb
 				setIDEnergie((Aussenelementansteuerung)newValue);
 				return;
 			case OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION:
-				setIDInformation((Aussenelementansteuerung)newValue);
+				getIDInformation().clear();
+				getIDInformation().addAll((Collection<? extends Aussenelementansteuerung>)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -486,7 +438,7 @@ public class FMA_Komponente_Achszaehlpunkt_AttributeGroupImpl extends MinimalEOb
 				unsetIDEnergie();
 				return;
 			case OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION:
-				unsetIDInformation();
+				getIDInformation().clear();
 				return;
 			default:
 				super.eUnset(featureID);
@@ -511,7 +463,7 @@ public class FMA_Komponente_Achszaehlpunkt_AttributeGroupImpl extends MinimalEOb
 			case OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_ENERGIE:
 				return isSetIDEnergie();
 			case OrtungPackage.FMA_KOMPONENTE_ACHSZAEHLPUNKT_ATTRIBUTE_GROUP__ID_INFORMATION:
-				return isSetIDInformation();
+				return iDInformation != null && !iDInformation.isEmpty();
 			default:
 				return super.eIsSet(featureID);
 		}

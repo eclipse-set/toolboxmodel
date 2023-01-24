@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Medien_und_Trassen;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int ADER_DURCHMESSER_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int ADER_QUERSCHNITT_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int ADER_RESERVE_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int ANZAHL_VERSEILELEMENTE_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +760,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int BEZEICHNUNG_KABEL_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -830,7 +806,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int BEZEICHNUNG_KABEL_VERTEILPUNKT_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -866,6 +842,52 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int BEZEICHNUNG_KABEL_VERTEILPUNKT_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Induktionsschutz_TypeClassImpl <em>Induktionsschutz Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Induktionsschutz_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getInduktionsschutz_TypeClass()
+	 * @generated
+	 */
+	int INDUKTIONSSCHUTZ_TYPE_CLASS = 6;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUKTIONSSCHUTZ_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUKTIONSSCHUTZ_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Induktionsschutz Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUKTIONSSCHUTZ_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Induktionsschutz Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUKTIONSSCHUTZ_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.KabelImpl <em>Kabel</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -873,7 +895,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel()
 	 * @generated
 	 */
-	int KABEL = 6;
+	int KABEL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -894,13 +916,22 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int KABEL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int KABEL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -939,13 +970,22 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int KABEL__KABEL_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Kabel Element</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL__KABEL_ELEMENT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Kabel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KABEL_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int KABEL_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Kabel</em>' class.
@@ -964,25 +1004,16 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP = 7;
+	int KABEL_ALLG_ATTRIBUTE_GROUP = 8;
 
 	/**
-	 * The feature id for the '<em><b>Ader Reserve</b></em>' containment reference.
+	 * The feature id for the '<em><b>Induktionsschutz</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__ADER_RESERVE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Anzahl Verseilelemente</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__ANZAHL_VERSEILELEMENTE = 1;
+	int KABEL_ALLG_ATTRIBUTE_GROUP__INDUKTIONSSCHUTZ = 0;
 
 	/**
 	 * The feature id for the '<em><b>Kabel Art</b></em>' containment reference.
@@ -991,7 +1022,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_ART = 2;
+	int KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_ART = 1;
 
 	/**
 	 * The feature id for the '<em><b>Kabel Laenge</b></em>' containment reference.
@@ -1000,7 +1031,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_LAENGE = 3;
+	int KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_LAENGE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Kabel Typ</b></em>' containment reference.
@@ -1009,34 +1040,16 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_TYP = 4;
+	int KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_TYP = 3;
 
 	/**
-	 * The feature id for the '<em><b>Verseilart</b></em>' containment reference.
+	 * The feature id for the '<em><b>Nagetierschutz</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__VERSEILART = 5;
-
-	/**
-	 * The feature id for the '<em><b>Ader Durchmesser</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__ADER_DURCHMESSER = 6;
-
-	/**
-	 * The feature id for the '<em><b>Ader Querschnitt</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP__ADER_QUERSCHNITT = 7;
+	int KABEL_ALLG_ATTRIBUTE_GROUP__NAGETIERSCHUTZ = 4;
 
 	/**
 	 * The number of structural features of the '<em>Kabel Allg Attribute Group</em>' class.
@@ -1045,7 +1058,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KABEL_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 8;
+	int KABEL_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Kabel Allg Attribute Group</em>' class.
@@ -1064,10 +1077,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Art_TypeClass()
 	 * @generated
 	 */
-	int KABEL_ART_TYPE_CLASS = 8;
+	int KABEL_ART_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1110,7 +1123,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int KABEL_BEZEICHNUNG_ATTRIBUTE_GROUP = 9;
+	int KABEL_BEZEICHNUNG_ATTRIBUTE_GROUP = 10;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung Kabel</b></em>' containment reference.
@@ -1140,6 +1153,79 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int KABEL_BEZEICHNUNG_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Element_AttributeGroupImpl <em>Kabel Element Attribute Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Element_AttributeGroupImpl
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Element_AttributeGroup()
+	 * @generated
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP = 11;
+
+	/**
+	 * The feature id for the '<em><b>Ader Reserve</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP__ADER_RESERVE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Anzahl Verseilelemente</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP__ANZAHL_VERSEILELEMENTE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Verseilart</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP__VERSEILART = 2;
+
+	/**
+	 * The feature id for the '<em><b>Ader Durchmesser</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP__ADER_DURCHMESSER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Ader Querschnitt</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP__ADER_QUERSCHNITT = 4;
+
+	/**
+	 * The number of structural features of the '<em>Kabel Element Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Kabel Element Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_ELEMENT_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Laenge_TypeClassImpl <em>Kabel Laenge Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1147,10 +1233,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Laenge_TypeClass()
 	 * @generated
 	 */
-	int KABEL_LAENGE_TYPE_CLASS = 10;
+	int KABEL_LAENGE_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1193,10 +1279,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Typ_TypeClass()
 	 * @generated
 	 */
-	int KABEL_TYP_TYPE_CLASS = 11;
+	int KABEL_TYP_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1239,7 +1325,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Verteilpunkt()
 	 * @generated
 	 */
-	int KABEL_VERTEILPUNKT = 12;
+	int KABEL_VERTEILPUNKT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1260,13 +1346,22 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int KABEL_VERTEILPUNKT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int KABEL_VERTEILPUNKT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KABEL_VERTEILPUNKT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1330,10 +1425,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Verteilpunkt_Art_TypeClass()
 	 * @generated
 	 */
-	int KABEL_VERTEILPUNKT_ART_TYPE_CLASS = 13;
+	int KABEL_VERTEILPUNKT_ART_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1376,7 +1471,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Verteilpunkt_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int KABEL_VERTEILPUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP = 14;
+	int KABEL_VERTEILPUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP = 16;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung Kabel Verteilpunkt</b></em>' containment reference.
@@ -1406,6 +1501,52 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int KABEL_VERTEILPUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Nagetierschutz_TypeClassImpl <em>Nagetierschutz Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Nagetierschutz_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getNagetierschutz_TypeClass()
+	 * @generated
+	 */
+	int NAGETIERSCHUTZ_TYPE_CLASS = 17;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAGETIERSCHUTZ_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAGETIERSCHUTZ_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Nagetierschutz Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAGETIERSCHUTZ_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Nagetierschutz Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAGETIERSCHUTZ_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Trasse_KanteImpl <em>Trasse Kante</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1413,7 +1554,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getTrasse_Kante()
 	 * @generated
 	 */
-	int TRASSE_KANTE = 15;
+	int TRASSE_KANTE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1434,13 +1575,22 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int TRASSE_KANTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TRASSE_KANTE__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KANTE__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1513,10 +1663,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getTrasse_Kante_Art_TypeClass()
 	 * @generated
 	 */
-	int TRASSE_KANTE_ART_TYPE_CLASS = 16;
+	int TRASSE_KANTE_ART_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1559,7 +1709,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getTrasse_Knoten()
 	 * @generated
 	 */
-	int TRASSE_KNOTEN = 17;
+	int TRASSE_KNOTEN = 20;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1580,13 +1730,22 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	int TRASSE_KNOTEN__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TRASSE_KNOTEN__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRASSE_KNOTEN__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1650,10 +1809,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getTrasse_Knoten_Art_TypeClass()
 	 * @generated
 	 */
-	int TRASSE_KNOTEN_ART_TYPE_CLASS = 18;
+	int TRASSE_KNOTEN_ART_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1696,10 +1855,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getTrasse_Nutzer_TypeClass()
 	 * @generated
 	 */
-	int TRASSE_NUTZER_TYPE_CLASS = 19;
+	int TRASSE_NUTZER_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1742,10 +1901,10 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getVerseilart_TypeClass()
 	 * @generated
 	 */
-	int VERSEILART_TYPE_CLASS = 20;
+	int VERSEILART_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1788,7 +1947,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMKabelArt()
 	 * @generated
 	 */
-	int ENUM_KABEL_ART = 21;
+	int ENUM_KABEL_ART = 24;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.ENUMKabelVerteilpunktArt <em>ENUM Kabel Verteilpunkt Art</em>}' enum.
@@ -1798,7 +1957,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMKabelVerteilpunktArt()
 	 * @generated
 	 */
-	int ENUM_KABEL_VERTEILPUNKT_ART = 22;
+	int ENUM_KABEL_VERTEILPUNKT_ART = 25;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.ENUMTrasseKanteArt <em>ENUM Trasse Kante Art</em>}' enum.
@@ -1808,7 +1967,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMTrasseKanteArt()
 	 * @generated
 	 */
-	int ENUM_TRASSE_KANTE_ART = 23;
+	int ENUM_TRASSE_KANTE_ART = 26;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.ENUMTrasseKnotenArt <em>ENUM Trasse Knoten Art</em>}' enum.
@@ -1818,7 +1977,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMTrasseKnotenArt()
 	 * @generated
 	 */
-	int ENUM_TRASSE_KNOTEN_ART = 24;
+	int ENUM_TRASSE_KNOTEN_ART = 27;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.ENUMTrasseNutzer <em>ENUM Trasse Nutzer</em>}' enum.
@@ -1828,7 +1987,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMTrasseNutzer()
 	 * @generated
 	 */
-	int ENUM_TRASSE_NUTZER = 25;
+	int ENUM_TRASSE_NUTZER = 28;
 
 	/**
 	 * The meta object id for the '<em>Ader Durchmesser Type</em>' data type.
@@ -1838,7 +1997,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getAder_Durchmesser_Type()
 	 * @generated
 	 */
-	int ADER_DURCHMESSER_TYPE = 26;
+	int ADER_DURCHMESSER_TYPE = 29;
 
 	/**
 	 * The meta object id for the '<em>Ader Querschnitt Type</em>' data type.
@@ -1848,7 +2007,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getAder_Querschnitt_Type()
 	 * @generated
 	 */
-	int ADER_QUERSCHNITT_TYPE = 27;
+	int ADER_QUERSCHNITT_TYPE = 30;
 
 	/**
 	 * The meta object id for the '<em>Ader Reserve Type</em>' data type.
@@ -1858,7 +2017,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getAder_Reserve_Type()
 	 * @generated
 	 */
-	int ADER_RESERVE_TYPE = 28;
+	int ADER_RESERVE_TYPE = 31;
 
 	/**
 	 * The meta object id for the '<em>Anzahl Verseilelemente Type</em>' data type.
@@ -1868,7 +2027,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getAnzahl_Verseilelemente_Type()
 	 * @generated
 	 */
-	int ANZAHL_VERSEILELEMENTE_TYPE = 29;
+	int ANZAHL_VERSEILELEMENTE_TYPE = 32;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Kabel Type</em>' data type.
@@ -1878,7 +2037,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getBezeichnung_Kabel_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_KABEL_TYPE = 30;
+	int BEZEICHNUNG_KABEL_TYPE = 33;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung Kabel Verteilpunkt Type</em>' data type.
@@ -1888,7 +2047,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getBezeichnung_Kabel_Verteilpunkt_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_KABEL_VERTEILPUNKT_TYPE = 31;
+	int BEZEICHNUNG_KABEL_VERTEILPUNKT_TYPE = 34;
 
 	/**
 	 * The meta object id for the '<em>ENUM Kabel Art Object</em>' data type.
@@ -1898,7 +2057,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMKabelArtObject()
 	 * @generated
 	 */
-	int ENUM_KABEL_ART_OBJECT = 32;
+	int ENUM_KABEL_ART_OBJECT = 35;
 
 	/**
 	 * The meta object id for the '<em>ENUM Kabel Verteilpunkt Art Object</em>' data type.
@@ -1908,7 +2067,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMKabelVerteilpunktArtObject()
 	 * @generated
 	 */
-	int ENUM_KABEL_VERTEILPUNKT_ART_OBJECT = 33;
+	int ENUM_KABEL_VERTEILPUNKT_ART_OBJECT = 36;
 
 	/**
 	 * The meta object id for the '<em>ENUM Trasse Kante Art Object</em>' data type.
@@ -1918,7 +2077,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMTrasseKanteArtObject()
 	 * @generated
 	 */
-	int ENUM_TRASSE_KANTE_ART_OBJECT = 34;
+	int ENUM_TRASSE_KANTE_ART_OBJECT = 37;
 
 	/**
 	 * The meta object id for the '<em>ENUM Trasse Knoten Art Object</em>' data type.
@@ -1928,7 +2087,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMTrasseKnotenArtObject()
 	 * @generated
 	 */
-	int ENUM_TRASSE_KNOTEN_ART_OBJECT = 35;
+	int ENUM_TRASSE_KNOTEN_ART_OBJECT = 38;
 
 	/**
 	 * The meta object id for the '<em>ENUM Trasse Nutzer Object</em>' data type.
@@ -1938,7 +2097,17 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getENUMTrasseNutzerObject()
 	 * @generated
 	 */
-	int ENUM_TRASSE_NUTZER_OBJECT = 36;
+	int ENUM_TRASSE_NUTZER_OBJECT = 39;
+
+	/**
+	 * The meta object id for the '<em>Induktionsschutz Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.math.BigInteger
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getInduktionsschutz_Type()
+	 * @generated
+	 */
+	int INDUKTIONSSCHUTZ_TYPE = 40;
 
 	/**
 	 * The meta object id for the '<em>Kabel Laenge Type</em>' data type.
@@ -1948,7 +2117,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Laenge_Type()
 	 * @generated
 	 */
-	int KABEL_LAENGE_TYPE = 37;
+	int KABEL_LAENGE_TYPE = 41;
 
 	/**
 	 * The meta object id for the '<em>Kabel Typ Type</em>' data type.
@@ -1958,7 +2127,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Typ_Type()
 	 * @generated
 	 */
-	int KABEL_TYP_TYPE = 38;
+	int KABEL_TYP_TYPE = 42;
 
 	/**
 	 * The meta object id for the '<em>Verseilart Type</em>' data type.
@@ -1968,7 +2137,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getVerseilart_Type()
 	 * @generated
 	 */
-	int VERSEILART_TYPE = 39;
+	int VERSEILART_TYPE = 43;
 
 
 	/**
@@ -2098,6 +2267,27 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	EAttribute getBezeichnung_Kabel_Verteilpunkt_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass <em>Induktionsschutz Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Induktionsschutz Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass
+	 * @generated
+	 */
+	EClass getInduktionsschutz_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Induktionsschutz_TypeClass#getWert()
+	 * @see #getInduktionsschutz_TypeClass()
+	 * @generated
+	 */
+	EAttribute getInduktionsschutz_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel <em>Kabel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2141,6 +2331,17 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	EReference getKabel_KabelAllg();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel#getKabelElement <em>Kabel Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Kabel Element</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel#getKabelElement()
+	 * @see #getKabel()
+	 * @generated
+	 */
+	EReference getKabel_KabelElement();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup <em>Kabel Allg Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2151,26 +2352,15 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	EClass getKabel_Allg_AttributeGroup();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderReserve <em>Ader Reserve</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getInduktionsschutz <em>Induktionsschutz</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Ader Reserve</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderReserve()
+	 * @return the meta object for the containment reference '<em>Induktionsschutz</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getInduktionsschutz()
 	 * @see #getKabel_Allg_AttributeGroup()
 	 * @generated
 	 */
-	EReference getKabel_Allg_AttributeGroup_AderReserve();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAnzahlVerseilelemente <em>Anzahl Verseilelemente</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Anzahl Verseilelemente</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAnzahlVerseilelemente()
-	 * @see #getKabel_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getKabel_Allg_AttributeGroup_AnzahlVerseilelemente();
+	EReference getKabel_Allg_AttributeGroup_Induktionsschutz();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getKabelArt <em>Kabel Art</em>}'.
@@ -2206,37 +2396,15 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	EReference getKabel_Allg_AttributeGroup_KabelTyp();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getVerseilart <em>Verseilart</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getNagetierschutz <em>Nagetierschutz</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Verseilart</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getVerseilart()
+	 * @return the meta object for the containment reference '<em>Nagetierschutz</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getNagetierschutz()
 	 * @see #getKabel_Allg_AttributeGroup()
 	 * @generated
 	 */
-	EReference getKabel_Allg_AttributeGroup_Verseilart();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderDurchmesser <em>Ader Durchmesser</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Ader Durchmesser</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderDurchmesser()
-	 * @see #getKabel_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getKabel_Allg_AttributeGroup_AderDurchmesser();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderQuerschnitt <em>Ader Querschnitt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Ader Querschnitt</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Allg_AttributeGroup#getAderQuerschnitt()
-	 * @see #getKabel_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getKabel_Allg_AttributeGroup_AderQuerschnitt();
+	EReference getKabel_Allg_AttributeGroup_Nagetierschutz();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Art_TypeClass <em>Kabel Art Type Class</em>}'.
@@ -2279,6 +2447,71 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKabel_Bezeichnung_AttributeGroup_BezeichnungKabel();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup <em>Kabel Element Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kabel Element Attribute Group</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup
+	 * @generated
+	 */
+	EClass getKabel_Element_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAderReserve <em>Ader Reserve</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ader Reserve</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAderReserve()
+	 * @see #getKabel_Element_AttributeGroup()
+	 * @generated
+	 */
+	EReference getKabel_Element_AttributeGroup_AderReserve();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAnzahlVerseilelemente <em>Anzahl Verseilelemente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Anzahl Verseilelemente</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAnzahlVerseilelemente()
+	 * @see #getKabel_Element_AttributeGroup()
+	 * @generated
+	 */
+	EReference getKabel_Element_AttributeGroup_AnzahlVerseilelemente();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getVerseilart <em>Verseilart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Verseilart</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getVerseilart()
+	 * @see #getKabel_Element_AttributeGroup()
+	 * @generated
+	 */
+	EReference getKabel_Element_AttributeGroup_Verseilart();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAderDurchmesser <em>Ader Durchmesser</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ader Durchmesser</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAderDurchmesser()
+	 * @see #getKabel_Element_AttributeGroup()
+	 * @generated
+	 */
+	EReference getKabel_Element_AttributeGroup_AderDurchmesser();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAderQuerschnitt <em>Ader Querschnitt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ader Querschnitt</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Element_AttributeGroup#getAderQuerschnitt()
+	 * @see #getKabel_Element_AttributeGroup()
+	 * @generated
+	 */
+	EReference getKabel_Element_AttributeGroup_AderQuerschnitt();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Kabel_Laenge_TypeClass <em>Kabel Laenge Type Class</em>}'.
@@ -2406,6 +2639,27 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKabel_Verteilpunkt_Bezeichnung_AttributeGroup_BezeichnungKabelVerteilpunkt();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass <em>Nagetierschutz Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Nagetierschutz Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass
+	 * @generated
+	 */
+	EClass getNagetierschutz_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.Nagetierschutz_TypeClass#getWert()
+	 * @see #getNagetierschutz_TypeClass()
+	 * @generated
+	 */
+	EAttribute getNagetierschutz_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.Trasse_Kante <em>Trasse Kante</em>}'.
@@ -2645,7 +2899,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @return the meta object for data type '<em>Ader Durchmesser Type</em>'.
 	 * @see java.math.BigDecimal
 	 * @model instanceClass="java.math.BigDecimal"
-	 *        extendedMetaData="name='TAder_Durchmesser' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' pattern='[0,1][.][0-8]|[0][.][9]'"
+	 *        extendedMetaData="name='TAder_Durchmesser' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' pattern='[01][.][1-8]|[0][.][9]|[1][.][0]'"
 	 * @generated
 	 */
 	EDataType getAder_Durchmesser_Type();
@@ -2771,6 +3025,18 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	EDataType getENUMTrasseNutzerObject();
 
 	/**
+	 * Returns the meta object for data type '{@link java.math.BigInteger <em>Induktionsschutz Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Induktionsschutz Type</em>'.
+	 * @see java.math.BigInteger
+	 * @model instanceClass="java.math.BigInteger"
+	 *        extendedMetaData="name='TInduktionsschutz' baseType='http://www.eclipse.org/emf/2003/XMLType#integer'"
+	 * @generated
+	 */
+	EDataType getInduktionsschutz_Type();
+
+	/**
 	 * Returns the meta object for data type '{@link java.math.BigDecimal <em>Kabel Laenge Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2801,7 +3067,7 @@ public interface Medien_und_TrassenPackage extends EPackage {
 	 * @return the meta object for data type '<em>Verseilart Type</em>'.
 	 * @see java.math.BigInteger
 	 * @model instanceClass="java.math.BigInteger"
-	 *        extendedMetaData="name='TVerseilart' baseType='http://www.eclipse.org/emf/2003/XMLType#integer' pattern='[1,4]'"
+	 *        extendedMetaData="name='TVerseilart' baseType='http://www.eclipse.org/emf/2003/XMLType#integer' pattern='[1|4]'"
 	 * @generated
 	 */
 	EDataType getVerseilart_Type();
@@ -2938,6 +3204,24 @@ public interface Medien_und_TrassenPackage extends EPackage {
 		EAttribute BEZEICHNUNG_KABEL_VERTEILPUNKT_TYPE_CLASS__WERT = eINSTANCE.getBezeichnung_Kabel_Verteilpunkt_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Induktionsschutz_TypeClassImpl <em>Induktionsschutz Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Induktionsschutz_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getInduktionsschutz_TypeClass()
+		 * @generated
+		 */
+		EClass INDUKTIONSSCHUTZ_TYPE_CLASS = eINSTANCE.getInduktionsschutz_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INDUKTIONSSCHUTZ_TYPE_CLASS__WERT = eINSTANCE.getInduktionsschutz_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.KabelImpl <em>Kabel</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2972,6 +3256,14 @@ public interface Medien_und_TrassenPackage extends EPackage {
 		EReference KABEL__KABEL_ALLG = eINSTANCE.getKabel_KabelAllg();
 
 		/**
+		 * The meta object literal for the '<em><b>Kabel Element</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KABEL__KABEL_ELEMENT = eINSTANCE.getKabel_KabelElement();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Allg_AttributeGroupImpl <em>Kabel Allg Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2982,20 +3274,12 @@ public interface Medien_und_TrassenPackage extends EPackage {
 		EClass KABEL_ALLG_ATTRIBUTE_GROUP = eINSTANCE.getKabel_Allg_AttributeGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Ader Reserve</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Induktionsschutz</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference KABEL_ALLG_ATTRIBUTE_GROUP__ADER_RESERVE = eINSTANCE.getKabel_Allg_AttributeGroup_AderReserve();
-
-		/**
-		 * The meta object literal for the '<em><b>Anzahl Verseilelemente</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KABEL_ALLG_ATTRIBUTE_GROUP__ANZAHL_VERSEILELEMENTE = eINSTANCE.getKabel_Allg_AttributeGroup_AnzahlVerseilelemente();
+		EReference KABEL_ALLG_ATTRIBUTE_GROUP__INDUKTIONSSCHUTZ = eINSTANCE.getKabel_Allg_AttributeGroup_Induktionsschutz();
 
 		/**
 		 * The meta object literal for the '<em><b>Kabel Art</b></em>' containment reference feature.
@@ -3022,28 +3306,12 @@ public interface Medien_und_TrassenPackage extends EPackage {
 		EReference KABEL_ALLG_ATTRIBUTE_GROUP__KABEL_TYP = eINSTANCE.getKabel_Allg_AttributeGroup_KabelTyp();
 
 		/**
-		 * The meta object literal for the '<em><b>Verseilart</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Nagetierschutz</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference KABEL_ALLG_ATTRIBUTE_GROUP__VERSEILART = eINSTANCE.getKabel_Allg_AttributeGroup_Verseilart();
-
-		/**
-		 * The meta object literal for the '<em><b>Ader Durchmesser</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KABEL_ALLG_ATTRIBUTE_GROUP__ADER_DURCHMESSER = eINSTANCE.getKabel_Allg_AttributeGroup_AderDurchmesser();
-
-		/**
-		 * The meta object literal for the '<em><b>Ader Querschnitt</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KABEL_ALLG_ATTRIBUTE_GROUP__ADER_QUERSCHNITT = eINSTANCE.getKabel_Allg_AttributeGroup_AderQuerschnitt();
+		EReference KABEL_ALLG_ATTRIBUTE_GROUP__NAGETIERSCHUTZ = eINSTANCE.getKabel_Allg_AttributeGroup_Nagetierschutz();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Art_TypeClassImpl <em>Kabel Art Type Class</em>}' class.
@@ -3080,6 +3348,56 @@ public interface Medien_und_TrassenPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KABEL_BEZEICHNUNG_ATTRIBUTE_GROUP__BEZEICHNUNG_KABEL = eINSTANCE.getKabel_Bezeichnung_AttributeGroup_BezeichnungKabel();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Element_AttributeGroupImpl <em>Kabel Element Attribute Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Element_AttributeGroupImpl
+		 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getKabel_Element_AttributeGroup()
+		 * @generated
+		 */
+		EClass KABEL_ELEMENT_ATTRIBUTE_GROUP = eINSTANCE.getKabel_Element_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Ader Reserve</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KABEL_ELEMENT_ATTRIBUTE_GROUP__ADER_RESERVE = eINSTANCE.getKabel_Element_AttributeGroup_AderReserve();
+
+		/**
+		 * The meta object literal for the '<em><b>Anzahl Verseilelemente</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KABEL_ELEMENT_ATTRIBUTE_GROUP__ANZAHL_VERSEILELEMENTE = eINSTANCE.getKabel_Element_AttributeGroup_AnzahlVerseilelemente();
+
+		/**
+		 * The meta object literal for the '<em><b>Verseilart</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KABEL_ELEMENT_ATTRIBUTE_GROUP__VERSEILART = eINSTANCE.getKabel_Element_AttributeGroup_Verseilart();
+
+		/**
+		 * The meta object literal for the '<em><b>Ader Durchmesser</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KABEL_ELEMENT_ATTRIBUTE_GROUP__ADER_DURCHMESSER = eINSTANCE.getKabel_Element_AttributeGroup_AderDurchmesser();
+
+		/**
+		 * The meta object literal for the '<em><b>Ader Querschnitt</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KABEL_ELEMENT_ATTRIBUTE_GROUP__ADER_QUERSCHNITT = eINSTANCE.getKabel_Element_AttributeGroup_AderQuerschnitt();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Kabel_Laenge_TypeClassImpl <em>Kabel Laenge Type Class</em>}' class.
@@ -3186,6 +3504,24 @@ public interface Medien_und_TrassenPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KABEL_VERTEILPUNKT_BEZEICHNUNG_ATTRIBUTE_GROUP__BEZEICHNUNG_KABEL_VERTEILPUNKT = eINSTANCE.getKabel_Verteilpunkt_Bezeichnung_AttributeGroup_BezeichnungKabelVerteilpunkt();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Nagetierschutz_TypeClassImpl <em>Nagetierschutz Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Nagetierschutz_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getNagetierschutz_TypeClass()
+		 * @generated
+		 */
+		EClass NAGETIERSCHUTZ_TYPE_CLASS = eINSTANCE.getNagetierschutz_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAGETIERSCHUTZ_TYPE_CLASS__WERT = eINSTANCE.getNagetierschutz_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Trasse_KanteImpl <em>Trasse Kante</em>}' class.
@@ -3494,6 +3830,16 @@ public interface Medien_und_TrassenPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUM_TRASSE_NUTZER_OBJECT = eINSTANCE.getENUMTrasseNutzerObject();
+
+		/**
+		 * The meta object literal for the '<em>Induktionsschutz Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.math.BigInteger
+		 * @see org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl#getInduktionsschutz_Type()
+		 * @generated
+		 */
+		EDataType INDUKTIONSSCHUTZ_TYPE = eINSTANCE.getInduktionsschutz_Type();
 
 		/**
 		 * The meta object literal for the '<em>Kabel Laenge Type</em>' data type.

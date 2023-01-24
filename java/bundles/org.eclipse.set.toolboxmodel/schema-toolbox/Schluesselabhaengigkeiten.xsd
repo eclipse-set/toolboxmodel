@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
             xmlns:func="localhost/function"
+            xmlns:nsATO="http://www.plan-pro.org/modell/ATO/toolbox"
             xmlns:nsAnsteuerung_Element="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
             xmlns:nsBahnsteig="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
             xmlns:nsBahnuebergang="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -13,8 +14,9 @@
             xmlns:nsFlankenschutz="http://www.plan-pro.org/modell/Flankenschutz/toolbox"
             xmlns:nsGeodaten="http://www.plan-pro.org/modell/Geodaten/toolbox"
             xmlns:nsGleis="http://www.plan-pro.org/modell/Gleis/toolbox"
+            xmlns:nsLayoutinformationen="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
             xmlns:nsMedien_und_Trassen="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
-            xmlns:nsNahbedienbereich="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
+            xmlns:nsNahbedienung="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
             xmlns:nsOrtung="http://www.plan-pro.org/modell/Ortung/toolbox"
             xmlns:nsPZB="http://www.plan-pro.org/modell/PZB/toolbox"
             xmlns:nsPlanPro="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -33,6 +35,8 @@
             targetNamespace="http://www.plan-pro.org/modell/Schluesselabhaengigkeiten/toolbox">
    <xs:import namespace="http://www.plan-pro.org/modell/Ansteuerung_Element/toolbox"
                schemaLocation="Ansteuerung_Element.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/ATO/toolbox"
+               schemaLocation="ATO.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnsteig/toolbox"
                schemaLocation="Bahnsteig.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Bahnuebergang/toolbox"
@@ -55,10 +59,12 @@
                schemaLocation="Geodaten.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Gleis/toolbox"
                schemaLocation="Gleis.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Layoutinformationen/toolbox"
+               schemaLocation="Layoutinformationen.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Medien_und_Trassen/toolbox"
                schemaLocation="Medien_und_Trassen.xsd"/>
-   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienbereich/toolbox"
-               schemaLocation="Nahbedienbereich.xsd"/>
+   <xs:import namespace="http://www.plan-pro.org/modell/Nahbedienung/toolbox"
+               schemaLocation="Nahbedienung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/Ortung/toolbox"
                schemaLocation="Ortung.xsd"/>
    <xs:import namespace="http://www.plan-pro.org/modell/PlanPro/toolbox"
@@ -90,9 +96,7 @@ http://www.dbnetze.com/planpro
 Inhalt der Datei:
 XML Schema für PlanPro Schnittstelle.
 
-Für Fragen zum Schema wenden Sie sich bitte an Herrn :
-
-Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
 
 --------------------------------------------------------------------------------
 
@@ -114,19 +118,6 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:enumeration ecore:name="ENUMSchluessel_Gruppe_5" value="5"/>
       </xs:restriction>
    </xs:simpleType>
-   <xs:complexType ecore:name="Bezeichnung_Schloss_TypeClass" name="TCBezeichnung_Schloss">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="nsSchluesselabhaengigkeiten:TBezeichnung_Schloss"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:simpleType ecore:name="Beschreibung_Sonderanlage_Type"
                    name="TBeschreibung_Sonderanlage">
       <xs:restriction base="nsBasisTypen:TText">
@@ -150,6 +141,19 @@ XML Schema for PlanPro interface.</xs:documentation>
             </xs:annotation>
          </xs:element>
       </xs:sequence>
+   </xs:complexType>
+   <xs:complexType ecore:name="Verschluss_Ort_TypeClass" name="TCVerschluss_Ort">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMVerschluss_Ort"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
    </xs:complexType>
    <xs:simpleType ecore:name="Bezeichnung_Schluessel_Type" name="TBezeichnung_Schluessel">
       <xs:restriction base="nsBasisTypen:TText">
@@ -175,6 +179,19 @@ XML Schema for PlanPro interface.</xs:documentation>
    <xs:complexType ecore:name="Schloss_Sonderanlage_AttributeGroup"
                     name="CSchloss_Sonderanlage">
       <xs:sequence>
+         <xs:element name="Sonderanlage_Lage"
+                      type="nsSchluesselabhaengigkeiten:TCSonderanlage_Lage"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Lage, in der die Sonderanlage verschlossen wird. DB-Regelwerk Die Abhängigkeiten werden heute durch eine Zeichnung im Lageplan nach 819.9002 3 dargestellt.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <ProposedValue>befahrbar</ProposedValue>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
          <xs:choice minOccurs="1" maxOccurs="1">
             <xs:element name="Beschreibung_Sonderanlage"
                          type="nsSchluesselabhaengigkeiten:TCBeschreibung_Sonderanlage"
@@ -237,12 +254,26 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:complexType ecore:name="Bezeichnung_Schloss_TypeClass" name="TCBezeichnung_Schloss">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:TBezeichnung_Schloss"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType ecore:name="Schluesselsperre" name="CSchluesselsperre">
       <xs:annotation>
          <xs:documentation>Elektromechanisches Bauelement, das die Anwesenheit eines Schlüssels prüft, ihn festhält und eine Abhängigkeit zur Stellwerkslogik besitzt. Schlüsselsperren dienen der Festhaltung bzw. Freigabe von Schlüsseln, mit denen in der Regel weitere Elemente bedienbar gemacht werden. In Einzelfällen dienen Schlüsselsperren nur als Schlüsselschalter. Die Darstellung im Lageplan erfolgt am Ort der Bedienung (z. B. Stellwerk, sonstiges Gebäude), der durch die Unterbringung beschrieben wird. Eine Darstellung am oder auf dem Gleis erfolgt nicht! DB-Regelwerk Darstellung durch Zeichnung im Lageplan nach 819.9002 2.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>BÜ|ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -337,17 +368,12 @@ XML Schema for PlanPro interface.</xs:documentation>
                </xs:appinfo>
             </xs:annotation>
          </xs:element>
-         <xs:element name="Verschluss_Herzstueck"
-                      type="nsSchluesselabhaengigkeiten:TCVerschluss_Herzstueck"
-                      minOccurs="0"
+         <xs:element name="Verschluss_Ort"
+                      type="nsSchluesselabhaengigkeiten:TCVerschluss_Ort"
+                      minOccurs="1"
                       maxOccurs="1">
             <xs:annotation>
-               <xs:documentation>Angabe, ob die Herzstückspitze des unter ID_W_Kr_Element angegebenen Weichen- bzw. Kreuzungselements zu verschließen (true) oder nicht zu verschließen ist (false). Die Angabe ist nur bei Weichen mit beweglichem Herzstück sinnvoll.</xs:documentation>
-               <xs:appinfo>
-                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
-                     <ProposedValue>true</ProposedValue>
-                  </WorkflowInformation>
-               </xs:appinfo>
+               <xs:documentation>Verschlussort für das unter ID_W_Kr_Element angegebene Weichen- bzw. Kreuzungselement. Die Angabe "Herzstück" ist nur bei Weichen mit beweglichen Herzstückspitzen sinnvoll.</xs:documentation>
             </xs:annotation>
          </xs:element>
          <xs:element name="W_Anbaulage"
@@ -423,6 +449,27 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:complexType ecore:name="Sonderanlage_Lage_TypeClass" name="TCSonderanlage_Lage">
+      <xs:complexContent>
+         <xs:extension base="nsBasisTypen:CBasisAttribut">
+            <xs:sequence>
+               <xs:element name="Wert"
+                            type="nsSchluesselabhaengigkeiten:ENUMSonderanlage_Lage"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            nillable="true"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="ENUMSonderanlage_Lage">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMSonderanlage_Lage_befahrbar" value="befahrbar"/>
+         <xs:enumeration ecore:name="ENUMSonderanlage_Lage_nicht_befahrbar"
+                          value="nicht befahrbar"/>
+         <xs:enumeration ecore:name="ENUMSonderanlage_Lage_sonstige" value="sonstige"/>
+      </xs:restriction>
+   </xs:simpleType>
    <xs:complexType ecore:name="Schloss_Ssp_AttributeGroup" name="CSchloss_Ssp">
       <xs:sequence>
          <xs:element name="ID_Schluesselsperre"
@@ -471,6 +518,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>BÜ|ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -562,6 +610,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>BÜ|ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -586,21 +635,25 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Schloss_Bezeichnung_AttributeGroup"
                     name="CSchloss_Bezeichnung">
-      <xs:sequence>
-         <xs:element name="Bezeichnung_Schloss"
-                      type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schloss"
-                      minOccurs="1"
-                      maxOccurs="1">
-            <xs:annotation>
-               <xs:documentation>Bezeichnung des Schlosses, die sich im Regelfall aus dem zu verschließenden Element ergibt, ggf. zuzüglich dessen Lage. Bei einer Schlüsselsperre/Schlosskombination entspricht die Bezeichnung der Bezeichnung der Schlüsselsperre/ Schlosskombination.</xs:documentation>
-               <xs:appinfo>
-                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
-                     <Patternbeschreibung>[1..20]</Patternbeschreibung>
-                  </WorkflowInformation>
-               </xs:appinfo>
-            </xs:annotation>
-         </xs:element>
-      </xs:sequence>
+      <xs:complexContent>
+         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
+            <xs:sequence>
+               <xs:element name="Bezeichnung_Schloss"
+                            type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schloss"
+                            minOccurs="1"
+                            maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation>Bezeichnung des Schlosses, die sich im Regelfall aus dem zu verschließenden Element ergibt, ggf. zuzüglich dessen Lage. Bei einer Schlüsselsperre/Schlosskombination entspricht die Bezeichnung der Bezeichnung der Schlüsselsperre/ Schlosskombination.</xs:documentation>
+                     <xs:appinfo>
+                        <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                           <Patternbeschreibung>[1..20]</Patternbeschreibung>
+                        </WorkflowInformation>
+                     </xs:appinfo>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
    </xs:complexType>
    <xs:simpleType ecore:name="Bezeichnung_Sk_Type" name="TBezeichnung_Sk">
       <xs:restriction base="nsBasisTypen:TZeichenkette"/>
@@ -677,20 +730,6 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType ecore:name="Verschluss_Herzstueck_TypeClass"
-                    name="TCVerschluss_Herzstueck">
-      <xs:complexContent>
-         <xs:extension base="nsBasisTypen:CBasisAttribut">
-            <xs:sequence>
-               <xs:element name="Wert"
-                            type="xs:boolean"
-                            minOccurs="1"
-                            maxOccurs="1"
-                            nillable="true"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType ecore:name="Beschreibung_Sonderanlage_TypeClass"
                     name="TCBeschreibung_Sonderanlage">
       <xs:complexContent>
@@ -714,6 +753,7 @@ XML Schema for PlanPro interface.</xs:documentation>
          <xs:appinfo>
             <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
                <ObjectType>LST_OBJECT</ObjectType>
+               <Untergewerke>BÜ|ESTW</Untergewerke>
             </WorkflowInformation>
          </xs:appinfo>
       </xs:annotation>
@@ -742,6 +782,14 @@ XML Schema for PlanPro interface.</xs:documentation>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:simpleType name="ENUMVerschluss_Ort">
+      <xs:restriction base="xs:string">
+         <xs:enumeration ecore:name="ENUMVerschluss_Ort_Herzstück" value="Herzstück"/>
+         <xs:enumeration ecore:name="ENUMVerschluss_Ort_Mitte" value="Mitte"/>
+         <xs:enumeration ecore:name="ENUMVerschluss_Ort_sonstige" value="sonstige"/>
+         <xs:enumeration ecore:name="ENUMVerschluss_Ort_Spitze" value="Spitze"/>
+      </xs:restriction>
+   </xs:simpleType>
    <xs:complexType ecore:name="Schloss_Art_TypeClass" name="TCSchloss_Art">
       <xs:complexContent>
          <xs:extension base="nsBasisTypen:CBasisAttribut">

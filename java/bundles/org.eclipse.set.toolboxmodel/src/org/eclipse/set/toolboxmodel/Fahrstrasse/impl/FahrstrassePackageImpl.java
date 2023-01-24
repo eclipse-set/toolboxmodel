@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Fahrstrasse.impl;
 
@@ -16,6 +23,10 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import org.eclipse.set.toolboxmodel.ATO.ATOPackage;
+
+import org.eclipse.set.toolboxmodel.ATO.impl.ATOPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
 
@@ -49,7 +60,7 @@ import org.eclipse.set.toolboxmodel.Block.BlockPackage;
 
 import org.eclipse.set.toolboxmodel.Block.impl.BlockPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgeis_TypeClass;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Ssp_Zielgleis_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Aufloesung_Verzoegerung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Automatische_Einstellung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Bezeichnung_Fstr_DWeg_TypeClass;
@@ -60,8 +71,11 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.DWeg_V_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.DWeg_Vorzug_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMAufloesungSspZielgleis;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMAutomatischeEinstellung;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrArt;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrMittelArt;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrRangierArt;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMFstrZugArt;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMRangierGegenfahrtausschluss;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.ENUMStartSignalCharakter;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Element_Verschluss_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.F_Bedienung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.FahrstrasseFactory;
@@ -71,21 +85,18 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Abhaengigkeit_Ssp_Attribute
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Aneinander;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Aneinander_Bedienstring_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Aneinander_Zuordnung;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bedienstring_TypeClass;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Bildezeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_Bezeichnung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_Spezifisch_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_Allg_child_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_DWeg_W_Kr_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Fahrweg;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Mittel_V_Aufwertung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Nichthaltfall;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Rangier_Fla_Zuordnung;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Reihenfolge_TypeClass;
@@ -94,6 +105,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Umfahrpunkt;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_V_Hg_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_V_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Vsigabstand_Verkuerzt_TypeClass;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_DWeg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Fstr_Zug_Rangier;
@@ -104,6 +116,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt_Bezeichnung_Attr
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Massgebende_Neigung_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Rangier_Gegenfahrtausschluss_TypeClass;
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Sonstiger_Punkt;
+import org.eclipse.set.toolboxmodel.Fahrstrasse.Start_Signal_Charakter_TypeClass;
 
 import org.eclipse.set.toolboxmodel.Fahrstrasse.util.FahrstrasseValidator;
 
@@ -119,13 +132,17 @@ import org.eclipse.set.toolboxmodel.Gleis.GleisPackage;
 
 import org.eclipse.set.toolboxmodel.Gleis.impl.GleisPackageImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.impl.LayoutinformationenPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.Medien_und_TrassenPackage;
 
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.impl.Medien_und_TrassenPackageImpl;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.NahbedienbereichPackage;
+import org.eclipse.set.toolboxmodel.Nahbedienung.NahbedienungPackage;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.impl.NahbedienbereichPackageImpl;
+import org.eclipse.set.toolboxmodel.Nahbedienung.impl.NahbedienungPackageImpl;
 
 import org.eclipse.set.toolboxmodel.Ortung.OrtungPackage;
 
@@ -150,9 +167,11 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.impl.Schluesselabh
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.impl.Signalbegriffe_Ril_301PackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.Signalbegriffe_StrukturPackage;
 
 import org.eclipse.set.toolboxmodel.Signalbegriffe_Struktur.impl.Signalbegriffe_StrukturPackageImpl;
+
 import org.eclipse.set.toolboxmodel.Signale.SignalePackage;
 
 import org.eclipse.set.toolboxmodel.Signale.impl.SignalePackageImpl;
@@ -185,7 +204,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass aufloesung_Ssp_Zielgeis_TypeClassEClass = null;
+	private EClass aufloesung_Ssp_Zielgleis_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -297,21 +316,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fstr_Art_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass fstr_Bedienstring_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass fstr_Bildezeit_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -353,28 +358,14 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fstr_DWeg_W_Kr_Allg_AttributeGroupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass fstr_DWeg_W_Kr_Allg_child_AttributeGroupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass fstr_DWeg_W_Kr_TypeClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass fstr_FahrwegEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fstr_Mittel_Art_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -396,6 +387,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	private EClass fstr_NichthaltfallEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fstr_Rangier_Art_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -452,6 +450,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	private EClass fstr_Vsigabstand_Verkuerzt_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fstr_Zug_Art_TypeClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -528,6 +533,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass start_Signal_Charakter_TypeClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum enumAufloesungSspZielgleisEEnum = null;
 
 	/**
@@ -542,7 +554,21 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum enumFstrArtEEnum = null;
+	private EEnum enumFstrMittelArtEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum enumFstrRangierArtEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum enumFstrZugArtEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -550,6 +576,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	private EEnum enumRangierGegenfahrtausschlussEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum enumStartSignalCharakterEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -605,7 +638,21 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType enumFstrArtObjectEDataType = null;
+	private EDataType enumFstrMittelArtObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumFstrRangierArtObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumFstrZugArtObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -613,6 +660,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	private EDataType enumRangierGegenfahrtausschlussObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType enumStartSignalCharakterObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -627,13 +681,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	private EDataType fstr_Bedienstring_TypeEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType fstr_Bildezeit_TypeEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -721,30 +768,34 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
-		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LayoutinformationenPackage.eNS_URI);
+		LayoutinformationenPackageImpl theLayoutinformationenPackage = (LayoutinformationenPackageImpl)(registeredPackage instanceof LayoutinformationenPackageImpl ? registeredPackage : LayoutinformationenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
 		BasisobjektePackageImpl theBasisobjektePackage = (BasisobjektePackageImpl)(registeredPackage instanceof BasisobjektePackageImpl ? registeredPackage : BasisobjektePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisTypenPackage.eNS_URI);
 		BasisTypenPackageImpl theBasisTypenPackage = (BasisTypenPackageImpl)(registeredPackage instanceof BasisTypenPackageImpl ? registeredPackage : BasisTypenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
-		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeodatenPackage.eNS_URI);
 		GeodatenPackageImpl theGeodatenPackage = (GeodatenPackageImpl)(registeredPackage instanceof GeodatenPackageImpl ? registeredPackage : GeodatenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
-		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI);
+		PlanProPackageImpl thePlanProPackage = (PlanProPackageImpl)(registeredPackage instanceof PlanProPackageImpl ? registeredPackage : PlanProPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ATOPackage.eNS_URI);
+		ATOPackageImpl theATOPackage = (ATOPackageImpl)(registeredPackage instanceof ATOPackageImpl ? registeredPackage : ATOPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Ansteuerung_ElementPackage.eNS_URI);
+		Ansteuerung_ElementPackageImpl theAnsteuerung_ElementPackage = (Ansteuerung_ElementPackageImpl)(registeredPackage instanceof Ansteuerung_ElementPackageImpl ? registeredPackage : Ansteuerung_ElementPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Balisentechnik_ETCSPackage.eNS_URI);
 		Balisentechnik_ETCSPackageImpl theBalisentechnik_ETCSPackage = (Balisentechnik_ETCSPackageImpl)(registeredPackage instanceof Balisentechnik_ETCSPackageImpl ? registeredPackage : Balisentechnik_ETCSPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
+		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
+		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BlockPackage.eNS_URI);
 		BlockPackageImpl theBlockPackage = (BlockPackageImpl)(registeredPackage instanceof BlockPackageImpl ? registeredPackage : BlockPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OrtungPackage.eNS_URI);
 		OrtungPackageImpl theOrtungPackage = (OrtungPackageImpl)(registeredPackage instanceof OrtungPackageImpl ? registeredPackage : OrtungPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SignalePackage.eNS_URI);
-		SignalePackageImpl theSignalePackage = (SignalePackageImpl)(registeredPackage instanceof SignalePackageImpl ? registeredPackage : SignalePackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GleisPackage.eNS_URI);
 		GleisPackageImpl theGleisPackage = (GleisPackageImpl)(registeredPackage instanceof GleisPackageImpl ? registeredPackage : GleisPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BedienungPackage.eNS_URI);
-		BedienungPackageImpl theBedienungPackage = (BedienungPackageImpl)(registeredPackage instanceof BedienungPackageImpl ? registeredPackage : BedienungPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BahnsteigPackage.eNS_URI);
+		BahnsteigPackageImpl theBahnsteigPackage = (BahnsteigPackageImpl)(registeredPackage instanceof BahnsteigPackageImpl ? registeredPackage : BahnsteigPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Weichen_und_GleissperrenPackage.eNS_URI);
 		Weichen_und_GleissperrenPackageImpl theWeichen_und_GleissperrenPackage = (Weichen_und_GleissperrenPackageImpl)(registeredPackage instanceof Weichen_und_GleissperrenPackageImpl ? registeredPackage : Weichen_und_GleissperrenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RegelzeichnungPackage.eNS_URI);
@@ -761,8 +812,8 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		SchluesselabhaengigkeitenPackageImpl theSchluesselabhaengigkeitenPackage = (SchluesselabhaengigkeitenPackageImpl)(registeredPackage instanceof SchluesselabhaengigkeitenPackageImpl ? registeredPackage : SchluesselabhaengigkeitenPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Medien_und_TrassenPackage.eNS_URI);
 		Medien_und_TrassenPackageImpl theMedien_und_TrassenPackage = (Medien_und_TrassenPackageImpl)(registeredPackage instanceof Medien_und_TrassenPackageImpl ? registeredPackage : Medien_und_TrassenPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienbereichPackage.eNS_URI);
-		NahbedienbereichPackageImpl theNahbedienbereichPackage = (NahbedienbereichPackageImpl)(registeredPackage instanceof NahbedienbereichPackageImpl ? registeredPackage : NahbedienbereichPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NahbedienungPackage.eNS_URI);
+		NahbedienungPackageImpl theNahbedienungPackage = (NahbedienungPackageImpl)(registeredPackage instanceof NahbedienungPackageImpl ? registeredPackage : NahbedienungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZuglenkungPackage.eNS_URI);
 		ZuglenkungPackageImpl theZuglenkungPackage = (ZuglenkungPackageImpl)(registeredPackage instanceof ZuglenkungPackageImpl ? registeredPackage : ZuglenkungPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ZugnummernmeldeanlagePackage.eNS_URI);
@@ -780,16 +831,18 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 
 		// Create package meta-data objects
 		theFahrstrassePackage.createPackageContents();
+		theLayoutinformationenPackage.createPackageContents();
 		theBasisobjektePackage.createPackageContents();
 		theBasisTypenPackage.createPackageContents();
-		theAnsteuerung_ElementPackage.createPackageContents();
 		theGeodatenPackage.createPackageContents();
-		theBahnsteigPackage.createPackageContents();
+		theATOPackage.createPackageContents();
+		theAnsteuerung_ElementPackage.createPackageContents();
+		theBedienungPackage.createPackageContents();
+		theSignalePackage.createPackageContents();
 		theBlockPackage.createPackageContents();
 		theOrtungPackage.createPackageContents();
-		theSignalePackage.createPackageContents();
 		theGleisPackage.createPackageContents();
-		theBedienungPackage.createPackageContents();
+		theBahnsteigPackage.createPackageContents();
 		theWeichen_und_GleissperrenPackage.createPackageContents();
 		theRegelzeichnungPackage.createPackageContents();
 		thePZBPackage.createPackageContents();
@@ -797,23 +850,25 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		theFlankenschutzPackage.createPackageContents();
 		theSchluesselabhaengigkeitenPackage.createPackageContents();
 		theMedien_und_TrassenPackage.createPackageContents();
-		theNahbedienbereichPackage.createPackageContents();
+		theNahbedienungPackage.createPackageContents();
 		theZuglenkungPackage.createPackageContents();
 		theZugnummernmeldeanlagePackage.createPackageContents();
 		theVerweisePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theFahrstrassePackage.initializePackageContents();
+		theLayoutinformationenPackage.initializePackageContents();
 		theBasisobjektePackage.initializePackageContents();
 		theBasisTypenPackage.initializePackageContents();
-		theAnsteuerung_ElementPackage.initializePackageContents();
 		theGeodatenPackage.initializePackageContents();
-		theBahnsteigPackage.initializePackageContents();
+		theATOPackage.initializePackageContents();
+		theAnsteuerung_ElementPackage.initializePackageContents();
+		theBedienungPackage.initializePackageContents();
+		theSignalePackage.initializePackageContents();
 		theBlockPackage.initializePackageContents();
 		theOrtungPackage.initializePackageContents();
-		theSignalePackage.initializePackageContents();
 		theGleisPackage.initializePackageContents();
-		theBedienungPackage.initializePackageContents();
+		theBahnsteigPackage.initializePackageContents();
 		theWeichen_und_GleissperrenPackage.initializePackageContents();
 		theRegelzeichnungPackage.initializePackageContents();
 		thePZBPackage.initializePackageContents();
@@ -821,7 +876,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		theFlankenschutzPackage.initializePackageContents();
 		theSchluesselabhaengigkeitenPackage.initializePackageContents();
 		theMedien_und_TrassenPackage.initializePackageContents();
-		theNahbedienbereichPackage.initializePackageContents();
+		theNahbedienungPackage.initializePackageContents();
 		theZuglenkungPackage.initializePackageContents();
 		theZugnummernmeldeanlagePackage.initializePackageContents();
 		theVerweisePackage.initializePackageContents();
@@ -856,8 +911,8 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EClass getAufloesung_Ssp_Zielgeis_TypeClass() {
-		return aufloesung_Ssp_Zielgeis_TypeClassEClass;
+	public EClass getAufloesung_Ssp_Zielgleis_TypeClass() {
+		return aufloesung_Ssp_Zielgleis_TypeClassEClass;
 	}
 
 	/**
@@ -866,8 +921,8 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAufloesung_Ssp_Zielgeis_TypeClass_Wert() {
-		return (EAttribute)aufloesung_Ssp_Zielgeis_TypeClassEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAufloesung_Ssp_Zielgleis_TypeClass_Wert() {
+		return (EAttribute)aufloesung_Ssp_Zielgleis_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1126,7 +1181,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgeis() {
+	public EReference getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgleis() {
 		return (EReference)fstr_Abhaengigkeit_Ssp_AttributeGroupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1216,26 +1271,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EClass getFstr_Art_TypeClass() {
-		return fstr_Art_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFstr_Art_TypeClass_Wert() {
-		return (EAttribute)fstr_Art_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getFstr_Bedienstring_TypeClass() {
 		return fstr_Bedienstring_TypeClassEClass;
 	}
@@ -1248,26 +1283,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	@Override
 	public EAttribute getFstr_Bedienstring_TypeClass_Wert() {
 		return (EAttribute)fstr_Bedienstring_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFstr_Bildezeit_TypeClass() {
-		return fstr_Bildezeit_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFstr_Bildezeit_TypeClass_Wert() {
-		return (EAttribute)fstr_Bildezeit_TypeClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1496,56 +1511,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EClass getFstr_DWeg_W_Kr_Allg_AttributeGroup() {
-		return fstr_DWeg_W_Kr_Allg_AttributeGroupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFstr_DWeg_W_Kr_Allg_AttributeGroup_FstrDWegWKr() {
-		return (EReference)fstr_DWeg_W_Kr_Allg_AttributeGroupEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFstr_DWeg_W_Kr_Allg_child_AttributeGroup() {
-		return fstr_DWeg_W_Kr_Allg_child_AttributeGroupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFstr_DWeg_W_Kr_TypeClass() {
-		return fstr_DWeg_W_Kr_TypeClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFstr_DWeg_W_Kr_TypeClass_Wert() {
-		return (EAttribute)fstr_DWeg_W_Kr_TypeClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getFstr_Fahrweg() {
 		return fstr_FahrwegEClass;
 	}
@@ -1586,6 +1551,36 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
+	public EReference getFstr_Fahrweg_StartSignalCharakter() {
+		return (EReference)fstr_FahrwegEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFstr_Mittel_Art_TypeClass() {
+		return fstr_Mittel_Art_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFstr_Mittel_Art_TypeClass_Wert() {
+		return (EAttribute)fstr_Mittel_Art_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFstr_Mittel_AttributeGroup() {
 		return fstr_Mittel_AttributeGroupEClass;
 	}
@@ -1596,8 +1591,18 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Mittel_AttributeGroup_FstrMittelVAufwertung() {
+	public EReference getFstr_Mittel_AttributeGroup_FstrMittelArt() {
 		return (EReference)fstr_Mittel_AttributeGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFstr_Mittel_AttributeGroup_FstrMittelVAufwertung() {
+		return (EReference)fstr_Mittel_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1656,6 +1661,26 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
+	public EClass getFstr_Rangier_Art_TypeClass() {
+		return fstr_Rangier_Art_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFstr_Rangier_Art_TypeClass_Wert() {
+		return (EAttribute)fstr_Rangier_Art_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFstr_Rangier_AttributeGroup() {
 		return fstr_Rangier_AttributeGroupEClass;
 	}
@@ -1676,7 +1701,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Rangier_AttributeGroup_IDFMAAnlageRangierFrei() {
+	public EReference getFstr_Rangier_AttributeGroup_FstrRangierArt() {
 		return (EReference)fstr_Rangier_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1686,8 +1711,18 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Rangier_AttributeGroup_RangierGegenfahrtausschluss() {
+	public EReference getFstr_Rangier_AttributeGroup_IDFMAAnlageRangierFrei() {
 		return (EReference)fstr_Rangier_AttributeGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFstr_Rangier_AttributeGroup_RangierGegenfahrtausschluss() {
+		return (EReference)fstr_Rangier_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1876,6 +1911,26 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
+	public EClass getFstr_Zug_Art_TypeClass() {
+		return fstr_Zug_Art_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFstr_Zug_Art_TypeClass_Wert() {
+		return (EAttribute)fstr_Zug_Art_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFstr_Zug_AttributeGroup() {
 		return fstr_Zug_AttributeGroupEClass;
 	}
@@ -1906,7 +1961,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Zug_AttributeGroup_FstrZugDWeg() {
+	public EReference getFstr_Zug_AttributeGroup_FstrZugArt() {
 		return (EReference)fstr_Zug_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1916,7 +1971,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Zug_AttributeGroup_IDBUEEinschaltung() {
+	public EReference getFstr_Zug_AttributeGroup_FstrZugDWeg() {
 		return (EReference)fstr_Zug_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1926,8 +1981,18 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Zug_AttributeGroup_IDSignalGruppenausfahrt() {
+	public EReference getFstr_Zug_AttributeGroup_IDBUEEinschaltung() {
 		return (EReference)fstr_Zug_AttributeGroupEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFstr_Zug_AttributeGroup_IDSignalGruppenausfahrt() {
+		return (EReference)fstr_Zug_AttributeGroupEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2056,7 +2121,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt() {
+	public EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring() {
 		return (EReference)fstr_Zug_Rangier_Allg_AttributeGroupEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2066,7 +2131,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring() {
+	public EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrReihenfolge() {
 		return (EReference)fstr_Zug_Rangier_Allg_AttributeGroupEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2076,28 +2141,8 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit() {
-		return (EReference)fstr_Zug_Rangier_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrReihenfolge() {
-		return (EReference)fstr_Zug_Rangier_Allg_AttributeGroupEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getFstr_Zug_Rangier_Allg_AttributeGroup_FstrV() {
-		return (EReference)fstr_Zug_Rangier_Allg_AttributeGroupEClass.getEStructuralFeatures().get(5);
+		return (EReference)fstr_Zug_Rangier_Allg_AttributeGroupEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2246,6 +2291,26 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
+	public EClass getStart_Signal_Charakter_TypeClass() {
+		return start_Signal_Charakter_TypeClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStart_Signal_Charakter_TypeClass_Wert() {
+		return (EAttribute)start_Signal_Charakter_TypeClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getENUMAufloesungSspZielgleis() {
 		return enumAufloesungSspZielgleisEEnum;
 	}
@@ -2266,8 +2331,28 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EEnum getENUMFstrArt() {
-		return enumFstrArtEEnum;
+	public EEnum getENUMFstrMittelArt() {
+		return enumFstrMittelArtEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMFstrRangierArt() {
+		return enumFstrRangierArtEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMFstrZugArt() {
+		return enumFstrZugArtEEnum;
 	}
 
 	/**
@@ -2278,6 +2363,16 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	@Override
 	public EEnum getENUMRangierGegenfahrtausschluss() {
 		return enumRangierGegenfahrtausschlussEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getENUMStartSignalCharakter() {
+		return enumStartSignalCharakterEEnum;
 	}
 
 	/**
@@ -2356,8 +2451,28 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	 * @generated
 	 */
 	@Override
-	public EDataType getENUMFstrArtObject() {
-		return enumFstrArtObjectEDataType;
+	public EDataType getENUMFstrMittelArtObject() {
+		return enumFstrMittelArtObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMFstrRangierArtObject() {
+		return enumFstrRangierArtObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMFstrZugArtObject() {
+		return enumFstrZugArtObjectEDataType;
 	}
 
 	/**
@@ -2368,6 +2483,16 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	@Override
 	public EDataType getENUMRangierGegenfahrtausschlussObject() {
 		return enumRangierGegenfahrtausschlussObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getENUMStartSignalCharakterObject() {
+		return enumStartSignalCharakterObjectEDataType;
 	}
 
 	/**
@@ -2388,16 +2513,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	@Override
 	public EDataType getFstr_Bedienstring_Type() {
 		return fstr_Bedienstring_TypeEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EDataType getFstr_Bildezeit_Type() {
-		return fstr_Bildezeit_TypeEDataType;
 	}
 
 	/**
@@ -2479,8 +2594,8 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		isCreated = true;
 
 		// Create classes and their features
-		aufloesung_Ssp_Zielgeis_TypeClassEClass = createEClass(AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS);
-		createEAttribute(aufloesung_Ssp_Zielgeis_TypeClassEClass, AUFLOESUNG_SSP_ZIELGEIS_TYPE_CLASS__WERT);
+		aufloesung_Ssp_Zielgleis_TypeClassEClass = createEClass(AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS);
+		createEAttribute(aufloesung_Ssp_Zielgleis_TypeClassEClass, AUFLOESUNG_SSP_ZIELGLEIS_TYPE_CLASS__WERT);
 
 		aufloesung_Verzoegerung_TypeClassEClass = createEClass(AUFLOESUNG_VERZOEGERUNG_TYPE_CLASS);
 		createEAttribute(aufloesung_Verzoegerung_TypeClassEClass, AUFLOESUNG_VERZOEGERUNG_TYPE_CLASS__WERT);
@@ -2518,7 +2633,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		createEReference(fstr_AbhaengigkeitEClass, FSTR_ABHAENGIGKEIT__ID_BEDIEN_ANZEIGE_ELEMENT);
 
 		fstr_Abhaengigkeit_Ssp_AttributeGroupEClass = createEClass(FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP);
-		createEReference(fstr_Abhaengigkeit_Ssp_AttributeGroupEClass, FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGEIS);
+		createEReference(fstr_Abhaengigkeit_Ssp_AttributeGroupEClass, FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__AUFLOESUNG_SSP_ZIELGLEIS);
 		createEReference(fstr_Abhaengigkeit_Ssp_AttributeGroupEClass, FSTR_ABHAENGIGKEIT_SSP_ATTRIBUTE_GROUP__ID_SCHLUESSELSPERRE);
 
 		fstr_AneinanderEClass = createEClass(FSTR_ANEINANDER);
@@ -2531,14 +2646,8 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		createEReference(fstr_Aneinander_ZuordnungEClass, FSTR_ANEINANDER_ZUORDNUNG__ID_FSTR_ANEINANDER);
 		createEReference(fstr_Aneinander_ZuordnungEClass, FSTR_ANEINANDER_ZUORDNUNG__ID_FSTR_ZUG_RANGIER);
 
-		fstr_Art_TypeClassEClass = createEClass(FSTR_ART_TYPE_CLASS);
-		createEAttribute(fstr_Art_TypeClassEClass, FSTR_ART_TYPE_CLASS__WERT);
-
 		fstr_Bedienstring_TypeClassEClass = createEClass(FSTR_BEDIENSTRING_TYPE_CLASS);
 		createEAttribute(fstr_Bedienstring_TypeClassEClass, FSTR_BEDIENSTRING_TYPE_CLASS__WERT);
-
-		fstr_Bildezeit_TypeClassEClass = createEClass(FSTR_BILDEZEIT_TYPE_CLASS);
-		createEAttribute(fstr_Bildezeit_TypeClassEClass, FSTR_BILDEZEIT_TYPE_CLASS__WERT);
 
 		fstr_DWegEClass = createEClass(FSTR_DWEG);
 		createEReference(fstr_DWegEClass, FSTR_DWEG__BEZEICHNUNG);
@@ -2567,20 +2676,17 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		createEReference(fstr_DWeg_W_KrEClass, FSTR_DWEG_WKR__ID_FSTR_DWEG);
 		createEReference(fstr_DWeg_W_KrEClass, FSTR_DWEG_WKR__IDW_KR_GSP_ELEMENT);
 
-		fstr_DWeg_W_Kr_Allg_AttributeGroupEClass = createEClass(FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP);
-		createEReference(fstr_DWeg_W_Kr_Allg_AttributeGroupEClass, FSTR_DWEG_WKR_ALLG_ATTRIBUTE_GROUP__FSTR_DWEG_WKR);
-
-		fstr_DWeg_W_Kr_Allg_child_AttributeGroupEClass = createEClass(FSTR_DWEG_WKR_ALLG_CHILD_ATTRIBUTE_GROUP);
-
-		fstr_DWeg_W_Kr_TypeClassEClass = createEClass(FSTR_DWEG_WKR_TYPE_CLASS);
-		createEAttribute(fstr_DWeg_W_Kr_TypeClassEClass, FSTR_DWEG_WKR_TYPE_CLASS__WERT);
-
 		fstr_FahrwegEClass = createEClass(FSTR_FAHRWEG);
 		createEReference(fstr_FahrwegEClass, FSTR_FAHRWEG__FSTR_VHG);
 		createEReference(fstr_FahrwegEClass, FSTR_FAHRWEG__ID_START);
 		createEReference(fstr_FahrwegEClass, FSTR_FAHRWEG__ID_ZIEL);
+		createEReference(fstr_FahrwegEClass, FSTR_FAHRWEG__START_SIGNAL_CHARAKTER);
+
+		fstr_Mittel_Art_TypeClassEClass = createEClass(FSTR_MITTEL_ART_TYPE_CLASS);
+		createEAttribute(fstr_Mittel_Art_TypeClassEClass, FSTR_MITTEL_ART_TYPE_CLASS__WERT);
 
 		fstr_Mittel_AttributeGroupEClass = createEClass(FSTR_MITTEL_ATTRIBUTE_GROUP);
+		createEReference(fstr_Mittel_AttributeGroupEClass, FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_ART);
 		createEReference(fstr_Mittel_AttributeGroupEClass, FSTR_MITTEL_ATTRIBUTE_GROUP__FSTR_MITTEL_VAUFWERTUNG);
 
 		fstr_Mittel_V_Aufwertung_TypeClassEClass = createEClass(FSTR_MITTEL_VAUFWERTUNG_TYPE_CLASS);
@@ -2590,8 +2696,12 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		createEReference(fstr_NichthaltfallEClass, FSTR_NICHTHALTFALL__IDFMA_ANLAGE);
 		createEReference(fstr_NichthaltfallEClass, FSTR_NICHTHALTFALL__ID_FSTR_FAHRWEG);
 
+		fstr_Rangier_Art_TypeClassEClass = createEClass(FSTR_RANGIER_ART_TYPE_CLASS);
+		createEAttribute(fstr_Rangier_Art_TypeClassEClass, FSTR_RANGIER_ART_TYPE_CLASS__WERT);
+
 		fstr_Rangier_AttributeGroupEClass = createEClass(FSTR_RANGIER_ATTRIBUTE_GROUP);
 		createEReference(fstr_Rangier_AttributeGroupEClass, FSTR_RANGIER_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG);
+		createEReference(fstr_Rangier_AttributeGroupEClass, FSTR_RANGIER_ATTRIBUTE_GROUP__FSTR_RANGIER_ART);
 		createEReference(fstr_Rangier_AttributeGroupEClass, FSTR_RANGIER_ATTRIBUTE_GROUP__IDFMA_ANLAGE_RANGIER_FREI);
 		createEReference(fstr_Rangier_AttributeGroupEClass, FSTR_RANGIER_ATTRIBUTE_GROUP__RANGIER_GEGENFAHRTAUSSCHLUSS);
 
@@ -2620,9 +2730,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		fstr_Vsigabstand_Verkuerzt_TypeClassEClass = createEClass(FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS);
 		createEAttribute(fstr_Vsigabstand_Verkuerzt_TypeClassEClass, FSTR_VSIGABSTAND_VERKUERZT_TYPE_CLASS__WERT);
 
+		fstr_Zug_Art_TypeClassEClass = createEClass(FSTR_ZUG_ART_TYPE_CLASS);
+		createEAttribute(fstr_Zug_Art_TypeClassEClass, FSTR_ZUG_ART_TYPE_CLASS__WERT);
+
 		fstr_Zug_AttributeGroupEClass = createEClass(FSTR_ZUG_ATTRIBUTE_GROUP);
 		createEReference(fstr_Zug_AttributeGroupEClass, FSTR_ZUG_ATTRIBUTE_GROUP__AUTOMATISCHE_EINSTELLUNG);
 		createEReference(fstr_Zug_AttributeGroupEClass, FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_VSIGABSTAND_VERKUERZT);
+		createEReference(fstr_Zug_AttributeGroupEClass, FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_ART);
 		createEReference(fstr_Zug_AttributeGroupEClass, FSTR_ZUG_ATTRIBUTE_GROUP__FSTR_ZUG_DWEG);
 		createEReference(fstr_Zug_AttributeGroupEClass, FSTR_ZUG_ATTRIBUTE_GROUP__IDBUE_EINSCHALTUNG);
 		createEReference(fstr_Zug_AttributeGroupEClass, FSTR_ZUG_ATTRIBUTE_GROUP__ID_SIGNAL_GRUPPENAUSFAHRT);
@@ -2641,9 +2755,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 
 		fstr_Zug_Rangier_Allg_AttributeGroupEClass = createEClass(FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP);
 		createEReference(fstr_Zug_Rangier_Allg_AttributeGroupEClass, FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FBEDIENUNG);
-		createEReference(fstr_Zug_Rangier_Allg_AttributeGroupEClass, FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_ART);
 		createEReference(fstr_Zug_Rangier_Allg_AttributeGroupEClass, FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BEDIENSTRING);
-		createEReference(fstr_Zug_Rangier_Allg_AttributeGroupEClass, FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_BILDEZEIT);
 		createEReference(fstr_Zug_Rangier_Allg_AttributeGroupEClass, FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_REIHENFOLGE);
 		createEReference(fstr_Zug_Rangier_Allg_AttributeGroupEClass, FSTR_ZUG_RANGIER_ALLG_ATTRIBUTE_GROUP__FSTR_V);
 
@@ -2667,11 +2779,17 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		sonstiger_PunktEClass = createEClass(SONSTIGER_PUNKT);
 		createEReference(sonstiger_PunktEClass, SONSTIGER_PUNKT__ID_BEGINN_BEREICH);
 
+		start_Signal_Charakter_TypeClassEClass = createEClass(START_SIGNAL_CHARAKTER_TYPE_CLASS);
+		createEAttribute(start_Signal_Charakter_TypeClassEClass, START_SIGNAL_CHARAKTER_TYPE_CLASS__WERT);
+
 		// Create enums
 		enumAufloesungSspZielgleisEEnum = createEEnum(ENUM_AUFLOESUNG_SSP_ZIELGLEIS);
 		enumAutomatischeEinstellungEEnum = createEEnum(ENUM_AUTOMATISCHE_EINSTELLUNG);
-		enumFstrArtEEnum = createEEnum(ENUM_FSTR_ART);
+		enumFstrMittelArtEEnum = createEEnum(ENUM_FSTR_MITTEL_ART);
+		enumFstrRangierArtEEnum = createEEnum(ENUM_FSTR_RANGIER_ART);
+		enumFstrZugArtEEnum = createEEnum(ENUM_FSTR_ZUG_ART);
 		enumRangierGegenfahrtausschlussEEnum = createEEnum(ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS);
+		enumStartSignalCharakterEEnum = createEEnum(ENUM_START_SIGNAL_CHARAKTER);
 
 		// Create data types
 		aufloesung_Verzoegerung_TypeEDataType = createEDataType(AUFLOESUNG_VERZOEGERUNG_TYPE);
@@ -2681,11 +2799,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		dWeg_V_TypeEDataType = createEDataType(DWEG_VTYPE);
 		enumAufloesungSspZielgleisObjectEDataType = createEDataType(ENUM_AUFLOESUNG_SSP_ZIELGLEIS_OBJECT);
 		enumAutomatischeEinstellungObjectEDataType = createEDataType(ENUM_AUTOMATISCHE_EINSTELLUNG_OBJECT);
-		enumFstrArtObjectEDataType = createEDataType(ENUM_FSTR_ART_OBJECT);
+		enumFstrMittelArtObjectEDataType = createEDataType(ENUM_FSTR_MITTEL_ART_OBJECT);
+		enumFstrRangierArtObjectEDataType = createEDataType(ENUM_FSTR_RANGIER_ART_OBJECT);
+		enumFstrZugArtObjectEDataType = createEDataType(ENUM_FSTR_ZUG_ART_OBJECT);
 		enumRangierGegenfahrtausschlussObjectEDataType = createEDataType(ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_OBJECT);
+		enumStartSignalCharakterObjectEDataType = createEDataType(ENUM_START_SIGNAL_CHARAKTER_OBJECT);
 		fstr_Aneinander_Bedienstring_TypeEDataType = createEDataType(FSTR_ANEINANDER_BEDIENSTRING_TYPE);
 		fstr_Bedienstring_TypeEDataType = createEDataType(FSTR_BEDIENSTRING_TYPE);
-		fstr_Bildezeit_TypeEDataType = createEDataType(FSTR_BILDEZEIT_TYPE);
 		fstr_Reihenfolge_TypeEDataType = createEDataType(FSTR_REIHENFOLGE_TYPE);
 		fstr_V_Hg_TypeEDataType = createEDataType(FSTR_VHG_TYPE);
 		fstr_V_TypeEDataType = createEDataType(FSTR_VTYPE);
@@ -2734,7 +2854,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		aufloesung_Ssp_Zielgeis_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		aufloesung_Ssp_Zielgleis_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		aufloesung_Verzoegerung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		automatische_Einstellung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		bezeichnung_Fstr_DWeg_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -2749,16 +2869,14 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		fstr_AneinanderEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		fstr_Aneinander_Bedienstring_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_Aneinander_ZuordnungEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
-		fstr_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_Bedienstring_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		fstr_Bildezeit_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_DWegEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		fstr_DWeg_W_KrEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
-		fstr_DWeg_W_Kr_Allg_child_AttributeGroupEClass.getESuperTypes().add(this.getFstr_DWeg_W_Kr_Allg_AttributeGroup());
-		fstr_DWeg_W_Kr_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_FahrwegEClass.getESuperTypes().add(theBasisobjektePackage.getBereich_Objekt());
+		fstr_Mittel_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_Mittel_V_Aufwertung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_NichthaltfallEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
+		fstr_Rangier_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_Rangier_Fla_ZuordnungEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		fstr_Reihenfolge_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_SignalisierungEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
@@ -2766,16 +2884,18 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		fstr_V_Hg_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_V_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_Vsigabstand_Verkuerzt_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
+		fstr_Zug_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		fstr_Zug_RangierEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		laenge_Soll_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		markanter_PunktEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		massgebende_Neigung_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		rangier_Gegenfahrtausschluss_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		sonstiger_PunktEClass.getESuperTypes().add(theBasisobjektePackage.getPunkt_Objekt());
+		start_Signal_Charakter_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(aufloesung_Ssp_Zielgeis_TypeClassEClass, Aufloesung_Ssp_Zielgeis_TypeClass.class, "Aufloesung_Ssp_Zielgeis_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAufloesung_Ssp_Zielgeis_TypeClass_Wert(), this.getENUMAufloesungSspZielgleisObject(), "wert", null, 1, 1, Aufloesung_Ssp_Zielgeis_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(aufloesung_Ssp_Zielgleis_TypeClassEClass, Aufloesung_Ssp_Zielgleis_TypeClass.class, "Aufloesung_Ssp_Zielgleis_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAufloesung_Ssp_Zielgleis_TypeClass_Wert(), this.getENUMAufloesungSspZielgleisObject(), "wert", null, 1, 1, Aufloesung_Ssp_Zielgleis_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aufloesung_Verzoegerung_TypeClassEClass, Aufloesung_Verzoegerung_TypeClass.class, "Aufloesung_Verzoegerung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAufloesung_Verzoegerung_TypeClass_Wert(), this.getAufloesung_Verzoegerung_Type(), "wert", null, 1, 1, Aufloesung_Verzoegerung_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2813,7 +2933,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		initEReference(getFstr_Abhaengigkeit_IDBedienAnzeigeElement(), theBedienungPackage.getBedien_Anzeige_Element(), null, "iDBedienAnzeigeElement", null, 0, 1, Fstr_Abhaengigkeit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fstr_Abhaengigkeit_Ssp_AttributeGroupEClass, Fstr_Abhaengigkeit_Ssp_AttributeGroup.class, "Fstr_Abhaengigkeit_Ssp_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgeis(), this.getAufloesung_Ssp_Zielgeis_TypeClass(), null, "aufloesungSspZielgeis", null, 0, 1, Fstr_Abhaengigkeit_Ssp_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgleis(), this.getAufloesung_Ssp_Zielgleis_TypeClass(), null, "aufloesungSspZielgleis", null, 0, 1, Fstr_Abhaengigkeit_Ssp_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Abhaengigkeit_Ssp_AttributeGroup_IDSchluesselsperre(), theSchluesselabhaengigkeitenPackage.getSchluesselsperre(), null, "iDSchluesselsperre", null, 1, 1, Fstr_Abhaengigkeit_Ssp_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fstr_AneinanderEClass, Fstr_Aneinander.class, "Fstr_Aneinander", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2826,14 +2946,8 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		initEReference(getFstr_Aneinander_Zuordnung_IDFstrAneinander(), this.getFstr_Aneinander(), null, "iDFstrAneinander", null, 1, 1, Fstr_Aneinander_Zuordnung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Aneinander_Zuordnung_IDFstrZugRangier(), this.getFstr_Zug_Rangier(), null, "iDFstrZugRangier", null, 1, 1, Fstr_Aneinander_Zuordnung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(fstr_Art_TypeClassEClass, Fstr_Art_TypeClass.class, "Fstr_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFstr_Art_TypeClass_Wert(), this.getENUMFstrArtObject(), "wert", null, 1, 1, Fstr_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(fstr_Bedienstring_TypeClassEClass, Fstr_Bedienstring_TypeClass.class, "Fstr_Bedienstring_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFstr_Bedienstring_TypeClass_Wert(), this.getFstr_Bedienstring_Type(), "wert", null, 1, 1, Fstr_Bedienstring_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(fstr_Bildezeit_TypeClassEClass, Fstr_Bildezeit_TypeClass.class, "Fstr_Bildezeit_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFstr_Bildezeit_TypeClass_Wert(), this.getFstr_Bildezeit_Type(), "wert", null, 1, 1, Fstr_Bildezeit_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fstr_DWegEClass, Fstr_DWeg.class, "Fstr_DWeg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFstr_DWeg_Bezeichnung(), this.getFstr_DWeg_Bezeichnung_AttributeGroup(), null, "bezeichnung", null, 0, 1, Fstr_DWeg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2862,20 +2976,17 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		initEReference(getFstr_DWeg_W_Kr_IDFstrDWeg(), this.getFstr_DWeg(), null, "iDFstrDWeg", null, 1, 1, Fstr_DWeg_W_Kr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_DWeg_W_Kr_IDWKrGspElement(), theWeichen_und_GleissperrenPackage.getW_Kr_Gsp_Element(), null, "iDWKrGspElement", null, 1, 1, Fstr_DWeg_W_Kr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(fstr_DWeg_W_Kr_Allg_AttributeGroupEClass, Fstr_DWeg_W_Kr_Allg_AttributeGroup.class, "Fstr_DWeg_W_Kr_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFstr_DWeg_W_Kr_Allg_AttributeGroup_FstrDWegWKr(), this.getFstr_DWeg_W_Kr_TypeClass(), null, "fstrDWegWKr", null, 1, 1, Fstr_DWeg_W_Kr_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(fstr_DWeg_W_Kr_Allg_child_AttributeGroupEClass, Fstr_DWeg_W_Kr_Allg_child_AttributeGroup.class, "Fstr_DWeg_W_Kr_Allg_child_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(fstr_DWeg_W_Kr_TypeClassEClass, Fstr_DWeg_W_Kr_TypeClass.class, "Fstr_DWeg_W_Kr_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFstr_DWeg_W_Kr_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Fstr_DWeg_W_Kr_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(fstr_FahrwegEClass, Fstr_Fahrweg.class, "Fstr_Fahrweg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFstr_Fahrweg_FstrVHg(), this.getFstr_V_Hg_TypeClass(), null, "fstrVHg", null, 0, 1, Fstr_Fahrweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Fahrweg_IDStart(), theSignalePackage.getSignal(), null, "iDStart", null, 1, 1, Fstr_Fahrweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Fahrweg_IDZiel(), theBasisobjektePackage.getBasis_Objekt(), null, "iDZiel", null, 1, 1, Fstr_Fahrweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFstr_Fahrweg_StartSignalCharakter(), this.getStart_Signal_Charakter_TypeClass(), null, "startSignalCharakter", null, 0, 1, Fstr_Fahrweg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fstr_Mittel_Art_TypeClassEClass, Fstr_Mittel_Art_TypeClass.class, "Fstr_Mittel_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFstr_Mittel_Art_TypeClass_Wert(), this.getENUMFstrMittelArtObject(), "wert", null, 1, 1, Fstr_Mittel_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fstr_Mittel_AttributeGroupEClass, Fstr_Mittel_AttributeGroup.class, "Fstr_Mittel_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFstr_Mittel_AttributeGroup_FstrMittelArt(), this.getFstr_Mittel_Art_TypeClass(), null, "fstrMittelArt", null, 1, 1, Fstr_Mittel_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Mittel_AttributeGroup_FstrMittelVAufwertung(), this.getFstr_Mittel_V_Aufwertung_TypeClass(), null, "fstrMittelVAufwertung", null, 1, 1, Fstr_Mittel_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fstr_Mittel_V_Aufwertung_TypeClassEClass, Fstr_Mittel_V_Aufwertung_TypeClass.class, "Fstr_Mittel_V_Aufwertung_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2885,8 +2996,12 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		initEReference(getFstr_Nichthaltfall_IDFMAAnlage(), theOrtungPackage.getFMA_Anlage(), null, "iDFMAAnlage", null, 1, 1, Fstr_Nichthaltfall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Nichthaltfall_IDFstrFahrweg(), this.getFstr_Fahrweg(), null, "iDFstrFahrweg", null, 1, 1, Fstr_Nichthaltfall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(fstr_Rangier_Art_TypeClassEClass, Fstr_Rangier_Art_TypeClass.class, "Fstr_Rangier_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFstr_Rangier_Art_TypeClass_Wert(), this.getENUMFstrRangierArtObject(), "wert", null, 1, 1, Fstr_Rangier_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(fstr_Rangier_AttributeGroupEClass, Fstr_Rangier_AttributeGroup.class, "Fstr_Rangier_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFstr_Rangier_AttributeGroup_AutomatischeEinstellung(), this.getAutomatische_Einstellung_TypeClass(), null, "automatischeEinstellung", null, 0, 1, Fstr_Rangier_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFstr_Rangier_AttributeGroup_FstrRangierArt(), this.getFstr_Rangier_Art_TypeClass(), null, "fstrRangierArt", null, 1, 1, Fstr_Rangier_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Rangier_AttributeGroup_IDFMAAnlageRangierFrei(), theOrtungPackage.getFMA_Anlage(), null, "iDFMAAnlageRangierFrei", null, 0, -1, Fstr_Rangier_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Rangier_AttributeGroup_RangierGegenfahrtausschluss(), this.getRangier_Gegenfahrtausschluss_TypeClass(), null, "rangierGegenfahrtausschluss", null, 0, 1, Fstr_Rangier_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2915,9 +3030,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		initEClass(fstr_Vsigabstand_Verkuerzt_TypeClassEClass, Fstr_Vsigabstand_Verkuerzt_TypeClass.class, "Fstr_Vsigabstand_Verkuerzt_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFstr_Vsigabstand_Verkuerzt_TypeClass_Wert(), theXMLTypePackage.getBooleanObject(), "wert", null, 1, 1, Fstr_Vsigabstand_Verkuerzt_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(fstr_Zug_Art_TypeClassEClass, Fstr_Zug_Art_TypeClass.class, "Fstr_Zug_Art_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFstr_Zug_Art_TypeClass_Wert(), this.getENUMFstrZugArtObject(), "wert", null, 1, 1, Fstr_Zug_Art_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(fstr_Zug_AttributeGroupEClass, Fstr_Zug_AttributeGroup.class, "Fstr_Zug_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFstr_Zug_AttributeGroup_AutomatischeEinstellung(), this.getAutomatische_Einstellung_TypeClass(), null, "automatischeEinstellung", null, 0, 1, Fstr_Zug_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Zug_AttributeGroup_FstrVsigabstandVerkuerzt(), this.getFstr_Vsigabstand_Verkuerzt_TypeClass(), null, "fstrVsigabstandVerkuerzt", null, 1, 1, Fstr_Zug_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFstr_Zug_AttributeGroup_FstrZugArt(), this.getFstr_Zug_Art_TypeClass(), null, "fstrZugArt", null, 1, 1, Fstr_Zug_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Zug_AttributeGroup_FstrZugDWeg(), this.getFstr_Zug_DWeg_AttributeGroup(), null, "fstrZugDWeg", null, 0, 1, Fstr_Zug_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Zug_AttributeGroup_IDBUEEinschaltung(), theBahnuebergangPackage.getBUE_Einschaltung(), null, "iDBUEEinschaltung", null, 0, -1, Fstr_Zug_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Zug_AttributeGroup_IDSignalGruppenausfahrt(), theSignalePackage.getSignal(), null, "iDSignalGruppenausfahrt", null, 0, 1, Fstr_Zug_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2936,9 +3055,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 
 		initEClass(fstr_Zug_Rangier_Allg_AttributeGroupEClass, Fstr_Zug_Rangier_Allg_AttributeGroup.class, "Fstr_Zug_Rangier_Allg_AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFstr_Zug_Rangier_Allg_AttributeGroup_FBedienung(), this.getF_Bedienung_TypeClass(), null, "fBedienung", null, 0, 1, Fstr_Zug_Rangier_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt(), this.getFstr_Art_TypeClass(), null, "fstrArt", null, 1, 1, Fstr_Zug_Rangier_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring(), this.getFstr_Bedienstring_TypeClass(), null, "fstrBedienstring", null, 0, 1, Fstr_Zug_Rangier_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit(), this.getFstr_Bildezeit_TypeClass(), null, "fstrBildezeit", null, 0, 1, Fstr_Zug_Rangier_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Zug_Rangier_Allg_AttributeGroup_FstrReihenfolge(), this.getFstr_Reihenfolge_TypeClass(), null, "fstrReihenfolge", null, 1, 1, Fstr_Zug_Rangier_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFstr_Zug_Rangier_Allg_AttributeGroup_FstrV(), this.getFstr_V_TypeClass(), null, "fstrV", null, 0, 1, Fstr_Zug_Rangier_Allg_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2962,6 +3079,9 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		initEClass(sonstiger_PunktEClass, Sonstiger_Punkt.class, "Sonstiger_Punkt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSonstiger_Punkt_IDBeginnBereich(), theBasisobjektePackage.getBasis_Objekt(), null, "iDBeginnBereich", null, 0, 1, Sonstiger_Punkt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(start_Signal_Charakter_TypeClassEClass, Start_Signal_Charakter_TypeClass.class, "Start_Signal_Charakter_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStart_Signal_Charakter_TypeClass_Wert(), this.getENUMStartSignalCharakterObject(), "wert", null, 1, 1, Start_Signal_Charakter_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(enumAufloesungSspZielgleisEEnum, ENUMAufloesungSspZielgleis.class, "ENUMAufloesungSspZielgleis");
 		addEEnumLiteral(enumAufloesungSspZielgleisEEnum, ENUMAufloesungSspZielgleis.ENUM_AUFLOESUNG_SSP_ZIELGLEIS_BESETZT);
@@ -2971,25 +3091,37 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		addEEnumLiteral(enumAutomatischeEinstellungEEnum, ENUMAutomatischeEinstellung.ENUM_AUTOMATISCHE_EINSTELLUNG_SB);
 		addEEnumLiteral(enumAutomatischeEinstellungEEnum, ENUMAutomatischeEinstellung.ENUM_AUTOMATISCHE_EINSTELLUNG_ZL);
 
-		initEEnum(enumFstrArtEEnum, ENUMFstrArt.class, "ENUMFstrArt");
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_RR);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZZ);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_RU);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZH);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZM);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZR);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZU);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZUH);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZUM);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_RT);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZT);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_RTU);
-		addEEnumLiteral(enumFstrArtEEnum, ENUMFstrArt.ENUM_FSTR_ART_ZTU);
+		initEEnum(enumFstrMittelArtEEnum, ENUMFstrMittelArt.class, "ENUMFstrMittelArt");
+		addEEnumLiteral(enumFstrMittelArtEEnum, ENUMFstrMittelArt.ENUM_FSTR_MITTEL_ART_ZM);
+		addEEnumLiteral(enumFstrMittelArtEEnum, ENUMFstrMittelArt.ENUM_FSTR_MITTEL_ART_ZUM);
+
+		initEEnum(enumFstrRangierArtEEnum, ENUMFstrRangierArt.class, "ENUMFstrRangierArt");
+		addEEnumLiteral(enumFstrRangierArtEEnum, ENUMFstrRangierArt.ENUM_FSTR_RANGIER_ART_RR);
+		addEEnumLiteral(enumFstrRangierArtEEnum, ENUMFstrRangierArt.ENUM_FSTR_RANGIER_ART_RT);
+		addEEnumLiteral(enumFstrRangierArtEEnum, ENUMFstrRangierArt.ENUM_FSTR_RANGIER_ART_RTU);
+		addEEnumLiteral(enumFstrRangierArtEEnum, ENUMFstrRangierArt.ENUM_FSTR_RANGIER_ART_RU);
+
+		initEEnum(enumFstrZugArtEEnum, ENUMFstrZugArt.class, "ENUMFstrZugArt");
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_B);
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_ZH);
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_ZR);
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_ZT);
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_ZTU);
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_ZU);
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_ZUH);
+		addEEnumLiteral(enumFstrZugArtEEnum, ENUMFstrZugArt.ENUM_FSTR_ZUG_ART_ZZ);
 
 		initEEnum(enumRangierGegenfahrtausschlussEEnum, ENUMRangierGegenfahrtausschluss.class, "ENUMRangierGegenfahrtausschluss");
 		addEEnumLiteral(enumRangierGegenfahrtausschlussEEnum, ENUMRangierGegenfahrtausschluss.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_INSELGLEIS_FREI);
 		addEEnumLiteral(enumRangierGegenfahrtausschlussEEnum, ENUMRangierGegenfahrtausschluss.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_JA);
 		addEEnumLiteral(enumRangierGegenfahrtausschlussEEnum, ENUMRangierGegenfahrtausschluss.ENUM_RANGIER_GEGENFAHRTAUSSCHLUSS_NEIN);
+
+		initEEnum(enumStartSignalCharakterEEnum, ENUMStartSignalCharakter.class, "ENUMStartSignalCharakter");
+		addEEnumLiteral(enumStartSignalCharakterEEnum, ENUMStartSignalCharakter.ENUM_START_SIGNAL_CHARAKTER_AUSFAHR_SIGNAL);
+		addEEnumLiteral(enumStartSignalCharakterEEnum, ENUMStartSignalCharakter.ENUM_START_SIGNAL_CHARAKTER_AUSFAHR_SIGNAL_NACHGELAGERT);
+		addEEnumLiteral(enumStartSignalCharakterEEnum, ENUMStartSignalCharakter.ENUM_START_SIGNAL_CHARAKTER_BLOCK_SIGNAL);
+		addEEnumLiteral(enumStartSignalCharakterEEnum, ENUMStartSignalCharakter.ENUM_START_SIGNAL_CHARAKTER_EINFAHR_SIGNAL);
+		addEEnumLiteral(enumStartSignalCharakterEEnum, ENUMStartSignalCharakter.ENUM_START_SIGNAL_CHARAKTER_NACHRUECK_SIGNAL);
 
 		// Initialize data types
 		initEDataType(aufloesung_Verzoegerung_TypeEDataType, BigDecimal.class, "Aufloesung_Verzoegerung_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -2999,11 +3131,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		initEDataType(dWeg_V_TypeEDataType, BigInteger.class, "DWeg_V_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumAufloesungSspZielgleisObjectEDataType, ENUMAufloesungSspZielgleis.class, "ENUMAufloesungSspZielgleisObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumAutomatischeEinstellungObjectEDataType, ENUMAutomatischeEinstellung.class, "ENUMAutomatischeEinstellungObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(enumFstrArtObjectEDataType, ENUMFstrArt.class, "ENUMFstrArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumFstrMittelArtObjectEDataType, ENUMFstrMittelArt.class, "ENUMFstrMittelArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumFstrRangierArtObjectEDataType, ENUMFstrRangierArt.class, "ENUMFstrRangierArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumFstrZugArtObjectEDataType, ENUMFstrZugArt.class, "ENUMFstrZugArtObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(enumRangierGegenfahrtausschlussObjectEDataType, ENUMRangierGegenfahrtausschluss.class, "ENUMRangierGegenfahrtausschlussObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(enumStartSignalCharakterObjectEDataType, ENUMStartSignalCharakter.class, "ENUMStartSignalCharakterObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(fstr_Aneinander_Bedienstring_TypeEDataType, String.class, "Fstr_Aneinander_Bedienstring_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(fstr_Bedienstring_TypeEDataType, String.class, "Fstr_Bedienstring_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(fstr_Bildezeit_TypeEDataType, BigDecimal.class, "Fstr_Bildezeit_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(fstr_Reihenfolge_TypeEDataType, BigInteger.class, "Fstr_Reihenfolge_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(fstr_V_Hg_TypeEDataType, BigInteger.class, "Fstr_V_Hg_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(fstr_V_TypeEDataType, BigInteger.class, "Fstr_V_Type", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -3034,7 +3168,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nF\u00fcr Fragen zum Schema wenden Sie sich bitte an Herrn :\n\nReiner Br\u00f6del (reiner.broedel@deutschebahn.com, +49 30 297-57123)\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
+			   "documentation", "Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface.\r\nDieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.\n\nWeitere Informationen zur Lizenz finden Sie auf\nhttp://www.dbnetze.com/planpro\n\nInhalt der Datei:\nXML Schema f\u00fcr PlanPro Schnittstelle.\n\nBei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com\n\n--------------------------------------------------------------------------------\n\nThis Document is licensed under the open source license RailPL V1.0.\n\nMore information about the license can be found on\nhttp://www.dbnetze.com/planpro\n\nContents of the file:\nXML Schema for PlanPro interface."
 		   });
 		addAnnotation
 		  (fstr_AbhaengigkeitEClass,
@@ -3055,7 +3189,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "documentation", "Bedien_Anzeige_Element, das wirksam sein muss, damit die Fstr gesichert ist. DB-Regelwerk Mittelweichenteilfahrstra\u00dfentabelle: Bemerkung oder Fu\u00dfnote. Schalter/Taster: Zugstra\u00dfentabelle: Bemerkung oder Fu\u00dfnote; Rangierstra\u00dfentabelle: Bemerkung oder Fu\u00dfnote; Mittelweichenteilfahrstra\u00dfentabelle: Bemerkung oder Fu\u00dfnote. "
 		   });
 		addAnnotation
-		  (getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgeis(),
+		  (getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgleis(),
 		   source,
 		   new String[] {
 			   "documentation", "Kriterium f\u00fcr die Aufl\u00f6sung von \u00fcberwachten Schl\u00fcsselsperren im Zielgleis von Rangierstra\u00dfen. DB-Regelwerk Lastenheft ESTW F1, Abschnitt 6.5 (Rangierstra\u00dfenaufl\u00f6sung)"
@@ -3178,13 +3312,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_DWeg_W_KrEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen \u00fcber den zugrunde liegenden Fstr Fahrweg ist nicht m\u00f6glich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Au\u00dferdem muss f\u00fcr Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden und ob sie Flankenschutz anfordern sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese \u00fcber Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spalten\u00fcberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: \"Weichen, Kreuzungen, Gleissperren\""
+			   "documentation", "Zuordnung von Weichen und Kreuzungen zum in Fstr DWeg geplanten Durchrutschweg. Eine Zuordnung von Weichen und Kreuzungen \u00fcber den zugrunde liegenden Fstr Fahrweg ist nicht m\u00f6glich, da das Ende des Durchrutschweges in einer Weiche liegen kann, deren Sicherung explizit geplant werden muss. Au\u00dferdem muss f\u00fcr Weichen im Durchrutschweg angegeben werden, ob sie verschlossen werden sollen. Eine Angabe der Lage der Weiche ist nicht notwendig, da sich diese \u00fcber Fstr Fahrweg (Bereich Objekt) ergibt. Obwohl die Spalten\u00fcberschrift in der Durchrutschwegtabelle auch von Gleissperren spricht, werden Gleissperren nicht vorgesehen. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: \"Weichen, Kreuzungen, Gleissperren\""
 		   });
 		addAnnotation
 		  (getFstr_DWeg_W_Kr_ElementVerschluss(),
 		   source,
 		   new String[] {
-			   "documentation", "Verschluss der Weiche im Durchrutschweg. Stumpf berutschte, auffahrbare Weichen im Durchrutschweg k\u00f6nnen unverschlossen bleiben.\n\nDas Attribut ist herstellerneutralit\u00e4tskritisch.\n \nDB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: \"Weichen, Kreuzungen, Gleissperren\"\n"
+			   "documentation", "Verschluss der Weiche im Durchrutschweg. Stumpf berutschte, auffahrbare Weichen im Durchrutschweg k\u00f6nnen unverschlossen bleiben.\nDas Attribut ist herstellerneutralit\u00e4tskritisch.\nDB-Regelwerk \nDurchrutschwegtabelle, Spalten 9 - 12: \"Weichen, Kreuzungen, Gleissperren\""
 		   });
 		addAnnotation
 		  (getFstr_DWeg_W_Kr_IDFstrDWeg(),
@@ -3197,12 +3331,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		   source,
 		   new String[] {
 			   "documentation", "Zuordnung von Weichen und Kreuzungen zum DWeg. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: \"Weichen, Kreuzungen, Gleissperren - verschlie\u00dfen/nicht verschlie\u00dfen\" "
-		   });
-		addAnnotation
-		  (getFstr_DWeg_W_Kr_Allg_AttributeGroup_FstrDWegWKr(),
-		   source,
-		   new String[] {
-			   "documentation", "Verschluss der Weiche im Durchrutschweg. Stumpf berutschte, auffahrbare Weichen im Durchrutschweg k\u00f6nnen unverschlossen bleiben. Das Attribut ist herstellerneutralit\u00e4tskritisch. DB-Regelwerk Durchrutschwegtabelle, Spalten 9 - 12: \"Weichen, Kreuzungen, Gleissperren\""
 		   });
 		addAnnotation
 		  (fstr_FahrwegEClass,
@@ -3229,6 +3357,18 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "documentation", "Zielpunkt von Fstr Fahrweg. Der Zielpunkt besteht beim befahrenen Teil aus einem Signal mit der Auspr\u00e4gung Hauptsignal, Sperrsignal oder Bedienpunkt, beim Durchrutschweg aus einem markanten Punkt. DB-Regelwerk Befahrener Teil: In der Fahrstra\u00dfentabelle genanntes Ziel der Fahrstra\u00dfe; Durchrutschweg: Durchrutschwegtabelle, Spalte 2 \"bis\". "
 		   });
 		addAnnotation
+		  (getFstr_Fahrweg_StartSignalCharakter(),
+		   source,
+		   new String[] {
+			   "documentation", "Fahrwegbezogener Charakter des Start-Signals, sofern abweichend von der im Signal definierten Signal_Funktion. DB-Regelwerk Ril 819.1361, Tabelle der Signalabst\u00e4nde und Schutzstrecken"
+		   });
+		addAnnotation
+		  (getFstr_Mittel_AttributeGroup_FstrMittelArt(),
+		   source,
+		   new String[] {
+			   "documentation", "Art der Mittelweichenteil-Fahrstra\u00dfe. ZM \u2013 ZugMittelweichenteil-, ZUM \u2013 ZugUmfahrMittelweichenteil-. DB-Regelwerk Zugstra\u00dfentabelle, Spalte 2 \"Art\""
+		   });
+		addAnnotation
 		  (getFstr_Mittel_AttributeGroup_FstrMittelVAufwertung(),
 		   source,
 		   new String[] {
@@ -3238,7 +3378,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_NichthaltfallEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Nichthaltfallabschnitt (auch: Haltfallverhinderungsabschnitt). Im Gegensatz zur bisherigen Praxis der LST-Planung, den Haltfallabschnitt zu planen, werden im Datenmodell nur die Nichthaltfallabschnitte f\u00fcr jede Zugstra\u00dfe geplant. In der Regel ist es einer, selten mehrere. DB-Regelwerk Haltfallabschnitt bisher: Zugstra\u00dfentabelle, Spalte 6: Signalhaltfall"
+			   "documentation", "Nichthaltfallabschnitt (auch: Haltfallverhinderungsabschnitt). Im Gegensatz zur bisherigen Praxis der LST-Planung, den Haltfallabschnitt zu planen, werden im Datenmodell nur die Nichthaltfallabschnitte f\u00fcr jeden Fahrweg geplant. In der Regel ist es einer, selten mehrere. DB-Regelwerk Haltfallabschnitt bisher: Zugstra\u00dfentabelle, Spalte 6: Signalhaltfall"
 		   });
 		addAnnotation
 		  (getFstr_Nichthaltfall_IDFMAAnlage(),
@@ -3257,6 +3397,12 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		   source,
 		   new String[] {
 			   "documentation", "M\u00f6glichkeit des Fahrstra\u00dfenansto\u00dfes \u00fcber die manuelle Bedienung hinaus. Die Angabe f\u00fcr eine Zugstra\u00dfe gilt auch f\u00fcr eventuell zugeh\u00f6rige (davorliegende) Mittelweichenteilfahrstra\u00dfen. DB-Regelwerk Zugstra\u00dfentabelle, Spalte 9 \"Selbststellbetrieb/Zuglenkung\" "
+		   });
+		addAnnotation
+		  (getFstr_Rangier_AttributeGroup_FstrRangierArt(),
+		   source,
+		   new String[] {
+			   "documentation", "Art der Rangierstra\u00dfe. RR \u2013 RangierRegel-, RT - RangierTeil-, RTU - RangierTeilUmfahr-, RU \u2013 RangierUmfahr-. DB-Regelwerk Rangierstra\u00dfentabelle, Spalte 2 \"Art\""
 		   });
 		addAnnotation
 		  (getFstr_Rangier_AttributeGroup_IDFMAAnlageRangierFrei(),
@@ -3310,7 +3456,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (getFstr_Signalisierung_IDSignalSignalbegriffZiel(),
 		   source,
 		   new String[] {
-			   "documentation", "Optionale Bedingung f\u00fcr die Anzeige von Fstr_Signalisierung_Besonders.ID Signal Signalbegriff. Das Zielsignal ist meist das Signal am Fahrstra\u00dfenziel, kann aber auch davor (z. B. gestufte Geschwindigkeitssignalisierung) oder dahinter (z. B. nach dem Ende des Weichenbereiches bei Ausfahrten) liegen."
+			   "documentation", "Optionale Bedingung f\u00fcr die Anzeige von Fstr_Signalisierung.ID Signal Signalbegriff. Das Zielsignal ist meist das Signal am Fahrstra\u00dfenziel, kann aber auch davor (z. B. gestufte Geschwindigkeitssignalisierung) oder dahinter (z. B. nach dem Ende des Weichenbereiches bei Ausfahrten) liegen."
 		   });
 		addAnnotation
 		  (fstr_UmfahrpunktEClass,
@@ -3343,6 +3489,12 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "documentation", "Der Abstand vom Start zum Ziel der Fahrstra\u00dfe ist k\u00fcrzer als der zul\u00e4ssige Vorsignalabstand. DB-Regelwerk Ein expliziter Vermerk dazu kann als Fu\u00dfnote in der Signaltabelle 2 oder Beschreibung im Erl\u00e4uterungsbericht erscheinen. Ansonsten ist ein Zusatzlicht am Startsignal und die Geschwindigkeitseinschr\u00e4nkung bei Fahrt auf Halt oder eine eingeschr\u00e4nkte Geschwindigkeit ein Indiz."
 		   });
 		addAnnotation
+		  (getFstr_Zug_AttributeGroup_FstrZugArt(),
+		   source,
+		   new String[] {
+			   "documentation", "Art der Zugstra\u00dfe. ZH \u2013 ZugHilfs-, ZR \u2013 ZugRegel-, ZU \u2013 ZugUmfahr-, ZUH \u2013 ZugUmfahrhilfs-, ZZ \u2013 ZugZentralblock-, ZT - ZugTeil-, ZTU - ZugTeilUmfahr-. ZZ: Anwendung im Zentralblock oder an Schnittstellen zu anderen Stellwerkstechniken bei Mehrabschnittssignalisierung, Signalabh\u00e4ngigkeiten von Fahrwegelementen auf der freien Strecke oder bei Bedienung einer Awanst. DB-Regelwerk Zugstra\u00dfentabelle, Spalte 2 \"Art\""
+		   });
+		addAnnotation
 		  (getFstr_Zug_AttributeGroup_IDBUEEinschaltung(),
 		   source,
 		   new String[] {
@@ -3370,7 +3522,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_Zug_RangierEClass,
 		   source,
 		   new String[] {
-			   "documentation", "Zug- oder Rangierstra\u00dfe. Jeder Zugstra\u00dfe ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstra\u00dfen mit mehreren Durchrutschwegen, so werden daf\u00fcr mehrere Zugstra\u00dfen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstra\u00dfen geplant. Der hiermit verkn\u00fcpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstra\u00dfe (Fstr_Art==ZB) \u00fcber die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstra\u00dfen (Fstr_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der L\u00e4nge Null entstehen, wenn die zweite Teilblockfahrstra\u00dfe nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstra\u00dfe. Fahrstra\u00dfen \u00fcber eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstra\u00dfen (Fstr_Art==ZT/ZTU/RT/RTU) geplant. Kann die erste Teilfahrstra\u00dfe mit mehreren weiteren Teilfahrstra\u00dfen fortgesetzt werden, so muss f\u00fcr jede geplante Kombination eine eigene Instanz der ersten Teilfahrstra\u00dfe angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Die Verkn\u00fcpfung zur zweiten Teilfahrstra\u00dfe geschieht \u00fcber Fstr_Zug_Rangier.ID Fstr Folgeabhaengigkeit. Eine Mittelweichenteilfahrstra\u00dfe besitzt keinen Durchrutschweg. Eine explizite Verkn\u00fcpfung von Mittelweichenteilfahrstra\u00dfen untereinander und mit der Zugstra\u00dfe erfolgt nicht, da sich diese \u00fcber die Topologie und insbesondere \u00fcber Start und Ziel ergeben. Eine Rangierstra\u00dfe besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstra\u00dfe werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschlie\u00dfen. Gruppenausfahrten werden als Zugstra\u00dfen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstra\u00dfe ist somit eindeutig erkennbar. DB-Regelwerk Zugstra\u00dfentabelle (eine Zeile), Rangierstra\u00dfentabelle (eine Zeile), Mittelweichenteilfahrstra\u00dfentabelle (eine Zeile). "
+			   "documentation", "Zug- oder Rangierstra\u00dfe. Jeder Zugstra\u00dfe ist ein Durchrutschweg (modelliert in Fstr DWeg) zugeordnet. Gibt es Fahrstra\u00dfen mit mehreren Durchrutschwegen, so werden daf\u00fcr mehrere Zugstra\u00dfen angelegt, die auf dem gleichen befahrenen Teil (modelliert in Fstr Fahrweg) basieren. Mit dem Datenmodell werden auch Zentralblockfahrstra\u00dfen geplant. Der hiermit verkn\u00fcpfte Gefahrpunktabstand wird in Fstr DWeg abgebildet. Eine Zentralblockfahrstra\u00dfe (Fstr_Zug_Art==ZB) \u00fcber die ESTW-Zentraleinheit-Grenze wird in zwei Teilblockfahrstra\u00dfen (Fstr_Zug_Art==ZB) im Bereich der jeweiligen ESTW-Zentraleinheit geplant. Dabei kann ein befahrener Teil der L\u00e4nge Null entstehen, wenn die zweite Teilblockfahrstra\u00dfe nur aus dem Durchrutschweg besteht. Zielsignal der ersten ist Startsignal der zweiten Teilblockfahrstra\u00dfe. Fahrstra\u00dfen \u00fcber eine ESTW-Zentraleinheit-Grenze (FAP) werden als zwei Teilfahrstra\u00dfen (Fstr_Zug_Art==ZT/ZTU; Fstr_Rangier_Art==RT/RTU) geplant. Kann die erste Teilfahrstra\u00dfe mit mehreren weiteren Teilfahrstra\u00dfen fortgesetzt werden, so muss f\u00fcr jede geplante Kombination eine eigene Instanz der ersten Teilfahrstra\u00dfe angelegt werden (analog der Zuordnung mehrerer Durchrutschwege). Eine Mittelweichenteilfahrstra\u00dfe besitzt keinen Durchrutschweg. Eine explizite Verkn\u00fcpfung von Mittelweichenteilfahrstra\u00dfen untereinander und mit der Zugstra\u00dfe erfolgt nicht, da sich diese \u00fcber die Topologie und insbesondere \u00fcber Start und Ziel ergeben. Eine Rangierstra\u00dfe besitzt ebenfalls keinen Durchrutschweg. Die speziellen Attribute von Zug-/Rangier-/Mittelweichenteilfahrstra\u00dfe werden in eigenen Attributgruppen gespeichert, die sich gegenseitig ausschlie\u00dfen. Gruppenausfahrten werden als Zugstra\u00dfen ohne besondere Eigenschaft abgebildet. Das Gruppenausfahrsignal wird unter ID Signal Gruppenausfahrt explizit angegeben, die Gruppenausfahrstra\u00dfe ist somit eindeutig erkennbar. DB-Regelwerk Zugstra\u00dfentabelle (eine Zeile), Rangierstra\u00dfentabelle (eine Zeile), Mittelweichenteilfahrstra\u00dfentabelle (eine Zeile)."
 		   });
 		addAnnotation
 		  (getFstr_Zug_Rangier_IDFstrAusschlussBesonders(),
@@ -3391,22 +3543,10 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "documentation", "W\u00e4hrend das Gleis vor dem Startsignal mit Fahrleitung ausger\u00fcstet ist, ist der befahrene Teil der Fahrstra\u00dfe nicht oder nur teilweise damit ausger\u00fcstet. Der Durchrutschweg bleibt in der Regel unber\u00fccksichtigt. Die Angabe erfolgt nur, sofern eine F-Bedienung erforderlich ist (true). Bei Rangierstra\u00dfen kann auf das Setzen des Attributs verzichtet werden, wenn das Ziel der \u00fcblicherweise durchgef\u00fchrten Rangierfahrten noch im mit Fahrleitung ausger\u00fcsteten Bereich liegt. DB-Regelwerk Zugstra\u00dfentabelle, Spalte 7 \"Zugstra\u00dfe in nicht\u00fcberspannte Bereiche\""
 		   });
 		addAnnotation
-		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt(),
-		   source,
-		   new String[] {
-			   "documentation", "Art der Fahrstra\u00dfe. RR \u2013 RangierRegel-, RT - RangierTeil-, RTU - RangierTeilUmfahr-, RU \u2013 RangierUmfahr-, ZH \u2013 ZugHilfs-, ZM \u2013 ZugMittelweichenteil-, ZR \u2013 ZugRegel-, ZU \u2013 ZugUmfahr-, ZUH \u2013 ZugUmfahrhilfs-, ZUM \u2013 ZugUmfahrMittelweichenteil-, ZB \u2013 ZugZentralblock-, ZT - ZugTeil-, ZTU - ZugTeilUmfahr-. ZB: Anwendung im Zentralblock oder an Schnittstellen zu anderen Stellwerkstechniken bei Mehrabschnittssignalisierung, Signalabh\u00e4ngigkeiten von Fahrwegelementen auf der freien Strecke oder bei Bedienung einer Awanst. DB-Regelwerk Zug-/Rangierstra\u00dfentabelle, Spalte 2 \"Art\""
-		   });
-		addAnnotation
 		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring(),
 		   source,
 		   new String[] {
 			   "documentation", "Bedienstring der Fahrstra\u00dfe. Der Bedienstring wird automatisch aus Start, Ziel und ggf. Umfahrpunkt(en) gef\u00fcllt, kann aber bei Besonderheiten auch abweichend geplant werden. Das Attribut ist Bestandteil des Untergewerks \"Bedienung Fdl\". DB-Regelwerk Zug-/Rangierstra\u00dfentabelle, Spalte 1 \"Start/Ziel\""
-		   });
-		addAnnotation
-		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit(),
-		   source,
-		   new String[] {
-			   "documentation", "F\u00fcr die ZL notwendige Fahrstra\u00dfenbildezeit. Das Attribut ist Bestandteil des Untergewerks \"Zuglenkung\". DB-Regelwerk ZL-Planung"
 		   });
 		addAnnotation
 		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrReihenfolge(),
@@ -3473,14 +3613,14 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 	protected void createExtendedMetaDataAnnotations() {
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
-		  (aufloesung_Ssp_Zielgeis_TypeClassEClass,
+		  (aufloesung_Ssp_Zielgleis_TypeClassEClass,
 		   source,
 		   new String[] {
-			   "name", "TCAufloesung_Ssp_Zielgeis",
+			   "name", "TCAufloesung_Ssp_Zielgleis",
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (getAufloesung_Ssp_Zielgeis_TypeClass_Wert(),
+		  (getAufloesung_Ssp_Zielgleis_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -3679,17 +3819,43 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "baseType", "ENUMAutomatische_Einstellung"
 		   });
 		addAnnotation
-		  (enumFstrArtEEnum,
+		  (enumFstrMittelArtEEnum,
 		   source,
 		   new String[] {
-			   "name", "ENUMFstr_Art"
+			   "name", "ENUMFstr_Mittel_Art"
 		   });
 		addAnnotation
-		  (enumFstrArtObjectEDataType,
+		  (enumFstrMittelArtObjectEDataType,
 		   source,
 		   new String[] {
-			   "name", "ENUMFstr_Art:Object",
-			   "baseType", "ENUMFstr_Art"
+			   "name", "ENUMFstr_Mittel_Art:Object",
+			   "baseType", "ENUMFstr_Mittel_Art"
+		   });
+		addAnnotation
+		  (enumFstrRangierArtEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMFstr_Rangier_Art"
+		   });
+		addAnnotation
+		  (enumFstrRangierArtObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMFstr_Rangier_Art:Object",
+			   "baseType", "ENUMFstr_Rangier_Art"
+		   });
+		addAnnotation
+		  (enumFstrZugArtEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMFstr_Zug_Art"
+		   });
+		addAnnotation
+		  (enumFstrZugArtObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMFstr_Zug_Art:Object",
+			   "baseType", "ENUMFstr_Zug_Art"
 		   });
 		addAnnotation
 		  (enumRangierGegenfahrtausschlussEEnum,
@@ -3703,6 +3869,19 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		   new String[] {
 			   "name", "ENUMRangier_Gegenfahrtausschluss:Object",
 			   "baseType", "ENUMRangier_Gegenfahrtausschluss"
+		   });
+		addAnnotation
+		  (enumStartSignalCharakterEEnum,
+		   source,
+		   new String[] {
+			   "name", "ENUMStart_Signal_Charakter"
+		   });
+		addAnnotation
+		  (enumStartSignalCharakterObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "ENUMStart_Signal_Charakter:Object",
+			   "baseType", "ENUMStart_Signal_Charakter"
 		   });
 		addAnnotation
 		  (f_Bedienung_TypeClassEClass,
@@ -3754,11 +3933,11 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "kind", "elementOnly"
 		   });
 		addAnnotation
-		  (getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgeis(),
+		  (getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgleis(),
 		   source,
 		   new String[] {
 			   "kind", "element",
-			   "name", "Aufloesung_Ssp_Zielgeis"
+			   "name", "Aufloesung_Ssp_Zielgleis"
 		   });
 		addAnnotation
 		  (getFstr_Abhaengigkeit_Ssp_AttributeGroup_IDSchluesselsperre(),
@@ -3825,20 +4004,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "name", "ID_Fstr_Zug_Rangier"
 		   });
 		addAnnotation
-		  (fstr_Art_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCFstr_Art",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getFstr_Art_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
 		  (fstr_Bedienstring_TypeEDataType,
 		   source,
 		   new String[] {
@@ -3855,28 +4020,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		   });
 		addAnnotation
 		  (getFstr_Bedienstring_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
-		  (fstr_Bildezeit_TypeEDataType,
-		   source,
-		   new String[] {
-			   "name", "TFstr_Bildezeit",
-			   "baseType", "http://www.plan-pro.org/modell/BasisTypen/toolbox#TSekunde",
-			   "pattern", "0|[1-9][0-9]{0,1}|[1-8][0-9]{2}|900"
-		   });
-		addAnnotation
-		  (fstr_Bildezeit_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCFstr_Bildezeit",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getFstr_Bildezeit_TypeClass_Wert(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -4037,41 +4180,6 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "name", "ID_W_Kr_Gsp_Element"
 		   });
 		addAnnotation
-		  (fstr_DWeg_W_Kr_Allg_AttributeGroupEClass,
-		   source,
-		   new String[] {
-			   "name", "CFstr_DWeg_W_Kr_Allg",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getFstr_DWeg_W_Kr_Allg_AttributeGroup_FstrDWegWKr(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Fstr_DWeg_W_Kr"
-		   });
-		addAnnotation
-		  (fstr_DWeg_W_Kr_Allg_child_AttributeGroupEClass,
-		   source,
-		   new String[] {
-			   "name", "CFstr_DWeg_W_Kr_Allg_child",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (fstr_DWeg_W_Kr_TypeClassEClass,
-		   source,
-		   new String[] {
-			   "name", "TCFstr_DWeg_W_Kr",
-			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (getFstr_DWeg_W_Kr_TypeClass_Wert(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Wert"
-		   });
-		addAnnotation
 		  (fstr_FahrwegEClass,
 		   source,
 		   new String[] {
@@ -4100,11 +4208,39 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "name", "ID_Ziel"
 		   });
 		addAnnotation
+		  (getFstr_Fahrweg_StartSignalCharakter(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Start_Signal_Charakter"
+		   });
+		addAnnotation
+		  (fstr_Mittel_Art_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCFstr_Mittel_Art",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFstr_Mittel_Art_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (fstr_Mittel_AttributeGroupEClass,
 		   source,
 		   new String[] {
 			   "name", "CFstr_Mittel",
 			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFstr_Mittel_AttributeGroup_FstrMittelArt(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Fstr_Mittel_Art"
 		   });
 		addAnnotation
 		  (getFstr_Mittel_AttributeGroup_FstrMittelVAufwertung(),
@@ -4149,6 +4285,20 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "name", "ID_Fstr_Fahrweg"
 		   });
 		addAnnotation
+		  (fstr_Rangier_Art_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCFstr_Rangier_Art",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFstr_Rangier_Art_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (fstr_Rangier_AttributeGroupEClass,
 		   source,
 		   new String[] {
@@ -4161,6 +4311,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		   new String[] {
 			   "kind", "element",
 			   "name", "Automatische_Einstellung"
+		   });
+		addAnnotation
+		  (getFstr_Rangier_AttributeGroup_FstrRangierArt(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Fstr_Rangier_Art"
 		   });
 		addAnnotation
 		  (getFstr_Rangier_AttributeGroup_IDFMAAnlageRangierFrei(),
@@ -4326,6 +4483,20 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "name", "Wert"
 		   });
 		addAnnotation
+		  (fstr_Zug_Art_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCFstr_Zug_Art",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFstr_Zug_Art_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
+		addAnnotation
 		  (fstr_Zug_AttributeGroupEClass,
 		   source,
 		   new String[] {
@@ -4345,6 +4516,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		   new String[] {
 			   "kind", "element",
 			   "name", "Fstr_Vsigabstand_Verkuerzt"
+		   });
+		addAnnotation
+		  (getFstr_Zug_AttributeGroup_FstrZugArt(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Fstr_Zug_Art"
 		   });
 		addAnnotation
 		  (getFstr_Zug_AttributeGroup_FstrZugDWeg(),
@@ -4452,25 +4630,11 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "name", "F_Bedienung"
 		   });
 		addAnnotation
-		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Fstr_Art"
-		   });
-		addAnnotation
 		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring(),
 		   source,
 		   new String[] {
 			   "kind", "element",
 			   "name", "Fstr_Bedienstring"
-		   });
-		addAnnotation
-		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "Fstr_Bildezeit"
 		   });
 		addAnnotation
 		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrReihenfolge(),
@@ -4600,6 +4764,20 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "kind", "element",
 			   "name", "ID_Beginn_Bereich"
 		   });
+		addAnnotation
+		  (start_Signal_Charakter_TypeClassEClass,
+		   source,
+		   new String[] {
+			   "name", "TCStart_Signal_Charakter",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getStart_Signal_Charakter_TypeClass_Wert(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Wert"
+		   });
 	}
 
 	/**
@@ -4614,10 +4792,10 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_AbhaengigkeitEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
-		  (getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgeis(),
+		  (getFstr_Abhaengigkeit_Ssp_AttributeGroup_AufloesungSspZielgleis(),
 		   source,
 		   new String[] {
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>besetzt</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
@@ -4626,7 +4804,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_AneinanderEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <Patternbeschreibung>[3..20]</Patternbeschreibung>\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <Patternbeschreibung>[3..20]</Patternbeschreibung>\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getFstr_Aneinander_FstrAneinanderBedienstring(),
@@ -4638,13 +4816,13 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_Aneinander_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (fstr_DWegEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getFstr_DWeg_Allg_AttributeGroup_LaengeSoll(),
@@ -4692,19 +4870,31 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_DWeg_W_KrEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (fstr_FahrwegEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+		   });
+		addAnnotation
+		  (getFstr_Mittel_AttributeGroup_FstrMittelArt(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>ZM</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (fstr_NichthaltfallEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+		   });
+		addAnnotation
+		  (getFstr_Rangier_AttributeGroup_FstrRangierArt(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>RR</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (getFstr_Rangier_AttributeGroup_IDFMAAnlageRangierFrei(),
@@ -4722,19 +4912,19 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (fstr_Rangier_Fla_ZuordnungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (fstr_SignalisierungEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (fstr_UmfahrpunktEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>Bedienung Fdl ESTW-ZE</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getFstr_Zug_AttributeGroup_AutomatischeEinstellung(),
@@ -4749,10 +4939,16 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>false</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
+		  (getFstr_Zug_AttributeGroup_FstrZugArt(),
+		   source,
+		   new String[] {
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>ZR</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
+		   });
+		addAnnotation
 		  (fstr_Zug_RangierEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FBedienung(),
@@ -4761,22 +4957,10 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>true</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
-		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrArt(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <ProposedValue>ZR</ProposedValue>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
-		   });
-		addAnnotation
 		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBedienstring(),
 		   source,
 		   new String[] {
 			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>[3..26] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
-		   });
-		addAnnotation
-		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrBildezeit(),
-		   source,
-		   new String[] {
-			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung> [0..900] </Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (getFstr_Zug_Rangier_Allg_AttributeGroup_FstrReihenfolge(),
@@ -4794,7 +4978,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (markanter_PunktEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 		addAnnotation
 		  (getMarkanter_Punkt_Bezeichnung_AttributeGroup_BezeichnungMarkanterPunkt(),
@@ -4806,7 +4990,7 @@ public class FahrstrassePackageImpl extends EPackageImpl implements FahrstrasseP
 		  (sonstiger_PunktEClass,
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
+			   "appinfo", "\r\n              \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                   \r\n    <ObjectType>LST_OBJECT</ObjectType>\r\n                   \r\n    <Untergewerke>ESTW</Untergewerke>\r\n                \r\n  </WorkflowInformation>\r\n           \r\n"
 		   });
 	}
 

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
@@ -19,34 +26,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMFMAArt implements Enumerator {
 	/**
-	 * The '<em><b>ENUMFMA Art NF Gleisstromkreis</b></em>' literal object.
+	 * The '<em><b>ENUMFMA Art Achszaehlanlage</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_NF_GLEISSTROMKREIS_VALUE
+	 * @see #ENUMFMA_ART_ACHSZAEHLANLAGE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ART_NF_GLEISSTROMKREIS(0, "ENUMFMA_Art_NF_Gleisstromkreis", "NF_Gleisstromkreis"),
-
-	/**
-	 * The '<em><b>ENUMFMA Art sonstige</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_SONSTIGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMFMA_ART_SONSTIGE(1, "ENUMFMA_Art_sonstige", "sonstige"),
-
-	/**
-	 * The '<em><b>ENUMFMA Art TF Gleisstromkreis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_TF_GLEISSTROMKREIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMFMA_ART_TF_GLEISSTROMKREIS(2, "ENUMFMA_Art_TF_Gleisstromkreis", "TF_Gleisstromkreis"),
+	ENUMFMA_ART_ACHSZAEHLANLAGE(0, "ENUMFMA_Art_Achszaehlanlage", "Achszaehlanlage"),
 
 	/**
 	 * The '<em><b>ENUMFMA Art FTGS</b></em>' literal object.
@@ -56,61 +43,37 @@ public enum ENUMFMAArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ART_FTGS(3, "ENUMFMA_Art_FTGS", "FTGS"),
+	ENUMFMA_ART_FTGS(1, "ENUMFMA_Art_FTGS", "FTGS"),
 
 	/**
-	 * The '<em><b>ENUMFMA Art Achszaehlanlage</b></em>' literal object.
+	 * The '<em><b>ENUMFMA Art NF Gleisstromkreis</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_ACHSZAEHLANLAGE_VALUE
+	 * @see #ENUMFMA_ART_NF_GLEISSTROMKREIS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_ART_ACHSZAEHLANLAGE(4, "ENUMFMA_Art_Achszaehlanlage", "Achszaehlanlage");
+	ENUMFMA_ART_NF_GLEISSTROMKREIS(2, "ENUMFMA_Art_NF_Gleisstromkreis", "NF_Gleisstromkreis"),
 
 	/**
-	 * The '<em><b>ENUMFMA Art NF Gleisstromkreis</b></em>' literal value.
+	 * The '<em><b>ENUMFMA Art sonstige</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_NF_GLEISSTROMKREIS
-	 * @model name="ENUMFMA_Art_NF_Gleisstromkreis" literal="NF_Gleisstromkreis"
+	 * @see #ENUMFMA_ART_SONSTIGE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ART_NF_GLEISSTROMKREIS_VALUE = 0;
+	ENUMFMA_ART_SONSTIGE(3, "ENUMFMA_Art_sonstige", "sonstige"),
 
 	/**
-	 * The '<em><b>ENUMFMA Art sonstige</b></em>' literal value.
+	 * The '<em><b>ENUMFMA Art TF Gleisstromkreis</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_SONSTIGE
-	 * @model name="ENUMFMA_Art_sonstige" literal="sonstige"
+	 * @see #ENUMFMA_ART_TF_GLEISSTROMKREIS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ART_SONSTIGE_VALUE = 1;
-
-	/**
-	 * The '<em><b>ENUMFMA Art TF Gleisstromkreis</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_TF_GLEISSTROMKREIS
-	 * @model name="ENUMFMA_Art_TF_Gleisstromkreis" literal="TF_Gleisstromkreis"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMFMA_ART_TF_GLEISSTROMKREIS_VALUE = 2;
-
-	/**
-	 * The '<em><b>ENUMFMA Art FTGS</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_ART_FTGS
-	 * @model name="ENUMFMA_Art_FTGS" literal="FTGS"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMFMA_ART_FTGS_VALUE = 3;
+	ENUMFMA_ART_TF_GLEISSTROMKREIS(4, "ENUMFMA_Art_TF_Gleisstromkreis", "TF_Gleisstromkreis");
 
 	/**
 	 * The '<em><b>ENUMFMA Art Achszaehlanlage</b></em>' literal value.
@@ -121,7 +84,51 @@ public enum ENUMFMAArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_ART_ACHSZAEHLANLAGE_VALUE = 4;
+	public static final int ENUMFMA_ART_ACHSZAEHLANLAGE_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUMFMA Art FTGS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ART_FTGS
+	 * @model name="ENUMFMA_Art_FTGS" literal="FTGS"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ART_FTGS_VALUE = 1;
+
+	/**
+	 * The '<em><b>ENUMFMA Art NF Gleisstromkreis</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ART_NF_GLEISSTROMKREIS
+	 * @model name="ENUMFMA_Art_NF_Gleisstromkreis" literal="NF_Gleisstromkreis"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ART_NF_GLEISSTROMKREIS_VALUE = 2;
+
+	/**
+	 * The '<em><b>ENUMFMA Art sonstige</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ART_SONSTIGE
+	 * @model name="ENUMFMA_Art_sonstige" literal="sonstige"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ART_SONSTIGE_VALUE = 3;
+
+	/**
+	 * The '<em><b>ENUMFMA Art TF Gleisstromkreis</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUMFMA_ART_TF_GLEISSTROMKREIS
+	 * @model name="ENUMFMA_Art_TF_Gleisstromkreis" literal="TF_Gleisstromkreis"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUMFMA_ART_TF_GLEISSTROMKREIS_VALUE = 4;
 
 	/**
 	 * An array of all the '<em><b>ENUMFMA Art</b></em>' enumerators.
@@ -131,11 +138,11 @@ public enum ENUMFMAArt implements Enumerator {
 	 */
 	private static final ENUMFMAArt[] VALUES_ARRAY =
 		new ENUMFMAArt[] {
+			ENUMFMA_ART_ACHSZAEHLANLAGE,
+			ENUMFMA_ART_FTGS,
 			ENUMFMA_ART_NF_GLEISSTROMKREIS,
 			ENUMFMA_ART_SONSTIGE,
 			ENUMFMA_ART_TF_GLEISSTROMKREIS,
-			ENUMFMA_ART_FTGS,
-			ENUMFMA_ART_ACHSZAEHLANLAGE,
 		};
 
 	/**
@@ -192,11 +199,11 @@ public enum ENUMFMAArt implements Enumerator {
 	 */
 	public static ENUMFMAArt get(int value) {
 		switch (value) {
+			case ENUMFMA_ART_ACHSZAEHLANLAGE_VALUE: return ENUMFMA_ART_ACHSZAEHLANLAGE;
+			case ENUMFMA_ART_FTGS_VALUE: return ENUMFMA_ART_FTGS;
 			case ENUMFMA_ART_NF_GLEISSTROMKREIS_VALUE: return ENUMFMA_ART_NF_GLEISSTROMKREIS;
 			case ENUMFMA_ART_SONSTIGE_VALUE: return ENUMFMA_ART_SONSTIGE;
 			case ENUMFMA_ART_TF_GLEISSTROMKREIS_VALUE: return ENUMFMA_ART_TF_GLEISSTROMKREIS;
-			case ENUMFMA_ART_FTGS_VALUE: return ENUMFMA_ART_FTGS;
-			case ENUMFMA_ART_ACHSZAEHLANLAGE_VALUE: return ENUMFMA_ART_ACHSZAEHLANLAGE;
 			default: return null;
 		}
 	}

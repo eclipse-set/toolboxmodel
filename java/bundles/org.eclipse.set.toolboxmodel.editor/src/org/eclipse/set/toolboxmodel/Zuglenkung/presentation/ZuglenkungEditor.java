@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -163,6 +164,8 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import org.eclipse.set.toolboxmodel.Zuglenkung.provider.ZuglenkungItemProviderAdapterFactory;
 
+import org.eclipse.set.toolboxmodel.ATO.provider.ATOItemProviderAdapterFactory;
+
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.provider.Ansteuerung_ElementItemProviderAdapterFactory;
 
 import org.eclipse.set.toolboxmodel.Bahnsteig.provider.BahnsteigItemProviderAdapterFactory;
@@ -187,15 +190,17 @@ import org.eclipse.set.toolboxmodel.Geodaten.provider.GeodatenItemProviderAdapte
 
 import org.eclipse.set.toolboxmodel.Gleis.provider.GleisItemProviderAdapterFactory;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.presentation.PlanProEditorPlugin;
+
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.LayoutinformationenItemProviderAdapterFactory;
+
 import org.eclipse.set.toolboxmodel.Medien_und_Trassen.provider.Medien_und_TrassenItemProviderAdapterFactory;
 
-import org.eclipse.set.toolboxmodel.Nahbedienbereich.provider.NahbedienbereichItemProviderAdapterFactory;
+import org.eclipse.set.toolboxmodel.Nahbedienung.provider.NahbedienungItemProviderAdapterFactory;
 
 import org.eclipse.set.toolboxmodel.Ortung.provider.OrtungItemProviderAdapterFactory;
 
 import org.eclipse.set.toolboxmodel.PZB.provider.PZBItemProviderAdapterFactory;
-
-import org.eclipse.set.toolboxmodel.PlanPro.presentation.PlanProEditorPlugin;
 
 import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProItemProviderAdapterFactory;
 
@@ -770,19 +775,21 @@ public class ZuglenkungEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new PlanProItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new LayoutinformationenItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new BasisobjekteItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new BasisTypenItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new Ansteuerung_ElementItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GeodatenItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new BahnsteigItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new PlanProItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ATOItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new Ansteuerung_ElementItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new Balisentechnik_ETCSItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new FahrstrasseItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new BedienungItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SignaleItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new BlockItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new OrtungItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SignaleItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GleisItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new BedienungItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new BahnsteigItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new FahrstrasseItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new Weichen_und_GleissperrenItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new RegelzeichnungItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new PZBItemProviderAdapterFactory());
@@ -791,7 +798,7 @@ public class ZuglenkungEditor
 		adapterFactory.addAdapterFactory(new FlankenschutzItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SchluesselabhaengigkeitenItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new Medien_und_TrassenItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new NahbedienbereichItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new NahbedienungItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ZuglenkungItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ZugnummernmeldeanlageItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new Signalbegriffe_Ril_301ItemProviderAdapterFactory());

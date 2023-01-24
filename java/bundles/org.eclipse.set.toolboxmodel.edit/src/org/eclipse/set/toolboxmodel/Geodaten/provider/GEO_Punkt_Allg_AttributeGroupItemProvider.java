@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenFactory;
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup} object.
@@ -85,12 +86,11 @@ public class GEO_Punkt_Allg_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKZ);
 			childrenFeatures.add(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE);
-			childrenFeatures.add(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS);
-			childrenFeatures.add(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE);
 		}
 		return childrenFeatures;
 	}
@@ -143,12 +143,11 @@ public class GEO_Punkt_Allg_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GEO_Punkt_Allg_AttributeGroup.class)) {
+			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM:
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX:
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKY:
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKZ:
 			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE:
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS:
-			case GeodatenPackage.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -170,6 +169,11 @@ public class GEO_Punkt_Allg_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATENSYSTEM,
+				 GeodatenFactory.eINSTANCE.createGEO_Koordinatensystem_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GKX,
 				 GeodatenFactory.eINSTANCE.createGK_X_TypeClass()));
 
@@ -187,16 +191,6 @@ public class GEO_Punkt_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__PLAN_QUELLE,
 				 GeodatenFactory.eINSTANCE.createPlan_Quelle_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_LSYS,
-				 GeodatenFactory.eINSTANCE.createGEO_KoordinatenSystem_LSys_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GeodatenPackage.Literals.GEO_PUNKT_ALLG_ATTRIBUTE_GROUP__GEO_KOORDINATEN_SYSTEM_SONSTIGE,
-				 GeodatenFactory.eINSTANCE.createGEO_KoordinatenSystem_Sonstige_TypeClass()));
 	}
 
 	/**

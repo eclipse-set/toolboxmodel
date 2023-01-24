@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -20,6 +27,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Einzel_Attrib
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prog_Datei_Gruppe;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
 
 /**
@@ -30,7 +38,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_GruppeImpl#getIDGeraetProgrammiert <em>ID Geraet Programmiert</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_GruppeImpl#getIDKomponenteProgrammiert <em>ID Komponente Programmiert</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.Prog_Datei_GruppeImpl#getProgDateiEinzel <em>Prog Datei Einzel</em>}</li>
  * </ul>
  *
@@ -38,14 +46,14 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
  */
 public class Prog_Datei_GruppeImpl extends Basis_ObjektImpl implements Prog_Datei_Gruppe {
 	/**
-	 * The cached value of the '{@link #getIDGeraetProgrammiert() <em>ID Geraet Programmiert</em>}' reference list.
+	 * The cached value of the '{@link #getIDKomponenteProgrammiert() <em>ID Komponente Programmiert</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIDGeraetProgrammiert()
+	 * @see #getIDKomponenteProgrammiert()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Basis_Objekt> iDGeraetProgrammiert;
+	protected EList<Basis_Objekt> iDKomponenteProgrammiert;
 
 	/**
 	 * The cached value of the '{@link #getProgDateiEinzel() <em>Prog Datei Einzel</em>}' containment reference list.
@@ -82,11 +90,11 @@ public class Prog_Datei_GruppeImpl extends Basis_ObjektImpl implements Prog_Date
 	 * @generated
 	 */
 	@Override
-	public EList<Basis_Objekt> getIDGeraetProgrammiert() {
-		if (iDGeraetProgrammiert == null) {
-			iDGeraetProgrammiert = new EObjectResolvingEList<Basis_Objekt>(Basis_Objekt.class, this, Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_GERAET_PROGRAMMIERT);
+	public EList<Basis_Objekt> getIDKomponenteProgrammiert() {
+		if (iDKomponenteProgrammiert == null) {
+			iDKomponenteProgrammiert = new EObjectResolvingEList<Basis_Objekt>(Basis_Objekt.class, this, Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_KOMPONENTE_PROGRAMMIERT);
 		}
-		return iDGeraetProgrammiert;
+		return iDKomponenteProgrammiert;
 	}
 
 	/**
@@ -125,8 +133,8 @@ public class Prog_Datei_GruppeImpl extends Basis_ObjektImpl implements Prog_Date
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_GERAET_PROGRAMMIERT:
-				return getIDGeraetProgrammiert();
+			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_KOMPONENTE_PROGRAMMIERT:
+				return getIDKomponenteProgrammiert();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__PROG_DATEI_EINZEL:
 				return getProgDateiEinzel();
 			default:
@@ -143,9 +151,9 @@ public class Prog_Datei_GruppeImpl extends Basis_ObjektImpl implements Prog_Date
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_GERAET_PROGRAMMIERT:
-				getIDGeraetProgrammiert().clear();
-				getIDGeraetProgrammiert().addAll((Collection<? extends Basis_Objekt>)newValue);
+			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_KOMPONENTE_PROGRAMMIERT:
+				getIDKomponenteProgrammiert().clear();
+				getIDKomponenteProgrammiert().addAll((Collection<? extends Basis_Objekt>)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__PROG_DATEI_EINZEL:
 				getProgDateiEinzel().clear();
@@ -165,8 +173,8 @@ public class Prog_Datei_GruppeImpl extends Basis_ObjektImpl implements Prog_Date
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_GERAET_PROGRAMMIERT:
-				getIDGeraetProgrammiert().clear();
+			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_KOMPONENTE_PROGRAMMIERT:
+				getIDKomponenteProgrammiert().clear();
 				return;
 			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__PROG_DATEI_EINZEL:
 				getProgDateiEinzel().clear();
@@ -185,8 +193,8 @@ public class Prog_Datei_GruppeImpl extends Basis_ObjektImpl implements Prog_Date
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_GERAET_PROGRAMMIERT:
-				return iDGeraetProgrammiert != null && !iDGeraetProgrammiert.isEmpty();
+			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__ID_KOMPONENTE_PROGRAMMIERT:
+				return iDKomponenteProgrammiert != null && !iDKomponenteProgrammiert.isEmpty();
 			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE__PROG_DATEI_EINZEL:
 				return progDateiEinzel != null && !progDateiEinzel.isEmpty();
 			default:

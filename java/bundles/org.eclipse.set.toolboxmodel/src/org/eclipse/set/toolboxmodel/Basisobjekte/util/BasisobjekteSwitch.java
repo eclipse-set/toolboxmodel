@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte.util;
 
@@ -121,13 +128,6 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BasisobjektePackage.BEARBEITUNGSVERMERK_KENNUNG_TYPE_CLASS: {
-				Bearbeitungsvermerk_Kennung_TypeClass bearbeitungsvermerk_Kennung_TypeClass = (Bearbeitungsvermerk_Kennung_TypeClass)theEObject;
-				T result = caseBearbeitungsvermerk_Kennung_TypeClass(bearbeitungsvermerk_Kennung_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(bearbeitungsvermerk_Kennung_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BasisobjektePackage.BEARBEITUNGSVERMERK_ROLLE_TYPE_CLASS: {
 				Bearbeitungsvermerk_Rolle_TypeClass bearbeitungsvermerk_Rolle_TypeClass = (Bearbeitungsvermerk_Rolle_TypeClass)theEObject;
 				T result = caseBearbeitungsvermerk_Rolle_TypeClass(bearbeitungsvermerk_Rolle_TypeClass);
@@ -184,6 +184,20 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BasisobjektePackage.BV_DARSTELLUNG_IN_PLAN_TYPE_CLASS: {
+				BV_Darstellung_In_Plan_TypeClass bV_Darstellung_In_Plan_TypeClass = (BV_Darstellung_In_Plan_TypeClass)theEObject;
+				T result = caseBV_Darstellung_In_Plan_TypeClass(bV_Darstellung_In_Plan_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(bV_Darstellung_In_Plan_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BasisobjektePackage.BV_KATEGORIE_TYPE_CLASS: {
+				BV_Kategorie_TypeClass bV_Kategorie_TypeClass = (BV_Kategorie_TypeClass)theEObject;
+				T result = caseBV_Kategorie_TypeClass(bV_Kategorie_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(bV_Kategorie_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case BasisobjektePackage.DATEINAME_TYPE_CLASS: {
 				Dateiname_TypeClass dateiname_TypeClass = (Dateiname_TypeClass)theEObject;
 				T result = caseDateiname_TypeClass(dateiname_TypeClass);
@@ -195,13 +209,6 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 				Dateityp_TypeClass dateityp_TypeClass = (Dateityp_TypeClass)theEObject;
 				T result = caseDateityp_TypeClass(dateityp_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(dateityp_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BasisobjektePackage.DATEN_TYPE_CLASS: {
-				Daten_TypeClass daten_TypeClass = (Daten_TypeClass)theEObject;
-				T result = caseDaten_TypeClass(daten_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(daten_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -223,6 +230,13 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 				Identitaet_TypeClass identitaet_TypeClass = (Identitaet_TypeClass)theEObject;
 				T result = caseIdentitaet_TypeClass(identitaet_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(identitaet_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BasisobjektePackage.KM_MASSGEBEND_TYPE_CLASS: {
+				Km_Massgebend_TypeClass km_Massgebend_TypeClass = (Km_Massgebend_TypeClass)theEObject;
+				T result = caseKm_Massgebend_TypeClass(km_Massgebend_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(km_Massgebend_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -530,21 +544,6 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bearbeitungsvermerk Kennung Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bearbeitungsvermerk Kennung Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBearbeitungsvermerk_Kennung_TypeClass(Bearbeitungsvermerk_Kennung_TypeClass object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Bearbeitungsvermerk Rolle Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -665,6 +664,36 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>BV Darstellung In Plan Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>BV Darstellung In Plan Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBV_Darstellung_In_Plan_TypeClass(BV_Darstellung_In_Plan_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>BV Kategorie Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>BV Kategorie Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBV_Kategorie_TypeClass(BV_Kategorie_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Dateiname Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -691,21 +720,6 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDateityp_TypeClass(Dateityp_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Daten Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Daten Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDaten_TypeClass(Daten_TypeClass object) {
 		return null;
 	}
 
@@ -751,6 +765,21 @@ public class BasisobjekteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIdentitaet_TypeClass(Identitaet_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Km Massgebend Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Km Massgebend Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKm_Massgebend_TypeClass(Km_Massgebend_TypeClass object) {
 		return null;
 	}
 

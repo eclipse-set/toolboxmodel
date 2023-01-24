@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ortung;
 
@@ -19,14 +26,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMFMAKomponenteArt implements Enumerator {
 	/**
-	 * The '<em><b>ENUMFMA Komponente Art Isolierstoss zweischienig</b></em>' literal object.
+	 * The '<em><b>ENUMFMA Komponente Art elektrischer Trennstoss</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG_VALUE
+	 * @see #ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG(0, "ENUMFMA_Komponente_Art_Isolierstoss_zweischienig", "Isolierstoss_zweischienig"),
+	ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS(0, "ENUMFMA_Komponente_Art_elektrischer_Trennstoss", "elektrischer_Trennstoss"),
 
 	/**
 	 * The '<em><b>ENUMFMA Komponente Art Isolierstoss einschienig</b></em>' literal object.
@@ -39,25 +46,25 @@ public enum ENUMFMAKomponenteArt implements Enumerator {
 	ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG(1, "ENUMFMA_Komponente_Art_Isolierstoss_einschienig", "Isolierstoss_einschienig"),
 
 	/**
-	 * The '<em><b>ENUMFMA Komponente Art elektrischer Trennstoss</b></em>' literal object.
+	 * The '<em><b>ENUMFMA Komponente Art Isolierstoss zweischienig</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS_VALUE
+	 * @see #ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS(2, "ENUMFMA_Komponente_Art_elektrischer_Trennstoss", "elektrischer_Trennstoss");
+	ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG(2, "ENUMFMA_Komponente_Art_Isolierstoss_zweischienig", "Isolierstoss_zweischienig");
 
 	/**
-	 * The '<em><b>ENUMFMA Komponente Art Isolierstoss zweischienig</b></em>' literal value.
+	 * The '<em><b>ENUMFMA Komponente Art elektrischer Trennstoss</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG
-	 * @model name="ENUMFMA_Komponente_Art_Isolierstoss_zweischienig" literal="Isolierstoss_zweischienig"
+	 * @see #ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS
+	 * @model name="ENUMFMA_Komponente_Art_elektrischer_Trennstoss" literal="elektrischer_Trennstoss"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG_VALUE = 0;
+	public static final int ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUMFMA Komponente Art Isolierstoss einschienig</b></em>' literal value.
@@ -71,15 +78,15 @@ public enum ENUMFMAKomponenteArt implements Enumerator {
 	public static final int ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG_VALUE = 1;
 
 	/**
-	 * The '<em><b>ENUMFMA Komponente Art elektrischer Trennstoss</b></em>' literal value.
+	 * The '<em><b>ENUMFMA Komponente Art Isolierstoss zweischienig</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS
-	 * @model name="ENUMFMA_Komponente_Art_elektrischer_Trennstoss" literal="elektrischer_Trennstoss"
+	 * @see #ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG
+	 * @model name="ENUMFMA_Komponente_Art_Isolierstoss_zweischienig" literal="Isolierstoss_zweischienig"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS_VALUE = 2;
+	public static final int ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>ENUMFMA Komponente Art</b></em>' enumerators.
@@ -89,9 +96,9 @@ public enum ENUMFMAKomponenteArt implements Enumerator {
 	 */
 	private static final ENUMFMAKomponenteArt[] VALUES_ARRAY =
 		new ENUMFMAKomponenteArt[] {
-			ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG,
-			ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG,
 			ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS,
+			ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG,
+			ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG,
 		};
 
 	/**
@@ -148,9 +155,9 @@ public enum ENUMFMAKomponenteArt implements Enumerator {
 	 */
 	public static ENUMFMAKomponenteArt get(int value) {
 		switch (value) {
-			case ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG_VALUE: return ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG;
-			case ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG_VALUE: return ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG;
 			case ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS_VALUE: return ENUMFMA_KOMPONENTE_ART_ELEKTRISCHER_TRENNSTOSS;
+			case ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG_VALUE: return ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_EINSCHIENIG;
+			case ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG_VALUE: return ENUMFMA_KOMPONENTE_ART_ISOLIERSTOSS_ZWEISCHIENIG;
 			default: return null;
 		}
 	}

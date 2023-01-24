@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten.impl;
 
@@ -12,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage;
+import org.eclipse.set.toolboxmodel.Geodaten.Kantenname_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Anschluss_A_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Anschluss_B_TypeClass;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante_Allg_AttributeGroup;
@@ -25,6 +33,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.TOP_Laenge_TypeClass;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.TOP_Kante_Allg_AttributeGroupImpl#getKantenname <em>Kantenname</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.TOP_Kante_Allg_AttributeGroupImpl#getTOPAnschlussA <em>TOP Anschluss A</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.TOP_Kante_Allg_AttributeGroupImpl#getTOPAnschlussB <em>TOP Anschluss B</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.impl.TOP_Kante_Allg_AttributeGroupImpl#getTOPLaenge <em>TOP Laenge</em>}</li>
@@ -33,6 +42,16 @@ import org.eclipse.set.toolboxmodel.Geodaten.TOP_Laenge_TypeClass;
  * @generated
  */
 public class TOP_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Container implements TOP_Kante_Allg_AttributeGroup {
+	/**
+	 * The cached value of the '{@link #getKantenname() <em>Kantenname</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKantenname()
+	 * @generated
+	 * @ordered
+	 */
+	protected Kantenname_TypeClass kantenname;
+
 	/**
 	 * The cached value of the '{@link #getTOPAnschlussA() <em>TOP Anschluss A</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -80,6 +99,51 @@ public class TOP_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	protected EClass eStaticClass() {
 		return GeodatenPackage.Literals.TOP_KANTE_ALLG_ATTRIBUTE_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Kantenname_TypeClass getKantenname() {
+		return kantenname;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetKantenname(Kantenname_TypeClass newKantenname, NotificationChain msgs) {
+		Kantenname_TypeClass oldKantenname = kantenname;
+		kantenname = newKantenname;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME, oldKantenname, newKantenname);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setKantenname(Kantenname_TypeClass newKantenname) {
+		if (newKantenname != kantenname) {
+			NotificationChain msgs = null;
+			if (kantenname != null)
+				msgs = ((InternalEObject)kantenname).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME, null, msgs);
+			if (newKantenname != null)
+				msgs = ((InternalEObject)newKantenname).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME, null, msgs);
+			msgs = basicSetKantenname(newKantenname, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME, newKantenname, newKantenname));
 	}
 
 	/**
@@ -225,6 +289,8 @@ public class TOP_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME:
+				return basicSetKantenname(null, msgs);
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A:
 				return basicSetTOPAnschlussA(null, msgs);
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B:
@@ -244,6 +310,8 @@ public class TOP_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME:
+				return getKantenname();
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A:
 				return getTOPAnschlussA();
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B:
@@ -263,6 +331,9 @@ public class TOP_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME:
+				setKantenname((Kantenname_TypeClass)newValue);
+				return;
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A:
 				setTOPAnschlussA((TOP_Anschluss_A_TypeClass)newValue);
 				return;
@@ -286,6 +357,9 @@ public class TOP_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME:
+				setKantenname((Kantenname_TypeClass)null);
+				return;
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A:
 				setTOPAnschlussA((TOP_Anschluss_A_TypeClass)null);
 				return;
@@ -309,6 +383,8 @@ public class TOP_Kante_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__KANTENNAME:
+				return kantenname != null;
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_A:
 				return tOPAnschlussA != null;
 			case GeodatenPackage.TOP_KANTE_ALLG_ATTRIBUTE_GROUP__TOP_ANSCHLUSS_B:

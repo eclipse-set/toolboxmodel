@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -423,98 +424,6 @@ public class GleisItemProviderAdapterFactory extends GleisAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Nutzung_Gueterzug_TypeClassItemProvider nutzung_Gueterzug_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Gueterzug_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNutzung_Gueterzug_TypeClassAdapter() {
-		if (nutzung_Gueterzug_TypeClassItemProvider == null) {
-			nutzung_Gueterzug_TypeClassItemProvider = new Nutzung_Gueterzug_TypeClassItemProvider(this);
-		}
-
-		return nutzung_Gueterzug_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Nutzung_Rangier_TypeClassItemProvider nutzung_Rangier_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Rangier_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNutzung_Rangier_TypeClassAdapter() {
-		if (nutzung_Rangier_TypeClassItemProvider == null) {
-			nutzung_Rangier_TypeClassItemProvider = new Nutzung_Rangier_TypeClassItemProvider(this);
-		}
-
-		return nutzung_Rangier_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Nutzung_Reisezug_TypeClassItemProvider nutzung_Reisezug_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_Reisezug_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNutzung_Reisezug_TypeClassAdapter() {
-		if (nutzung_Reisezug_TypeClassItemProvider == null) {
-			nutzung_Reisezug_TypeClassItemProvider = new Nutzung_Reisezug_TypeClassItemProvider(this);
-		}
-
-		return nutzung_Reisezug_TypeClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Nutzung_SBahn_TypeClassItemProvider nutzung_SBahn_TypeClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.set.toolboxmodel.Gleis.Nutzung_SBahn_TypeClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNutzung_SBahn_TypeClassAdapter() {
-		if (nutzung_SBahn_TypeClassItemProvider == null) {
-			nutzung_SBahn_TypeClassItemProvider = new Nutzung_SBahn_TypeClassItemProvider(this);
-		}
-
-		return nutzung_SBahn_TypeClassItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -634,10 +543,6 @@ public class GleisItemProviderAdapterFactory extends GleisAdapterFactory impleme
 		if (gleisart_TypeClassItemProvider != null) gleisart_TypeClassItemProvider.dispose();
 		if (konstruktion_TypeClassItemProvider != null) konstruktion_TypeClassItemProvider.dispose();
 		if (lichtraumprofil_TypeClassItemProvider != null) lichtraumprofil_TypeClassItemProvider.dispose();
-		if (nutzung_Gueterzug_TypeClassItemProvider != null) nutzung_Gueterzug_TypeClassItemProvider.dispose();
-		if (nutzung_Rangier_TypeClassItemProvider != null) nutzung_Rangier_TypeClassItemProvider.dispose();
-		if (nutzung_Reisezug_TypeClassItemProvider != null) nutzung_Reisezug_TypeClassItemProvider.dispose();
-		if (nutzung_SBahn_TypeClassItemProvider != null) nutzung_SBahn_TypeClassItemProvider.dispose();
 	}
 
 }

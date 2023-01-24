@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Block.BlockFactory;
 import org.eclipse.set.toolboxmodel.Block.BlockPackage;
 import org.eclipse.set.toolboxmodel.Block.Block_Strecke;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Block.Block_Strecke} object.
@@ -62,6 +63,7 @@ public class Block_StreckeItemProvider extends Basis_ObjektItemProvider {
 			addIDBetriebsstelleNachbarPropertyDescriptor(object);
 			addIDKnotenbahnhofPropertyDescriptor(object);
 			addIDStreckePropertyDescriptor(object);
+			addIDStreckeBremswegPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -124,6 +126,28 @@ public class Block_StreckeItemProvider extends Basis_ObjektItemProvider {
 				 getString("_UI_Block_Strecke_iDStrecke_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Block_Strecke_iDStrecke_feature", "_UI_Block_Strecke_type"),
 				 BlockPackage.Literals.BLOCK_STRECKE__ID_STRECKE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the ID Strecke Bremsweg feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDStreckeBremswegPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Block_Strecke_iDStreckeBremsweg_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Block_Strecke_iDStreckeBremsweg_feature", "_UI_Block_Strecke_type"),
+				 BlockPackage.Literals.BLOCK_STRECKE__ID_STRECKE_BREMSWEG,
 				 true,
 				 false,
 				 true,

@@ -1,10 +1,18 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Bedienung.Bedien_Bezirk;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
 
 /**
@@ -21,6 +29,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getBezeichnung <em>Bezeichnung</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getESTWZEEnergieversorgung <em>ESTWZE Energieversorgung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getESTWZentraleinheitAllg <em>ESTW Zentraleinheit Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getIDOertlichkeitNamensgebend <em>ID Oertlichkeit Namensgebend</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getIDUnterbringung <em>ID Unterbringung</em>}</li>
@@ -58,6 +67,29 @@ public interface ESTW_Zentraleinheit extends Basis_Objekt {
 	 * @generated
 	 */
 	void setBezeichnung(ESTW_Zentraleinheit_Bezeichnung_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>ESTWZE Energieversorgung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>ESTWZE Energieversorgung</em>' containment reference.
+	 * @see #setESTWZEEnergieversorgung(ESTW_ZE_Energieversorgung_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getESTW_Zentraleinheit_ESTWZEEnergieversorgung()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='ESTW_ZE_Energieversorgung'"
+	 * @generated
+	 */
+	ESTW_ZE_Energieversorgung_AttributeGroup getESTWZEEnergieversorgung();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getESTWZEEnergieversorgung <em>ESTWZE Energieversorgung</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ESTWZE Energieversorgung</em>' containment reference.
+	 * @see #getESTWZEEnergieversorgung()
+	 * @generated
+	 */
+	void setESTWZEEnergieversorgung(ESTW_ZE_Energieversorgung_AttributeGroup value);
 
 	/**
 	 * Returns the value of the '<em><b>ESTW Zentraleinheit Allg</b></em>' containment reference.

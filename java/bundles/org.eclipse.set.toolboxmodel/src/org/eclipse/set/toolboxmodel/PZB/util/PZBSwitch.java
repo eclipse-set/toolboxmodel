@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB.util;
 
@@ -107,10 +114,23 @@ public class PZBSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PZBPackage.INA_GEFAHRSTELLE_ATTRIBUTE_GROUP: {
+				INA_Gefahrstelle_AttributeGroup inA_Gefahrstelle_AttributeGroup = (INA_Gefahrstelle_AttributeGroup)theEObject;
+				T result = caseINA_Gefahrstelle_AttributeGroup(inA_Gefahrstelle_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case PZBPackage.MESSFEHLER_TYPE_CLASS: {
 				Messfehler_TypeClass messfehler_TypeClass = (Messfehler_TypeClass)theEObject;
 				T result = caseMessfehler_TypeClass(messfehler_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(messfehler_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PZBPackage.PRIORITAET_GEFAHRSTELLE_TYPE_CLASS: {
+				Prioritaet_Gefahrstelle_TypeClass prioritaet_Gefahrstelle_TypeClass = (Prioritaet_Gefahrstelle_TypeClass)theEObject;
+				T result = casePrioritaet_Gefahrstelle_TypeClass(prioritaet_Gefahrstelle_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(prioritaet_Gefahrstelle_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -171,6 +191,18 @@ public class PZBSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP: {
+				PZB_Element_Zuordnung_BP_AttributeGroup pzB_Element_Zuordnung_BP_AttributeGroup = (PZB_Element_Zuordnung_BP_AttributeGroup)theEObject;
+				T result = casePZB_Element_Zuordnung_BP_AttributeGroup(pzB_Element_Zuordnung_BP_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP: {
+				PZB_Element_Zuordnung_Fstr_AttributeGroup pzB_Element_Zuordnung_Fstr_AttributeGroup = (PZB_Element_Zuordnung_Fstr_AttributeGroup)theEObject;
+				T result = casePZB_Element_Zuordnung_Fstr_AttributeGroup(pzB_Element_Zuordnung_Fstr_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case PZBPackage.PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP: {
 				PZB_Element_Zuordnung_INA_AttributeGroup pzB_Element_Zuordnung_INA_AttributeGroup = (PZB_Element_Zuordnung_INA_AttributeGroup)theEObject;
 				T result = casePZB_Element_Zuordnung_INA_AttributeGroup(pzB_Element_Zuordnung_INA_AttributeGroup);
@@ -189,6 +221,13 @@ public class PZBSwitch<T> extends Switch<T> {
 				T result = casePZB_Zuordnung_Signal(pzB_Zuordnung_Signal);
 				if (result == null) result = caseBasis_Objekt(pzB_Zuordnung_Signal);
 				if (result == null) result = caseUr_Objekt(pzB_Zuordnung_Signal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PZBPackage.WIRKSAMKEIT_FSTR_TYPE_CLASS: {
+				Wirksamkeit_Fstr_TypeClass wirksamkeit_Fstr_TypeClass = (Wirksamkeit_Fstr_TypeClass)theEObject;
+				T result = caseWirksamkeit_Fstr_TypeClass(wirksamkeit_Fstr_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(wirksamkeit_Fstr_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -279,6 +318,21 @@ public class PZBSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>INA Gefahrstelle Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>INA Gefahrstelle Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseINA_Gefahrstelle_AttributeGroup(INA_Gefahrstelle_AttributeGroup object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Messfehler Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -290,6 +344,21 @@ public class PZBSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMessfehler_TypeClass(Messfehler_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Prioritaet Gefahrstelle Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Prioritaet Gefahrstelle Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrioritaet_Gefahrstelle_TypeClass(Prioritaet_Gefahrstelle_TypeClass object) {
 		return null;
 	}
 
@@ -414,6 +483,36 @@ public class PZBSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PZB Element Zuordnung BP Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PZB Element Zuordnung BP Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePZB_Element_Zuordnung_BP_AttributeGroup(PZB_Element_Zuordnung_BP_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PZB Element Zuordnung Fstr Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PZB Element Zuordnung Fstr Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePZB_Element_Zuordnung_Fstr_AttributeGroup(PZB_Element_Zuordnung_Fstr_AttributeGroup object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>PZB Element Zuordnung INA Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -455,6 +554,21 @@ public class PZBSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePZB_Zuordnung_Signal(PZB_Zuordnung_Signal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wirksamkeit Fstr Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wirksamkeit Fstr Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWirksamkeit_Fstr_TypeClass(Wirksamkeit_Fstr_TypeClass object) {
 		return null;
 	}
 

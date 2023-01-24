@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten;
 
@@ -256,6 +263,15 @@ public interface SchluesselabhaengigkeitenFactory extends EFactory {
 	Schluesselsperre createSchluesselsperre();
 
 	/**
+	 * Returns a new object of class '<em>Sonderanlage Lage Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sonderanlage Lage Type Class</em>'.
+	 * @generated
+	 */
+	Sonderanlage_Lage_TypeClass createSonderanlage_Lage_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Technisch Berechtigter Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,13 +281,13 @@ public interface SchluesselabhaengigkeitenFactory extends EFactory {
 	Technisch_Berechtigter_TypeClass createTechnisch_Berechtigter_TypeClass();
 
 	/**
-	 * Returns a new object of class '<em>Verschluss Herzstueck Type Class</em>'.
+	 * Returns a new object of class '<em>Verschluss Ort Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Verschluss Herzstueck Type Class</em>'.
+	 * @return a new object of class '<em>Verschluss Ort Type Class</em>'.
 	 * @generated
 	 */
-	Verschluss_Herzstueck_TypeClass createVerschluss_Herzstueck_TypeClass();
+	Verschluss_Ort_TypeClass createVerschluss_Ort_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>WAnbaulage Type Class</em>'.

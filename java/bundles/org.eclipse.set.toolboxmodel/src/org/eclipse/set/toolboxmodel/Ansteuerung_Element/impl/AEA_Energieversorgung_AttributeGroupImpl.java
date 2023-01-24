@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl;
 
@@ -6,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -14,7 +20,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.AEA_Energieversorgung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage;
-import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Aussenelementansteuerung;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Energieversorgung_Art_Ersatz_TypeClass;
 import org.eclipse.set.toolboxmodel.Ansteuerung_Element.Energieversorgung_Art_TypeClass;
 
@@ -55,7 +60,7 @@ public class AEA_Energieversorgung_AttributeGroupImpl extends MinimalEObjectImpl
 	 * @generated
 	 * @ordered
 	 */
-	protected Aussenelementansteuerung iDEnergieSekundaer;
+	protected Basis_Objekt iDEnergieSekundaer;
 
 	/**
 	 * This is true if the ID Energie Sekundaer reference has been set.
@@ -165,10 +170,10 @@ public class AEA_Energieversorgung_AttributeGroupImpl extends MinimalEObjectImpl
 	 * @generated
 	 */
 	@Override
-	public Aussenelementansteuerung getIDEnergieSekundaer() {
+	public Basis_Objekt getIDEnergieSekundaer() {
 		if (iDEnergieSekundaer != null && iDEnergieSekundaer.eIsProxy()) {
 			InternalEObject oldIDEnergieSekundaer = (InternalEObject)iDEnergieSekundaer;
-			iDEnergieSekundaer = (Aussenelementansteuerung)eResolveProxy(oldIDEnergieSekundaer);
+			iDEnergieSekundaer = (Basis_Objekt)eResolveProxy(oldIDEnergieSekundaer);
 			if (iDEnergieSekundaer != oldIDEnergieSekundaer) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Ansteuerung_ElementPackage.AEA_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_SEKUNDAER, oldIDEnergieSekundaer, iDEnergieSekundaer));
@@ -182,7 +187,7 @@ public class AEA_Energieversorgung_AttributeGroupImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Aussenelementansteuerung basicGetIDEnergieSekundaer() {
+	public Basis_Objekt basicGetIDEnergieSekundaer() {
 		return iDEnergieSekundaer;
 	}
 
@@ -192,8 +197,8 @@ public class AEA_Energieversorgung_AttributeGroupImpl extends MinimalEObjectImpl
 	 * @generated
 	 */
 	@Override
-	public void setIDEnergieSekundaer(Aussenelementansteuerung newIDEnergieSekundaer) {
-		Aussenelementansteuerung oldIDEnergieSekundaer = iDEnergieSekundaer;
+	public void setIDEnergieSekundaer(Basis_Objekt newIDEnergieSekundaer) {
+		Basis_Objekt oldIDEnergieSekundaer = iDEnergieSekundaer;
 		iDEnergieSekundaer = newIDEnergieSekundaer;
 		boolean oldIDEnergieSekundaerESet = iDEnergieSekundaerESet;
 		iDEnergieSekundaerESet = true;
@@ -208,7 +213,7 @@ public class AEA_Energieversorgung_AttributeGroupImpl extends MinimalEObjectImpl
 	 */
 	@Override
 	public void unsetIDEnergieSekundaer() {
-		Aussenelementansteuerung oldIDEnergieSekundaer = iDEnergieSekundaer;
+		Basis_Objekt oldIDEnergieSekundaer = iDEnergieSekundaer;
 		boolean oldIDEnergieSekundaerESet = iDEnergieSekundaerESet;
 		iDEnergieSekundaer = null;
 		iDEnergieSekundaerESet = false;
@@ -390,7 +395,7 @@ public class AEA_Energieversorgung_AttributeGroupImpl extends MinimalEObjectImpl
 				setEnergieversorgungArtErsatz((Energieversorgung_Art_Ersatz_TypeClass)newValue);
 				return;
 			case Ansteuerung_ElementPackage.AEA_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_SEKUNDAER:
-				setIDEnergieSekundaer((Aussenelementansteuerung)newValue);
+				setIDEnergieSekundaer((Basis_Objekt)newValue);
 				return;
 			case Ansteuerung_ElementPackage.AEA_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART:
 				setEnergieversorgungArt((Energieversorgung_Art_TypeClass)newValue);

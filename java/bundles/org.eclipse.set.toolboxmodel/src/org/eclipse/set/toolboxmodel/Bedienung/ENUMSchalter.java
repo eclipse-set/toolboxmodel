@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bedienung;
 
@@ -19,6 +26,26 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMSchalter implements Enumerator {
 	/**
+	 * The '<em><b>ENUM Schalter Gefahrschalter</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SCHALTER_GEFAHRSCHALTER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_SCHALTER_GEFAHRSCHALTER(0, "ENUMSchalter_Gefahrschalter", "Gefahrschalter"),
+
+	/**
+	 * The '<em><b>ENUM Schalter Nothaltschalter</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SCHALTER_NOTHALTSCHALTER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_SCHALTER_NOTHALTSCHALTER(1, "ENUMSchalter_Nothaltschalter", "Nothaltschalter"),
+
+	/**
 	 * The '<em><b>ENUM Schalter Schalter ein aus</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +53,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTER_SCHALTER_EIN_AUS(0, "ENUMSchalter_Schalter_ein_aus", "Schalter_ein_aus"),
+	ENUM_SCHALTER_SCHALTER_EIN_AUS(2, "ENUMSchalter_Schalter_ein_aus", "Schalter_ein_aus"),
 
 	/**
 	 * The '<em><b>ENUM Schalter Schluesselschalter DB 21</b></em>' literal object.
@@ -36,7 +63,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTER_SCHLUESSELSCHALTER_DB_21(1, "ENUMSchalter_Schluesselschalter_DB_21", "Schluesselschalter_DB_21"),
+	ENUM_SCHALTER_SCHLUESSELSCHALTER_DB_21(3, "ENUMSchalter_Schluesselschalter_DB_21", "Schluesselschalter_DB_21"),
 
 	/**
 	 * The '<em><b>ENUM Schalter Schluesselschalter Vierkant</b></em>' literal object.
@@ -46,7 +73,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTER_SCHLUESSELSCHALTER_VIERKANT(2, "ENUMSchalter_Schluesselschalter_Vierkant", "Schluesselschalter_Vierkant"),
+	ENUM_SCHALTER_SCHLUESSELSCHALTER_VIERKANT(4, "ENUMSchalter_Schluesselschalter_Vierkant", "Schluesselschalter_Vierkant"),
 
 	/**
 	 * The '<em><b>ENUM Schalter sonstige</b></em>' literal object.
@@ -56,7 +83,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTER_SONSTIGE(3, "ENUMSchalter_sonstige", "sonstige"),
+	ENUM_SCHALTER_SONSTIGE(5, "ENUMSchalter_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUM Schalter Vorbereitungsmeldung</b></em>' literal object.
@@ -66,7 +93,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTER_VORBEREITUNGSMELDUNG(4, "ENUMSchalter_Vorbereitungsmeldung", "Vorbereitungsmeldung"),
+	ENUM_SCHALTER_VORBEREITUNGSMELDUNG(6, "ENUMSchalter_Vorbereitungsmeldung", "Vorbereitungsmeldung"),
 
 	/**
 	 * The '<em><b>ENUM Schalter Zustimmungstaste</b></em>' literal object.
@@ -76,7 +103,29 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_SCHALTER_ZUSTIMMUNGSTASTE(5, "ENUMSchalter_Zustimmungstaste", "Zustimmungstaste");
+	ENUM_SCHALTER_ZUSTIMMUNGSTASTE(7, "ENUMSchalter_Zustimmungstaste", "Zustimmungstaste");
+
+	/**
+	 * The '<em><b>ENUM Schalter Gefahrschalter</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SCHALTER_GEFAHRSCHALTER
+	 * @model name="ENUMSchalter_Gefahrschalter" literal="Gefahrschalter"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_SCHALTER_GEFAHRSCHALTER_VALUE = 0;
+
+	/**
+	 * The '<em><b>ENUM Schalter Nothaltschalter</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_SCHALTER_NOTHALTSCHALTER
+	 * @model name="ENUMSchalter_Nothaltschalter" literal="Nothaltschalter"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_SCHALTER_NOTHALTSCHALTER_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Schalter Schalter ein aus</b></em>' literal value.
@@ -87,7 +136,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTER_SCHALTER_EIN_AUS_VALUE = 0;
+	public static final int ENUM_SCHALTER_SCHALTER_EIN_AUS_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Schalter Schluesselschalter DB 21</b></em>' literal value.
@@ -98,7 +147,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTER_SCHLUESSELSCHALTER_DB_21_VALUE = 1;
+	public static final int ENUM_SCHALTER_SCHLUESSELSCHALTER_DB_21_VALUE = 3;
 
 	/**
 	 * The '<em><b>ENUM Schalter Schluesselschalter Vierkant</b></em>' literal value.
@@ -109,7 +158,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTER_SCHLUESSELSCHALTER_VIERKANT_VALUE = 2;
+	public static final int ENUM_SCHALTER_SCHLUESSELSCHALTER_VIERKANT_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUM Schalter sonstige</b></em>' literal value.
@@ -120,7 +169,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTER_SONSTIGE_VALUE = 3;
+	public static final int ENUM_SCHALTER_SONSTIGE_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Schalter Vorbereitungsmeldung</b></em>' literal value.
@@ -131,7 +180,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTER_VORBEREITUNGSMELDUNG_VALUE = 4;
+	public static final int ENUM_SCHALTER_VORBEREITUNGSMELDUNG_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Schalter Zustimmungstaste</b></em>' literal value.
@@ -142,7 +191,7 @@ public enum ENUMSchalter implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_SCHALTER_ZUSTIMMUNGSTASTE_VALUE = 5;
+	public static final int ENUM_SCHALTER_ZUSTIMMUNGSTASTE_VALUE = 7;
 
 	/**
 	 * An array of all the '<em><b>ENUM Schalter</b></em>' enumerators.
@@ -152,6 +201,8 @@ public enum ENUMSchalter implements Enumerator {
 	 */
 	private static final ENUMSchalter[] VALUES_ARRAY =
 		new ENUMSchalter[] {
+			ENUM_SCHALTER_GEFAHRSCHALTER,
+			ENUM_SCHALTER_NOTHALTSCHALTER,
 			ENUM_SCHALTER_SCHALTER_EIN_AUS,
 			ENUM_SCHALTER_SCHLUESSELSCHALTER_DB_21,
 			ENUM_SCHALTER_SCHLUESSELSCHALTER_VIERKANT,
@@ -214,6 +265,8 @@ public enum ENUMSchalter implements Enumerator {
 	 */
 	public static ENUMSchalter get(int value) {
 		switch (value) {
+			case ENUM_SCHALTER_GEFAHRSCHALTER_VALUE: return ENUM_SCHALTER_GEFAHRSCHALTER;
+			case ENUM_SCHALTER_NOTHALTSCHALTER_VALUE: return ENUM_SCHALTER_NOTHALTSCHALTER;
 			case ENUM_SCHALTER_SCHALTER_EIN_AUS_VALUE: return ENUM_SCHALTER_SCHALTER_EIN_AUS;
 			case ENUM_SCHALTER_SCHLUESSELSCHALTER_DB_21_VALUE: return ENUM_SCHALTER_SCHLUESSELSCHALTER_DB_21;
 			case ENUM_SCHALTER_SCHLUESSELSCHALTER_VIERKANT_VALUE: return ENUM_SCHALTER_SCHLUESSELSCHALTER_VIERKANT;

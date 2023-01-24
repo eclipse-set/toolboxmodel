@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Bahnuebergang.BahnuebergangPackage;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Bahnuebergang.BUE_Kreuzungsplan} object.
@@ -60,6 +61,7 @@ public class BUE_KreuzungsplanItemProvider extends Basis_ObjektItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIDAnhangKreuzungsplanPropertyDescriptor(object);
+			addIDBUEAnlagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -78,6 +80,28 @@ public class BUE_KreuzungsplanItemProvider extends Basis_ObjektItemProvider {
 				 getString("_UI_BUE_Kreuzungsplan_iDAnhangKreuzungsplan_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BUE_Kreuzungsplan_iDAnhangKreuzungsplan_feature", "_UI_BUE_Kreuzungsplan_type"),
 				 BahnuebergangPackage.eINSTANCE.getBUE_Kreuzungsplan_IDAnhangKreuzungsplan(),
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the IDBUE Anlage feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIDBUEAnlagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BUE_Kreuzungsplan_iDBUEAnlage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BUE_Kreuzungsplan_iDBUEAnlage_feature", "_UI_BUE_Kreuzungsplan_type"),
+				 BahnuebergangPackage.eINSTANCE.getBUE_Kreuzungsplan_IDBUEAnlage(),
 				 true,
 				 false,
 				 true,

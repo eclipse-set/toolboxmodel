@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.PZB;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -600,7 +576,7 @@ public interface PZBPackage extends EPackage {
 	int GUE_ABSTAND_ABWEICHEND_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +622,7 @@ public interface PZBPackage extends EPackage {
 	int GUE_ANORDNUNG_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -692,7 +668,7 @@ public interface PZBPackage extends EPackage {
 	int GUE_BAUART_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -738,7 +714,7 @@ public interface PZBPackage extends EPackage {
 	int GUE_ENERGIEVERSORGUNG_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -784,7 +760,7 @@ public interface PZBPackage extends EPackage {
 	int GUE_MESSSTRECKE_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -820,6 +796,52 @@ public interface PZBPackage extends EPackage {
 	int GUE_MESSSTRECKE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.INA_Gefahrstelle_AttributeGroupImpl <em>INA Gefahrstelle Attribute Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.INA_Gefahrstelle_AttributeGroupImpl
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getINA_Gefahrstelle_AttributeGroup()
+	 * @generated
+	 */
+	int INA_GEFAHRSTELLE_ATTRIBUTE_GROUP = 5;
+
+	/**
+	 * The feature id for the '<em><b>ID Markanter Punkt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INA_GEFAHRSTELLE_ATTRIBUTE_GROUP__ID_MARKANTER_PUNKT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Prioritaet Gefahrstelle</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INA_GEFAHRSTELLE_ATTRIBUTE_GROUP__PRIORITAET_GEFAHRSTELLE = 1;
+
+	/**
+	 * The number of structural features of the '<em>INA Gefahrstelle Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INA_GEFAHRSTELLE_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>INA Gefahrstelle Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INA_GEFAHRSTELLE_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Messfehler_TypeClassImpl <em>Messfehler Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -827,10 +849,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getMessfehler_TypeClass()
 	 * @generated
 	 */
-	int MESSFEHLER_TYPE_CLASS = 5;
+	int MESSFEHLER_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -866,6 +888,52 @@ public interface PZBPackage extends EPackage {
 	int MESSFEHLER_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Prioritaet_Gefahrstelle_TypeClassImpl <em>Prioritaet Gefahrstelle Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.Prioritaet_Gefahrstelle_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPrioritaet_Gefahrstelle_TypeClass()
+	 * @generated
+	 */
+	int PRIORITAET_GEFAHRSTELLE_TYPE_CLASS = 7;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITAET_GEFAHRSTELLE_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITAET_GEFAHRSTELLE_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Prioritaet Gefahrstelle Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITAET_GEFAHRSTELLE_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Prioritaet Gefahrstelle Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITAET_GEFAHRSTELLE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Pruefgeschwindigkeit_TypeClassImpl <em>Pruefgeschwindigkeit Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -873,10 +941,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPruefgeschwindigkeit_TypeClass()
 	 * @generated
 	 */
-	int PRUEFGESCHWINDIGKEIT_TYPE_CLASS = 6;
+	int PRUEFGESCHWINDIGKEIT_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -919,10 +987,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPruefzeit_TypeClass()
 	 * @generated
 	 */
-	int PRUEFZEIT_TYPE_CLASS = 7;
+	int PRUEFZEIT_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -965,10 +1033,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Abstand_GM_TypeClass()
 	 * @generated
 	 */
-	int PZB_ABSTAND_GM_TYPE_CLASS = 8;
+	int PZB_ABSTAND_GM_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1011,10 +1079,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Art_TypeClass()
 	 * @generated
 	 */
-	int PZB_ART_TYPE_CLASS = 9;
+	int PZB_ART_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1057,7 +1125,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element()
 	 * @generated
 	 */
-	int PZB_ELEMENT = 10;
+	int PZB_ELEMENT = 12;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1078,13 +1146,22 @@ public interface PZBPackage extends EPackage {
 	int PZB_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int PZB_ELEMENT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.PUNKT_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.PUNKT_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1193,7 +1270,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_GM_AttributeGroup()
 	 * @generated
 	 */
-	int PZB_ELEMENT_GM_ATTRIBUTE_GROUP = 11;
+	int PZB_ELEMENT_GM_ATTRIBUTE_GROUP = 13;
 
 	/**
 	 * The feature id for the '<em><b>PZB Abstand GM</b></em>' containment reference.
@@ -1239,7 +1316,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_GUE_AttributeGroup()
 	 * @generated
 	 */
-	int PZB_ELEMENT_GUE_ATTRIBUTE_GROUP = 12;
+	int PZB_ELEMENT_GUE_ATTRIBUTE_GROUP = 14;
 
 	/**
 	 * The feature id for the '<em><b>GUE Abstand Abweichend</b></em>' containment reference.
@@ -1348,7 +1425,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_Zuordnung()
 	 * @generated
 	 */
-	int PZB_ELEMENT_ZUORDNUNG = 13;
+	int PZB_ELEMENT_ZUORDNUNG = 15;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1369,13 +1446,22 @@ public interface PZBPackage extends EPackage {
 	int PZB_ELEMENT_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int PZB_ELEMENT_ZUORDNUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1387,40 +1473,22 @@ public interface PZBPackage extends EPackage {
 	int PZB_ELEMENT_ZUORDNUNG__OBJEKTREFERENZEN = BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN;
 
 	/**
-	 * The feature id for the '<em><b>ID Fstr Zug Rangier</b></em>' reference.
+	 * The feature id for the '<em><b>PZB Element Zuordnung BP</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PZB_ELEMENT_ZUORDNUNG__ID_FSTR_ZUG_RANGIER = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
+	int PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_BP = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>IDPZB Element Bezugspunkt</b></em>' reference.
+	 * The feature id for the '<em><b>PZB Element Zuordnung Fstr</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PZB_ELEMENT_ZUORDNUNG__IDPZB_ELEMENT_BEZUGSPUNKT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>PZB Element Zuordnung INA</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_INA = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Wirksamkeit</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PZB_ELEMENT_ZUORDNUNG__WIRKSAMKEIT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_FSTR = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>PZB Element Zuordnung</em>' class.
@@ -1429,7 +1497,7 @@ public interface PZBPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PZB_ELEMENT_ZUORDNUNG_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int PZB_ELEMENT_ZUORDNUNG_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>PZB Element Zuordnung</em>' class.
@@ -1441,6 +1509,116 @@ public interface PZBPackage extends EPackage {
 	int PZB_ELEMENT_ZUORDNUNG_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_BP_AttributeGroupImpl <em>PZB Element Zuordnung BP Attribute Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_BP_AttributeGroupImpl
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_Zuordnung_BP_AttributeGroup()
+	 * @generated
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP = 16;
+
+	/**
+	 * The feature id for the '<em><b>IDPZB Element Bezugspunkt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__IDPZB_ELEMENT_BEZUGSPUNKT = 0;
+
+	/**
+	 * The feature id for the '<em><b>INA Gefahrstelle</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__INA_GEFAHRSTELLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>PZB Element Zuordnung INA</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__PZB_ELEMENT_ZUORDNUNG_INA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Wirksamkeit</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__WIRKSAMKEIT = 3;
+
+	/**
+	 * The number of structural features of the '<em>PZB Element Zuordnung BP Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>PZB Element Zuordnung BP Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_Fstr_AttributeGroupImpl <em>PZB Element Zuordnung Fstr Attribute Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_Fstr_AttributeGroupImpl
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_Zuordnung_Fstr_AttributeGroup()
+	 * @generated
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP = 17;
+
+	/**
+	 * The feature id for the '<em><b>ID Fstr Zug Rangier</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP__ID_FSTR_ZUG_RANGIER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Wirksamkeit Fstr</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP__WIRKSAMKEIT_FSTR = 1;
+
+	/**
+	 * The number of structural features of the '<em>PZB Element Zuordnung Fstr Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>PZB Element Zuordnung Fstr Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_INA_AttributeGroupImpl <em>PZB Element Zuordnung INA Attribute Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1448,10 +1626,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_Zuordnung_INA_AttributeGroup()
 	 * @generated
 	 */
-	int PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP = 14;
+	int PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Anhang INA</b></em>' reference.
+	 * The feature id for the '<em><b>ID Anhang INA</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1469,22 +1647,13 @@ public interface PZBPackage extends EPackage {
 	int PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP__ID_BAHNSTEIG_KANTE = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Markanter Punkt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP__ID_MARKANTER_PUNKT = 2;
-
-	/**
 	 * The number of structural features of the '<em>PZB Element Zuordnung INA Attribute Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
+	int PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>PZB Element Zuordnung INA Attribute Group</em>' class.
@@ -1503,10 +1672,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_INA_TypeClass()
 	 * @generated
 	 */
-	int PZB_INA_TYPE_CLASS = 15;
+	int PZB_INA_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1549,7 +1718,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Zuordnung_Signal()
 	 * @generated
 	 */
-	int PZB_ZUORDNUNG_SIGNAL = 16;
+	int PZB_ZUORDNUNG_SIGNAL = 20;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1570,13 +1739,22 @@ public interface PZBPackage extends EPackage {
 	int PZB_ZUORDNUNG_SIGNAL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int PZB_ZUORDNUNG_SIGNAL__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PZB_ZUORDNUNG_SIGNAL__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1624,6 +1802,52 @@ public interface PZBPackage extends EPackage {
 	int PZB_ZUORDNUNG_SIGNAL_OPERATION_COUNT = BasisobjektePackage.BASIS_OBJEKT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Wirksamkeit_Fstr_TypeClassImpl <em>Wirksamkeit Fstr Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.Wirksamkeit_Fstr_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getWirksamkeit_Fstr_TypeClass()
+	 * @generated
+	 */
+	int WIRKSAMKEIT_FSTR_TYPE_CLASS = 21;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRKSAMKEIT_FSTR_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRKSAMKEIT_FSTR_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Wirksamkeit Fstr Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRKSAMKEIT_FSTR_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Wirksamkeit Fstr Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRKSAMKEIT_FSTR_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Wirksamkeit_TypeClassImpl <em>Wirksamkeit Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1631,10 +1855,10 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getWirksamkeit_TypeClass()
 	 * @generated
 	 */
-	int WIRKSAMKEIT_TYPE_CLASS = 17;
+	int WIRKSAMKEIT_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1677,7 +1901,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMGUEAnordnung()
 	 * @generated
 	 */
-	int ENUMGUE_ANORDNUNG = 18;
+	int ENUMGUE_ANORDNUNG = 23;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.ENUMGUEBauart <em>ENUMGUE Bauart</em>}' enum.
@@ -1687,7 +1911,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMGUEBauart()
 	 * @generated
 	 */
-	int ENUMGUE_BAUART = 19;
+	int ENUMGUE_BAUART = 24;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.ENUMGUEEnergieversorgung <em>ENUMGUE Energieversorgung</em>}' enum.
@@ -1697,7 +1921,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMGUEEnergieversorgung()
 	 * @generated
 	 */
-	int ENUMGUE_ENERGIEVERSORGUNG = 20;
+	int ENUMGUE_ENERGIEVERSORGUNG = 25;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.ENUMMessfehler <em>ENUM Messfehler</em>}' enum.
@@ -1707,7 +1931,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMMessfehler()
 	 * @generated
 	 */
-	int ENUM_MESSFEHLER = 21;
+	int ENUM_MESSFEHLER = 26;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.ENUMPZBArt <em>ENUMPZB Art</em>}' enum.
@@ -1717,7 +1941,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMPZBArt()
 	 * @generated
 	 */
-	int ENUMPZB_ART = 22;
+	int ENUMPZB_ART = 27;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeit <em>ENUM Wirksamkeit</em>}' enum.
@@ -1727,7 +1951,17 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMWirksamkeit()
 	 * @generated
 	 */
-	int ENUM_WIRKSAMKEIT = 23;
+	int ENUM_WIRKSAMKEIT = 28;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr <em>ENUM Wirksamkeit Fstr</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMWirksamkeitFstr()
+	 * @generated
+	 */
+	int ENUM_WIRKSAMKEIT_FSTR = 29;
 
 	/**
 	 * The meta object id for the '<em>ENUMGUE Anordnung Object</em>' data type.
@@ -1737,7 +1971,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMGUEAnordnungObject()
 	 * @generated
 	 */
-	int ENUMGUE_ANORDNUNG_OBJECT = 24;
+	int ENUMGUE_ANORDNUNG_OBJECT = 30;
 
 	/**
 	 * The meta object id for the '<em>ENUMGUE Bauart Object</em>' data type.
@@ -1747,7 +1981,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMGUEBauartObject()
 	 * @generated
 	 */
-	int ENUMGUE_BAUART_OBJECT = 25;
+	int ENUMGUE_BAUART_OBJECT = 31;
 
 	/**
 	 * The meta object id for the '<em>ENUMGUE Energieversorgung Object</em>' data type.
@@ -1757,7 +1991,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMGUEEnergieversorgungObject()
 	 * @generated
 	 */
-	int ENUMGUE_ENERGIEVERSORGUNG_OBJECT = 26;
+	int ENUMGUE_ENERGIEVERSORGUNG_OBJECT = 32;
 
 	/**
 	 * The meta object id for the '<em>ENUM Messfehler Object</em>' data type.
@@ -1767,7 +2001,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMMessfehlerObject()
 	 * @generated
 	 */
-	int ENUM_MESSFEHLER_OBJECT = 27;
+	int ENUM_MESSFEHLER_OBJECT = 33;
 
 	/**
 	 * The meta object id for the '<em>ENUMPZB Art Object</em>' data type.
@@ -1777,7 +2011,17 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMPZBArtObject()
 	 * @generated
 	 */
-	int ENUMPZB_ART_OBJECT = 28;
+	int ENUMPZB_ART_OBJECT = 34;
+
+	/**
+	 * The meta object id for the '<em>ENUM Wirksamkeit Fstr Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMWirksamkeitFstrObject()
+	 * @generated
+	 */
+	int ENUM_WIRKSAMKEIT_FSTR_OBJECT = 35;
 
 	/**
 	 * The meta object id for the '<em>ENUM Wirksamkeit Object</em>' data type.
@@ -1787,7 +2031,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMWirksamkeitObject()
 	 * @generated
 	 */
-	int ENUM_WIRKSAMKEIT_OBJECT = 29;
+	int ENUM_WIRKSAMKEIT_OBJECT = 36;
 
 	/**
 	 * The meta object id for the '<em>GUE Abstand Abweichend Type</em>' data type.
@@ -1797,7 +2041,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getGUE_Abstand_Abweichend_Type()
 	 * @generated
 	 */
-	int GUE_ABSTAND_ABWEICHEND_TYPE = 30;
+	int GUE_ABSTAND_ABWEICHEND_TYPE = 37;
 
 	/**
 	 * The meta object id for the '<em>GUE Messstrecke Type</em>' data type.
@@ -1807,7 +2051,17 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getGUE_Messstrecke_Type()
 	 * @generated
 	 */
-	int GUE_MESSSTRECKE_TYPE = 31;
+	int GUE_MESSSTRECKE_TYPE = 38;
+
+	/**
+	 * The meta object id for the '<em>Prioritaet Gefahrstelle Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.math.BigInteger
+	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPrioritaet_Gefahrstelle_Type()
+	 * @generated
+	 */
+	int PRIORITAET_GEFAHRSTELLE_TYPE = 39;
 
 	/**
 	 * The meta object id for the '<em>Pruefgeschwindigkeit Type</em>' data type.
@@ -1817,7 +2071,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPruefgeschwindigkeit_Type()
 	 * @generated
 	 */
-	int PRUEFGESCHWINDIGKEIT_TYPE = 32;
+	int PRUEFGESCHWINDIGKEIT_TYPE = 40;
 
 	/**
 	 * The meta object id for the '<em>Pruefzeit Type</em>' data type.
@@ -1827,7 +2081,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPruefzeit_Type()
 	 * @generated
 	 */
-	int PRUEFZEIT_TYPE = 33;
+	int PRUEFZEIT_TYPE = 41;
 
 	/**
 	 * The meta object id for the '<em>PZB Abstand GM Type</em>' data type.
@@ -1837,7 +2091,7 @@ public interface PZBPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Abstand_GM_Type()
 	 * @generated
 	 */
-	int PZB_ABSTAND_GM_TYPE = 34;
+	int PZB_ABSTAND_GM_TYPE = 42;
 
 
 	/**
@@ -1946,6 +2200,38 @@ public interface PZBPackage extends EPackage {
 	EAttribute getGUE_Messstrecke_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup <em>INA Gefahrstelle Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>INA Gefahrstelle Attribute Group</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup
+	 * @generated
+	 */
+	EClass getINA_Gefahrstelle_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup#getIDMarkanterPunkt <em>ID Markanter Punkt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Markanter Punkt</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup#getIDMarkanterPunkt()
+	 * @see #getINA_Gefahrstelle_AttributeGroup()
+	 * @generated
+	 */
+	EReference getINA_Gefahrstelle_AttributeGroup_IDMarkanterPunkt();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup#getPrioritaetGefahrstelle <em>Prioritaet Gefahrstelle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Prioritaet Gefahrstelle</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.INA_Gefahrstelle_AttributeGroup#getPrioritaetGefahrstelle()
+	 * @see #getINA_Gefahrstelle_AttributeGroup()
+	 * @generated
+	 */
+	EReference getINA_Gefahrstelle_AttributeGroup_PrioritaetGefahrstelle();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.Messfehler_TypeClass <em>Messfehler Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1965,6 +2251,27 @@ public interface PZBPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMessfehler_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass <em>Prioritaet Gefahrstelle Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Prioritaet Gefahrstelle Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass
+	 * @generated
+	 */
+	EClass getPrioritaet_Gefahrstelle_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.Prioritaet_Gefahrstelle_TypeClass#getWert()
+	 * @see #getPrioritaet_Gefahrstelle_TypeClass()
+	 * @generated
+	 */
+	EAttribute getPrioritaet_Gefahrstelle_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.Pruefgeschwindigkeit_TypeClass <em>Pruefgeschwindigkeit Type Class</em>}'.
@@ -2278,48 +2585,112 @@ public interface PZBPackage extends EPackage {
 	EClass getPZB_Element_Zuordnung();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getIDFstrZugRangier <em>ID Fstr Zug Rangier</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getPZBElementZuordnungBP <em>PZB Element Zuordnung BP</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>ID Fstr Zug Rangier</em>'.
-	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getIDFstrZugRangier()
+	 * @return the meta object for the containment reference list '<em>PZB Element Zuordnung BP</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getPZBElementZuordnungBP()
 	 * @see #getPZB_Element_Zuordnung()
 	 * @generated
 	 */
-	EReference getPZB_Element_Zuordnung_IDFstrZugRangier();
+	EReference getPZB_Element_Zuordnung_PZBElementZuordnungBP();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getIDPZBElementBezugspunkt <em>IDPZB Element Bezugspunkt</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getPZBElementZuordnungFstr <em>PZB Element Zuordnung Fstr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>PZB Element Zuordnung Fstr</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getPZBElementZuordnungFstr()
+	 * @see #getPZB_Element_Zuordnung()
+	 * @generated
+	 */
+	EReference getPZB_Element_Zuordnung_PZBElementZuordnungFstr();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup <em>PZB Element Zuordnung BP Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>PZB Element Zuordnung BP Attribute Group</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup
+	 * @generated
+	 */
+	EClass getPZB_Element_Zuordnung_BP_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getIDPZBElementBezugspunkt <em>IDPZB Element Bezugspunkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>IDPZB Element Bezugspunkt</em>'.
-	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getIDPZBElementBezugspunkt()
-	 * @see #getPZB_Element_Zuordnung()
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getIDPZBElementBezugspunkt()
+	 * @see #getPZB_Element_Zuordnung_BP_AttributeGroup()
 	 * @generated
 	 */
-	EReference getPZB_Element_Zuordnung_IDPZBElementBezugspunkt();
+	EReference getPZB_Element_Zuordnung_BP_AttributeGroup_IDPZBElementBezugspunkt();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getPZBElementZuordnungINA <em>PZB Element Zuordnung INA</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getINAGefahrstelle <em>INA Gefahrstelle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>INA Gefahrstelle</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getINAGefahrstelle()
+	 * @see #getPZB_Element_Zuordnung_BP_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPZB_Element_Zuordnung_BP_AttributeGroup_INAGefahrstelle();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getPZBElementZuordnungINA <em>PZB Element Zuordnung INA</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>PZB Element Zuordnung INA</em>'.
-	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getPZBElementZuordnungINA()
-	 * @see #getPZB_Element_Zuordnung()
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getPZBElementZuordnungINA()
+	 * @see #getPZB_Element_Zuordnung_BP_AttributeGroup()
 	 * @generated
 	 */
-	EReference getPZB_Element_Zuordnung_PZBElementZuordnungINA();
+	EReference getPZB_Element_Zuordnung_BP_AttributeGroup_PZBElementZuordnungINA();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getWirksamkeit <em>Wirksamkeit</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getWirksamkeit <em>Wirksamkeit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Wirksamkeit</em>'.
-	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung#getWirksamkeit()
-	 * @see #getPZB_Element_Zuordnung()
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_BP_AttributeGroup#getWirksamkeit()
+	 * @see #getPZB_Element_Zuordnung_BP_AttributeGroup()
 	 * @generated
 	 */
-	EReference getPZB_Element_Zuordnung_Wirksamkeit();
+	EReference getPZB_Element_Zuordnung_BP_AttributeGroup_Wirksamkeit();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup <em>PZB Element Zuordnung Fstr Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>PZB Element Zuordnung Fstr Attribute Group</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup
+	 * @generated
+	 */
+	EClass getPZB_Element_Zuordnung_Fstr_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup#getIDFstrZugRangier <em>ID Fstr Zug Rangier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Fstr Zug Rangier</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup#getIDFstrZugRangier()
+	 * @see #getPZB_Element_Zuordnung_Fstr_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPZB_Element_Zuordnung_Fstr_AttributeGroup_IDFstrZugRangier();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup#getWirksamkeitFstr <em>Wirksamkeit Fstr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Wirksamkeit Fstr</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_Fstr_AttributeGroup#getWirksamkeitFstr()
+	 * @see #getPZB_Element_Zuordnung_Fstr_AttributeGroup()
+	 * @generated
+	 */
+	EReference getPZB_Element_Zuordnung_Fstr_AttributeGroup_WirksamkeitFstr();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup <em>PZB Element Zuordnung INA Attribute Group</em>}'.
@@ -2332,10 +2703,10 @@ public interface PZBPackage extends EPackage {
 	EClass getPZB_Element_Zuordnung_INA_AttributeGroup();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDAnhangINA <em>ID Anhang INA</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDAnhangINA <em>ID Anhang INA</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>ID Anhang INA</em>'.
+	 * @return the meta object for the reference list '<em>ID Anhang INA</em>'.
 	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDAnhangINA()
 	 * @see #getPZB_Element_Zuordnung_INA_AttributeGroup()
 	 * @generated
@@ -2352,17 +2723,6 @@ public interface PZBPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPZB_Element_Zuordnung_INA_AttributeGroup_IDBahnsteigKante();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDMarkanterPunkt <em>ID Markanter Punkt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>ID Markanter Punkt</em>'.
-	 * @see org.eclipse.set.toolboxmodel.PZB.PZB_Element_Zuordnung_INA_AttributeGroup#getIDMarkanterPunkt()
-	 * @see #getPZB_Element_Zuordnung_INA_AttributeGroup()
-	 * @generated
-	 */
-	EReference getPZB_Element_Zuordnung_INA_AttributeGroup_IDMarkanterPunkt();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.PZB_INA_TypeClass <em>PZB INA Type Class</em>}'.
@@ -2416,6 +2776,27 @@ public interface PZBPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPZB_Zuordnung_Signal_IDSignal();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass <em>Wirksamkeit Fstr Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Wirksamkeit Fstr Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass
+	 * @generated
+	 */
+	EClass getWirksamkeit_Fstr_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_Fstr_TypeClass#getWert()
+	 * @see #getWirksamkeit_Fstr_TypeClass()
+	 * @generated
+	 */
+	EAttribute getWirksamkeit_Fstr_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PZB.Wirksamkeit_TypeClass <em>Wirksamkeit Type Class</em>}'.
@@ -2499,6 +2880,16 @@ public interface PZBPackage extends EPackage {
 	EEnum getENUMWirksamkeit();
 
 	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr <em>ENUM Wirksamkeit Fstr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Wirksamkeit Fstr</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr
+	 * @generated
+	 */
+	EEnum getENUMWirksamkeitFstr();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.PZB.ENUMGUEAnordnung <em>ENUMGUE Anordnung Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2559,6 +2950,18 @@ public interface PZBPackage extends EPackage {
 	EDataType getENUMPZBArtObject();
 
 	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr <em>ENUM Wirksamkeit Fstr Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Wirksamkeit Fstr Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr"
+	 *        extendedMetaData="name='ENUMWirksamkeit_Fstr:Object' baseType='ENUMWirksamkeit_Fstr'"
+	 * @generated
+	 */
+	EDataType getENUMWirksamkeitFstrObject();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeit <em>ENUM Wirksamkeit Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2593,6 +2996,18 @@ public interface PZBPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getGUE_Messstrecke_Type();
+
+	/**
+	 * Returns the meta object for data type '{@link java.math.BigInteger <em>Prioritaet Gefahrstelle Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Prioritaet Gefahrstelle Type</em>'.
+	 * @see java.math.BigInteger
+	 * @model instanceClass="java.math.BigInteger"
+	 *        extendedMetaData="name='TPrioritaet_Gefahrstelle' baseType='http://www.eclipse.org/emf/2003/XMLType#integer'"
+	 * @generated
+	 */
+	EDataType getPrioritaet_Gefahrstelle_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.math.BigInteger <em>Pruefgeschwindigkeit Type</em>}'.
@@ -2744,6 +3159,32 @@ public interface PZBPackage extends EPackage {
 		EAttribute GUE_MESSSTRECKE_TYPE_CLASS__WERT = eINSTANCE.getGUE_Messstrecke_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.INA_Gefahrstelle_AttributeGroupImpl <em>INA Gefahrstelle Attribute Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.INA_Gefahrstelle_AttributeGroupImpl
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getINA_Gefahrstelle_AttributeGroup()
+		 * @generated
+		 */
+		EClass INA_GEFAHRSTELLE_ATTRIBUTE_GROUP = eINSTANCE.getINA_Gefahrstelle_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Markanter Punkt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INA_GEFAHRSTELLE_ATTRIBUTE_GROUP__ID_MARKANTER_PUNKT = eINSTANCE.getINA_Gefahrstelle_AttributeGroup_IDMarkanterPunkt();
+
+		/**
+		 * The meta object literal for the '<em><b>Prioritaet Gefahrstelle</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INA_GEFAHRSTELLE_ATTRIBUTE_GROUP__PRIORITAET_GEFAHRSTELLE = eINSTANCE.getINA_Gefahrstelle_AttributeGroup_PrioritaetGefahrstelle();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Messfehler_TypeClassImpl <em>Messfehler Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2760,6 +3201,24 @@ public interface PZBPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MESSFEHLER_TYPE_CLASS__WERT = eINSTANCE.getMessfehler_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Prioritaet_Gefahrstelle_TypeClassImpl <em>Prioritaet Gefahrstelle Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.Prioritaet_Gefahrstelle_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPrioritaet_Gefahrstelle_TypeClass()
+		 * @generated
+		 */
+		EClass PRIORITAET_GEFAHRSTELLE_TYPE_CLASS = eINSTANCE.getPrioritaet_Gefahrstelle_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRIORITAET_GEFAHRSTELLE_TYPE_CLASS__WERT = eINSTANCE.getPrioritaet_Gefahrstelle_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Pruefgeschwindigkeit_TypeClassImpl <em>Pruefgeschwindigkeit Type Class</em>}' class.
@@ -3010,12 +3469,30 @@ public interface PZBPackage extends EPackage {
 		EClass PZB_ELEMENT_ZUORDNUNG = eINSTANCE.getPZB_Element_Zuordnung();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Fstr Zug Rangier</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>PZB Element Zuordnung BP</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PZB_ELEMENT_ZUORDNUNG__ID_FSTR_ZUG_RANGIER = eINSTANCE.getPZB_Element_Zuordnung_IDFstrZugRangier();
+		EReference PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_BP = eINSTANCE.getPZB_Element_Zuordnung_PZBElementZuordnungBP();
+
+		/**
+		 * The meta object literal for the '<em><b>PZB Element Zuordnung Fstr</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_FSTR = eINSTANCE.getPZB_Element_Zuordnung_PZBElementZuordnungFstr();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_BP_AttributeGroupImpl <em>PZB Element Zuordnung BP Attribute Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_BP_AttributeGroupImpl
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_Zuordnung_BP_AttributeGroup()
+		 * @generated
+		 */
+		EClass PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP = eINSTANCE.getPZB_Element_Zuordnung_BP_AttributeGroup();
 
 		/**
 		 * The meta object literal for the '<em><b>IDPZB Element Bezugspunkt</b></em>' reference feature.
@@ -3023,7 +3500,15 @@ public interface PZBPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PZB_ELEMENT_ZUORDNUNG__IDPZB_ELEMENT_BEZUGSPUNKT = eINSTANCE.getPZB_Element_Zuordnung_IDPZBElementBezugspunkt();
+		EReference PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__IDPZB_ELEMENT_BEZUGSPUNKT = eINSTANCE.getPZB_Element_Zuordnung_BP_AttributeGroup_IDPZBElementBezugspunkt();
+
+		/**
+		 * The meta object literal for the '<em><b>INA Gefahrstelle</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__INA_GEFAHRSTELLE = eINSTANCE.getPZB_Element_Zuordnung_BP_AttributeGroup_INAGefahrstelle();
 
 		/**
 		 * The meta object literal for the '<em><b>PZB Element Zuordnung INA</b></em>' containment reference feature.
@@ -3031,7 +3516,7 @@ public interface PZBPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PZB_ELEMENT_ZUORDNUNG__PZB_ELEMENT_ZUORDNUNG_INA = eINSTANCE.getPZB_Element_Zuordnung_PZBElementZuordnungINA();
+		EReference PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__PZB_ELEMENT_ZUORDNUNG_INA = eINSTANCE.getPZB_Element_Zuordnung_BP_AttributeGroup_PZBElementZuordnungINA();
 
 		/**
 		 * The meta object literal for the '<em><b>Wirksamkeit</b></em>' containment reference feature.
@@ -3039,7 +3524,33 @@ public interface PZBPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PZB_ELEMENT_ZUORDNUNG__WIRKSAMKEIT = eINSTANCE.getPZB_Element_Zuordnung_Wirksamkeit();
+		EReference PZB_ELEMENT_ZUORDNUNG_BP_ATTRIBUTE_GROUP__WIRKSAMKEIT = eINSTANCE.getPZB_Element_Zuordnung_BP_AttributeGroup_Wirksamkeit();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_Fstr_AttributeGroupImpl <em>PZB Element Zuordnung Fstr Attribute Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_Fstr_AttributeGroupImpl
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPZB_Element_Zuordnung_Fstr_AttributeGroup()
+		 * @generated
+		 */
+		EClass PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP = eINSTANCE.getPZB_Element_Zuordnung_Fstr_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Fstr Zug Rangier</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP__ID_FSTR_ZUG_RANGIER = eINSTANCE.getPZB_Element_Zuordnung_Fstr_AttributeGroup_IDFstrZugRangier();
+
+		/**
+		 * The meta object literal for the '<em><b>Wirksamkeit Fstr</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PZB_ELEMENT_ZUORDNUNG_FSTR_ATTRIBUTE_GROUP__WIRKSAMKEIT_FSTR = eINSTANCE.getPZB_Element_Zuordnung_Fstr_AttributeGroup_WirksamkeitFstr();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.PZB_Element_Zuordnung_INA_AttributeGroupImpl <em>PZB Element Zuordnung INA Attribute Group</em>}' class.
@@ -3052,7 +3563,7 @@ public interface PZBPackage extends EPackage {
 		EClass PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP = eINSTANCE.getPZB_Element_Zuordnung_INA_AttributeGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Anhang INA</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>ID Anhang INA</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3066,14 +3577,6 @@ public interface PZBPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP__ID_BAHNSTEIG_KANTE = eINSTANCE.getPZB_Element_Zuordnung_INA_AttributeGroup_IDBahnsteigKante();
-
-		/**
-		 * The meta object literal for the '<em><b>ID Markanter Punkt</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PZB_ELEMENT_ZUORDNUNG_INA_ATTRIBUTE_GROUP__ID_MARKANTER_PUNKT = eINSTANCE.getPZB_Element_Zuordnung_INA_AttributeGroup_IDMarkanterPunkt();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.PZB_INA_TypeClassImpl <em>PZB INA Type Class</em>}' class.
@@ -3118,6 +3621,24 @@ public interface PZBPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PZB_ZUORDNUNG_SIGNAL__ID_SIGNAL = eINSTANCE.getPZB_Zuordnung_Signal_IDSignal();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Wirksamkeit_Fstr_TypeClassImpl <em>Wirksamkeit Fstr Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.Wirksamkeit_Fstr_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getWirksamkeit_Fstr_TypeClass()
+		 * @generated
+		 */
+		EClass WIRKSAMKEIT_FSTR_TYPE_CLASS = eINSTANCE.getWirksamkeit_Fstr_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIRKSAMKEIT_FSTR_TYPE_CLASS__WERT = eINSTANCE.getWirksamkeit_Fstr_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.impl.Wirksamkeit_TypeClassImpl <em>Wirksamkeit Type Class</em>}' class.
@@ -3198,6 +3719,16 @@ public interface PZBPackage extends EPackage {
 		EEnum ENUM_WIRKSAMKEIT = eINSTANCE.getENUMWirksamkeit();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr <em>ENUM Wirksamkeit Fstr</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMWirksamkeitFstr()
+		 * @generated
+		 */
+		EEnum ENUM_WIRKSAMKEIT_FSTR = eINSTANCE.getENUMWirksamkeitFstr();
+
+		/**
 		 * The meta object literal for the '<em>ENUMGUE Anordnung Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3248,6 +3779,16 @@ public interface PZBPackage extends EPackage {
 		EDataType ENUMPZB_ART_OBJECT = eINSTANCE.getENUMPZBArtObject();
 
 		/**
+		 * The meta object literal for the '<em>ENUM Wirksamkeit Fstr Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.PZB.ENUMWirksamkeitFstr
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getENUMWirksamkeitFstrObject()
+		 * @generated
+		 */
+		EDataType ENUM_WIRKSAMKEIT_FSTR_OBJECT = eINSTANCE.getENUMWirksamkeitFstrObject();
+
+		/**
 		 * The meta object literal for the '<em>ENUM Wirksamkeit Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3276,6 +3817,16 @@ public interface PZBPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType GUE_MESSSTRECKE_TYPE = eINSTANCE.getGUE_Messstrecke_Type();
+
+		/**
+		 * The meta object literal for the '<em>Prioritaet Gefahrstelle Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.math.BigInteger
+		 * @see org.eclipse.set.toolboxmodel.PZB.impl.PZBPackageImpl#getPrioritaet_Gefahrstelle_Type()
+		 * @generated
+		 */
+		EDataType PRIORITAET_GEFAHRSTELLE_TYPE = eINSTANCE.getPrioritaet_Gefahrstelle_Type();
 
 		/**
 		 * The meta object literal for the '<em>Pruefgeschwindigkeit Type</em>' data type.

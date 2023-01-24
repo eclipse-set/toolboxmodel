@@ -1,13 +1,22 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
+
 import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
+
 import org.eclipse.set.toolboxmodel.Geodaten.Technischer_Punkt;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -16,17 +25,20 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Zusatzangaben für Signale im Zusammenhang mit ETCS L2.
+ * Zusatzangaben für reale Signale im Zusammenhang mit ETCS L2.
+ * Die Signalart "sonstiges Lichtsperrsignal" (sLs) für Lichtsperrsignale, an denen keine Zugstraßen beginnen oder enden, muss aus dem Fehlen entsprechender Zugstraßen abgeleitet werden.
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getETCSGefahrpunktabstandAbweichend <em>ETCS Gefahrpunktabstand Abweichend</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getETCSSignalAllg <em>ETCS Signal Allg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getETCSSignalDWeg <em>ETCS Signal DWeg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getETCSSignalTBV <em>ETCS Signal TBV</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDETCSGefahrpunkt <em>IDETCS Gefahrpunkt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDETCSGefahrpunkt2 <em>IDETCS Gefahrpunkt2</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDHOAFBOA <em>IDHOAFBOA</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDRBC <em>IDRBC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDSignal <em>ID Signal</em>}</li>
@@ -37,6 +49,32 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * @generated
  */
 public interface ETCS_Signal extends Basis_Objekt {
+	/**
+	 * Returns the value of the '<em><b>ETCS Gefahrpunktabstand Abweichend</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Angabe des ETCS-Gefahrpunktabstands, sofern sich dieser nicht aus den Positionen von Signal und ETCS-Gefahrpunkt ermitteln lässt. Die Angabe erfolgt beispielsweise im Fall, dass ein bedingtes Ausstiegssignal eine Vorsignalfunktion für den Fahrweg in die seitliche Ausfahrt besitzt (Mehrabschnittssignal oder Hauptsignal mit Vorsignal am gleichen Standort), wobei der Abstand zum ETCS-Gefahrpunkt für dieses bedingte Ausstiegssignal auf 0 m festgesetzt werden muss. DB-Regelwerk Ril 819.1344, 4.3.2.2 (53).
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>ETCS Gefahrpunktabstand Abweichend</em>' containment reference.
+	 * @see #setETCSGefahrpunktabstandAbweichend(ETCS_Gefahrpunktabstand_Abweichend_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_Signal_ETCSGefahrpunktabstandAbweichend()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='ETCS_Gefahrpunktabstand_Abweichend'"
+	 * @generated
+	 */
+	ETCS_Gefahrpunktabstand_Abweichend_TypeClass getETCSGefahrpunktabstandAbweichend();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getETCSGefahrpunktabstandAbweichend <em>ETCS Gefahrpunktabstand Abweichend</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>ETCS Gefahrpunktabstand Abweichend</em>' containment reference.
+	 * @see #getETCSGefahrpunktabstandAbweichend()
+	 * @generated
+	 */
+	void setETCSGefahrpunktabstandAbweichend(ETCS_Gefahrpunktabstand_Abweichend_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>ETCS Signal Allg</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -112,8 +150,6 @@ public interface ETCS_Signal extends Basis_Objekt {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Angabe des ETCS-Gefahrpunkts (Danger Point).
-	 * Bei Einfahr-, Block- und Deckungssignalen ist der ETCS-Gefahrpunkt identisch mit dem Gefahrpunkt aus der Stellwerksplanung und somit hier nicht anzugeben.
-	 * Bei Ausfahr- und Zwischensignalen ist der ETCS-Gefahrpunkt zu planen (bei vorhandener INA-Berechnung entspricht er meist der maßgebenden Gefahrstelle).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDETCS Gefahrpunkt</em>' reference.
 	 * @see #isSetIDETCSGefahrpunkt()
@@ -160,6 +196,59 @@ public interface ETCS_Signal extends Basis_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDETCSGefahrpunkt();
+
+	/**
+	 * Returns the value of the '<em><b>IDETCS Gefahrpunkt2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Angabe eines zusätzlichen ETCS-Gefahrpunkts (Danger Point), wenn der Abstand zum (ersten) ETCS-Gefahrpunkt kürzer als 50 m ist. DB-Regelwerk Ril 819.1344, 3.3.2.2 (53)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>IDETCS Gefahrpunkt2</em>' reference.
+	 * @see #isSetIDETCSGefahrpunkt2()
+	 * @see #unsetIDETCSGefahrpunkt2()
+	 * @see #setIDETCSGefahrpunkt2(Markanter_Punkt)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_Signal_IDETCSGefahrpunkt2()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='element' name='ID_ETCS_Gefahrpunkt_2'"
+	 * @generated
+	 */
+	Markanter_Punkt getIDETCSGefahrpunkt2();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDETCSGefahrpunkt2 <em>IDETCS Gefahrpunkt2</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IDETCS Gefahrpunkt2</em>' reference.
+	 * @see #isSetIDETCSGefahrpunkt2()
+	 * @see #unsetIDETCSGefahrpunkt2()
+	 * @see #getIDETCSGefahrpunkt2()
+	 * @generated
+	 */
+	void setIDETCSGefahrpunkt2(Markanter_Punkt value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDETCSGefahrpunkt2 <em>IDETCS Gefahrpunkt2</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIDETCSGefahrpunkt2()
+	 * @see #getIDETCSGefahrpunkt2()
+	 * @see #setIDETCSGefahrpunkt2(Markanter_Punkt)
+	 * @generated
+	 */
+	void unsetIDETCSGefahrpunkt2();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal#getIDETCSGefahrpunkt2 <em>IDETCS Gefahrpunkt2</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>IDETCS Gefahrpunkt2</em>' reference is set.
+	 * @see #unsetIDETCSGefahrpunkt2()
+	 * @see #getIDETCSGefahrpunkt2()
+	 * @see #setIDETCSGefahrpunkt2(Markanter_Punkt)
+	 * @generated
+	 */
+	boolean isSetIDETCSGefahrpunkt2();
 
 	/**
 	 * Returns the value of the '<em><b>IDHOAFBOA</b></em>' reference.
@@ -220,12 +309,11 @@ public interface ETCS_Signal extends Basis_Objekt {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf das RBC, dem das Signal zugeordnet ist.
+	 * Verweis auf das RBC, dem das Signal zugeordnet ist. Die Angabe ist bei vereinfachter ETCS-Ausrüstung nicht erforderlich. Signale die keinem RBC zugeordnet sind (aber ein Ne 14 haben), bekommen in der MUKA Signale die Fußnote "Signal nicht in RBC-Anschaltung".
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>IDRBC</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getETCS_Signal_IDRBC()
-	 * @model required="true"
-	 *        extendedMetaData="kind='element' name='ID_RBC'"
+	 * @model extendedMetaData="kind='element' name='ID_RBC'"
 	 * @generated
 	 */
 	EList<RBC> getIDRBC();

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -12,10 +19,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bremsweg_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_ESG_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GESG_AttributeGroup;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individuell_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Verlinkt_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Lfd_Nr_Am_Bezugspunkt_TypeClass;
 
 /**
@@ -26,25 +32,14 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Lfd_Nr_Am_Bezugspunkt_Ty
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GESG_AttributeGroupImpl#getBremsweg <em>Bremsweg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GESG_AttributeGroupImpl#getDPTypESG <em>DP Typ ESG</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GESG_AttributeGroupImpl#getIndividuell <em>Individuell</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GESG_AttributeGroupImpl#getDPVerlinkt <em>DP Verlinkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.DP_Typ_GESG_AttributeGroupImpl#getLfdNrAmBezugspunkt <em>Lfd Nr Am Bezugspunkt</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container implements DP_Typ_GESG_AttributeGroup {
-	/**
-	 * The cached value of the '{@link #getBremsweg() <em>Bremsweg</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBremsweg()
-	 * @generated
-	 * @ordered
-	 */
-	protected Bremsweg_TypeClass bremsweg;
-
 	/**
 	 * The cached value of the '{@link #getDPTypESG() <em>DP Typ ESG</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -56,14 +51,14 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	protected DP_Typ_ESG_TypeClass dPTypESG;
 
 	/**
-	 * The cached value of the '{@link #getIndividuell() <em>Individuell</em>}' containment reference.
+	 * The cached value of the '{@link #getDPVerlinkt() <em>DP Verlinkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIndividuell()
+	 * @see #getDPVerlinkt()
 	 * @generated
 	 * @ordered
 	 */
-	protected Individuell_TypeClass individuell;
+	protected DP_Verlinkt_TypeClass dPVerlinkt;
 
 	/**
 	 * The cached value of the '{@link #getLfdNrAmBezugspunkt() <em>Lfd Nr Am Bezugspunkt</em>}' containment reference.
@@ -92,51 +87,6 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	protected EClass eStaticClass() {
 		return Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GESG_AttributeGroup();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Bremsweg_TypeClass getBremsweg() {
-		return bremsweg;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetBremsweg(Bremsweg_TypeClass newBremsweg, NotificationChain msgs) {
-		Bremsweg_TypeClass oldBremsweg = bremsweg;
-		bremsweg = newBremsweg;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG, oldBremsweg, newBremsweg);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setBremsweg(Bremsweg_TypeClass newBremsweg) {
-		if (newBremsweg != bremsweg) {
-			NotificationChain msgs = null;
-			if (bremsweg != null)
-				msgs = ((InternalEObject)bremsweg).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG, null, msgs);
-			if (newBremsweg != null)
-				msgs = ((InternalEObject)newBremsweg).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG, null, msgs);
-			msgs = basicSetBremsweg(newBremsweg, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG, newBremsweg, newBremsweg));
 	}
 
 	/**
@@ -190,8 +140,8 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Individuell_TypeClass getIndividuell() {
-		return individuell;
+	public DP_Verlinkt_TypeClass getDPVerlinkt() {
+		return dPVerlinkt;
 	}
 
 	/**
@@ -199,11 +149,11 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIndividuell(Individuell_TypeClass newIndividuell, NotificationChain msgs) {
-		Individuell_TypeClass oldIndividuell = individuell;
-		individuell = newIndividuell;
+	public NotificationChain basicSetDPVerlinkt(DP_Verlinkt_TypeClass newDPVerlinkt, NotificationChain msgs) {
+		DP_Verlinkt_TypeClass oldDPVerlinkt = dPVerlinkt;
+		dPVerlinkt = newDPVerlinkt;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL, oldIndividuell, newIndividuell);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT, oldDPVerlinkt, newDPVerlinkt);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -215,18 +165,18 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public void setIndividuell(Individuell_TypeClass newIndividuell) {
-		if (newIndividuell != individuell) {
+	public void setDPVerlinkt(DP_Verlinkt_TypeClass newDPVerlinkt) {
+		if (newDPVerlinkt != dPVerlinkt) {
 			NotificationChain msgs = null;
-			if (individuell != null)
-				msgs = ((InternalEObject)individuell).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL, null, msgs);
-			if (newIndividuell != null)
-				msgs = ((InternalEObject)newIndividuell).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL, null, msgs);
-			msgs = basicSetIndividuell(newIndividuell, msgs);
+			if (dPVerlinkt != null)
+				msgs = ((InternalEObject)dPVerlinkt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT, null, msgs);
+			if (newDPVerlinkt != null)
+				msgs = ((InternalEObject)newDPVerlinkt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT, null, msgs);
+			msgs = basicSetDPVerlinkt(newDPVerlinkt, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL, newIndividuell, newIndividuell));
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT, newDPVerlinkt, newDPVerlinkt));
 	}
 
 	/**
@@ -282,12 +232,10 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG:
-				return basicSetBremsweg(null, msgs);
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_TYP_ESG:
 				return basicSetDPTypESG(null, msgs);
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL:
-				return basicSetIndividuell(null, msgs);
+			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT:
+				return basicSetDPVerlinkt(null, msgs);
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__LFD_NR_AM_BEZUGSPUNKT:
 				return basicSetLfdNrAmBezugspunkt(null, msgs);
 			default:
@@ -303,12 +251,10 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG:
-				return getBremsweg();
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_TYP_ESG:
 				return getDPTypESG();
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL:
-				return getIndividuell();
+			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT:
+				return getDPVerlinkt();
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__LFD_NR_AM_BEZUGSPUNKT:
 				return getLfdNrAmBezugspunkt();
 			default:
@@ -324,14 +270,11 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG:
-				setBremsweg((Bremsweg_TypeClass)newValue);
-				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_TYP_ESG:
 				setDPTypESG((DP_Typ_ESG_TypeClass)newValue);
 				return;
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL:
-				setIndividuell((Individuell_TypeClass)newValue);
+			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT:
+				setDPVerlinkt((DP_Verlinkt_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__LFD_NR_AM_BEZUGSPUNKT:
 				setLfdNrAmBezugspunkt((Lfd_Nr_Am_Bezugspunkt_TypeClass)newValue);
@@ -350,14 +293,11 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG:
-				setBremsweg((Bremsweg_TypeClass)null);
-				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_TYP_ESG:
 				setDPTypESG((DP_Typ_ESG_TypeClass)null);
 				return;
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL:
-				setIndividuell((Individuell_TypeClass)null);
+			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT:
+				setDPVerlinkt((DP_Verlinkt_TypeClass)null);
 				return;
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__LFD_NR_AM_BEZUGSPUNKT:
 				setLfdNrAmBezugspunkt((Lfd_Nr_Am_Bezugspunkt_TypeClass)null);
@@ -376,12 +316,10 @@ public class DP_Typ_GESG_AttributeGroupImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__BREMSWEG:
-				return bremsweg != null;
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_TYP_ESG:
 				return dPTypESG != null;
-			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__INDIVIDUELL:
-				return individuell != null;
+			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__DP_VERLINKT:
+				return dPVerlinkt != null;
 			case Balisentechnik_ETCSPackage.DP_TYP_GESG_ATTRIBUTE_GROUP__LFD_NR_AM_BEZUGSPUNKT:
 				return lfdNrAmBezugspunkt != null;
 			default:

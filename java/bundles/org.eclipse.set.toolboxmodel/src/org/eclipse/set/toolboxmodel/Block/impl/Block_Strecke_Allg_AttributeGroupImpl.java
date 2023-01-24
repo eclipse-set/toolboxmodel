@@ -1,9 +1,20 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Block.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,13 +22,16 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.set.toolboxmodel.Block.Betriebsfuehrung_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.BlockPackage;
 import org.eclipse.set.toolboxmodel.Block.Block_Strecke_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Block.Bremsweg_TypeClass;
-import org.eclipse.set.toolboxmodel.Block.Entwurfsgeschwindigkeit_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Strecke_Art_TypeClass;
-import org.eclipse.set.toolboxmodel.Block.Traktion_Art_TypeClass;
+import org.eclipse.set.toolboxmodel.Block.Streckengeschwindigkeit_TypeClass;
+import org.eclipse.set.toolboxmodel.Block.Traktion_Art_Elektrisch_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Zugbeeinflussung_Art_TypeClass;
 import org.eclipse.set.toolboxmodel.Block.Zusatzinformation_TypeClass;
 
@@ -31,9 +45,9 @@ import org.eclipse.set.toolboxmodel.Block.Zusatzinformation_TypeClass;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getBetriebsfuehrung <em>Betriebsfuehrung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getBremsweg <em>Bremsweg</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getEntwurfsgeschwindigkeit <em>Entwurfsgeschwindigkeit</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getStreckeArt <em>Strecke Art</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getTraktionArt <em>Traktion Art</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getStreckengeschwindigkeit <em>Streckengeschwindigkeit</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getTraktionArtElektrisch <em>Traktion Art Elektrisch</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getZugbeeinflussungArt <em>Zugbeeinflussung Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Block.impl.Block_Strecke_Allg_AttributeGroupImpl#getZusatzinformation <em>Zusatzinformation</em>}</li>
  * </ul>
@@ -62,16 +76,6 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	protected Bremsweg_TypeClass bremsweg;
 
 	/**
-	 * The cached value of the '{@link #getEntwurfsgeschwindigkeit() <em>Entwurfsgeschwindigkeit</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEntwurfsgeschwindigkeit()
-	 * @generated
-	 * @ordered
-	 */
-	protected Entwurfsgeschwindigkeit_TypeClass entwurfsgeschwindigkeit;
-
-	/**
 	 * The cached value of the '{@link #getStreckeArt() <em>Strecke Art</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,24 +86,34 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	protected Strecke_Art_TypeClass streckeArt;
 
 	/**
-	 * The cached value of the '{@link #getTraktionArt() <em>Traktion Art</em>}' containment reference.
+	 * The cached value of the '{@link #getStreckengeschwindigkeit() <em>Streckengeschwindigkeit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTraktionArt()
+	 * @see #getStreckengeschwindigkeit()
 	 * @generated
 	 * @ordered
 	 */
-	protected Traktion_Art_TypeClass traktionArt;
+	protected Streckengeschwindigkeit_TypeClass streckengeschwindigkeit;
 
 	/**
-	 * The cached value of the '{@link #getZugbeeinflussungArt() <em>Zugbeeinflussung Art</em>}' containment reference.
+	 * The cached value of the '{@link #getTraktionArtElektrisch() <em>Traktion Art Elektrisch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTraktionArtElektrisch()
+	 * @generated
+	 * @ordered
+	 */
+	protected Traktion_Art_Elektrisch_TypeClass traktionArtElektrisch;
+
+	/**
+	 * The cached value of the '{@link #getZugbeeinflussungArt() <em>Zugbeeinflussung Art</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getZugbeeinflussungArt()
 	 * @generated
 	 * @ordered
 	 */
-	protected Zugbeeinflussung_Art_TypeClass zugbeeinflussungArt;
+	protected EList<Zugbeeinflussung_Art_TypeClass> zugbeeinflussungArt;
 
 	/**
 	 * The cached value of the '{@link #getZusatzinformation() <em>Zusatzinformation</em>}' containment reference.
@@ -226,51 +240,6 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * @generated
 	 */
 	@Override
-	public Entwurfsgeschwindigkeit_TypeClass getEntwurfsgeschwindigkeit() {
-		return entwurfsgeschwindigkeit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEntwurfsgeschwindigkeit(Entwurfsgeschwindigkeit_TypeClass newEntwurfsgeschwindigkeit, NotificationChain msgs) {
-		Entwurfsgeschwindigkeit_TypeClass oldEntwurfsgeschwindigkeit = entwurfsgeschwindigkeit;
-		entwurfsgeschwindigkeit = newEntwurfsgeschwindigkeit;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT, oldEntwurfsgeschwindigkeit, newEntwurfsgeschwindigkeit);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEntwurfsgeschwindigkeit(Entwurfsgeschwindigkeit_TypeClass newEntwurfsgeschwindigkeit) {
-		if (newEntwurfsgeschwindigkeit != entwurfsgeschwindigkeit) {
-			NotificationChain msgs = null;
-			if (entwurfsgeschwindigkeit != null)
-				msgs = ((InternalEObject)entwurfsgeschwindigkeit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT, null, msgs);
-			if (newEntwurfsgeschwindigkeit != null)
-				msgs = ((InternalEObject)newEntwurfsgeschwindigkeit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT, null, msgs);
-			msgs = basicSetEntwurfsgeschwindigkeit(newEntwurfsgeschwindigkeit, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT, newEntwurfsgeschwindigkeit, newEntwurfsgeschwindigkeit));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Strecke_Art_TypeClass getStreckeArt() {
 		return streckeArt;
 	}
@@ -316,8 +285,8 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * @generated
 	 */
 	@Override
-	public Traktion_Art_TypeClass getTraktionArt() {
-		return traktionArt;
+	public Streckengeschwindigkeit_TypeClass getStreckengeschwindigkeit() {
+		return streckengeschwindigkeit;
 	}
 
 	/**
@@ -325,11 +294,11 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTraktionArt(Traktion_Art_TypeClass newTraktionArt, NotificationChain msgs) {
-		Traktion_Art_TypeClass oldTraktionArt = traktionArt;
-		traktionArt = newTraktionArt;
+	public NotificationChain basicSetStreckengeschwindigkeit(Streckengeschwindigkeit_TypeClass newStreckengeschwindigkeit, NotificationChain msgs) {
+		Streckengeschwindigkeit_TypeClass oldStreckengeschwindigkeit = streckengeschwindigkeit;
+		streckengeschwindigkeit = newStreckengeschwindigkeit;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART, oldTraktionArt, newTraktionArt);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT, oldStreckengeschwindigkeit, newStreckengeschwindigkeit);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -341,18 +310,18 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * @generated
 	 */
 	@Override
-	public void setTraktionArt(Traktion_Art_TypeClass newTraktionArt) {
-		if (newTraktionArt != traktionArt) {
+	public void setStreckengeschwindigkeit(Streckengeschwindigkeit_TypeClass newStreckengeschwindigkeit) {
+		if (newStreckengeschwindigkeit != streckengeschwindigkeit) {
 			NotificationChain msgs = null;
-			if (traktionArt != null)
-				msgs = ((InternalEObject)traktionArt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART, null, msgs);
-			if (newTraktionArt != null)
-				msgs = ((InternalEObject)newTraktionArt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART, null, msgs);
-			msgs = basicSetTraktionArt(newTraktionArt, msgs);
+			if (streckengeschwindigkeit != null)
+				msgs = ((InternalEObject)streckengeschwindigkeit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT, null, msgs);
+			if (newStreckengeschwindigkeit != null)
+				msgs = ((InternalEObject)newStreckengeschwindigkeit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT, null, msgs);
+			msgs = basicSetStreckengeschwindigkeit(newStreckengeschwindigkeit, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART, newTraktionArt, newTraktionArt));
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT, newStreckengeschwindigkeit, newStreckengeschwindigkeit));
 	}
 
 	/**
@@ -361,43 +330,56 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * @generated
 	 */
 	@Override
-	public Zugbeeinflussung_Art_TypeClass getZugbeeinflussungArt() {
+	public Traktion_Art_Elektrisch_TypeClass getTraktionArtElektrisch() {
+		return traktionArtElektrisch;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTraktionArtElektrisch(Traktion_Art_Elektrisch_TypeClass newTraktionArtElektrisch, NotificationChain msgs) {
+		Traktion_Art_Elektrisch_TypeClass oldTraktionArtElektrisch = traktionArtElektrisch;
+		traktionArtElektrisch = newTraktionArtElektrisch;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH, oldTraktionArtElektrisch, newTraktionArtElektrisch);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTraktionArtElektrisch(Traktion_Art_Elektrisch_TypeClass newTraktionArtElektrisch) {
+		if (newTraktionArtElektrisch != traktionArtElektrisch) {
+			NotificationChain msgs = null;
+			if (traktionArtElektrisch != null)
+				msgs = ((InternalEObject)traktionArtElektrisch).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH, null, msgs);
+			if (newTraktionArtElektrisch != null)
+				msgs = ((InternalEObject)newTraktionArtElektrisch).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH, null, msgs);
+			msgs = basicSetTraktionArtElektrisch(newTraktionArtElektrisch, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH, newTraktionArtElektrisch, newTraktionArtElektrisch));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Zugbeeinflussung_Art_TypeClass> getZugbeeinflussungArt() {
+		if (zugbeeinflussungArt == null) {
+			zugbeeinflussungArt = new EObjectContainmentEList<Zugbeeinflussung_Art_TypeClass>(Zugbeeinflussung_Art_TypeClass.class, this, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART);
+		}
 		return zugbeeinflussungArt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetZugbeeinflussungArt(Zugbeeinflussung_Art_TypeClass newZugbeeinflussungArt, NotificationChain msgs) {
-		Zugbeeinflussung_Art_TypeClass oldZugbeeinflussungArt = zugbeeinflussungArt;
-		zugbeeinflussungArt = newZugbeeinflussungArt;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART, oldZugbeeinflussungArt, newZugbeeinflussungArt);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setZugbeeinflussungArt(Zugbeeinflussung_Art_TypeClass newZugbeeinflussungArt) {
-		if (newZugbeeinflussungArt != zugbeeinflussungArt) {
-			NotificationChain msgs = null;
-			if (zugbeeinflussungArt != null)
-				msgs = ((InternalEObject)zugbeeinflussungArt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART, null, msgs);
-			if (newZugbeeinflussungArt != null)
-				msgs = ((InternalEObject)newZugbeeinflussungArt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART, null, msgs);
-			msgs = basicSetZugbeeinflussungArt(newZugbeeinflussungArt, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART, newZugbeeinflussungArt, newZugbeeinflussungArt));
 	}
 
 	/**
@@ -457,14 +439,14 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 				return basicSetBetriebsfuehrung(null, msgs);
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG:
 				return basicSetBremsweg(null, msgs);
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT:
-				return basicSetEntwurfsgeschwindigkeit(null, msgs);
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART:
 				return basicSetStreckeArt(null, msgs);
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART:
-				return basicSetTraktionArt(null, msgs);
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT:
+				return basicSetStreckengeschwindigkeit(null, msgs);
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH:
+				return basicSetTraktionArtElektrisch(null, msgs);
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART:
-				return basicSetZugbeeinflussungArt(null, msgs);
+				return ((InternalEList<?>)getZugbeeinflussungArt()).basicRemove(otherEnd, msgs);
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION:
 				return basicSetZusatzinformation(null, msgs);
 			default:
@@ -484,12 +466,12 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 				return getBetriebsfuehrung();
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG:
 				return getBremsweg();
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT:
-				return getEntwurfsgeschwindigkeit();
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART:
 				return getStreckeArt();
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART:
-				return getTraktionArt();
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT:
+				return getStreckengeschwindigkeit();
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH:
+				return getTraktionArtElektrisch();
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART:
 				return getZugbeeinflussungArt();
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION:
@@ -504,6 +486,7 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -513,17 +496,18 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG:
 				setBremsweg((Bremsweg_TypeClass)newValue);
 				return;
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT:
-				setEntwurfsgeschwindigkeit((Entwurfsgeschwindigkeit_TypeClass)newValue);
-				return;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART:
 				setStreckeArt((Strecke_Art_TypeClass)newValue);
 				return;
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART:
-				setTraktionArt((Traktion_Art_TypeClass)newValue);
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT:
+				setStreckengeschwindigkeit((Streckengeschwindigkeit_TypeClass)newValue);
+				return;
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH:
+				setTraktionArtElektrisch((Traktion_Art_Elektrisch_TypeClass)newValue);
 				return;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART:
-				setZugbeeinflussungArt((Zugbeeinflussung_Art_TypeClass)newValue);
+				getZugbeeinflussungArt().clear();
+				getZugbeeinflussungArt().addAll((Collection<? extends Zugbeeinflussung_Art_TypeClass>)newValue);
 				return;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION:
 				setZusatzinformation((Zusatzinformation_TypeClass)newValue);
@@ -548,17 +532,17 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG:
 				setBremsweg((Bremsweg_TypeClass)null);
 				return;
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT:
-				setEntwurfsgeschwindigkeit((Entwurfsgeschwindigkeit_TypeClass)null);
-				return;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART:
 				setStreckeArt((Strecke_Art_TypeClass)null);
 				return;
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART:
-				setTraktionArt((Traktion_Art_TypeClass)null);
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT:
+				setStreckengeschwindigkeit((Streckengeschwindigkeit_TypeClass)null);
+				return;
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH:
+				setTraktionArtElektrisch((Traktion_Art_Elektrisch_TypeClass)null);
 				return;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART:
-				setZugbeeinflussungArt((Zugbeeinflussung_Art_TypeClass)null);
+				getZugbeeinflussungArt().clear();
 				return;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION:
 				setZusatzinformation((Zusatzinformation_TypeClass)null);
@@ -581,14 +565,14 @@ public class Block_Strecke_Allg_AttributeGroupImpl extends MinimalEObjectImpl.Co
 				return betriebsfuehrung != null;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__BREMSWEG:
 				return bremsweg != null;
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ENTWURFSGESCHWINDIGKEIT:
-				return entwurfsgeschwindigkeit != null;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKE_ART:
 				return streckeArt != null;
-			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART:
-				return traktionArt != null;
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__STRECKENGESCHWINDIGKEIT:
+				return streckengeschwindigkeit != null;
+			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__TRAKTION_ART_ELEKTRISCH:
+				return traktionArtElektrisch != null;
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUGBEEINFLUSSUNG_ART:
-				return zugbeeinflussungArt != null;
+				return zugbeeinflussungArt != null && !zugbeeinflussungArt.isEmpty();
 			case BlockPackage.BLOCK_STRECKE_ALLG_ATTRIBUTE_GROUP__ZUSATZINFORMATION:
 				return zusatzinformation != null;
 			default:

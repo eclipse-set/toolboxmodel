@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,7 +17,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -22,12 +28,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Grenze_Bereich_C_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
-import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_SRS_TypeClass;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_System_Version_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bgrenze_Nach_L2_Bed_Einstieg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Einstieg_Ohne_Rueckw_Sig_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Prioritaet_TypeClass;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_AttributeGroup;
+import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup;
+
 import org.eclipse.set.toolboxmodel.Signale.Signal;
 
 /**
@@ -39,12 +47,13 @@ import org.eclipse.set.toolboxmodel.Signale.Signal;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getAbstandGrenzeBereichC <em>Abstand Grenze Bereich C</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getBaselineSRS <em>Baseline SRS</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getBaselineSystemVersion <em>Baseline System Version</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getBgrenzeNachL2BedEinstieg <em>Bgrenze Nach L2 Bed Einstieg</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getEinstiegOhneRueckwSig <em>Einstieg Ohne Rueckw Sig</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getIDRBCNachGrenze <em>IDRBC Nach Grenze</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getIDSignalZufahrtsicherungL2oS <em>ID Signal Zufahrtsicherung L2o S</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getPrioritaet <em>Prioritaet</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl#getZUBBereichsgrenzeNachL2VonESG <em>ZUB Bereichsgrenze Nach L2 Von ESG</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,14 +70,14 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 	protected Abstand_Grenze_Bereich_C_TypeClass abstandGrenzeBereichC;
 
 	/**
-	 * The cached value of the '{@link #getBaselineSRS() <em>Baseline SRS</em>}' containment reference.
+	 * The cached value of the '{@link #getBaselineSystemVersion() <em>Baseline System Version</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBaselineSRS()
+	 * @see #getBaselineSystemVersion()
 	 * @generated
 	 * @ordered
 	 */
-	protected Baseline_SRS_TypeClass baselineSRS;
+	protected Baseline_System_Version_TypeClass baselineSystemVersion;
 
 	/**
 	 * The cached value of the '{@link #getBgrenzeNachL2BedEinstieg() <em>Bgrenze Nach L2 Bed Einstieg</em>}' containment reference list.
@@ -128,6 +137,16 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 	 * @ordered
 	 */
 	protected Prioritaet_TypeClass prioritaet;
+
+	/**
+	 * The cached value of the '{@link #getZUBBereichsgrenzeNachL2VonESG() <em>ZUB Bereichsgrenze Nach L2 Von ESG</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZUBBereichsgrenzeNachL2VonESG()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup> zUBBereichsgrenzeNachL2VonESG;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,8 +218,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 	 * @generated
 	 */
 	@Override
-	public Baseline_SRS_TypeClass getBaselineSRS() {
-		return baselineSRS;
+	public Baseline_System_Version_TypeClass getBaselineSystemVersion() {
+		return baselineSystemVersion;
 	}
 
 	/**
@@ -208,11 +227,11 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBaselineSRS(Baseline_SRS_TypeClass newBaselineSRS, NotificationChain msgs) {
-		Baseline_SRS_TypeClass oldBaselineSRS = baselineSRS;
-		baselineSRS = newBaselineSRS;
+	public NotificationChain basicSetBaselineSystemVersion(Baseline_System_Version_TypeClass newBaselineSystemVersion, NotificationChain msgs) {
+		Baseline_System_Version_TypeClass oldBaselineSystemVersion = baselineSystemVersion;
+		baselineSystemVersion = newBaselineSystemVersion;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS, oldBaselineSRS, newBaselineSRS);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, oldBaselineSystemVersion, newBaselineSystemVersion);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -224,18 +243,18 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 	 * @generated
 	 */
 	@Override
-	public void setBaselineSRS(Baseline_SRS_TypeClass newBaselineSRS) {
-		if (newBaselineSRS != baselineSRS) {
+	public void setBaselineSystemVersion(Baseline_System_Version_TypeClass newBaselineSystemVersion) {
+		if (newBaselineSystemVersion != baselineSystemVersion) {
 			NotificationChain msgs = null;
-			if (baselineSRS != null)
-				msgs = ((InternalEObject)baselineSRS).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS, null, msgs);
-			if (newBaselineSRS != null)
-				msgs = ((InternalEObject)newBaselineSRS).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS, null, msgs);
-			msgs = basicSetBaselineSRS(newBaselineSRS, msgs);
+			if (baselineSystemVersion != null)
+				msgs = ((InternalEObject)baselineSystemVersion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, null, msgs);
+			if (newBaselineSystemVersion != null)
+				msgs = ((InternalEObject)newBaselineSystemVersion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, null, msgs);
+			msgs = basicSetBaselineSystemVersion(newBaselineSystemVersion, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS, newBaselineSRS, newBaselineSRS));
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION, newBaselineSystemVersion, newBaselineSystemVersion));
 	}
 
 	/**
@@ -427,18 +446,33 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 	 * @generated
 	 */
 	@Override
+	public EList<ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup> getZUBBereichsgrenzeNachL2VonESG() {
+		if (zUBBereichsgrenzeNachL2VonESG == null) {
+			zUBBereichsgrenzeNachL2VonESG = new EObjectContainmentEList<ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup>(ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup.class, this, Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG);
+		}
+		return zUBBereichsgrenzeNachL2VonESG;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ABSTAND_GRENZE_BEREICH_C:
 				return basicSetAbstandGrenzeBereichC(null, msgs);
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS:
-				return basicSetBaselineSRS(null, msgs);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				return basicSetBaselineSystemVersion(null, msgs);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BGRENZE_NACH_L2_BED_EINSTIEG:
 				return ((InternalEList<?>)getBgrenzeNachL2BedEinstieg()).basicRemove(otherEnd, msgs);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__EINSTIEG_OHNE_RUECKW_SIG:
 				return basicSetEinstiegOhneRueckwSig(null, msgs);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__PRIORITAET:
 				return basicSetPrioritaet(null, msgs);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG:
+				return ((InternalEList<?>)getZUBBereichsgrenzeNachL2VonESG()).basicRemove(otherEnd, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -454,8 +488,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ABSTAND_GRENZE_BEREICH_C:
 				return getAbstandGrenzeBereichC();
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS:
-				return getBaselineSRS();
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				return getBaselineSystemVersion();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BGRENZE_NACH_L2_BED_EINSTIEG:
 				return getBgrenzeNachL2BedEinstieg();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__EINSTIEG_OHNE_RUECKW_SIG:
@@ -467,6 +501,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 				return getIDSignalZufahrtsicherungL2oS();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__PRIORITAET:
 				return getPrioritaet();
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG:
+				return getZUBBereichsgrenzeNachL2VonESG();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -484,8 +520,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ABSTAND_GRENZE_BEREICH_C:
 				setAbstandGrenzeBereichC((Abstand_Grenze_Bereich_C_TypeClass)newValue);
 				return;
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS:
-				setBaselineSRS((Baseline_SRS_TypeClass)newValue);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				setBaselineSystemVersion((Baseline_System_Version_TypeClass)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BGRENZE_NACH_L2_BED_EINSTIEG:
 				getBgrenzeNachL2BedEinstieg().clear();
@@ -504,6 +540,10 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__PRIORITAET:
 				setPrioritaet((Prioritaet_TypeClass)newValue);
 				return;
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG:
+				getZUBBereichsgrenzeNachL2VonESG().clear();
+				getZUBBereichsgrenzeNachL2VonESG().addAll((Collection<? extends ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup>)newValue);
+				return;
 			default:
 				super.eSet(featureID, newValue);
 				return;
@@ -521,8 +561,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ABSTAND_GRENZE_BEREICH_C:
 				setAbstandGrenzeBereichC((Abstand_Grenze_Bereich_C_TypeClass)null);
 				return;
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS:
-				setBaselineSRS((Baseline_SRS_TypeClass)null);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				setBaselineSystemVersion((Baseline_System_Version_TypeClass)null);
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BGRENZE_NACH_L2_BED_EINSTIEG:
 				getBgrenzeNachL2BedEinstieg().clear();
@@ -538,6 +578,9 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 				return;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__PRIORITAET:
 				setPrioritaet((Prioritaet_TypeClass)null);
+				return;
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG:
+				getZUBBereichsgrenzeNachL2VonESG().clear();
 				return;
 			default:
 				super.eUnset(featureID);
@@ -555,8 +598,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 		switch (featureID) {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ABSTAND_GRENZE_BEREICH_C:
 				return abstandGrenzeBereichC != null;
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SRS:
-				return baselineSRS != null;
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BASELINE_SYSTEM_VERSION:
+				return baselineSystemVersion != null;
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__BGRENZE_NACH_L2_BED_EINSTIEG:
 				return bgrenzeNachL2BedEinstieg != null && !bgrenzeNachL2BedEinstieg.isEmpty();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__EINSTIEG_OHNE_RUECKW_SIG:
@@ -567,6 +610,8 @@ public class ZUB_Bereichsgrenze_Nach_L2_AttributeGroupImpl extends MinimalEObjec
 				return iDSignalZufahrtsicherungL2oS != null && !iDSignalZufahrtsicherungL2oS.isEmpty();
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__PRIORITAET:
 				return prioritaet != null;
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP__ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG:
+				return zUBBereichsgrenzeNachL2VonESG != null && !zUBBereichsgrenzeNachL2VonESG.isEmpty();
 			default:
 				return super.eIsSet(featureID);
 		}

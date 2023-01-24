@@ -104,6 +104,7 @@ public class PlanProFactoryImpl extends EFactoryImpl implements PlanProFactory {
 			case PlanProPackage.ORGANISATION: return createOrganisation();
 			case PlanProPackage.ORGANISATIONSEINHEIT_TYPE_CLASS: return createOrganisationseinheit_TypeClass();
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE: return createPlanPro_Schnittstelle();
+			case PlanProPackage.WZK_INVALID_ID_REFERENCE: return createWzkInvalidIDReference();
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE_ALLG_ATTRIBUTE_GROUP: return createPlanPro_Schnittstelle_Allg_AttributeGroup();
 			case PlanProPackage.PLAN_PRO_XSD_VERSION_TYPE_CLASS: return createPlanPro_XSD_Version_TypeClass();
 			case PlanProPackage.PLANUNG_EALLG_ATTRIBUTE_GROUP: return createPlanung_E_Allg_AttributeGroup();
@@ -837,6 +838,17 @@ public class PlanProFactoryImpl extends EFactoryImpl implements PlanProFactory {
 	public PlanPro_Schnittstelle createPlanPro_Schnittstelle() {
 		PlanPro_SchnittstelleImpl planPro_Schnittstelle = new PlanPro_SchnittstelleImpl();
 		return planPro_Schnittstelle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public WzkInvalidIDReference createWzkInvalidIDReference() {
+		WzkInvalidIDReferenceImpl wzkInvalidIDReference = new WzkInvalidIDReferenceImpl();
+		return wzkInvalidIDReference;
 	}
 
 	/**

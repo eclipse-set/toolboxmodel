@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.util;
 
@@ -73,10 +80,52 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case Balisentechnik_ETCSPackage.ABSTAND_BES_LANGER_EINFAHRWEG_TYPE_CLASS: {
+				Abstand_Bes_Langer_Einfahrweg_TypeClass abstand_Bes_Langer_Einfahrweg_TypeClass = (Abstand_Bes_Langer_Einfahrweg_TypeClass)theEObject;
+				T result = caseAbstand_Bes_Langer_Einfahrweg_TypeClass(abstand_Bes_Langer_Einfahrweg_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(abstand_Bes_Langer_Einfahrweg_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EH_EM_FOLGESIGNAL_TYPE_CLASS: {
+				Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass = (Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass)theEObject;
+				T result = caseAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass(abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EP_TPI_TYPE_CLASS: {
+				Abstand_Datenpunkt_EP_TPI_TypeClass abstand_Datenpunkt_EP_TPI_TypeClass = (Abstand_Datenpunkt_EP_TPI_TypeClass)theEObject;
+				T result = caseAbstand_Datenpunkt_EP_TPI_TypeClass(abstand_Datenpunkt_EP_TPI_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(abstand_Datenpunkt_EP_TPI_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_TPI_FOLGESIGNAL_TYPE_CLASS: {
+				Abstand_Datenpunkt_TPI_Folgesignal_TypeClass abstand_Datenpunkt_TPI_Folgesignal_TypeClass = (Abstand_Datenpunkt_TPI_Folgesignal_TypeClass)theEObject;
+				T result = caseAbstand_Datenpunkt_TPI_Folgesignal_TypeClass(abstand_Datenpunkt_TPI_Folgesignal_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(abstand_Datenpunkt_TPI_Folgesignal_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ABSTAND_EINMESSPUNKT_TYPE_CLASS: {
+				Abstand_Einmesspunkt_TypeClass abstand_Einmesspunkt_TypeClass = (Abstand_Einmesspunkt_TypeClass)theEObject;
+				T result = caseAbstand_Einmesspunkt_TypeClass(abstand_Einmesspunkt_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(abstand_Einmesspunkt_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.ABSTAND_GRENZE_BEREICH_CTYPE_CLASS: {
 				Abstand_Grenze_Bereich_C_TypeClass abstand_Grenze_Bereich_C_TypeClass = (Abstand_Grenze_Bereich_C_TypeClass)theEObject;
 				T result = caseAbstand_Grenze_Bereich_C_TypeClass(abstand_Grenze_Bereich_C_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(abstand_Grenze_Bereich_C_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ABSTAND_REDUZIERT_TYPE_CLASS: {
+				Abstand_Reduziert_TypeClass abstand_Reduziert_TypeClass = (Abstand_Reduziert_TypeClass)theEObject;
+				T result = caseAbstand_Reduziert_TypeClass(abstand_Reduziert_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(abstand_Reduziert_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,6 +140,20 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				Anordnung_Im_DP_TypeClass anordnung_Im_DP_TypeClass = (Anordnung_Im_DP_TypeClass)theEObject;
 				T result = caseAnordnung_Im_DP_TypeClass(anordnung_Im_DP_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(anordnung_Im_DP_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ANWENDUNG_ESG_TYPE_CLASS: {
+				Anwendung_ESG_TypeClass anwendung_ESG_TypeClass = (Anwendung_ESG_TypeClass)theEObject;
+				T result = caseAnwendung_ESG_TypeClass(anwendung_ESG_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(anwendung_ESG_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ANWENDUNG_GNT_TYPE_CLASS: {
+				Anwendung_GNT_TypeClass anwendung_GNT_TypeClass = (Anwendung_GNT_TypeClass)theEObject;
+				T result = caseAnwendung_GNT_TypeClass(anwendung_GNT_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(anwendung_GNT_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,10 +227,24 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.BASELINE_SRS_TYPE_CLASS: {
-				Baseline_SRS_TypeClass baseline_SRS_TypeClass = (Baseline_SRS_TypeClass)theEObject;
-				T result = caseBaseline_SRS_TypeClass(baseline_SRS_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(baseline_SRS_TypeClass);
+			case Balisentechnik_ETCSPackage.BALISE_GERAETESTAND_TYPE_CLASS: {
+				Balise_Geraetestand_TypeClass balise_Geraetestand_TypeClass = (Balise_Geraetestand_TypeClass)theEObject;
+				T result = caseBalise_Geraetestand_TypeClass(balise_Geraetestand_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(balise_Geraetestand_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.BALISENHALTER_TYPE_CLASS: {
+				Balisenhalter_TypeClass balisenhalter_TypeClass = (Balisenhalter_TypeClass)theEObject;
+				T result = caseBalisenhalter_TypeClass(balisenhalter_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(balisenhalter_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.BASELINE_SYSTEM_VERSION_TYPE_CLASS: {
+				Baseline_System_Version_TypeClass baseline_System_Version_TypeClass = (Baseline_System_Version_TypeClass)theEObject;
+				T result = caseBaseline_System_Version_TypeClass(baseline_System_Version_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(baseline_System_Version_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -294,30 +371,29 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.BGRENZE_NACH_ZBS_BED_EINSTIEG_ATTRIBUTE_GROUP: {
+				Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup = (Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup)theEObject;
+				T result = caseBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup(bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.BGRENZE_RBC_WECHSEL_BTS_KETTE_ATTRIBUTE_GROUP: {
 				Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup = (Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup)theEObject;
 				T result = caseBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup(bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.BINAERDATEI: {
-				Binaerdatei binaerdatei = (Binaerdatei)theEObject;
-				T result = caseBinaerdatei(binaerdatei);
-				if (result == null) result = caseBasis_Objekt(binaerdatei);
-				if (result == null) result = caseUr_Objekt(binaerdatei);
+			case Balisentechnik_ETCSPackage.BINAERDATEN: {
+				Binaerdaten binaerdaten = (Binaerdaten)theEObject;
+				T result = caseBinaerdaten(binaerdaten);
+				if (result == null) result = caseBasis_Objekt(binaerdaten);
+				if (result == null) result = caseUr_Objekt(binaerdaten);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.BINAERDATEI_ALLG_ATTRIBUTE_GROUP: {
-				Binaerdatei_Allg_AttributeGroup binaerdatei_Allg_AttributeGroup = (Binaerdatei_Allg_AttributeGroup)theEObject;
-				T result = caseBinaerdatei_Allg_AttributeGroup(binaerdatei_Allg_AttributeGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Balisentechnik_ETCSPackage.BREMSWEG_TYPE_CLASS: {
-				Bremsweg_TypeClass bremsweg_TypeClass = (Bremsweg_TypeClass)theEObject;
-				T result = caseBremsweg_TypeClass(bremsweg_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(bremsweg_TypeClass);
+			case Balisentechnik_ETCSPackage.BINAERDATEN_DATEI_ATTRIBUTE_GROUP: {
+				Binaerdaten_Datei_AttributeGroup binaerdaten_Datei_AttributeGroup = (Binaerdaten_Datei_AttributeGroup)theEObject;
+				T result = caseBinaerdaten_Datei_AttributeGroup(binaerdaten_Datei_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -371,6 +447,12 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.DATENPUNKT_EINMESSPUNKT_ATTRIBUTE_GROUP: {
+				Datenpunkt_Einmesspunkt_AttributeGroup datenpunkt_Einmesspunkt_AttributeGroup = (Datenpunkt_Einmesspunkt_AttributeGroup)theEObject;
+				T result = caseDatenpunkt_Einmesspunkt_AttributeGroup(datenpunkt_Einmesspunkt_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LAENGE_TYPE_CLASS: {
 				Datenpunkt_Laenge_TypeClass datenpunkt_Laenge_TypeClass = (Datenpunkt_Laenge_TypeClass)theEObject;
 				T result = caseDatenpunkt_Laenge_TypeClass(datenpunkt_Laenge_TypeClass);
@@ -407,16 +489,23 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.DP_BEZUG_BETRIEBLICH_ART_TYPE_CLASS: {
-				DP_Bezug_Betrieblich_Art_TypeClass dP_Bezug_Betrieblich_Art_TypeClass = (DP_Bezug_Betrieblich_Art_TypeClass)theEObject;
-				T result = caseDP_Bezug_Betrieblich_Art_TypeClass(dP_Bezug_Betrieblich_Art_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(dP_Bezug_Betrieblich_Art_TypeClass);
+			case Balisentechnik_ETCSPackage.DP_ATO_TYPE_CLASS: {
+				DP_ATO_TypeClass dP_ATO_TypeClass = (DP_ATO_TypeClass)theEObject;
+				T result = caseDP_ATO_TypeClass(dP_ATO_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(dP_ATO_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.DP_BEZUG_BETRIEBLICH_ATTRIBUTE_GROUP: {
-				DP_Bezug_Betrieblich_AttributeGroup dP_Bezug_Betrieblich_AttributeGroup = (DP_Bezug_Betrieblich_AttributeGroup)theEObject;
-				T result = caseDP_Bezug_Betrieblich_AttributeGroup(dP_Bezug_Betrieblich_AttributeGroup);
+			case Balisentechnik_ETCSPackage.DP_BEZUG_FUNKTIONAL_ART_TYPE_CLASS: {
+				DP_Bezug_Funktional_Art_TypeClass dP_Bezug_Funktional_Art_TypeClass = (DP_Bezug_Funktional_Art_TypeClass)theEObject;
+				T result = caseDP_Bezug_Funktional_Art_TypeClass(dP_Bezug_Funktional_Art_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(dP_Bezug_Funktional_Art_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.DP_BEZUG_FUNKTIONAL_ATTRIBUTE_GROUP: {
+				DP_Bezug_Funktional_AttributeGroup dP_Bezug_Funktional_AttributeGroup = (DP_Bezug_Funktional_AttributeGroup)theEObject;
+				T result = caseDP_Bezug_Funktional_AttributeGroup(dP_Bezug_Funktional_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -543,6 +632,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.DP_VERLINKT_TYPE_CLASS: {
+				DP_Verlinkt_TypeClass dP_Verlinkt_TypeClass = (DP_Verlinkt_TypeClass)theEObject;
+				T result = caseDP_Verlinkt_TypeClass(dP_Verlinkt_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(dP_Verlinkt_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.DUNKELSCHALTANSTOSS_TYPE_CLASS: {
 				Dunkelschaltanstoss_TypeClass dunkelschaltanstoss_TypeClass = (Dunkelschaltanstoss_TypeClass)theEObject;
 				T result = caseDunkelschaltanstoss_TypeClass(dunkelschaltanstoss_TypeClass);
@@ -645,24 +741,10 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_KENNUNG_TYPE_CLASS: {
-				ETCS_Adresse_Kennung_TypeClass etcS_Adresse_Kennung_TypeClass = (ETCS_Adresse_Kennung_TypeClass)theEObject;
-				T result = caseETCS_Adresse_Kennung_TypeClass(etcS_Adresse_Kennung_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(etcS_Adresse_Kennung_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_BG_TYPE_CLASS: {
-				ETCS_Adresse_NID_BG_TypeClass etcS_Adresse_NID_BG_TypeClass = (ETCS_Adresse_NID_BG_TypeClass)theEObject;
-				T result = caseETCS_Adresse_NID_BG_TypeClass(etcS_Adresse_NID_BG_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(etcS_Adresse_NID_BG_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_CTYPE_CLASS: {
-				ETCS_Adresse_NID_C_TypeClass etcS_Adresse_NID_C_TypeClass = (ETCS_Adresse_NID_C_TypeClass)theEObject;
-				T result = caseETCS_Adresse_NID_C_TypeClass(etcS_Adresse_NID_C_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(etcS_Adresse_NID_C_TypeClass);
+			case Balisentechnik_ETCSPackage.ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND_TYPE_CLASS: {
+				ETCS_Gefahrpunktabstand_Abweichend_TypeClass etcS_Gefahrpunktabstand_Abweichend_TypeClass = (ETCS_Gefahrpunktabstand_Abweichend_TypeClass)theEObject;
+				T result = caseETCS_Gefahrpunktabstand_Abweichend_TypeClass(etcS_Gefahrpunktabstand_Abweichend_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(etcS_Gefahrpunktabstand_Abweichend_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -677,13 +759,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 			case Balisentechnik_ETCSPackage.ETCS_KANTE_BEZEICHNUNG_ATTRIBUTE_GROUP: {
 				ETCS_Kante_Bezeichnung_AttributeGroup etcS_Kante_Bezeichnung_AttributeGroup = (ETCS_Kante_Bezeichnung_AttributeGroup)theEObject;
 				T result = caseETCS_Kante_Bezeichnung_AttributeGroup(etcS_Kante_Bezeichnung_AttributeGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Balisentechnik_ETCSPackage.ETCS_KENNUNG_TYPE_CLASS: {
-				ETCS_Kennung_TypeClass etcS_Kennung_TypeClass = (ETCS_Kennung_TypeClass)theEObject;
-				T result = caseETCS_Kennung_TypeClass(etcS_Kennung_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(etcS_Kennung_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -730,6 +805,14 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.ETCS_RICHTUNGSANZEIGE: {
+				ETCS_Richtungsanzeige etcS_Richtungsanzeige = (ETCS_Richtungsanzeige)theEObject;
+				T result = caseETCS_Richtungsanzeige(etcS_Richtungsanzeige);
+				if (result == null) result = caseBasis_Objekt(etcS_Richtungsanzeige);
+				if (result == null) result = caseUr_Objekt(etcS_Richtungsanzeige);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL: {
 				ETCS_Signal etcS_Signal = (ETCS_Signal)theEObject;
 				T result = caseETCS_Signal(etcS_Signal);
@@ -756,6 +839,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.ETCS_SYSTEM_VERSION_TYPE_CLASS: {
+				ETCS_System_Version_TypeClass etcS_System_Version_TypeClass = (ETCS_System_Version_TypeClass)theEObject;
+				T result = caseETCS_System_Version_TypeClass(etcS_System_Version_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(etcS_System_Version_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.ETCS_WKR: {
 				ETCS_W_Kr etcS_W_Kr = (ETCS_W_Kr)theEObject;
 				T result = caseETCS_W_Kr(etcS_W_Kr);
@@ -767,13 +857,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 			case Balisentechnik_ETCSPackage.ETCS_WKR_MUKA_ATTRIBUTE_GROUP: {
 				ETCS_W_Kr_MUKA_AttributeGroup etcS_W_Kr_MUKA_AttributeGroup = (ETCS_W_Kr_MUKA_AttributeGroup)theEObject;
 				T result = caseETCS_W_Kr_MUKA_AttributeGroup(etcS_W_Kr_MUKA_AttributeGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Balisentechnik_ETCSPackage.ETCS_WORTSGESTELLT_TYPE_CLASS: {
-				ETCS_W_Ortsgestellt_TypeClass etcS_W_Ortsgestellt_TypeClass = (ETCS_W_Ortsgestellt_TypeClass)theEObject;
-				T result = caseETCS_W_Ortsgestellt_TypeClass(etcS_W_Ortsgestellt_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(etcS_W_Ortsgestellt_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -956,9 +1039,10 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.GNT_MERKMALE_ATTRIBUTE_GROUP: {
-				GNT_Merkmale_AttributeGroup gnT_Merkmale_AttributeGroup = (GNT_Merkmale_AttributeGroup)theEObject;
-				T result = caseGNT_Merkmale_AttributeGroup(gnT_Merkmale_AttributeGroup);
+			case Balisentechnik_ETCSPackage.FW_TEIL_NUMMER_TYPE_CLASS: {
+				FW_Teil_Nummer_TypeClass fW_Teil_Nummer_TypeClass = (FW_Teil_Nummer_TypeClass)theEObject;
+				T result = caseFW_Teil_Nummer_TypeClass(fW_Teil_Nummer_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(fW_Teil_Nummer_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -990,10 +1074,10 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.INDIVIDUELL_TYPE_CLASS: {
-				Individuell_TypeClass individuell_TypeClass = (Individuell_TypeClass)theEObject;
-				T result = caseIndividuell_TypeClass(individuell_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(individuell_TypeClass);
+			case Balisentechnik_ETCSPackage.INDIVIDUALISIERUNG_WEITERE_TYPE_CLASS: {
+				Individualisierung_Weitere_TypeClass individualisierung_Weitere_TypeClass = (Individualisierung_Weitere_TypeClass)theEObject;
+				T result = caseIndividualisierung_Weitere_TypeClass(individualisierung_Weitere_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(individualisierung_Weitere_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1059,6 +1143,27 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.LAENGE_GESTUFTE_VSIGNALISIERUNG_TYPE_CLASS: {
+				Laenge_Gestufte_V_Signalisierung_TypeClass laenge_Gestufte_V_Signalisierung_TypeClass = (Laenge_Gestufte_V_Signalisierung_TypeClass)theEObject;
+				T result = caseLaenge_Gestufte_V_Signalisierung_TypeClass(laenge_Gestufte_V_Signalisierung_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(laenge_Gestufte_V_Signalisierung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.LAENGE_SOLL_MIND_150_TYPE_CLASS: {
+				Laenge_Soll_Mind_150_TypeClass laenge_Soll_Mind_150_TypeClass = (Laenge_Soll_Mind_150_TypeClass)theEObject;
+				T result = caseLaenge_Soll_Mind_150_TypeClass(laenge_Soll_Mind_150_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(laenge_Soll_Mind_150_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.LEISTUNGSBEDARF_TYPE_CLASS: {
+				Leistungsbedarf_TypeClass leistungsbedarf_TypeClass = (Leistungsbedarf_TypeClass)theEObject;
+				T result = caseLeistungsbedarf_TypeClass(leistungsbedarf_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(leistungsbedarf_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE: {
 				LEU_Anlage leU_Anlage = (LEU_Anlage)theEObject;
 				T result = caseLEU_Anlage(leU_Anlage);
@@ -1067,15 +1172,22 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP: {
-				LEU_Anlage_Bezeichnung_AttributeGroup leU_Anlage_Bezeichnung_AttributeGroup = (LEU_Anlage_Bezeichnung_AttributeGroup)theEObject;
-				T result = caseLEU_Anlage_Bezeichnung_AttributeGroup(leU_Anlage_Bezeichnung_AttributeGroup);
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE_ALLG_ATTRIBUTE_GROUP: {
+				LEU_Anlage_Allg_AttributeGroup leU_Anlage_Allg_AttributeGroup = (LEU_Anlage_Allg_AttributeGroup)theEObject;
+				T result = caseLEU_Anlage_Allg_AttributeGroup(leU_Anlage_Allg_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE_MODULEIGENSCHAFTEN_ATTRIBUTE_GROUP: {
-				LEU_Anlage_Moduleigenschaften_AttributeGroup leU_Anlage_Moduleigenschaften_AttributeGroup = (LEU_Anlage_Moduleigenschaften_AttributeGroup)theEObject;
-				T result = caseLEU_Anlage_Moduleigenschaften_AttributeGroup(leU_Anlage_Moduleigenschaften_AttributeGroup);
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE_ART_TYPE_CLASS: {
+				LEU_Anlage_Art_TypeClass leU_Anlage_Art_TypeClass = (LEU_Anlage_Art_TypeClass)theEObject;
+				T result = caseLEU_Anlage_Art_TypeClass(leU_Anlage_Art_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(leU_Anlage_Art_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP: {
+				LEU_Anlage_Bezeichnung_AttributeGroup leU_Anlage_Bezeichnung_AttributeGroup = (LEU_Anlage_Bezeichnung_AttributeGroup)theEObject;
+				T result = caseLEU_Anlage_Bezeichnung_AttributeGroup(leU_Anlage_Bezeichnung_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1116,6 +1228,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 			case Balisentechnik_ETCSPackage.LEU_MODUL_BEZEICHNUNG_ATTRIBUTE_GROUP: {
 				LEU_Modul_Bezeichnung_AttributeGroup leU_Modul_Bezeichnung_AttributeGroup = (LEU_Modul_Bezeichnung_AttributeGroup)theEObject;
 				T result = caseLEU_Modul_Bezeichnung_AttributeGroup(leU_Modul_Bezeichnung_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.LEU_MODUL_GERAETESTAND_TYPE_CLASS: {
+				LEU_Modul_Geraetestand_TypeClass leU_Modul_Geraetestand_TypeClass = (LEU_Modul_Geraetestand_TypeClass)theEObject;
+				T result = caseLEU_Modul_Geraetestand_TypeClass(leU_Modul_Geraetestand_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(leU_Modul_Geraetestand_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1172,13 +1291,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.LFD_NR_IN_TELEGR_SPEC_TYPE_CLASS: {
-				LfdNr_in_Telegr_Spec_TypeClass lfdNr_in_Telegr_Spec_TypeClass = (LfdNr_in_Telegr_Spec_TypeClass)theEObject;
-				T result = caseLfdNr_in_Telegr_Spec_TypeClass(lfdNr_in_Telegr_Spec_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(lfdNr_in_Telegr_Spec_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Balisentechnik_ETCSPackage.LINK_DISTANZ_TYPE_CLASS: {
 				Link_Distanz_TypeClass link_Distanz_TypeClass = (Link_Distanz_TypeClass)theEObject;
 				T result = caseLink_Distanz_TypeClass(link_Distanz_TypeClass);
@@ -1197,6 +1309,18 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				LM_G_TypeClass lM_G_TypeClass = (LM_G_TypeClass)theEObject;
 				T result = caseLM_G_TypeClass(lM_G_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(lM_G_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.LT_BINAERDATEI_HILFE_ATTRIBUTE_GROUP: {
+				LT_Binaerdatei_Hilfe_AttributeGroup lT_Binaerdatei_Hilfe_AttributeGroup = (LT_Binaerdatei_Hilfe_AttributeGroup)theEObject;
+				T result = caseLT_Binaerdatei_Hilfe_AttributeGroup(lT_Binaerdatei_Hilfe_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.LT_BINAERDATEN_ATTRIBUTE_GROUP: {
+				LT_Binaerdaten_AttributeGroup lT_Binaerdaten_AttributeGroup = (LT_Binaerdaten_AttributeGroup)theEObject;
+				T result = caseLT_Binaerdaten_AttributeGroup(lT_Binaerdaten_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1229,6 +1353,27 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_150_TYPE_CLASS: {
+				Massgebende_Neigung_Mind_150_TypeClass massgebende_Neigung_Mind_150_TypeClass = (Massgebende_Neigung_Mind_150_TypeClass)theEObject;
+				T result = caseMassgebende_Neigung_Mind_150_TypeClass(massgebende_Neigung_Mind_150_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(massgebende_Neigung_Mind_150_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_150_TYPE_CLASS: {
+				Massgebende_Neigung_Mind_Sig_150_TypeClass massgebende_Neigung_Mind_Sig_150_TypeClass = (Massgebende_Neigung_Mind_Sig_150_TypeClass)theEObject;
+				T result = caseMassgebende_Neigung_Mind_Sig_150_TypeClass(massgebende_Neigung_Mind_Sig_150_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(massgebende_Neigung_Mind_Sig_150_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_TYPE_CLASS: {
+				Massgebende_Neigung_Mind_Sig_TypeClass massgebende_Neigung_Mind_Sig_TypeClass = (Massgebende_Neigung_Mind_Sig_TypeClass)theEObject;
+				T result = caseMassgebende_Neigung_Mind_Sig_TypeClass(massgebende_Neigung_Mind_Sig_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(massgebende_Neigung_Mind_Sig_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.MASTSCHILD_TYPE_CLASS: {
 				Mastschild_TypeClass mastschild_TypeClass = (Mastschild_TypeClass)theEObject;
 				T result = caseMastschild_TypeClass(mastschild_TypeClass);
@@ -1250,10 +1395,23 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.METALLTEIL_TYPE_CLASS: {
-				Metallteil_TypeClass metallteil_TypeClass = (Metallteil_TypeClass)theEObject;
-				T result = caseMetallteil_TypeClass(metallteil_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(metallteil_TypeClass);
+			case Balisentechnik_ETCSPackage.METALLTEIL_ATTRIBUTE_GROUP: {
+				Metallteil_AttributeGroup metallteil_AttributeGroup = (Metallteil_AttributeGroup)theEObject;
+				T result = caseMetallteil_AttributeGroup(metallteil_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.METALLTEIL_KATEGORIE_TYPE_CLASS: {
+				Metallteil_Kategorie_TypeClass metallteil_Kategorie_TypeClass = (Metallteil_Kategorie_TypeClass)theEObject;
+				T result = caseMetallteil_Kategorie_TypeClass(metallteil_Kategorie_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(metallteil_Kategorie_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.METALLTEIL_LAENGE_TYPE_CLASS: {
+				Metallteil_Laenge_TypeClass metallteil_Laenge_TypeClass = (Metallteil_Laenge_TypeClass)theEObject;
+				T result = caseMetallteil_Laenge_TypeClass(metallteil_Laenge_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(metallteil_Laenge_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1261,6 +1419,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				Modulnummer_TypeClass modulnummer_TypeClass = (Modulnummer_TypeClass)theEObject;
 				T result = caseModulnummer_TypeClass(modulnummer_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(modulnummer_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.MONTAGEABWEICHUNG_TYPE_CLASS: {
+				Montageabweichung_TypeClass montageabweichung_TypeClass = (Montageabweichung_TypeClass)theEObject;
+				T result = caseMontageabweichung_TypeClass(montageabweichung_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(montageabweichung_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1275,6 +1440,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				Nennleistung_TypeClass nennleistung_TypeClass = (Nennleistung_TypeClass)theEObject;
 				T result = caseNennleistung_TypeClass(nennleistung_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(nennleistung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.NID_BG_TYPE_CLASS: {
+				NID_BG_TypeClass niD_BG_TypeClass = (NID_BG_TypeClass)theEObject;
+				T result = caseNID_BG_TypeClass(niD_BG_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(niD_BG_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1296,6 +1468,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				NID_STM_TypeClass niD_STM_TypeClass = (NID_STM_TypeClass)theEObject;
 				T result = caseNID_STM_TypeClass(niD_STM_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(niD_STM_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.NID_TSR_TYPE_CLASS: {
+				NID_TSR_TypeClass niD_TSR_TypeClass = (NID_TSR_TypeClass)theEObject;
+				T result = caseNID_TSR_TypeClass(niD_TSR_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(niD_TSR_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1369,6 +1548,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.PROJEKTIERUNGSFALL_TYPE_CLASS: {
+				Projektierungsfall_TypeClass projektierungsfall_TypeClass = (Projektierungsfall_TypeClass)theEObject;
+				T result = caseProjektierungsfall_TypeClass(projektierungsfall_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(projektierungsfall_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.RBC: {
 				RBC rbc = (RBC)theEObject;
 				T result = caseRBC(rbc);
@@ -1383,10 +1569,10 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.RBC_SRS_UNTERVERSION_TYPE_CLASS: {
-				RBC_SRS_Unterversion_TypeClass rbC_SRS_Unterversion_TypeClass = (RBC_SRS_Unterversion_TypeClass)theEObject;
-				T result = caseRBC_SRS_Unterversion_TypeClass(rbC_SRS_Unterversion_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(rbC_SRS_Unterversion_TypeClass);
+			case Balisentechnik_ETCSPackage.RBC_ETCS_SYSTEM_VERSION_TYPE_CLASS: {
+				RBC_ETCS_System_Version_TypeClass rbC_ETCS_System_Version_TypeClass = (RBC_ETCS_System_Version_TypeClass)theEObject;
+				T result = caseRBC_ETCS_System_Version_TypeClass(rbC_ETCS_System_Version_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(rbC_ETCS_System_Version_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1439,6 +1625,20 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_150_TYPE_CLASS: {
+				Solllaenge_Mind_Sig_150_TypeClass solllaenge_Mind_Sig_150_TypeClass = (Solllaenge_Mind_Sig_150_TypeClass)theEObject;
+				T result = caseSolllaenge_Mind_Sig_150_TypeClass(solllaenge_Mind_Sig_150_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(solllaenge_Mind_Sig_150_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_TYPE_CLASS: {
+				Solllaenge_Mind_Sig_TypeClass solllaenge_Mind_Sig_TypeClass = (Solllaenge_Mind_Sig_TypeClass)theEObject;
+				T result = caseSolllaenge_Mind_Sig_TypeClass(solllaenge_Mind_Sig_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(solllaenge_Mind_Sig_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.SONSTIGE_STANDORTANGABE_TYPE_CLASS: {
 				Sonstige_Standortangabe_TypeClass sonstige_Standortangabe_TypeClass = (Sonstige_Standortangabe_TypeClass)theEObject;
 				T result = caseSonstige_Standortangabe_TypeClass(sonstige_Standortangabe_TypeClass);
@@ -1464,13 +1664,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				Spannung_Toleranz_Untere_TypeClass spannung_Toleranz_Untere_TypeClass = (Spannung_Toleranz_Untere_TypeClass)theEObject;
 				T result = caseSpannung_Toleranz_Untere_TypeClass(spannung_Toleranz_Untere_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(spannung_Toleranz_Untere_TypeClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Balisentechnik_ETCSPackage.SRS_UNTERVERSION_TYPE_CLASS: {
-				SRS_Unterversion_TypeClass srS_Unterversion_TypeClass = (SRS_Unterversion_TypeClass)theEObject;
-				T result = caseSRS_Unterversion_TypeClass(srS_Unterversion_TypeClass);
-				if (result == null) result = caseBasisAttribut_AttributeGroup(srS_Unterversion_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1536,6 +1729,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.TELEGRAMM_INDEX_TYPE_CLASS: {
+				Telegramm_Index_TypeClass telegramm_Index_TypeClass = (Telegramm_Index_TypeClass)theEObject;
+				T result = caseTelegramm_Index_TypeClass(telegramm_Index_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(telegramm_Index_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.TELEGRAMMNUMMER_TYPE_CLASS: {
 				Telegrammnummer_TypeClass telegrammnummer_TypeClass = (Telegrammnummer_TypeClass)theEObject;
 				T result = caseTelegrammnummer_TypeClass(telegrammnummer_TypeClass);
@@ -1550,10 +1750,24 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.TEXTMELDUNG_TYPE_CLASS: {
+				Textmeldung_TypeClass textmeldung_TypeClass = (Textmeldung_TypeClass)theEObject;
+				T result = caseTextmeldung_TypeClass(textmeldung_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(textmeldung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE_CLASS: {
 				Ueberbrueckung_EV_Unterbrechung_TypeClass ueberbrueckung_EV_Unterbrechung_TypeClass = (Ueberbrueckung_EV_Unterbrechung_TypeClass)theEObject;
 				T result = caseUeberbrueckung_EV_Unterbrechung_TypeClass(ueberbrueckung_EV_Unterbrechung_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(ueberbrueckung_EV_Unterbrechung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.UEBERWACHUNG_LAENGE_TYPE_CLASS: {
+				Ueberwachung_Laenge_TypeClass ueberwachung_Laenge_TypeClass = (Ueberwachung_Laenge_TypeClass)theEObject;
+				T result = caseUeberwachung_Laenge_TypeClass(ueberwachung_Laenge_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(ueberwachung_Laenge_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1592,10 +1806,52 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.VSTART_TYPE_CLASS: {
+				V_Start_TypeClass v_Start_TypeClass = (V_Start_TypeClass)theEObject;
+				T result = caseV_Start_TypeClass(v_Start_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(v_Start_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.VZIEL_TYPE_CLASS: {
+				V_Ziel_TypeClass v_Ziel_TypeClass = (V_Ziel_TypeClass)theEObject;
+				T result = caseV_Ziel_TypeClass(v_Ziel_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(v_Ziel_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.VZUL_STRECKE_TYPE_CLASS: {
 				V_Zul_Strecke_TypeClass v_Zul_Strecke_TypeClass = (V_Zul_Strecke_TypeClass)theEObject;
 				T result = caseV_Zul_Strecke_TypeClass(v_Zul_Strecke_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(v_Zul_Strecke_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.VBC_KENNUNG_TYPE_CLASS: {
+				VBC_Kennung_TypeClass vbC_Kennung_TypeClass = (VBC_Kennung_TypeClass)theEObject;
+				T result = caseVBC_Kennung_TypeClass(vbC_Kennung_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(vbC_Kennung_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.VBC_NID_CTYPE_CLASS: {
+				VBC_NID_C_TypeClass vbC_NID_C_TypeClass = (VBC_NID_C_TypeClass)theEObject;
+				T result = caseVBC_NID_C_TypeClass(vbC_NID_C_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(vbC_NID_C_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.VBC_SETZEN_TYPE_CLASS: {
+				VBC_Setzen_TypeClass vbC_Setzen_TypeClass = (VBC_Setzen_TypeClass)theEObject;
+				T result = caseVBC_Setzen_TypeClass(vbC_Setzen_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(vbC_Setzen_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.VBC_TIMER_TYPE_CLASS: {
+				VBC_Timer_TypeClass vbC_Timer_TypeClass = (VBC_Timer_TypeClass)theEObject;
+				T result = caseVBC_Timer_TypeClass(vbC_Timer_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(vbC_Timer_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1620,10 +1876,24 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.VERKUERZTER_ABSTAND_TYPE_CLASS: {
+				Verkuerzter_Abstand_TypeClass verkuerzter_Abstand_TypeClass = (Verkuerzter_Abstand_TypeClass)theEObject;
+				T result = caseVerkuerzter_Abstand_TypeClass(verkuerzter_Abstand_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(verkuerzter_Abstand_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.VERWENDUNG_ALS_RUECKFALL_TYPE_CLASS: {
 				Verwendung_Als_Rueckfall_TypeClass verwendung_Als_Rueckfall_TypeClass = (Verwendung_Als_Rueckfall_TypeClass)theEObject;
 				T result = caseVerwendung_Als_Rueckfall_TypeClass(verwendung_Als_Rueckfall_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(verwendung_Als_Rueckfall_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.VERWENDUNG_HILFE_TYPE_CLASS: {
+				Verwendung_Hilfe_TypeClass verwendung_Hilfe_TypeClass = (Verwendung_Hilfe_TypeClass)theEObject;
+				T result = caseVerwendung_Hilfe_TypeClass(verwendung_Hilfe_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(verwendung_Hilfe_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1659,6 +1929,13 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				VLA_TypeClass vlA_TypeClass = (VLA_TypeClass)theEObject;
 				T result = caseVLA_TypeClass(vlA_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(vlA_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.VORSIGNALABSTAND_TYPE_CLASS: {
+				Vorsignalabstand_TypeClass vorsignalabstand_TypeClass = (Vorsignalabstand_TypeClass)theEObject;
+				T result = caseVorsignalabstand_TypeClass(vorsignalabstand_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(vorsignalabstand_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1738,6 +2015,34 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Balisentechnik_ETCSPackage.ZBS_SCHUTZSTRECKE: {
+				ZBS_Schutzstrecke zbS_Schutzstrecke = (ZBS_Schutzstrecke)theEObject;
+				T result = caseZBS_Schutzstrecke(zbS_Schutzstrecke);
+				if (result == null) result = caseBasis_Objekt(zbS_Schutzstrecke);
+				if (result == null) result = caseUr_Objekt(zbS_Schutzstrecke);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ZBS_SCHUTZSTRECKE_ALLG_ATTRIBUTE_GROUP: {
+				ZBS_Schutzstrecke_Allg_AttributeGroup zbS_Schutzstrecke_Allg_AttributeGroup = (ZBS_Schutzstrecke_Allg_AttributeGroup)theEObject;
+				T result = caseZBS_Schutzstrecke_Allg_AttributeGroup(zbS_Schutzstrecke_Allg_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ZBS_SIGNAL: {
+				ZBS_Signal zbS_Signal = (ZBS_Signal)theEObject;
+				T result = caseZBS_Signal(zbS_Signal);
+				if (result == null) result = caseBasis_Objekt(zbS_Signal);
+				if (result == null) result = caseUr_Objekt(zbS_Signal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ZBS_SIGNAL_SIGNALABSTAND_ATTRIBUTE_GROUP: {
+				ZBS_Signal_Signalabstand_AttributeGroup zbS_Signal_Signalabstand_AttributeGroup = (ZBS_Signal_Signalabstand_AttributeGroup)theEObject;
+				T result = caseZBS_Signal_Signalabstand_AttributeGroup(zbS_Signal_Signalabstand_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Balisentechnik_ETCSPackage.ZIEL_DP_AUSRICHTUNG_TYPE_CLASS: {
 				Ziel_DP_Ausrichtung_TypeClass ziel_DP_Ausrichtung_TypeClass = (Ziel_DP_Ausrichtung_TypeClass)theEObject;
 				T result = caseZiel_DP_Ausrichtung_TypeClass(ziel_DP_Ausrichtung_TypeClass);
@@ -1792,15 +2097,22 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_GNT_ATTRIBUTE_GROUP: {
-				ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup zuB_Bereichsgrenze_Nach_GNT_AttributeGroup = (ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup)theEObject;
-				T result = caseZUB_Bereichsgrenze_Nach_GNT_AttributeGroup(zuB_Bereichsgrenze_Nach_GNT_AttributeGroup);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_GNT_TYPE_CLASS: {
+				ZUB_Bereichsgrenze_Nach_GNT_TypeClass zuB_Bereichsgrenze_Nach_GNT_TypeClass = (ZUB_Bereichsgrenze_Nach_GNT_TypeClass)theEObject;
+				T result = caseZUB_Bereichsgrenze_Nach_GNT_TypeClass(zuB_Bereichsgrenze_Nach_GNT_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(zuB_Bereichsgrenze_Nach_GNT_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP: {
 				ZUB_Bereichsgrenze_Nach_L2_AttributeGroup zuB_Bereichsgrenze_Nach_L2_AttributeGroup = (ZUB_Bereichsgrenze_Nach_L2_AttributeGroup)theEObject;
 				T result = caseZUB_Bereichsgrenze_Nach_L2_AttributeGroup(zuB_Bereichsgrenze_Nach_L2_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG_ATTRIBUTE_GROUP: {
+				ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup = (ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup)theEObject;
+				T result = caseZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup(zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1825,6 +2137,12 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_SONSTIGE_ATTRIBUTE_GROUP: {
 				ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroup = (ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup)theEObject;
 				T result = caseZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup(zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_ZBS_ATTRIBUTE_GROUP: {
+				ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup zuB_Bereichsgrenze_Nach_ZBS_AttributeGroup = (ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup)theEObject;
+				T result = caseZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup(zuB_Bereichsgrenze_Nach_ZBS_AttributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1860,6 +2178,81 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstand Bes Langer Einfahrweg Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstand Bes Langer Einfahrweg Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstand_Bes_Langer_Einfahrweg_TypeClass(Abstand_Bes_Langer_Einfahrweg_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstand Datenpunkt EH EM Folgesignal Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstand Datenpunkt EH EM Folgesignal Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass(Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstand Datenpunkt EP TPI Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstand Datenpunkt EP TPI Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstand_Datenpunkt_EP_TPI_TypeClass(Abstand_Datenpunkt_EP_TPI_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstand Datenpunkt TPI Folgesignal Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstand Datenpunkt TPI Folgesignal Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstand_Datenpunkt_TPI_Folgesignal_TypeClass(Abstand_Datenpunkt_TPI_Folgesignal_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstand Einmesspunkt Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstand Einmesspunkt Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstand_Einmesspunkt_TypeClass(Abstand_Einmesspunkt_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstand Grenze Bereich CType Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1871,6 +2264,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstand_Grenze_Bereich_C_TypeClass(Abstand_Grenze_Bereich_C_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstand Reduziert Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstand Reduziert Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstand_Reduziert_TypeClass(Abstand_Reduziert_TypeClass object) {
 		return null;
 	}
 
@@ -1901,6 +2309,36 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAnordnung_Im_DP_TypeClass(Anordnung_Im_DP_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anwendung ESG Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anwendung ESG Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnwendung_ESG_TypeClass(Anwendung_ESG_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anwendung GNT Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anwendung GNT Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnwendung_GNT_TypeClass(Anwendung_GNT_TypeClass object) {
 		return null;
 	}
 
@@ -2055,17 +2493,47 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Baseline SRS Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Balise Geraetestand Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Baseline SRS Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Balise Geraetestand Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBaseline_SRS_TypeClass(Baseline_SRS_TypeClass object) {
+	public T caseBalise_Geraetestand_TypeClass(Balise_Geraetestand_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Balisenhalter Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Balisenhalter Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBalisenhalter_TypeClass(Balisenhalter_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Baseline System Version Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Baseline System Version Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBaseline_System_Version_TypeClass(Baseline_System_Version_TypeClass object) {
 		return null;
 	}
 
@@ -2355,6 +2823,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bgrenze Nach ZBS Bed Einstieg Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bgrenze Nach ZBS Bed Einstieg Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup(Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Bgrenze RBC Wechsel BTS Kette Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2370,47 +2853,32 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Binaerdatei</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Binaerdaten</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Binaerdatei</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Binaerdaten</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBinaerdatei(Binaerdatei object) {
+	public T caseBinaerdaten(Binaerdaten object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Binaerdatei Allg Attribute Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Binaerdaten Datei Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Binaerdatei Allg Attribute Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Binaerdaten Datei Attribute Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBinaerdatei_Allg_AttributeGroup(Binaerdatei_Allg_AttributeGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bremsweg Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bremsweg Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBremsweg_TypeClass(Bremsweg_TypeClass object) {
+	public T caseBinaerdaten_Datei_AttributeGroup(Binaerdaten_Datei_AttributeGroup object) {
 		return null;
 	}
 
@@ -2520,6 +2988,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Datenpunkt Einmesspunkt Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Datenpunkt Einmesspunkt Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDatenpunkt_Einmesspunkt_AttributeGroup(Datenpunkt_Einmesspunkt_AttributeGroup object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Datenpunkt Laenge Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2595,32 +3078,47 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DP Bezug Betrieblich Art Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DP ATO Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DP Bezug Betrieblich Art Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DP ATO Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDP_Bezug_Betrieblich_Art_TypeClass(DP_Bezug_Betrieblich_Art_TypeClass object) {
+	public T caseDP_ATO_TypeClass(DP_ATO_TypeClass object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DP Bezug Betrieblich Attribute Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DP Bezug Funktional Art Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DP Bezug Betrieblich Attribute Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DP Bezug Funktional Art Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDP_Bezug_Betrieblich_AttributeGroup(DP_Bezug_Betrieblich_AttributeGroup object) {
+	public T caseDP_Bezug_Funktional_Art_TypeClass(DP_Bezug_Funktional_Art_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DP Bezug Funktional Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DP Bezug Funktional Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDP_Bezug_Funktional_AttributeGroup(DP_Bezug_Funktional_AttributeGroup object) {
 		return null;
 	}
 
@@ -2910,6 +3408,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DP Verlinkt Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DP Verlinkt Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDP_Verlinkt_TypeClass(DP_Verlinkt_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Dunkelschaltanstoss Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3135,47 +3648,17 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ETCS Adresse Kennung Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ETCS Gefahrpunktabstand Abweichend Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ETCS Adresse Kennung Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ETCS Gefahrpunktabstand Abweichend Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseETCS_Adresse_Kennung_TypeClass(ETCS_Adresse_Kennung_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ETCS Adresse NID BG Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ETCS Adresse NID BG Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseETCS_Adresse_NID_BG_TypeClass(ETCS_Adresse_NID_BG_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ETCS Adresse NID CType Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ETCS Adresse NID CType Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseETCS_Adresse_NID_C_TypeClass(ETCS_Adresse_NID_C_TypeClass object) {
+	public T caseETCS_Gefahrpunktabstand_Abweichend_TypeClass(ETCS_Gefahrpunktabstand_Abweichend_TypeClass object) {
 		return null;
 	}
 
@@ -3206,21 +3689,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseETCS_Kante_Bezeichnung_AttributeGroup(ETCS_Kante_Bezeichnung_AttributeGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ETCS Kennung Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ETCS Kennung Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseETCS_Kennung_TypeClass(ETCS_Kennung_TypeClass object) {
 		return null;
 	}
 
@@ -3315,6 +3783,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETCS Richtungsanzeige</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETCS Richtungsanzeige</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETCS_Richtungsanzeige(ETCS_Richtungsanzeige object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ETCS Signal</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3375,6 +3858,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETCS System Version Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETCS System Version Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETCS_System_Version_TypeClass(ETCS_System_Version_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ETCS WKr</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3401,21 +3899,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseETCS_W_Kr_MUKA_AttributeGroup(ETCS_W_Kr_MUKA_AttributeGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ETCS WOrtsgestellt Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ETCS WOrtsgestellt Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseETCS_W_Ortsgestellt_TypeClass(ETCS_W_Ortsgestellt_TypeClass object) {
 		return null;
 	}
 
@@ -3825,17 +4308,17 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GNT Merkmale Attribute Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>FW Teil Nummer Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GNT Merkmale Attribute Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>FW Teil Nummer Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGNT_Merkmale_AttributeGroup(GNT_Merkmale_AttributeGroup object) {
+	public T caseFW_Teil_Nummer_TypeClass(FW_Teil_Nummer_TypeClass object) {
 		return null;
 	}
 
@@ -3900,17 +4383,17 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Individuell Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Individualisierung Weitere Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Individuell Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Individualisierung Weitere Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIndividuell_TypeClass(Individuell_TypeClass object) {
+	public T caseIndividualisierung_Weitere_TypeClass(Individualisierung_Weitere_TypeClass object) {
 		return null;
 	}
 
@@ -4050,6 +4533,51 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Laenge Gestufte VSignalisierung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Laenge Gestufte VSignalisierung Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLaenge_Gestufte_V_Signalisierung_TypeClass(Laenge_Gestufte_V_Signalisierung_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Laenge Soll Mind 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Laenge Soll Mind 150 Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLaenge_Soll_Mind_150_TypeClass(Laenge_Soll_Mind_150_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Leistungsbedarf Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Leistungsbedarf Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLeistungsbedarf_TypeClass(Leistungsbedarf_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>LEU Anlage</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4065,6 +4593,36 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>LEU Anlage Allg Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>LEU Anlage Allg Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLEU_Anlage_Allg_AttributeGroup(LEU_Anlage_Allg_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>LEU Anlage Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>LEU Anlage Art Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLEU_Anlage_Art_TypeClass(LEU_Anlage_Art_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>LEU Anlage Bezeichnung Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4076,21 +4634,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLEU_Anlage_Bezeichnung_AttributeGroup(LEU_Anlage_Bezeichnung_AttributeGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>LEU Anlage Moduleigenschaften Attribute Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>LEU Anlage Moduleigenschaften Attribute Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLEU_Anlage_Moduleigenschaften_AttributeGroup(LEU_Anlage_Moduleigenschaften_AttributeGroup object) {
 		return null;
 	}
 
@@ -4181,6 +4724,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLEU_Modul_Bezeichnung_AttributeGroup(LEU_Modul_Bezeichnung_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>LEU Modul Geraetestand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>LEU Modul Geraetestand Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLEU_Modul_Geraetestand_TypeClass(LEU_Modul_Geraetestand_TypeClass object) {
 		return null;
 	}
 
@@ -4305,21 +4863,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Lfd Nr in Telegr Spec Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Lfd Nr in Telegr Spec Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLfdNr_in_Telegr_Spec_TypeClass(LfdNr_in_Telegr_Spec_TypeClass object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Link Distanz Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4361,6 +4904,36 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLM_G_TypeClass(LM_G_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>LT Binaerdatei Hilfe Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>LT Binaerdatei Hilfe Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLT_Binaerdatei_Hilfe_AttributeGroup(LT_Binaerdatei_Hilfe_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>LT Binaerdaten Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>LT Binaerdaten Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLT_Binaerdaten_AttributeGroup(LT_Binaerdaten_AttributeGroup object) {
 		return null;
 	}
 
@@ -4425,6 +4998,51 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Massgebende Neigung Mind 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Massgebende Neigung Mind 150 Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMassgebende_Neigung_Mind_150_TypeClass(Massgebende_Neigung_Mind_150_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Massgebende Neigung Mind Sig 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Massgebende Neigung Mind Sig 150 Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMassgebende_Neigung_Mind_Sig_150_TypeClass(Massgebende_Neigung_Mind_Sig_150_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Massgebende Neigung Mind Sig Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Massgebende Neigung Mind Sig Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMassgebende_Neigung_Mind_Sig_TypeClass(Massgebende_Neigung_Mind_Sig_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Mastschild Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4470,17 +5088,47 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Metallteil Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Metallteil Attribute Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Metallteil Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Metallteil Attribute Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMetallteil_TypeClass(Metallteil_TypeClass object) {
+	public T caseMetallteil_AttributeGroup(Metallteil_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Metallteil Kategorie Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Metallteil Kategorie Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMetallteil_Kategorie_TypeClass(Metallteil_Kategorie_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Metallteil Laenge Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Metallteil Laenge Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMetallteil_Laenge_TypeClass(Metallteil_Laenge_TypeClass object) {
 		return null;
 	}
 
@@ -4496,6 +5144,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseModulnummer_TypeClass(Modulnummer_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Montageabweichung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Montageabweichung Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMontageabweichung_TypeClass(Montageabweichung_TypeClass object) {
 		return null;
 	}
 
@@ -4526,6 +5189,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNennleistung_TypeClass(Nennleistung_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>NID BG Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>NID BG Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNID_BG_TypeClass(NID_BG_TypeClass object) {
 		return null;
 	}
 
@@ -4571,6 +5249,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNID_STM_TypeClass(NID_STM_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>NID TSR Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>NID TSR Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNID_TSR_TypeClass(NID_TSR_TypeClass object) {
 		return null;
 	}
 
@@ -4725,6 +5418,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Projektierungsfall Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Projektierungsfall Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProjektierungsfall_TypeClass(Projektierungsfall_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>RBC</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4755,17 +5463,17 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>RBC SRS Unterversion Type Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>RBC ETCS System Version Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>RBC SRS Unterversion Type Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>RBC ETCS System Version Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRBC_SRS_Unterversion_TypeClass(RBC_SRS_Unterversion_TypeClass object) {
+	public T caseRBC_ETCS_System_Version_TypeClass(RBC_ETCS_System_Version_TypeClass object) {
 		return null;
 	}
 
@@ -4875,6 +5583,36 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solllaenge Mind Sig 150 Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solllaenge Mind Sig 150 Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolllaenge_Mind_Sig_150_TypeClass(Solllaenge_Mind_Sig_150_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solllaenge Mind Sig Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solllaenge Mind Sig Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolllaenge_Mind_Sig_TypeClass(Solllaenge_Mind_Sig_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Sonstige Standortangabe Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4931,21 +5669,6 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSpannung_Toleranz_Untere_TypeClass(Spannung_Toleranz_Untere_TypeClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>SRS Unterversion Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>SRS Unterversion Type Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSRS_Unterversion_TypeClass(SRS_Unterversion_TypeClass object) {
 		return null;
 	}
 
@@ -5085,6 +5808,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Telegramm Index Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Telegramm Index Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTelegramm_Index_TypeClass(Telegramm_Index_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Telegrammnummer Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -5115,6 +5853,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Textmeldung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Textmeldung Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextmeldung_TypeClass(Textmeldung_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ueberbrueckung EV Unterbrechung Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -5126,6 +5879,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUeberbrueckung_EV_Unterbrechung_TypeClass(Ueberbrueckung_EV_Unterbrechung_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ueberwachung Laenge Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ueberwachung Laenge Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUeberwachung_Laenge_TypeClass(Ueberwachung_Laenge_TypeClass object) {
 		return null;
 	}
 
@@ -5205,6 +5973,36 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VStart Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VStart Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseV_Start_TypeClass(V_Start_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VZiel Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VZiel Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseV_Ziel_TypeClass(V_Ziel_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VZul Strecke Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -5216,6 +6014,66 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseV_Zul_Strecke_TypeClass(V_Zul_Strecke_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VBC Kennung Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VBC Kennung Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVBC_Kennung_TypeClass(VBC_Kennung_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VBC NID CType Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VBC NID CType Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVBC_NID_C_TypeClass(VBC_NID_C_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VBC Setzen Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VBC Setzen Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVBC_Setzen_TypeClass(VBC_Setzen_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VBC Timer Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VBC Timer Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVBC_Timer_TypeClass(VBC_Timer_TypeClass object) {
 		return null;
 	}
 
@@ -5265,6 +6123,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verkuerzter Abstand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verkuerzter Abstand Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerkuerzter_Abstand_TypeClass(Verkuerzter_Abstand_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Verwendung Als Rueckfall Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -5276,6 +6149,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVerwendung_Als_Rueckfall_TypeClass(Verwendung_Als_Rueckfall_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Verwendung Hilfe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Verwendung Hilfe Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVerwendung_Hilfe_TypeClass(Verwendung_Hilfe_TypeClass object) {
 		return null;
 	}
 
@@ -5351,6 +6239,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVLA_TypeClass(VLA_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vorsignalabstand Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vorsignalabstand Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVorsignalabstand_TypeClass(Vorsignalabstand_TypeClass object) {
 		return null;
 	}
 
@@ -5520,6 +6423,66 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZBS Schutzstrecke</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZBS Schutzstrecke</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZBS_Schutzstrecke(ZBS_Schutzstrecke object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZBS Schutzstrecke Allg Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZBS Schutzstrecke Allg Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZBS_Schutzstrecke_Allg_AttributeGroup(ZBS_Schutzstrecke_Allg_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZBS Signal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZBS Signal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZBS_Signal(ZBS_Signal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZBS Signal Signalabstand Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZBS Signal Signalabstand Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZBS_Signal_Signalabstand_AttributeGroup(ZBS_Signal_Signalabstand_AttributeGroup object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ziel DP Ausrichtung Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -5640,17 +6603,17 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach GNT Attribute Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach GNT Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach GNT Attribute Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach GNT Type Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseZUB_Bereichsgrenze_Nach_GNT_AttributeGroup(ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup object) {
+	public T caseZUB_Bereichsgrenze_Nach_GNT_TypeClass(ZUB_Bereichsgrenze_Nach_GNT_TypeClass object) {
 		return null;
 	}
 
@@ -5666,6 +6629,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseZUB_Bereichsgrenze_Nach_L2_AttributeGroup(ZUB_Bereichsgrenze_Nach_L2_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach L2 Von ESG Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach L2 Von ESG Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup(ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup object) {
 		return null;
 	}
 
@@ -5726,6 +6704,21 @@ public class Balisentechnik_ETCSSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup(ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach ZBS Attribute Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ZUB Bereichsgrenze Nach ZBS Attribute Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup(ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup object) {
 		return null;
 	}
 

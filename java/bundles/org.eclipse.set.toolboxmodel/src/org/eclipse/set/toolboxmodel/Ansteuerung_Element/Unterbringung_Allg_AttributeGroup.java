@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -14,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getHersteller <em>Hersteller</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getTueranschlag <em>Tueranschlag</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getUnterbringungArt <em>Unterbringung Art</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getUnterbringungBefestigung <em>Unterbringung Befestigung</em>}</li>
  * </ul>
@@ -48,6 +56,32 @@ public interface Unterbringung_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setHersteller(Hersteller_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Tueranschlag</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Seite des Türanschlags. Die Angabe wird insbesondere bei Unterbringungen für FeAK/FeAS benötigt.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Tueranschlag</em>' containment reference.
+	 * @see #setTueranschlag(Tueranschlag_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Ansteuerung_ElementPackage#getUnterbringung_Allg_AttributeGroup_Tueranschlag()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='Tueranschlag'"
+	 * @generated
+	 */
+	Tueranschlag_TypeClass getTueranschlag();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getTueranschlag <em>Tueranschlag</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tueranschlag</em>' containment reference.
+	 * @see #getTueranschlag()
+	 * @generated
+	 */
+	void setTueranschlag(Tueranschlag_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Unterbringung Art</b></em>' containment reference.

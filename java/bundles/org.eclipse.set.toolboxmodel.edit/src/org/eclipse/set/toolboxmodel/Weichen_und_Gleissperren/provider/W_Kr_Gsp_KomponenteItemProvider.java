@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Punkt_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.W_Kr_Gsp_Komponente;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenFactory;
@@ -121,6 +122,7 @@ public class W_Kr_Gsp_KomponenteItemProvider extends Punkt_ObjektItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE);
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.WKR_GSP_KOMPONENTE__BESONDERES_FAHRWEGELEMENT);
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.WKR_GSP_KOMPONENTE__ENTGLEISUNGSSCHUH);
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.WKR_GSP_KOMPONENTE__KREUZUNG);
@@ -177,6 +179,7 @@ public class W_Kr_Gsp_KomponenteItemProvider extends Punkt_ObjektItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(W_Kr_Gsp_Komponente.class)) {
+			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE:
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__BESONDERES_FAHRWEGELEMENT:
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__ENTGLEISUNGSSCHUH:
 			case Weichen_und_GleissperrenPackage.WKR_GSP_KOMPONENTE__KREUZUNG:
@@ -199,6 +202,11 @@ public class W_Kr_Gsp_KomponenteItemProvider extends Punkt_ObjektItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Weichen_und_GleissperrenPackage.Literals.WKR_GSP_KOMPONENTE__AUSTAUSCH_ANTRIEBE,
+				 Weichen_und_GleissperrenFactory.eINSTANCE.createAustausch_Antriebe_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
@@ -85,15 +92,6 @@ public interface BasisobjekteFactory extends EFactory {
 	Bearbeitungsvermerk_Allg_AttributeGroup createBearbeitungsvermerk_Allg_AttributeGroup();
 
 	/**
-	 * Returns a new object of class '<em>Bearbeitungsvermerk Kennung Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bearbeitungsvermerk Kennung Type Class</em>'.
-	 * @generated
-	 */
-	Bearbeitungsvermerk_Kennung_TypeClass createBearbeitungsvermerk_Kennung_TypeClass();
-
-	/**
 	 * Returns a new object of class '<em>Bearbeitungsvermerk Rolle Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,6 +155,24 @@ public interface BasisobjekteFactory extends EFactory {
 	Bestandsschutz_TypeClass createBestandsschutz_TypeClass();
 
 	/**
+	 * Returns a new object of class '<em>BV Darstellung In Plan Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>BV Darstellung In Plan Type Class</em>'.
+	 * @generated
+	 */
+	BV_Darstellung_In_Plan_TypeClass createBV_Darstellung_In_Plan_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>BV Kategorie Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>BV Kategorie Type Class</em>'.
+	 * @generated
+	 */
+	BV_Kategorie_TypeClass createBV_Kategorie_TypeClass();
+
+	/**
 	 * Returns a new object of class '<em>Dateiname Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,15 +189,6 @@ public interface BasisobjekteFactory extends EFactory {
 	 * @generated
 	 */
 	Dateityp_TypeClass createDateityp_TypeClass();
-
-	/**
-	 * Returns a new object of class '<em>Daten Type Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Daten Type Class</em>'.
-	 * @generated
-	 */
-	Daten_TypeClass createDaten_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Datum Regelwerk Type Class</em>'.
@@ -209,6 +216,15 @@ public interface BasisobjekteFactory extends EFactory {
 	 * @generated
 	 */
 	Identitaet_TypeClass createIdentitaet_TypeClass();
+
+	/**
+	 * Returns a new object of class '<em>Km Massgebend Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Km Massgebend Type Class</em>'.
+	 * @generated
+	 */
+	Km_Massgebend_TypeClass createKm_Massgebend_TypeClass();
 
 	/**
 	 * Returns a new object of class '<em>Kommentar Type Class</em>'.

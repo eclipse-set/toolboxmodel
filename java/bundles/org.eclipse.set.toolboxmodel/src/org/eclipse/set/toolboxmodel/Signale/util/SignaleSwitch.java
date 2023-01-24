@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale.util;
 
@@ -135,6 +142,20 @@ public class SignaleSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SignalePackage.FUNDAMENT_ART_TYPE_CLASS: {
+				Fundament_Art_TypeClass fundament_Art_TypeClass = (Fundament_Art_TypeClass)theEObject;
+				T result = caseFundament_Art_TypeClass(fundament_Art_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(fundament_Art_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SignalePackage.FUNKTION_OHNE_SIGNAL_TYPE_CLASS: {
+				Funktion_Ohne_Signal_TypeClass funktion_Ohne_Signal_TypeClass = (Funktion_Ohne_Signal_TypeClass)theEObject;
+				T result = caseFunktion_Ohne_Signal_TypeClass(funktion_Ohne_Signal_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(funktion_Ohne_Signal_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SignalePackage.GEGENGLEIS_TYPE_CLASS: {
 				Gegengleis_TypeClass gegengleis_TypeClass = (Gegengleis_TypeClass)theEObject;
 				T result = caseGegengleis_TypeClass(gegengleis_TypeClass);
@@ -181,6 +202,13 @@ public class SignaleSwitch<T> extends Switch<T> {
 				Rahmen_Art_TypeClass rahmen_Art_TypeClass = (Rahmen_Art_TypeClass)theEObject;
 				T result = caseRahmen_Art_TypeClass(rahmen_Art_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(rahmen_Art_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SignalePackage.RAHMEN_HOEHE_TYPE_CLASS: {
+				Rahmen_Hoehe_TypeClass rahmen_Hoehe_TypeClass = (Rahmen_Hoehe_TypeClass)theEObject;
+				T result = caseRahmen_Hoehe_TypeClass(rahmen_Hoehe_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(rahmen_Hoehe_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -525,6 +553,36 @@ public class SignaleSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fundament Art Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fundament Art Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFundament_Art_TypeClass(Fundament_Art_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Funktion Ohne Signal Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Funktion Ohne Signal Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunktion_Ohne_Signal_TypeClass(Funktion_Ohne_Signal_TypeClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Gegengleis Type Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -626,6 +684,21 @@ public class SignaleSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRahmen_Art_TypeClass(Rahmen_Art_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rahmen Hoehe Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rahmen Hoehe Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRahmen_Hoehe_TypeClass(Rahmen_Hoehe_TypeClass object) {
 		return null;
 	}
 

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.util;
 
@@ -75,8 +82,32 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	protected Balisentechnik_ETCSSwitch<Adapter> modelSwitch =
 		new Balisentechnik_ETCSSwitch<Adapter>() {
 			@Override
+			public Adapter caseAbstand_Bes_Langer_Einfahrweg_TypeClass(Abstand_Bes_Langer_Einfahrweg_TypeClass object) {
+				return createAbstand_Bes_Langer_Einfahrweg_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass(Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass object) {
+				return createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseAbstand_Datenpunkt_EP_TPI_TypeClass(Abstand_Datenpunkt_EP_TPI_TypeClass object) {
+				return createAbstand_Datenpunkt_EP_TPI_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseAbstand_Datenpunkt_TPI_Folgesignal_TypeClass(Abstand_Datenpunkt_TPI_Folgesignal_TypeClass object) {
+				return createAbstand_Datenpunkt_TPI_Folgesignal_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseAbstand_Einmesspunkt_TypeClass(Abstand_Einmesspunkt_TypeClass object) {
+				return createAbstand_Einmesspunkt_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseAbstand_Grenze_Bereich_C_TypeClass(Abstand_Grenze_Bereich_C_TypeClass object) {
 				return createAbstand_Grenze_Bereich_C_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseAbstand_Reduziert_TypeClass(Abstand_Reduziert_TypeClass object) {
+				return createAbstand_Reduziert_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseAnlagenteil_Sonstige_TypeClass(Anlagenteil_Sonstige_TypeClass object) {
@@ -85,6 +116,14 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAnordnung_Im_DP_TypeClass(Anordnung_Im_DP_TypeClass object) {
 				return createAnordnung_Im_DP_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseAnwendung_ESG_TypeClass(Anwendung_ESG_TypeClass object) {
+				return createAnwendung_ESG_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseAnwendung_GNT_TypeClass(Anwendung_GNT_TypeClass object) {
+				return createAnwendung_GNT_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseAnwendung_Sonst_TypeClass(Anwendung_Sonst_TypeClass object) {
@@ -127,8 +166,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createBalise_Allg_AttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseBaseline_SRS_TypeClass(Baseline_SRS_TypeClass object) {
-				return createBaseline_SRS_TypeClassAdapter();
+			public Adapter caseBalise_Geraetestand_TypeClass(Balise_Geraetestand_TypeClass object) {
+				return createBalise_Geraetestand_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseBalisenhalter_TypeClass(Balisenhalter_TypeClass object) {
+				return createBalisenhalter_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseBaseline_System_Version_TypeClass(Baseline_System_Version_TypeClass object) {
+				return createBaseline_System_Version_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseBedingung_Besondere_AttributeGroup(Bedingung_Besondere_AttributeGroup object) {
@@ -207,20 +254,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createBgrenze_Nach_PZB_Bed_Einstieg_AttributeGroupAdapter();
 			}
 			@Override
+			public Adapter caseBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup(Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup object) {
+				return createBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupAdapter();
+			}
+			@Override
 			public Adapter caseBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup(Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup object) {
 				return createBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseBinaerdatei(Binaerdatei object) {
-				return createBinaerdateiAdapter();
+			public Adapter caseBinaerdaten(Binaerdaten object) {
+				return createBinaerdatenAdapter();
 			}
 			@Override
-			public Adapter caseBinaerdatei_Allg_AttributeGroup(Binaerdatei_Allg_AttributeGroup object) {
-				return createBinaerdatei_Allg_AttributeGroupAdapter();
-			}
-			@Override
-			public Adapter caseBremsweg_TypeClass(Bremsweg_TypeClass object) {
-				return createBremsweg_TypeClassAdapter();
+			public Adapter caseBinaerdaten_Datei_AttributeGroup(Binaerdaten_Datei_AttributeGroup object) {
+				return createBinaerdaten_Datei_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseD_LEVELTR_TypeClass(D_LEVELTR_TypeClass object) {
@@ -251,6 +298,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createDatenpunkt_Beschreibung_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseDatenpunkt_Einmesspunkt_AttributeGroup(Datenpunkt_Einmesspunkt_AttributeGroup object) {
+				return createDatenpunkt_Einmesspunkt_AttributeGroupAdapter();
+			}
+			@Override
 			public Adapter caseDatenpunkt_Laenge_TypeClass(Datenpunkt_Laenge_TypeClass object) {
 				return createDatenpunkt_Laenge_TypeClassAdapter();
 			}
@@ -271,12 +322,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createDelta_VZES_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseDP_Bezug_Betrieblich_Art_TypeClass(DP_Bezug_Betrieblich_Art_TypeClass object) {
-				return createDP_Bezug_Betrieblich_Art_TypeClassAdapter();
+			public Adapter caseDP_ATO_TypeClass(DP_ATO_TypeClass object) {
+				return createDP_ATO_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseDP_Bezug_Betrieblich_AttributeGroup(DP_Bezug_Betrieblich_AttributeGroup object) {
-				return createDP_Bezug_Betrieblich_AttributeGroupAdapter();
+			public Adapter caseDP_Bezug_Funktional_Art_TypeClass(DP_Bezug_Funktional_Art_TypeClass object) {
+				return createDP_Bezug_Funktional_Art_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseDP_Bezug_Funktional_AttributeGroup(DP_Bezug_Funktional_AttributeGroup object) {
+				return createDP_Bezug_Funktional_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseDP_ETCS_Adresse_AttributeGroup(DP_ETCS_Adresse_AttributeGroup object) {
@@ -355,6 +410,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createDP_Typ_ZBS_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseDP_Verlinkt_TypeClass(DP_Verlinkt_TypeClass object) {
+				return createDP_Verlinkt_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseDunkelschaltanstoss_TypeClass(Dunkelschaltanstoss_TypeClass object) {
 				return createDunkelschaltanstoss_TypeClassAdapter();
 			}
@@ -415,16 +474,8 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createETCS_Adresse_AttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseETCS_Adresse_Kennung_TypeClass(ETCS_Adresse_Kennung_TypeClass object) {
-				return createETCS_Adresse_Kennung_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseETCS_Adresse_NID_BG_TypeClass(ETCS_Adresse_NID_BG_TypeClass object) {
-				return createETCS_Adresse_NID_BG_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseETCS_Adresse_NID_C_TypeClass(ETCS_Adresse_NID_C_TypeClass object) {
-				return createETCS_Adresse_NID_C_TypeClassAdapter();
+			public Adapter caseETCS_Gefahrpunktabstand_Abweichend_TypeClass(ETCS_Gefahrpunktabstand_Abweichend_TypeClass object) {
+				return createETCS_Gefahrpunktabstand_Abweichend_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseETCS_Kante(ETCS_Kante object) {
@@ -433,10 +484,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseETCS_Kante_Bezeichnung_AttributeGroup(ETCS_Kante_Bezeichnung_AttributeGroup object) {
 				return createETCS_Kante_Bezeichnung_AttributeGroupAdapter();
-			}
-			@Override
-			public Adapter caseETCS_Kennung_TypeClass(ETCS_Kennung_TypeClass object) {
-				return createETCS_Kennung_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseETCS_Knoten(ETCS_Knoten object) {
@@ -463,6 +510,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createETCS_Parameterwert_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseETCS_Richtungsanzeige(ETCS_Richtungsanzeige object) {
+				return createETCS_RichtungsanzeigeAdapter();
+			}
+			@Override
 			public Adapter caseETCS_Signal(ETCS_Signal object) {
 				return createETCS_SignalAdapter();
 			}
@@ -479,16 +530,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createETCS_Signal_TBV_AttributeGroupAdapter();
 			}
 			@Override
+			public Adapter caseETCS_System_Version_TypeClass(ETCS_System_Version_TypeClass object) {
+				return createETCS_System_Version_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseETCS_W_Kr(ETCS_W_Kr object) {
 				return createETCS_W_KrAdapter();
 			}
 			@Override
 			public Adapter caseETCS_W_Kr_MUKA_AttributeGroup(ETCS_W_Kr_MUKA_AttributeGroup object) {
 				return createETCS_W_Kr_MUKA_AttributeGroupAdapter();
-			}
-			@Override
-			public Adapter caseETCS_W_Ortsgestellt_TypeClass(ETCS_W_Ortsgestellt_TypeClass object) {
-				return createETCS_W_Ortsgestellt_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseEV_Modul(EV_Modul object) {
@@ -599,8 +650,8 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createFT_ZBS_Typ_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseGNT_Merkmale_AttributeGroup(GNT_Merkmale_AttributeGroup object) {
-				return createGNT_Merkmale_AttributeGroupAdapter();
+			public Adapter caseFW_Teil_Nummer_TypeClass(FW_Teil_Nummer_TypeClass object) {
+				return createFW_Teil_Nummer_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseGruppen_ID_TypeClass(Gruppen_ID_TypeClass object) {
@@ -619,8 +670,8 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createHinweis_Balisenbefestigung_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseIndividuell_TypeClass(Individuell_TypeClass object) {
-				return createIndividuell_TypeClassAdapter();
+			public Adapter caseIndividualisierung_Weitere_TypeClass(Individualisierung_Weitere_TypeClass object) {
+				return createIndividualisierung_Weitere_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseIst_Befahren_TypeClass(Ist_Befahren_TypeClass object) {
@@ -659,16 +710,32 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createLaenge_Ausfuehrungsbereich_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseLaenge_Gestufte_V_Signalisierung_TypeClass(Laenge_Gestufte_V_Signalisierung_TypeClass object) {
+				return createLaenge_Gestufte_V_Signalisierung_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseLaenge_Soll_Mind_150_TypeClass(Laenge_Soll_Mind_150_TypeClass object) {
+				return createLaenge_Soll_Mind_150_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseLeistungsbedarf_TypeClass(Leistungsbedarf_TypeClass object) {
+				return createLeistungsbedarf_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseLEU_Anlage(LEU_Anlage object) {
 				return createLEU_AnlageAdapter();
 			}
 			@Override
-			public Adapter caseLEU_Anlage_Bezeichnung_AttributeGroup(LEU_Anlage_Bezeichnung_AttributeGroup object) {
-				return createLEU_Anlage_Bezeichnung_AttributeGroupAdapter();
+			public Adapter caseLEU_Anlage_Allg_AttributeGroup(LEU_Anlage_Allg_AttributeGroup object) {
+				return createLEU_Anlage_Allg_AttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseLEU_Anlage_Moduleigenschaften_AttributeGroup(LEU_Anlage_Moduleigenschaften_AttributeGroup object) {
-				return createLEU_Anlage_Moduleigenschaften_AttributeGroupAdapter();
+			public Adapter caseLEU_Anlage_Art_TypeClass(LEU_Anlage_Art_TypeClass object) {
+				return createLEU_Anlage_Art_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseLEU_Anlage_Bezeichnung_AttributeGroup(LEU_Anlage_Bezeichnung_AttributeGroup object) {
+				return createLEU_Anlage_Bezeichnung_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseLEU_Ausgang_Nr_TypeClass(LEU_Ausgang_Nr_TypeClass object) {
@@ -693,6 +760,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseLEU_Modul_Bezeichnung_AttributeGroup(LEU_Modul_Bezeichnung_AttributeGroup object) {
 				return createLEU_Modul_Bezeichnung_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseLEU_Modul_Geraetestand_TypeClass(LEU_Modul_Geraetestand_TypeClass object) {
+				return createLEU_Modul_Geraetestand_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseLEU_Modul_Typ_TypeClass(LEU_Modul_Typ_TypeClass object) {
@@ -727,10 +798,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createLfd_Nr_Am_Bezugspunkt_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseLfdNr_in_Telegr_Spec_TypeClass(LfdNr_in_Telegr_Spec_TypeClass object) {
-				return createLfdNr_in_Telegr_Spec_TypeClassAdapter();
-			}
-			@Override
 			public Adapter caseLink_Distanz_TypeClass(Link_Distanz_TypeClass object) {
 				return createLink_Distanz_TypeClassAdapter();
 			}
@@ -741,6 +808,14 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseLM_G_TypeClass(LM_G_TypeClass object) {
 				return createLM_G_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseLT_Binaerdatei_Hilfe_AttributeGroup(LT_Binaerdatei_Hilfe_AttributeGroup object) {
+				return createLT_Binaerdatei_Hilfe_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseLT_Binaerdaten_AttributeGroup(LT_Binaerdaten_AttributeGroup object) {
+				return createLT_Binaerdaten_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseLuft_Telegramm(Luft_Telegramm object) {
@@ -759,6 +834,18 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createMassgebende_Neig_Schutzstrecke_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseMassgebende_Neigung_Mind_150_TypeClass(Massgebende_Neigung_Mind_150_TypeClass object) {
+				return createMassgebende_Neigung_Mind_150_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseMassgebende_Neigung_Mind_Sig_150_TypeClass(Massgebende_Neigung_Mind_Sig_150_TypeClass object) {
+				return createMassgebende_Neigung_Mind_Sig_150_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseMassgebende_Neigung_Mind_Sig_TypeClass(Massgebende_Neigung_Mind_Sig_TypeClass object) {
+				return createMassgebende_Neigung_Mind_Sig_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseMastschild_TypeClass(Mastschild_TypeClass object) {
 				return createMastschild_TypeClassAdapter();
 			}
@@ -771,12 +858,24 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createMax_Unterbrechungszeit_TypeClassAdapter();
 			}
 			@Override
-			public Adapter caseMetallteil_TypeClass(Metallteil_TypeClass object) {
-				return createMetallteil_TypeClassAdapter();
+			public Adapter caseMetallteil_AttributeGroup(Metallteil_AttributeGroup object) {
+				return createMetallteil_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseMetallteil_Kategorie_TypeClass(Metallteil_Kategorie_TypeClass object) {
+				return createMetallteil_Kategorie_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseMetallteil_Laenge_TypeClass(Metallteil_Laenge_TypeClass object) {
+				return createMetallteil_Laenge_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseModulnummer_TypeClass(Modulnummer_TypeClass object) {
 				return createModulnummer_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseMontageabweichung_TypeClass(Montageabweichung_TypeClass object) {
+				return createMontageabweichung_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseNeigung_TypeClass(Neigung_TypeClass object) {
@@ -785,6 +884,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseNennleistung_TypeClass(Nennleistung_TypeClass object) {
 				return createNennleistung_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseNID_BG_TypeClass(NID_BG_TypeClass object) {
+				return createNID_BG_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseNID_C_TypeClass(NID_C_TypeClass object) {
@@ -797,6 +900,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseNID_STM_TypeClass(NID_STM_TypeClass object) {
 				return createNID_STM_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseNID_TSR_TypeClass(NID_TSR_TypeClass object) {
+				return createNID_TSR_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseNummer_Schaltkasten_TypeClass(Nummer_Schaltkasten_TypeClass object) {
@@ -839,6 +946,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createProg_Datei_GruppeAdapter();
 			}
 			@Override
+			public Adapter caseProjektierungsfall_TypeClass(Projektierungsfall_TypeClass object) {
+				return createProjektierungsfall_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseRBC(RBC object) {
 				return createRBCAdapter();
 			}
@@ -847,8 +958,8 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createRBC_Allg_AttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseRBC_SRS_Unterversion_TypeClass(RBC_SRS_Unterversion_TypeClass object) {
-				return createRBC_SRS_Unterversion_TypeClassAdapter();
+			public Adapter caseRBC_ETCS_System_Version_TypeClass(RBC_ETCS_System_Version_TypeClass object) {
+				return createRBC_ETCS_System_Version_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseRBC_SRS_Version_TypeClass(RBC_SRS_Version_TypeClass object) {
@@ -879,6 +990,14 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createSchutzstrecke_Vorhanden_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseSolllaenge_Mind_Sig_150_TypeClass(Solllaenge_Mind_Sig_150_TypeClass object) {
+				return createSolllaenge_Mind_Sig_150_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseSolllaenge_Mind_Sig_TypeClass(Solllaenge_Mind_Sig_TypeClass object) {
+				return createSolllaenge_Mind_Sig_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseSonstige_Standortangabe_TypeClass(Sonstige_Standortangabe_TypeClass object) {
 				return createSonstige_Standortangabe_TypeClassAdapter();
 			}
@@ -893,10 +1012,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSpannung_Toleranz_Untere_TypeClass(Spannung_Toleranz_Untere_TypeClass object) {
 				return createSpannung_Toleranz_Untere_TypeClassAdapter();
-			}
-			@Override
-			public Adapter caseSRS_Unterversion_TypeClass(SRS_Unterversion_TypeClass object) {
-				return createSRS_Unterversion_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseSRS_Version_TypeClass(SRS_Version_TypeClass object) {
@@ -935,6 +1050,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createTBV_Tunnelsignal_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseTelegramm_Index_TypeClass(Telegramm_Index_TypeClass object) {
+				return createTelegramm_Index_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseTelegrammnummer_TypeClass(Telegrammnummer_TypeClass object) {
 				return createTelegrammnummer_TypeClassAdapter();
 			}
@@ -943,8 +1062,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createText_Bedingung_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseTextmeldung_TypeClass(Textmeldung_TypeClass object) {
+				return createTextmeldung_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseUeberbrueckung_EV_Unterbrechung_TypeClass(Ueberbrueckung_EV_Unterbrechung_TypeClass object) {
 				return createUeberbrueckung_EV_Unterbrechung_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseUeberwachung_Laenge_TypeClass(Ueberwachung_Laenge_TypeClass object) {
+				return createUeberwachung_Laenge_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseUmfahrstrasse_TypeClass(Umfahrstrasse_TypeClass object) {
@@ -967,8 +1094,32 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createV_Frei_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseV_Start_TypeClass(V_Start_TypeClass object) {
+				return createV_Start_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseV_Ziel_TypeClass(V_Ziel_TypeClass object) {
+				return createV_Ziel_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseV_Zul_Strecke_TypeClass(V_Zul_Strecke_TypeClass object) {
 				return createV_Zul_Strecke_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseVBC_Kennung_TypeClass(VBC_Kennung_TypeClass object) {
+				return createVBC_Kennung_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseVBC_NID_C_TypeClass(VBC_NID_C_TypeClass object) {
+				return createVBC_NID_C_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseVBC_Setzen_TypeClass(VBC_Setzen_TypeClass object) {
+				return createVBC_Setzen_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseVBC_Timer_TypeClass(VBC_Timer_TypeClass object) {
+				return createVBC_Timer_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseVerbot_Anhalten_TypeClass(Verbot_Anhalten_TypeClass object) {
@@ -983,8 +1134,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createVerbot_WB_Art_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseVerkuerzter_Abstand_TypeClass(Verkuerzter_Abstand_TypeClass object) {
+				return createVerkuerzter_Abstand_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseVerwendung_Als_Rueckfall_TypeClass(Verwendung_Als_Rueckfall_TypeClass object) {
 				return createVerwendung_Als_Rueckfall_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseVerwendung_Hilfe_TypeClass(Verwendung_Hilfe_TypeClass object) {
+				return createVerwendung_Hilfe_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseVerwendung_TypeClass(Verwendung_TypeClass object) {
@@ -1005,6 +1164,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseVLA_TypeClass(VLA_TypeClass object) {
 				return createVLA_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseVorsignalabstand_TypeClass(Vorsignalabstand_TypeClass object) {
+				return createVorsignalabstand_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseVZ_TypeClass(VZ_TypeClass object) {
@@ -1051,6 +1214,22 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createZBS_Reaktion_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseZBS_Schutzstrecke(ZBS_Schutzstrecke object) {
+				return createZBS_SchutzstreckeAdapter();
+			}
+			@Override
+			public Adapter caseZBS_Schutzstrecke_Allg_AttributeGroup(ZBS_Schutzstrecke_Allg_AttributeGroup object) {
+				return createZBS_Schutzstrecke_Allg_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseZBS_Signal(ZBS_Signal object) {
+				return createZBS_SignalAdapter();
+			}
+			@Override
+			public Adapter caseZBS_Signal_Signalabstand_AttributeGroup(ZBS_Signal_Signalabstand_AttributeGroup object) {
+				return createZBS_Signal_Signalabstand_AttributeGroupAdapter();
+			}
+			@Override
 			public Adapter caseZiel_DP_Ausrichtung_TypeClass(Ziel_DP_Ausrichtung_TypeClass object) {
 				return createZiel_DP_Ausrichtung_TypeClassAdapter();
 			}
@@ -1083,12 +1262,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 				return createZUB_Bereichsgrenze_Nach_ESG_AttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseZUB_Bereichsgrenze_Nach_GNT_AttributeGroup(ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup object) {
-				return createZUB_Bereichsgrenze_Nach_GNT_AttributeGroupAdapter();
+			public Adapter caseZUB_Bereichsgrenze_Nach_GNT_TypeClass(ZUB_Bereichsgrenze_Nach_GNT_TypeClass object) {
+				return createZUB_Bereichsgrenze_Nach_GNT_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseZUB_Bereichsgrenze_Nach_L2_AttributeGroup(ZUB_Bereichsgrenze_Nach_L2_AttributeGroup object) {
 				return createZUB_Bereichsgrenze_Nach_L2_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup(ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup object) {
+				return createZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseZUB_Bereichsgrenze_Nach_LZB_AttributeGroup(ZUB_Bereichsgrenze_Nach_LZB_AttributeGroup object) {
@@ -1105,6 +1288,10 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup(ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup object) {
 				return createZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroupAdapter();
+			}
+			@Override
+			public Adapter caseZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup(ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup object) {
+				return createZUB_Bereichsgrenze_Nach_ZBS_AttributeGroupAdapter();
 			}
 			@Override
 			public Adapter caseZUB_Bgrenze_RBC_Wechsel_AttributeGroup(ZUB_Bgrenze_RBC_Wechsel_AttributeGroup object) {
@@ -1163,6 +1350,76 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Bes_Langer_Einfahrweg_TypeClass <em>Abstand Bes Langer Einfahrweg Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Bes_Langer_Einfahrweg_TypeClass
+	 * @generated
+	 */
+	public Adapter createAbstand_Bes_Langer_Einfahrweg_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass <em>Abstand Datenpunkt EH EM Folgesignal Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass
+	 * @generated
+	 */
+	public Adapter createAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EP_TPI_TypeClass <em>Abstand Datenpunkt EP TPI Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_EP_TPI_TypeClass
+	 * @generated
+	 */
+	public Adapter createAbstand_Datenpunkt_EP_TPI_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_TPI_Folgesignal_TypeClass <em>Abstand Datenpunkt TPI Folgesignal Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Datenpunkt_TPI_Folgesignal_TypeClass
+	 * @generated
+	 */
+	public Adapter createAbstand_Datenpunkt_TPI_Folgesignal_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Einmesspunkt_TypeClass <em>Abstand Einmesspunkt Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Einmesspunkt_TypeClass
+	 * @generated
+	 */
+	public Adapter createAbstand_Einmesspunkt_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Grenze_Bereich_C_TypeClass <em>Abstand Grenze Bereich CType Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1173,6 +1430,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstand_Grenze_Bereich_C_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Reduziert_TypeClass <em>Abstand Reduziert Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Abstand_Reduziert_TypeClass
+	 * @generated
+	 */
+	public Adapter createAbstand_Reduziert_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1201,6 +1472,34 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAnordnung_Im_DP_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_ESG_TypeClass <em>Anwendung ESG Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_ESG_TypeClass
+	 * @generated
+	 */
+	public Adapter createAnwendung_ESG_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_GNT_TypeClass <em>Anwendung GNT Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Anwendung_GNT_TypeClass
+	 * @generated
+	 */
+	public Adapter createAnwendung_GNT_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1345,16 +1644,44 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_SRS_TypeClass <em>Baseline SRS Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Geraetestand_TypeClass <em>Balise Geraetestand Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_SRS_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balise_Geraetestand_TypeClass
 	 * @generated
 	 */
-	public Adapter createBaseline_SRS_TypeClassAdapter() {
+	public Adapter createBalise_Geraetestand_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisenhalter_TypeClass <em>Balisenhalter Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisenhalter_TypeClass
+	 * @generated
+	 */
+	public Adapter createBalisenhalter_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_System_Version_TypeClass <em>Baseline System Version Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Baseline_System_Version_TypeClass
+	 * @generated
+	 */
+	public Adapter createBaseline_System_Version_TypeClassAdapter() {
 		return null;
 	}
 
@@ -1625,6 +1952,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup <em>Bgrenze Nach ZBS Bed Einstieg Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup <em>Bgrenze RBC Wechsel BTS Kette Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1639,44 +1980,30 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei <em>Binaerdatei</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten <em>Binaerdaten</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten
 	 * @generated
 	 */
-	public Adapter createBinaerdateiAdapter() {
+	public Adapter createBinaerdatenAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei_Allg_AttributeGroup <em>Binaerdatei Allg Attribute Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten_Datei_AttributeGroup <em>Binaerdaten Datei Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdatei_Allg_AttributeGroup
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Binaerdaten_Datei_AttributeGroup
 	 * @generated
 	 */
-	public Adapter createBinaerdatei_Allg_AttributeGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bremsweg_TypeClass <em>Bremsweg Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Bremsweg_TypeClass
-	 * @generated
-	 */
-	public Adapter createBremsweg_TypeClassAdapter() {
+	public Adapter createBinaerdaten_Datei_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -1779,6 +2106,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Einmesspunkt_AttributeGroup <em>Datenpunkt Einmesspunkt Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Einmesspunkt_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createDatenpunkt_Einmesspunkt_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt_Laenge_TypeClass <em>Datenpunkt Laenge Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1849,30 +2190,44 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_Art_TypeClass <em>DP Bezug Betrieblich Art Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_ATO_TypeClass <em>DP ATO Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_Art_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_ATO_TypeClass
 	 * @generated
 	 */
-	public Adapter createDP_Bezug_Betrieblich_Art_TypeClassAdapter() {
+	public Adapter createDP_ATO_TypeClassAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_AttributeGroup <em>DP Bezug Betrieblich Attribute Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_Art_TypeClass <em>DP Bezug Funktional Art Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Betrieblich_AttributeGroup
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_Art_TypeClass
 	 * @generated
 	 */
-	public Adapter createDP_Bezug_Betrieblich_AttributeGroupAdapter() {
+	public Adapter createDP_Bezug_Funktional_Art_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_AttributeGroup <em>DP Bezug Funktional Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Bezug_Funktional_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createDP_Bezug_Funktional_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -2143,6 +2498,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Verlinkt_TypeClass <em>DP Verlinkt Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Verlinkt_TypeClass
+	 * @generated
+	 */
+	public Adapter createDP_Verlinkt_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Dunkelschaltanstoss_TypeClass <em>Dunkelschaltanstoss Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2353,44 +2722,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_Kennung_TypeClass <em>ETCS Adresse Kennung Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Gefahrpunktabstand_Abweichend_TypeClass <em>ETCS Gefahrpunktabstand Abweichend Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_Kennung_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Gefahrpunktabstand_Abweichend_TypeClass
 	 * @generated
 	 */
-	public Adapter createETCS_Adresse_Kennung_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_BG_TypeClass <em>ETCS Adresse NID BG Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_BG_TypeClass
-	 * @generated
-	 */
-	public Adapter createETCS_Adresse_NID_BG_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_C_TypeClass <em>ETCS Adresse NID CType Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Adresse_NID_C_TypeClass
-	 * @generated
-	 */
-	public Adapter createETCS_Adresse_NID_C_TypeClassAdapter() {
+	public Adapter createETCS_Gefahrpunktabstand_Abweichend_TypeClassAdapter() {
 		return null;
 	}
 
@@ -2419,20 +2760,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createETCS_Kante_Bezeichnung_AttributeGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kennung_TypeClass <em>ETCS Kennung Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kennung_TypeClass
-	 * @generated
-	 */
-	public Adapter createETCS_Kennung_TypeClassAdapter() {
 		return null;
 	}
 
@@ -2521,6 +2848,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Richtungsanzeige <em>ETCS Richtungsanzeige</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Richtungsanzeige
+	 * @generated
+	 */
+	public Adapter createETCS_RichtungsanzeigeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Signal <em>ETCS Signal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2577,6 +2918,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_System_Version_TypeClass <em>ETCS System Version Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_System_Version_TypeClass
+	 * @generated
+	 */
+	public Adapter createETCS_System_Version_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Kr <em>ETCS WKr</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2601,20 +2956,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createETCS_W_Kr_MUKA_AttributeGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Ortsgestellt_TypeClass <em>ETCS WOrtsgestellt Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_W_Ortsgestellt_TypeClass
-	 * @generated
-	 */
-	public Adapter createETCS_W_Ortsgestellt_TypeClassAdapter() {
 		return null;
 	}
 
@@ -2997,16 +3338,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.GNT_Merkmale_AttributeGroup <em>GNT Merkmale Attribute Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FW_Teil_Nummer_TypeClass <em>FW Teil Nummer Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.GNT_Merkmale_AttributeGroup
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.FW_Teil_Nummer_TypeClass
 	 * @generated
 	 */
-	public Adapter createGNT_Merkmale_AttributeGroupAdapter() {
+	public Adapter createFW_Teil_Nummer_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3067,16 +3408,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individuell_TypeClass <em>Individuell Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individualisierung_Weitere_TypeClass <em>Individualisierung Weitere Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individuell_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Individualisierung_Weitere_TypeClass
 	 * @generated
 	 */
-	public Adapter createIndividuell_TypeClassAdapter() {
+	public Adapter createIndividualisierung_Weitere_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3207,6 +3548,48 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Gestufte_V_Signalisierung_TypeClass <em>Laenge Gestufte VSignalisierung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Gestufte_V_Signalisierung_TypeClass
+	 * @generated
+	 */
+	public Adapter createLaenge_Gestufte_V_Signalisierung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Soll_Mind_150_TypeClass <em>Laenge Soll Mind 150 Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Laenge_Soll_Mind_150_TypeClass
+	 * @generated
+	 */
+	public Adapter createLaenge_Soll_Mind_150_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Leistungsbedarf_TypeClass <em>Leistungsbedarf Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Leistungsbedarf_TypeClass
+	 * @generated
+	 */
+	public Adapter createLeistungsbedarf_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage <em>LEU Anlage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -3221,6 +3604,34 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Allg_AttributeGroup <em>LEU Anlage Allg Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Allg_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createLEU_Anlage_Allg_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Art_TypeClass <em>LEU Anlage Art Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Art_TypeClass
+	 * @generated
+	 */
+	public Adapter createLEU_Anlage_Art_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Bezeichnung_AttributeGroup <em>LEU Anlage Bezeichnung Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -3231,20 +3642,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLEU_Anlage_Bezeichnung_AttributeGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Moduleigenschaften_AttributeGroup <em>LEU Anlage Moduleigenschaften Attribute Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Anlage_Moduleigenschaften_AttributeGroup
-	 * @generated
-	 */
-	public Adapter createLEU_Anlage_Moduleigenschaften_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -3329,6 +3726,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLEU_Modul_Bezeichnung_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Geraetestand_TypeClass <em>LEU Modul Geraetestand Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Geraetestand_TypeClass
+	 * @generated
+	 */
+	public Adapter createLEU_Modul_Geraetestand_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3445,20 +3856,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LfdNr_in_Telegr_Spec_TypeClass <em>Lfd Nr in Telegr Spec Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LfdNr_in_Telegr_Spec_TypeClass
-	 * @generated
-	 */
-	public Adapter createLfdNr_in_Telegr_Spec_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Link_Distanz_TypeClass <em>Link Distanz Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -3497,6 +3894,34 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLM_G_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdatei_Hilfe_AttributeGroup <em>LT Binaerdatei Hilfe Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdatei_Hilfe_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createLT_Binaerdatei_Hilfe_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdaten_AttributeGroup <em>LT Binaerdaten Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LT_Binaerdaten_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createLT_Binaerdaten_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -3557,6 +3982,48 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_150_TypeClass <em>Massgebende Neigung Mind 150 Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_150_TypeClass
+	 * @generated
+	 */
+	public Adapter createMassgebende_Neigung_Mind_150_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_150_TypeClass <em>Massgebende Neigung Mind Sig 150 Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_150_TypeClass
+	 * @generated
+	 */
+	public Adapter createMassgebende_Neigung_Mind_Sig_150_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_TypeClass <em>Massgebende Neigung Mind Sig Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Massgebende_Neigung_Mind_Sig_TypeClass
+	 * @generated
+	 */
+	public Adapter createMassgebende_Neigung_Mind_Sig_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Mastschild_TypeClass <em>Mastschild Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -3599,16 +4066,44 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_TypeClass <em>Metallteil Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_AttributeGroup <em>Metallteil Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_AttributeGroup
 	 * @generated
 	 */
-	public Adapter createMetallteil_TypeClassAdapter() {
+	public Adapter createMetallteil_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Kategorie_TypeClass <em>Metallteil Kategorie Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Kategorie_TypeClass
+	 * @generated
+	 */
+	public Adapter createMetallteil_Kategorie_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Laenge_TypeClass <em>Metallteil Laenge Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Metallteil_Laenge_TypeClass
+	 * @generated
+	 */
+	public Adapter createMetallteil_Laenge_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3623,6 +4118,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModulnummer_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Montageabweichung_TypeClass <em>Montageabweichung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Montageabweichung_TypeClass
+	 * @generated
+	 */
+	public Adapter createMontageabweichung_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3651,6 +4160,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNennleistung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_BG_TypeClass <em>NID BG Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_BG_TypeClass
+	 * @generated
+	 */
+	public Adapter createNID_BG_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3693,6 +4216,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNID_STM_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_TSR_TypeClass <em>NID TSR Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.NID_TSR_TypeClass
+	 * @generated
+	 */
+	public Adapter createNID_TSR_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3837,6 +4374,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Projektierungsfall_TypeClass <em>Projektierungsfall Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Projektierungsfall_TypeClass
+	 * @generated
+	 */
+	public Adapter createProjektierungsfall_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC <em>RBC</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -3865,16 +4416,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Unterversion_TypeClass <em>RBC SRS Unterversion Type Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_ETCS_System_Version_TypeClass <em>RBC ETCS System Version Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_SRS_Unterversion_TypeClass
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC_ETCS_System_Version_TypeClass
 	 * @generated
 	 */
-	public Adapter createRBC_SRS_Unterversion_TypeClassAdapter() {
+	public Adapter createRBC_ETCS_System_Version_TypeClassAdapter() {
 		return null;
 	}
 
@@ -3977,6 +4528,34 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_150_TypeClass <em>Solllaenge Mind Sig 150 Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_150_TypeClass
+	 * @generated
+	 */
+	public Adapter createSolllaenge_Mind_Sig_150_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_TypeClass <em>Solllaenge Mind Sig Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Solllaenge_Mind_Sig_TypeClass
+	 * @generated
+	 */
+	public Adapter createSolllaenge_Mind_Sig_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Sonstige_Standortangabe_TypeClass <em>Sonstige Standortangabe Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4029,20 +4608,6 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSpannung_Toleranz_Untere_TypeClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.SRS_Unterversion_TypeClass <em>SRS Unterversion Type Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.SRS_Unterversion_TypeClass
-	 * @generated
-	 */
-	public Adapter createSRS_Unterversion_TypeClassAdapter() {
 		return null;
 	}
 
@@ -4173,6 +4738,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegramm_Index_TypeClass <em>Telegramm Index Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegramm_Index_TypeClass
+	 * @generated
+	 */
+	public Adapter createTelegramm_Index_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Telegrammnummer_TypeClass <em>Telegrammnummer Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4201,6 +4780,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Textmeldung_TypeClass <em>Textmeldung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Textmeldung_TypeClass
+	 * @generated
+	 */
+	public Adapter createTextmeldung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ueberbrueckung_EV_Unterbrechung_TypeClass <em>Ueberbrueckung EV Unterbrechung Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4211,6 +4804,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUeberbrueckung_EV_Unterbrechung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ueberwachung_Laenge_TypeClass <em>Ueberwachung Laenge Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ueberwachung_Laenge_TypeClass
+	 * @generated
+	 */
+	public Adapter createUeberwachung_Laenge_TypeClassAdapter() {
 		return null;
 	}
 
@@ -4285,6 +4892,34 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Start_TypeClass <em>VStart Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Start_TypeClass
+	 * @generated
+	 */
+	public Adapter createV_Start_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Ziel_TypeClass <em>VZiel Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Ziel_TypeClass
+	 * @generated
+	 */
+	public Adapter createV_Ziel_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.V_Zul_Strecke_TypeClass <em>VZul Strecke Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4295,6 +4930,62 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createV_Zul_Strecke_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Kennung_TypeClass <em>VBC Kennung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Kennung_TypeClass
+	 * @generated
+	 */
+	public Adapter createVBC_Kennung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_NID_C_TypeClass <em>VBC NID CType Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_NID_C_TypeClass
+	 * @generated
+	 */
+	public Adapter createVBC_NID_C_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Setzen_TypeClass <em>VBC Setzen Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Setzen_TypeClass
+	 * @generated
+	 */
+	public Adapter createVBC_Setzen_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Timer_TypeClass <em>VBC Timer Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.VBC_Timer_TypeClass
+	 * @generated
+	 */
+	public Adapter createVBC_Timer_TypeClassAdapter() {
 		return null;
 	}
 
@@ -4341,6 +5032,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verkuerzter_Abstand_TypeClass <em>Verkuerzter Abstand Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verkuerzter_Abstand_TypeClass
+	 * @generated
+	 */
+	public Adapter createVerkuerzter_Abstand_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_Als_Rueckfall_TypeClass <em>Verwendung Als Rueckfall Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4351,6 +5056,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVerwendung_Als_Rueckfall_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_Hilfe_TypeClass <em>Verwendung Hilfe Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Verwendung_Hilfe_TypeClass
+	 * @generated
+	 */
+	public Adapter createVerwendung_Hilfe_TypeClassAdapter() {
 		return null;
 	}
 
@@ -4421,6 +5140,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVLA_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Vorsignalabstand_TypeClass <em>Vorsignalabstand Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Vorsignalabstand_TypeClass
+	 * @generated
+	 */
+	public Adapter createVorsignalabstand_TypeClassAdapter() {
 		return null;
 	}
 
@@ -4579,6 +5312,62 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke <em>ZBS Schutzstrecke</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke
+	 * @generated
+	 */
+	public Adapter createZBS_SchutzstreckeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke_Allg_AttributeGroup <em>ZBS Schutzstrecke Allg Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Schutzstrecke_Allg_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createZBS_Schutzstrecke_Allg_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal <em>ZBS Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal
+	 * @generated
+	 */
+	public Adapter createZBS_SignalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal_Signalabstand_AttributeGroup <em>ZBS Signal Signalabstand Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZBS_Signal_Signalabstand_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createZBS_Signal_Signalabstand_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Ziel_DP_Ausrichtung_TypeClass <em>Ziel DP Ausrichtung Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4691,16 +5480,16 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup <em>ZUB Bereichsgrenze Nach GNT Attribute Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_TypeClass <em>ZUB Bereichsgrenze Nach GNT Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_GNT_TypeClass
 	 * @generated
 	 */
-	public Adapter createZUB_Bereichsgrenze_Nach_GNT_AttributeGroupAdapter() {
+	public Adapter createZUB_Bereichsgrenze_Nach_GNT_TypeClassAdapter() {
 		return null;
 	}
 
@@ -4715,6 +5504,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createZUB_Bereichsgrenze_Nach_L2_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup <em>ZUB Bereichsgrenze Nach L2 Von ESG Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroupAdapter() {
 		return null;
 	}
 
@@ -4771,6 +5574,20 @@ public class Balisentechnik_ETCSAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup <em>ZUB Bereichsgrenze Nach ZBS Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup
+	 * @generated
+	 */
+	public Adapter createZUB_Bereichsgrenze_Nach_ZBS_AttributeGroupAdapter() {
 		return null;
 	}
 

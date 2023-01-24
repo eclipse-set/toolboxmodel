@@ -1,12 +1,17 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
-import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +19,7 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Beeinflussungspunkt bestehend aus einer Einzelbalise oder Balisengruppe und ggf. einer LEU. In europäischen Spezifikationen wird der Begriff "Balisengruppe" auch synonym für "Datenpunkt" verwendet. Ein ungesteuerter Datenpunkt besteht ausschließlich aus ungesteuerten Balisen (Festdatenbalisen). Die Attributgruppe darf nur ausgewählt werden, wenn ausschließlich ESG-Telegramme enthalten sind.
+ * Beeinflussungspunkt bestehend aus einer Einzelbalise oder Balisengruppe und ggf. einer LEU. In europäischen Spezifikationen wird der Begriff "Balisengruppe" auch synonym für "Datenpunkt" verwendet. Ein ungesteuerter Datenpunkt besteht ausschließlich aus ungesteuerten Balisen (Festdatenbalisen). Die Attributgruppe DP_Typ_GESG darf nur ausgewählt werden, wenn ausschließlich ESG-Telegramme enthalten sind.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -22,10 +27,10 @@ import org.eclipse.set.toolboxmodel.Fahrstrasse.Markanter_Punkt;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDatenpunktAllg <em>Datenpunkt Allg</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDPBezugBetrieblich <em>DP Bezug Betrieblich</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDatenpunktEinmesspunkt <em>Datenpunkt Einmesspunkt</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDPBezugFunktional <em>DP Bezug Funktional</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDPETCSAdresse <em>DPETCS Adresse</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDPTyp <em>DP Typ</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getIDEinmesspunkt <em>ID Einmesspunkt</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getIDRBC <em>IDRBC</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getLEUSteuernde <em>LEU Steuernde</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDPTelegramm <em>DP Telegramm</em>}</li>
@@ -61,27 +66,50 @@ public interface Datenpunkt extends Punkt_Objekt {
 	void setDatenpunktAllg(Datenpunkt_Allg_AttributeGroup value);
 
 	/**
-	 * Returns the value of the '<em><b>DP Bezug Betrieblich</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Datenpunkt Einmesspunkt</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>DP Bezug Betrieblich</em>' containment reference.
-	 * @see #setDPBezugBetrieblich(DP_Bezug_Betrieblich_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_DPBezugBetrieblich()
+	 * @return the value of the '<em>Datenpunkt Einmesspunkt</em>' containment reference.
+	 * @see #setDatenpunktEinmesspunkt(Datenpunkt_Einmesspunkt_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_DatenpunktEinmesspunkt()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='DP_Bezug_Betrieblich'"
+	 *        extendedMetaData="kind='element' name='Datenpunkt_Einmesspunkt'"
 	 * @generated
 	 */
-	DP_Bezug_Betrieblich_AttributeGroup getDPBezugBetrieblich();
+	Datenpunkt_Einmesspunkt_AttributeGroup getDatenpunktEinmesspunkt();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDPBezugBetrieblich <em>DP Bezug Betrieblich</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDatenpunktEinmesspunkt <em>Datenpunkt Einmesspunkt</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>DP Bezug Betrieblich</em>' containment reference.
-	 * @see #getDPBezugBetrieblich()
+	 * @param value the new value of the '<em>Datenpunkt Einmesspunkt</em>' containment reference.
+	 * @see #getDatenpunktEinmesspunkt()
 	 * @generated
 	 */
-	void setDPBezugBetrieblich(DP_Bezug_Betrieblich_AttributeGroup value);
+	void setDatenpunktEinmesspunkt(Datenpunkt_Einmesspunkt_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>DP Bezug Funktional</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>DP Bezug Funktional</em>' containment reference.
+	 * @see #setDPBezugFunktional(DP_Bezug_Funktional_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_DPBezugFunktional()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='DP_Bezug_Funktional'"
+	 * @generated
+	 */
+	DP_Bezug_Funktional_AttributeGroup getDPBezugFunktional();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getDPBezugFunktional <em>DP Bezug Funktional</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>DP Bezug Funktional</em>' containment reference.
+	 * @see #getDPBezugFunktional()
+	 * @generated
+	 */
+	void setDPBezugFunktional(DP_Bezug_Funktional_AttributeGroup value);
 
 	/**
 	 * Returns the value of the '<em><b>DPETCS Adresse</b></em>' containment reference.
@@ -121,59 +149,6 @@ public interface Datenpunkt extends Punkt_Objekt {
 	 * @generated
 	 */
 	EList<DP_Typ_AttributeGroup> getDPTyp();
-
-	/**
-	 * Returns the value of the '<em><b>ID Einmesspunkt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Soll-Abstand zum Referenzpunkt für die Montage. Das Attribut darf nur in den XML-Dateien für die Balisen-Programmiergeräte gefüllt sein (Ersatz für die topologische Berechnung des Abstands). Die Umsetzung der Richtungsinformationen in den Planunterlagen muss entsprechend des Anwendungssystems festgelegt und im Werkzeug implementiert werden.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Einmesspunkt</em>' reference.
-	 * @see #isSetIDEinmesspunkt()
-	 * @see #unsetIDEinmesspunkt()
-	 * @see #setIDEinmesspunkt(Markanter_Punkt)
-	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getDatenpunkt_IDEinmesspunkt()
-	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='ID_Einmesspunkt'"
-	 * @generated
-	 */
-	Markanter_Punkt getIDEinmesspunkt();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getIDEinmesspunkt <em>ID Einmesspunkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Einmesspunkt</em>' reference.
-	 * @see #isSetIDEinmesspunkt()
-	 * @see #unsetIDEinmesspunkt()
-	 * @see #getIDEinmesspunkt()
-	 * @generated
-	 */
-	void setIDEinmesspunkt(Markanter_Punkt value);
-
-	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getIDEinmesspunkt <em>ID Einmesspunkt</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetIDEinmesspunkt()
-	 * @see #getIDEinmesspunkt()
-	 * @see #setIDEinmesspunkt(Markanter_Punkt)
-	 * @generated
-	 */
-	void unsetIDEinmesspunkt();
-
-	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Datenpunkt#getIDEinmesspunkt <em>ID Einmesspunkt</em>}' reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Einmesspunkt</em>' reference is set.
-	 * @see #unsetIDEinmesspunkt()
-	 * @see #getIDEinmesspunkt()
-	 * @see #setIDEinmesspunkt(Markanter_Punkt)
-	 * @generated
-	 */
-	boolean isSetIDEinmesspunkt();
 
 	/**
 	 * Returns the value of the '<em><b>IDRBC</b></em>' reference list.

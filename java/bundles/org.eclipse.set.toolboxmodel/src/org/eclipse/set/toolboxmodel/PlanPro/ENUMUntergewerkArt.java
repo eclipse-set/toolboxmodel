@@ -19,6 +19,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMUntergewerkArt implements Enumerator {
 	/**
+	 * The '<em><b>ENUM Untergewerk Art ATO</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERGEWERK_ART_ATO_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_UNTERGEWERK_ART_ATO(0, "ENUMUntergewerk_Art_ATO", "ATO"), /**
 	 * The '<em><b>ENUM Untergewerk Art Bedienung ETCS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +34,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_BEDIENUNG_ETCS(0, "ENUMUntergewerk_Art_Bedienung_ETCS", "Bedienung ETCS"),
+	ENUM_UNTERGEWERK_ART_BEDIENUNG_ETCS(1, "ENUMUntergewerk_Art_Bedienung_ETCS", "Bedienung ETCS"),
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art Bedienung Fdl BZ</b></em>' literal object.
@@ -36,7 +44,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_BZ(1, "ENUMUntergewerk_Art_Bedienung_Fdl_BZ", "Bedienung Fdl BZ"),
+	ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_BZ(2, "ENUMUntergewerk_Art_Bedienung_Fdl_BZ", "Bedienung Fdl BZ"),
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art Bedienung Fdl ESTW ZE</b></em>' literal object.
@@ -46,19 +54,17 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_ESTW_ZE(2, "ENUMUntergewerk_Art_Bedienung_Fdl_ESTW_ZE", "Bedienung Fdl ESTW-ZE"),
+	ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_ESTW_ZE(3, "ENUMUntergewerk_Art_Bedienung_Fdl_ESTW_ZE", "Bedienung Fdl ESTW-ZE"),
 
 	/**
-	 * The '<em><b>ENUM Untergewerk Art BUE</b></em>' literal object.
+	 * The '<em><b>ENUM Untergewerk Art BU</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERGEWERK_ART_BUE_VALUE
+	 * @see #ENUM_UNTERGEWERK_ART_BU_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_BUE(3, "ENUMUntergewerk_Art_BUE", "BUE"),
-
-	/**
+	ENUM_UNTERGEWERK_ART_BU(4, "ENUMUntergewerk_Art_BU", "B\u00dc"), /**
 	 * The '<em><b>ENUM Untergewerk Art ESTW</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,7 +72,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_ESTW(4, "ENUMUntergewerk_Art_ESTW", "ESTW"),
+	ENUM_UNTERGEWERK_ART_ESTW(5, "ENUMUntergewerk_Art_ESTW", "ESTW"),
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ETCS</b></em>' literal object.
@@ -76,7 +82,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_ETCS(5, "ENUMUntergewerk_Art_ETCS", "ETCS"),
+	ENUM_UNTERGEWERK_ART_ETCS(6, "ENUMUntergewerk_Art_ETCS", "ETCS"),
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art Geo</b></em>' literal object.
@@ -86,9 +92,17 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_GEO(6, "ENUMUntergewerk_Art_Geo", "Geo"),
+	ENUM_UNTERGEWERK_ART_GEO(7, "ENUMUntergewerk_Art_Geo", "Geo"),
 
 	/**
+	 * The '<em><b>ENUM Untergewerk Art Kabel</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERGEWERK_ART_KABEL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_UNTERGEWERK_ART_KABEL(8, "ENUMUntergewerk_Art_Kabel", "Kabel"), /**
 	 * The '<em><b>ENUM Untergewerk Art sonstige</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,7 +110,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_SONSTIGE(7, "ENUMUntergewerk_Art_sonstige", "sonstige"),
+	ENUM_UNTERGEWERK_ART_SONSTIGE(9, "ENUMUntergewerk_Art_sonstige", "sonstige"),
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ZL</b></em>' literal object.
@@ -106,7 +120,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_ZL(8, "ENUMUntergewerk_Art_ZL", "ZL"),
+	ENUM_UNTERGEWERK_ART_ZL(10, "ENUMUntergewerk_Art_ZL", "ZL"),
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ZLV Bus</b></em>' literal object.
@@ -116,7 +130,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_ZLV_BUS(9, "ENUMUntergewerk_Art_ZLV_Bus", "ZLV-Bus"),
+	ENUM_UNTERGEWERK_ART_ZLV_BUS(11, "ENUMUntergewerk_Art_ZLV_Bus", "ZLV-Bus"),
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ZN</b></em>' literal object.
@@ -126,7 +140,18 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_UNTERGEWERK_ART_ZN(10, "ENUMUntergewerk_Art_ZN", "ZN");
+	ENUM_UNTERGEWERK_ART_ZN(12, "ENUMUntergewerk_Art_ZN", "ZN");
+
+	/**
+	 * The '<em><b>ENUM Untergewerk Art ATO</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERGEWERK_ART_ATO
+	 * @model name="ENUMUntergewerk_Art_ATO" literal="ATO"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_UNTERGEWERK_ART_ATO_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art Bedienung ETCS</b></em>' literal value.
@@ -137,7 +162,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_BEDIENUNG_ETCS_VALUE = 0;
+	public static final int ENUM_UNTERGEWERK_ART_BEDIENUNG_ETCS_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art Bedienung Fdl BZ</b></em>' literal value.
@@ -148,7 +173,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_BZ_VALUE = 1;
+	public static final int ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_BZ_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art Bedienung Fdl ESTW ZE</b></em>' literal value.
@@ -159,18 +184,18 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_ESTW_ZE_VALUE = 2;
+	public static final int ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_ESTW_ZE_VALUE = 3;
 
 	/**
-	 * The '<em><b>ENUM Untergewerk Art BUE</b></em>' literal value.
+	 * The '<em><b>ENUM Untergewerk Art BU</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENUM_UNTERGEWERK_ART_BUE
-	 * @model name="ENUMUntergewerk_Art_BUE" literal="BUE"
+	 * @see #ENUM_UNTERGEWERK_ART_BU
+	 * @model name="ENUMUntergewerk_Art_BU" literal="B\334"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_BUE_VALUE = 3;
+	public static final int ENUM_UNTERGEWERK_ART_BU_VALUE = 4;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ESTW</b></em>' literal value.
@@ -181,7 +206,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_ESTW_VALUE = 4;
+	public static final int ENUM_UNTERGEWERK_ART_ESTW_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ETCS</b></em>' literal value.
@@ -192,7 +217,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_ETCS_VALUE = 5;
+	public static final int ENUM_UNTERGEWERK_ART_ETCS_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art Geo</b></em>' literal value.
@@ -203,7 +228,18 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_GEO_VALUE = 6;
+	public static final int ENUM_UNTERGEWERK_ART_GEO_VALUE = 7;
+
+	/**
+	 * The '<em><b>ENUM Untergewerk Art Kabel</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_UNTERGEWERK_ART_KABEL
+	 * @model name="ENUMUntergewerk_Art_Kabel" literal="Kabel"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_UNTERGEWERK_ART_KABEL_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art sonstige</b></em>' literal value.
@@ -214,7 +250,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_SONSTIGE_VALUE = 7;
+	public static final int ENUM_UNTERGEWERK_ART_SONSTIGE_VALUE = 9;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ZL</b></em>' literal value.
@@ -225,7 +261,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_ZL_VALUE = 8;
+	public static final int ENUM_UNTERGEWERK_ART_ZL_VALUE = 10;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ZLV Bus</b></em>' literal value.
@@ -236,7 +272,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_ZLV_BUS_VALUE = 9;
+	public static final int ENUM_UNTERGEWERK_ART_ZLV_BUS_VALUE = 11;
 
 	/**
 	 * The '<em><b>ENUM Untergewerk Art ZN</b></em>' literal value.
@@ -247,7 +283,7 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_UNTERGEWERK_ART_ZN_VALUE = 10;
+	public static final int ENUM_UNTERGEWERK_ART_ZN_VALUE = 12;
 
 	/**
 	 * An array of all the '<em><b>ENUM Untergewerk Art</b></em>' enumerators.
@@ -257,13 +293,15 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 */
 	private static final ENUMUntergewerkArt[] VALUES_ARRAY =
 		new ENUMUntergewerkArt[] {
+			ENUM_UNTERGEWERK_ART_ATO,
 			ENUM_UNTERGEWERK_ART_BEDIENUNG_ETCS,
 			ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_BZ,
 			ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_ESTW_ZE,
-			ENUM_UNTERGEWERK_ART_BUE,
+			ENUM_UNTERGEWERK_ART_BU,
 			ENUM_UNTERGEWERK_ART_ESTW,
 			ENUM_UNTERGEWERK_ART_ETCS,
 			ENUM_UNTERGEWERK_ART_GEO,
+			ENUM_UNTERGEWERK_ART_KABEL,
 			ENUM_UNTERGEWERK_ART_SONSTIGE,
 			ENUM_UNTERGEWERK_ART_ZL,
 			ENUM_UNTERGEWERK_ART_ZLV_BUS,
@@ -324,13 +362,15 @@ public enum ENUMUntergewerkArt implements Enumerator {
 	 */
 	public static ENUMUntergewerkArt get(int value) {
 		switch (value) {
+			case ENUM_UNTERGEWERK_ART_ATO_VALUE: return ENUM_UNTERGEWERK_ART_ATO;
 			case ENUM_UNTERGEWERK_ART_BEDIENUNG_ETCS_VALUE: return ENUM_UNTERGEWERK_ART_BEDIENUNG_ETCS;
 			case ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_BZ_VALUE: return ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_BZ;
 			case ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_ESTW_ZE_VALUE: return ENUM_UNTERGEWERK_ART_BEDIENUNG_FDL_ESTW_ZE;
-			case ENUM_UNTERGEWERK_ART_BUE_VALUE: return ENUM_UNTERGEWERK_ART_BUE;
+			case ENUM_UNTERGEWERK_ART_BU_VALUE: return ENUM_UNTERGEWERK_ART_BU;
 			case ENUM_UNTERGEWERK_ART_ESTW_VALUE: return ENUM_UNTERGEWERK_ART_ESTW;
 			case ENUM_UNTERGEWERK_ART_ETCS_VALUE: return ENUM_UNTERGEWERK_ART_ETCS;
 			case ENUM_UNTERGEWERK_ART_GEO_VALUE: return ENUM_UNTERGEWERK_ART_GEO;
+			case ENUM_UNTERGEWERK_ART_KABEL_VALUE: return ENUM_UNTERGEWERK_ART_KABEL;
 			case ENUM_UNTERGEWERK_ART_SONSTIGE_VALUE: return ENUM_UNTERGEWERK_ART_SONSTIGE;
 			case ENUM_UNTERGEWERK_ART_ZL_VALUE: return ENUM_UNTERGEWERK_ART_ZL;
 			case ENUM_UNTERGEWERK_ART_ZLV_BUS_VALUE: return ENUM_UNTERGEWERK_ART_ZLV_BUS;

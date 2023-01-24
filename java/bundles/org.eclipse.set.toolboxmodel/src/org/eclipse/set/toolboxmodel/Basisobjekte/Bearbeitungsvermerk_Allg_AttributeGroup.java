@@ -1,6 +1,15 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,9 +22,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBearbeitungsvermerkKennung <em>Bearbeitungsvermerk Kennung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBearbeitungsvermerkRolle <em>Bearbeitungsvermerk Rolle</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBestandsrelevanz <em>Bestandsrelevanz</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBVDarstellungInPlan <em>BV Darstellung In Plan</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBVKategorie <em>BV Kategorie</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getKommentar <em>Kommentar</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getKurztext <em>Kurztext</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getZeitBearbeitungsvermerk <em>Zeit Bearbeitungsvermerk</em>}</li>
@@ -26,32 +36,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Bearbeitungsvermerk_Allg_AttributeGroup extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Bearbeitungsvermerk Kennung</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Kennzeichnung, dass der Bearbeitungsvermerk für den Bestand (Bestandsdaten, Bestandspläne) relevant ist und deswegen über das Planungsprojekt hinweg abzuspeichern ist. Heute: Angaben im Erläuterungsbericht. Ergänzende Beschreibung zum Umgang im PlanPro-Planungsprozess Alle bestandsrelevanten Bearbeitungsvermerke sollten vor Erstellung der Bestandsdaten nochmal durch den LST-Fachplaner geprüft werden, da diese sich durch Einzelplanungen erübrigt haben könnten. Nicht bestandsrelevante Bearbeitungsvermerke werden automatisch bei Erstellung der Bestandsdaten im Planungswerkzeug gelöscht. DB-Regelwerk Bisher ohne eindeutige Darstellung.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Bearbeitungsvermerk Kennung</em>' containment reference.
-	 * @see #setBearbeitungsvermerkKennung(Bearbeitungsvermerk_Kennung_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getBearbeitungsvermerk_Allg_AttributeGroup_BearbeitungsvermerkKennung()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Bearbeitungsvermerk_Kennung'"
-	 * @generated
-	 */
-	Bearbeitungsvermerk_Kennung_TypeClass getBearbeitungsvermerkKennung();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBearbeitungsvermerkKennung <em>Bearbeitungsvermerk Kennung</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bearbeitungsvermerk Kennung</em>' containment reference.
-	 * @see #getBearbeitungsvermerkKennung()
-	 * @generated
-	 */
-	void setBearbeitungsvermerkKennung(Bearbeitungsvermerk_Kennung_TypeClass value);
-
 	/**
 	 * Returns the value of the '<em><b>Bearbeitungsvermerk Rolle</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -84,13 +68,9 @@ public interface Bearbeitungsvermerk_Allg_AttributeGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Relevanz eines Bearbeitungsvermerks für die Übernahme in den Bestand (Bestandsdaten bzw. Bestandspläne).
-	 * 
 	 * nein - Nur gültig innerhalb einer Planungsgruppe. Der BV ist vor Erstellen der Bestandsdaten einer Planungsgruppe zu löschen.
-	 * 
 	 * Bestandsdaten - Gültig innerhalb eines Planungsprojekts bis vor Erstellen einer Bestandsdokumentation, d. h. der BV kann in den Bestandsdaten enthalten bleiben, ist jedoch vor Erstellen einer Bestandsdokumentation zu löschen.
-	 * 
 	 * Bestandsdokumentation - Gültig innerhalb eines Planungsprojekts bis vor Erstellen der letzten Bestandsdokumentation, d. h. der BV kann über mehrere Planungsgruppen hinaus enthalten bleiben, ist jedoch vor Projektabschluss zu löschen.
-	 * 
 	 * dauerhaft - Gültig über das Gesamtprojekt hinaus auch nach Erstellen der letzten Bestandsdokumentation.
 	 * Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  geändert/gelöscht werden.
 	 * <!-- end-model-doc -->
@@ -112,6 +92,48 @@ public interface Bearbeitungsvermerk_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setBestandsrelevanz(Bestandsrelevanz_TypeClass value);
+
+	/**
+	 * Returns the value of the '<em><b>BV Darstellung In Plan</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Basisobjekte.BV_Darstellung_In_Plan_TypeClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Angabe des Plans, in dem der Bearbeitungsvermerk dargestellt werden soll.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>BV Darstellung In Plan</em>' containment reference list.
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getBearbeitungsvermerk_Allg_AttributeGroup_BVDarstellungInPlan()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='BV_Darstellung_In_Plan'"
+	 * @generated
+	 */
+	EList<BV_Darstellung_In_Plan_TypeClass> getBVDarstellungInPlan();
+
+	/**
+	 * Returns the value of the '<em><b>BV Kategorie</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Kategorisierung des Bearbeitungsvermerks zur Sortierung und Filterung (z. B. zur Ablage von Zusatzinformationen für besondere Anwendungsfälle)
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>BV Kategorie</em>' containment reference.
+	 * @see #setBVKategorie(BV_Kategorie_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getBearbeitungsvermerk_Allg_AttributeGroup_BVKategorie()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='BV_Kategorie'"
+	 * @generated
+	 */
+	BV_Kategorie_TypeClass getBVKategorie();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk_Allg_AttributeGroup#getBVKategorie <em>BV Kategorie</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>BV Kategorie</em>' containment reference.
+	 * @see #getBVKategorie()
+	 * @generated
+	 */
+	void setBVKategorie(BV_Kategorie_TypeClass value);
 
 	/**
 	 * Returns the value of the '<em><b>Kommentar</b></em>' containment reference.

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Basisobjekte;
 
@@ -19,6 +26,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ENUMRolle implements Enumerator {
 	/**
+	 * The '<em><b>ENUM Rolle GEO Planer</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_ROLLE_GEO_PLANER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_ROLLE_GEO_PLANER(0, "ENUMRolle_GEO_Planer", "GEO_Planer"),
+
+	/**
 	 * The '<em><b>ENUM Rolle GIS Daten</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +43,7 @@ public enum ENUMRolle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_ROLLE_GIS_DATEN(0, "ENUMRolle_GIS_Daten", "GIS_Daten"),
+	ENUM_ROLLE_GIS_DATEN(1, "ENUMRolle_GIS_Daten", "GIS_Daten"),
 
 	/**
 	 * The '<em><b>ENUM Rolle LST Fachplaner</b></em>' literal object.
@@ -36,7 +53,7 @@ public enum ENUMRolle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_ROLLE_LST_FACHPLANER(1, "ENUMRolle_LST_Fachplaner", "LST_Fachplaner"),
+	ENUM_ROLLE_LST_FACHPLANER(2, "ENUMRolle_LST_Fachplaner", "LST_Fachplaner"),
 
 	/**
 	 * The '<em><b>ENUM Rolle sonstige</b></em>' literal object.
@@ -46,7 +63,18 @@ public enum ENUMRolle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_ROLLE_SONSTIGE(2, "ENUMRolle_sonstige", "sonstige");
+	ENUM_ROLLE_SONSTIGE(3, "ENUMRolle_sonstige", "sonstige");
+
+	/**
+	 * The '<em><b>ENUM Rolle GEO Planer</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_ROLLE_GEO_PLANER
+	 * @model name="ENUMRolle_GEO_Planer" literal="GEO_Planer"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_ROLLE_GEO_PLANER_VALUE = 0;
 
 	/**
 	 * The '<em><b>ENUM Rolle GIS Daten</b></em>' literal value.
@@ -57,7 +85,7 @@ public enum ENUMRolle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_ROLLE_GIS_DATEN_VALUE = 0;
+	public static final int ENUM_ROLLE_GIS_DATEN_VALUE = 1;
 
 	/**
 	 * The '<em><b>ENUM Rolle LST Fachplaner</b></em>' literal value.
@@ -68,7 +96,7 @@ public enum ENUMRolle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_ROLLE_LST_FACHPLANER_VALUE = 1;
+	public static final int ENUM_ROLLE_LST_FACHPLANER_VALUE = 2;
 
 	/**
 	 * The '<em><b>ENUM Rolle sonstige</b></em>' literal value.
@@ -79,7 +107,7 @@ public enum ENUMRolle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_ROLLE_SONSTIGE_VALUE = 2;
+	public static final int ENUM_ROLLE_SONSTIGE_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>ENUM Rolle</b></em>' enumerators.
@@ -89,6 +117,7 @@ public enum ENUMRolle implements Enumerator {
 	 */
 	private static final ENUMRolle[] VALUES_ARRAY =
 		new ENUMRolle[] {
+			ENUM_ROLLE_GEO_PLANER,
 			ENUM_ROLLE_GIS_DATEN,
 			ENUM_ROLLE_LST_FACHPLANER,
 			ENUM_ROLLE_SONSTIGE,
@@ -148,6 +177,7 @@ public enum ENUMRolle implements Enumerator {
 	 */
 	public static ENUMRolle get(int value) {
 		switch (value) {
+			case ENUM_ROLLE_GEO_PLANER_VALUE: return ENUM_ROLLE_GEO_PLANER;
 			case ENUM_ROLLE_GIS_DATEN_VALUE: return ENUM_ROLLE_GIS_DATEN;
 			case ENUM_ROLLE_LST_FACHPLANER_VALUE: return ENUM_ROLLE_LST_FACHPLANER;
 			case ENUM_ROLLE_SONSTIGE_VALUE: return ENUM_ROLLE_SONSTIGE;

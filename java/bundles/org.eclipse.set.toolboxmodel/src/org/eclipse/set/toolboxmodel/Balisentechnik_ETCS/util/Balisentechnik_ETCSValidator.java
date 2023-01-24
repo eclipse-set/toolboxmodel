@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.util;
 
@@ -114,12 +121,28 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
+			case Balisentechnik_ETCSPackage.ABSTAND_BES_LANGER_EINFAHRWEG_TYPE_CLASS:
+				return validateAbstand_Bes_Langer_Einfahrweg_TypeClass((Abstand_Bes_Langer_Einfahrweg_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EH_EM_FOLGESIGNAL_TYPE_CLASS:
+				return validateAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass((Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EP_TPI_TYPE_CLASS:
+				return validateAbstand_Datenpunkt_EP_TPI_TypeClass((Abstand_Datenpunkt_EP_TPI_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_TPI_FOLGESIGNAL_TYPE_CLASS:
+				return validateAbstand_Datenpunkt_TPI_Folgesignal_TypeClass((Abstand_Datenpunkt_TPI_Folgesignal_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_EINMESSPUNKT_TYPE_CLASS:
+				return validateAbstand_Einmesspunkt_TypeClass((Abstand_Einmesspunkt_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ABSTAND_GRENZE_BEREICH_CTYPE_CLASS:
 				return validateAbstand_Grenze_Bereich_C_TypeClass((Abstand_Grenze_Bereich_C_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_REDUZIERT_TYPE_CLASS:
+				return validateAbstand_Reduziert_TypeClass((Abstand_Reduziert_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ANLAGENTEIL_SONSTIGE_TYPE_CLASS:
 				return validateAnlagenteil_Sonstige_TypeClass((Anlagenteil_Sonstige_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ANORDNUNG_IM_DP_TYPE_CLASS:
 				return validateAnordnung_Im_DP_TypeClass((Anordnung_Im_DP_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ANWENDUNG_ESG_TYPE_CLASS:
+				return validateAnwendung_ESG_TypeClass((Anwendung_ESG_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ANWENDUNG_GNT_TYPE_CLASS:
+				return validateAnwendung_GNT_TypeClass((Anwendung_GNT_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ANWENDUNG_SONST_TYPE_CLASS:
 				return validateAnwendung_Sonst_TypeClass((Anwendung_Sonst_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ANWENDUNGSSYSTEM_TYPE_CLASS:
@@ -140,8 +163,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateBalise((Balise)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.BALISE_ALLG_ATTRIBUTE_GROUP:
 				return validateBalise_Allg_AttributeGroup((Balise_Allg_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.BASELINE_SRS_TYPE_CLASS:
-				return validateBaseline_SRS_TypeClass((Baseline_SRS_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BALISE_GERAETESTAND_TYPE_CLASS:
+				return validateBalise_Geraetestand_TypeClass((Balise_Geraetestand_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BALISENHALTER_TYPE_CLASS:
+				return validateBalisenhalter_TypeClass((Balisenhalter_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BASELINE_SYSTEM_VERSION_TYPE_CLASS:
+				return validateBaseline_System_Version_TypeClass((Baseline_System_Version_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.BEDINGUNG_BESONDERE_ATTRIBUTE_GROUP:
 				return validateBedingung_Besondere_AttributeGroup((Bedingung_Besondere_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.BEDINGUNG_PZB_ATTRIBUTE_GROUP:
@@ -180,14 +207,14 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateBgrenze_Nach_Ohne_Bed_Einstieg_AttributeGroup((Bgrenze_Nach_Ohne_Bed_Einstieg_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.BGRENZE_NACH_PZB_BED_EINSTIEG_ATTRIBUTE_GROUP:
 				return validateBgrenze_Nach_PZB_Bed_Einstieg_AttributeGroup((Bgrenze_Nach_PZB_Bed_Einstieg_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BGRENZE_NACH_ZBS_BED_EINSTIEG_ATTRIBUTE_GROUP:
+				return validateBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup((Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.BGRENZE_RBC_WECHSEL_BTS_KETTE_ATTRIBUTE_GROUP:
 				return validateBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup((Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.BINAERDATEI:
-				return validateBinaerdatei((Binaerdatei)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.BINAERDATEI_ALLG_ATTRIBUTE_GROUP:
-				return validateBinaerdatei_Allg_AttributeGroup((Binaerdatei_Allg_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.BREMSWEG_TYPE_CLASS:
-				return validateBremsweg_TypeClass((Bremsweg_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BINAERDATEN:
+				return validateBinaerdaten((Binaerdaten)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BINAERDATEN_DATEI_ATTRIBUTE_GROUP:
+				return validateBinaerdaten_Datei_AttributeGroup((Binaerdaten_Datei_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DLEVELTR_TYPE_CLASS:
 				return validateD_LEVELTR_TypeClass((D_LEVELTR_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DATEINAME_TYPE_CLASS:
@@ -202,6 +229,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateDatenpunkt_Allg_AttributeGroup((Datenpunkt_Allg_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DATENPUNKT_BESCHREIBUNG_TYPE_CLASS:
 				return validateDatenpunkt_Beschreibung_TypeClass((Datenpunkt_Beschreibung_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.DATENPUNKT_EINMESSPUNKT_ATTRIBUTE_GROUP:
+				return validateDatenpunkt_Einmesspunkt_AttributeGroup((Datenpunkt_Einmesspunkt_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LAENGE_TYPE_CLASS:
 				return validateDatenpunkt_Laenge_TypeClass((Datenpunkt_Laenge_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DATENPUNKT_LINK:
@@ -212,10 +241,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateDelta_VLES_TypeClass((Delta_VLES_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DELTA_VZES_TYPE_CLASS:
 				return validateDelta_VZES_TypeClass((Delta_VZES_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.DP_BEZUG_BETRIEBLICH_ART_TYPE_CLASS:
-				return validateDP_Bezug_Betrieblich_Art_TypeClass((DP_Bezug_Betrieblich_Art_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.DP_BEZUG_BETRIEBLICH_ATTRIBUTE_GROUP:
-				return validateDP_Bezug_Betrieblich_AttributeGroup((DP_Bezug_Betrieblich_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.DP_ATO_TYPE_CLASS:
+				return validateDP_ATO_TypeClass((DP_ATO_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.DP_BEZUG_FUNKTIONAL_ART_TYPE_CLASS:
+				return validateDP_Bezug_Funktional_Art_TypeClass((DP_Bezug_Funktional_Art_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.DP_BEZUG_FUNKTIONAL_ATTRIBUTE_GROUP:
+				return validateDP_Bezug_Funktional_AttributeGroup((DP_Bezug_Funktional_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DP_ETCS_ADRESSE_ATTRIBUTE_GROUP:
 				return validateDP_ETCS_Adresse_AttributeGroup((DP_ETCS_Adresse_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DP_LINK_ART_TYPE_CLASS:
@@ -254,6 +285,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateDP_Typ_V_La_TypeClass((DP_Typ_V_La_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DP_TYP_ZBS_TYPE_CLASS:
 				return validateDP_Typ_ZBS_TypeClass((DP_Typ_ZBS_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.DP_VERLINKT_TYPE_CLASS:
+				return validateDP_Verlinkt_TypeClass((DP_Verlinkt_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DUNKELSCHALTANSTOSS_TYPE_CLASS:
 				return validateDunkelschaltanstoss_TypeClass((Dunkelschaltanstoss_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.DWEG_INTERVALL_200_TYPE_CLASS:
@@ -284,18 +317,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateESG_Spezifische_Merkmale_AttributeGroup((ESG_Spezifische_Merkmale_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_ATTRIBUTE_GROUP:
 				return validateETCS_Adresse_AttributeGroup((ETCS_Adresse_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_KENNUNG_TYPE_CLASS:
-				return validateETCS_Adresse_Kennung_TypeClass((ETCS_Adresse_Kennung_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_BG_TYPE_CLASS:
-				return validateETCS_Adresse_NID_BG_TypeClass((ETCS_Adresse_NID_BG_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_CTYPE_CLASS:
-				return validateETCS_Adresse_NID_C_TypeClass((ETCS_Adresse_NID_C_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND_TYPE_CLASS:
+				return validateETCS_Gefahrpunktabstand_Abweichend_TypeClass((ETCS_Gefahrpunktabstand_Abweichend_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_KANTE:
 				return validateETCS_Kante((ETCS_Kante)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_KANTE_BEZEICHNUNG_ATTRIBUTE_GROUP:
 				return validateETCS_Kante_Bezeichnung_AttributeGroup((ETCS_Kante_Bezeichnung_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_KENNUNG_TYPE_CLASS:
-				return validateETCS_Kennung_TypeClass((ETCS_Kennung_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_KNOTEN:
 				return validateETCS_Knoten((ETCS_Knoten)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_KNOTEN_ART_SONSTIGE_TYPE_CLASS:
@@ -308,6 +335,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateETCS_Parametername_TypeClass((ETCS_Parametername_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_PARAMETERWERT_TYPE_CLASS:
 				return validateETCS_Parameterwert_TypeClass((ETCS_Parameterwert_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ETCS_RICHTUNGSANZEIGE:
+				return validateETCS_Richtungsanzeige((ETCS_Richtungsanzeige)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL:
 				return validateETCS_Signal((ETCS_Signal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL_ALLG_ATTRIBUTE_GROUP:
@@ -316,12 +345,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateETCS_Signal_DWeg_AttributeGroup((ETCS_Signal_DWeg_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_SIGNAL_TBV_ATTRIBUTE_GROUP:
 				return validateETCS_Signal_TBV_AttributeGroup((ETCS_Signal_TBV_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ETCS_SYSTEM_VERSION_TYPE_CLASS:
+				return validateETCS_System_Version_TypeClass((ETCS_System_Version_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_WKR:
 				return validateETCS_W_Kr((ETCS_W_Kr)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_WKR_MUKA_ATTRIBUTE_GROUP:
 				return validateETCS_W_Kr_MUKA_AttributeGroup((ETCS_W_Kr_MUKA_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_WORTSGESTELLT_TYPE_CLASS:
-				return validateETCS_W_Ortsgestellt_TypeClass((ETCS_W_Ortsgestellt_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.EV_MODUL:
 				return validateEV_Modul((EV_Modul)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.EV_MODUL_ART_TYPE_CLASS:
@@ -376,8 +405,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateFT_ZBS_Merkmale_La_AttributeGroup((FT_ZBS_Merkmale_La_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.FT_ZBS_TYP_TYPE_CLASS:
 				return validateFT_ZBS_Typ_TypeClass((FT_ZBS_Typ_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.GNT_MERKMALE_ATTRIBUTE_GROUP:
-				return validateGNT_Merkmale_AttributeGroup((GNT_Merkmale_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.FW_TEIL_NUMMER_TYPE_CLASS:
+				return validateFW_Teil_Nummer_TypeClass((FW_Teil_Nummer_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.GRUPPEN_ID_TYPE_CLASS:
 				return validateGruppen_ID_TypeClass((Gruppen_ID_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.HARTER_AUSSTIEG_AUS_L2_TYPE_CLASS:
@@ -386,8 +415,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateHersteller_TypeClass((Hersteller_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.HINWEIS_BALISENBEFESTIGUNG_TYPE_CLASS:
 				return validateHinweis_Balisenbefestigung_TypeClass((Hinweis_Balisenbefestigung_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.INDIVIDUELL_TYPE_CLASS:
-				return validateIndividuell_TypeClass((Individuell_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.INDIVIDUALISIERUNG_WEITERE_TYPE_CLASS:
+				return validateIndividualisierung_Weitere_TypeClass((Individualisierung_Weitere_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.IST_BEFAHREN_TYPE_CLASS:
 				return validateIst_Befahren_TypeClass((Ist_Befahren_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.KM_BTS_1TYPE_CLASS:
@@ -406,12 +435,20 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateLaenge_1_TypeClass((Laenge_1_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LAENGE_AUSFUEHRUNGSBEREICH_TYPE_CLASS:
 				return validateLaenge_Ausfuehrungsbereich_TypeClass((Laenge_Ausfuehrungsbereich_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LAENGE_GESTUFTE_VSIGNALISIERUNG_TYPE_CLASS:
+				return validateLaenge_Gestufte_V_Signalisierung_TypeClass((Laenge_Gestufte_V_Signalisierung_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LAENGE_SOLL_MIND_150_TYPE_CLASS:
+				return validateLaenge_Soll_Mind_150_TypeClass((Laenge_Soll_Mind_150_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LEISTUNGSBEDARF_TYPE_CLASS:
+				return validateLeistungsbedarf_TypeClass((Leistungsbedarf_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE:
 				return validateLEU_Anlage((LEU_Anlage)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE_ALLG_ATTRIBUTE_GROUP:
+				return validateLEU_Anlage_Allg_AttributeGroup((LEU_Anlage_Allg_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LEU_ANLAGE_ART_TYPE_CLASS:
+				return validateLEU_Anlage_Art_TypeClass((LEU_Anlage_Art_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_ANLAGE_BEZEICHNUNG_ATTRIBUTE_GROUP:
 				return validateLEU_Anlage_Bezeichnung_AttributeGroup((LEU_Anlage_Bezeichnung_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.LEU_ANLAGE_MODULEIGENSCHAFTEN_ATTRIBUTE_GROUP:
-				return validateLEU_Anlage_Moduleigenschaften_AttributeGroup((LEU_Anlage_Moduleigenschaften_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_AUSGANG_NR_TYPE_CLASS:
 				return validateLEU_Ausgang_Nr_TypeClass((LEU_Ausgang_Nr_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_MODUL:
@@ -424,6 +461,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateLEU_Modul_Ausgang_AttributeGroup((LEU_Modul_Ausgang_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_MODUL_BEZEICHNUNG_ATTRIBUTE_GROUP:
 				return validateLEU_Modul_Bezeichnung_AttributeGroup((LEU_Modul_Bezeichnung_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LEU_MODUL_GERAETESTAND_TYPE_CLASS:
+				return validateLEU_Modul_Geraetestand_TypeClass((LEU_Modul_Geraetestand_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_MODUL_TYP_TYPE_CLASS:
 				return validateLEU_Modul_Typ_TypeClass((LEU_Modul_Typ_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN:
@@ -440,14 +479,16 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateLEU_Steuernde_AttributeGroup((LEU_Steuernde_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LFD_NR_AM_BEZUGSPUNKT_TYPE_CLASS:
 				return validateLfd_Nr_Am_Bezugspunkt_TypeClass((Lfd_Nr_Am_Bezugspunkt_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.LFD_NR_IN_TELEGR_SPEC_TYPE_CLASS:
-				return validateLfdNr_in_Telegr_Spec_TypeClass((LfdNr_in_Telegr_Spec_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LINK_DISTANZ_TYPE_CLASS:
 				return validateLink_Distanz_TypeClass((Link_Distanz_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LLA_TYPE_CLASS:
 				return validateLLA_TypeClass((LLA_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LM_GTYPE_CLASS:
 				return validateLM_G_TypeClass((LM_G_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LT_BINAERDATEI_HILFE_ATTRIBUTE_GROUP:
+				return validateLT_Binaerdatei_Hilfe_AttributeGroup((LT_Binaerdatei_Hilfe_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LT_BINAERDATEN_ATTRIBUTE_GROUP:
+				return validateLT_Binaerdaten_AttributeGroup((LT_Binaerdaten_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LUFT_TELEGRAMM:
 				return validateLuft_Telegramm((Luft_Telegramm)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MLEVELTR_TYPE_CLASS:
@@ -456,26 +497,42 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateMassgebende_Neig_1_TypeClass((Massgebende_Neig_1_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIG_SCHUTZSTRECKE_TYPE_CLASS:
 				return validateMassgebende_Neig_Schutzstrecke_TypeClass((Massgebende_Neig_Schutzstrecke_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_150_TYPE_CLASS:
+				return validateMassgebende_Neigung_Mind_150_TypeClass((Massgebende_Neigung_Mind_150_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_150_TYPE_CLASS:
+				return validateMassgebende_Neigung_Mind_Sig_150_TypeClass((Massgebende_Neigung_Mind_Sig_150_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_TYPE_CLASS:
+				return validateMassgebende_Neigung_Mind_Sig_TypeClass((Massgebende_Neigung_Mind_Sig_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MASTSCHILD_TYPE_CLASS:
 				return validateMastschild_TypeClass((Mastschild_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MAX_LEISTUNG_TYPE_CLASS:
 				return validateMax_Leistung_TypeClass((Max_Leistung_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MAX_UNTERBRECHUNGSZEIT_TYPE_CLASS:
 				return validateMax_Unterbrechungszeit_TypeClass((Max_Unterbrechungszeit_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.METALLTEIL_TYPE_CLASS:
-				return validateMetallteil_TypeClass((Metallteil_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.METALLTEIL_ATTRIBUTE_GROUP:
+				return validateMetallteil_AttributeGroup((Metallteil_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.METALLTEIL_KATEGORIE_TYPE_CLASS:
+				return validateMetallteil_Kategorie_TypeClass((Metallteil_Kategorie_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.METALLTEIL_LAENGE_TYPE_CLASS:
+				return validateMetallteil_Laenge_TypeClass((Metallteil_Laenge_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MODULNUMMER_TYPE_CLASS:
 				return validateModulnummer_TypeClass((Modulnummer_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MONTAGEABWEICHUNG_TYPE_CLASS:
+				return validateMontageabweichung_TypeClass((Montageabweichung_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NEIGUNG_TYPE_CLASS:
 				return validateNeigung_TypeClass((Neigung_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NENNLEISTUNG_TYPE_CLASS:
 				return validateNennleistung_TypeClass((Nennleistung_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.NID_BG_TYPE_CLASS:
+				return validateNID_BG_TypeClass((NID_BG_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NID_CTYPE_CLASS:
 				return validateNID_C_TypeClass((NID_C_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NID_RBC_TYPE_CLASS:
 				return validateNID_RBC_TypeClass((NID_RBC_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NID_STM_TYPE_CLASS:
 				return validateNID_STM_TypeClass((NID_STM_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.NID_TSR_TYPE_CLASS:
+				return validateNID_TSR_TypeClass((NID_TSR_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NUMMER_SCHALTKASTEN_TYPE_CLASS:
 				return validateNummer_Schaltkasten_TypeClass((Nummer_Schaltkasten_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.OBERSTROMBEGRENZUNG_GUETERZUG_TYPE_CLASS:
@@ -496,12 +553,14 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateProg_Datei_Einzel_AttributeGroup((Prog_Datei_Einzel_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.PROG_DATEI_GRUPPE:
 				return validateProg_Datei_Gruppe((Prog_Datei_Gruppe)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.PROJEKTIERUNGSFALL_TYPE_CLASS:
+				return validateProjektierungsfall_TypeClass((Projektierungsfall_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.RBC:
 				return validateRBC((RBC)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.RBC_ALLG_ATTRIBUTE_GROUP:
 				return validateRBC_Allg_AttributeGroup((RBC_Allg_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.RBC_SRS_UNTERVERSION_TYPE_CLASS:
-				return validateRBC_SRS_Unterversion_TypeClass((RBC_SRS_Unterversion_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.RBC_ETCS_SYSTEM_VERSION_TYPE_CLASS:
+				return validateRBC_ETCS_System_Version_TypeClass((RBC_ETCS_System_Version_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.RBC_SRS_VERSION_TYPE_CLASS:
 				return validateRBC_SRS_Version_TypeClass((RBC_SRS_Version_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.REKURSION_2NR_TYPE_CLASS:
@@ -516,6 +575,10 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateSchutzstrecke_Erforderlich_TypeClass((Schutzstrecke_Erforderlich_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SCHUTZSTRECKE_VORHANDEN_TYPE_CLASS:
 				return validateSchutzstrecke_Vorhanden_TypeClass((Schutzstrecke_Vorhanden_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_150_TYPE_CLASS:
+				return validateSolllaenge_Mind_Sig_150_TypeClass((Solllaenge_Mind_Sig_150_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_TYPE_CLASS:
+				return validateSolllaenge_Mind_Sig_TypeClass((Solllaenge_Mind_Sig_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SONSTIGE_STANDORTANGABE_TYPE_CLASS:
 				return validateSonstige_Standortangabe_TypeClass((Sonstige_Standortangabe_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SPANNUNG_ART_TYPE_CLASS:
@@ -524,8 +587,6 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateSpannung_Toleranz_Obere_TypeClass((Spannung_Toleranz_Obere_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_UNTERE_TYPE_CLASS:
 				return validateSpannung_Toleranz_Untere_TypeClass((Spannung_Toleranz_Untere_TypeClass)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.SRS_UNTERVERSION_TYPE_CLASS:
-				return validateSRS_Unterversion_TypeClass((SRS_Unterversion_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SRS_VERSION_TYPE_CLASS:
 				return validateSRS_Version_TypeClass((SRS_Version_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.STANDORTANGABE_BALISENSCHILD_TYPE_CLASS:
@@ -544,12 +605,18 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateTBV_Tunnelbereich_Laenge_TypeClass((TBV_Tunnelbereich_Laenge_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.TBV_TUNNELSIGNAL_TYPE_CLASS:
 				return validateTBV_Tunnelsignal_TypeClass((TBV_Tunnelsignal_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.TELEGRAMM_INDEX_TYPE_CLASS:
+				return validateTelegramm_Index_TypeClass((Telegramm_Index_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.TELEGRAMMNUMMER_TYPE_CLASS:
 				return validateTelegrammnummer_TypeClass((Telegrammnummer_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.TEXT_BEDINGUNG_TYPE_CLASS:
 				return validateText_Bedingung_TypeClass((Text_Bedingung_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.TEXTMELDUNG_TYPE_CLASS:
+				return validateTextmeldung_TypeClass((Textmeldung_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE_CLASS:
 				return validateUeberbrueckung_EV_Unterbrechung_TypeClass((Ueberbrueckung_EV_Unterbrechung_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.UEBERWACHUNG_LAENGE_TYPE_CLASS:
+				return validateUeberwachung_Laenge_TypeClass((Ueberwachung_Laenge_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.UMFAHRSTRASSE_TYPE_CLASS:
 				return validateUmfahrstrasse_TypeClass((Umfahrstrasse_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.UNTERGRUPPEN_ID_TYPE_CLASS:
@@ -560,16 +627,32 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateV_Befehl_Z_TypeClass((V_Befehl_Z_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VFREI_TYPE_CLASS:
 				return validateV_Frei_TypeClass((V_Frei_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VSTART_TYPE_CLASS:
+				return validateV_Start_TypeClass((V_Start_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VZIEL_TYPE_CLASS:
+				return validateV_Ziel_TypeClass((V_Ziel_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VZUL_STRECKE_TYPE_CLASS:
 				return validateV_Zul_Strecke_TypeClass((V_Zul_Strecke_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VBC_KENNUNG_TYPE_CLASS:
+				return validateVBC_Kennung_TypeClass((VBC_Kennung_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VBC_NID_CTYPE_CLASS:
+				return validateVBC_NID_C_TypeClass((VBC_NID_C_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VBC_SETZEN_TYPE_CLASS:
+				return validateVBC_Setzen_TypeClass((VBC_Setzen_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VBC_TIMER_TYPE_CLASS:
+				return validateVBC_Timer_TypeClass((VBC_Timer_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VERBOT_ANHALTEN_TYPE_CLASS:
 				return validateVerbot_Anhalten_TypeClass((Verbot_Anhalten_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VERBOT_REGENERATIVE_BREMSE_TYPE_CLASS:
 				return validateVerbot_Regenerative_Bremse_TypeClass((Verbot_Regenerative_Bremse_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VERBOT_WB_ART_TYPE_CLASS:
 				return validateVerbot_WB_Art_TypeClass((Verbot_WB_Art_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VERKUERZTER_ABSTAND_TYPE_CLASS:
+				return validateVerkuerzter_Abstand_TypeClass((Verkuerzter_Abstand_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VERWENDUNG_ALS_RUECKFALL_TYPE_CLASS:
 				return validateVerwendung_Als_Rueckfall_TypeClass((Verwendung_Als_Rueckfall_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VERWENDUNG_HILFE_TYPE_CLASS:
+				return validateVerwendung_Hilfe_TypeClass((Verwendung_Hilfe_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VERWENDUNG_TYPE_CLASS:
 				return validateVerwendung_TypeClass((Verwendung_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VGR_1TYPE_CLASS:
@@ -580,6 +663,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateVGR_TypeClass((VGR_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VLA_TYPE_CLASS:
 				return validateVLA_TypeClass((VLA_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VORSIGNALABSTAND_TYPE_CLASS:
+				return validateVorsignalabstand_TypeClass((Vorsignalabstand_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VZ_TYPE_CLASS:
 				return validateVZ_TypeClass((VZ_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.WANSCHLUSS_TYPE_CLASS:
@@ -602,6 +687,14 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateZBS_Merkmale_AttributeGroup((ZBS_Merkmale_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZBS_REAKTION_TYPE_CLASS:
 				return validateZBS_Reaktion_TypeClass((ZBS_Reaktion_TypeClass)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ZBS_SCHUTZSTRECKE:
+				return validateZBS_Schutzstrecke((ZBS_Schutzstrecke)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ZBS_SCHUTZSTRECKE_ALLG_ATTRIBUTE_GROUP:
+				return validateZBS_Schutzstrecke_Allg_AttributeGroup((ZBS_Schutzstrecke_Allg_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ZBS_SIGNAL:
+				return validateZBS_Signal((ZBS_Signal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ZBS_SIGNAL_SIGNALABSTAND_ATTRIBUTE_GROUP:
+				return validateZBS_Signal_Signalabstand_AttributeGroup((ZBS_Signal_Signalabstand_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZIEL_DP_AUSRICHTUNG_TYPE_CLASS:
 				return validateZiel_DP_Ausrichtung_TypeClass((Ziel_DP_Ausrichtung_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZIEL_IST_FAHRWEGENDE_TYPE_CLASS:
@@ -618,10 +711,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateZUB_Bereichsgrenze_Bezeichnung_AttributeGroup((ZUB_Bereichsgrenze_Bezeichnung_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_ESG_ATTRIBUTE_GROUP:
 				return validateZUB_Bereichsgrenze_Nach_ESG_AttributeGroup((ZUB_Bereichsgrenze_Nach_ESG_AttributeGroup)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_GNT_ATTRIBUTE_GROUP:
-				return validateZUB_Bereichsgrenze_Nach_GNT_AttributeGroup((ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_GNT_TYPE_CLASS:
+				return validateZUB_Bereichsgrenze_Nach_GNT_TypeClass((ZUB_Bereichsgrenze_Nach_GNT_TypeClass)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_ATTRIBUTE_GROUP:
 				return validateZUB_Bereichsgrenze_Nach_L2_AttributeGroup((ZUB_Bereichsgrenze_Nach_L2_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_L2_VON_ESG_ATTRIBUTE_GROUP:
+				return validateZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup((ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_LZB_ATTRIBUTE_GROUP:
 				return validateZUB_Bereichsgrenze_Nach_LZB_AttributeGroup((ZUB_Bereichsgrenze_Nach_LZB_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_OHNE_ATTRIBUTE_GROUP:
@@ -630,6 +725,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateZUB_Bereichsgrenze_Nach_PZB_AttributeGroup((ZUB_Bereichsgrenze_Nach_PZB_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_SONSTIGE_ATTRIBUTE_GROUP:
 				return validateZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup((ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ZUB_BEREICHSGRENZE_NACH_ZBS_ATTRIBUTE_GROUP:
+				return validateZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup((ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZUB_BGRENZE_RBC_WECHSEL_ATTRIBUTE_GROUP:
 				return validateZUB_Bgrenze_RBC_Wechsel_AttributeGroup((ZUB_Bgrenze_RBC_Wechsel_AttributeGroup)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ZUB_SE_AUSRUESTUNG_ATTRIBUTE_GROUP:
@@ -642,8 +739,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateENUMArtBedingung((ENUMArtBedingung)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUM_AUSSTIEG_ETCS_SPERRE:
 				return validateENUMAusstiegETCSSperre((ENUMAusstiegETCSSperre)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_BETRIEBLICH_ART:
-				return validateENUMDPBezugBetrieblichArt((ENUMDPBezugBetrieblichArt)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUM_BALISENHALTER:
+				return validateENUMBalisenhalter((ENUMBalisenhalter)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUMDPATO:
+				return validateENUMDPATO((ENUMDPATO)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_FUNKTIONAL_ART:
+				return validateENUMDPBezugFunktionalArt((ENUMDPBezugFunktionalArt)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMDP_LINK_ART:
 				return validateENUMDPLinkArt((ENUMDPLinkArt)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMDP_TYP_ART:
@@ -670,8 +771,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateENUMFTHinweisFunktion((ENUMFTHinweisFunktion)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMFTZBS_TYP:
 				return validateENUMFTZBSTyp((ENUMFTZBSTyp)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ENUMLEU_MODUL_ART:
-				return validateENUMLEUModulArt((ENUMLEUModulArt)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUMLEU_ART:
+				return validateENUMLEUArt((ENUMLEUArt)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMMLEVELTR:
 				return validateENUMMLEVELTR((ENUMMLEVELTR)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMNIDSTM:
@@ -694,6 +795,16 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateENUMWAnschluss((ENUMWAnschluss)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMZBS_REAKTION:
 				return validateENUMZBSReaktion((ENUMZBSReaktion)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_BES_LANGER_EINFAHRWEG_TYPE:
+				return validateAbstand_Bes_Langer_Einfahrweg_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EH_EM_FOLGESIGNAL_TYPE:
+				return validateAbstand_Datenpunkt_EH_EM_Folgesignal_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_EP_TPI_TYPE:
+				return validateAbstand_Datenpunkt_EP_TPI_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_DATENPUNKT_TPI_FOLGESIGNAL_TYPE:
+				return validateAbstand_Datenpunkt_TPI_Folgesignal_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ABSTAND_EINMESSPUNKT_TYPE:
+				return validateAbstand_Einmesspunkt_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ABSTAND_GRENZE_BEREICH_CTYPE:
 				return validateAbstand_Grenze_Bereich_C_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ANLAGENTEIL_SONSTIGE_TYPE:
@@ -708,8 +819,10 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateAnzeigetext_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.AUSGANG_NR_TYPE:
 				return validateAusgang_Nr_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.BASELINE_SRS_TYPE:
-				return validateBaseline_SRS_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BALISE_GERAETESTAND_TYPE:
+				return validateBalise_Geraetestand_Type((String)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.BASELINE_SYSTEM_VERSION_TYPE:
+				return validateBaseline_System_Version_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.BEDINGUNG_WEICHENLAGE_TYPE:
 				return validateBedingung_Weichenlage_Type((ENUMLinksRechts)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.BEZ_STRECKE_BTS_1TYPE:
@@ -758,8 +871,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateENUMArtBedingungObject((ENUMArtBedingung)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUM_AUSSTIEG_ETCS_SPERRE_OBJECT:
 				return validateENUMAusstiegETCSSperreObject((ENUMAusstiegETCSSperre)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_BETRIEBLICH_ART_OBJECT:
-				return validateENUMDPBezugBetrieblichArtObject((ENUMDPBezugBetrieblichArt)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUM_BALISENHALTER_OBJECT:
+				return validateENUMBalisenhalterObject((ENUMBalisenhalter)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUMDPATO_OBJECT:
+				return validateENUMDPATOObject((ENUMDPATO)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUMDP_BEZUG_FUNKTIONAL_ART_OBJECT:
+				return validateENUMDPBezugFunktionalArtObject((ENUMDPBezugFunktionalArt)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMDP_LINK_ART_OBJECT:
 				return validateENUMDPLinkArtObject((ENUMDPLinkArt)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMDP_TYP_ART_OBJECT:
@@ -786,8 +903,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateENUMFTHinweisFunktionObject((ENUMFTHinweisFunktion)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMFTZBS_TYP_OBJECT:
 				return validateENUMFTZBSTypObject((ENUMFTZBSTyp)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ENUMLEU_MODUL_ART_OBJECT:
-				return validateENUMLEUModulArtObject((ENUMLEUModulArt)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ENUMLEU_ART_OBJECT:
+				return validateENUMLEUArtObject((ENUMLEUArt)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMMLEVELTR_OBJECT:
 				return validateENUMMLEVELTRObject((ENUMMLEVELTR)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ENUMNIDSTM_OBJECT:
@@ -816,14 +933,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateESG_Ind_Parameter_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ESG_IND_PARAMETERWERT_TYPE:
 				return validateESG_Ind_Parameterwert_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_KENNUNG_TYPE:
-				return validateETCS_Adresse_Kennung_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_BG_TYPE:
-				return validateETCS_Adresse_NID_BG_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_ADRESSE_NID_CTYPE:
-				return validateETCS_Adresse_NID_C_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.ETCS_KENNUNG_TYPE:
-				return validateETCS_Kennung_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ETCS_GEFAHRPUNKTABSTAND_ABWEICHEND_TYPE:
+				return validateETCS_Gefahrpunktabstand_Abweichend_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_PAKETNUMMER_TYPE:
 				return validateETCS_Paketnummer_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_PAR_ERLAEUTERUNG_TYPE:
@@ -832,6 +943,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateETCS_Parametername_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.ETCS_PARAMETERWERT_TYPE:
 				return validateETCS_Parameterwert_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.ETCS_SYSTEM_VERSION_TYPE:
+				return validateETCS_System_Version_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.EV_MODUL_TYP_TYPE:
 				return validateEV_Modul_Typ_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.FABRIKAT_TYPE:
@@ -842,10 +955,14 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateFT_ESG_Typ_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.FT_ETCS_L2_TYP_TYPE:
 				return validateFT_ETCS_L2_Typ_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.FW_TEIL_NUMMER_TYPE:
+				return validateFW_Teil_Nummer_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.GRUPPEN_ID_TYPE:
 				return validateGruppen_ID_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.HINWEIS_BALISENBEFESTIGUNG_TYPE:
 				return validateHinweis_Balisenbefestigung_Type((String)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.INDIVIDUALISIERUNG_WEITERE_TYPE:
+				return validateIndividualisierung_Weitere_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.KM_BTS_1TYPE:
 				return validateKm_BTS_1_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.KM_BTS_2TYPE:
@@ -860,16 +977,22 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateLaenge_1_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LAENGE_AUSFUEHRUNGSBEREICH_TYPE:
 				return validateLaenge_Ausfuehrungsbereich_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LAENGE_GESTUFTE_VSIGNALISIERUNG_TYPE:
+				return validateLaenge_Gestufte_V_Signalisierung_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LAENGE_SOLL_MIND_150_TYPE:
+				return validateLaenge_Soll_Mind_150_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LEISTUNGSBEDARF_TYPE:
+				return validateLeistungsbedarf_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_AUSGANG_NR_TYPE:
 				return validateLEU_Ausgang_Nr_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.LEU_MODUL_GERAETESTAND_TYPE:
+				return validateLEU_Modul_Geraetestand_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_MODUL_TYP_TYPE:
 				return validateLEU_Modul_Typ_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN_TYP_TYPE:
 				return validateLEU_Schaltkasten_Typ_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LFD_NR_AM_BEZUGSPUNKT_TYPE:
 				return validateLfd_Nr_Am_Bezugspunkt_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.LFD_NR_IN_TELEGR_SPEC_TYPE:
-				return validateLfdNr_in_Telegr_Spec_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LINK_DISTANZ_TYPE:
 				return validateLink_Distanz_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.LLA_TYPE:
@@ -878,22 +1001,36 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateMassgebende_Neig_1_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIG_SCHUTZSTRECKE_TYPE:
 				return validateMassgebende_Neig_Schutzstrecke_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_150_TYPE:
+				return validateMassgebende_Neigung_Mind_150_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_150_TYPE:
+				return validateMassgebende_Neigung_Mind_Sig_150_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MASSGEBENDE_NEIGUNG_MIND_SIG_TYPE:
+				return validateMassgebende_Neigung_Mind_Sig_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MAX_LEISTUNG_TYPE:
 				return validateMax_Leistung_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MAX_UNTERBRECHUNGSZEIT_TYPE:
 				return validateMax_Unterbrechungszeit_Type((BigDecimal)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.METALLTEIL_TYPE:
-				return validateMetallteil_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.METALLTEIL_KATEGORIE_TYPE:
+				return validateMetallteil_Kategorie_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.METALLTEIL_LAENGE_TYPE:
+				return validateMetallteil_Laenge_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.MODULNUMMER_TYPE:
 				return validateModulnummer_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.MONTAGEABWEICHUNG_TYPE:
+				return validateMontageabweichung_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NEIGUNG_TYPE:
 				return validateNeigung_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NENNLEISTUNG_TYPE:
 				return validateNennleistung_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.NID_BG_TYPE:
+				return validateNID_BG_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NID_CTYPE:
 				return validateNID_C_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NID_RBC_TYPE:
 				return validateNID_RBC_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.NID_TSR_TYPE:
+				return validateNID_TSR_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.NUMMER_SCHALTKASTEN_TYPE:
 				return validateNummer_Schaltkasten_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.OBERSTROMBEGRENZUNG_GUETERZUG_TYPE:
@@ -906,10 +1043,12 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validatePosition_Sonstige_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.PRIORITAET_TYPE:
 				return validatePrioritaet_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.RBC_SRS_UNTERVERSION_TYPE:
-				return validateRBC_SRS_Unterversion_Type((String)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.PROJEKTIERUNGSFALL_TYPE:
+				return validateProjektierungsfall_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.RBC_ETCS_SYSTEM_VERSION_TYPE:
+				return validateRBC_ETCS_System_Version_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.RBC_SRS_VERSION_TYPE:
-				return validateRBC_SRS_Version_Type((BigInteger)value, diagnostics, context);
+				return validateRBC_SRS_Version_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.REKURSION_2NR_TYPE:
 				return validateRekursion_2_Nr_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.REKURSION_NR_TYPE:
@@ -920,26 +1059,34 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateSchutzstrecke_Erforderlich_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SCHUTZSTRECKE_VORHANDEN_TYPE:
 				return validateSchutzstrecke_Vorhanden_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_150_TYPE:
+				return validateSolllaenge_Mind_Sig_150_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.SOLLLAENGE_MIND_SIG_TYPE:
+				return validateSolllaenge_Mind_Sig_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SONSTIGE_STANDORTANGABE_TYPE:
 				return validateSonstige_Standortangabe_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_OBERE_TYPE:
 				return validateSpannung_Toleranz_Obere_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SPANNUNG_TOLERANZ_UNTERE_TYPE:
 				return validateSpannung_Toleranz_Untere_Type((BigInteger)value, diagnostics, context);
-			case Balisentechnik_ETCSPackage.SRS_UNTERVERSION_TYPE:
-				return validateSRS_Unterversion_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SRS_VERSION_TYPE:
 				return validateSRS_Version_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.SYSTEM_VOR_GRENZE_BESONDERS_TYPE:
 				return validateSystem_Vor_Grenze_Besonders_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.TBV_TUNNELBEREICH_LAENGE_TYPE:
 				return validateTBV_Tunnelbereich_Laenge_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.TELEGRAMM_INDEX_TYPE:
+				return validateTelegramm_Index_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.TELEGRAMMNUMMER_TYPE:
 				return validateTelegrammnummer_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.TEXT_BEDINGUNG_TYPE:
 				return validateText_Bedingung_Type((String)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.TEXTMELDUNG_TYPE:
+				return validateTextmeldung_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE:
 				return validateUeberbrueckung_EV_Unterbrechung_Type((BigDecimal)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.UEBERWACHUNG_LAENGE_TYPE:
+				return validateUeberwachung_Laenge_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.UNTERGRUPPEN_ID_TYPE:
 				return validateUntergruppen_ID_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VBEFEHL_RTYPE:
@@ -948,10 +1095,24 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateV_Befehl_Z_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VFREI_TYPE:
 				return validateV_Frei_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VSTART_TYPE:
+				return validateV_Start_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VZIEL_TYPE:
+				return validateV_Ziel_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VZUL_STRECKE_TYPE:
 				return validateV_Zul_Strecke_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VBC_KENNUNG_TYPE:
+				return validateVBC_Kennung_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VBC_NID_CTYPE:
+				return validateVBC_NID_C_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VBC_TIMER_TYPE:
+				return validateVBC_Timer_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VERBOT_ANHALTEN_TYPE:
 				return validateVerbot_Anhalten_Type((String)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VERKUERZTER_ABSTAND_TYPE:
+				return validateVerkuerzter_Abstand_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VERWENDUNG_HILFE_TYPE:
+				return validateVerwendung_Hilfe_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VERWENDUNG_TYPE:
 				return validateVerwendung_Type((String)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VGR_1TYPE:
@@ -962,6 +1123,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 				return validateVGR_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VLA_TYPE:
 				return validateVLA_Type((BigInteger)value, diagnostics, context);
+			case Balisentechnik_ETCSPackage.VORSIGNALABSTAND_TYPE:
+				return validateVorsignalabstand_Type((BigDecimal)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.VZ_TYPE:
 				return validateVZ_Type((BigInteger)value, diagnostics, context);
 			case Balisentechnik_ETCSPackage.WIRKRICHTUNG_IN_DATENPUNKT_TYPE:
@@ -986,8 +1149,62 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateAbstand_Bes_Langer_Einfahrweg_TypeClass(Abstand_Bes_Langer_Einfahrweg_TypeClass abstand_Bes_Langer_Einfahrweg_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(abstand_Bes_Langer_Einfahrweg_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Datenpunkt_EH_EM_Folgesignal_TypeClass(Abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(abstand_Datenpunkt_EH_EM_Folgesignal_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Datenpunkt_EP_TPI_TypeClass(Abstand_Datenpunkt_EP_TPI_TypeClass abstand_Datenpunkt_EP_TPI_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(abstand_Datenpunkt_EP_TPI_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Datenpunkt_TPI_Folgesignal_TypeClass(Abstand_Datenpunkt_TPI_Folgesignal_TypeClass abstand_Datenpunkt_TPI_Folgesignal_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(abstand_Datenpunkt_TPI_Folgesignal_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Einmesspunkt_TypeClass(Abstand_Einmesspunkt_TypeClass abstand_Einmesspunkt_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(abstand_Einmesspunkt_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateAbstand_Grenze_Bereich_C_TypeClass(Abstand_Grenze_Bereich_C_TypeClass abstand_Grenze_Bereich_C_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(abstand_Grenze_Bereich_C_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Reduziert_TypeClass(Abstand_Reduziert_TypeClass abstand_Reduziert_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(abstand_Reduziert_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -1006,6 +1223,24 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateAnordnung_Im_DP_TypeClass(Anordnung_Im_DP_TypeClass anordnung_Im_DP_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(anordnung_Im_DP_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAnwendung_ESG_TypeClass(Anwendung_ESG_TypeClass anwendung_ESG_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(anwendung_ESG_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAnwendung_GNT_TypeClass(Anwendung_GNT_TypeClass anwendung_GNT_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(anwendung_GNT_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -1103,8 +1338,26 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBaseline_SRS_TypeClass(Baseline_SRS_TypeClass baseline_SRS_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(baseline_SRS_TypeClass, diagnostics, context);
+	public boolean validateBalise_Geraetestand_TypeClass(Balise_Geraetestand_TypeClass balise_Geraetestand_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(balise_Geraetestand_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBalisenhalter_TypeClass(Balisenhalter_TypeClass balisenhalter_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(balisenhalter_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBaseline_System_Version_TypeClass(Baseline_System_Version_TypeClass baseline_System_Version_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(baseline_System_Version_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -1283,6 +1536,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateBgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup(Bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bgrenze_Nach_ZBS_Bed_Einstieg_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateBgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup(Bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(bgrenze_RBC_Wechsel_BTS_Kette_AttributeGroup, diagnostics, context);
 	}
@@ -1292,8 +1554,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBinaerdatei(Binaerdatei binaerdatei, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(binaerdatei, diagnostics, context);
+	public boolean validateBinaerdaten(Binaerdaten binaerdaten, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(binaerdaten, diagnostics, context);
 	}
 
 	/**
@@ -1301,17 +1563,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBinaerdatei_Allg_AttributeGroup(Binaerdatei_Allg_AttributeGroup binaerdatei_Allg_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(binaerdatei_Allg_AttributeGroup, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateBremsweg_TypeClass(Bremsweg_TypeClass bremsweg_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(bremsweg_TypeClass, diagnostics, context);
+	public boolean validateBinaerdaten_Datei_AttributeGroup(Binaerdaten_Datei_AttributeGroup binaerdaten_Datei_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(binaerdaten_Datei_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -1382,6 +1635,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateDatenpunkt_Einmesspunkt_AttributeGroup(Datenpunkt_Einmesspunkt_AttributeGroup datenpunkt_Einmesspunkt_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(datenpunkt_Einmesspunkt_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateDatenpunkt_Laenge_TypeClass(Datenpunkt_Laenge_TypeClass datenpunkt_Laenge_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(datenpunkt_Laenge_TypeClass, diagnostics, context);
 	}
@@ -1427,8 +1689,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDP_Bezug_Betrieblich_Art_TypeClass(DP_Bezug_Betrieblich_Art_TypeClass dP_Bezug_Betrieblich_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(dP_Bezug_Betrieblich_Art_TypeClass, diagnostics, context);
+	public boolean validateDP_ATO_TypeClass(DP_ATO_TypeClass dP_ATO_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dP_ATO_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -1436,8 +1698,17 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDP_Bezug_Betrieblich_AttributeGroup(DP_Bezug_Betrieblich_AttributeGroup dP_Bezug_Betrieblich_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(dP_Bezug_Betrieblich_AttributeGroup, diagnostics, context);
+	public boolean validateDP_Bezug_Funktional_Art_TypeClass(DP_Bezug_Funktional_Art_TypeClass dP_Bezug_Funktional_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dP_Bezug_Funktional_Art_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDP_Bezug_Funktional_AttributeGroup(DP_Bezug_Funktional_AttributeGroup dP_Bezug_Funktional_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dP_Bezug_Funktional_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -1616,6 +1887,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateDP_Verlinkt_TypeClass(DP_Verlinkt_TypeClass dP_Verlinkt_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dP_Verlinkt_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateDunkelschaltanstoss_TypeClass(Dunkelschaltanstoss_TypeClass dunkelschaltanstoss_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(dunkelschaltanstoss_TypeClass, diagnostics, context);
 	}
@@ -1751,26 +2031,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateETCS_Adresse_Kennung_TypeClass(ETCS_Adresse_Kennung_TypeClass etcS_Adresse_Kennung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(etcS_Adresse_Kennung_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Adresse_NID_BG_TypeClass(ETCS_Adresse_NID_BG_TypeClass etcS_Adresse_NID_BG_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(etcS_Adresse_NID_BG_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Adresse_NID_C_TypeClass(ETCS_Adresse_NID_C_TypeClass etcS_Adresse_NID_C_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(etcS_Adresse_NID_C_TypeClass, diagnostics, context);
+	public boolean validateETCS_Gefahrpunktabstand_Abweichend_TypeClass(ETCS_Gefahrpunktabstand_Abweichend_TypeClass etcS_Gefahrpunktabstand_Abweichend_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(etcS_Gefahrpunktabstand_Abweichend_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -1789,15 +2051,6 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateETCS_Kante_Bezeichnung_AttributeGroup(ETCS_Kante_Bezeichnung_AttributeGroup etcS_Kante_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(etcS_Kante_Bezeichnung_AttributeGroup, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Kennung_TypeClass(ETCS_Kennung_TypeClass etcS_Kennung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(etcS_Kennung_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -1859,6 +2112,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateETCS_Richtungsanzeige(ETCS_Richtungsanzeige etcS_Richtungsanzeige, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(etcS_Richtungsanzeige, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateETCS_Signal(ETCS_Signal etcS_Signal, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(etcS_Signal, diagnostics, context);
 	}
@@ -1895,6 +2157,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateETCS_System_Version_TypeClass(ETCS_System_Version_TypeClass etcS_System_Version_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(etcS_System_Version_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateETCS_W_Kr(ETCS_W_Kr etcS_W_Kr, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(etcS_W_Kr, diagnostics, context);
 	}
@@ -1906,15 +2177,6 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateETCS_W_Kr_MUKA_AttributeGroup(ETCS_W_Kr_MUKA_AttributeGroup etcS_W_Kr_MUKA_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(etcS_W_Kr_MUKA_AttributeGroup, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_W_Ortsgestellt_TypeClass(ETCS_W_Ortsgestellt_TypeClass etcS_W_Ortsgestellt_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(etcS_W_Ortsgestellt_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2165,8 +2427,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateGNT_Merkmale_AttributeGroup(GNT_Merkmale_AttributeGroup gnT_Merkmale_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(gnT_Merkmale_AttributeGroup, diagnostics, context);
+	public boolean validateFW_Teil_Nummer_TypeClass(FW_Teil_Nummer_TypeClass fW_Teil_Nummer_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fW_Teil_Nummer_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2210,8 +2472,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateIndividuell_TypeClass(Individuell_TypeClass individuell_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(individuell_TypeClass, diagnostics, context);
+	public boolean validateIndividualisierung_Weitere_TypeClass(Individualisierung_Weitere_TypeClass individualisierung_Weitere_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(individualisierung_Weitere_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2300,6 +2562,33 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateLaenge_Gestufte_V_Signalisierung_TypeClass(Laenge_Gestufte_V_Signalisierung_TypeClass laenge_Gestufte_V_Signalisierung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(laenge_Gestufte_V_Signalisierung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLaenge_Soll_Mind_150_TypeClass(Laenge_Soll_Mind_150_TypeClass laenge_Soll_Mind_150_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(laenge_Soll_Mind_150_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLeistungsbedarf_TypeClass(Leistungsbedarf_TypeClass leistungsbedarf_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(leistungsbedarf_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateLEU_Anlage(LEU_Anlage leU_Anlage, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(leU_Anlage, diagnostics, context);
 	}
@@ -2309,8 +2598,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLEU_Anlage_Bezeichnung_AttributeGroup(LEU_Anlage_Bezeichnung_AttributeGroup leU_Anlage_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(leU_Anlage_Bezeichnung_AttributeGroup, diagnostics, context);
+	public boolean validateLEU_Anlage_Allg_AttributeGroup(LEU_Anlage_Allg_AttributeGroup leU_Anlage_Allg_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(leU_Anlage_Allg_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -2318,8 +2607,17 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLEU_Anlage_Moduleigenschaften_AttributeGroup(LEU_Anlage_Moduleigenschaften_AttributeGroup leU_Anlage_Moduleigenschaften_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(leU_Anlage_Moduleigenschaften_AttributeGroup, diagnostics, context);
+	public boolean validateLEU_Anlage_Art_TypeClass(LEU_Anlage_Art_TypeClass leU_Anlage_Art_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(leU_Anlage_Art_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLEU_Anlage_Bezeichnung_AttributeGroup(LEU_Anlage_Bezeichnung_AttributeGroup leU_Anlage_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(leU_Anlage_Bezeichnung_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -2374,6 +2672,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateLEU_Modul_Bezeichnung_AttributeGroup(LEU_Modul_Bezeichnung_AttributeGroup leU_Modul_Bezeichnung_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(leU_Modul_Bezeichnung_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLEU_Modul_Geraetestand_TypeClass(LEU_Modul_Geraetestand_TypeClass leU_Modul_Geraetestand_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(leU_Modul_Geraetestand_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2453,15 +2760,6 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLfdNr_in_Telegr_Spec_TypeClass(LfdNr_in_Telegr_Spec_TypeClass lfdNr_in_Telegr_Spec_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(lfdNr_in_Telegr_Spec_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateLink_Distanz_TypeClass(Link_Distanz_TypeClass link_Distanz_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(link_Distanz_TypeClass, diagnostics, context);
 	}
@@ -2482,6 +2780,24 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateLM_G_TypeClass(LM_G_TypeClass lM_G_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(lM_G_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLT_Binaerdatei_Hilfe_AttributeGroup(LT_Binaerdatei_Hilfe_AttributeGroup lT_Binaerdatei_Hilfe_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(lT_Binaerdatei_Hilfe_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLT_Binaerdaten_AttributeGroup(LT_Binaerdaten_AttributeGroup lT_Binaerdaten_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(lT_Binaerdaten_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -2525,6 +2841,33 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateMassgebende_Neigung_Mind_150_TypeClass(Massgebende_Neigung_Mind_150_TypeClass massgebende_Neigung_Mind_150_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(massgebende_Neigung_Mind_150_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMassgebende_Neigung_Mind_Sig_150_TypeClass(Massgebende_Neigung_Mind_Sig_150_TypeClass massgebende_Neigung_Mind_Sig_150_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(massgebende_Neigung_Mind_Sig_150_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMassgebende_Neigung_Mind_Sig_TypeClass(Massgebende_Neigung_Mind_Sig_TypeClass massgebende_Neigung_Mind_Sig_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(massgebende_Neigung_Mind_Sig_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateMastschild_TypeClass(Mastschild_TypeClass mastschild_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(mastschild_TypeClass, diagnostics, context);
 	}
@@ -2552,8 +2895,26 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMetallteil_TypeClass(Metallteil_TypeClass metallteil_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(metallteil_TypeClass, diagnostics, context);
+	public boolean validateMetallteil_AttributeGroup(Metallteil_AttributeGroup metallteil_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(metallteil_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMetallteil_Kategorie_TypeClass(Metallteil_Kategorie_TypeClass metallteil_Kategorie_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(metallteil_Kategorie_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMetallteil_Laenge_TypeClass(Metallteil_Laenge_TypeClass metallteil_Laenge_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(metallteil_Laenge_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2563,6 +2924,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateModulnummer_TypeClass(Modulnummer_TypeClass modulnummer_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(modulnummer_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMontageabweichung_TypeClass(Montageabweichung_TypeClass montageabweichung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(montageabweichung_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2581,6 +2951,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateNennleistung_TypeClass(Nennleistung_TypeClass nennleistung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(nennleistung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNID_BG_TypeClass(NID_BG_TypeClass niD_BG_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(niD_BG_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2608,6 +2987,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateNID_STM_TypeClass(NID_STM_TypeClass niD_STM_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(niD_STM_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNID_TSR_TypeClass(NID_TSR_TypeClass niD_TSR_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(niD_TSR_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2705,6 +3093,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateProjektierungsfall_TypeClass(Projektierungsfall_TypeClass projektierungsfall_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(projektierungsfall_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateRBC(RBC rbc, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(rbc, diagnostics, context);
 	}
@@ -2723,8 +3120,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRBC_SRS_Unterversion_TypeClass(RBC_SRS_Unterversion_TypeClass rbC_SRS_Unterversion_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(rbC_SRS_Unterversion_TypeClass, diagnostics, context);
+	public boolean validateRBC_ETCS_System_Version_TypeClass(RBC_ETCS_System_Version_TypeClass rbC_ETCS_System_Version_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(rbC_ETCS_System_Version_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2795,6 +3192,24 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateSolllaenge_Mind_Sig_150_TypeClass(Solllaenge_Mind_Sig_150_TypeClass solllaenge_Mind_Sig_150_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(solllaenge_Mind_Sig_150_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSolllaenge_Mind_Sig_TypeClass(Solllaenge_Mind_Sig_TypeClass solllaenge_Mind_Sig_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(solllaenge_Mind_Sig_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateSonstige_Standortangabe_TypeClass(Sonstige_Standortangabe_TypeClass sonstige_Standortangabe_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(sonstige_Standortangabe_TypeClass, diagnostics, context);
 	}
@@ -2824,15 +3239,6 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateSpannung_Toleranz_Untere_TypeClass(Spannung_Toleranz_Untere_TypeClass spannung_Toleranz_Untere_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(spannung_Toleranz_Untere_TypeClass, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateSRS_Unterversion_TypeClass(SRS_Unterversion_TypeClass srS_Unterversion_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(srS_Unterversion_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2921,6 +3327,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTelegramm_Index_TypeClass(Telegramm_Index_TypeClass telegramm_Index_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(telegramm_Index_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTelegrammnummer_TypeClass(Telegrammnummer_TypeClass telegrammnummer_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(telegrammnummer_TypeClass, diagnostics, context);
 	}
@@ -2939,8 +3354,26 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTextmeldung_TypeClass(Textmeldung_TypeClass textmeldung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(textmeldung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateUeberbrueckung_EV_Unterbrechung_TypeClass(Ueberbrueckung_EV_Unterbrechung_TypeClass ueberbrueckung_EV_Unterbrechung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(ueberbrueckung_EV_Unterbrechung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUeberwachung_Laenge_TypeClass(Ueberwachung_Laenge_TypeClass ueberwachung_Laenge_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(ueberwachung_Laenge_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -2993,8 +3426,62 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateV_Start_TypeClass(V_Start_TypeClass v_Start_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(v_Start_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateV_Ziel_TypeClass(V_Ziel_TypeClass v_Ziel_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(v_Ziel_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateV_Zul_Strecke_TypeClass(V_Zul_Strecke_TypeClass v_Zul_Strecke_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(v_Zul_Strecke_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVBC_Kennung_TypeClass(VBC_Kennung_TypeClass vbC_Kennung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(vbC_Kennung_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVBC_NID_C_TypeClass(VBC_NID_C_TypeClass vbC_NID_C_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(vbC_NID_C_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVBC_Setzen_TypeClass(VBC_Setzen_TypeClass vbC_Setzen_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(vbC_Setzen_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVBC_Timer_TypeClass(VBC_Timer_TypeClass vbC_Timer_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(vbC_Timer_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -3029,8 +3516,26 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateVerkuerzter_Abstand_TypeClass(Verkuerzter_Abstand_TypeClass verkuerzter_Abstand_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(verkuerzter_Abstand_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateVerwendung_Als_Rueckfall_TypeClass(Verwendung_Als_Rueckfall_TypeClass verwendung_Als_Rueckfall_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(verwendung_Als_Rueckfall_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVerwendung_Hilfe_TypeClass(Verwendung_Hilfe_TypeClass verwendung_Hilfe_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(verwendung_Hilfe_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -3076,6 +3581,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateVLA_TypeClass(VLA_TypeClass vlA_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(vlA_TypeClass, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVorsignalabstand_TypeClass(Vorsignalabstand_TypeClass vorsignalabstand_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(vorsignalabstand_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -3182,6 +3696,42 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateZBS_Schutzstrecke(ZBS_Schutzstrecke zbS_Schutzstrecke, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zbS_Schutzstrecke, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZBS_Schutzstrecke_Allg_AttributeGroup(ZBS_Schutzstrecke_Allg_AttributeGroup zbS_Schutzstrecke_Allg_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zbS_Schutzstrecke_Allg_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZBS_Signal(ZBS_Signal zbS_Signal, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zbS_Signal, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZBS_Signal_Signalabstand_AttributeGroup(ZBS_Signal_Signalabstand_AttributeGroup zbS_Signal_Signalabstand_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zbS_Signal_Signalabstand_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateZiel_DP_Ausrichtung_TypeClass(Ziel_DP_Ausrichtung_TypeClass ziel_DP_Ausrichtung_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(ziel_DP_Ausrichtung_TypeClass, diagnostics, context);
 	}
@@ -3254,8 +3804,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateZUB_Bereichsgrenze_Nach_GNT_AttributeGroup(ZUB_Bereichsgrenze_Nach_GNT_AttributeGroup zuB_Bereichsgrenze_Nach_GNT_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(zuB_Bereichsgrenze_Nach_GNT_AttributeGroup, diagnostics, context);
+	public boolean validateZUB_Bereichsgrenze_Nach_GNT_TypeClass(ZUB_Bereichsgrenze_Nach_GNT_TypeClass zuB_Bereichsgrenze_Nach_GNT_TypeClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zuB_Bereichsgrenze_Nach_GNT_TypeClass, diagnostics, context);
 	}
 
 	/**
@@ -3265,6 +3815,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateZUB_Bereichsgrenze_Nach_L2_AttributeGroup(ZUB_Bereichsgrenze_Nach_L2_AttributeGroup zuB_Bereichsgrenze_Nach_L2_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(zuB_Bereichsgrenze_Nach_L2_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup(ZUB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zuB_Bereichsgrenze_Nach_L2_Von_ESG_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -3301,6 +3860,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup(ZUB_Bereichsgrenze_Nach_Sonstige_AttributeGroup zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(zuB_Bereichsgrenze_Nach_Sonstige_AttributeGroup, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup(ZUB_Bereichsgrenze_Nach_ZBS_AttributeGroup zuB_Bereichsgrenze_Nach_ZBS_AttributeGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(zuB_Bereichsgrenze_Nach_ZBS_AttributeGroup, diagnostics, context);
 	}
 
 	/**
@@ -3362,7 +3930,25 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMDPBezugBetrieblichArt(ENUMDPBezugBetrieblichArt enumdpBezugBetrieblichArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMBalisenhalter(ENUMBalisenhalter enumBalisenhalter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMDPATO(ENUMDPATO enumdpato, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMDPBezugFunktionalArt(ENUMDPBezugFunktionalArt enumdpBezugFunktionalArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -3488,7 +4074,7 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMLEUModulArt(ENUMLEUModulArt enumleuModulArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMLEUArt(ENUMLEUArt enumleuArt, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -3588,6 +4174,51 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateENUMZBSReaktion(ENUMZBSReaktion enumzbsReaktion, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Bes_Langer_Einfahrweg_Type(BigDecimal abstand_Bes_Langer_Einfahrweg_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Datenpunkt_EH_EM_Folgesignal_Type(BigDecimal abstand_Datenpunkt_EH_EM_Folgesignal_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Datenpunkt_EP_TPI_Type(BigDecimal abstand_Datenpunkt_EP_TPI_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Datenpunkt_TPI_Folgesignal_Type(BigDecimal abstand_Datenpunkt_TPI_Folgesignal_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAbstand_Einmesspunkt_Type(BigDecimal abstand_Einmesspunkt_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -3710,8 +4341,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBaseline_SRS_Type(BigInteger baseline_SRS_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateBaseline_SRS_Type_Pattern(baseline_SRS_Type, diagnostics, context);
+	public boolean validateBalise_Geraetestand_Type(String balise_Geraetestand_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(balise_Geraetestand_Type, diagnostics, context);
 		return result;
 	}
 
@@ -3719,23 +4350,36 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @see #validateBaseline_SRS_Type_Pattern
 	 */
-	public static final  PatternMatcher [][] BASELINE_SRS_TYPE__PATTERN__VALUES =
+	public boolean validateBaseline_System_Version_Type(String baseline_System_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = validateBaseline_System_Version_Type_Pattern(baseline_System_Version_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateBaseline_System_Version_Type_Pattern
+	 */
+	public static final  PatternMatcher [][] BASELINE_SYSTEM_VERSION_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher("[0-9]")
+			},
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher(".{1,250}")
 			}
 		};
 
 	/**
-	 * Validates the Pattern constraint of '<em>Baseline SRS Type</em>'.
+	 * Validates the Pattern constraint of '<em>Baseline System Version Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBaseline_SRS_Type_Pattern(BigInteger baseline_SRS_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getBaseline_SRS_Type(), baseline_SRS_Type, BASELINE_SRS_TYPE__PATTERN__VALUES, diagnostics, context);
+	public boolean validateBaseline_System_Version_Type_Pattern(String baseline_System_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getBaseline_System_Version_Type(), baseline_System_Version_Type, BASELINE_SYSTEM_VERSION_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**
@@ -3783,8 +4427,34 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateBez_ZUB_Bereichsgrenze_Type(String bez_ZUB_Bereichsgrenze_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = basisTypenValidator.validateText_Type_Pattern(bez_ZUB_Bereichsgrenze_Type, diagnostics, context);
+		boolean result = validateBez_ZUB_Bereichsgrenze_Type_Pattern(bez_ZUB_Bereichsgrenze_Type, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateBez_ZUB_Bereichsgrenze_Type_Pattern
+	 */
+	public static final  PatternMatcher [][] BEZ_ZUB_BEREICHSGRENZE_TYPE__PATTERN__VALUES =
+		new PatternMatcher [][] {
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher(".{1,50}")
+			},
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher(".{1,250}")
+			}
+		};
+
+	/**
+	 * Validates the Pattern constraint of '<em>Bez ZUB Bereichsgrenze Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBez_ZUB_Bereichsgrenze_Type_Pattern(String bez_ZUB_Bereichsgrenze_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getBez_ZUB_Bereichsgrenze_Type(), bez_ZUB_Bereichsgrenze_Type, BEZ_ZUB_BEREICHSGRENZE_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**
@@ -3806,7 +4476,7 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] BEZEICHNUNG_ETCS_KANTE_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher(".{10}")
+				XMLTypeUtil.createPatternMatcher(".{1,10}")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher("[a-zA-Z_0-9]{1,250}")
@@ -4100,7 +4770,25 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMDPBezugBetrieblichArtObject(ENUMDPBezugBetrieblichArt enumdpBezugBetrieblichArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMBalisenhalterObject(ENUMBalisenhalter enumBalisenhalterObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMDPATOObject(ENUMDPATO enumdpatoObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateENUMDPBezugFunktionalArtObject(ENUMDPBezugFunktionalArt enumdpBezugFunktionalArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -4226,7 +4914,7 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateENUMLEUModulArtObject(ENUMLEUModulArt enumleuModulArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateENUMLEUArtObject(ENUMLEUArt enumleuArtObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -4358,7 +5046,7 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] ESG_IND_PARAMETER_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher(".{15}")
+				XMLTypeUtil.createPatternMatcher(".{1,15}")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher(".{1,250}")
@@ -4389,131 +5077,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateETCS_Adresse_Kennung_Type(BigInteger etcS_Adresse_Kennung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateETCS_Adresse_Kennung_Type_Pattern(etcS_Adresse_Kennung_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @see #validateETCS_Adresse_Kennung_Type_Pattern
-	 */
-	public static final  PatternMatcher [][] ETCS_ADRESSE_KENNUNG_TYPE__PATTERN__VALUES =
-		new PatternMatcher [][] {
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("0|[1-9][0-9]{0,1}|1[0-9]{2}|2[0-4][0-9]|25[0-5]")
-			}
-		};
-
-	/**
-	 * Validates the Pattern constraint of '<em>ETCS Adresse Kennung Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Adresse_Kennung_Type_Pattern(BigInteger etcS_Adresse_Kennung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Adresse_Kennung_Type(), etcS_Adresse_Kennung_Type, ETCS_ADRESSE_KENNUNG_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Adresse_NID_BG_Type(BigInteger etcS_Adresse_NID_BG_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateETCS_Adresse_NID_BG_Type_Pattern(etcS_Adresse_NID_BG_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @see #validateETCS_Adresse_NID_BG_Type_Pattern
-	 */
-	public static final  PatternMatcher [][] ETCS_ADRESSE_NID_BG_TYPE__PATTERN__VALUES =
-		new PatternMatcher [][] {
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("0|1[0-5][0-9]{3}|16[0-2][0-9]{2}|163[0-7][0-9]|1638[0-3]|[1-9][0-9]{0,3}")
-			}
-		};
-
-	/**
-	 * Validates the Pattern constraint of '<em>ETCS Adresse NID BG Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Adresse_NID_BG_Type_Pattern(BigInteger etcS_Adresse_NID_BG_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Adresse_NID_BG_Type(), etcS_Adresse_NID_BG_Type, ETCS_ADRESSE_NID_BG_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Adresse_NID_C_Type(BigInteger etcS_Adresse_NID_C_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateETCS_Adresse_NID_C_Type_Pattern(etcS_Adresse_NID_C_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @see #validateETCS_Adresse_NID_C_Type_Pattern
-	 */
-	public static final  PatternMatcher [][] ETCS_ADRESSE_NID_CTYPE__PATTERN__VALUES =
-		new PatternMatcher [][] {
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("102[0-3]|10[0-1][0-9]|[1-9][0-9]{2}|0|[1-9][0-9]{0,1}")
-			}
-		};
-
-	/**
-	 * Validates the Pattern constraint of '<em>ETCS Adresse NID CType</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Adresse_NID_C_Type_Pattern(BigInteger etcS_Adresse_NID_C_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Adresse_NID_C_Type(), etcS_Adresse_NID_C_Type, ETCS_ADRESSE_NID_CTYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Kennung_Type(BigInteger etcS_Kennung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateETCS_Kennung_Type_Pattern(etcS_Kennung_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @see #validateETCS_Kennung_Type_Pattern
-	 */
-	public static final  PatternMatcher [][] ETCS_KENNUNG_TYPE__PATTERN__VALUES =
-		new PatternMatcher [][] {
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("0|[1-9][0-9]?|1[0-9]{2}|2[0-4][0-9]|25[0-5]")
-			}
-		};
-
-	/**
-	 * Validates the Pattern constraint of '<em>ETCS Kennung Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateETCS_Kennung_Type_Pattern(BigInteger etcS_Kennung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getETCS_Kennung_Type(), etcS_Kennung_Type, ETCS_KENNUNG_TYPE__PATTERN__VALUES, diagnostics, context);
+	public boolean validateETCS_Gefahrpunktabstand_Abweichend_Type(BigDecimal etcS_Gefahrpunktabstand_Abweichend_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
@@ -4552,6 +5117,16 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateETCS_Parameterwert_Type(BigInteger etcS_Parameterwert_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateETCS_System_Version_Type(String etcS_System_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(etcS_System_Version_Type, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -4684,6 +5259,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateFW_Teil_Nummer_Type(BigInteger fW_Teil_Nummer_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateGruppen_ID_Type(String gruppen_ID_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateText_Type_Pattern(gruppen_ID_Type, diagnostics, context);
 		return result;
@@ -4696,6 +5280,16 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateHinweis_Balisenbefestigung_Type(String hinweis_Balisenbefestigung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateText_Type_Pattern(hinweis_Balisenbefestigung_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateIndividualisierung_Weitere_Type(String individualisierung_Weitere_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(individualisierung_Weitere_Type, diagnostics, context);
 		return result;
 	}
 
@@ -4795,32 +5389,45 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLEU_Ausgang_Nr_Type(BigInteger leU_Ausgang_Nr_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateLEU_Ausgang_Nr_Type_Pattern(leU_Ausgang_Nr_Type, diagnostics, context);
-		return result;
+	public boolean validateLaenge_Gestufte_V_Signalisierung_Type(BigDecimal laenge_Gestufte_V_Signalisierung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @see #validateLEU_Ausgang_Nr_Type_Pattern
 	 */
-	public static final  PatternMatcher [][] LEU_AUSGANG_NR_TYPE__PATTERN__VALUES =
-		new PatternMatcher [][] {
-			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("1[0-6]|[1-9]")
-			}
-		};
+	public boolean validateLaenge_Soll_Mind_150_Type(BigDecimal laenge_Soll_Mind_150_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
 
 	/**
-	 * Validates the Pattern constraint of '<em>LEU Ausgang Nr Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLEU_Ausgang_Nr_Type_Pattern(BigInteger leU_Ausgang_Nr_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Ausgang_Nr_Type(), leU_Ausgang_Nr_Type, LEU_AUSGANG_NR_TYPE__PATTERN__VALUES, diagnostics, context);
+	public boolean validateLeistungsbedarf_Type(BigInteger leistungsbedarf_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLEU_Ausgang_Nr_Type(BigInteger leU_Ausgang_Nr_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLEU_Modul_Geraetestand_Type(String leU_Modul_Geraetestand_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(leU_Modul_Geraetestand_Type, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -4849,15 +5456,6 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateLfd_Nr_Am_Bezugspunkt_Type(BigInteger lfd_Nr_Am_Bezugspunkt_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLfdNr_in_Telegr_Spec_Type(BigInteger lfdNr_in_Telegr_Spec_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -4950,6 +5548,33 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateMassgebende_Neigung_Mind_150_Type(BigDecimal massgebende_Neigung_Mind_150_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMassgebende_Neigung_Mind_Sig_150_Type(BigDecimal massgebende_Neigung_Mind_Sig_150_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMassgebende_Neigung_Mind_Sig_Type(BigDecimal massgebende_Neigung_Mind_Sig_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateMax_Leistung_Type(BigInteger max_Leistung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -4973,7 +5598,7 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] MAX_UNTERBRECHUNGSZEIT_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("([0-9]|[1-2][0-9]|30)\\.[0-9]{3}")
+				XMLTypeUtil.createPatternMatcher("(([0-9]|[1-2][0-9])\\.[0-9]{2})|(30\\.00)")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher("[0-9]{1,5}(\\.[0-9]{2})?")
@@ -4995,8 +5620,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMetallteil_Type(BigInteger metallteil_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateMetallteil_Type_Pattern(metallteil_Type, diagnostics, context);
+	public boolean validateMetallteil_Kategorie_Type(BigInteger metallteil_Kategorie_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = validateMetallteil_Kategorie_Type_Pattern(metallteil_Kategorie_Type, diagnostics, context);
 		return result;
 	}
 
@@ -5004,23 +5629,32 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @see #validateMetallteil_Type_Pattern
+	 * @see #validateMetallteil_Kategorie_Type_Pattern
 	 */
-	public static final  PatternMatcher [][] METALLTEIL_TYPE__PATTERN__VALUES =
+	public static final  PatternMatcher [][] METALLTEIL_KATEGORIE_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("[0-3]")
+				XMLTypeUtil.createPatternMatcher("[0]")
 			}
 		};
 
 	/**
-	 * Validates the Pattern constraint of '<em>Metallteil Type</em>'.
+	 * Validates the Pattern constraint of '<em>Metallteil Kategorie Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMetallteil_Type_Pattern(BigInteger metallteil_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getMetallteil_Type(), metallteil_Type, METALLTEIL_TYPE__PATTERN__VALUES, diagnostics, context);
+	public boolean validateMetallteil_Kategorie_Type_Pattern(BigInteger metallteil_Kategorie_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getMetallteil_Kategorie_Type(), metallteil_Kategorie_Type, METALLTEIL_KATEGORIE_TYPE__PATTERN__VALUES, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMetallteil_Laenge_Type(BigDecimal metallteil_Laenge_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
@@ -5029,6 +5663,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateModulnummer_Type(BigInteger modulnummer_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMontageabweichung_Type(BigDecimal montageabweichung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -5072,6 +5715,39 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateNennleistung_Type(BigInteger nennleistung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNID_BG_Type(BigInteger niD_BG_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = validateNID_BG_Type_Pattern(niD_BG_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateNID_BG_Type_Pattern
+	 */
+	public static final  PatternMatcher [][] NID_BG_TYPE__PATTERN__VALUES =
+		new PatternMatcher [][] {
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher("0|1[0-5][0-9]{3}|16[0-2][0-9]{2}|163[0-7][0-9]|1638[0-3]|[1-9][0-9]{0,3}")
+			}
+		};
+
+	/**
+	 * Validates the Pattern constraint of '<em>NID BG Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNID_BG_Type_Pattern(BigInteger niD_BG_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getNID_BG_Type(), niD_BG_Type, NID_BG_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**
@@ -5138,6 +5814,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateNID_RBC_Type_Pattern(BigInteger niD_RBC_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getNID_RBC_Type(), niD_RBC_Type, NID_RBC_TYPE__PATTERN__VALUES, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNID_TSR_Type(BigInteger niD_TSR_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
@@ -5272,8 +5957,26 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRBC_SRS_Unterversion_Type(String rbC_SRS_Unterversion_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = validateRBC_SRS_Unterversion_Type_Pattern(rbC_SRS_Unterversion_Type, diagnostics, context);
+	public boolean validateProjektierungsfall_Type(BigInteger projektierungsfall_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRBC_ETCS_System_Version_Type(BigInteger rbC_ETCS_System_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRBC_SRS_Version_Type(String rbC_SRS_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = validateRBC_SRS_Version_Type_Pattern(rbC_SRS_Version_Type, diagnostics, context);
 		return result;
 	}
 
@@ -5281,9 +5984,9 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @see #validateRBC_SRS_Unterversion_Type_Pattern
+	 * @see #validateRBC_SRS_Version_Type_Pattern
 	 */
-	public static final  PatternMatcher [][] RBC_SRS_UNTERVERSION_TYPE__PATTERN__VALUES =
+	public static final  PatternMatcher [][] RBC_SRS_VERSION_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher(".{1}")
@@ -5294,22 +5997,13 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 		};
 
 	/**
-	 * Validates the Pattern constraint of '<em>RBC SRS Unterversion Type</em>'.
+	 * Validates the Pattern constraint of '<em>RBC SRS Version Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRBC_SRS_Unterversion_Type_Pattern(String rbC_SRS_Unterversion_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_SRS_Unterversion_Type(), rbC_SRS_Unterversion_Type, RBC_SRS_UNTERVERSION_TYPE__PATTERN__VALUES, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateRBC_SRS_Version_Type(BigInteger rbC_SRS_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+	public boolean validateRBC_SRS_Version_Type_Pattern(String rbC_SRS_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getRBC_SRS_Version_Type(), rbC_SRS_Version_Type, RBC_SRS_VERSION_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**
@@ -5363,6 +6057,24 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateSolllaenge_Mind_Sig_150_Type(BigDecimal solllaenge_Mind_Sig_150_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSolllaenge_Mind_Sig_Type(BigDecimal solllaenge_Mind_Sig_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateSonstige_Standortangabe_Type(String sonstige_Standortangabe_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateText_Type_Pattern(sonstige_Standortangabe_Type, diagnostics, context);
 		return result;
@@ -5391,18 +6103,8 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSRS_Unterversion_Type(String srS_Unterversion_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = basisTypenValidator.validateText_Type_Pattern(srS_Unterversion_Type, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateSRS_Version_Type(String srS_Version_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = basisTypenValidator.validateText_Type_Pattern(srS_Version_Type, diagnostics, context);
+		boolean result = basisTypenValidator.validateZeichenkette_Type_Pattern(srS_Version_Type, diagnostics, context);
 		return result;
 	}
 
@@ -5412,8 +6114,34 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateSystem_Vor_Grenze_Besonders_Type(String system_Vor_Grenze_Besonders_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = basisTypenValidator.validateText_Type_Pattern(system_Vor_Grenze_Besonders_Type, diagnostics, context);
+		boolean result = validateSystem_Vor_Grenze_Besonders_Type_Pattern(system_Vor_Grenze_Besonders_Type, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateSystem_Vor_Grenze_Besonders_Type_Pattern
+	 */
+	public static final  PatternMatcher [][] SYSTEM_VOR_GRENZE_BESONDERS_TYPE__PATTERN__VALUES =
+		new PatternMatcher [][] {
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher(".{1,30}")
+			},
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher(".{1,250}")
+			}
+		};
+
+	/**
+	 * Validates the Pattern constraint of '<em>System Vor Grenze Besonders Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSystem_Vor_Grenze_Besonders_Type_Pattern(String system_Vor_Grenze_Besonders_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getSystem_Vor_Grenze_Besonders_Type(), system_Vor_Grenze_Besonders_Type, SYSTEM_VOR_GRENZE_BESONDERS_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**
@@ -5423,6 +6151,16 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateTBV_Tunnelbereich_Laenge_Type(BigDecimal tbV_Tunnelbereich_Laenge_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTelegramm_Index_Type(String telegramm_Index_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(telegramm_Index_Type, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -5449,6 +6187,16 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTextmeldung_Type(String textmeldung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateText_Type_Pattern(textmeldung_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateUeberbrueckung_EV_Unterbrechung_Type(BigDecimal ueberbrueckung_EV_Unterbrechung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = validateUeberbrueckung_EV_Unterbrechung_Type_Pattern(ueberbrueckung_EV_Unterbrechung_Type, diagnostics, context);
 		return result;
@@ -5463,7 +6211,7 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	public static final  PatternMatcher [][] UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE__PATTERN__VALUES =
 		new PatternMatcher [][] {
 			new PatternMatcher [] {
-				XMLTypeUtil.createPatternMatcher("([0-1]\\.[0-9])|(2\\.[0-5])")
+				XMLTypeUtil.createPatternMatcher("([0-1]\\.[0-9]{2})|(2\\.[0-4][0-9])|(2\\.50)")
 			},
 			new PatternMatcher [] {
 				XMLTypeUtil.createPatternMatcher("[0-9]{1,5}(\\.[0-9]{2})?")
@@ -5478,6 +6226,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 */
 	public boolean validateUeberbrueckung_EV_Unterbrechung_Type_Pattern(BigDecimal ueberbrueckung_EV_Unterbrechung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validatePattern(Balisentechnik_ETCSPackage.eINSTANCE.getUeberbrueckung_EV_Unterbrechung_Type(), ueberbrueckung_EV_Unterbrechung_Type, UEBERBRUECKUNG_EV_UNTERBRECHUNG_TYPE__PATTERN__VALUES, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUeberwachung_Laenge_Type(BigDecimal ueberwachung_Laenge_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**
@@ -5525,6 +6282,26 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateV_Start_Type(BigInteger v_Start_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateGeschwindigkeit_Type_Pattern(v_Start_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateV_Ziel_Type(BigInteger v_Ziel_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateGeschwindigkeit_Type_Pattern(v_Ziel_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateV_Zul_Strecke_Type(BigInteger v_Zul_Strecke_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateGeschwindigkeit_Type_Pattern(v_Zul_Strecke_Type, diagnostics, context);
 		return result;
@@ -5535,8 +6312,54 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateVBC_Kennung_Type(BigInteger vbC_Kennung_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVBC_NID_C_Type(BigInteger vbC_NID_C_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVBC_Timer_Type(BigInteger vbC_Timer_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateVerbot_Anhalten_Type(String verbot_Anhalten_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateText_Type_Pattern(verbot_Anhalten_Type, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVerkuerzter_Abstand_Type(BigInteger verkuerzter_Abstand_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVerwendung_Hilfe_Type(String verwendung_Hilfe_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = basisTypenValidator.validateZeichenkette_Type_Pattern(verwendung_Hilfe_Type, diagnostics, context);
 		return result;
 	}
 
@@ -5588,6 +6411,15 @@ public class Balisentechnik_ETCSValidator extends EObjectValidator {
 	public boolean validateVLA_Type(BigInteger vlA_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = basisTypenValidator.validateGeschwindigkeit_Type_Pattern(vlA_Type, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVorsignalabstand_Type(BigDecimal vorsignalabstand_Type, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**

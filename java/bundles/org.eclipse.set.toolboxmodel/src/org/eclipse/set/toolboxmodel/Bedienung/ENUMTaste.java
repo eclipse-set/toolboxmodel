@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bedienung;
 
@@ -199,6 +206,16 @@ public enum ENUMTaste implements Enumerator {
 	ENUM_TASTE_ZIELTASTE(17, "ENUMTaste_Zieltaste", "Zieltaste"),
 
 	/**
+	 * The '<em><b>ENUM Taste Zugfertigmeldetaste</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TASTE_ZUGFERTIGMELDETASTE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_TASTE_ZUGFERTIGMELDETASTE(18, "ENUMTaste_Zugfertigmeldetaste", "Zugfertigmeldetaste"),
+
+	/**
 	 * The '<em><b>ENUM Taste Zugschlussmeldung</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,7 +223,17 @@ public enum ENUMTaste implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUM_TASTE_ZUGSCHLUSSMELDUNG(18, "ENUMTaste_Zugschlussmeldung", "Zugschlussmeldung");
+	ENUM_TASTE_ZUGSCHLUSSMELDUNG(19, "ENUMTaste_Zugschlussmeldung", "Zugschlussmeldung"),
+
+	/**
+	 * The '<em><b>ENUM Taste Zustimmungsanforderung</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TASTE_ZUSTIMMUNGSANFORDERUNG_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENUM_TASTE_ZUSTIMMUNGSANFORDERUNG(20, "ENUMTaste_Zustimmungsanforderung", "Zustimmungsanforderung");
 
 	/**
 	 * The '<em><b>ENUM Taste Ausfahrgruppentaste ZP 910</b></em>' literal value.
@@ -407,6 +434,17 @@ public enum ENUMTaste implements Enumerator {
 	public static final int ENUM_TASTE_ZIELTASTE_VALUE = 17;
 
 	/**
+	 * The '<em><b>ENUM Taste Zugfertigmeldetaste</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TASTE_ZUGFERTIGMELDETASTE
+	 * @model name="ENUMTaste_Zugfertigmeldetaste" literal="Zugfertigmeldetaste"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_TASTE_ZUGFERTIGMELDETASTE_VALUE = 18;
+
+	/**
 	 * The '<em><b>ENUM Taste Zugschlussmeldung</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -415,7 +453,18 @@ public enum ENUMTaste implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUM_TASTE_ZUGSCHLUSSMELDUNG_VALUE = 18;
+	public static final int ENUM_TASTE_ZUGSCHLUSSMELDUNG_VALUE = 19;
+
+	/**
+	 * The '<em><b>ENUM Taste Zustimmungsanforderung</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENUM_TASTE_ZUSTIMMUNGSANFORDERUNG
+	 * @model name="ENUMTaste_Zustimmungsanforderung" literal="Zustimmungsanforderung"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENUM_TASTE_ZUSTIMMUNGSANFORDERUNG_VALUE = 20;
 
 	/**
 	 * An array of all the '<em><b>ENUM Taste</b></em>' enumerators.
@@ -443,7 +492,9 @@ public enum ENUMTaste implements Enumerator {
 			ENUM_TASTE_UMSTELLTASTE,
 			ENUM_TASTE_WEICHENAUFFAHRTASTE,
 			ENUM_TASTE_ZIELTASTE,
+			ENUM_TASTE_ZUGFERTIGMELDETASTE,
 			ENUM_TASTE_ZUGSCHLUSSMELDUNG,
+			ENUM_TASTE_ZUSTIMMUNGSANFORDERUNG,
 		};
 
 	/**
@@ -518,7 +569,9 @@ public enum ENUMTaste implements Enumerator {
 			case ENUM_TASTE_UMSTELLTASTE_VALUE: return ENUM_TASTE_UMSTELLTASTE;
 			case ENUM_TASTE_WEICHENAUFFAHRTASTE_VALUE: return ENUM_TASTE_WEICHENAUFFAHRTASTE;
 			case ENUM_TASTE_ZIELTASTE_VALUE: return ENUM_TASTE_ZIELTASTE;
+			case ENUM_TASTE_ZUGFERTIGMELDETASTE_VALUE: return ENUM_TASTE_ZUGFERTIGMELDETASTE;
 			case ENUM_TASTE_ZUGSCHLUSSMELDUNG_VALUE: return ENUM_TASTE_ZUGSCHLUSSMELDUNG;
+			case ENUM_TASTE_ZUSTIMMUNGSANFORDERUNG_VALUE: return ENUM_TASTE_ZUSTIMMUNGSANFORDERUNG;
 			default: return null;
 		}
 	}

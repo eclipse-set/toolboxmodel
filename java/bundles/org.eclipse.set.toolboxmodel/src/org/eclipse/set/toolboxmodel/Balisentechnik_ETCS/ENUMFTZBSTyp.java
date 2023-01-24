@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -69,16 +76,6 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	ENUMFT_ZBS_TYP_SONSTIGE(4, "ENUMFT_ZBS_Typ_sonstige", "sonstige"),
 
 	/**
-	 * The '<em><b>ENUMFT ZBS Typ TLa</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFT_ZBS_TYP_TLA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ENUMFT_ZBS_TYP_TLA(5, "ENUMFT_ZBS_Typ_TLa", "TLa"),
-
-	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZA</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,7 +83,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZA(6, "ENUMFT_ZBS_Typ_ZA", "ZA"),
+	ENUMFT_ZBS_TYP_ZA(5, "ENUMFT_ZBS_Typ_ZA", "ZA"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZBb P</b></em>' literal object.
@@ -96,7 +93,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZBB_P(7, "ENUMFT_ZBS_Typ_ZBbP", "ZBbP"),
+	ENUMFT_ZBS_TYP_ZBB_P(6, "ENUMFT_ZBS_Typ_ZBbP", "ZBbP"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZBP</b></em>' literal object.
@@ -106,7 +103,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZBP(8, "ENUMFT_ZBS_Typ_ZBP", "ZBP"),
+	ENUMFT_ZBS_TYP_ZBP(7, "ENUMFT_ZBS_Typ_ZBP", "ZBP"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZF</b></em>' literal object.
@@ -116,7 +113,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZF(9, "ENUMFT_ZBS_Typ_ZF", "ZF"),
+	ENUMFT_ZBS_TYP_ZF(8, "ENUMFT_ZBS_Typ_ZF", "ZF"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZH</b></em>' literal object.
@@ -126,7 +123,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZH(10, "ENUMFT_ZBS_Typ_ZH", "ZH"),
+	ENUMFT_ZBS_TYP_ZH(9, "ENUMFT_ZBS_Typ_ZH", "ZH"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZHF</b></em>' literal object.
@@ -136,7 +133,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZHF(11, "ENUMFT_ZBS_Typ_ZHF", "ZHF"),
+	ENUMFT_ZBS_TYP_ZHF(10, "ENUMFT_ZBS_Typ_ZHF", "ZHF"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZLi H</b></em>' literal object.
@@ -146,7 +143,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZLI_H(12, "ENUMFT_ZBS_Typ_ZLiH", "ZLiH"),
+	ENUMFT_ZBS_TYP_ZLI_H(11, "ENUMFT_ZBS_Typ_ZLiH", "ZLiH"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZLi V</b></em>' literal object.
@@ -156,7 +153,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZLI_V(13, "ENUMFT_ZBS_Typ_ZLiV", "ZLiV"),
+	ENUMFT_ZBS_TYP_ZLI_V(12, "ENUMFT_ZBS_Typ_ZLiV", "ZLiV"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZO</b></em>' literal object.
@@ -166,7 +163,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZO(14, "ENUMFT_ZBS_Typ_ZO", "ZO"),
+	ENUMFT_ZBS_TYP_ZO(13, "ENUMFT_ZBS_Typ_ZO", "ZO"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRE</b></em>' literal object.
@@ -176,7 +173,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZRE(15, "ENUMFT_ZBS_Typ_ZRE", "ZRE"),
+	ENUMFT_ZBS_TYP_ZRE(14, "ENUMFT_ZBS_Typ_ZRE", "ZRE"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRH</b></em>' literal object.
@@ -186,7 +183,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZRH(16, "ENUMFT_ZBS_Typ_ZRH", "ZRH"),
+	ENUMFT_ZBS_TYP_ZRH(15, "ENUMFT_ZBS_Typ_ZRH", "ZRH"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRHF</b></em>' literal object.
@@ -196,7 +193,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZRHF(17, "ENUMFT_ZBS_Typ_ZRHF", "ZRHF"),
+	ENUMFT_ZBS_TYP_ZRHF(16, "ENUMFT_ZBS_Typ_ZRHF", "ZRHF"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZR La</b></em>' literal object.
@@ -206,7 +203,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZR_LA(18, "ENUMFT_ZBS_Typ_ZRLa", "ZRLa"),
+	ENUMFT_ZBS_TYP_ZR_LA(17, "ENUMFT_ZBS_Typ_ZRLa", "ZRLa"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRV</b></em>' literal object.
@@ -216,7 +213,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZRV(19, "ENUMFT_ZBS_Typ_ZRV", "ZRV"),
+	ENUMFT_ZBS_TYP_ZRV(18, "ENUMFT_ZBS_Typ_ZRV", "ZRV"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZU</b></em>' literal object.
@@ -226,7 +223,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZU(20, "ENUMFT_ZBS_Typ_ZU", "Z\u00dc"),
+	ENUMFT_ZBS_TYP_ZU(19, "ENUMFT_ZBS_Typ_ZU", "Z\u00dc"),
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZV</b></em>' literal object.
@@ -236,7 +233,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMFT_ZBS_TYP_ZV(21, "ENUMFT_ZBS_Typ_ZV", "ZV");
+	ENUMFT_ZBS_TYP_ZV(20, "ENUMFT_ZBS_Typ_ZV", "ZV");
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ Null</b></em>' literal value.
@@ -294,17 +291,6 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	public static final int ENUMFT_ZBS_TYP_SONSTIGE_VALUE = 4;
 
 	/**
-	 * The '<em><b>ENUMFT ZBS Typ TLa</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ENUMFT_ZBS_TYP_TLA
-	 * @model name="ENUMFT_ZBS_Typ_TLa" literal="TLa"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ENUMFT_ZBS_TYP_TLA_VALUE = 5;
-
-	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZA</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,7 +299,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZA_VALUE = 6;
+	public static final int ENUMFT_ZBS_TYP_ZA_VALUE = 5;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZBb P</b></em>' literal value.
@@ -324,7 +310,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZBB_P_VALUE = 7;
+	public static final int ENUMFT_ZBS_TYP_ZBB_P_VALUE = 6;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZBP</b></em>' literal value.
@@ -335,7 +321,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZBP_VALUE = 8;
+	public static final int ENUMFT_ZBS_TYP_ZBP_VALUE = 7;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZF</b></em>' literal value.
@@ -346,7 +332,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZF_VALUE = 9;
+	public static final int ENUMFT_ZBS_TYP_ZF_VALUE = 8;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZH</b></em>' literal value.
@@ -357,7 +343,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZH_VALUE = 10;
+	public static final int ENUMFT_ZBS_TYP_ZH_VALUE = 9;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZHF</b></em>' literal value.
@@ -368,7 +354,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZHF_VALUE = 11;
+	public static final int ENUMFT_ZBS_TYP_ZHF_VALUE = 10;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZLi H</b></em>' literal value.
@@ -379,7 +365,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZLI_H_VALUE = 12;
+	public static final int ENUMFT_ZBS_TYP_ZLI_H_VALUE = 11;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZLi V</b></em>' literal value.
@@ -390,7 +376,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZLI_V_VALUE = 13;
+	public static final int ENUMFT_ZBS_TYP_ZLI_V_VALUE = 12;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZO</b></em>' literal value.
@@ -401,7 +387,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZO_VALUE = 14;
+	public static final int ENUMFT_ZBS_TYP_ZO_VALUE = 13;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRE</b></em>' literal value.
@@ -412,7 +398,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZRE_VALUE = 15;
+	public static final int ENUMFT_ZBS_TYP_ZRE_VALUE = 14;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRH</b></em>' literal value.
@@ -423,7 +409,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZRH_VALUE = 16;
+	public static final int ENUMFT_ZBS_TYP_ZRH_VALUE = 15;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRHF</b></em>' literal value.
@@ -434,7 +420,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZRHF_VALUE = 17;
+	public static final int ENUMFT_ZBS_TYP_ZRHF_VALUE = 16;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZR La</b></em>' literal value.
@@ -445,7 +431,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZR_LA_VALUE = 18;
+	public static final int ENUMFT_ZBS_TYP_ZR_LA_VALUE = 17;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZRV</b></em>' literal value.
@@ -456,7 +442,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZRV_VALUE = 19;
+	public static final int ENUMFT_ZBS_TYP_ZRV_VALUE = 18;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZU</b></em>' literal value.
@@ -467,7 +453,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZU_VALUE = 20;
+	public static final int ENUMFT_ZBS_TYP_ZU_VALUE = 19;
 
 	/**
 	 * The '<em><b>ENUMFT ZBS Typ ZV</b></em>' literal value.
@@ -478,7 +464,7 @@ public enum ENUMFTZBSTyp implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENUMFT_ZBS_TYP_ZV_VALUE = 21;
+	public static final int ENUMFT_ZBS_TYP_ZV_VALUE = 20;
 
 	/**
 	 * An array of all the '<em><b>ENUMFTZBS Typ</b></em>' enumerators.
@@ -493,7 +479,6 @@ public enum ENUMFTZBSTyp implements Enumerator {
 			ENUMFT_ZBS_TYP_RS,
 			ENUMFT_ZBS_TYP_RSP,
 			ENUMFT_ZBS_TYP_SONSTIGE,
-			ENUMFT_ZBS_TYP_TLA,
 			ENUMFT_ZBS_TYP_ZA,
 			ENUMFT_ZBS_TYP_ZBB_P,
 			ENUMFT_ZBS_TYP_ZBP,
@@ -571,7 +556,6 @@ public enum ENUMFTZBSTyp implements Enumerator {
 			case ENUMFT_ZBS_TYP_RS_VALUE: return ENUMFT_ZBS_TYP_RS;
 			case ENUMFT_ZBS_TYP_RSP_VALUE: return ENUMFT_ZBS_TYP_RSP;
 			case ENUMFT_ZBS_TYP_SONSTIGE_VALUE: return ENUMFT_ZBS_TYP_SONSTIGE;
-			case ENUMFT_ZBS_TYP_TLA_VALUE: return ENUMFT_ZBS_TYP_TLA;
 			case ENUMFT_ZBS_TYP_ZA_VALUE: return ENUMFT_ZBS_TYP_ZA;
 			case ENUMFT_ZBS_TYP_ZBB_P_VALUE: return ENUMFT_ZBS_TYP_ZBB_P;
 			case ENUMFT_ZBS_TYP_ZBP_VALUE: return ENUMFT_ZBS_TYP_ZBP;

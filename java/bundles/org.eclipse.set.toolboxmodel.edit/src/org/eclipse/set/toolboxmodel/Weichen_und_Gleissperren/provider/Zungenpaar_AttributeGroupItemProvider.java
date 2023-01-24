@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenFactory;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage;
@@ -91,6 +92,7 @@ public class Zungenpaar_AttributeGroupItemProvider
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__GESCHWINDIGKEIT_R);
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__HERZSTUECK_ANTRIEBE);
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS);
+			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS);
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL);
 			childrenFeatures.add(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL);
 		}
@@ -151,6 +153,7 @@ public class Zungenpaar_AttributeGroupItemProvider
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__GESCHWINDIGKEIT_R:
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__HERZSTUECK_ANTRIEBE:
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS:
+			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS:
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL:
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -201,6 +204,11 @@ public class Zungenpaar_AttributeGroupItemProvider
 			(createChildParameter
 				(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS,
 				 Weichen_und_GleissperrenFactory.eINSTANCE.createKreuzungsgleis_TypeClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Weichen_und_GleissperrenPackage.Literals.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS,
+				 Weichen_und_GleissperrenFactory.eINSTANCE.createStammgleis_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

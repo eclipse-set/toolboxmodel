@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Flankenschutz.impl;
 
@@ -6,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -30,7 +36,6 @@ import org.eclipse.set.toolboxmodel.Flankenschutz.FlankenschutzPackage;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_SchutzImpl#getFlaSchutzAnforderer <em>Fla Schutz Anforderer</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_SchutzImpl#getIDFlaWeitergabeEKW <em>ID Fla Weitergabe EKW</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_SchutzImpl#getFlaSchutzSignal <em>Fla Schutz Signal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_SchutzImpl#getFlaSchutzWGsp <em>Fla Schutz WGsp</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Flankenschutz.impl.Fla_SchutzImpl#getFlaSchutzWeitergabe <em>Fla Schutz Weitergabe</em>}</li>
@@ -49,25 +54,6 @@ public class Fla_SchutzImpl extends Basis_ObjektImpl implements Fla_Schutz {
 	 * @ordered
 	 */
 	protected Fla_Schutz_Anforderer_AttributeGroup flaSchutzAnforderer;
-
-	/**
-	 * The cached value of the '{@link #getIDFlaWeitergabeEKW() <em>ID Fla Weitergabe EKW</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIDFlaWeitergabeEKW()
-	 * @generated
-	 * @ordered
-	 */
-	protected Fla_Schutz iDFlaWeitergabeEKW;
-
-	/**
-	 * This is true if the ID Fla Weitergabe EKW reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean iDFlaWeitergabeEKWESet;
 
 	/**
 	 * The cached value of the '{@link #getFlaSchutzSignal() <em>Fla Schutz Signal</em>}' containment reference.
@@ -171,73 +157,6 @@ public class Fla_SchutzImpl extends Basis_ObjektImpl implements Fla_Schutz {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_ANFORDERER, newFlaSchutzAnforderer, newFlaSchutzAnforderer));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Fla_Schutz getIDFlaWeitergabeEKW() {
-		if (iDFlaWeitergabeEKW != null && iDFlaWeitergabeEKW.eIsProxy()) {
-			InternalEObject oldIDFlaWeitergabeEKW = (InternalEObject)iDFlaWeitergabeEKW;
-			iDFlaWeitergabeEKW = (Fla_Schutz)eResolveProxy(oldIDFlaWeitergabeEKW);
-			if (iDFlaWeitergabeEKW != oldIDFlaWeitergabeEKW) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FlankenschutzPackage.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW, oldIDFlaWeitergabeEKW, iDFlaWeitergabeEKW));
-			}
-		}
-		return iDFlaWeitergabeEKW;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Fla_Schutz basicGetIDFlaWeitergabeEKW() {
-		return iDFlaWeitergabeEKW;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIDFlaWeitergabeEKW(Fla_Schutz newIDFlaWeitergabeEKW) {
-		Fla_Schutz oldIDFlaWeitergabeEKW = iDFlaWeitergabeEKW;
-		iDFlaWeitergabeEKW = newIDFlaWeitergabeEKW;
-		boolean oldIDFlaWeitergabeEKWESet = iDFlaWeitergabeEKWESet;
-		iDFlaWeitergabeEKWESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FlankenschutzPackage.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW, oldIDFlaWeitergabeEKW, iDFlaWeitergabeEKW, !oldIDFlaWeitergabeEKWESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void unsetIDFlaWeitergabeEKW() {
-		Fla_Schutz oldIDFlaWeitergabeEKW = iDFlaWeitergabeEKW;
-		boolean oldIDFlaWeitergabeEKWESet = iDFlaWeitergabeEKWESet;
-		iDFlaWeitergabeEKW = null;
-		iDFlaWeitergabeEKWESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, FlankenschutzPackage.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW, oldIDFlaWeitergabeEKW, null, oldIDFlaWeitergabeEKWESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSetIDFlaWeitergabeEKW() {
-		return iDFlaWeitergabeEKWESet;
 	}
 
 	/**
@@ -453,9 +372,6 @@ public class Fla_SchutzImpl extends Basis_ObjektImpl implements Fla_Schutz {
 		switch (featureID) {
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_ANFORDERER:
 				return getFlaSchutzAnforderer();
-			case FlankenschutzPackage.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW:
-				if (resolve) return getIDFlaWeitergabeEKW();
-				return basicGetIDFlaWeitergabeEKW();
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_SIGNAL:
 				return getFlaSchutzSignal();
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_WGSP:
@@ -479,9 +395,6 @@ public class Fla_SchutzImpl extends Basis_ObjektImpl implements Fla_Schutz {
 		switch (featureID) {
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_ANFORDERER:
 				setFlaSchutzAnforderer((Fla_Schutz_Anforderer_AttributeGroup)newValue);
-				return;
-			case FlankenschutzPackage.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW:
-				setIDFlaWeitergabeEKW((Fla_Schutz)newValue);
 				return;
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_SIGNAL:
 				setFlaSchutzSignal((Fla_Schutz_Signal_AttributeGroup)newValue);
@@ -512,9 +425,6 @@ public class Fla_SchutzImpl extends Basis_ObjektImpl implements Fla_Schutz {
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_ANFORDERER:
 				setFlaSchutzAnforderer((Fla_Schutz_Anforderer_AttributeGroup)null);
 				return;
-			case FlankenschutzPackage.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW:
-				unsetIDFlaWeitergabeEKW();
-				return;
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_SIGNAL:
 				setFlaSchutzSignal((Fla_Schutz_Signal_AttributeGroup)null);
 				return;
@@ -543,8 +453,6 @@ public class Fla_SchutzImpl extends Basis_ObjektImpl implements Fla_Schutz {
 		switch (featureID) {
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_ANFORDERER:
 				return flaSchutzAnforderer != null;
-			case FlankenschutzPackage.FLA_SCHUTZ__ID_FLA_WEITERGABE_EKW:
-				return isSetIDFlaWeitergabeEKW();
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_SIGNAL:
 				return flaSchutzSignal != null;
 			case FlankenschutzPackage.FLA_SCHUTZ__FLA_SCHUTZ_WGSP:

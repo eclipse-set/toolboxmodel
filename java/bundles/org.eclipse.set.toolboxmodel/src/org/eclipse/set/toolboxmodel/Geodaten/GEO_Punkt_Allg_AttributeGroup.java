@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Geodaten;
 
@@ -13,12 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatensystem <em>GEO Koordinatensystem</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGKX <em>GKX</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGKY <em>GKY</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGKZ <em>GKZ</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getPlanQuelle <em>Plan Quelle</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemLSys <em>GEO Koordinaten System LSys</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemSonstige <em>GEO Koordinaten System Sonstige</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGEO_Punkt_Allg_AttributeGroup()
@@ -26,6 +32,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface GEO_Punkt_Allg_AttributeGroup extends EObject {
+	/**
+	 * Returns the value of the '<em><b>GEO Koordinatensystem</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Angabe der topographischen Koordinaten des Geo-Punkts, in der Regel in LSys-Koordinaten. Neben den eigentlichen Koordinaten (x, y, z) wird auch das konkrete Koordinatensystem in der Bezeichnung dargestellt. Bei übergreifenden Koordinaten in Grenzbereichen, die nicht mit LSys darstellbar sind, ist der Wert "sonstige" zu verwenden und das Koordinatensystem mittels Bearbeitungsvermerk anzugeben. Folgende Wertigkeiten (3 Zeichen) liefert das Attribut LSys (s. a. Spezifikation Gleisnetzdaten der DB): 1. Zeichen: C Meridianstreifen 6° östliche Länge; D Meridianstreifen 9° östliche Länge; E Meridianstreifen 12° östliche Länge; F Meridianstreifen 15° östliche Länge. 2. Zeichen: A System RD/83 - Bessel-Ellipsoid, Datumspunkt Rauenberg (westliche Bundesländer, Sachsen); B System PD/83 - Bessel-Ellipsoid, Datumspunkt Potsdam (Thüringen); C System 42/83 - Krassowski-Ellipsoid, Datumspunkt Pulkowo (Brandenburg, Mecklenburg, Sachsen-Anhalt); R DB-Referenzsystem (Kartesische Koordinaten); S System Soldner - Netz 88, Datumspunkt Müggelberg (Berlin). 3. Zeichen: 0 DB-GIS Bezugsystem; A..9 Sonstige kartesische Koordinaten.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>GEO Koordinatensystem</em>' containment reference.
+	 * @see #setGEOKoordinatensystem(GEO_Koordinatensystem_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatensystem()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='GEO_Koordinatensystem'"
+	 * @generated
+	 */
+	GEO_Koordinatensystem_TypeClass getGEOKoordinatensystem();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatensystem <em>GEO Koordinatensystem</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>GEO Koordinatensystem</em>' containment reference.
+	 * @see #getGEOKoordinatensystem()
+	 * @generated
+	 */
+	void setGEOKoordinatensystem(GEO_Koordinatensystem_TypeClass value);
+
 	/**
 	 * Returns the value of the '<em><b>GKX</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -129,57 +161,5 @@ public interface GEO_Punkt_Allg_AttributeGroup extends EObject {
 	 * @generated
 	 */
 	void setPlanQuelle(Plan_Quelle_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>GEO Koordinaten System LSys</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Angabe der topographischen Koordinaten des Geo-Punkts in LSys-Koordinaten. Die Darstellung von topographischen Koordinaten erfolgt fürGeo-Punkte in der Regel in LSys-Koordinaten. Neben den eigentlichen Koordinaten (x, y, z) wird auch das konkrete Koordinatensystem in der Bezeichnung dargestellt. Bei übergreifenden Koordinaten in Grenzbereichen, die nicht mit LSys darstellbar sind, ist das Koordinatensystem sonstige zu verwenden. Folgende Wertigkeiten (3 Zeichen) liefert das Attribut LSys(s. a. Spezifikation Gleisnetzdaten der DB): 1. Zeichen: C Meridianstreifen 6° östliche Länge; D Meridianstreifen 9° östliche Länge; E Meridianstreifen 12° östliche Länge; F Meridianstreifen 15° östliche Länge. 2. Zeichen: A System RD/83 - Bessel-Ellipsoid, Datumspunkt Rauenberg (westliche Bundesländer, Sachsen); B System PD/83 - Bessel-Ellipsoid, Datumspunkt Potsdam (Thüringen); C System 42/83 - Krassowski-Ellipsoid, Datumspunkt Pulkowo (Brandenburg, Mecklenburg, Sachsen-Anhalt); R DB-Referenzsystem (Kartesische Koordinaten); S System Soldner - Netz 88, Datumspunkt Müggelberg (Berlin). 3. Zeichen: 0 DB-GIS Bezugsystem; A..9 Sonstige kartesische Koordinaten. 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>GEO Koordinaten System LSys</em>' containment reference.
-	 * @see #setGEOKoordinatenSystemLSys(GEO_KoordinatenSystem_LSys_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemLSys()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='GEO_KoordinatenSystem_LSys'"
-	 * @generated
-	 */
-	GEO_KoordinatenSystem_LSys_TypeClass getGEOKoordinatenSystemLSys();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemLSys <em>GEO Koordinaten System LSys</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>GEO Koordinaten System LSys</em>' containment reference.
-	 * @see #getGEOKoordinatenSystemLSys()
-	 * @generated
-	 */
-	void setGEOKoordinatenSystemLSys(GEO_KoordinatenSystem_LSys_TypeClass value);
-
-	/**
-	 * Returns the value of the '<em><b>GEO Koordinaten System Sonstige</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Sonstiges Geo-Koordinatensystem. Das Attribut ist nur dann zu verwenden, wenn das verwendete Koordinatensystem für den GEO Punkt nicht den LSys-Koordinaten entspricht.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>GEO Koordinaten System Sonstige</em>' containment reference.
-	 * @see #setGEOKoordinatenSystemSonstige(GEO_KoordinatenSystem_Sonstige_TypeClass)
-	 * @see org.eclipse.set.toolboxmodel.Geodaten.GeodatenPackage#getGEO_Punkt_Allg_AttributeGroup_GEOKoordinatenSystemSonstige()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='GEO_KoordinatenSystem_Sonstige'"
-	 * @generated
-	 */
-	GEO_KoordinatenSystem_Sonstige_TypeClass getGEOKoordinatenSystemSonstige();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Geodaten.GEO_Punkt_Allg_AttributeGroup#getGEOKoordinatenSystemSonstige <em>GEO Koordinaten System Sonstige</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>GEO Koordinaten System Sonstige</em>' containment reference.
-	 * @see #getGEOKoordinatenSystemSonstige()
-	 * @generated
-	 */
-	void setGEOKoordinatenSystemSonstige(GEO_KoordinatenSystem_Sonstige_TypeClass value);
 
 } // GEO_Punkt_Allg_AttributeGroup

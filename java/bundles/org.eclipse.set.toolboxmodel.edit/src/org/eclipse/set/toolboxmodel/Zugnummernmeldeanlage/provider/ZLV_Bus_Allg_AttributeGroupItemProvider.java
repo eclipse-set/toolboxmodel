@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -28,7 +29,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZLV_Bus_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.ZugnummernmeldeanlageFactory;
@@ -86,7 +87,6 @@ public class ZLV_Bus_Allg_AttributeGroupItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX);
-			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR);
 			childrenFeatures.add(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM);
 		}
 		return childrenFeatures;
@@ -141,7 +141,6 @@ public class ZLV_Bus_Allg_AttributeGroupItemProvider
 
 		switch (notification.getFeatureID(ZLV_Bus_Allg_AttributeGroup.class)) {
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX:
-			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR:
 			case ZugnummernmeldeanlagePackage.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZN_MODEM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -166,11 +165,6 @@ public class ZLV_Bus_Allg_AttributeGroupItemProvider
 			(createChildParameter
 				(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__UNTERSTATION_MAX,
 				 ZugnummernmeldeanlageFactory.eINSTANCE.createUnterstation_Max_TypeClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ZugnummernmeldeanlagePackage.Literals.ZLV_BUS_ALLG_ATTRIBUTE_GROUP__ZLV_BUS_NR,
-				 ZugnummernmeldeanlageFactory.eINSTANCE.createZLV_Bus_Nr_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -26,7 +33,11 @@ public interface LEU_Modul_Bezeichnung_AttributeGroup extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Nummer des LEU-Moduls, die eindeutig innerhalb einer LEU-Anlage zu wählen ist.
+	 * Nummer des LEU-Moduls, die eindeutig innerhalb einer LEU-Anlage zu wählen ist. Die Gesamtbezeichnung des LEU-Moduls setzt sich aus der Bezeichnung der zugehörigen LEU-Anlage, Unterstrich und der Modulnummer zusammen.
+	 * Beispiel:
+	 * Bezeichnung LEU-Anlage: AA
+	 * Modulnummer: 1
+	 * Bezeichnung LEU-Modul: AA_1
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Modulnummer</em>' containment reference.
 	 * @see #setModulnummer(Modulnummer_TypeClass)

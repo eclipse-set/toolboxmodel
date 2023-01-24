@@ -1,11 +1,19 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Signale;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Punkt_Objekt;
+
 import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
 
 /**
@@ -22,9 +30,9 @@ import org.eclipse.set.toolboxmodel.Regelzeichnung.Regelzeichnung;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDRegelzeichnung <em>ID Regelzeichnung</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDRegelzeichnungVsigTafel <em>ID Regelzeichnung Vsig Tafel</em>}</li>
- *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDSignalBefestigung <em>ID Signal Befestigung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getSignalBefestigungAllg <em>Signal Befestigung Allg</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDBefestigungBauwerk <em>ID Befestigung Bauwerk</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDSignalBefestigung <em>ID Signal Befestigung</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Befestigung()
@@ -48,57 +56,80 @@ public interface Signal_Befestigung extends Punkt_Objekt {
 	EList<Regelzeichnung> getIDRegelzeichnung();
 
 	/**
-	 * Returns the value of the '<em><b>ID Regelzeichnung Vsig Tafel</b></em>' reference.
+	 * Returns the value of the '<em><b>Signal Befestigung Allg</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Signal Befestigung Allg</em>' containment reference.
+	 * @see #setSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup)
+	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Befestigung_SignalBefestigungAllg()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='Signal_Befestigung_Allg'"
+	 * @generated
+	 */
+	Signal_Befestigung_Allg_AttributeGroup getSignalBefestigungAllg();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getSignalBefestigungAllg <em>Signal Befestigung Allg</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Signal Befestigung Allg</em>' containment reference.
+	 * @see #getSignalBefestigungAllg()
+	 * @generated
+	 */
+	void setSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>ID Befestigung Bauwerk</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Verweis auf die Regelzeichnung für die Vorsignaltafel.
+	 * Verweis auf ein Nicht-LST-Objekt (OL-Mast, Brücke, Stützwand), an dem die Signalbefestigung befestigt ist.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Regelzeichnung Vsig Tafel</em>' reference.
-	 * @see #isSetIDRegelzeichnungVsigTafel()
-	 * @see #unsetIDRegelzeichnungVsigTafel()
-	 * @see #setIDRegelzeichnungVsigTafel(Regelzeichnung)
-	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Befestigung_IDRegelzeichnungVsigTafel()
+	 * @return the value of the '<em>ID Befestigung Bauwerk</em>' reference.
+	 * @see #isSetIDBefestigungBauwerk()
+	 * @see #unsetIDBefestigungBauwerk()
+	 * @see #setIDBefestigungBauwerk(Basis_Objekt)
+	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Befestigung_IDBefestigungBauwerk()
 	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='ID_Regelzeichnung_Vsig_Tafel'"
+	 *        extendedMetaData="kind='element' name='ID_Befestigung_Bauwerk'"
 	 * @generated
 	 */
-	Regelzeichnung getIDRegelzeichnungVsigTafel();
+	Basis_Objekt getIDBefestigungBauwerk();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDRegelzeichnungVsigTafel <em>ID Regelzeichnung Vsig Tafel</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDBefestigungBauwerk <em>ID Befestigung Bauwerk</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>ID Regelzeichnung Vsig Tafel</em>' reference.
-	 * @see #isSetIDRegelzeichnungVsigTafel()
-	 * @see #unsetIDRegelzeichnungVsigTafel()
-	 * @see #getIDRegelzeichnungVsigTafel()
+	 * @param value the new value of the '<em>ID Befestigung Bauwerk</em>' reference.
+	 * @see #isSetIDBefestigungBauwerk()
+	 * @see #unsetIDBefestigungBauwerk()
+	 * @see #getIDBefestigungBauwerk()
 	 * @generated
 	 */
-	void setIDRegelzeichnungVsigTafel(Regelzeichnung value);
+	void setIDBefestigungBauwerk(Basis_Objekt value);
 
 	/**
-	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDRegelzeichnungVsigTafel <em>ID Regelzeichnung Vsig Tafel</em>}' reference.
+	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDBefestigungBauwerk <em>ID Befestigung Bauwerk</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSetIDRegelzeichnungVsigTafel()
-	 * @see #getIDRegelzeichnungVsigTafel()
-	 * @see #setIDRegelzeichnungVsigTafel(Regelzeichnung)
+	 * @see #isSetIDBefestigungBauwerk()
+	 * @see #getIDBefestigungBauwerk()
+	 * @see #setIDBefestigungBauwerk(Basis_Objekt)
 	 * @generated
 	 */
-	void unsetIDRegelzeichnungVsigTafel();
+	void unsetIDBefestigungBauwerk();
 
 	/**
-	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDRegelzeichnungVsigTafel <em>ID Regelzeichnung Vsig Tafel</em>}' reference is set.
+	 * Returns whether the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getIDBefestigungBauwerk <em>ID Befestigung Bauwerk</em>}' reference is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>ID Regelzeichnung Vsig Tafel</em>' reference is set.
-	 * @see #unsetIDRegelzeichnungVsigTafel()
-	 * @see #getIDRegelzeichnungVsigTafel()
-	 * @see #setIDRegelzeichnungVsigTafel(Regelzeichnung)
+	 * @return whether the value of the '<em>ID Befestigung Bauwerk</em>' reference is set.
+	 * @see #unsetIDBefestigungBauwerk()
+	 * @see #getIDBefestigungBauwerk()
+	 * @see #setIDBefestigungBauwerk(Basis_Objekt)
 	 * @generated
 	 */
-	boolean isSetIDRegelzeichnungVsigTafel();
+	boolean isSetIDBefestigungBauwerk();
 
 	/**
 	 * Returns the value of the '<em><b>ID Signal Befestigung</b></em>' reference.
@@ -152,28 +183,5 @@ public interface Signal_Befestigung extends Punkt_Objekt {
 	 * @generated
 	 */
 	boolean isSetIDSignalBefestigung();
-
-	/**
-	 * Returns the value of the '<em><b>Signal Befestigung Allg</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Signal Befestigung Allg</em>' containment reference.
-	 * @see #setSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup)
-	 * @see org.eclipse.set.toolboxmodel.Signale.SignalePackage#getSignal_Befestigung_SignalBefestigungAllg()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Signal_Befestigung_Allg'"
-	 * @generated
-	 */
-	Signal_Befestigung_Allg_AttributeGroup getSignalBefestigungAllg();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Signale.Signal_Befestigung#getSignalBefestigungAllg <em>Signal Befestigung Allg</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Signal Befestigung Allg</em>' containment reference.
-	 * @see #getSignalBefestigungAllg()
-	 * @generated
-	 */
-	void setSignalBefestigungAllg(Signal_Befestigung_Allg_AttributeGroup value);
 
 } // Signal_Befestigung

@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -28,13 +35,13 @@ public interface LEU_Modul_Art_TypeClass extends BasisAttribut_AttributeGroup {
 	 * @return the value of the '<em>Wert</em>' attribute.
 	 * @see #isSetWert()
 	 * @see #unsetWert()
-	 * @see #setWert(ENUMLEUModulArt)
+	 * @see #setWert(ENUMLEUArt)
 	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Modul_Art_TypeClass_Wert()
-	 * @model unsettable="true" dataType="org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ENUMLEUModulArtObject" required="true"
+	 * @model unsettable="true" dataType="org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ENUMLEUArtObject" required="true"
 	 *        extendedMetaData="kind='element' name='Wert'"
 	 * @generated
 	 */
-	ENUMLEUModulArt getWert();
+	ENUMLEUArt getWert();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Art_TypeClass#getWert <em>Wert</em>}' attribute.
@@ -46,7 +53,7 @@ public interface LEU_Modul_Art_TypeClass extends BasisAttribut_AttributeGroup {
 	 * @see #getWert()
 	 * @generated
 	 */
-	void setWert(ENUMLEUModulArt value);
+	void setWert(ENUMLEUArt value);
 
 	/**
 	 * Unsets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Art_TypeClass#getWert <em>Wert</em>}' attribute.
@@ -54,7 +61,7 @@ public interface LEU_Modul_Art_TypeClass extends BasisAttribut_AttributeGroup {
 	 * <!-- end-user-doc -->
 	 * @see #isSetWert()
 	 * @see #getWert()
-	 * @see #setWert(ENUMLEUModulArt)
+	 * @see #setWert(ENUMLEUArt)
 	 * @generated
 	 */
 	void unsetWert();
@@ -66,7 +73,7 @@ public interface LEU_Modul_Art_TypeClass extends BasisAttribut_AttributeGroup {
 	 * @return whether the value of the '<em>Wert</em>' attribute is set.
 	 * @see #unsetWert()
 	 * @see #getWert()
-	 * @see #setWert(ENUMLEUModulArt)
+	 * @see #setWert(ENUMLEUArt)
 	 * @generated
 	 */
 	boolean isSetWert();

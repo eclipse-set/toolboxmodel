@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.util;
 
@@ -78,6 +85,10 @@ public class Weichen_und_GleissperrenAdapterFactory extends AdapterFactoryImpl {
 				return createAuffahrortung_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseAustausch_Antriebe_TypeClass(Austausch_Antriebe_TypeClass object) {
+				return createAustausch_Antriebe_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseAuswurfrichtung_TypeClass(Auswurfrichtung_TypeClass object) {
 				return createAuswurfrichtung_TypeClassAdapter();
 			}
@@ -150,6 +161,10 @@ public class Weichen_und_GleissperrenAdapterFactory extends AdapterFactoryImpl {
 				return createIsolierfall_TypeClassAdapter();
 			}
 			@Override
+			public Adapter caseKr_KrW_Seitenzuordnung_TypeClass(Kr_KrW_Seitenzuordnung_TypeClass object) {
+				return createKr_KrW_Seitenzuordnung_TypeClassAdapter();
+			}
+			@Override
 			public Adapter caseKreuzung_AttributeGroup(Kreuzung_AttributeGroup object) {
 				return createKreuzung_AttributeGroupAdapter();
 			}
@@ -160,6 +175,10 @@ public class Weichen_und_GleissperrenAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSchutzschiene_TypeClass(Schutzschiene_TypeClass object) {
 				return createSchutzschiene_TypeClassAdapter();
+			}
+			@Override
+			public Adapter caseStammgleis_TypeClass(Stammgleis_TypeClass object) {
+				return createStammgleis_TypeClassAdapter();
 			}
 			@Override
 			public Adapter caseVorzugslage_Automatik_TypeClass(Vorzugslage_Automatik_TypeClass object) {
@@ -276,6 +295,20 @@ public class Weichen_und_GleissperrenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAuffahrortung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass <em>Austausch Antriebe Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Austausch_Antriebe_TypeClass
+	 * @generated
+	 */
+	public Adapter createAustausch_Antriebe_TypeClassAdapter() {
 		return null;
 	}
 
@@ -532,6 +565,20 @@ public class Weichen_und_GleissperrenAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass <em>Kr Kr WSeitenzuordnung Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kr_KrW_Seitenzuordnung_TypeClass
+	 * @generated
+	 */
+	public Adapter createKr_KrW_Seitenzuordnung_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kreuzung_AttributeGroup <em>Kreuzung Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -570,6 +617,20 @@ public class Weichen_und_GleissperrenAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSchutzschiene_TypeClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass <em>Stammgleis Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass
+	 * @generated
+	 */
+	public Adapter createStammgleis_TypeClassAdapter() {
 		return null;
 	}
 

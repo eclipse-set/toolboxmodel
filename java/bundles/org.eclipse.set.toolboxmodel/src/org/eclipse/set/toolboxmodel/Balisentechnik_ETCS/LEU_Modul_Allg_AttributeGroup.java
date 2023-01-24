@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS;
 
@@ -15,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup#getHersteller <em>Hersteller</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup#getLEUModulArt <em>LEU Modul Art</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup#getLEUModulGeraetestand <em>LEU Modul Geraetestand</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup#getLEUModulTyp <em>LEU Modul Typ</em>}</li>
  * </ul>
  *
@@ -76,11 +84,37 @@ public interface LEU_Modul_Allg_AttributeGroup extends EObject {
 	void setLEUModulArt(LEU_Modul_Art_TypeClass value);
 
 	/**
+	 * Returns the value of the '<em><b>LEU Modul Geraetestand</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Gerätestand des LEU-Moduls. Die Information ist im Zusammenhang mit der Angabe "LEU_Modul_Typ" zu interpretieren. Beispiel: 3, 12a.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>LEU Modul Geraetestand</em>' containment reference.
+	 * @see #setLEUModulGeraetestand(LEU_Modul_Geraetestand_TypeClass)
+	 * @see org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage#getLEU_Modul_Allg_AttributeGroup_LEUModulGeraetestand()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='LEU_Modul_Geraetestand'"
+	 * @generated
+	 */
+	LEU_Modul_Geraetestand_TypeClass getLEUModulGeraetestand();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Modul_Allg_AttributeGroup#getLEUModulGeraetestand <em>LEU Modul Geraetestand</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>LEU Modul Geraetestand</em>' containment reference.
+	 * @see #getLEUModulGeraetestand()
+	 * @generated
+	 */
+	void setLEUModulGeraetestand(LEU_Modul_Geraetestand_TypeClass value);
+
+	/**
 	 * Returns the value of the '<em><b>LEU Modul Typ</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Herstellerbezogene Typ-Angabe (Rücklaufdatum, schließt Gerätestand ein).
+	 * Herstellerbezogene Typ-Angabe (Rücklaufdatum).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>LEU Modul Typ</em>' containment reference.
 	 * @see #setLEUModulTyp(LEU_Modul_Typ_TypeClass)

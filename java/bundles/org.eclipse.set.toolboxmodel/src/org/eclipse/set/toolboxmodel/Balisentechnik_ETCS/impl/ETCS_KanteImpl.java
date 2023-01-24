@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl;
 
@@ -10,17 +17,21 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Kante_Bezeichnung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.ETCS_Knoten;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.RBC;
+
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Basis_ObjektImpl;
+
+import org.eclipse.set.toolboxmodel.Geodaten.Strecke;
 import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
 
 /**
@@ -35,6 +46,7 @@ import org.eclipse.set.toolboxmodel.Geodaten.TOP_Kante;
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_KanteImpl#getIDETCSKnotenA <em>IDETCS Knoten A</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_KanteImpl#getIDETCSKnotenB <em>IDETCS Knoten B</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_KanteImpl#getIDRBC <em>IDRBC</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_KanteImpl#getIDStrecke <em>ID Strecke</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.impl.ETCS_KanteImpl#getIDTOPKante <em>IDTOP Kante</em>}</li>
  * </ul>
  *
@@ -98,6 +110,25 @@ public class ETCS_KanteImpl extends Basis_ObjektImpl implements ETCS_Kante {
 	 * @ordered
 	 */
 	protected EList<RBC> iDRBC;
+
+	/**
+	 * The cached value of the '{@link #getIDStrecke() <em>ID Strecke</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIDStrecke()
+	 * @generated
+	 * @ordered
+	 */
+	protected Strecke iDStrecke;
+
+	/**
+	 * This is true if the ID Strecke reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean iDStreckeESet;
 
 	/**
 	 * The cached value of the '{@link #getIDTOPKante() <em>IDTOP Kante</em>}' reference list.
@@ -326,6 +357,73 @@ public class ETCS_KanteImpl extends Basis_ObjektImpl implements ETCS_Kante {
 	 * @generated
 	 */
 	@Override
+	public Strecke getIDStrecke() {
+		if (iDStrecke != null && iDStrecke.eIsProxy()) {
+			InternalEObject oldIDStrecke = (InternalEObject)iDStrecke;
+			iDStrecke = (Strecke)eResolveProxy(oldIDStrecke);
+			if (iDStrecke != oldIDStrecke) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Balisentechnik_ETCSPackage.ETCS_KANTE__ID_STRECKE, oldIDStrecke, iDStrecke));
+			}
+		}
+		return iDStrecke;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Strecke basicGetIDStrecke() {
+		return iDStrecke;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIDStrecke(Strecke newIDStrecke) {
+		Strecke oldIDStrecke = iDStrecke;
+		iDStrecke = newIDStrecke;
+		boolean oldIDStreckeESet = iDStreckeESet;
+		iDStreckeESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Balisentechnik_ETCSPackage.ETCS_KANTE__ID_STRECKE, oldIDStrecke, iDStrecke, !oldIDStreckeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetIDStrecke() {
+		Strecke oldIDStrecke = iDStrecke;
+		boolean oldIDStreckeESet = iDStreckeESet;
+		iDStrecke = null;
+		iDStreckeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, Balisentechnik_ETCSPackage.ETCS_KANTE__ID_STRECKE, oldIDStrecke, null, oldIDStreckeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetIDStrecke() {
+		return iDStreckeESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<TOP_Kante> getIDTOPKante() {
 		if (iDTOPKante == null) {
 			iDTOPKante = new EObjectResolvingEList<TOP_Kante>(TOP_Kante.class, this, Balisentechnik_ETCSPackage.ETCS_KANTE__IDTOP_KANTE);
@@ -366,6 +464,9 @@ public class ETCS_KanteImpl extends Basis_ObjektImpl implements ETCS_Kante {
 				return basicGetIDETCSKnotenB();
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDRBC:
 				return getIDRBC();
+			case Balisentechnik_ETCSPackage.ETCS_KANTE__ID_STRECKE:
+				if (resolve) return getIDStrecke();
+				return basicGetIDStrecke();
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDTOP_KANTE:
 				return getIDTOPKante();
 			default:
@@ -394,6 +495,9 @@ public class ETCS_KanteImpl extends Basis_ObjektImpl implements ETCS_Kante {
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDRBC:
 				getIDRBC().clear();
 				getIDRBC().addAll((Collection<? extends RBC>)newValue);
+				return;
+			case Balisentechnik_ETCSPackage.ETCS_KANTE__ID_STRECKE:
+				setIDStrecke((Strecke)newValue);
 				return;
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDTOP_KANTE:
 				getIDTOPKante().clear();
@@ -425,6 +529,9 @@ public class ETCS_KanteImpl extends Basis_ObjektImpl implements ETCS_Kante {
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDRBC:
 				getIDRBC().clear();
 				return;
+			case Balisentechnik_ETCSPackage.ETCS_KANTE__ID_STRECKE:
+				unsetIDStrecke();
+				return;
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDTOP_KANTE:
 				getIDTOPKante().clear();
 				return;
@@ -450,6 +557,8 @@ public class ETCS_KanteImpl extends Basis_ObjektImpl implements ETCS_Kante {
 				return isSetIDETCSKnotenB();
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDRBC:
 				return iDRBC != null && !iDRBC.isEmpty();
+			case Balisentechnik_ETCSPackage.ETCS_KANTE__ID_STRECKE:
+				return isSetIDStrecke();
 			case Balisentechnik_ETCSPackage.ETCS_KANTE__IDTOP_KANTE:
 				return iDTOPKante != null && !iDTOPKante.isEmpty();
 			default:

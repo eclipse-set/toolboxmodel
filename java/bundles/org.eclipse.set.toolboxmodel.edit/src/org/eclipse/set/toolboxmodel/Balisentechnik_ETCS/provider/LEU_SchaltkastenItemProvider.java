@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -29,7 +30,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Schaltkasten;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Basis_ObjektItemProvider;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.LEU_Schaltkasten} object.
@@ -100,8 +101,8 @@ public class LEU_SchaltkastenItemProvider extends Basis_ObjektItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_Bezeichnung());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenEnergie());
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenPosition());
 			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenTyp());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenPosition());
 		}
 		return childrenFeatures;
 	}
@@ -156,8 +157,8 @@ public class LEU_SchaltkastenItemProvider extends Basis_ObjektItemProvider {
 		switch (notification.getFeatureID(LEU_Schaltkasten.class)) {
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN__BEZEICHNUNG:
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN__LEU_SCHALTKASTEN_ENERGIE:
-			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN__LEU_SCHALTKASTEN_POSITION:
 			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN__LEU_SCHALTKASTEN_TYP:
+			case Balisentechnik_ETCSPackage.LEU_SCHALTKASTEN__LEU_SCHALTKASTEN_POSITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -189,13 +190,13 @@ public class LEU_SchaltkastenItemProvider extends Basis_ObjektItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenPosition(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Schaltkasten_Position_AttributeGroup()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenTyp(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Schaltkasten_Typ_TypeClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenTyp(),
-				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Schaltkasten_Typ_TypeClass()));
+				(Balisentechnik_ETCSPackage.eINSTANCE.getLEU_Schaltkasten_LEUSchaltkastenPosition(),
+				 Balisentechnik_ETCSFactory.eINSTANCE.createLEU_Schaltkasten_Position_AttributeGroup()));
 	}
 
 	/**

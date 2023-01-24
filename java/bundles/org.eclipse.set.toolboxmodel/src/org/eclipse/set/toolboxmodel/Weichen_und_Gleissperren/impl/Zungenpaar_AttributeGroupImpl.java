@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl;
 
@@ -17,6 +24,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Geschwindigkeit_L_T
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Geschwindigkeit_R_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Herzstueck_Antriebe_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Kreuzungsgleis_TypeClass;
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Stammgleis_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichensignal_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpaar_AttributeGroup;
@@ -36,6 +44,7 @@ import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Zungenpruefkontakt_
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Zungenpaar_AttributeGroupImpl#getGeschwindigkeitR <em>Geschwindigkeit R</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Zungenpaar_AttributeGroupImpl#getHerzstueckAntriebe <em>Herzstueck Antriebe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Zungenpaar_AttributeGroupImpl#getKreuzungsgleis <em>Kreuzungsgleis</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Zungenpaar_AttributeGroupImpl#getStammgleis <em>Stammgleis</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Zungenpaar_AttributeGroupImpl#getWeichensignal <em>Weichensignal</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl.Zungenpaar_AttributeGroupImpl#getZungenpruefkontaktAnzahl <em>Zungenpruefkontakt Anzahl</em>}</li>
  * </ul>
@@ -102,6 +111,16 @@ public class Zungenpaar_AttributeGroupImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected Kreuzungsgleis_TypeClass kreuzungsgleis;
+
+	/**
+	 * The cached value of the '{@link #getStammgleis() <em>Stammgleis</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStammgleis()
+	 * @generated
+	 * @ordered
+	 */
+	protected Stammgleis_TypeClass stammgleis;
 
 	/**
 	 * The cached value of the '{@link #getWeichensignal() <em>Weichensignal</em>}' containment reference.
@@ -418,6 +437,51 @@ public class Zungenpaar_AttributeGroupImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
+	public Stammgleis_TypeClass getStammgleis() {
+		return stammgleis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStammgleis(Stammgleis_TypeClass newStammgleis, NotificationChain msgs) {
+		Stammgleis_TypeClass oldStammgleis = stammgleis;
+		stammgleis = newStammgleis;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS, oldStammgleis, newStammgleis);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStammgleis(Stammgleis_TypeClass newStammgleis) {
+		if (newStammgleis != stammgleis) {
+			NotificationChain msgs = null;
+			if (stammgleis != null)
+				msgs = ((InternalEObject)stammgleis).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS, null, msgs);
+			if (newStammgleis != null)
+				msgs = ((InternalEObject)newStammgleis).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS, null, msgs);
+			msgs = basicSetStammgleis(newStammgleis, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS, newStammgleis, newStammgleis));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Weichensignal_TypeClass getWeichensignal() {
 		return weichensignal;
 	}
@@ -522,6 +586,8 @@ public class Zungenpaar_AttributeGroupImpl extends MinimalEObjectImpl.Container 
 				return basicSetHerzstueckAntriebe(null, msgs);
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS:
 				return basicSetKreuzungsgleis(null, msgs);
+			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS:
+				return basicSetStammgleis(null, msgs);
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL:
 				return basicSetWeichensignal(null, msgs);
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL:
@@ -551,6 +617,8 @@ public class Zungenpaar_AttributeGroupImpl extends MinimalEObjectImpl.Container 
 				return getHerzstueckAntriebe();
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS:
 				return getKreuzungsgleis();
+			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS:
+				return getStammgleis();
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL:
 				return getWeichensignal();
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL:
@@ -585,6 +653,9 @@ public class Zungenpaar_AttributeGroupImpl extends MinimalEObjectImpl.Container 
 				return;
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS:
 				setKreuzungsgleis((Kreuzungsgleis_TypeClass)newValue);
+				return;
+			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS:
+				setStammgleis((Stammgleis_TypeClass)newValue);
 				return;
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL:
 				setWeichensignal((Weichensignal_TypeClass)newValue);
@@ -624,6 +695,9 @@ public class Zungenpaar_AttributeGroupImpl extends MinimalEObjectImpl.Container 
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS:
 				setKreuzungsgleis((Kreuzungsgleis_TypeClass)null);
 				return;
+			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS:
+				setStammgleis((Stammgleis_TypeClass)null);
+				return;
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL:
 				setWeichensignal((Weichensignal_TypeClass)null);
 				return;
@@ -656,6 +730,8 @@ public class Zungenpaar_AttributeGroupImpl extends MinimalEObjectImpl.Container 
 				return herzstueckAntriebe != null;
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__KREUZUNGSGLEIS:
 				return kreuzungsgleis != null;
+			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__STAMMGLEIS:
+				return stammgleis != null;
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__WEICHENSIGNAL:
 				return weichensignal != null;
 			case Weichen_und_GleissperrenPackage.ZUNGENPAAR_ATTRIBUTE_GROUP__ZUNGENPRUEFKONTAKT_ANZAHL:

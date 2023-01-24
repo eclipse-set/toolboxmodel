@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.impl;
 
@@ -8,10 +15,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.set.toolboxmodel.BasisTypen.ENUMLinksRechts;
-
 import org.eclipse.set.toolboxmodel.BasisTypen.impl.BasisAttribut_AttributeGroupImpl;
 
+import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.ENUMElektrischerAntriebLage;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Elektrischer_Antrieb_Lage_TypeClass;
 import org.eclipse.set.toolboxmodel.Weichen_und_Gleissperren.Weichen_und_GleissperrenPackage;
 
@@ -37,7 +43,7 @@ public class Elektrischer_Antrieb_Lage_TypeClassImpl extends BasisAttribut_Attri
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ENUMLinksRechts WERT_EDEFAULT = null;
+	protected static final ENUMElektrischerAntriebLage WERT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
@@ -47,7 +53,7 @@ public class Elektrischer_Antrieb_Lage_TypeClassImpl extends BasisAttribut_Attri
 	 * @generated
 	 * @ordered
 	 */
-	protected ENUMLinksRechts wert = WERT_EDEFAULT;
+	protected ENUMElektrischerAntriebLage wert = WERT_EDEFAULT;
 
 	/**
 	 * This is true if the Wert attribute has been set.
@@ -83,7 +89,7 @@ public class Elektrischer_Antrieb_Lage_TypeClassImpl extends BasisAttribut_Attri
 	 * @generated
 	 */
 	@Override
-	public ENUMLinksRechts getWert() {
+	public ENUMElektrischerAntriebLage getWert() {
 		return wert;
 	}
 
@@ -93,8 +99,8 @@ public class Elektrischer_Antrieb_Lage_TypeClassImpl extends BasisAttribut_Attri
 	 * @generated
 	 */
 	@Override
-	public void setWert(ENUMLinksRechts newWert) {
-		ENUMLinksRechts oldWert = wert;
+	public void setWert(ENUMElektrischerAntriebLage newWert) {
+		ENUMElektrischerAntriebLage oldWert = wert;
 		wert = newWert;
 		boolean oldWertESet = wertESet;
 		wertESet = true;
@@ -109,7 +115,7 @@ public class Elektrischer_Antrieb_Lage_TypeClassImpl extends BasisAttribut_Attri
 	 */
 	@Override
 	public void unsetWert() {
-		ENUMLinksRechts oldWert = wert;
+		ENUMElektrischerAntriebLage oldWert = wert;
 		boolean oldWertESet = wertESet;
 		wert = WERT_EDEFAULT;
 		wertESet = false;
@@ -151,7 +157,7 @@ public class Elektrischer_Antrieb_Lage_TypeClassImpl extends BasisAttribut_Attri
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Weichen_und_GleissperrenPackage.ELEKTRISCHER_ANTRIEB_LAGE_TYPE_CLASS__WERT:
-				setWert((ENUMLinksRechts)newValue);
+				setWert((ENUMElektrischerAntriebLage)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);

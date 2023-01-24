@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Ansteuerung_Element;
 
@@ -34,9 +41,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -55,9 +60,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -76,9 +79,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -97,9 +98,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -118,9 +117,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -139,9 +136,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -160,9 +155,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -181,9 +174,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -202,9 +193,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -223,9 +212,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -244,9 +231,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -265,9 +250,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -286,9 +269,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -307,9 +288,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -328,9 +307,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -349,9 +326,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -370,9 +345,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -391,9 +364,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -412,9 +383,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -433,9 +402,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -454,9 +421,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -475,9 +440,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -496,9 +459,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -517,9 +478,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
- * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -538,9 +497,26 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
  * Inhalt der Datei:
  * XML Schema für PlanPro Schnittstelle.
  * 
- * Für Fragen zum Schema wenden Sie sich bitte an Herrn :
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
- * Reiner Brödel (reiner.broedel@deutschebahn.com, +49 30 297-57123)
+ * --------------------------------------------------------------------------------
+ * 
+ * This Document is licensed under the open source license RailPL V1.0.
+ * 
+ * More information about the license can be found on
+ * http://www.dbnetze.com/planpro
+ * 
+ * Contents of the file:
+ * XML Schema for PlanPro interface.
+ * Dieses Werk ist lizenziert unter der Open Source Lizenz RailPL V1.0.
+ * 
+ * Weitere Informationen zur Lizenz finden Sie auf
+ * http://www.dbnetze.com/planpro
+ * 
+ * Inhalt der Datei:
+ * XML Schema für PlanPro Schnittstelle.
+ * 
+ * Bei Fragen zum Schema wenden Sie sich bitte an planpro@deutschebahn.com
  * 
  * --------------------------------------------------------------------------------
  * 
@@ -810,13 +786,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int AUSSENELEMENTANSTEUERUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int AUSSENELEMENTANSTEUERUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUSSENELEMENTANSTEUERUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -937,7 +922,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int AUSSENELEMENTANSTEUERUNG_ART_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1020,7 +1005,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int BANDBREITE_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1066,7 +1051,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int BAUART_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1112,7 +1097,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int BEZEICHNUNG_AEA_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1158,7 +1143,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int BEZEICHNUNG_ESTW_ZE_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1194,6 +1179,52 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int BEZEICHNUNG_ESTW_ZE_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Bezeichnung_Stellwerk_TypeClassImpl <em>Bezeichnung Stellwerk Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Bezeichnung_Stellwerk_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_Stellwerk_TypeClass()
+	 * @generated
+	 */
+	int BEZEICHNUNG_STELLWERK_TYPE_CLASS = 10;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEZEICHNUNG_STELLWERK_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEZEICHNUNG_STELLWERK_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Bezeichnung Stellwerk Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEZEICHNUNG_STELLWERK_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Bezeichnung Stellwerk Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEZEICHNUNG_STELLWERK_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Bezeichnung_TSO_TypeClassImpl <em>Bezeichnung TSO Type Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1201,10 +1232,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_TSO_TypeClass()
 	 * @generated
 	 */
-	int BEZEICHNUNG_TSO_TYPE_CLASS = 10;
+	int BEZEICHNUNG_TSO_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1247,10 +1278,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getEnergieversorgung_Art_Ersatz_TypeClass()
 	 * @generated
 	 */
-	int ENERGIEVERSORGUNG_ART_ERSATZ_TYPE_CLASS = 11;
+	int ENERGIEVERSORGUNG_ART_ERSATZ_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1293,10 +1324,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getEnergieversorgung_Art_TypeClass()
 	 * @generated
 	 */
-	int ENERGIEVERSORGUNG_ART_TYPE_CLASS = 12;
+	int ENERGIEVERSORGUNG_ART_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1332,6 +1363,79 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int ENERGIEVERSORGUNG_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZE_Energieversorgung_AttributeGroupImpl <em>ESTW ZE Energieversorgung Attribute Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZE_Energieversorgung_AttributeGroupImpl
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getESTW_ZE_Energieversorgung_AttributeGroup()
+	 * @generated
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP = 14;
+
+	/**
+	 * The feature id for the '<em><b>Energieversorgung Art Ersatz2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2 = 0;
+
+	/**
+	 * The feature id for the '<em><b>Energieversorgung Art</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART = 1;
+
+	/**
+	 * The feature id for the '<em><b>ID Energie Primaer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_PRIMAER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Energieversorgung Art Ersatz</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ = 3;
+
+	/**
+	 * The feature id for the '<em><b>ID Energie Sekundaer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_SEKUNDAER = 4;
+
+	/**
+	 * The number of structural features of the '<em>ESTW ZE Energieversorgung Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>ESTW ZE Energieversorgung Attribute Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZentraleinheitImpl <em>ESTW Zentraleinheit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1339,7 +1443,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getESTW_Zentraleinheit()
 	 * @generated
 	 */
-	int ESTW_ZENTRALEINHEIT = 13;
+	int ESTW_ZENTRALEINHEIT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -1360,13 +1464,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int ESTW_ZENTRALEINHEIT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int ESTW_ZENTRALEINHEIT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZENTRALEINHEIT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -1387,13 +1500,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int ESTW_ZENTRALEINHEIT__BEZEICHNUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>ESTWZE Energieversorgung</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>ESTW Zentraleinheit Allg</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
+	int ESTW_ZENTRALEINHEIT__ESTW_ZENTRALEINHEIT_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>ID Oertlichkeit Namensgebend</b></em>' reference.
@@ -1402,7 +1524,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT__ID_OERTLICHKEIT_NAMENSGEBEND = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 2;
+	int ESTW_ZENTRALEINHEIT__ID_OERTLICHKEIT_NAMENSGEBEND = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>ID Unterbringung</b></em>' reference.
@@ -1411,7 +1533,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT__ID_UNTERBRINGUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 3;
+	int ESTW_ZENTRALEINHEIT__ID_UNTERBRINGUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>ID Bedien Bezirk Virtuell</b></em>' reference.
@@ -1420,7 +1542,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT__ID_BEDIEN_BEZIRK_VIRTUELL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
+	int ESTW_ZENTRALEINHEIT__ID_BEDIEN_BEZIRK_VIRTUELL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>ID Bedien Bezirk Zentral</b></em>' reference.
@@ -1429,7 +1551,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT__ID_BEDIEN_BEZIRK_ZENTRAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
+	int ESTW_ZENTRALEINHEIT__ID_BEDIEN_BEZIRK_ZENTRAL = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>ESTW Zentraleinheit</em>' class.
@@ -1438,7 +1560,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 6;
+	int ESTW_ZENTRALEINHEIT_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>ESTW Zentraleinheit</em>' class.
@@ -1457,7 +1579,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getESTW_Zentraleinheit_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP = 14;
+	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP = 16;
 
 	/**
 	 * The feature id for the '<em><b>Bauart</b></em>' containment reference.
@@ -1469,40 +1591,13 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__BAUART = 0;
 
 	/**
-	 * The feature id for the '<em><b>Energieversorgung Art</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART = 1;
-
-	/**
-	 * The feature id for the '<em><b>Energieversorgung Art Ersatz</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ = 2;
-
-	/**
-	 * The feature id for the '<em><b>Energieversorgung Art Ersatz2</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2 = 3;
-
-	/**
 	 * The feature id for the '<em><b>Hersteller</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__HERSTELLER = 4;
+	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__HERSTELLER = 1;
 
 	/**
 	 * The number of structural features of the '<em>ESTW Zentraleinheit Allg Attribute Group</em>' class.
@@ -1511,7 +1606,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 5;
+	int ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>ESTW Zentraleinheit Allg Attribute Group</em>' class.
@@ -1530,7 +1625,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getESTW_Zentraleinheit_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int ESTW_ZENTRALEINHEIT_BEZEICHNUNG_ATTRIBUTE_GROUP = 15;
+	int ESTW_ZENTRALEINHEIT_BEZEICHNUNG_ATTRIBUTE_GROUP = 17;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung ESTWZE</b></em>' containment reference.
@@ -1567,10 +1662,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getGFK_Kategorie_TypeClass()
 	 * @generated
 	 */
-	int GFK_KATEGORIE_TYPE_CLASS = 16;
+	int GFK_KATEGORIE_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1613,10 +1708,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getHersteller_TypeClass()
 	 * @generated
 	 */
-	int HERSTELLER_TYPE_CLASS = 17;
+	int HERSTELLER_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1659,10 +1754,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Blau_TypeClass()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_BLAU_TYPE_CLASS = 18;
+	int IP_ADRESSBLOCK_BLAU_TYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1705,10 +1800,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Blau_V4_TypeClass()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_BLAU_V4_TYPE_CLASS = 19;
+	int IP_ADRESSBLOCK_BLAU_V4_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1751,10 +1846,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Blau_V6_TypeClass()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_BLAU_V6_TYPE_CLASS = 20;
+	int IP_ADRESSBLOCK_BLAU_V6_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1797,10 +1892,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Grau_TypeClass()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_GRAU_TYPE_CLASS = 21;
+	int IP_ADRESSBLOCK_GRAU_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1843,10 +1938,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Grau_V4_TypeClass()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_GRAU_V4_TYPE_CLASS = 22;
+	int IP_ADRESSBLOCK_GRAU_V4_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1889,10 +1984,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Grau_V6_TypeClass()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_GRAU_V6_TYPE_CLASS = 23;
+	int IP_ADRESSBLOCK_GRAU_V6_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1935,10 +2030,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getMedium_Art_TypeClass()
 	 * @generated
 	 */
-	int MEDIUM_ART_TYPE_CLASS = 24;
+	int MEDIUM_ART_TYPE_CLASS = 26;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1981,10 +2076,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getNetz_Art_TypeClass()
 	 * @generated
 	 */
-	int NETZ_ART_TYPE_CLASS = 25;
+	int NETZ_ART_TYPE_CLASS = 27;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2027,10 +2122,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getRegionalbereich_TypeClass()
 	 * @generated
 	 */
-	int REGIONALBEREICH_TYPE_CLASS = 26;
+	int REGIONALBEREICH_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2073,10 +2168,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getStandort_Beschreibung_TypeClass()
 	 * @generated
 	 */
-	int STANDORT_BESCHREIBUNG_TYPE_CLASS = 27;
+	int STANDORT_BESCHREIBUNG_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2119,7 +2214,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getStell_Bereich()
 	 * @generated
 	 */
-	int STELL_BEREICH = 28;
+	int STELL_BEREICH = 30;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2140,13 +2235,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int STELL_BEREICH__BASIS_OBJEKT_ALLG = BasisobjektePackage.BEREICH_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int STELL_BEREICH__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BEREICH_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STELL_BEREICH__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BEREICH_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2167,13 +2271,31 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int STELL_BEREICH__BEREICH_OBJEKT_TEILBEREICH = BasisobjektePackage.BEREICH_OBJEKT__BEREICH_OBJEKT_TEILBEREICH;
 
 	/**
+	 * The feature id for the '<em><b>Zusatzinformation Stellwerk</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STELL_BEREICH__ZUSATZINFORMATION_STELLWERK = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Bezeichnung Stellwerk</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STELL_BEREICH__BEZEICHNUNG_STELLWERK = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>ID Aussenelementansteuerung</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STELL_BEREICH__ID_AUSSENELEMENTANSTEUERUNG = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 0;
+	int STELL_BEREICH__ID_AUSSENELEMENTANSTEUERUNG = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Stell Bereich</em>' class.
@@ -2182,7 +2304,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STELL_BEREICH_FEATURE_COUNT = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 1;
+	int STELL_BEREICH_FEATURE_COUNT = BasisobjektePackage.BEREICH_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Stell Bereich</em>' class.
@@ -2201,7 +2323,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getStellelement()
 	 * @generated
 	 */
-	int STELLELEMENT = 29;
+	int STELLELEMENT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2222,13 +2344,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int STELLELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int STELLELEMENT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STELLELEMENT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2283,10 +2414,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTechnik_Art_TypeClass()
 	 * @generated
 	 */
-	int TECHNIK_ART_TYPE_CLASS = 30;
+	int TECHNIK_ART_TYPE_CLASS = 32;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2329,10 +2460,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTechnik_Beschreibung_TypeClass()
 	 * @generated
 	 */
-	int TECHNIK_BESCHREIBUNG_TYPE_CLASS = 31;
+	int TECHNIK_BESCHREIBUNG_TYPE_CLASS = 33;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2375,7 +2506,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTechnik_Standort()
 	 * @generated
 	 */
-	int TECHNIK_STANDORT = 32;
+	int TECHNIK_STANDORT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2396,13 +2527,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int TECHNIK_STANDORT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TECHNIK_STANDORT__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNIK_STANDORT__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2475,7 +2615,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTechnik_Standort_Bezeichnung_AttributeGroup()
 	 * @generated
 	 */
-	int TECHNIK_STANDORT_BEZEICHNUNG_ATTRIBUTE_GROUP = 33;
+	int TECHNIK_STANDORT_BEZEICHNUNG_ATTRIBUTE_GROUP = 35;
 
 	/**
 	 * The feature id for the '<em><b>Bezeichnung TSO</b></em>' containment reference.
@@ -2512,7 +2652,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTSO_IP_AB_Teilsystem_AttributeGroup()
 	 * @generated
 	 */
-	int TSO_IP_AB_TEILSYSTEM_ATTRIBUTE_GROUP = 34;
+	int TSO_IP_AB_TEILSYSTEM_ATTRIBUTE_GROUP = 36;
 
 	/**
 	 * The feature id for the '<em><b>IP Adressblock Blau</b></em>' containment reference.
@@ -2567,7 +2707,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTSO_IP_Adressblock_AttributeGroup()
 	 * @generated
 	 */
-	int TSO_IP_ADRESSBLOCK_ATTRIBUTE_GROUP = 35;
+	int TSO_IP_ADRESSBLOCK_ATTRIBUTE_GROUP = 37;
 
 	/**
 	 * The feature id for the '<em><b>IP Adressblock Blau V4</b></em>' containment reference.
@@ -2649,10 +2789,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTSO_Teilsystem_Art_TypeClass()
 	 * @generated
 	 */
-	int TSO_TEILSYSTEM_ART_TYPE_CLASS = 36;
+	int TSO_TEILSYSTEM_ART_TYPE_CLASS = 38;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2688,6 +2828,52 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int TSO_TEILSYSTEM_ART_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Tueranschlag_TypeClassImpl <em>Tueranschlag Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Tueranschlag_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTueranschlag_TypeClass()
+	 * @generated
+	 */
+	int TUERANSCHLAG_TYPE_CLASS = 39;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUERANSCHLAG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUERANSCHLAG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tueranschlag Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUERANSCHLAG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Tueranschlag Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUERANSCHLAG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.UebertragungswegImpl <em>Uebertragungsweg</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2695,7 +2881,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUebertragungsweg()
 	 * @generated
 	 */
-	int UEBERTRAGUNGSWEG = 37;
+	int UEBERTRAGUNGSWEG = 40;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2716,13 +2902,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int UEBERTRAGUNGSWEG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int UEBERTRAGUNGSWEG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UEBERTRAGUNGSWEG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2813,10 +3008,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUebertragungsweg_Art_TypeClass()
 	 * @generated
 	 */
-	int UEBERTRAGUNGSWEG_ART_TYPE_CLASS = 38;
+	int UEBERTRAGUNGSWEG_ART_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2859,7 +3054,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUebertragungsweg_Technik_AttributeGroup()
 	 * @generated
 	 */
-	int UEBERTRAGUNGSWEG_TECHNIK_ATTRIBUTE_GROUP = 39;
+	int UEBERTRAGUNGSWEG_TECHNIK_ATTRIBUTE_GROUP = 42;
 
 	/**
 	 * The feature id for the '<em><b>Bandbreite</b></em>' containment reference.
@@ -2932,7 +3127,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung()
 	 * @generated
 	 */
-	int UNTERBRINGUNG = 40;
+	int UNTERBRINGUNG = 43;
 
 	/**
 	 * The feature id for the '<em><b>Identitaet</b></em>' containment reference.
@@ -2953,13 +3148,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int UNTERBRINGUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int UNTERBRINGUNG__ID_BEARBEITUNGSVERMERK = BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNTERBRINGUNG__ID_OERTLICHKEIT_AUSGABE = BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE;
 
 	/**
 	 * The feature id for the '<em><b>Objektreferenzen</b></em>' containment reference.
@@ -2989,7 +3193,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int UNTERBRINGUNG__UNTERBRINGUNG_ALLG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>IDGEO Punkt</b></em>' reference.
+	 * The feature id for the '<em><b>IDGEO Punkt</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3016,13 +3220,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int UNTERBRINGUNG__STANDORT_BESCHREIBUNG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Unterbringung Polygonzug</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNTERBRINGUNG__UNTERBRINGUNG_POLYGONZUG = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Unterbringung</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNTERBRINGUNG_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 5;
+	int UNTERBRINGUNG_FEATURE_COUNT = BasisobjektePackage.BASIS_OBJEKT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Unterbringung</em>' class.
@@ -3041,7 +3254,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung_Allg_AttributeGroup()
 	 * @generated
 	 */
-	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP = 41;
+	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP = 44;
 
 	/**
 	 * The feature id for the '<em><b>Hersteller</b></em>' containment reference.
@@ -3053,13 +3266,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER = 0;
 
 	/**
+	 * The feature id for the '<em><b>Tueranschlag</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG = 1;
+
+	/**
 	 * The feature id for the '<em><b>Unterbringung Art</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART = 1;
+	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_ART = 2;
 
 	/**
 	 * The feature id for the '<em><b>Unterbringung Befestigung</b></em>' containment reference.
@@ -3068,7 +3290,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG = 2;
+	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__UNTERBRINGUNG_BEFESTIGUNG = 3;
 
 	/**
 	 * The number of structural features of the '<em>Unterbringung Allg Attribute Group</em>' class.
@@ -3077,7 +3299,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 3;
+	int UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Unterbringung Allg Attribute Group</em>' class.
@@ -3096,10 +3318,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung_Art_TypeClass()
 	 * @generated
 	 */
-	int UNTERBRINGUNG_ART_TYPE_CLASS = 42;
+	int UNTERBRINGUNG_ART_TYPE_CLASS = 45;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3142,10 +3364,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung_Befestigung_TypeClass()
 	 * @generated
 	 */
-	int UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS = 43;
+	int UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS = 46;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3181,6 +3403,98 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	int UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Polygonzug_TypeClassImpl <em>Unterbringung Polygonzug Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Polygonzug_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung_Polygonzug_TypeClass()
+	 * @generated
+	 */
+	int UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS = 47;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Unterbringung Polygonzug Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Unterbringung Polygonzug Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Zusatzinformation_Stellwerk_TypeClassImpl <em>Zusatzinformation Stellwerk Type Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Zusatzinformation_Stellwerk_TypeClassImpl
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getZusatzinformation_Stellwerk_TypeClass()
+	 * @generated
+	 */
+	int ZUSATZINFORMATION_STELLWERK_TYPE_CLASS = 48;
+
+	/**
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZUSATZINFORMATION_STELLWERK_TYPE_CLASS__ID_BEARBEITUNGSVERMERK = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK;
+
+	/**
+	 * The feature id for the '<em><b>Wert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZUSATZINFORMATION_STELLWERK_TYPE_CLASS__WERT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Zusatzinformation Stellwerk Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZUSATZINFORMATION_STELLWERK_TYPE_CLASS_FEATURE_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Zusatzinformation Stellwerk Type Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZUSATZINFORMATION_STELLWERK_TYPE_CLASS_OPERATION_COUNT = BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMAussenelementansteuerungArt <em>ENUM Aussenelementansteuerung Art</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3188,7 +3502,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMAussenelementansteuerungArt()
 	 * @generated
 	 */
-	int ENUM_AUSSENELEMENTANSTEUERUNG_ART = 44;
+	int ENUM_AUSSENELEMENTANSTEUERUNG_ART = 49;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMBandbreite <em>ENUM Bandbreite</em>}' enum.
@@ -3198,7 +3512,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMBandbreite()
 	 * @generated
 	 */
-	int ENUM_BANDBREITE = 45;
+	int ENUM_BANDBREITE = 50;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMEVArt <em>ENUMEV Art</em>}' enum.
@@ -3208,7 +3522,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMEVArt()
 	 * @generated
 	 */
-	int ENUMEV_ART = 46;
+	int ENUMEV_ART = 51;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMGFKKategorie <em>ENUMGFK Kategorie</em>}' enum.
@@ -3218,7 +3532,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMGFKKategorie()
 	 * @generated
 	 */
-	int ENUMGFK_KATEGORIE = 47;
+	int ENUMGFK_KATEGORIE = 52;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMMediumArt <em>ENUM Medium Art</em>}' enum.
@@ -3228,7 +3542,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMMediumArt()
 	 * @generated
 	 */
-	int ENUM_MEDIUM_ART = 48;
+	int ENUM_MEDIUM_ART = 53;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMNetzArt <em>ENUM Netz Art</em>}' enum.
@@ -3238,7 +3552,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMNetzArt()
 	 * @generated
 	 */
-	int ENUM_NETZ_ART = 49;
+	int ENUM_NETZ_ART = 54;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTechnikArt <em>ENUM Technik Art</em>}' enum.
@@ -3248,7 +3562,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTechnikArt()
 	 * @generated
 	 */
-	int ENUM_TECHNIK_ART = 50;
+	int ENUM_TECHNIK_ART = 55;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTSOTeilsystemArt <em>ENUMTSO Teilsystem Art</em>}' enum.
@@ -3258,7 +3572,17 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTSOTeilsystemArt()
 	 * @generated
 	 */
-	int ENUMTSO_TEILSYSTEM_ART = 51;
+	int ENUMTSO_TEILSYSTEM_ART = 56;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag <em>ENUM Tueranschlag</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTueranschlag()
+	 * @generated
+	 */
+	int ENUM_TUERANSCHLAG = 57;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUebertragungswegArt <em>ENUM Uebertragungsweg Art</em>}' enum.
@@ -3268,7 +3592,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMUebertragungswegArt()
 	 * @generated
 	 */
-	int ENUM_UEBERTRAGUNGSWEG_ART = 52;
+	int ENUM_UEBERTRAGUNGSWEG_ART = 58;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUnterbringungArt <em>ENUM Unterbringung Art</em>}' enum.
@@ -3278,7 +3602,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMUnterbringungArt()
 	 * @generated
 	 */
-	int ENUM_UNTERBRINGUNG_ART = 53;
+	int ENUM_UNTERBRINGUNG_ART = 59;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUnterbringungBefestigung <em>ENUM Unterbringung Befestigung</em>}' enum.
@@ -3288,7 +3612,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMUnterbringungBefestigung()
 	 * @generated
 	 */
-	int ENUM_UNTERBRINGUNG_BEFESTIGUNG = 54;
+	int ENUM_UNTERBRINGUNG_BEFESTIGUNG = 60;
 
 	/**
 	 * The meta object id for the '<em>Bauart Type</em>' data type.
@@ -3298,7 +3622,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBauart_Type()
 	 * @generated
 	 */
-	int BAUART_TYPE = 55;
+	int BAUART_TYPE = 61;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung AEA Type</em>' data type.
@@ -3308,7 +3632,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_AEA_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_AEA_TYPE = 56;
+	int BEZEICHNUNG_AEA_TYPE = 62;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung ESTW ZE Type</em>' data type.
@@ -3318,7 +3642,17 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_ESTW_ZE_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_ESTW_ZE_TYPE = 57;
+	int BEZEICHNUNG_ESTW_ZE_TYPE = 63;
+
+	/**
+	 * The meta object id for the '<em>Bezeichnung Stellwerk Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_Stellwerk_Type()
+	 * @generated
+	 */
+	int BEZEICHNUNG_STELLWERK_TYPE = 64;
 
 	/**
 	 * The meta object id for the '<em>Bezeichnung TSO Type</em>' data type.
@@ -3328,7 +3662,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_TSO_Type()
 	 * @generated
 	 */
-	int BEZEICHNUNG_TSO_TYPE = 58;
+	int BEZEICHNUNG_TSO_TYPE = 65;
 
 	/**
 	 * The meta object id for the '<em>ENUM Aussenelementansteuerung Art Object</em>' data type.
@@ -3338,7 +3672,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMAussenelementansteuerungArtObject()
 	 * @generated
 	 */
-	int ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJECT = 59;
+	int ENUM_AUSSENELEMENTANSTEUERUNG_ART_OBJECT = 66;
 
 	/**
 	 * The meta object id for the '<em>ENUM Bandbreite Object</em>' data type.
@@ -3348,7 +3682,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMBandbreiteObject()
 	 * @generated
 	 */
-	int ENUM_BANDBREITE_OBJECT = 60;
+	int ENUM_BANDBREITE_OBJECT = 67;
 
 	/**
 	 * The meta object id for the '<em>ENUMEV Art Object</em>' data type.
@@ -3358,7 +3692,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMEVArtObject()
 	 * @generated
 	 */
-	int ENUMEV_ART_OBJECT = 61;
+	int ENUMEV_ART_OBJECT = 68;
 
 	/**
 	 * The meta object id for the '<em>ENUMGFK Kategorie Object</em>' data type.
@@ -3368,7 +3702,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMGFKKategorieObject()
 	 * @generated
 	 */
-	int ENUMGFK_KATEGORIE_OBJECT = 62;
+	int ENUMGFK_KATEGORIE_OBJECT = 69;
 
 	/**
 	 * The meta object id for the '<em>ENUM Medium Art Object</em>' data type.
@@ -3378,7 +3712,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMMediumArtObject()
 	 * @generated
 	 */
-	int ENUM_MEDIUM_ART_OBJECT = 63;
+	int ENUM_MEDIUM_ART_OBJECT = 70;
 
 	/**
 	 * The meta object id for the '<em>ENUM Netz Art Object</em>' data type.
@@ -3388,7 +3722,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMNetzArtObject()
 	 * @generated
 	 */
-	int ENUM_NETZ_ART_OBJECT = 64;
+	int ENUM_NETZ_ART_OBJECT = 71;
 
 	/**
 	 * The meta object id for the '<em>ENUM Technik Art Object</em>' data type.
@@ -3398,7 +3732,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTechnikArtObject()
 	 * @generated
 	 */
-	int ENUM_TECHNIK_ART_OBJECT = 65;
+	int ENUM_TECHNIK_ART_OBJECT = 72;
 
 	/**
 	 * The meta object id for the '<em>ENUMTSO Teilsystem Art Object</em>' data type.
@@ -3408,7 +3742,17 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTSOTeilsystemArtObject()
 	 * @generated
 	 */
-	int ENUMTSO_TEILSYSTEM_ART_OBJECT = 66;
+	int ENUMTSO_TEILSYSTEM_ART_OBJECT = 73;
+
+	/**
+	 * The meta object id for the '<em>ENUM Tueranschlag Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTueranschlagObject()
+	 * @generated
+	 */
+	int ENUM_TUERANSCHLAG_OBJECT = 74;
 
 	/**
 	 * The meta object id for the '<em>ENUM Uebertragungsweg Art Object</em>' data type.
@@ -3418,7 +3762,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMUebertragungswegArtObject()
 	 * @generated
 	 */
-	int ENUM_UEBERTRAGUNGSWEG_ART_OBJECT = 67;
+	int ENUM_UEBERTRAGUNGSWEG_ART_OBJECT = 75;
 
 	/**
 	 * The meta object id for the '<em>ENUM Unterbringung Art Object</em>' data type.
@@ -3428,7 +3772,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMUnterbringungArtObject()
 	 * @generated
 	 */
-	int ENUM_UNTERBRINGUNG_ART_OBJECT = 68;
+	int ENUM_UNTERBRINGUNG_ART_OBJECT = 76;
 
 	/**
 	 * The meta object id for the '<em>ENUM Unterbringung Befestigung Object</em>' data type.
@@ -3438,7 +3782,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMUnterbringungBefestigungObject()
 	 * @generated
 	 */
-	int ENUM_UNTERBRINGUNG_BEFESTIGUNG_OBJECT = 69;
+	int ENUM_UNTERBRINGUNG_BEFESTIGUNG_OBJECT = 77;
 
 	/**
 	 * The meta object id for the '<em>IP Adressblock Blau Type</em>' data type.
@@ -3448,7 +3792,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Blau_Type()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_BLAU_TYPE = 70;
+	int IP_ADRESSBLOCK_BLAU_TYPE = 78;
 
 	/**
 	 * The meta object id for the '<em>IP Adressblock Blau V4 Type</em>' data type.
@@ -3458,7 +3802,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Blau_V4_Type()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_BLAU_V4_TYPE = 71;
+	int IP_ADRESSBLOCK_BLAU_V4_TYPE = 79;
 
 	/**
 	 * The meta object id for the '<em>IP Adressblock Blau V6 Type</em>' data type.
@@ -3468,7 +3812,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Blau_V6_Type()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_BLAU_V6_TYPE = 72;
+	int IP_ADRESSBLOCK_BLAU_V6_TYPE = 80;
 
 	/**
 	 * The meta object id for the '<em>IP Adressblock Grau Type</em>' data type.
@@ -3478,7 +3822,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Grau_Type()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_GRAU_TYPE = 73;
+	int IP_ADRESSBLOCK_GRAU_TYPE = 81;
 
 	/**
 	 * The meta object id for the '<em>IP Adressblock Grau V4 Type</em>' data type.
@@ -3488,7 +3832,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Grau_V4_Type()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_GRAU_V4_TYPE = 74;
+	int IP_ADRESSBLOCK_GRAU_V4_TYPE = 82;
 
 	/**
 	 * The meta object id for the '<em>IP Adressblock Grau V6 Type</em>' data type.
@@ -3498,7 +3842,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getIP_Adressblock_Grau_V6_Type()
 	 * @generated
 	 */
-	int IP_ADRESSBLOCK_GRAU_V6_TYPE = 75;
+	int IP_ADRESSBLOCK_GRAU_V6_TYPE = 83;
 
 	/**
 	 * The meta object id for the '<em>Standort Beschreibung Type</em>' data type.
@@ -3508,7 +3852,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getStandort_Beschreibung_Type()
 	 * @generated
 	 */
-	int STANDORT_BESCHREIBUNG_TYPE = 76;
+	int STANDORT_BESCHREIBUNG_TYPE = 84;
 
 	/**
 	 * The meta object id for the '<em>Technik Beschreibung Type</em>' data type.
@@ -3518,7 +3862,27 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTechnik_Beschreibung_Type()
 	 * @generated
 	 */
-	int TECHNIK_BESCHREIBUNG_TYPE = 77;
+	int TECHNIK_BESCHREIBUNG_TYPE = 85;
+
+	/**
+	 * The meta object id for the '<em>Unterbringung Polygonzug Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung_Polygonzug_Type()
+	 * @generated
+	 */
+	int UNTERBRINGUNG_POLYGONZUG_TYPE = 86;
+
+	/**
+	 * The meta object id for the '<em>Zusatzinformation Stellwerk Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getZusatzinformation_Stellwerk_Type()
+	 * @generated
+	 */
+	int ZUSATZINFORMATION_STELLWERK_TYPE = 87;
 
 
 	/**
@@ -3919,6 +4283,27 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	EAttribute getBezeichnung_ESTW_ZE_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass <em>Bezeichnung Stellwerk Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bezeichnung Stellwerk Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass
+	 * @generated
+	 */
+	EClass getBezeichnung_Stellwerk_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_Stellwerk_TypeClass#getWert()
+	 * @see #getBezeichnung_Stellwerk_TypeClass()
+	 * @generated
+	 */
+	EAttribute getBezeichnung_Stellwerk_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Bezeichnung_TSO_TypeClass <em>Bezeichnung TSO Type Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3982,6 +4367,71 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	EAttribute getEnergieversorgung_Art_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup <em>ESTW ZE Energieversorgung Attribute Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ESTW ZE Energieversorgung Attribute Group</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup
+	 * @generated
+	 */
+	EClass getESTW_ZE_Energieversorgung_AttributeGroup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getEnergieversorgungArt <em>Energieversorgung Art</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Energieversorgung Art</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getEnergieversorgungArt()
+	 * @see #getESTW_ZE_Energieversorgung_AttributeGroup()
+	 * @generated
+	 */
+	EReference getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArt();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getIDEnergiePrimaer <em>ID Energie Primaer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Energie Primaer</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getIDEnergiePrimaer()
+	 * @see #getESTW_ZE_Energieversorgung_AttributeGroup()
+	 * @generated
+	 */
+	EReference getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergiePrimaer();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getEnergieversorgungArtErsatz <em>Energieversorgung Art Ersatz</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Energieversorgung Art Ersatz</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getEnergieversorgungArtErsatz()
+	 * @see #getESTW_ZE_Energieversorgung_AttributeGroup()
+	 * @generated
+	 */
+	EReference getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getEnergieversorgungArtErsatz2 <em>Energieversorgung Art Ersatz2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Energieversorgung Art Ersatz2</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getEnergieversorgungArtErsatz2()
+	 * @see #getESTW_ZE_Energieversorgung_AttributeGroup()
+	 * @generated
+	 */
+	EReference getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz2();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getIDEnergieSekundaer <em>ID Energie Sekundaer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>ID Energie Sekundaer</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_ZE_Energieversorgung_AttributeGroup#getIDEnergieSekundaer()
+	 * @see #getESTW_ZE_Energieversorgung_AttributeGroup()
+	 * @generated
+	 */
+	EReference getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergieSekundaer();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit <em>ESTW Zentraleinheit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4001,6 +4451,17 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getESTW_Zentraleinheit_Bezeichnung();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getESTWZEEnergieversorgung <em>ESTWZE Energieversorgung</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>ESTWZE Energieversorgung</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getESTWZEEnergieversorgung()
+	 * @see #getESTW_Zentraleinheit()
+	 * @generated
+	 */
+	EReference getESTW_Zentraleinheit_ESTWZEEnergieversorgung();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit#getESTWZentraleinheitAllg <em>ESTW Zentraleinheit Allg</em>}'.
@@ -4077,39 +4538,6 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getESTW_Zentraleinheit_Allg_AttributeGroup_Bauart();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArt <em>Energieversorgung Art</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Energieversorgung Art</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArt()
-	 * @see #getESTW_Zentraleinheit_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArt();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz <em>Energieversorgung Art Ersatz</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Energieversorgung Art Ersatz</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz()
-	 * @see #getESTW_Zentraleinheit_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz2 <em>Energieversorgung Art Ersatz2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Energieversorgung Art Ersatz2</em>'.
-	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getEnergieversorgungArtErsatz2()
-	 * @see #getESTW_Zentraleinheit_Allg_AttributeGroup()
-	 * @generated
-	 */
-	EReference getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz2();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ESTW_Zentraleinheit_Allg_AttributeGroup#getHersteller <em>Hersteller</em>}'.
@@ -4404,6 +4832,28 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getStell_Bereich();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getZusatzinformationStellwerk <em>Zusatzinformation Stellwerk</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Zusatzinformation Stellwerk</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getZusatzinformationStellwerk()
+	 * @see #getStell_Bereich()
+	 * @generated
+	 */
+	EReference getStell_Bereich_ZusatzinformationStellwerk();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getBezeichnungStellwerk <em>Bezeichnung Stellwerk</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Bezeichnung Stellwerk</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getBezeichnungStellwerk()
+	 * @see #getStell_Bereich()
+	 * @generated
+	 */
+	EReference getStell_Bereich_BezeichnungStellwerk();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Stell_Bereich#getIDAussenelementansteuerung <em>ID Aussenelementansteuerung</em>}'.
@@ -4706,6 +5156,27 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	EAttribute getTSO_Teilsystem_Art_TypeClass_Wert();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass <em>Tueranschlag Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tueranschlag Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass
+	 * @generated
+	 */
+	EClass getTueranschlag_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Tueranschlag_TypeClass#getWert()
+	 * @see #getTueranschlag_TypeClass()
+	 * @generated
+	 */
+	EAttribute getTueranschlag_TypeClass_Wert();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Uebertragungsweg <em>Uebertragungsweg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4900,10 +5371,10 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	EReference getUnterbringung_UnterbringungAllg();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung#getIDGEOPunkt <em>IDGEO Punkt</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung#getIDGEOPunkt <em>IDGEO Punkt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>IDGEO Punkt</em>'.
+	 * @return the meta object for the reference list '<em>IDGEO Punkt</em>'.
 	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung#getIDGEOPunkt()
 	 * @see #getUnterbringung()
 	 * @generated
@@ -4933,6 +5404,17 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	EReference getUnterbringung_StandortBeschreibung();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung#getUnterbringungPolygonzug <em>Unterbringung Polygonzug</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Unterbringung Polygonzug</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung#getUnterbringungPolygonzug()
+	 * @see #getUnterbringung()
+	 * @generated
+	 */
+	EReference getUnterbringung_UnterbringungPolygonzug();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup <em>Unterbringung Allg Attribute Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4952,6 +5434,17 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUnterbringung_Allg_AttributeGroup_Hersteller();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getTueranschlag <em>Tueranschlag</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tueranschlag</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getTueranschlag()
+	 * @see #getUnterbringung_Allg_AttributeGroup()
+	 * @generated
+	 */
+	EReference getUnterbringung_Allg_AttributeGroup_Tueranschlag();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Allg_AttributeGroup#getUnterbringungArt <em>Unterbringung Art</em>}'.
@@ -5016,6 +5509,48 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUnterbringung_Befestigung_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass <em>Unterbringung Polygonzug Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unterbringung Polygonzug Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass
+	 * @generated
+	 */
+	EClass getUnterbringung_Polygonzug_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Unterbringung_Polygonzug_TypeClass#getWert()
+	 * @see #getUnterbringung_Polygonzug_TypeClass()
+	 * @generated
+	 */
+	EAttribute getUnterbringung_Polygonzug_TypeClass_Wert();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass <em>Zusatzinformation Stellwerk Type Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Zusatzinformation Stellwerk Type Class</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass
+	 * @generated
+	 */
+	EClass getZusatzinformation_Stellwerk_TypeClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass#getWert <em>Wert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wert</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.Zusatzinformation_Stellwerk_TypeClass#getWert()
+	 * @see #getZusatzinformation_Stellwerk_TypeClass()
+	 * @generated
+	 */
+	EAttribute getZusatzinformation_Stellwerk_TypeClass_Wert();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMAussenelementansteuerungArt <em>ENUM Aussenelementansteuerung Art</em>}'.
@@ -5098,6 +5633,16 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	EEnum getENUMTSOTeilsystemArt();
 
 	/**
+	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag <em>ENUM Tueranschlag</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ENUM Tueranschlag</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag
+	 * @generated
+	 */
+	EEnum getENUMTueranschlag();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUebertragungswegArt <em>ENUM Uebertragungsweg Art</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5162,6 +5707,18 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getBezeichnung_ESTW_ZE_Type();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Bezeichnung Stellwerk Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Bezeichnung Stellwerk Type</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='TBezeichnung_Stellwerk' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
+	 * @generated
+	 */
+	EDataType getBezeichnung_Stellwerk_Type();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Bezeichnung TSO Type</em>}'.
@@ -5270,6 +5827,18 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getENUMTSOTeilsystemArtObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag <em>ENUM Tueranschlag Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>ENUM Tueranschlag Object</em>'.
+	 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag
+	 * @model instanceClass="org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag"
+	 *        extendedMetaData="name='ENUMTueranschlag:Object' baseType='ENUMTueranschlag'"
+	 * @generated
+	 */
+	EDataType getENUMTueranschlagObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUebertragungswegArt <em>ENUM Uebertragungsweg Art Object</em>}'.
@@ -5402,6 +5971,30 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getTechnik_Beschreibung_Type();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Unterbringung Polygonzug Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Unterbringung Polygonzug Type</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='TUnterbringung_Polygonzug' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TFreiText'"
+	 * @generated
+	 */
+	EDataType getUnterbringung_Polygonzug_Type();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Zusatzinformation Stellwerk Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Zusatzinformation Stellwerk Type</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='TZusatzinformation_Stellwerk' baseType='http://www.plan-pro.org/modell/BasisTypen/toolbox#TText'"
+	 * @generated
+	 */
+	EDataType getZusatzinformation_Stellwerk_Type();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5743,6 +6336,24 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		EAttribute BEZEICHNUNG_ESTW_ZE_TYPE_CLASS__WERT = eINSTANCE.getBezeichnung_ESTW_ZE_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Bezeichnung_Stellwerk_TypeClassImpl <em>Bezeichnung Stellwerk Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Bezeichnung_Stellwerk_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_Stellwerk_TypeClass()
+		 * @generated
+		 */
+		EClass BEZEICHNUNG_STELLWERK_TYPE_CLASS = eINSTANCE.getBezeichnung_Stellwerk_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BEZEICHNUNG_STELLWERK_TYPE_CLASS__WERT = eINSTANCE.getBezeichnung_Stellwerk_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Bezeichnung_TSO_TypeClassImpl <em>Bezeichnung TSO Type Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5797,6 +6408,56 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		EAttribute ENERGIEVERSORGUNG_ART_TYPE_CLASS__WERT = eINSTANCE.getEnergieversorgung_Art_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZE_Energieversorgung_AttributeGroupImpl <em>ESTW ZE Energieversorgung Attribute Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZE_Energieversorgung_AttributeGroupImpl
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getESTW_ZE_Energieversorgung_AttributeGroup()
+		 * @generated
+		 */
+		EClass ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP = eINSTANCE.getESTW_ZE_Energieversorgung_AttributeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Energieversorgung Art</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART = eINSTANCE.getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArt();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Energie Primaer</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_PRIMAER = eINSTANCE.getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergiePrimaer();
+
+		/**
+		 * The meta object literal for the '<em><b>Energieversorgung Art Ersatz</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ = eINSTANCE.getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz();
+
+		/**
+		 * The meta object literal for the '<em><b>Energieversorgung Art Ersatz2</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2 = eINSTANCE.getESTW_ZE_Energieversorgung_AttributeGroup_EnergieversorgungArtErsatz2();
+
+		/**
+		 * The meta object literal for the '<em><b>ID Energie Sekundaer</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ESTW_ZE_ENERGIEVERSORGUNG_ATTRIBUTE_GROUP__ID_ENERGIE_SEKUNDAER = eINSTANCE.getESTW_ZE_Energieversorgung_AttributeGroup_IDEnergieSekundaer();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.ESTW_ZentraleinheitImpl <em>ESTW Zentraleinheit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5813,6 +6474,14 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ESTW_ZENTRALEINHEIT__BEZEICHNUNG = eINSTANCE.getESTW_Zentraleinheit_Bezeichnung();
+
+		/**
+		 * The meta object literal for the '<em><b>ESTWZE Energieversorgung</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ESTW_ZENTRALEINHEIT__ESTWZE_ENERGIEVERSORGUNG = eINSTANCE.getESTW_Zentraleinheit_ESTWZEEnergieversorgung();
 
 		/**
 		 * The meta object literal for the '<em><b>ESTW Zentraleinheit Allg</b></em>' containment reference feature.
@@ -5871,30 +6540,6 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__BAUART = eINSTANCE.getESTW_Zentraleinheit_Allg_AttributeGroup_Bauart();
-
-		/**
-		 * The meta object literal for the '<em><b>Energieversorgung Art</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART = eINSTANCE.getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArt();
-
-		/**
-		 * The meta object literal for the '<em><b>Energieversorgung Art Ersatz</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ = eINSTANCE.getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz();
-
-		/**
-		 * The meta object literal for the '<em><b>Energieversorgung Art Ersatz2</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ESTW_ZENTRALEINHEIT_ALLG_ATTRIBUTE_GROUP__ENERGIEVERSORGUNG_ART_ERSATZ2 = eINSTANCE.getESTW_Zentraleinheit_Allg_AttributeGroup_EnergieversorgungArtErsatz2();
 
 		/**
 		 * The meta object literal for the '<em><b>Hersteller</b></em>' containment reference feature.
@@ -6149,6 +6794,22 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		EClass STELL_BEREICH = eINSTANCE.getStell_Bereich();
 
 		/**
+		 * The meta object literal for the '<em><b>Zusatzinformation Stellwerk</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STELL_BEREICH__ZUSATZINFORMATION_STELLWERK = eINSTANCE.getStell_Bereich_ZusatzinformationStellwerk();
+
+		/**
+		 * The meta object literal for the '<em><b>Bezeichnung Stellwerk</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STELL_BEREICH__BEZEICHNUNG_STELLWERK = eINSTANCE.getStell_Bereich_BezeichnungStellwerk();
+
+		/**
 		 * The meta object literal for the '<em><b>ID Aussenelementansteuerung</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6389,6 +7050,24 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		EAttribute TSO_TEILSYSTEM_ART_TYPE_CLASS__WERT = eINSTANCE.getTSO_Teilsystem_Art_TypeClass_Wert();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Tueranschlag_TypeClassImpl <em>Tueranschlag Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Tueranschlag_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getTueranschlag_TypeClass()
+		 * @generated
+		 */
+		EClass TUERANSCHLAG_TYPE_CLASS = eINSTANCE.getTueranschlag_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TUERANSCHLAG_TYPE_CLASS__WERT = eINSTANCE.getTueranschlag_TypeClass_Wert();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.UebertragungswegImpl <em>Uebertragungsweg</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6541,7 +7220,7 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		EReference UNTERBRINGUNG__UNTERBRINGUNG_ALLG = eINSTANCE.getUnterbringung_UnterbringungAllg();
 
 		/**
-		 * The meta object literal for the '<em><b>IDGEO Punkt</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>IDGEO Punkt</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6565,6 +7244,14 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		EReference UNTERBRINGUNG__STANDORT_BESCHREIBUNG = eINSTANCE.getUnterbringung_StandortBeschreibung();
 
 		/**
+		 * The meta object literal for the '<em><b>Unterbringung Polygonzug</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNTERBRINGUNG__UNTERBRINGUNG_POLYGONZUG = eINSTANCE.getUnterbringung_UnterbringungPolygonzug();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Allg_AttributeGroupImpl <em>Unterbringung Allg Attribute Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6581,6 +7268,14 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__HERSTELLER = eINSTANCE.getUnterbringung_Allg_AttributeGroup_Hersteller();
+
+		/**
+		 * The meta object literal for the '<em><b>Tueranschlag</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNTERBRINGUNG_ALLG_ATTRIBUTE_GROUP__TUERANSCHLAG = eINSTANCE.getUnterbringung_Allg_AttributeGroup_Tueranschlag();
 
 		/**
 		 * The meta object literal for the '<em><b>Unterbringung Art</b></em>' containment reference feature.
@@ -6633,6 +7328,42 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UNTERBRINGUNG_BEFESTIGUNG_TYPE_CLASS__WERT = eINSTANCE.getUnterbringung_Befestigung_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Polygonzug_TypeClassImpl <em>Unterbringung Polygonzug Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Unterbringung_Polygonzug_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung_Polygonzug_TypeClass()
+		 * @generated
+		 */
+		EClass UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS = eINSTANCE.getUnterbringung_Polygonzug_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNTERBRINGUNG_POLYGONZUG_TYPE_CLASS__WERT = eINSTANCE.getUnterbringung_Polygonzug_TypeClass_Wert();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Zusatzinformation_Stellwerk_TypeClassImpl <em>Zusatzinformation Stellwerk Type Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Zusatzinformation_Stellwerk_TypeClassImpl
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getZusatzinformation_Stellwerk_TypeClass()
+		 * @generated
+		 */
+		EClass ZUSATZINFORMATION_STELLWERK_TYPE_CLASS = eINSTANCE.getZusatzinformation_Stellwerk_TypeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ZUSATZINFORMATION_STELLWERK_TYPE_CLASS__WERT = eINSTANCE.getZusatzinformation_Stellwerk_TypeClass_Wert();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMAussenelementansteuerungArt <em>ENUM Aussenelementansteuerung Art</em>}' enum.
@@ -6715,6 +7446,16 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		EEnum ENUMTSO_TEILSYSTEM_ART = eINSTANCE.getENUMTSOTeilsystemArt();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag <em>ENUM Tueranschlag</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTueranschlag()
+		 * @generated
+		 */
+		EEnum ENUM_TUERANSCHLAG = eINSTANCE.getENUMTueranschlag();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMUebertragungswegArt <em>ENUM Uebertragungsweg Art</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6773,6 +7514,16 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType BEZEICHNUNG_ESTW_ZE_TYPE = eINSTANCE.getBezeichnung_ESTW_ZE_Type();
+
+		/**
+		 * The meta object literal for the '<em>Bezeichnung Stellwerk Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getBezeichnung_Stellwerk_Type()
+		 * @generated
+		 */
+		EDataType BEZEICHNUNG_STELLWERK_TYPE = eINSTANCE.getBezeichnung_Stellwerk_Type();
 
 		/**
 		 * The meta object literal for the '<em>Bezeichnung TSO Type</em>' data type.
@@ -6863,6 +7614,16 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType ENUMTSO_TEILSYSTEM_ART_OBJECT = eINSTANCE.getENUMTSOTeilsystemArtObject();
+
+		/**
+		 * The meta object literal for the '<em>ENUM Tueranschlag Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.ENUMTueranschlag
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getENUMTueranschlagObject()
+		 * @generated
+		 */
+		EDataType ENUM_TUERANSCHLAG_OBJECT = eINSTANCE.getENUMTueranschlagObject();
 
 		/**
 		 * The meta object literal for the '<em>ENUM Uebertragungsweg Art Object</em>' data type.
@@ -6973,6 +7734,26 @@ public interface Ansteuerung_ElementPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType TECHNIK_BESCHREIBUNG_TYPE = eINSTANCE.getTechnik_Beschreibung_Type();
+
+		/**
+		 * The meta object literal for the '<em>Unterbringung Polygonzug Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getUnterbringung_Polygonzug_Type()
+		 * @generated
+		 */
+		EDataType UNTERBRINGUNG_POLYGONZUG_TYPE = eINSTANCE.getUnterbringung_Polygonzug_Type();
+
+		/**
+		 * The meta object literal for the '<em>Zusatzinformation Stellwerk Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.set.toolboxmodel.Ansteuerung_Element.impl.Ansteuerung_ElementPackageImpl#getZusatzinformation_Stellwerk_Type()
+		 * @generated
+		 */
+		EDataType ZUSATZINFORMATION_STELLWERK_TYPE = eINSTANCE.getZusatzinformation_Stellwerk_Type();
 
 	}
 

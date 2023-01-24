@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.set.toolboxmodel.Basisobjekte.Anhang;
 import org.eclipse.set.toolboxmodel.PlanPro.Bauabschnitt_TypeClass;
 import org.eclipse.set.toolboxmodel.PlanPro.Bezeichnung_Anlage_TypeClass;
 import org.eclipse.set.toolboxmodel.PlanPro.Bezeichnung_Planung_Gruppe_TypeClass;
@@ -32,6 +33,7 @@ import org.eclipse.set.toolboxmodel.PlanPro.Planung_G_Schriftfeld_AttributeGroup
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Planung_G_Schriftfeld_AttributeGroupImpl#getBezeichnungPlanungGruppe <em>Bezeichnung Planung Gruppe</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Planung_G_Schriftfeld_AttributeGroupImpl#getBezeichnungUnteranlage <em>Bezeichnung Unteranlage</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Planung_G_Schriftfeld_AttributeGroupImpl#getPlanungsbuero <em>Planungsbuero</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.Planung_G_Schriftfeld_AttributeGroupImpl#getPlanungsbueroLogo <em>Planungsbuero Logo</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +88,16 @@ public class Planung_G_Schriftfeld_AttributeGroupImpl extends MinimalEObjectImpl
 	 * @ordered
 	 */
 	protected Organisation planungsbuero;
+
+	/**
+	 * The cached value of the '{@link #getPlanungsbueroLogo() <em>Planungsbuero Logo</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlanungsbueroLogo()
+	 * @generated
+	 * @ordered
+	 */
+	protected Anhang planungsbueroLogo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -337,6 +349,51 @@ public class Planung_G_Schriftfeld_AttributeGroupImpl extends MinimalEObjectImpl
 	 * @generated
 	 */
 	@Override
+	public Anhang getPlanungsbueroLogo() {
+		return planungsbueroLogo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPlanungsbueroLogo(Anhang newPlanungsbueroLogo, NotificationChain msgs) {
+		Anhang oldPlanungsbueroLogo = planungsbueroLogo;
+		planungsbueroLogo = newPlanungsbueroLogo;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO, oldPlanungsbueroLogo, newPlanungsbueroLogo);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPlanungsbueroLogo(Anhang newPlanungsbueroLogo) {
+		if (newPlanungsbueroLogo != planungsbueroLogo) {
+			NotificationChain msgs = null;
+			if (planungsbueroLogo != null)
+				msgs = ((InternalEObject)planungsbueroLogo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO, null, msgs);
+			if (newPlanungsbueroLogo != null)
+				msgs = ((InternalEObject)newPlanungsbueroLogo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO, null, msgs);
+			msgs = basicSetPlanungsbueroLogo(newPlanungsbueroLogo, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO, newPlanungsbueroLogo, newPlanungsbueroLogo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__BAUABSCHNITT:
@@ -349,6 +406,8 @@ public class Planung_G_Schriftfeld_AttributeGroupImpl extends MinimalEObjectImpl
 				return basicSetBezeichnungUnteranlage(null, msgs);
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO:
 				return basicSetPlanungsbuero(null, msgs);
+			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO:
+				return basicSetPlanungsbueroLogo(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -372,6 +431,8 @@ public class Planung_G_Schriftfeld_AttributeGroupImpl extends MinimalEObjectImpl
 				return getBezeichnungUnteranlage();
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO:
 				return getPlanungsbuero();
+			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO:
+				return getPlanungsbueroLogo();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -399,6 +460,9 @@ public class Planung_G_Schriftfeld_AttributeGroupImpl extends MinimalEObjectImpl
 				return;
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO:
 				setPlanungsbuero((Organisation)newValue);
+				return;
+			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO:
+				setPlanungsbueroLogo((Anhang)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);
@@ -429,6 +493,9 @@ public class Planung_G_Schriftfeld_AttributeGroupImpl extends MinimalEObjectImpl
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO:
 				setPlanungsbuero((Organisation)null);
 				return;
+			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO:
+				setPlanungsbueroLogo((Anhang)null);
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -453,6 +520,8 @@ public class Planung_G_Schriftfeld_AttributeGroupImpl extends MinimalEObjectImpl
 				return bezeichnungUnteranlage != null;
 			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO:
 				return planungsbuero != null;
+			case PlanProPackage.PLANUNG_GSCHRIFTFELD_ATTRIBUTE_GROUP__PLANUNGSBUERO_LOGO:
+				return planungsbueroLogo != null;
 			default:
 				return super.eIsSet(featureID);
 		}

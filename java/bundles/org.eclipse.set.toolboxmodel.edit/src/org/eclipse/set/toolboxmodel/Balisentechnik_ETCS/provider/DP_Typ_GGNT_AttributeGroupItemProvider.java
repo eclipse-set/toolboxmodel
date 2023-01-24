@@ -1,6 +1,7 @@
 /**
- * Copyright (c) 2022 DB Netz AG and others.
- * 
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -32,7 +33,7 @@ import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSFacto
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.Balisentechnik_ETCSPackage;
 import org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GGNT_AttributeGroup;
 
-import org.eclipse.set.toolboxmodel.PlanPro.provider.PlanProEditPlugin;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.set.toolboxmodel.Balisentechnik_ETCS.DP_Typ_GGNT_AttributeGroup} object.
@@ -85,7 +86,7 @@ public class DP_Typ_GGNT_AttributeGroupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GGNT_AttributeGroup_TCDPTypGNT());
+			childrenFeatures.add(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GGNT_AttributeGroup_DPTypGNT());
 		}
 		return childrenFeatures;
 	}
@@ -138,7 +139,7 @@ public class DP_Typ_GGNT_AttributeGroupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DP_Typ_GGNT_AttributeGroup.class)) {
-			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__TCDP_TYP_GNT:
+			case Balisentechnik_ETCSPackage.DP_TYP_GGNT_ATTRIBUTE_GROUP__DP_TYP_GNT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -160,7 +161,7 @@ public class DP_Typ_GGNT_AttributeGroupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GGNT_AttributeGroup_TCDPTypGNT(),
+				(Balisentechnik_ETCSPackage.eINSTANCE.getDP_Typ_GGNT_AttributeGroup_DPTypGNT(),
 				 Balisentechnik_ETCSFactory.eINSTANCE.createDP_Typ_GNT_TypeClass()));
 	}
 

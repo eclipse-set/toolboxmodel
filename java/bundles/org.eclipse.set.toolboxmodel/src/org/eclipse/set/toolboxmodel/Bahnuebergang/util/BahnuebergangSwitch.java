@@ -1,4 +1,11 @@
 /**
+ * /**
+ * Copyright (c) 2023 DB Netz AG and others.
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  */
 package org.eclipse.set.toolboxmodel.Bahnuebergang.util;
 
@@ -583,6 +590,13 @@ public class BahnuebergangSwitch<T> extends Switch<T> {
 				Gleis_Am_Bue_TypeClass gleis_Am_Bue_TypeClass = (Gleis_Am_Bue_TypeClass)theEObject;
 				T result = caseGleis_Am_Bue_TypeClass(gleis_Am_Bue_TypeClass);
 				if (result == null) result = caseBasisAttribut_AttributeGroup(gleis_Am_Bue_TypeClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BahnuebergangPackage.HALTEZEIT_TYPE_CLASS: {
+				Haltezeit_TypeClass haltezeit_TypeClass = (Haltezeit_TypeClass)theEObject;
+				T result = caseHaltezeit_TypeClass(haltezeit_TypeClass);
+				if (result == null) result = caseBasisAttribut_AttributeGroup(haltezeit_TypeClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -2067,6 +2081,21 @@ public class BahnuebergangSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGleis_Am_Bue_TypeClass(Gleis_Am_Bue_TypeClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Haltezeit Type Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Haltezeit Type Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHaltezeit_TypeClass(Haltezeit_TypeClass object) {
 		return null;
 	}
 
