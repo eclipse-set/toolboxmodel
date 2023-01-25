@@ -6,10 +6,10 @@
    <feature id="org.eclipse.set.toolboxmodel.feature.source">
       <category name="org.eclipse.set.toolboxmodel.category"/>
    </feature>
-   <feature id="org.eclipse.set.model.model1902.feature">
+   <feature id="org.eclipse.set.model.model11001.feature">
       <category name="org.eclipse.set.toolboxmodel.category"/>
    </feature>
-   <feature id="org.eclipse.set.model.model1902.feature.source">
+   <feature id="org.eclipse.set.model.model11001.feature.source">
       <category name="org.eclipse.set.toolboxmodel.category"/>
    </feature>
    <category-def name="org.eclipse.set.toolboxmodel.category" label="Toolbox Model"/>
