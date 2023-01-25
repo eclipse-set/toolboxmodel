@@ -2039,7 +2039,6 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		hauptschloss_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
 		schlossEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schloss_Art_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
-		schloss_Bezeichnung_AttributeGroupEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schlosskombinationEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schluesselEClass.getESuperTypes().add(theBasisobjektePackage.getBasis_Objekt());
 		schluessel_Bartform_TypeClassEClass.getESuperTypes().add(theBasisTypenPackage.getBasisAttribut_AttributeGroup());
@@ -3270,7 +3269,7 @@ public class SchluesselabhaengigkeitenPackageImpl extends EPackageImpl implement
 		  (getSchloss_Bezeichnung_AttributeGroup_BezeichnungSchloss(),
 		   source,
 		   new String[] {
-			   "appinfo", "\r\n                          \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                               \r\n    <Patternbeschreibung>[1..20]</Patternbeschreibung>\r\n                            \r\n  </WorkflowInformation>\r\n                       \r\n"
+			   "appinfo", "\r\n                    \r\n  <WorkflowInformation xmlns=\"http://www.plan-pro.org/modell/PlanProInformation\">\r\n                         \r\n    <Patternbeschreibung>[1..20]</Patternbeschreibung>\r\n                      \r\n  </WorkflowInformation>\r\n                 \r\n"
 		   });
 		addAnnotation
 		  (getSchloss_Sonderanlage_AttributeGroup_SonderanlageLage(),

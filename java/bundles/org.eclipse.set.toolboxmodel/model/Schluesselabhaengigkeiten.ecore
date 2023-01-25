@@ -511,9 +511,7 @@
          </eAnnotations>
       </eStructuralFeatures>
    </eClassifiers>
-   <eClassifiers xsi:type="ecore:EClass"
-                  name="Schloss_Bezeichnung_AttributeGroup"
-                  eSuperTypes="Basisobjekte.ecore#//Basis_Objekt">
+   <eClassifiers xsi:type="ecore:EClass" name="Schloss_Bezeichnung_AttributeGroup">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
          <details key="name" value="CSchloss_Bezeichnung"/>
          <details key="kind" value="elementOnly"/>
@@ -530,7 +528,7 @@
          </eAnnotations>
          <eAnnotations>
             <details key="appinfo"
-                      value="&#xD;&#xA;                          &#xD;&#xA;  &lt;WorkflowInformation xmlns=&#34;http://www.plan-pro.org/modell/PlanProInformation&#34;&gt;&#xD;&#xA;                               &#xD;&#xA;    &lt;Patternbeschreibung&gt;[1..20]&lt;/Patternbeschreibung&gt;&#xD;&#xA;                            &#xD;&#xA;  &lt;/WorkflowInformation&gt;&#xD;&#xA;                       &#xD;&#xA;"/>
+                      value="&#xD;&#xA;                    &#xD;&#xA;  &lt;WorkflowInformation xmlns=&#34;http://www.plan-pro.org/modell/PlanProInformation&#34;&gt;&#xD;&#xA;                         &#xD;&#xA;    &lt;Patternbeschreibung&gt;[1..20]&lt;/Patternbeschreibung&gt;&#xD;&#xA;                      &#xD;&#xA;  &lt;/WorkflowInformation&gt;&#xD;&#xA;                 &#xD;&#xA;"/>
          </eAnnotations>
          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
             <details key="kind" value="element"/>

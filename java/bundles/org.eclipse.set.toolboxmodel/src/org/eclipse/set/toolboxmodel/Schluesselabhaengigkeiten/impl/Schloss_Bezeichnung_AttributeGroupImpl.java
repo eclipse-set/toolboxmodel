@@ -36,7 +36,7 @@ import org.eclipse.set.toolboxmodel.Schluesselabhaengigkeiten.Schluesselabhaengi
  *
  * @generated
  */
-public class Schloss_Bezeichnung_AttributeGroupImpl extends Basis_ObjektImpl implements Schloss_Bezeichnung_AttributeGroup {
+public class Schloss_Bezeichnung_AttributeGroupImpl extends MinimalEObjectImpl.Container implements Schloss_Bezeichnung_AttributeGroup {
 	/**
 	 * The cached value of the '{@link #getBezeichnungSchloss() <em>Bezeichnung Schloss</em>}' containment reference.
 	 * <!-- begin-user-doc -->

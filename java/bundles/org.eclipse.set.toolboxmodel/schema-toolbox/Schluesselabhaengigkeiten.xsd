@@ -635,25 +635,21 @@ XML Schema for PlanPro interface.</xs:documentation>
    </xs:complexType>
    <xs:complexType ecore:name="Schloss_Bezeichnung_AttributeGroup"
                     name="CSchloss_Bezeichnung">
-      <xs:complexContent>
-         <xs:extension base="nsBasisobjekte:CBasis_Objekt">
-            <xs:sequence>
-               <xs:element name="Bezeichnung_Schloss"
-                            type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schloss"
-                            minOccurs="1"
-                            maxOccurs="1">
-                  <xs:annotation>
-                     <xs:documentation>Bezeichnung des Schlosses, die sich im Regelfall aus dem zu verschließenden Element ergibt, ggf. zuzüglich dessen Lage. Bei einer Schlüsselsperre/Schlosskombination entspricht die Bezeichnung der Bezeichnung der Schlüsselsperre/ Schlosskombination.</xs:documentation>
-                     <xs:appinfo>
-                        <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
-                           <Patternbeschreibung>[1..20]</Patternbeschreibung>
-                        </WorkflowInformation>
-                     </xs:appinfo>
-                  </xs:annotation>
-               </xs:element>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
+      <xs:sequence>
+         <xs:element name="Bezeichnung_Schloss"
+                      type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schloss"
+                      minOccurs="1"
+                      maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation>Bezeichnung des Schlosses, die sich im Regelfall aus dem zu verschließenden Element ergibt, ggf. zuzüglich dessen Lage. Bei einer Schlüsselsperre/Schlosskombination entspricht die Bezeichnung der Bezeichnung der Schlüsselsperre/ Schlosskombination.</xs:documentation>
+               <xs:appinfo>
+                  <WorkflowInformation xmlns="http://www.plan-pro.org/modell/PlanProInformation">
+                     <Patternbeschreibung>[1..20]</Patternbeschreibung>
+                  </WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
    </xs:complexType>
    <xs:simpleType ecore:name="Bezeichnung_Sk_Type" name="TBezeichnung_Sk">
       <xs:restriction base="nsBasisTypen:TZeichenkette"/>

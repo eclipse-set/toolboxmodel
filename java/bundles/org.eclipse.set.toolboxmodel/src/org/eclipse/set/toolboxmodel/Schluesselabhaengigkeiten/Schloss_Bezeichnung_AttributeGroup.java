@@ -28,7 +28,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
  * @model extendedMetaData="name='CSchloss_Bezeichnung' kind='elementOnly'"
  * @generated
  */
-public interface Schloss_Bezeichnung_AttributeGroup extends Basis_Objekt {
+public interface Schloss_Bezeichnung_AttributeGroup extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Bezeichnung Schloss</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

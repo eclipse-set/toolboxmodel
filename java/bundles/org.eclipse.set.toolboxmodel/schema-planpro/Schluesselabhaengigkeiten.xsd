@@ -482,25 +482,21 @@ XML Schema for PlanPro interface.</xs:documentation>
 		    </xs:complexContent>
 	  </xs:complexType>
 	  <xs:complexType name="CSchloss_Bezeichnung">
-		    <xs:complexContent>
-			      <xs:extension base="nsBasisobjekte:CBasis_Objekt">
-				        <xs:sequence>
-					          <xs:element name="Bezeichnung_Schloss"
-                           type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schloss"
-                           minOccurs="1"
-                           maxOccurs="1">
-						            <xs:annotation>
-                     <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bezeichnung des Schlosses, die sich im Regelfall aus dem zu verschließenden Element ergibt, ggf. zuzüglich dessen Lage. Bei einer Schlüsselsperre/Schlosskombination entspricht die Bezeichnung der Bezeichnung der Schlüsselsperre/ Schlosskombination.</xs:documentation>
-                     <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
-                        <ppi:WorkflowInformation>
-                           <ppi:Patternbeschreibung>[1..20]</ppi:Patternbeschreibung>
-                        </ppi:WorkflowInformation>
-                     </xs:appinfo>
-                  </xs:annotation>
-					          </xs:element>
-				        </xs:sequence>
-			      </xs:extension>
-		    </xs:complexContent>
+		    <xs:sequence>
+			      <xs:element name="Bezeichnung_Schloss"
+                     type="nsSchluesselabhaengigkeiten:TCBezeichnung_Schloss"
+                     minOccurs="1"
+                     maxOccurs="1">
+				        <xs:annotation>
+               <xs:documentation xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">Bezeichnung des Schlosses, die sich im Regelfall aus dem zu verschließenden Element ergibt, ggf. zuzüglich dessen Lage. Bei einer Schlüsselsperre/Schlosskombination entspricht die Bezeichnung der Bezeichnung der Schlüsselsperre/ Schlosskombination.</xs:documentation>
+               <xs:appinfo xmlns:ppi="http://www.plan-pro.org/modell/PlanProInformation">
+                  <ppi:WorkflowInformation>
+                     <ppi:Patternbeschreibung>[1..20]</ppi:Patternbeschreibung>
+                  </ppi:WorkflowInformation>
+               </xs:appinfo>
+            </xs:annotation>
+			      </xs:element>
+		    </xs:sequence>
 	  </xs:complexType>
 	  <xs:simpleType name="TBezeichnung_Sk">
 		    <xs:restriction base="nsBasisTypen:TZeichenkette"/>

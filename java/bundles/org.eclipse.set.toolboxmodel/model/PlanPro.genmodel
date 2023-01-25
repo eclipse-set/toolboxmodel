@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2023 DB Netz AG and others.&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v2.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v20.html&#xA;"
-    modelDirectory="/org.eclipse.set.toolboxmodel/src" modelPluginID="org.eclipse.set.toolboxmodel"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.set.toolboxmodel/src" modelPluginID="org.eclipse.set.toolboxmodel"
     modelName="PlanPro" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="" importerID="org.eclipse.xsd.ecore.importer" complianceLevel="17.0"
     suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
@@ -24,7 +23,6 @@
   <foreignModel>../schema-toolbox/Nahbedienung.xsd</foreignModel>
   <foreignModel>../schema-toolbox/Ortung.xsd</foreignModel>
   <foreignModel>../schema-toolbox/PlanPro.xsd</foreignModel>
-  <foreignModel>../schema-toolbox/PlanProInformation.xsd</foreignModel>
   <foreignModel>../schema-toolbox/PZB.xsd</foreignModel>
   <foreignModel>../schema-toolbox/Regelzeichnung.xsd</foreignModel>
   <foreignModel>../schema-toolbox/Schluesselabhaengigkeiten.xsd</foreignModel>
