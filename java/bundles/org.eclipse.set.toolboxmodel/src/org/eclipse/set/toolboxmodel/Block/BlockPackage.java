@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -576,7 +575,7 @@ public interface BlockPackage extends EPackage {
 	int AUTO_ERLAUBNISHOLEN_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -622,7 +621,7 @@ public interface BlockPackage extends EPackage {
 	int AUTO_ERLAUBNISRUECKLAUF_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -668,7 +667,7 @@ public interface BlockPackage extends EPackage {
 	int BETRIEBSFUEHRUNG_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -732,7 +731,7 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_ANLAGE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -869,7 +868,7 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_BAUFORM_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -933,7 +932,7 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1188,7 +1187,7 @@ public interface BlockPackage extends EPackage {
 	int BLOCK_STRECKE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1379,7 +1378,7 @@ public interface BlockPackage extends EPackage {
 	int BREMSWEG_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1425,7 +1424,7 @@ public interface BlockPackage extends EPackage {
 	int ERLAUBNIS_STAENDIG_VORHANDEN_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1471,7 +1470,7 @@ public interface BlockPackage extends EPackage {
 	int ERLAUBNISABGABESPEICHERUNG_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1517,7 +1516,7 @@ public interface BlockPackage extends EPackage {
 	int ERLAUBNISHOLEN_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1563,7 +1562,7 @@ public interface BlockPackage extends EPackage {
 	int RUECKBLOCKWECKER_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1609,7 +1608,7 @@ public interface BlockPackage extends EPackage {
 	int SCHALTUNG_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1655,7 +1654,7 @@ public interface BlockPackage extends EPackage {
 	int SCHUTZUEBERTRAGER_TYPE_CLASS = 17;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1701,7 +1700,7 @@ public interface BlockPackage extends EPackage {
 	int STRECKE_ART_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1747,7 +1746,7 @@ public interface BlockPackage extends EPackage {
 	int STRECKENGESCHWINDIGKEIT_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1793,7 +1792,7 @@ public interface BlockPackage extends EPackage {
 	int TRAKTION_ART_ELEKTRISCH_TYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1839,7 +1838,7 @@ public interface BlockPackage extends EPackage {
 	int VORBLOCKWECKER_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1885,7 +1884,7 @@ public interface BlockPackage extends EPackage {
 	int ZUGBEEINFLUSSUNG_ART_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1931,7 +1930,7 @@ public interface BlockPackage extends EPackage {
 	int ZUSATZINFORMATION_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -575,7 +574,7 @@ public interface ATOPackage extends EPackage {
 	int ABSTAND_ATO_HALT_VOR_EO_ATYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -639,7 +638,7 @@ public interface ATOPackage extends EPackage {
 	int ATO_SEGMENT_PROFILE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -803,7 +802,7 @@ public interface ATOPackage extends EPackage {
 	int ATO_TIMING_POINT__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1013,7 +1012,7 @@ public interface ATOPackage extends EPackage {
 	int ATO_TS_INSTANZ__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1132,7 +1131,7 @@ public interface ATOPackage extends EPackage {
 	int BEZEICHNUNG_ATO_TP_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1178,7 +1177,7 @@ public interface ATOPackage extends EPackage {
 	int ERREICHUNGSTOLERANZ_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1224,7 +1223,7 @@ public interface ATOPackage extends EPackage {
 	int HALTETOLERANZ_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1270,7 +1269,7 @@ public interface ATOPackage extends EPackage {
 	int NID_ATOTS_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1316,7 +1315,7 @@ public interface ATOPackage extends EPackage {
 	int NID_CATOTS_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1362,7 +1361,7 @@ public interface ATOPackage extends EPackage {
 	int NID_SP_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1408,7 +1407,7 @@ public interface ATOPackage extends EPackage {
 	int NID_TP_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

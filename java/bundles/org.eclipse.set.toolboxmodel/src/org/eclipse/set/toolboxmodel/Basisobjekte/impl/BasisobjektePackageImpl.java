@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -3006,7 +3005,7 @@ public class BasisobjektePackageImpl extends EPackageImpl implements Basisobjekt
 
 		initEClass(basis_ObjektEClass, Basis_Objekt.class, "Basis_Objekt", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBasis_Objekt_BasisObjektAllg(), this.getBasis_Objekt_Allg_AttributeGroup(), null, "basisObjektAllg", null, 1, 1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBasis_Objekt_IDBearbeitungsvermerk(), theBasisTypenPackage.getID_Bearbeitungsvermerk_TypeClass(), null, "iDBearbeitungsvermerk", null, 0, -1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBasis_Objekt_IDBearbeitungsvermerk(), this.getBearbeitungsvermerk(), null, "iDBearbeitungsvermerk", null, 0, -1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBasis_Objekt_IDOertlichkeitAusgabe(), theGeodatenPackage.getOertlichkeit(), null, "iDOertlichkeitAusgabe", null, 0, 1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBasis_Objekt_Objektreferenzen(), this.getObjektreferenzen_AttributeGroup(), null, "objektreferenzen", null, 0, 1, Basis_Objekt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

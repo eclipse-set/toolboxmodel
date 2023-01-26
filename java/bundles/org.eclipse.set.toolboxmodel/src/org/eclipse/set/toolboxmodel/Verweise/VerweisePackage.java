@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -570,7 +569,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ANFORDERER_ELEMENT_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -616,7 +615,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ANFORDERUNG_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -662,7 +661,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ANHANG_OHNE_PROXY_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -708,7 +707,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ANHANG_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -754,7 +753,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ANHANG_BEARBEITUNGSVERMERK_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -800,7 +799,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ANSCHLUSS_ELEMENT_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -846,7 +845,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ATO_TS_INSTANZ_OHNE_PROXY_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -892,7 +891,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ATO_TS_INSTANZ_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -938,7 +937,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_AUSGABE_FACHDATEN_OHNE_PROXY_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -984,7 +983,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_AUSSENELEMENTANSTEUERUNG_OHNE_PROXY_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1030,7 +1029,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_AUSSENELEMENTANSTEUERUNG_TYPE_CLASS = 10;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1076,7 +1075,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BAHNSTEIG_ANLAGE_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1122,7 +1121,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BAHNSTEIG_KANTE_OHNE_PROXY_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1168,7 +1167,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BAHNSTEIG_KANTE_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1214,7 +1213,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BALISE_OHNE_PROXY_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1260,7 +1259,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BALISE_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1306,7 +1305,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BASIS_OBJEKT_TYPE_CLASS = 16;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1352,7 +1351,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEDIEN_ANZEIGE_ELEMENT_TYPE_CLASS = 17;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1398,7 +1397,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEDIEN_BEZIRK_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1444,7 +1443,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEDIEN_EINRICHTUNG_OERTLICH_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1490,7 +1489,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEDIEN_OBERFLAECHE_TYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1536,7 +1535,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEDIEN_STANDORT_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1582,7 +1581,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEDIEN_ZENTRALE_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1628,7 +1627,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEFESTIGUNG_BAUWERK_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1674,7 +1673,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEGINN_BEREICH_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1720,7 +1719,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BEZUGSPUNKT_POSITIONIERUNG_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1766,7 +1765,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BINAERDATEN_OHNE_PROXY_TYPE_CLASS = 26;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1812,7 +1811,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BLOCK_ANLAGE_TYPE_CLASS = 27;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1858,7 +1857,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BLOCK_ELEMENT_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1904,7 +1903,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BLOCK_STRECKE_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1950,7 +1949,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BUE_ANLAGE_OHNE_PROXY_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1996,7 +1995,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BUE_ANLAGE_TYPE_CLASS = 31;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2042,7 +2041,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BUE_BEDIEN_ANZEIGE_ELEMENT_TYPE_CLASS = 32;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2088,7 +2087,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BUE_EINSCHALTUNG_TYPE_CLASS = 33;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2134,7 +2133,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BUE_GLEISBEZOGENER_GEFAHRRAUM_TYPE_CLASS = 34;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2180,7 +2179,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BUE_SCHNITTSTELLE_TYPE_CLASS = 35;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2226,7 +2225,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_BUE_WS_FSTR_ZUORDNUNG_TYPE_CLASS = 36;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2272,7 +2271,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_DATENPUNKT_OHNE_PROXY_TYPE_CLASS = 37;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2318,7 +2317,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_DATENPUNKT_TYPE_CLASS = 38;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2364,7 +2363,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_DP_BEZUG_FUNKTIONAL_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2410,7 +2409,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_EINSCHALTPUNKT_TYPE_CLASS = 40;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2456,7 +2455,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ELEMENT_GRENZE_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2502,7 +2501,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ELEMENT_TYPE_CLASS = 42;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2548,7 +2547,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ELEMENT_UNTERBRINGUNG_TYPE_CLASS = 43;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2594,7 +2593,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ENERGIE_EINGANG_TYPE_CLASS = 44;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2640,7 +2639,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ENERGIE_TYPE_CLASS = 45;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2686,7 +2685,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ESTW_ZENTRALEINHEIT_TYPE_CLASS = 46;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2732,7 +2731,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ETCS_KANTE_TYPE_CLASS = 47;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2778,7 +2777,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ETCS_KNOTEN_OHNE_PROXY_TYPE_CLASS = 48;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2824,7 +2823,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ETCS_KNOTEN_TYPE_CLASS = 49;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2870,7 +2869,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_EV_MODUL_TYPE_CLASS = 50;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2916,7 +2915,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FACHTELEGRAMM_OHNE_PROXY_TYPE_CLASS = 51;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2962,7 +2961,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FACHTELEGRAMM_TYPE_CLASS = 52;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3008,7 +3007,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FLA_SCHUTZ_TYPE_CLASS = 53;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3054,7 +3053,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FMA_ANLAGE_RANGIER_FREI_TYPE_CLASS = 54;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3100,7 +3099,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FMA_ANLAGE_TYPE_CLASS = 55;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3146,7 +3145,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FMA_ELEMENT_TYPE_CLASS = 56;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3192,7 +3191,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FMA_KOMPONENTE_TYPE_CLASS = 57;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3238,7 +3237,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FORTSCHALTUNG_START_TYPE_CLASS = 58;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3284,7 +3283,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FSTR_ANEINANDER_TYPE_CLASS = 59;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3330,7 +3329,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FSTR_AUSSCHLUSS_BESONDERS_TYPE_CLASS = 60;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3376,7 +3375,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FSTR_DWEG_OHNE_PROXY_TYPE_CLASS = 61;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3422,7 +3421,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FSTR_DWEG_TYPE_CLASS = 62;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3468,7 +3467,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FSTR_FAHRWEG_OHNE_PROXY_TYPE_CLASS = 63;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3514,7 +3513,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FSTR_FAHRWEG_TYPE_CLASS = 64;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3560,7 +3559,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FSTR_ZUG_RANGIER_TYPE_CLASS = 65;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3606,7 +3605,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FT_ANSCHALTBEDINGUNG_TYPE_CLASS = 66;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3652,7 +3651,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_FT_FAHRWEG_TEIL_TYPE_CLASS = 67;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3698,7 +3697,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GEO_ART_TYPE_CLASS = 68;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3744,7 +3743,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GEO_KANTE_TYPE_CLASS = 69;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3790,7 +3789,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GEO_KNOTEN_TYPE_CLASS = 70;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3836,7 +3835,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GEO_PUNKT_OHNE_PROXY_TYPE_CLASS = 71;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3882,7 +3881,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GEO_PUNKT_TYPE_CLASS = 72;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3928,7 +3927,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GFR_ANLAGE_OHNE_PROXY_TYPE_CLASS = 73;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3974,7 +3973,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GLEIS_ABSCHNITT_TYPE_CLASS = 74;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4020,7 +4019,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GLEIS_BEZEICHNUNG_TYPE_CLASS = 75;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4066,7 +4065,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_GRENZZEICHEN_TYPE_CLASS = 76;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4112,7 +4111,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_HANDSCHALT_WIRKFUNKTION_TYPE_CLASS = 77;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4158,7 +4157,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_HOEHENPUNKT_TYPE_CLASS = 78;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4204,7 +4203,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_INFORMATION_EINGANG_TYPE_CLASS = 79;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4250,7 +4249,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_INFORMATION_PRIMAER_TYPE_CLASS = 80;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4296,7 +4295,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_KOMPONENTE_PROGRAMMIERT_TYPE_CLASS = 81;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4342,7 +4341,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LAGEPLAN_BLATTSCHNITT_TYPE_CLASS = 82;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4388,7 +4387,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LAGEPLAN_TYPE_CLASS = 83;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4434,7 +4433,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LAGEPLAN_ZUSTAND_TYPE_CLASS = 84;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4480,7 +4479,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LEU_ANLAGE_OHNE_PROXY_TYPE_CLASS = 85;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4526,7 +4525,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LEU_ANLAGE_TYPE_CLASS = 86;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4572,7 +4571,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LEU_BEZUG_FUNKTIONAL_TYPE_CLASS = 87;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4618,7 +4617,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LEU_SCHALTKASTEN_OHNE_PROXY_TYPE_CLASS = 88;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4664,7 +4663,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_LO_EINBAU_TYPE_CLASS = 89;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4710,7 +4709,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_MARKANTE_STELLE_TYPE_CLASS = 90;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4756,7 +4755,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_MARKANTER_PUNKT_GLEIS_ABSCHLUSS_TYPE_CLASS = 91;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4802,7 +4801,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_MARKANTER_PUNKT_TYPE_CLASS = 92;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4848,7 +4847,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_NB_ELEMENT_TYPE_CLASS = 93;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4894,7 +4893,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_NB_TYPE_CLASS = 94;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4940,7 +4939,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_NB_ZONE_TYPE_CLASS = 95;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4986,7 +4985,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_OERTLICHKEIT_AUSGABE_TYPE_CLASS = 96;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5032,7 +5031,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_OERTLICHKEIT_PROXY_TYPE_CLASS = 97;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5078,7 +5077,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_OERTLICHKEIT_TYPE_CLASS = 98;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5124,7 +5123,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_PLAN_PRO_SCHNITTSTELLE_TYPE_CLASS = 99;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5170,7 +5169,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_PLANUNG_EINZEL_TYPE_CLASS = 100;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5216,7 +5215,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_PLANUNGSGRUNDLAGE_TYPE_CLASS = 101;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5262,7 +5261,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_PZB_ELEMENT_BEZUGSPUNKT_TYPE_CLASS = 102;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5308,7 +5307,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_PZB_ELEMENT_MITNUTZUNG_TYPE_CLASS = 103;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5354,7 +5353,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_PZB_ELEMENT_TYPE_CLASS = 104;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5400,7 +5399,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_PZB_ELEMENT_ZUORDNUNG_TYPE_CLASS = 105;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5446,7 +5445,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_QUELLELEMENT_TYPE_CLASS = 106;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5492,7 +5491,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_RBC_TYPE_CLASS = 107;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5538,7 +5537,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_REGELZEICHNUNG_OHNE_PROXY_TYPE_CLASS = 108;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5584,7 +5583,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_REGELZEICHNUNG_TYPE_CLASS = 109;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5630,7 +5629,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SCHALTER_TYPE_CLASS = 110;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5676,7 +5675,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SCHALTMITTEL_ZUORDNUNG_TYPE_CLASS = 111;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5722,7 +5721,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SCHLOSSKOMBINATION_TYPE_CLASS = 112;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5768,7 +5767,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SCHLUESSEL_TYPE_CLASS = 113;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5814,7 +5813,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SCHLUESSELSPERRE_TYPE_CLASS = 114;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5860,7 +5859,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_BEFESTIGUNG_TYPE_CLASS = 115;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5906,7 +5905,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_FANK_TYPE_CLASS = 116;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5952,7 +5951,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_GLEISBEZECHNUNG_TYPE_CLASS = 117;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5998,7 +5997,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_OHNE_PROXY_TYPE_CLASS = 118;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6044,7 +6043,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_RAHMEN_TYPE_CLASS = 119;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6090,7 +6089,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_SIGNALBEGRIFF_TYPE_CLASS = 120;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6136,7 +6135,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_START_TYPE_CLASS = 121;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6182,7 +6181,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SIGNAL_TYPE_CLASS = 122;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6228,7 +6227,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_SONDERANLAGE_TYPE_CLASS = 123;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6274,7 +6273,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_STELLELEMENT_TYPE_CLASS = 124;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6320,7 +6319,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_STELLWERK_TYPE_CLASS = 125;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6366,7 +6365,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_STRECKE_BREMSWEG_OHNE_PROXY_TYPE_CLASS = 126;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6412,7 +6411,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_STRECKE_PUNKT_TYPE_CLASS = 127;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6458,7 +6457,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_STRECKE_TYPE_CLASS = 128;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6504,7 +6503,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_TECHNISCHER_PUNKT_TYPE_CLASS = 129;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6550,7 +6549,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_TOP_KANTE_OHNE_PROXY_TYPE_CLASS = 130;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6596,7 +6595,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_TOP_KANTE_TYPE_CLASS = 131;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6642,7 +6641,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_TOP_KNOTEN_TYPE_CLASS = 132;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6688,7 +6687,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_TRASSE_KANTE_TYPE_CLASS = 133;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6734,7 +6733,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_TRASSE_KNOTEN_TYPE_CLASS = 134;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6780,7 +6779,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UEBERHOEHUNG_TYPE_CLASS = 135;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6826,7 +6825,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UEBERTRAGUNGSWEG_NACH_TYPE_CLASS = 136;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6872,7 +6871,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UEBERTRAGUNGSWEG_VON_TYPE_CLASS = 137;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6918,7 +6917,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UMFAHRPUNKT_TYPE_CLASS = 138;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6964,7 +6963,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UNTERBRINGUNG_OHNE_PROXY_TYPE_CLASS = 139;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7010,7 +7009,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UNTERBRINGUNG_TECHNIK_TYPE_CLASS = 140;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7056,7 +7055,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UNTERBRINGUNG_TYPE_CLASS = 141;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7102,7 +7101,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_UR_OBJEKT_TYPE_CLASS = 142;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7148,7 +7147,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_VERKNUEPFTES_ELEMENT_TYPE_CLASS = 143;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7194,7 +7193,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_WKR_ANLAGE_OHNE_PROXY_TYPE_CLASS = 144;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7240,7 +7239,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_WKR_ANLAGE_TYPE_CLASS = 145;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7286,7 +7285,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_WKR_GSP_ELEMENT_TYPE_CLASS = 146;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7332,7 +7331,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_WKR_GSP_KOMPONENTE_TYPE_CLASS = 147;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7378,7 +7377,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_WEICHENLAUFKETTE_TYPE_CLASS = 148;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7424,7 +7423,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZIEL_TYPE_CLASS = 149;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7470,7 +7469,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZL_DLP_FSTR_TYPE_CLASS = 150;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7516,7 +7515,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZL_FSTR_TYPE_CLASS = 151;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7562,7 +7561,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZL_SIGNALGRUPPE_TYPE_CLASS = 152;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7608,7 +7607,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZL_TYPE_CLASS = 153;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7654,7 +7653,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZLV_BUS_OHNE_PROXY_TYPE_CLASS = 154;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7700,7 +7699,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZLV_BUS_TYPE_CLASS = 155;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7746,7 +7745,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZN_ANZEIGEFELD_ANSTOSS_TYPE_CLASS = 156;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7792,7 +7791,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZN_ANZEIGEFELD_TYPE_CLASS = 157;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7838,7 +7837,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZN_FORTSCHALT_KRITERIUM_TYPE_CLASS = 158;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7884,7 +7883,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZN_TYPE_CLASS = 159;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7930,7 +7929,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZN_UNTERSTATION_TYPE_CLASS = 160;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7976,7 +7975,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZN_ZBS_TYPE_CLASS = 161;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8022,7 +8021,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZUGEINWIRKUNG_TYPE_CLASS = 162;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8068,7 +8067,7 @@ public interface VerweisePackage extends EPackage {
 	int ID_ZWEITES_HALTFALLKRITERIUM_TYPE_CLASS = 163;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

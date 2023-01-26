@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -64,20 +63,19 @@ public interface Basis_Objekt extends Ur_Objekt {
 	void setBasisObjektAllg(Basis_Objekt_Allg_AttributeGroup value);
 
 	/**
-	 * Returns the value of the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass}.
+	 * Returns the value of the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Verweist auf einen oder mehrere Bearbeitungsvermerke. Ein Anhang wird über einen Bearbeitungsvermerk zugeordnet. 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>ID Bearbeitungsvermerk</em>' containment reference list.
+	 * @return the value of the '<em>ID Bearbeitungsvermerk</em>' reference list.
 	 * @see org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage#getBasis_Objekt_IDBearbeitungsvermerk()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='ID_Bearbeitungsvermerk'"
+	 * @model extendedMetaData="kind='element' name='ID_Bearbeitungsvermerk'"
 	 * @generated
 	 */
-	EList<ID_Bearbeitungsvermerk_TypeClass> getIDBearbeitungsvermerk();
+	EList<Bearbeitungsvermerk> getIDBearbeitungsvermerk();
 
 	/**
 	 * Returns the value of the '<em><b>ID Oertlichkeit Ausgabe</b></em>' reference.

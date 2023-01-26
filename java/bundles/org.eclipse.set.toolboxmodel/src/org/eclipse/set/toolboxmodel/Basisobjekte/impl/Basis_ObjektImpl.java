@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -22,6 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
@@ -29,6 +29,7 @@ import org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Basis_Objekt_Allg_AttributeGroup;
 import org.eclipse.set.toolboxmodel.Basisobjekte.BasisobjektePackage;
+import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Objektreferenzen_AttributeGroup;
 
 import org.eclipse.set.toolboxmodel.Geodaten.Oertlichkeit;
@@ -61,14 +62,14 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 	protected Basis_Objekt_Allg_AttributeGroup basisObjektAllg;
 
 	/**
-	 * The cached value of the '{@link #getIDBearbeitungsvermerk() <em>ID Bearbeitungsvermerk</em>}' containment reference list.
+	 * The cached value of the '{@link #getIDBearbeitungsvermerk() <em>ID Bearbeitungsvermerk</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIDBearbeitungsvermerk()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ID_Bearbeitungsvermerk_TypeClass> iDBearbeitungsvermerk;
+	protected EList<Bearbeitungsvermerk> iDBearbeitungsvermerk;
 
 	/**
 	 * The cached value of the '{@link #getIDOertlichkeitAusgabe() <em>ID Oertlichkeit Ausgabe</em>}' reference.
@@ -169,9 +170,9 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 	 * @generated
 	 */
 	@Override
-	public EList<ID_Bearbeitungsvermerk_TypeClass> getIDBearbeitungsvermerk() {
+	public EList<Bearbeitungsvermerk> getIDBearbeitungsvermerk() {
 		if (iDBearbeitungsvermerk == null) {
-			iDBearbeitungsvermerk = new EObjectContainmentEList<ID_Bearbeitungsvermerk_TypeClass>(ID_Bearbeitungsvermerk_TypeClass.class, this, BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK);
+			iDBearbeitungsvermerk = new EObjectResolvingEList<Bearbeitungsvermerk>(Bearbeitungsvermerk.class, this, BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK);
 		}
 		return iDBearbeitungsvermerk;
 	}
@@ -298,8 +299,6 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 		switch (featureID) {
 			case BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG:
 				return basicSetBasisObjektAllg(null, msgs);
-			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
-				return ((InternalEList<?>)getIDBearbeitungsvermerk()).basicRemove(otherEnd, msgs);
 			case BasisobjektePackage.BASIS_OBJEKT__OBJEKTREFERENZEN:
 				return basicSetObjektreferenzen(null, msgs);
 			default:
@@ -343,7 +342,7 @@ public abstract class Basis_ObjektImpl extends Ur_ObjektImpl implements Basis_Ob
 				return;
 			case BasisobjektePackage.BASIS_OBJEKT__ID_BEARBEITUNGSVERMERK:
 				getIDBearbeitungsvermerk().clear();
-				getIDBearbeitungsvermerk().addAll((Collection<? extends ID_Bearbeitungsvermerk_TypeClass>)newValue);
+				getIDBearbeitungsvermerk().addAll((Collection<? extends Bearbeitungsvermerk>)newValue);
 				return;
 			case BasisobjektePackage.BASIS_OBJEKT__ID_OERTLICHKEIT_AUSGABE:
 				setIDOertlichkeitAusgabe((Oertlichkeit)newValue);

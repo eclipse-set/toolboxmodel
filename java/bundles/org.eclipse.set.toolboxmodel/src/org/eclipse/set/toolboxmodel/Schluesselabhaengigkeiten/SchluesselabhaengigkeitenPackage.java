@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -576,7 +575,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEDIENUNG_ART_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -622,7 +621,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BESCHREIBUNG_SONDERANLAGE_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -668,7 +667,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEZEICHNUNG_SCHLOSS_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -714,7 +713,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEZEICHNUNG_SCHLUESSEL_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -760,7 +759,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BEZEICHNUNG_SK_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -806,7 +805,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int BUE_LAGE_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -852,7 +851,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int GSP_LAGE_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -898,7 +897,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int HAUPTSCHLOSS_TYPE_CLASS = 7;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -962,7 +961,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSS__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1107,7 +1106,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSS_ART_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1511,7 +1510,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLOSSKOMBINATION__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1639,7 +1638,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1758,7 +1757,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL_BARTFORM_TYPE_CLASS = 21;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1841,7 +1840,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL_GRUPPE_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1887,7 +1886,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSEL_IN_GRDST_EINGESCHL_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1951,7 +1950,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SCHLUESSELSPERRE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2042,7 +2041,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int SONDERANLAGE_LAGE_TYPE_CLASS = 26;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2088,7 +2087,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int TECHNISCH_BERECHTIGTER_TYPE_CLASS = 27;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2134,7 +2133,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int VERSCHLUSS_ORT_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2180,7 +2179,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int WANBAULAGE_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2226,7 +2225,7 @@ public interface SchluesselabhaengigkeitenPackage extends EPackage {
 	int WLAGE_TYPE_CLASS = 30;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

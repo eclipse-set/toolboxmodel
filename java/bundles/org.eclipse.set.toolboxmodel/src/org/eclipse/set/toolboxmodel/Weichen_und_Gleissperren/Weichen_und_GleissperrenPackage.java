@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -576,7 +575,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int AUFFAHRORTUNG_TYPE_CLASS = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -622,7 +621,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int AUSTAUSCH_ANTRIEBE_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -668,7 +667,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int AUSWURFRICHTUNG_TYPE_CLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -714,7 +713,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int BESONDERES_FAHRWEGELEMENT_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -760,7 +759,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int ELEKTRISCHER_ANTRIEB_ANZAHL_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -806,7 +805,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int ELEKTRISCHER_ANTRIEB_LAGE_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -852,7 +851,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int ELEMENT_LAGE_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -953,7 +952,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GESCHWINDIGKEIT_LTYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -999,7 +998,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GESCHWINDIGKEIT_RTYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1063,7 +1062,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GLEIS_ABSCHLUSS__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1145,7 +1144,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GLEIS_ABSCHLUSS_ART_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1191,7 +1190,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GLEISSPERRE_BETRIEBSART_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1283,7 +1282,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GLEISSPERRE_VORZUGSLAGE_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1329,7 +1328,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int GLEISSPERRENSIGNAL_TYPE_CLASS = 15;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1467,7 +1466,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int HERZSTUECK_ANTRIEBE_TYPE_CLASS = 18;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1513,7 +1512,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int ISOLIERFALL_TYPE_CLASS = 19;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1559,7 +1558,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int KR_KR_WSEITENZUORDNUNG_TYPE_CLASS = 20;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1669,7 +1668,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int KREUZUNGSGLEIS_TYPE_CLASS = 22;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1715,7 +1714,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int SCHUTZSCHIENE_TYPE_CLASS = 23;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1761,7 +1760,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int STAMMGLEIS_TYPE_CLASS = 24;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1807,7 +1806,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int VORZUGSLAGE_AUTOMATIK_TYPE_CLASS = 25;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1871,7 +1870,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_ANLAGE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2008,7 +2007,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_ART_TYPE_CLASS = 28;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2054,7 +2053,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_GRUNDFORM_TYPE_CLASS = 29;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2118,7 +2117,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_GSP_ELEMENT__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2318,7 +2317,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_GSP_KOMPONENTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.PUNKT_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2454,7 +2453,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WKR_GSP_STELLART_TYPE_CLASS = 33;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2500,7 +2499,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WEICHE_BETRIEBSART_TYPE_CLASS = 34;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2637,7 +2636,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WEICHE_VORZUGSLAGE_TYPE_CLASS = 36;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2701,7 +2700,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WEICHENLAUFKETTE__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2783,7 +2782,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WEICHENLAUFKETTE_ZUORDNUNG__BASIS_OBJEKT_ALLG = BasisobjektePackage.BASIS_OBJEKT__BASIS_OBJEKT_ALLG;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2856,7 +2855,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int WEICHENSIGNAL_TYPE_CLASS = 39;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3011,7 +3010,7 @@ public interface Weichen_und_GleissperrenPackage extends EPackage {
 	int ZUNGENPRUEFKONTAKT_ANZAHL_TYPE_CLASS = 41;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

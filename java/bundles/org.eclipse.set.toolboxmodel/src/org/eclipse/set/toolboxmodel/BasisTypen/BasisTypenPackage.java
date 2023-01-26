@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -572,7 +571,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BASIS_ATTRIBUT_ATTRIBUTE_GROUP = 0;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -609,7 +608,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_AUSSENANLAGE_TYPE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -737,7 +736,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_LAGEPLAN_KURZ_TYPE_CLASS = 3;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -783,7 +782,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_LAGEPLAN_LANG_TYPE_CLASS = 4;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -829,7 +828,7 @@ public interface BasisTypenPackage extends EPackage {
 	int BEZEICHNUNG_TABELLE_TYPE_CLASS = 5;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -875,7 +874,7 @@ public interface BasisTypenPackage extends EPackage {
 	int DATUM_AUSLIEFERUNG_TYPE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -958,7 +957,7 @@ public interface BasisTypenPackage extends EPackage {
 	int KENNZAHL_TYPE_CLASS = 8;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1004,7 +1003,7 @@ public interface BasisTypenPackage extends EPackage {
 	int OERTLICHER_ELEMENTNAME_TYPE_CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1114,7 +1113,7 @@ public interface BasisTypenPackage extends EPackage {
 	int PRUEFSUMME_ART_TYPE_CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1160,7 +1159,7 @@ public interface BasisTypenPackage extends EPackage {
 	int PRUEFSUMME_TYPE_CLASS = 12;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1206,7 +1205,7 @@ public interface BasisTypenPackage extends EPackage {
 	int VERSION_AUSLIEFERUNG_TYPE_CLASS = 13;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1252,7 +1251,7 @@ public interface BasisTypenPackage extends EPackage {
 	int ZEIGER_TYPE_CLASS = 14;
 
 	/**
-	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list.
+	 * The feature id for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1719,10 +1718,10 @@ public interface BasisTypenPackage extends EPackage {
 	EClass getBasisAttribut_AttributeGroup();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup#getIDBearbeitungsvermerk <em>ID Bearbeitungsvermerk</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup#getIDBearbeitungsvermerk <em>ID Bearbeitungsvermerk</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>ID Bearbeitungsvermerk</em>'.
+	 * @return the meta object for the reference list '<em>ID Bearbeitungsvermerk</em>'.
 	 * @see org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup#getIDBearbeitungsvermerk()
 	 * @see #getBasisAttribut_AttributeGroup()
 	 * @generated
@@ -2746,7 +2745,7 @@ public interface BasisTypenPackage extends EPackage {
 		EClass BASIS_ATTRIBUT_ATTRIBUTE_GROUP = eINSTANCE.getBasisAttribut_AttributeGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>ID Bearbeitungsvermerk</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>ID Bearbeitungsvermerk</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

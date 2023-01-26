@@ -245,7 +245,9 @@ Die zweite Gruppe der Attributeigenschaften sind als XSDElement modellierten Inf
       </xs:annotation>
       <xs:sequence>
          <xs:element name="ID_Bearbeitungsvermerk"
-                      type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                      type="xs:anyURI"
+                      ecore:reference="nsBasisobjekte:CBearbeitungsvermerk"
+                      nillable="true"
                       minOccurs="0"
                       maxOccurs="unbounded">
             <xs:annotation>

@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.set.model.model11001.BasisTypen.BasisTypenPackage;
+import org.eclipse.set.model.model11001.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
 import org.eclipse.set.model.model11001.BasisTypen.Zeiger_TypeClass;
 import org.eclipse.set.model.model11001.PlanPro.DocumentRoot;
 import org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle;
@@ -64,7 +65,9 @@ public class ToolboxToPlanProTransformation
 	private static boolean isIDReference(final EReference ref) {
 		return ref.getEReferenceType().getEAllSuperTypes().stream()
 				.anyMatch(superType -> superType.equals(
-						BasisTypenPackage.eINSTANCE.getZeiger_TypeClass()));
+						BasisTypenPackage.eINSTANCE.getZeiger_TypeClass()))
+				|| ref.getEReferenceType().equals(BasisTypenPackage.eINSTANCE
+						.getID_Bearbeitungsvermerk_TypeClass());
 	}
 
 	private static void transformIDReference(final EObject source,
@@ -82,29 +85,54 @@ public class ToolboxToPlanProTransformation
 				return;
 			}
 			@SuppressWarnings("unchecked")
-			final EList<Zeiger_TypeClass> list = (EList<Zeiger_TypeClass>) target
-					.eGet(targetRef);
+			final EList<EObject> list = (EList<EObject>) target.eGet(targetRef);
 			@SuppressWarnings("unchecked")
 			final EList<Ur_Objekt> sourceList = (EList<Ur_Objekt>) sourceValue;
 			sourceList.forEach(entry -> {
-				final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
-						.create(referenceType);
-				pointer.setWert(entry.getIdentitaet().getWert());
-				list.add(pointer);
+				if (referenceType.equals(BasisTypenPackage.eINSTANCE
+						.getID_Bearbeitungsvermerk_TypeClass())) {
+					final ID_Bearbeitungsvermerk_TypeClass pointer = (ID_Bearbeitungsvermerk_TypeClass) EcoreUtil
+							.create(referenceType);
+					pointer.setWert(entry.getIdentitaet().getWert());
+					list.add(pointer);
+
+				} else {
+
+					final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
+							.create(referenceType);
+					pointer.setWert(entry.getIdentitaet().getWert());
+					list.add(pointer);
+				}
 			});
 		} else {
 			// Simple reference, find the GUID of the source object
 			final Ur_Objekt sourceObject = (Ur_Objekt) sourceValue;
-			final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
-					.create(referenceType);
-			if (sourceObject == null) {
-				// If the value is null, this is a nil reference
-				pointer.setWert(null);
+			if (referenceType.equals(BasisTypenPackage.eINSTANCE
+					.getID_Bearbeitungsvermerk_TypeClass())) {
+
+				final ID_Bearbeitungsvermerk_TypeClass pointer = (ID_Bearbeitungsvermerk_TypeClass) EcoreUtil
+						.create(referenceType);
+				if (sourceObject == null) {
+					// If the value is null, this is a nil reference
+					pointer.setWert(null);
+				} else {
+					pointer.setWert(sourceObject.getIdentitaet().getWert());
+				}
+				target.eSet(targetRef, pointer);
+
 			} else {
-				pointer.setWert(sourceObject.getIdentitaet().getWert());
+				final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
+						.create(referenceType);
+				if (sourceObject == null) {
+					// If the value is null, this is a nil reference
+					pointer.setWert(null);
+				} else {
+					pointer.setWert(sourceObject.getIdentitaet().getWert());
+				}
+				target.eSet(targetRef, pointer);
 			}
-			target.eSet(targetRef, pointer);
 		}
+
 	}
 
 	/**

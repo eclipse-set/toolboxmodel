@@ -1573,7 +1573,9 @@ Der BV ist dauerhaft relevant und kann erst mit einem neuen Planungsprojekt  geÃ
                             minOccurs="1"
                             maxOccurs="1"/>
                <xs:element name="ID_Bearbeitungsvermerk"
-                            type="nsBasisTypen:TCID_Bearbeitungsvermerk"
+                            type="xs:anyURI"
+                            ecore:reference="nsBasisobjekte:CBearbeitungsvermerk"
+                            nillable="true"
                             minOccurs="0"
                             maxOccurs="unbounded">
                   <xs:annotation>

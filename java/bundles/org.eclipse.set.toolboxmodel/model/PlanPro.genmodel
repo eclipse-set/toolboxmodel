@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.set.toolboxmodel/src" modelPluginID="org.eclipse.set.toolboxmodel"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2023 DB Netz AG and others.&#xA;  &#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v2.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v20.html"
+    modelDirectory="/org.eclipse.set.toolboxmodel/src" modelPluginID="org.eclipse.set.toolboxmodel"
     modelName="PlanPro" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="" importerID="org.eclipse.xsd.ecore.importer" complianceLevel="17.0"
     suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
@@ -521,7 +522,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="Basisobjekte.ecore#//Basis_Objekt">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Basisobjekte.ecore#//Basis_Objekt/basisObjektAllg"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Basisobjekte.ecore#//Basis_Objekt/iDBearbeitungsvermerk"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Basisobjekte.ecore#//Basis_Objekt/iDBearbeitungsvermerk"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Basisobjekte.ecore#//Basis_Objekt/iDOertlichkeitAusgabe"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Basisobjekte.ecore#//Basis_Objekt/objektreferenzen"/>
     </genClasses>
@@ -785,7 +786,7 @@
     <genDataTypes ecoreDataType="BasisTypen.ecore#//Wirkrichtung_Type"/>
     <genDataTypes ecoreDataType="BasisTypen.ecore#//Zeichenkette_Type"/>
     <genClasses image="false" ecoreClass="BasisTypen.ecore#//BasisAttribut_AttributeGroup">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BasisTypen.ecore#//BasisAttribut_AttributeGroup/iDBearbeitungsvermerk"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BasisTypen.ecore#//BasisAttribut_AttributeGroup/iDBearbeitungsvermerk"/>
     </genClasses>
     <genClasses ecoreClass="BasisTypen.ecore#//Bezeichnung_Aussenanlage_TypeClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BasisTypen.ecore#//Bezeichnung_Aussenanlage_TypeClass/wert"/>

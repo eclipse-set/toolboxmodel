@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.set.model.model11001.BasisTypen.BasisTypenPackage;
+import org.eclipse.set.model.model11001.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
 import org.eclipse.set.model.model11001.BasisTypen.Zeiger_TypeClass;
 import org.eclipse.set.model.model11001.PlanPro.DocumentRoot;
 import org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle;
@@ -123,11 +124,19 @@ public class PlanProToToolboxTransformation
 		if (sourceValue instanceof final Zeiger_TypeClass sourcePointer) {
 			addUnresolvedReference(sourcePointer.getWert(), source, sourceRef,
 					target, targetRef);
+		} else if (sourceValue instanceof final ID_Bearbeitungsvermerk_TypeClass sourcePointer) {
+			addUnresolvedReference(sourcePointer.getWert(), source, sourceRef,
+					target, targetRef);
 		} else if (sourceValue instanceof final EList<?> sourceList) {
 			sourceList.forEach(value -> {
-				final Zeiger_TypeClass sourcePointer = (Zeiger_TypeClass) value;
-				addUnresolvedReference(sourcePointer.getWert(), source,
-						sourceRef, target, targetRef);
+				String guid = null;
+				if (value instanceof final Zeiger_TypeClass sourcePointer) {
+					guid = sourcePointer.getWert();
+				} else if (value instanceof final ID_Bearbeitungsvermerk_TypeClass sourcePointer) {
+					guid = sourcePointer.getWert();
+				}
+				addUnresolvedReference(guid, source, sourceRef, target,
+						targetRef);
 			});
 		} else {
 			throw new UnsupportedOperationException(
@@ -138,6 +147,8 @@ public class PlanProToToolboxTransformation
 	private static boolean isIDReference(final EReference ref) {
 		return ref.getEReferenceType().getEAllSuperTypes().stream()
 				.anyMatch(superType -> superType.equals(
-						BasisTypenPackage.eINSTANCE.getZeiger_TypeClass()));
+						BasisTypenPackage.eINSTANCE.getZeiger_TypeClass()))
+				|| ref.getEReferenceType().equals(BasisTypenPackage.eINSTANCE
+						.getID_Bearbeitungsvermerk_TypeClass());
 	}
 }

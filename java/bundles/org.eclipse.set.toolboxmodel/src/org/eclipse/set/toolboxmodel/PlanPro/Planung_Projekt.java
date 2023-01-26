@@ -71,30 +71,6 @@ public interface Planung_Projekt extends Ur_Objekt {
 	 * @generated
 	 */
 	void setPlanungPAllg(Planung_P_Allg_AttributeGroup value);
-	
-
-	/**
-	 * Returns the value of the '<em><b>Lst Planung Erste Gruppe</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lst Planung Erste Gruppe</em>' reference.
-	 * @see #setLstPlanungErsteGruppe(Planung_Gruppe)
-	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getPlanung_Projekt_LstPlanungErsteGruppe()
-	 * @model transient="true" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='final java.util.Optional&lt;org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService&gt; optionalProviderService = org.eclipse.set.toolboxmodel.modelservice.PlanProModelServices\n\t.get(org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService.class);\nif (optionalProviderService.isPresent()) {\n\tfinal org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService providerService = optionalProviderService\n\t\t\t.get();\n\treturn (Planung_Gruppe) providerService.getGroup(this);\n}\nreturn getLSTPlanungGruppe().get(0);\n'"
-	 * @generated
-	 */
-	Planung_Gruppe getLstPlanungErsteGruppe();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.PlanPro.Planung_Projekt#getLstPlanungErsteGruppe <em>Lst Planung Erste Gruppe</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lst Planung Erste Gruppe</em>' reference.
-	 * @see #getLstPlanungErsteGruppe()
-	 * @generated
-	 */
-	void setLstPlanungErsteGruppe(Planung_Gruppe value);
 
 
 } // Planung_Projekt

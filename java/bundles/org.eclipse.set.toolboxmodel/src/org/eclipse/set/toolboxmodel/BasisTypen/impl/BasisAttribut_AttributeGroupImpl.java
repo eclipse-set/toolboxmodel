@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -21,11 +20,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisAttribut_AttributeGroup;
 import org.eclipse.set.toolboxmodel.BasisTypen.BasisTypenPackage;
 import org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
+import org.eclipse.set.toolboxmodel.Basisobjekte.Bearbeitungsvermerk;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,14 +43,14 @@ import org.eclipse.set.toolboxmodel.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
  */
 public abstract class BasisAttribut_AttributeGroupImpl extends MinimalEObjectImpl.Container implements BasisAttribut_AttributeGroup {
 	/**
-	 * The cached value of the '{@link #getIDBearbeitungsvermerk() <em>ID Bearbeitungsvermerk</em>}' containment reference list.
+	 * The cached value of the '{@link #getIDBearbeitungsvermerk() <em>ID Bearbeitungsvermerk</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIDBearbeitungsvermerk()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ID_Bearbeitungsvermerk_TypeClass> iDBearbeitungsvermerk;
+	protected EList<Bearbeitungsvermerk> iDBearbeitungsvermerk;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,26 +77,11 @@ public abstract class BasisAttribut_AttributeGroupImpl extends MinimalEObjectImp
 	 * @generated
 	 */
 	@Override
-	public EList<ID_Bearbeitungsvermerk_TypeClass> getIDBearbeitungsvermerk() {
+	public EList<Bearbeitungsvermerk> getIDBearbeitungsvermerk() {
 		if (iDBearbeitungsvermerk == null) {
-			iDBearbeitungsvermerk = new EObjectContainmentEList<ID_Bearbeitungsvermerk_TypeClass>(ID_Bearbeitungsvermerk_TypeClass.class, this, BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK);
+			iDBearbeitungsvermerk = new EObjectResolvingEList<Bearbeitungsvermerk>(Bearbeitungsvermerk.class, this, BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK);
 		}
 		return iDBearbeitungsvermerk;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK:
-				return ((InternalEList<?>)getIDBearbeitungsvermerk()).basicRemove(otherEnd, msgs);
-			default:
-				return super.eInverseRemove(otherEnd, featureID, msgs);
-		}
 	}
 
 	/**
@@ -124,7 +110,7 @@ public abstract class BasisAttribut_AttributeGroupImpl extends MinimalEObjectImp
 		switch (featureID) {
 			case BasisTypenPackage.BASIS_ATTRIBUT_ATTRIBUTE_GROUP__ID_BEARBEITUNGSVERMERK:
 				getIDBearbeitungsvermerk().clear();
-				getIDBearbeitungsvermerk().addAll((Collection<? extends ID_Bearbeitungsvermerk_TypeClass>)newValue);
+				getIDBearbeitungsvermerk().addAll((Collection<? extends Bearbeitungsvermerk>)newValue);
 				return;
 			default:
 				super.eSet(featureID, newValue);

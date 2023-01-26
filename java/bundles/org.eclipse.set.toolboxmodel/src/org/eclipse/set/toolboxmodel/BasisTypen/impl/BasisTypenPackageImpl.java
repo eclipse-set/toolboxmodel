@@ -1,5 +1,4 @@
 /**
- * /**
  * Copyright (c) 2023 DB Netz AG and others.
  *  
  * All rights reserved. This program and the accompanying materials
@@ -1703,6 +1702,9 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		BasisobjektePackage theBasisobjektePackage = (BasisobjektePackage)EPackage.Registry.INSTANCE.getEPackage(BasisobjektePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -1722,7 +1724,7 @@ public class BasisTypenPackageImpl extends EPackageImpl implements BasisTypenPac
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(basisAttribut_AttributeGroupEClass, BasisAttribut_AttributeGroup.class, "BasisAttribut_AttributeGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBasisAttribut_AttributeGroup_IDBearbeitungsvermerk(), this.getID_Bearbeitungsvermerk_TypeClass(), null, "iDBearbeitungsvermerk", null, 0, -1, BasisAttribut_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBasisAttribut_AttributeGroup_IDBearbeitungsvermerk(), theBasisobjektePackage.getBearbeitungsvermerk(), null, "iDBearbeitungsvermerk", null, 0, -1, BasisAttribut_AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bezeichnung_Aussenanlage_TypeClassEClass, Bezeichnung_Aussenanlage_TypeClass.class, "Bezeichnung_Aussenanlage_TypeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBezeichnung_Aussenanlage_TypeClass_Wert(), this.getBezeichnung_Aussenanlage_Type(), "wert", null, 1, 1, Bezeichnung_Aussenanlage_TypeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

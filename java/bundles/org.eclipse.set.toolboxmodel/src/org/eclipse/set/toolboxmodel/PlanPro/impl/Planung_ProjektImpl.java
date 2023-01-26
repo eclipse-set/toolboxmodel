@@ -228,47 +228,6 @@ public class Planung_ProjektImpl extends Ur_ObjektImpl implements Planung_Projek
 				return super.eIsSet(featureID);
 		}
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Planung_Gruppe getLstPlanungErsteGruppe() {
-		Planung_Gruppe lstPlanungErsteGruppe = basicGetLstPlanungErsteGruppe();
-		return lstPlanungErsteGruppe != null && lstPlanungErsteGruppe.eIsProxy() ? (Planung_Gruppe)eResolveProxy((InternalEObject)lstPlanungErsteGruppe) : lstPlanungErsteGruppe;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Planung_Gruppe basicGetLstPlanungErsteGruppe() {
-		final java.util.Optional<org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService> optionalProviderService = org.eclipse.set.toolboxmodel.modelservice.PlanProModelServices
-			.get(org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService.class);
-		if (optionalProviderService.isPresent()) {
-			final org.eclipse.set.toolboxmodel.modelservice.ProjectGroupProviderService providerService = optionalProviderService
-					.get();
-			return (Planung_Gruppe) providerService.getGroup(this);
-		}
-		return getLSTPlanungGruppe().get(0);
-		
-	}
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLstPlanungErsteGruppe(Planung_Gruppe newLstPlanungErsteGruppe) {
-		// TODO: implement this method to set the 'Lst Planung Erste Gruppe' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 
 
 
