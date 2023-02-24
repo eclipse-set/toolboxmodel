@@ -22,7 +22,7 @@ import org.eclipse.set.model.model11001.PlanPro.util.PlanProResourceFactoryImpl;
 import org.eclipse.set.model.model11001.Signalbegriffe_Ril_301.Signalbegriffe_Ril_301Package;
 import org.eclipse.set.toolboxmodel.PlanPro.util.ToolboxModelService;
 import org.eclipse.set.toolboxmodel.transform.ToolboxModelServiceImpl;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("nls")
@@ -68,7 +68,7 @@ class ToolboxModelServiceImplTest {
 	private void thenRetransformedModelMatchesOriginal() throws IOException {
 		// Write source into byte array
 		final byte[] retransformed = saveEObjectToByteArray(retransformedModel);
-		Assert.assertArrayEquals(sourceByteArray, retransformed);
+		Assertions.assertArrayEquals(sourceByteArray, retransformed);
 	}
 
 	private static void givenToolboxModelInitialization() {
