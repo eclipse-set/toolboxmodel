@@ -101,5 +101,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Import-Package: org.eclipse.set.model.model11001.PlanPro,
+Import-Package: org.eclipse.set.model.model11001.Layoutinformationen,
+ org.eclipse.set.model.model11001.PlanPro,
  org.osgi.framework

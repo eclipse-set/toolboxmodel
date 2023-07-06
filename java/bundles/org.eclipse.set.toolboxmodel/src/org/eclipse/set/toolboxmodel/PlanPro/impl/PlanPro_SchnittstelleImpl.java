@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.set.toolboxmodel.Basisobjekte.impl.Ur_ObjektImpl;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.PlanPro_Layoutinfo;
 import org.eclipse.set.toolboxmodel.PlanPro.LST_Planung_AttributeGroup;
 import org.eclipse.set.toolboxmodel.PlanPro.LST_Zustand;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage;
@@ -35,6 +36,7 @@ import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getLSTPlanung <em>LST Planung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getLSTZustand <em>LST Zustand</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getWzkInvalidIDReferences <em>Wzk Invalid ID References</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.impl.PlanPro_SchnittstelleImpl#getPlanpro_layoutinfo <em>Planpro layoutinfo</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,16 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 	 * @ordered
 	 */
 	protected EList<WzkInvalidIDReference> wzkInvalidIDReferences;
+
+	/**
+	 * The cached value of the '{@link #getPlanpro_layoutinfo() <em>Planpro layoutinfo</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlanpro_layoutinfo()
+	 * @generated
+	 * @ordered
+	 */
+	protected PlanPro_Layoutinfo planpro_layoutinfo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,6 +265,51 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 	 * @generated
 	 */
 	@Override
+	public PlanPro_Layoutinfo getPlanpro_layoutinfo() {
+		return planpro_layoutinfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPlanpro_layoutinfo(PlanPro_Layoutinfo newPlanpro_layoutinfo, NotificationChain msgs) {
+		PlanPro_Layoutinfo oldPlanpro_layoutinfo = planpro_layoutinfo;
+		planpro_layoutinfo = newPlanpro_layoutinfo;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO, oldPlanpro_layoutinfo, newPlanpro_layoutinfo);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPlanpro_layoutinfo(PlanPro_Layoutinfo newPlanpro_layoutinfo) {
+		if (newPlanpro_layoutinfo != planpro_layoutinfo) {
+			NotificationChain msgs = null;
+			if (planpro_layoutinfo != null)
+				msgs = ((InternalEObject)planpro_layoutinfo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO, null, msgs);
+			if (newPlanpro_layoutinfo != null)
+				msgs = ((InternalEObject)newPlanpro_layoutinfo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO, null, msgs);
+			msgs = basicSetPlanpro_layoutinfo(newPlanpro_layoutinfo, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO, newPlanpro_layoutinfo, newPlanpro_layoutinfo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLAN_PRO_SCHNITTSTELLE_ALLG:
@@ -263,6 +320,8 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				return basicSetLSTZustand(null, msgs);
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
 				return ((InternalEList<?>)getWzkInvalidIDReferences()).basicRemove(otherEnd, msgs);
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO:
+				return basicSetPlanpro_layoutinfo(null, msgs);
 			default:
 				return super.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -284,6 +343,8 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				return getLSTZustand();
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
 				return getWzkInvalidIDReferences();
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO:
+				return getPlanpro_layoutinfo();
 			default:
 				return super.eGet(featureID, resolve, coreType);
 		}
@@ -311,6 +372,9 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				getWzkInvalidIDReferences().clear();
 				getWzkInvalidIDReferences().addAll((Collection<? extends WzkInvalidIDReference>)newValue);
 				return;
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO:
+				setPlanpro_layoutinfo((PlanPro_Layoutinfo)newValue);
+				return;
 			default:
 				super.eSet(featureID, newValue);
 				return;
@@ -337,6 +401,9 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
 				getWzkInvalidIDReferences().clear();
 				return;
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO:
+				setPlanpro_layoutinfo((PlanPro_Layoutinfo)null);
+				return;
 			default:
 				super.eUnset(featureID);
 				return;
@@ -359,6 +426,8 @@ public class PlanPro_SchnittstelleImpl extends Ur_ObjektImpl implements PlanPro_
 				return lSTZustand != null;
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
 				return wzkInvalidIDReferences != null && !wzkInvalidIDReferences.isEmpty();
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO:
+				return planpro_layoutinfo != null;
 			default:
 				return super.eIsSet(featureID);
 		}

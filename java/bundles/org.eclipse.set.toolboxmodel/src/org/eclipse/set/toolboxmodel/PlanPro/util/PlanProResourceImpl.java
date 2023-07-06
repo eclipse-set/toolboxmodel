@@ -16,8 +16,6 @@ import java.util.Map;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.xmi.XMLResource;
-import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 import org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot;
 
 /**
@@ -27,8 +25,8 @@ import org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot;
  * @see org.eclipse.set.model.temporaryintegration.util.TemporaryintegrationResourceFactoryImpl
  * @generated NOT
  */
-public class PlanProResourceImpl extends XMLResourceImpl {
-	private final ToolboxModelService toolboxModelService;
+public class PlanProResourceImpl extends
+		AbstractResourceImpl<org.eclipse.set.model.model11001.PlanPro.DocumentRoot> {
 	private org.eclipse.set.model.model11001.PlanPro.DocumentRoot sourceModel;
 
 	/**
@@ -41,23 +39,7 @@ public class PlanProResourceImpl extends XMLResourceImpl {
 	 */
 	public PlanProResourceImpl(final URI uri,
 			final ToolboxModelService toolboxModelService) {
-		super(uri);
-		getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA,
-				Boolean.TRUE);
-		getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA,
-				Boolean.TRUE);
-
-		getDefaultSaveOptions().put(XMLResource.OPTION_SCHEMA_LOCATION,
-				Boolean.TRUE);
-
-		getDefaultLoadOptions().put(
-				XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-		getDefaultSaveOptions().put(
-				XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-		getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER,
-				Boolean.TRUE);
-
-		this.toolboxModelService = toolboxModelService;
+		super(uri, toolboxModelService);
 	}
 
 	@Override
@@ -99,6 +81,7 @@ public class PlanProResourceImpl extends XMLResourceImpl {
 
 	}
 
+	@Override
 	public org.eclipse.set.model.model11001.PlanPro.DocumentRoot getSourceModel() {
 		return sourceModel;
 	}

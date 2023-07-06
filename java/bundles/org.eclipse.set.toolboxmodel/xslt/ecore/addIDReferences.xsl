@@ -22,6 +22,7 @@
         <xsl:message>PlanPro_Schnittstelle found.</xsl:message>
         <xsl:copy>
             <xsl:apply-templates select="@*|node()" mode="#current"/>
+            <eStructuralFeatures xsi:type="ecore:EReference" name="planpro_layoutinfo" eType="ecore:EClass Layoutinformationen.ecore#//PlanPro_Layoutinfo" containment="true" resolveProxies="false"/>
             <eStructuralFeatures xsi:type="ecore:EReference" name="wzkInvalidIDReferences" upperBound="-1" eType="#//WzkInvalidIDReference" containment="true"/>
         </xsl:copy>
         <eClassifiers xsi:type="ecore:EClass" name="WzkInvalidIDReference">
@@ -31,5 +32,12 @@
             <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
             <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
         </eClassifiers>
+    </xsl:template>
+    <xsl:template match="eClassifiers[@name = 'PlanPro_Layoutinfo']" mode="addIDReferences">
+        <xsl:message>PlanPro_Layoutinfo found.</xsl:message>
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+            <eStructuralFeatures xsi:type="ecore:EReference" name="wzkInvalidIDReferences" upperBound="-1" eType="ecore:EClass PlanPro.ecore#//WzkInvalidIDReference" containment="true"/>
+        </xsl:copy>
     </xsl:template>
 </xsl:stylesheet>

@@ -4,6 +4,7 @@ package org.eclipse.set.toolboxmodel.PlanPro;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.PlanPro_Layoutinfo;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,6 +23,7 @@ import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getLSTPlanung <em>LST Planung</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getLSTZustand <em>LST Zustand</em>}</li>
  *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getWzkInvalidIDReferences <em>Wzk Invalid ID References</em>}</li>
+ *   <li>{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getPlanpro_layoutinfo <em>Planpro layoutinfo</em>}</li>
  * </ul>
  *
  * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getPlanPro_Schnittstelle()
@@ -115,5 +117,27 @@ public interface PlanPro_Schnittstelle extends Ur_Objekt {
 	 * @generated
 	 */
 	EList<WzkInvalidIDReference> getWzkInvalidIDReferences();
+
+	/**
+	 * Returns the value of the '<em><b>Planpro layoutinfo</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Planpro layoutinfo</em>' containment reference.
+	 * @see #setPlanpro_layoutinfo(PlanPro_Layoutinfo)
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanProPackage#getPlanPro_Schnittstelle_Planpro_layoutinfo()
+	 * @model containment="true"
+	 * @generated
+	 */
+	PlanPro_Layoutinfo getPlanpro_layoutinfo();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getPlanpro_layoutinfo <em>Planpro layoutinfo</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Planpro layoutinfo</em>' containment reference.
+	 * @see #getPlanpro_layoutinfo()
+	 * @generated
+	 */
+	void setPlanpro_layoutinfo(PlanPro_Layoutinfo value);
 
 } // PlanPro_Schnittstelle

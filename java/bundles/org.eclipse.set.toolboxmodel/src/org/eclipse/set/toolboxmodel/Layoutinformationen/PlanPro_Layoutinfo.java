@@ -11,6 +11,7 @@ package org.eclipse.set.toolboxmodel.Layoutinformationen;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
+import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 
 /**
  * <!-- begin-user-doc -->

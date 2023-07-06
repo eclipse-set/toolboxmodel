@@ -4086,6 +4086,16 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getPlanPro_Schnittstelle_Planpro_layoutinfo() {
+        return (EReference)getPlanPro_Schnittstelle().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getWzkInvalidIDReference() {
 		if (wzkInvalidIDReferenceEClass == null) {
 			wzkInvalidIDReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(PlanProPackage.eNS_URI).getEClassifiers().get(77);
@@ -6048,7 +6058,7 @@ public class PlanProPackageImpl extends EPackageImpl implements PlanProPackage {
 	private boolean isLoaded = false;
 
 	/**
-	 * Laods the package and any sub-packages from their serialized form.
+	 * Loads the package and any sub-packages from their serialized form.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

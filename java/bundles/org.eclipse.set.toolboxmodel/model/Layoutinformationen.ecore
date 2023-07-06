@@ -958,6 +958,13 @@
             <details key="name" value="Lageplan_Zustand"/>
          </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xmlns:func="localhost/function"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xsi:type="ecore:EReference"
+                            name="wzkInvalidIDReferences"
+                            upperBound="-1"
+                            eType="ecore:EClass PlanPro.ecore#//WzkInvalidIDReference"
+                            containment="true"/>
    </eClassifiers>
    <eClassifiers xsi:type="ecore:EDataType"
                   name="Polygonzug_Ausrichtung_Type"

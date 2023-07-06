@@ -42,8 +42,7 @@ public class ToolboxIDResolver {
 				.getWzkInvalidIDReferences();
 
 		final List<WzkInvalidIDReference> resolved = refs.stream()
-				.filter(reference -> resolver.resolveIDReference(reference))
-				.toList();
+				.filter(resolver::resolveIDReference).toList();
 		refs.removeAll(resolved);
 	}
 

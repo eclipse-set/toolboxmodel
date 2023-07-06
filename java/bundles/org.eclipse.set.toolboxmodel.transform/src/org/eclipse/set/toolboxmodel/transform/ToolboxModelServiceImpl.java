@@ -8,6 +8,7 @@
  */
 package org.eclipse.set.toolboxmodel.transform;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.PlanPro_Layoutinfo;
 import org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle;
 import org.eclipse.set.toolboxmodel.PlanPro.util.ToolboxModelService;
@@ -48,4 +49,22 @@ public class ToolboxModelServiceImpl implements ToolboxModelService {
 		return planProToToolbox.transform(planpro);
 	}
 
+	@Override
+	public org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot loadPlanProLayout(
+			final org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot layoutInfo) {
+		return planProToToolbox.transform(layoutInfo);
+	}
+
+	@Override
+	public PlanPro_Layoutinfo loadPlanProLayout(
+			final org.eclipse.set.model.model11001.Layoutinformationen.PlanPro_Layoutinfo layoutInfo) {
+		return planProToToolbox.transform(layoutInfo);
+	}
+
+	@Override
+	public org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot saveLayoutModel(
+			final org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot layoutInfo) {
+		return toolboxToPlanPro.transformLayout(layoutInfo,
+				planProToToolbox.getToolboxRoot());
+	}
 }

@@ -29,6 +29,7 @@ import org.eclipse.set.toolboxmodel.Layoutinformationen.Lageplan_Blattschnitt;
 import org.eclipse.set.toolboxmodel.Layoutinformationen.Lageplan_Zustand;
 import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenPackage;
 import org.eclipse.set.toolboxmodel.Layoutinformationen.PlanPro_Layoutinfo;
+import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 
 /**
  * <!-- begin-user-doc -->
