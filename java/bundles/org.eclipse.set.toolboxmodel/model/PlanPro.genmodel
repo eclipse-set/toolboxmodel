@@ -170,7 +170,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Layoutinformationen.ecore#//PlanPro_Layoutinfo/lageplan"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Layoutinformationen.ecore#//PlanPro_Layoutinfo/lageplanBlattschnitt"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Layoutinformationen.ecore#//PlanPro_Layoutinfo/lageplanZustand"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Layoutinformationen.ecore#//PlanPro_Layoutinfo/wzkInvalidIDReferences"/>
     </genClasses>
     <genClasses ecoreClass="Layoutinformationen.ecore#//Polygonzug_Ausrichtung_TypeClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Layoutinformationen.ecore#//Polygonzug_Ausrichtung_TypeClass/wert"/>

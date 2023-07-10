@@ -33,11 +33,4 @@
             <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
         </eClassifiers>
     </xsl:template>
-    <xsl:template match="eClassifiers[@name = 'PlanPro_Layoutinfo']" mode="addIDReferences">
-        <xsl:message>PlanPro_Layoutinfo found.</xsl:message>
-        <xsl:copy>
-            <xsl:apply-templates select="@*|node()" mode="#current"/>
-            <eStructuralFeatures xsi:type="ecore:EReference" name="wzkInvalidIDReferences" upperBound="-1" eType="ecore:EClass PlanPro.ecore#//WzkInvalidIDReference" containment="true"/>
-        </xsl:copy>
-    </xsl:template>
 </xsl:stylesheet>
