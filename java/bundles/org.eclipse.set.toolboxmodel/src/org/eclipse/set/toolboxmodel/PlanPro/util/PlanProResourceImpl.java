@@ -16,6 +16,8 @@ import java.util.Map;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot;
 
 /**
@@ -25,9 +27,10 @@ import org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot;
  * @see org.eclipse.set.model.temporaryintegration.util.TemporaryintegrationResourceFactoryImpl
  * @generated NOT
  */
-public class PlanProResourceImpl extends
-		AbstractResourceImpl<org.eclipse.set.model.model11001.PlanPro.DocumentRoot> {
+public class PlanProResourceImpl extends XMIResourceImpl {
 	private org.eclipse.set.model.model11001.PlanPro.DocumentRoot sourceModel;
+	private org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot layoutModel;
+	private final ToolboxModelService toolboxModelService;
 
 	/**
 	 * Creates an instance of the resource. <!-- begin-user-doc --> <!--
@@ -39,7 +42,26 @@ public class PlanProResourceImpl extends
 	 */
 	public PlanProResourceImpl(final URI uri,
 			final ToolboxModelService toolboxModelService) {
-		super(uri, toolboxModelService);
+		super(uri);
+		getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA,
+				Boolean.TRUE);
+		getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA,
+				Boolean.TRUE);
+
+		getDefaultSaveOptions().put(XMLResource.OPTION_SCHEMA_LOCATION,
+				Boolean.TRUE);
+
+		getDefaultLoadOptions().put(
+				XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+		getDefaultSaveOptions().put(
+				XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
+		getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER,
+				Boolean.TRUE);
+		getDefaultLoadOptions().put(
+				XMLResource.OPTION_USE_PACKAGE_NS_URI_AS_LOCATION,
+				Boolean.FALSE);
+		this.toolboxModelService = toolboxModelService;
+
 	}
 
 	@Override
@@ -55,6 +77,10 @@ public class PlanProResourceImpl extends
 					sourceModel = docRoot;
 					EcoreUtil.replace(docRoot,
 							toolboxModelService.loadPlanProModel(docRoot));
+				} else if (content instanceof final org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot layoutRoot) {
+					layoutModel = layoutRoot;
+					EcoreUtil.replace(layoutRoot,
+							toolboxModelService.loadPlanProLayout(layoutRoot));
 				}
 			}
 		}
@@ -73,6 +99,14 @@ public class PlanProResourceImpl extends
 				// Restore internal resource state by swapping back
 				EcoreUtil.replace(sourceModel, docRoot);
 				return;
+			} else if (content instanceof final org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot layoutRoot) {
+				layoutModel = toolboxModelService.saveLayoutModel(layoutRoot);
+				// Swap out the file content before saving
+				EcoreUtil.replace(layoutRoot, layoutModel);
+				super.doSave(outputStream, options);
+				// Restore internal resource state by swapping back
+				EcoreUtil.replace(layoutModel, layoutRoot);
+				return;
 			}
 		}
 
@@ -81,8 +115,11 @@ public class PlanProResourceImpl extends
 
 	}
 
-	@Override
 	public org.eclipse.set.model.model11001.PlanPro.DocumentRoot getSourceModel() {
 		return sourceModel;
+	}
+
+	public org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot getLayoutModel() {
+		return layoutModel;
 	}
 } // TemporaryintegrationResourceImpl
