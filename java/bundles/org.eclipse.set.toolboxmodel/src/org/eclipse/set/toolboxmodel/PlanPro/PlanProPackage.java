@@ -4185,13 +4185,22 @@ public interface PlanProPackage extends EPackage {
 	int PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Planpro layoutinfo</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Plan Pro Schnittstelle</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLAN_PRO_SCHNITTSTELLE_FEATURE_COUNT = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 4;
+	int PLAN_PRO_SCHNITTSTELLE_FEATURE_COUNT = BasisobjektePackage.UR_OBJEKT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Plan Pro Schnittstelle</em>' class.
@@ -9594,6 +9603,17 @@ public interface PlanProPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPlanPro_Schnittstelle_WzkInvalidIDReferences();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getPlanpro_layoutinfo <em>Planpro layoutinfo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Planpro layoutinfo</em>'.
+	 * @see org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle#getPlanpro_layoutinfo()
+	 * @see #getPlanPro_Schnittstelle()
+	 * @generated
+	 */
+	EReference getPlanPro_Schnittstelle_Planpro_layoutinfo();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference <em>Wzk Invalid ID Reference</em>}'.

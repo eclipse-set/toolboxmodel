@@ -1,3 +1,4 @@
+String branchName = env.BRANCH_NAME.replaceAll('/', '%252F')
 pipeline {
   agent {
     kubernetes {
@@ -15,6 +16,27 @@ pipeline {
   }
 
   stages {
+    stage('Update Branch Target') {
+      when {
+        expression { 
+          return BRANCH_NAME != 'main' 
+        }
+      }
+
+      steps {
+          script { 
+          def lastSuccessfulBuildPath = "https://ci.eclipse.org/set/job/Model/job/${branchName}/lastSuccessfulBuild/artifact/java/bundles/org.eclipse.set.model.releng.repository/target/org.eclipse.set.model.repository-2.1.0-SNAPSHOT.zip"
+          downloadFile file: 'org.eclipse.set.model.repository-2.1.0-SNAPSHOT.zip', url: "${lastSuccessfulBuildPath}"
+          
+          if (fileExists('org.eclipse.set.model.repository-2.1.0-SNAPSHOT.zip')) {
+            sh "sed -i 's|https://download.eclipse.org/set/nightly/main/p2/model/|jar:file:///${WORKSPACE}/org.eclipse.set.model.repository-2.1.0-SNAPSHOT.zip!|g' java/bundles/org.eclipse.set.toolboxmodel.releng.target/org.eclipse.set.toolboxmodel.releng.target.target"
+          }
+        }
+        
+        
+      }
+    }
+
     stage('Build') {
       steps {
         container('maven') {

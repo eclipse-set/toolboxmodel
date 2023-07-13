@@ -22,6 +22,7 @@
         <xsl:message>PlanPro_Schnittstelle found.</xsl:message>
         <xsl:copy>
             <xsl:apply-templates select="@*|node()" mode="#current"/>
+            <eStructuralFeatures xsi:type="ecore:EReference" name="planpro_layoutinfo" eType="ecore:EClass Layoutinformationen.ecore#//PlanPro_Layoutinfo" containment="true" resolveProxies="false"/>
             <eStructuralFeatures xsi:type="ecore:EReference" name="wzkInvalidIDReferences" upperBound="-1" eType="#//WzkInvalidIDReference" containment="true"/>
         </xsl:copy>
         <eClassifiers xsi:type="ecore:EClass" name="WzkInvalidIDReference">

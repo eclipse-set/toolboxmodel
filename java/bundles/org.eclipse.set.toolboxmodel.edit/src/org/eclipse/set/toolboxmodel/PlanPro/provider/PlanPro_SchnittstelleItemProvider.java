@@ -25,6 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.set.toolboxmodel.Basisobjekte.provider.Ur_ObjektItemProvider;
 
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenFactory;
 import org.eclipse.set.toolboxmodel.Layoutinformationen.provider.PlanProEditPlugin;
 
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProFactory;
@@ -79,6 +80,7 @@ public class PlanPro_SchnittstelleItemProvider extends Ur_ObjektItemProvider {
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_LSTPlanung());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_LSTZustand());
 			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_WzkInvalidIDReferences());
+			childrenFeatures.add(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_Planpro_layoutinfo());
 		}
 		return childrenFeatures;
 	}
@@ -135,6 +137,7 @@ public class PlanPro_SchnittstelleItemProvider extends Ur_ObjektItemProvider {
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_PLANUNG:
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__LST_ZUSTAND:
 			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__WZK_INVALID_ID_REFERENCES:
+			case PlanProPackage.PLAN_PRO_SCHNITTSTELLE__PLANPRO_LAYOUTINFO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 			default:
@@ -173,6 +176,11 @@ public class PlanPro_SchnittstelleItemProvider extends Ur_ObjektItemProvider {
 			(createChildParameter
 				(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_WzkInvalidIDReferences(),
 				 PlanProFactory.eINSTANCE.createWzkInvalidIDReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PlanProPackage.eINSTANCE.getPlanPro_Schnittstelle_Planpro_layoutinfo(),
+				 LayoutinformationenFactory.eINSTANCE.createPlanPro_Layoutinfo()));
 	}
 
 	/**

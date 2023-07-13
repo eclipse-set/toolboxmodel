@@ -27,13 +27,15 @@ class GuidCache {
 		Single,
 		Initial,
 		Planning,
-		Global
+		Global,
+		Layout
 	}
 
 	final Map<String, EObject> globalGuidToObjectMap = new HashMap()
 	final Map<String, EObject> singleGuidToObjectMap = new HashMap()
 	final Map<String, EObject> initialGuidToObjectMap = new HashMap()
 	final Map<String, EObject> planningGuidToObjectMap = new HashMap()
+	final Map<String, EObject> layoutGuidToObjectMap = new HashMap()
 
 	/**
 	 * @param guid the GUID
@@ -51,6 +53,8 @@ class GuidCache {
 				return singleGuidToObjectMap.get(guid)
 			case ContainerType.Global:
 				return globalGuidToObjectMap.get(guid)
+			case ContainerType.Layout:
+				return layoutGuidToObjectMap.get(guid)
 			default:
 				return null
 		}
@@ -66,6 +70,7 @@ class GuidCache {
 		prepare(planProSchnittstelle, ContainerType.Single, singleGuidToObjectMap);
 		prepare(planProSchnittstelle, ContainerType.Initial, initialGuidToObjectMap);
 		prepare(planProSchnittstelle, ContainerType.Planning, planningGuidToObjectMap);
+		prepare(planProSchnittstelle, ContainerType.Layout, layoutGuidToObjectMap);
 	}
 
 	private def void prepare(PlanPro_Schnittstelle planProSchnittstelle, ContainerType containerType,
@@ -94,6 +99,9 @@ class GuidCache {
 				return planProSchnittstelle?.getLSTPlanung?.fachdaten?.ausgabeFachdaten?.flatMap [
 					#[LSTZustandStart, LSTZustandZiel].flatMap[container?.eContents]
 				]?.filter(Ur_Objekt)
+			}
+			case Layout: {
+				return planProSchnittstelle?.planpro_layoutinfo?.eContents?.filter(Ur_Objekt)
 			}
 		}
 		return null
@@ -126,8 +134,10 @@ class GuidCache {
 		var Ausgabe_Fachdaten ausgabeFachdaten = (lstStateContainer as Ausgabe_Fachdaten)
 		if (ausgabeFachdaten.getLSTZustandStart() === lstState) {
 			return ContainerType::Initial
-		} else {
+		} else if (ausgabeFachdaten.getLSTZustandZiel() === lstState){
 			return ContainerType::Planning
 		}
+		
+		return ContainerType::Layout
 	}
 }

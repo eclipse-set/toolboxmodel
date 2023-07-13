@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.set.model.model11001.BasisTypen.BasisTypenPackage;
 import org.eclipse.set.model.model11001.BasisTypen.ID_Bearbeitungsvermerk_TypeClass;
 import org.eclipse.set.model.model11001.BasisTypen.Zeiger_TypeClass;
+import org.eclipse.set.model.model11001.Layoutinformationen.PlanPro_Layoutinfo;
 import org.eclipse.set.model.model11001.PlanPro.DocumentRoot;
 import org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle;
 import org.eclipse.set.toolboxmodel.Basisobjekte.Ur_Objekt;
@@ -31,6 +32,8 @@ import org.eclipse.set.toolboxmodel.Signalbegriffe_Ril_301.Signalbegriffe_Ril_30
 public class ToolboxToPlanProTransformation
 		extends AbstractEObjectTransformation {
 	private PlanPro_Schnittstelle planProRoot;
+
+	private PlanPro_Layoutinfo layoutRoot;
 
 	@Override
 	protected String getTargetNamespace(final String sourceNamespace) {
@@ -148,7 +151,7 @@ public class ToolboxToPlanProTransformation
 				toolboxRoot);
 		planProRoot = docRoot.getPlanProSchnittstelle();
 		toolboxRoot.getPlanProSchnittstelle().getWzkInvalidIDReferences()
-				.forEach(this::restoreIDReference);
+				.forEach(e -> restoreIDReference(e, planProRoot));
 		return docRoot;
 	}
 
@@ -163,26 +166,68 @@ public class ToolboxToPlanProTransformation
 			final org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle toolboxRoot) {
 		planProRoot = transform(toolboxRoot);
 		toolboxRoot.getWzkInvalidIDReferences()
-				.forEach(this::restoreIDReference);
+				.forEach(e -> restoreIDReference(e, planProRoot));
 		return planProRoot;
 	}
 
-	private EObject getRootContainer(final EObject source) {
-		if (source instanceof DocumentRoot) {
-			return source;
+	/**
+	 * Transforms a Toolbox model to a PlanPro Layoutinformationen model
+	 * 
+	 * @param layoutInfo
+	 *            the DocumentRoot for the Toolbox layoutinformationen model
+	 * @param toolboxRoot
+	 *            the DocumentRoot for the Toolbox model
+	 * @return the planpro model
+	 */
+	public org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot transformLayout(
+			final org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot layoutInfo,
+			final org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot toolboxRoot) {
+		// PlanPro_LayoutInfo is containment,
+		// after reference to PlanPro_Schnitstelle will
+		// the PlanPro_LayoutInfo Object in DocumentRoot of Layoutinformationen
+		// null
+		if (layoutInfo.getPlanProLayoutinfo() == null) {
+			layoutInfo.setPlanProLayoutinfo(toolboxRoot
+					.getPlanProSchnittstelle().getPlanpro_layoutinfo());
+		} else {
+			EcoreUtil.replace(layoutInfo.getPlanProLayoutinfo(), toolboxRoot
+					.getPlanProSchnittstelle().getPlanpro_layoutinfo());
 		}
-		if (source instanceof PlanPro_Schnittstelle) {
-			return source;
-		}
-		return getRootContainer(source.eContainer());
+
+		final org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot docRoot = (org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot) super.transform(
+				layoutInfo);
+		layoutRoot = docRoot.getPlanProLayoutinfo();
+		toolboxRoot.getPlanProSchnittstelle().getWzkInvalidIDReferences()
+				.forEach(e -> restoreIDReference(e, layoutRoot));
+		return docRoot;
+
 	}
 
-	private void restoreIDReference(final WzkInvalidIDReference reference) {
+	private <T> EObject getRootContainer(final EObject source,
+			final Class<T> contanierClass) {
+		if (source.getClass().isAssignableFrom(contanierClass)) {
+			return source;
+		}
+		if (source.eContainer() == null) {
+			return null;
+		}
+		return getRootContainer(source.eContainer(), contanierClass);
+	}
+
+	private <T extends EObject> void restoreIDReference(
+			final WzkInvalidIDReference reference, final T docRoot) {
 		// Find the root container of the source PlanPro model that was
 		// initially used to create the toolbox model
-		final EObject oldRoot = getRootContainer(reference.getSource());
+		final EObject oldRoot = getRootContainer(reference.getSource(),
+				docRoot.getClass());
+		// It exists two DocumentRoot (PlanPro and Layoutinformation),
+		// but have only one WzkInvalidIDReference list, for this reasons,
+		// the oldRoot can be null
+		if (oldRoot == null) {
+			return;
+		}
 		// Find the new object at the same relative URI in the new PlanPro model
-		final EObject newRoot = getRootContainer(planProRoot);
+		final EObject newRoot = getRootContainer(docRoot, docRoot.getClass());
 		final String relativeURI = EcoreUtil.getRelativeURIFragmentPath(oldRoot,
 				reference.getSource());
 		final EObject newObject = EcoreUtil.getEObject(newRoot, relativeURI);

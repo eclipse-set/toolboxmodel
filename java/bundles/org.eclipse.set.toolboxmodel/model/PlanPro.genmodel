@@ -1741,6 +1741,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PlanPro.ecore#//PlanPro_Schnittstelle/lSTPlanung"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PlanPro.ecore#//PlanPro_Schnittstelle/lSTZustand"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PlanPro.ecore#//PlanPro_Schnittstelle/wzkInvalidIDReferences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PlanPro.ecore#//PlanPro_Schnittstelle/planpro_layoutinfo"/>
     </genClasses>
     <genClasses ecoreClass="PlanPro.ecore#//WzkInvalidIDReference">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PlanPro.ecore#//WzkInvalidIDReference/guid"/>

@@ -16553,7 +16553,7 @@ public class Balisentechnik_ETCSPackageImpl extends EPackageImpl implements Bali
 	private boolean isLoaded = false;
 
 	/**
-	 * Laods the package and any sub-packages from their serialized form.
+	 * Loads the package and any sub-packages from their serialized form.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

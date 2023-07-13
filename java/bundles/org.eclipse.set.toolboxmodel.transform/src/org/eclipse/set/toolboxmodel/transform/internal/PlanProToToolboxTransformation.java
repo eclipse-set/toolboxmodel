@@ -19,6 +19,8 @@ import org.eclipse.set.model.model11001.BasisTypen.ID_Bearbeitungsvermerk_TypeCl
 import org.eclipse.set.model.model11001.BasisTypen.Zeiger_TypeClass;
 import org.eclipse.set.model.model11001.PlanPro.DocumentRoot;
 import org.eclipse.set.model.model11001.PlanPro.PlanPro_Schnittstelle;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.LayoutinformationenFactory;
+import org.eclipse.set.toolboxmodel.Layoutinformationen.PlanPro_Layoutinfo;
 import org.eclipse.set.toolboxmodel.PlanPro.PlanProFactory;
 import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 
@@ -31,6 +33,15 @@ import org.eclipse.set.toolboxmodel.PlanPro.WzkInvalidIDReference;
 public class PlanProToToolboxTransformation
 		extends AbstractEObjectTransformation {
 	private List<WzkInvalidIDReference> pendingIDReferences = new ArrayList<>();
+	org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot toolboxRoot;
+	org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot layoutRoot;
+
+	/**
+	 * @return toolboxmodel planrpo root
+	 */
+	public org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot getToolboxRoot() {
+		return toolboxRoot;
+	}
 
 	/**
 	 * Transforms a PlanPro model to a Toolbox model. This will not resolve ID
@@ -43,12 +54,11 @@ public class PlanProToToolboxTransformation
 	public org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot transform(
 			final DocumentRoot inputModel) {
 		pendingIDReferences = new ArrayList<>();
-		final org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot toolboxRoot = (org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot) super.transform(
+		toolboxRoot = (org.eclipse.set.toolboxmodel.PlanPro.DocumentRoot) super.transform(
 				inputModel);
-		toolboxRoot.getPlanProSchnittstelle().getWzkInvalidIDReferences()
-				.addAll(pendingIDReferences);
-		ToolboxIDResolver
-				.resolveIDReferences(toolboxRoot.getPlanProSchnittstelle());
+		addLayoutToPlanPro(toolboxRoot.getPlanProSchnittstelle());
+		addIDReferences(toolboxRoot.getPlanProSchnittstelle(),
+				pendingIDReferences);
 		return toolboxRoot;
 	}
 
@@ -65,10 +75,78 @@ public class PlanProToToolboxTransformation
 		pendingIDReferences = new ArrayList<>();
 		final org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle planproSchnittstelle = (org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle) super.transform(
 				inputModel);
-		planproSchnittstelle.getWzkInvalidIDReferences()
-				.addAll(pendingIDReferences);
-		ToolboxIDResolver.resolveIDReferences(planproSchnittstelle);
+		addLayoutToPlanPro(planproSchnittstelle);
+		addIDReferences(planproSchnittstelle, pendingIDReferences);
+		if (toolboxRoot == null) {
+			toolboxRoot = PlanProFactory.eINSTANCE.createDocumentRoot();
+		}
+		toolboxRoot.setPlanProSchnittstelle(planproSchnittstelle);
 		return planproSchnittstelle;
+	}
+
+	/**
+	 * Transforms a PlanPro layoutinformationen model to a Toolbox model. This
+	 * will not resolve ID references, but instead leave them as null values.
+	 * 
+	 * @param inputLayoutInfo
+	 *            the PlanPro Layoutinformation model
+	 * @return the Toolbox model
+	 */
+	public org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot transform(
+			final org.eclipse.set.model.model11001.Layoutinformationen.DocumentRoot inputLayoutInfo) {
+		pendingIDReferences = new ArrayList<>();
+		layoutRoot = (org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot) super.transform(
+				inputLayoutInfo);
+		if (toolboxRoot != null) {
+			addLayoutToPlanPro(toolboxRoot.getPlanProSchnittstelle());
+			addIDReferences(toolboxRoot.getPlanProSchnittstelle(),
+					pendingIDReferences);
+		}
+		return layoutRoot;
+
+	}
+
+	/**
+	 * Transforms a PlanPro layoutinformationen model to a Toolbox model. This
+	 * will not resolve ID references, but instead leave them as null values.
+	 * 
+	 * @param inputLayoutInfo
+	 *            the PlanPro Layoutinformation model
+	 * @return the Toolbox model
+	 */
+	public PlanPro_Layoutinfo transform(
+			final org.eclipse.set.model.model11001.Layoutinformationen.PlanPro_Layoutinfo inputLayoutInfo) {
+		pendingIDReferences = new ArrayList<>();
+		if (layoutRoot == null) {
+			layoutRoot = LayoutinformationenFactory.eINSTANCE
+					.createDocumentRoot();
+		}
+		final PlanPro_Layoutinfo layoutInfo = (PlanPro_Layoutinfo) super.transform(
+				inputLayoutInfo);
+		layoutRoot.setPlanProLayoutinfo(layoutInfo);
+		if (toolboxRoot != null) {
+			addLayoutToPlanPro(toolboxRoot.getPlanProSchnittstelle());
+			addIDReferences(toolboxRoot.getPlanProSchnittstelle(),
+					pendingIDReferences);
+		}
+		return (PlanPro_Layoutinfo) super.transform(inputLayoutInfo);
+
+	}
+
+	private void addLayoutToPlanPro(
+			final org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle schnitstelle) {
+		if (schnitstelle != null && layoutRoot != null
+				&& layoutRoot.getPlanProLayoutinfo() != null) {
+			schnitstelle
+					.setPlanpro_layoutinfo(layoutRoot.getPlanProLayoutinfo());
+		}
+	}
+
+	private static void addIDReferences(
+			final org.eclipse.set.toolboxmodel.PlanPro.PlanPro_Schnittstelle schnittstelle,
+			final List<WzkInvalidIDReference> idReferences) {
+		schnittstelle.getWzkInvalidIDReferences().addAll(idReferences);
+		ToolboxIDResolver.resolveIDReferences(schnittstelle);
 	}
 
 	@Override

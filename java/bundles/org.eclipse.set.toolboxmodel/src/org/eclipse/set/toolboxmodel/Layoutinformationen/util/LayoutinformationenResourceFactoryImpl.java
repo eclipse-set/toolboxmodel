@@ -8,26 +8,28 @@
  */
 package org.eclipse.set.toolboxmodel.Layoutinformationen.util;
 
+import java.util.function.Supplier;
+
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
-
 import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.set.toolboxmodel.PlanPro.util.ToolboxModelService;
 
 /**
- * <!-- begin-user-doc -->
- * The <b>Resource Factory</b> associated with the package.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> The <b>Resource Factory</b> associated with the
+ * package. <!-- end-user-doc -->
  * @see org.eclipse.set.toolboxmodel.Layoutinformationen.util.LayoutinformationenResourceImpl
  * @generated
  */
-public class LayoutinformationenResourceFactoryImpl extends ResourceFactoryImpl {
+public class LayoutinformationenResourceFactoryImpl
+		extends ResourceFactoryImpl {
+	private Supplier<ToolboxModelService> toolboxModelServiceProvider;
+
 	/**
 	 * Creates an instance of the resource factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	public LayoutinformationenResourceFactoryImpl() {
@@ -35,9 +37,20 @@ public class LayoutinformationenResourceFactoryImpl extends ResourceFactoryImpl 
 	}
 
 	/**
+	 * Sets the supplier for ToolboxModelServices
+	 * 
+	 * @param provider
+	 *            the provider
+	 */
+	public void setToolboxModelServiceProvider(
+			final Supplier<ToolboxModelService> provider) {
+		this.toolboxModelServiceProvider = provider;
+	}
+
+	/**
 	 * Creates an instance of the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -55,4 +68,4 @@ public class LayoutinformationenResourceFactoryImpl extends ResourceFactoryImpl 
 		return result;
 	}
 
-} //LayoutinformationenResourceFactoryImpl
+} // LayoutinformationenResourceFactoryImpl

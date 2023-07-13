@@ -10,7 +10,9 @@ Require-Bundle: org.eclipse.emf.ecore.xmi,
  org.eclipse.set.toolboxmodel,
  org.eclipse.set.toolboxmodel.transform,
  junit-platform-commons,
- junit-jupiter-api
-Import-Package: org.eclipse.set.model.model11001.PlanPro,
+ junit-jupiter-api,
+ junit-jupiter-params
+Import-Package: org.eclipse.set.model.model11001.Layoutinformationen,
+ org.eclipse.set.model.model11001.PlanPro,
  org.eclipse.set.model.model11001.PlanPro.util,
  org.eclipse.set.model.model11001.Signalbegriffe_Ril_301

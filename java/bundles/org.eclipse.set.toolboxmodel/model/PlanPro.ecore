@@ -4730,6 +4730,13 @@
                             upperBound="-1"
                             eType="#//WzkInvalidIDReference"
                             containment="true"/>
+      <eStructuralFeatures xmlns:func="localhost/function"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xsi:type="ecore:EReference"
+                            name="planpro_layoutinfo"
+                            eType="ecore:EClass Layoutinformationen.ecore#//PlanPro_Layoutinfo"
+                            containment="true"
+                            resolveProxies="false"/>
    </eClassifiers>
    <eClassifiers xmlns:func="localhost/function"
                   xmlns:xs="http://www.w3.org/2001/XMLSchema"
