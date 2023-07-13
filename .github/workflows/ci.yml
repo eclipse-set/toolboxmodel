@@ -30,18 +30,16 @@ jobs:
       run: mvn -T 1.5C -B clean verify
       env:
         GITHUB_TOKEN: ${{ github.token }}
-        
+
     - name: Publish
       run: mvn -T 1.5C -B deploy
       if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v3 # v3.1.2
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@f0b5d2433f350eff587831d4ad22cb15aab75866 # v2.8
       if: always()
       with:
-        name: test-results
-        if-no-files-found: warn
-        path: |
+        files: |
           ${{ github.workspace }}/**/surefire-reports/*.xml
