@@ -132,4 +132,11 @@
 		<developerConnection>scm:git:https://github.com/eclipse-set/toolboxmodel</developerConnection>
 	</scm>
 
+	<distributionManagement>
+		<repository>
+			<id>set-github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/eclipse-set/toolboxmodel</url>
+		</repository>
+	</distributionManagement>
 </project>
