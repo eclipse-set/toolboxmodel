@@ -1,0 +1,48 @@
+# This workflow will build the toolbox model and publish it to GitHub Packages
+
+name: Build toolbox model
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      checks: write
+      pull-requests: write
+      
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: temurin
+        server-id: set-github
+        cache: maven
+
+    - name: Set up Maven
+      uses: stCarolas/setup-maven@07fbbe97d97ef44336b7382563d66743297e442f # v4.5
+      with:
+        maven-version: 3.9.3
+
+    - name: Build
+      run: mvn -T 1.5C -B clean verify
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+    - name: Publish
+      run: mvn -T 1.5C -B deploy
+      if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@f0b5d2433f350eff587831d4ad22cb15aab75866 # v2.8
+      if: always()
+      with:
+        files: |
+          ${{ github.workspace }}/**/surefire-reports/*.xml

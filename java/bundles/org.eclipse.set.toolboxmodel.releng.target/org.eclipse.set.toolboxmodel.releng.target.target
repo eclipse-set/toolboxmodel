@@ -12,15 +12,10 @@
       <unit id="org.eclipse.equinox.sdk.feature.group" version="3.23.600.v20221116-1440"/>
       <unit id="org.eclipse.rcp.sdk.id" version="4.26.0.I20221123-1800"/>
       <unit id="com.google.guava" version="30.1.0.v20221112-0806"/>
-      <unit id="junit-jupiter-api" version="5.9.1" />
-      <unit id="junit-jupiter-engine" version="5.9.1" />
+      <unit id="junit-jupiter-api" version="5.9.1"/>
+      <unit id="junit-jupiter-engine" version="5.9.1"/>
       <unit id="org.apache.commons.io" version="2.8.0.v20210415-0900"/>
       <repository location="https://download.eclipse.org/releases/2022-12/"/>
-    </location>
-    <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-      <unit id="org.eclipse.set.model.model11001.feature.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.set.model.model11001.feature.source.feature.group" version="0.0.0"/>
-      <repository location="https://download.eclipse.org/set/nightly/main/p2/model/"/>
     </location>
     <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="org.eclipse.xtend.lib" version="2.27.0.v20220530-0353"/>
@@ -32,5 +27,39 @@
       <unit id="org.eclipse.xtext.xbase.lib.source" version="2.27.0.v20220530-0353"/>
       <repository location="https://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.27.0/"/>
     </location>
+	  <location includeDependencyDepth="none" includeDependencyScopes="compile" includeSource="true" label="Eclipse SET model" missingManifest="generate" type="Maven">
+		  <dependencies>
+			  <dependency>
+				  <groupId>org.eclipse.set</groupId>
+				  <artifactId>org.eclipse.set.model.model11001.edit</artifactId>
+				  <version>2.1.0-SNAPSHOT</version>
+				  <type>jar</type>
+			  </dependency>
+			  <dependency>
+				  <groupId>org.eclipse.set</groupId>
+				  <artifactId>org.eclipse.set.model.model11001.editor</artifactId>
+				  <version>2.1.0-SNAPSHOT</version>
+				  <type>jar</type>
+			  </dependency>
+			  <dependency>
+				  <groupId>org.eclipse.set</groupId>
+				  <artifactId>org.eclipse.set.model.model11001</artifactId>
+				  <version>2.1.0-SNAPSHOT</version>
+				  <type>jar</type>
+			  </dependency>
+			  <dependency>
+				  <groupId>org.eclipse.set</groupId>
+				  <artifactId>org.eclipse.set.model.modelservice</artifactId>
+				  <version>2.1.0-SNAPSHOT</version>
+				  <type>jar</type>
+			  </dependency>
+		  </dependencies>
+		  <repositories>
+			  <repository>
+				  <id>set-github</id>
+				  <url>https://maven.pkg.github.com/eclipse-set/model</url>
+			  </repository>
+		  </repositories>
+	  </location>
   </locations>
 </target>
