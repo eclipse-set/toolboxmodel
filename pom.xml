@@ -17,8 +17,6 @@
 		<module>java/bundles/org.eclipse.set.toolboxmodel</module>
 		<module>java/bundles/org.eclipse.set.toolboxmodel.edit</module>
 		<module>java/bundles/org.eclipse.set.toolboxmodel.editor</module>
-		<module>java/bundles/org.eclipse.set.toolboxmodel.feature</module>
-		<module>java/bundles/org.eclipse.set.toolboxmodel.repository</module>
 		<module>java/bundles/org.eclipse.set.toolboxmodel.transform</module>
 		<module>java/bundles/org.eclipse.set.toolboxmodel.transform.test</module>
 		<module>java/bundles/org.eclipse.set.toolboxmodel.releng.target</module>

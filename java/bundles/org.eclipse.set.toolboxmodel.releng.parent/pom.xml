@@ -9,15 +9,21 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<cbi-version>1.3.2</cbi-version>
-		<tycho-version>3.0.3</tycho-version>
-		<tycho-extras-version>3.0.3</tycho-extras-version>
+		<tycho-version>4.0.0</tycho-version>
+		<tycho-extras-version>4.0.0</tycho-extras-version>
+		<deploy-plugin-version>3.1.1</deploy-plugin-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyyMMdd_HHmmssZ</maven.build.timestamp.format>
 	</properties>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>${deploy-plugin-version}</version>
+			</plugin>
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-compiler-plugin</artifactId>
@@ -36,25 +42,6 @@
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-packaging-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<updatePomFile>false</updatePomFile>
-					<skipPomGeneration>true</skipPomGeneration>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-p2-publisher-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<profiles>JavaSE-17</profiles>
-				</configuration>
 			</plugin>
 
 			<plugin>
@@ -123,19 +110,6 @@
 			</plugin>
 
 			<plugin>
-				<groupId>com.itemis.maven.plugins</groupId>
-				<artifactId>unleash-maven-plugin</artifactId>
-				<version>2.2.2</version>
-				<dependencies>
-					<dependency>
-						<groupId>com.itemis.maven.plugins</groupId>
-						<artifactId>unleash-scm-provider-git</artifactId>
-						<version>2.3.0</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-
-			<plugin>
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
 				<version>2.27.0</version>
@@ -154,39 +128,8 @@
 	</build>
 
 	<scm>
-		<connection>scm:git:https://gitlab.eclipse.org/eclipse/set/toolbox-model</connection>
-		<developerConnection>scm:git:https://gitlab.eclipse.org/eclipse/set/toolbox-model</developerConnection>
+		<connection>scm:git:https://github.com/eclipse-set/toolboxmodel</connection>
+		<developerConnection>scm:git:https://github.com/eclipse-set/toolboxmodel</developerConnection>
 	</scm>
-
-	<profiles>
-		<profile>
-			<id>sign</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.eclipse.cbi.maven.plugins</groupId>
-						<artifactId>eclipse-jarsigner-plugin</artifactId>
-						<version>${cbi-version}</version>
-						<executions>
-							<execution>
-								<id>sign</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>cbi</id>
-			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
-		</pluginRepository>
-	</pluginRepositories>
 
 </project>
