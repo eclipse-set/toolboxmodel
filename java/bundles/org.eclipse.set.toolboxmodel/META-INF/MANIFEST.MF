@@ -94,8 +94,7 @@ Export-Package: org.eclipse.set.toolboxmodel.ATO,
  org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage,
  org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.impl,
  org.eclipse.set.toolboxmodel.Zugnummernmeldeanlage.util,
- org.eclipse.set.toolboxmodel.modelservice,
- org.eclipse.set.toolboxmodel.transform
+ org.eclipse.set.toolboxmodel.modelservice
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport
