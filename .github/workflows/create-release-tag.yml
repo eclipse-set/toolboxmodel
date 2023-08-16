@@ -19,4 +19,4 @@ jobs:
       contents: write
     with:
       version: ${{ inputs.version }}
-      target: "java/bundles/org.eclipse.set.toolboxmodel.releng.target/org.eclipse.set.toolboxmodel.releng.target.target"
+      target: "java/org.eclipse.set.toolboxmodel.releng.target/org.eclipse.set.toolboxmodel.releng.target.target"
