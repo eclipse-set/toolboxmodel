@@ -46,3 +46,11 @@ jobs:
       with:
         files: |
           ${{ github.workspace }}/**/surefire-reports/*.xml
+
+    - name: Trigger SET
+      if: github.ref == 'refs/heads/main'
+      uses: peter-evans/repository-dispatch@26b39ed245ab8f31526069329e112ab2fb224588 # v2.1.1
+      with:
+        token: ${{ secrets.GH_BOT_TOKEN  }}
+        repository: eclipse-set/set
+        event-type: "Rebuild with toolboxmodel update"
