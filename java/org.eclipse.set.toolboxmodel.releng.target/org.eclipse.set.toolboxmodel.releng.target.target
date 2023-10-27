@@ -27,39 +27,39 @@
       <unit id="org.eclipse.xtext.xbase.lib.source" version="2.27.0.v20220530-0353"/>
       <repository location="https://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.27.0/"/>
     </location>
-	  <location includeDependencyDepth="none" includeDependencyScopes="compile" includeSource="true" label="Eclipse SET model" missingManifest="generate" type="Maven">
-		  <dependencies>
-			  <dependency>
-				  <groupId>org.eclipse.set</groupId>
-				  <artifactId>org.eclipse.set.model.model11001.edit</artifactId>
-				  <version>2.1.0-SNAPSHOT</version>
-				  <type>jar</type>
-			  </dependency>
-			  <dependency>
-				  <groupId>org.eclipse.set</groupId>
-				  <artifactId>org.eclipse.set.model.model11001.editor</artifactId>
-				  <version>2.1.0-SNAPSHOT</version>
-				  <type>jar</type>
-			  </dependency>
-			  <dependency>
-				  <groupId>org.eclipse.set</groupId>
-				  <artifactId>org.eclipse.set.model.model11001</artifactId>
-				  <version>2.1.0-SNAPSHOT</version>
-				  <type>jar</type>
-			  </dependency>
-			  <dependency>
-				  <groupId>org.eclipse.set</groupId>
-				  <artifactId>org.eclipse.set.model.modelservice</artifactId>
-				  <version>2.1.0-SNAPSHOT</version>
-				  <type>jar</type>
-			  </dependency>
-		  </dependencies>
-		  <repositories>
-			  <repository>
-				  <id>set-github</id>
-				  <url>https://maven.pkg.github.com/eclipse-set/model</url>
-			  </repository>
-		  </repositories>
-	  </location>
+    <location includeDependencyDepth="none" includeDependencyScopes="compile" includeSource="true" label="Eclipse SET model" missingManifest="generate" type="Maven">
+      <dependencies>
+        <dependency>
+          <groupId>org.eclipse.set</groupId>
+          <artifactId>org.eclipse.set.model.model11001.edit</artifactId>
+          <version>2.1.0</version>
+          <type>jar</type>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.set</groupId>
+          <artifactId>org.eclipse.set.model.model11001.editor</artifactId>
+          <version>2.1.0</version>
+          <type>jar</type>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.set</groupId>
+          <artifactId>org.eclipse.set.model.model11001</artifactId>
+          <version>2.1.0</version>
+          <type>jar</type>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.set</groupId>
+          <artifactId>org.eclipse.set.model.modelservice</artifactId>
+          <version>2.1.0</version>
+          <type>jar</type>
+        </dependency>
+      </dependencies>
+      <repositories>
+        <repository>
+          <id>set-github</id>
+          <url>https://maven.pkg.github.com/eclipse-set/model</url>
+        </repository>
+      </repositories>
+    </location>
   </locations>
 </target>
