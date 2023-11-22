@@ -8,6 +8,8 @@
  */
 package org.eclipse.set.toolboxmodel.transform.internal;
 
+import java.util.function.Consumer;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -91,51 +93,40 @@ public class ToolboxToPlanProTransformation
 			final EList<EObject> list = (EList<EObject>) target.eGet(targetRef);
 			@SuppressWarnings("unchecked")
 			final EList<Ur_Objekt> sourceList = (EList<Ur_Objekt>) sourceValue;
-			sourceList.forEach(entry -> {
-				if (referenceType.equals(BasisTypenPackage.eINSTANCE
-						.getID_Bearbeitungsvermerk_TypeClass())) {
-					final ID_Bearbeitungsvermerk_TypeClass pointer = (ID_Bearbeitungsvermerk_TypeClass) EcoreUtil
-							.create(referenceType);
-					pointer.setWert(entry.getIdentitaet().getWert());
-					list.add(pointer);
-
-				} else {
-
-					final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
-							.create(referenceType);
-					pointer.setWert(entry.getIdentitaet().getWert());
-					list.add(pointer);
-				}
-			});
+			sourceList.forEach(
+					entry -> list.add(createPointer(referenceType, entry)));
 		} else {
 			// Simple reference, find the GUID of the source object
 			final Ur_Objekt sourceObject = (Ur_Objekt) sourceValue;
-			if (referenceType.equals(BasisTypenPackage.eINSTANCE
-					.getID_Bearbeitungsvermerk_TypeClass())) {
+			final EObject pointer = createPointer(referenceType, sourceObject);
+			target.eSet(targetRef, pointer);
+		}
+	}
 
-				final ID_Bearbeitungsvermerk_TypeClass pointer = (ID_Bearbeitungsvermerk_TypeClass) EcoreUtil
-						.create(referenceType);
-				if (sourceObject == null) {
-					// If the value is null, this is a nil reference
-					pointer.setWert(null);
-				} else {
-					pointer.setWert(sourceObject.getIdentitaet().getWert());
-				}
-				target.eSet(targetRef, pointer);
-
-			} else {
-				final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
-						.create(referenceType);
-				if (sourceObject == null) {
-					// If the value is null, this is a nil reference
-					pointer.setWert(null);
-				} else {
-					pointer.setWert(sourceObject.getIdentitaet().getWert());
-				}
-				target.eSet(targetRef, pointer);
-			}
+	private static EObject createPointer(final EClass refType,
+			final Ur_Objekt sourceObject) {
+		if (refType.equals(BasisTypenPackage.eINSTANCE
+				.getID_Bearbeitungsvermerk_TypeClass())) {
+			final ID_Bearbeitungsvermerk_TypeClass pointer = (ID_Bearbeitungsvermerk_TypeClass) EcoreUtil
+					.create(refType);
+			setPointerID(pointer::setWert, sourceObject);
+			return pointer;
 		}
 
+		final Zeiger_TypeClass pointer = (Zeiger_TypeClass) EcoreUtil
+				.create(refType);
+		setPointerID(pointer::setWert, sourceObject);
+		return pointer;
+	}
+
+	private static void setPointerID(final Consumer<String> setPointerFunction,
+			final Ur_Objekt sourceObject) {
+		if (sourceObject == null) {
+			// If the value is null, this is a nil reference
+			setPointerFunction.accept(null);
+		} else {
+			setPointerFunction.accept(sourceObject.getIdentitaet().getWert());
+		}
 	}
 
 	/**
