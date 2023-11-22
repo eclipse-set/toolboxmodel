@@ -50,6 +50,7 @@ public class PlanProResourceImpl extends XMIResourceImpl {
 
 		getDefaultSaveOptions().put(XMLResource.OPTION_SCHEMA_LOCATION,
 				Boolean.TRUE);
+		getDefaultSaveOptions().put(OPTION_SUPPRESS_XMI, Boolean.TRUE);
 
 		getDefaultLoadOptions().put(
 				XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
@@ -101,6 +102,7 @@ public class PlanProResourceImpl extends XMIResourceImpl {
 				return;
 			} else if (content instanceof final org.eclipse.set.toolboxmodel.Layoutinformationen.DocumentRoot layoutRoot) {
 				layoutModel = toolboxModelService.saveLayoutModel(layoutRoot);
+
 				// Swap out the file content before saving
 				EcoreUtil.replace(layoutRoot, layoutModel);
 				super.doSave(outputStream, options);
