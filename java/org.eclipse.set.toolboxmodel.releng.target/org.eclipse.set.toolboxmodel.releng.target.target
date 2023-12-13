@@ -18,14 +18,14 @@
       <repository location="https://download.eclipse.org/releases/2022-12/"/>
     </location>
     <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-      <unit id="org.eclipse.xtend.lib" version="2.27.0.v20220530-0353"/>
-      <unit id="org.eclipse.xtend.lib.macro" version="2.27.0.v20220530-0353"/>
-      <unit id="org.eclipse.xtend.lib.macro.source" version="2.27.0.v20220530-0353"/>
-      <unit id="org.eclipse.xtend.lib.source" version="2.27.0.v20220530-0353"/>
-      <unit id="org.eclipse.xtend.sdk.feature.group" version="2.27.0.v20220530-0508"/>
-      <unit id="org.eclipse.xtext.xbase.lib" version="2.27.0.v20220530-0353"/>
-      <unit id="org.eclipse.xtext.xbase.lib.source" version="2.27.0.v20220530-0353"/>
-      <repository location="https://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.27.0/"/>
+      <unit id="org.eclipse.xtend.lib" version="2.32.0.v20230827-1315"/>
+      <unit id="org.eclipse.xtend.lib.macro" version="2.32.0.v20230827-1315"/>
+      <unit id="org.eclipse.xtend.lib.macro.source" version="2.32.0.v20230827-1315"/>
+      <unit id="org.eclipse.xtend.lib.source" version="2.32.0.v20230827-1315"/>
+      <unit id="org.eclipse.xtend.sdk.feature.group" version="2.32.0.v20230827-1315"/>
+      <unit id="org.eclipse.xtext.xbase.lib" version="2.32.0.v20230827-1315"/>
+      <unit id="org.eclipse.xtext.xbase.lib.source" version="2.32.0.v20230827-1315"/>
+      <repository location="https://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.32.0/"/>
     </location>
 	  <location includeDependencyDepth="none" includeDependencyScopes="compile" includeSource="true" label="Eclipse SET model" missingManifest="generate" type="Maven">
 		  <dependencies>
