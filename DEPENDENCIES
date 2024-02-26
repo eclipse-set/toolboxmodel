@@ -526,7 +526,9 @@ p2/orbit/p2.eclipse.plugin/org.eclipse.search.source/3.14.300.v20220905-1020, EP
 p2/orbit/p2.eclipse.plugin/org.eclipse.search/3.14.300.v20220905-1020, EPL-2.0, approved, eclipse.platform
 p2/orbit/p2.eclipse.plugin/org.eclipse.set.model.model11001.edit/2.2.0, EPL-2.0, approved, technology.set
 p2/orbit/p2.eclipse.plugin/org.eclipse.set.model.model11001.editor/2.2.0, EPL-2.0, approved, technology.set
+p2/orbit/p2.eclipse.plugin/org.eclipse.set.model.model11001.source/2.2.0, EPL-2.0, approved, technology.set
 p2/orbit/p2.eclipse.plugin/org.eclipse.set.model.model11001/2.2.0, EPL-2.0, approved, technology.set
+p2/orbit/p2.eclipse.plugin/org.eclipse.set.model.modelservice.source/2.2.0, EPL-2.0, approved, technology.set
 p2/orbit/p2.eclipse.plugin/org.eclipse.set.model.modelservice/2.2.0, EPL-2.0, approved, technology.set
 p2/orbit/p2.eclipse.plugin/org.eclipse.set.toolboxmodel.edit.source/2.2.0, EPL-2.0, approved, technology.set
 p2/orbit/p2.eclipse.plugin/org.eclipse.set.toolboxmodel.edit/2.2.0, EPL-2.0, approved, technology.set
