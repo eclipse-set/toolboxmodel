@@ -1,5 +1,8 @@
 # Eclipse Signalling Engineering Toolbox - Toolbox Model
 
+> [!NOTE]
+> With https://github.com/eclipse-set/set/pull/463 the toolbox model functionality has been moved into the EMF models in https://github.com/eclipse-set/model. As a result, this repository is no longer in use by Eclipse SET.
+
 This repository contains the source code for the toolbox model subcomponent of the 
 Eclipse Signalling Engineering Toolbox. The toolbox model is an EMF data model, 
 which is based on the main PlanPro-derived data model. The main goal of this 
