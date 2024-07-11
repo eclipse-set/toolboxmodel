@@ -31,7 +31,7 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
 
     - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action@f355d34d53ad4e7f506f699478db2dd71da9de5f # v2.15.1
+      uses: EnricoMi/publish-unit-test-result-action@567cc7f8dcea3eba5da355f6ebc95663310d8a07 # v2.17.0
       if: always()
       with:
         files: |
